@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Maintenance Budget Calculator - Annual Budget by Home Value &amp; Age | CalcWise</title>
+    <meta name="description" content="Calculate your annual home maintenance budget based on home value, age, and condition. See a breakdown by category so you never get caught unprepared by repair costs.">
+    <link rel="canonical" href="https://calcwise.io/household-efficiency-calculators/home-maintenance-budget-calculator/">
+    <meta property="og:title" content="Home Maintenance Budget Calculator | CalcWise">
+    <meta property="og:description" content="Find out how much you should budget for home maintenance each year based on your home's value, age, and condition.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://calcwise.io/household-efficiency-calculators/home-maintenance-budget-calculator/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Home Maintenance Budget Calculator | CalcWise">
+    <meta name="twitter:description" content="Calculate your annual home maintenance budget by home value, age, and condition.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/design-system.css">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/"},
+            {"@type": "ListItem", "position": 2, "name": "Household Efficiency Calculators", "item": "https://calcwise.io/household-efficiency-calculators/"},
+            {"@type": "ListItem", "position": 3, "name": "Home Maintenance Budget Calculator"}
+        ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {"@type": "Question", "name": "What percentage of home value should I budget for maintenance?", "acceptedAnswer": {"@type": "Answer", "text": "The most widely cited rule of thumb is 1% of your home's value per year. However, for older homes (20+ years) this often needs to increase to 1.5-2% because more systems are nearing end-of-life. A newer home in good condition may require only 0.5-1% annually."}},
+            {"@type": "Question", "name": "What does home maintenance include?", "acceptedAnswer": {"@type": "Answer", "text": "Home maintenance covers HVAC servicing, roof and gutter cleaning, plumbing inspection and minor repairs, pest control, exterior painting and caulking, driveway sealing, landscape upkeep, appliance maintenance, smoke/CO detector testing, and periodic deep cleaning of systems like dryer vents and water heaters."}},
+            {"@type": "Question", "name": "Should I save monthly or annually for home maintenance?", "acceptedAnswer": {"@type": "Answer", "text": "Monthly saving is usually the safest approach. Divide your annual maintenance budget by 12 and transfer that amount to a dedicated savings account each month. This prevents large bills from derailing your budget when a water heater fails or the roof needs patching."}},
+            {"@type": "Question", "name": "Does home maintenance budget include renovations?", "acceptedAnswer": {"@type": "Answer", "text": "No. The standard maintenance budget covers repairs and upkeep to maintain current condition -- not improvements or renovations. Remodels, additions, and aesthetic upgrades should be budgeted separately. If you plan to renovate, add a separate renovation savings line to your budget."}}
+        ]
+    }
+    </script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="/" class="logo">
+                <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+                CalcWise
+            </a>
+            <nav class="main-nav">
+                <a href="/real-estate-calculators/">Real Estate</a>
+                <a href="/advanced-real-estate-calculators/">Advanced RE</a>
+                <a href="/energy-utility-calculators/">Energy</a>
+                <a href="/household-efficiency-calculators/">Household</a>
+                <a href="/finance-calculators/">Finance</a>
+            </nav>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+            </button>
+        </div>
+        <nav class="mobile-nav">
+            <a href="/real-estate-calculators/">Real Estate Calculators</a>
+            <a href="/advanced-real-estate-calculators/">Advanced Real Estate</a>
+            <a href="/energy-utility-calculators/">Energy &amp; Utility</a>
+            <a href="/household-efficiency-calculators/">Household Efficiency</a>
+            <a href="/finance-calculators/">Finance Calculators</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <nav class="breadcrumbs" aria-label="Breadcrumb">
+                <ol>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/household-efficiency-calculators/">Household Efficiency Calculators</a></li>
+                    <li><span aria-current="page">Home Maintenance Budget Calculator</span></li>
+                </ol>
+            </nav>
+
+            <div class="page-content">
+                <div class="calc-page-layout">
+                    <div class="calc-page-main">
+                        <h1>Home Maintenance Budget Calculator</h1>
+                        <p class="subtitle" style="color: var(--color-gray-600); font-size: var(--text-lg); line-height: var(--leading-relaxed); margin-bottom: var(--space-8);">
+                            Estimate how much you should set aside each year for home maintenance based on your home's value, age, and condition. Get a category-by-category breakdown and a monthly savings target so repairs never catch you off guard.
+                        </p>
+
+                        <div class="calc-container">
+                            <div class="calc-header">
+                                <h2>Annual Maintenance Budget</h2>
+                                <p>Based on home value, age, and condition</p>
+                            </div>
+                            <div class="calc-body">
+                                <form id="hmb-form">
+                                    <div class="form-group">
+                                        <label class="form-label" for="home-value">Current Home Value</label>
+                                        <div class="input-prefix">
+                                            <span class="prefix">$</span>
+                                            <input type="number" id="home-value" name="homeValue" class="form-input" placeholder="350000" min="50000" step="5000" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label" for="home-age">Home Age (years)</label>
+                                        <input type="number" id="home-age" name="homeAge" class="form-input" placeholder="15" min="0" step="1" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label" for="home-condition">Overall Home Condition</label>
+                                        <select id="home-condition" name="homeCondition" class="form-input">
+                                            <option value="excellent">Excellent -- recently renovated or new</option>
+                                            <option value="good" selected>Good -- well maintained, minor wear</option>
+                                            <option value="fair">Fair -- some deferred maintenance</option>
+                                            <option value="poor">Poor -- significant deferred maintenance</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label" for="home-sqft">Home Size (sq ft)</label>
+                                        <input type="number" id="home-sqft" name="homeSqft" class="form-input" placeholder="2000" min="200" step="50" required>
+                                    </div>
+                                    <div class="calc-actions">
+                                        <button type="button" class="btn btn-calculate btn-full" onclick="calculateMaintenanceBudget()">Calculate Budget</button>
+                                        <button type="reset" class="btn btn-reset">Reset</button>
+                                    </div>
+                                </form>
+
+                                <div id="results" class="calc-results hidden">
+                                    <div class="result-primary">
+                                        <div class="result-label">Recommended Annual Budget</div>
+                                        <div class="result-value" id="result-annual-budget">$0</div>
+                                    </div>
+                                    <div class="result-grid result-grid-3">
+                                        <div class="result-item">
+                                            <div class="result-label">Monthly Savings Target</div>
+                                            <div class="result-value" id="result-monthly">$0</div>
+                                        </div>
+                                        <div class="result-item">
+                                            <div class="result-label">Budget % of Home Value</div>
+                                            <div class="result-value" id="result-pct">0%</div>
+                                        </div>
+                                        <div class="result-item">
+                                            <div class="result-label">Cost per Sq Ft</div>
+                                            <div class="result-value" id="result-per-sqft">$0</div>
+                                        </div>
+                                        <div class="result-item">
+                                            <div class="result-label">HVAC &amp; Plumbing (~30%)</div>
+                                            <div class="result-value" id="result-hvac">$0</div>
+                                        </div>
+                                        <div class="result-item">
+                                            <div class="result-label">Roof &amp; Exterior (~25%)</div>
+                                            <div class="result-value" id="result-roof">$0</div>
+                                        </div>
+                                        <div class="result-item">
+                                            <div class="result-label">Interior &amp; Appliances (~25%)</div>
+                                            <div class="result-value" id="result-interior">$0</div>
+                                        </div>
+                                        <div class="result-item">
+                                            <div class="result-label">Landscaping &amp; Other (~20%)</div>
+                                            <div class="result-value" id="result-landscape">$0</div>
+                                        </div>
+                                        <div class="result-item">
+                                            <div class="result-label">5-Year Reserve Goal</div>
+                                            <div class="result-value" id="result-5yr">$0</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="ad-slot ad-slot-leaderboard"></div>
+
+                        <section class="content-section">
+                            <h2>Home Maintenance Budget Formula</h2>
+                            <div class="formula-box">
+                                <div class="formula-label">Budget Calculation</div>
+                                Base Rate = 1% of home value per year
+
+Age Multiplier:
+  0-10 years: 0.75x  |  11-20 years: 1.0x
+  21-35 years: 1.35x  |  36+ years: 1.65x
+
+Condition Multiplier:
+  Excellent: 0.80x  |  Good: 1.0x
+  Fair: 1.25x  |  Poor: 1.55x
+
+Annual Budget = Home Value &times; 1% &times; Age Multiplier &times; Condition Multiplier
+Monthly Savings = Annual Budget / 12
+                            </div>
+                            <p>Multipliers are derived from industry data published by the National Association of Home Builders and HomeAdvisor cost guides. Actual costs vary significantly by region, labor market, and material prices.</p>
+                        </section>
+
+                        <section class="content-section">
+                            <h2>How to Use This Calculator</h2>
+                            <ol>
+                                <li><strong>Enter your home's current market value</strong> -- use a recent appraisal, Zillow estimate, or your purchase price adjusted for appreciation.</li>
+                                <li><strong>Enter the home's age in years</strong> -- older homes have more aging systems that require upkeep.</li>
+                                <li><strong>Select overall condition</strong> -- be honest. Deferred maintenance compounds over time.</li>
+                                <li><strong>Enter square footage</strong> -- used to calculate a per-sq-ft cost benchmark.</li>
+                                <li><strong>Click "Calculate Budget"</strong> to see your annual budget, monthly savings target, and category breakdown.</li>
+                            </ol>
+                        </section>
+
+                        <section class="content-section">
+                            <h2>Example Scenario</h2>
+                            <h3>20-Year-Old Home, Good Condition</h3>
+                            <p>Home value: $350,000 | Age: 20 years | Condition: Good | Size: 2,200 sq ft</p>
+                            <p>Base rate: $350,000 &times; 1% = $3,500</p>
+                            <p>Age multiplier (11-20 yrs): 1.0x | Condition multiplier (Good): 1.0x</p>
+                            <p>Annual budget: $3,500 | Monthly savings: <strong>$292/month</strong></p>
+                            <p>HVAC &amp; Plumbing: $1,050 | Roof &amp; Exterior: $875 | Interior &amp; Appliances: $875 | Landscaping: $700</p>
+                        </section>
+
+                        <section class="faq-section">
+                            <h2>Frequently Asked Questions</h2>
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">
+                                    What percentage of home value should I budget for maintenance?
+                                    <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>The most widely cited rule of thumb is 1% of your home's value per year. However, for older homes (20+ years) this often needs to increase to 1.5-2% because more systems are nearing end-of-life. A newer home in good condition may require only 0.5-1% annually.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">
+                                    What does home maintenance include?
+                                    <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>Home maintenance covers HVAC servicing, roof and gutter cleaning, plumbing inspection and minor repairs, pest control, exterior painting and caulking, driveway sealing, landscape upkeep, appliance maintenance, smoke/CO detector testing, and periodic deep cleaning of systems like dryer vents and water heaters.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">
+                                    Should I save monthly or annually for home maintenance?
+                                    <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>Monthly saving is usually the safest approach. Divide your annual maintenance budget by 12 and transfer that amount to a dedicated savings account each month. This prevents large bills from derailing your budget when a water heater fails or the roof needs patching.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">
+                                    Does home maintenance budget include renovations?
+                                    <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>No. The standard maintenance budget covers repairs and upkeep to maintain current condition -- not improvements or renovations. Remodels, additions, and aesthetic upgrades should be budgeted separately. If you plan to renovate, add a separate renovation savings line to your budget.</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="related-calculators">
+                            <h2>Related Calculators</h2>
+                            <div class="grid grid-3">
+                                <a href="/household-efficiency-calculators/diy-vs-hire-calculator/" class="card card-link">
+                                    <div class="card-icon">D</div>
+                                    <h3>DIY vs Hire Calculator</h3>
+                                    <p>Compare DIY savings against professional service cost.</p>
+                                </a>
+                                <a href="/household-efficiency-calculators/home-operating-cost-calculator/" class="card card-link">
+                                    <div class="card-icon">O</div>
+                                    <h3>Home Operating Cost</h3>
+                                    <p>Total annual cost to operate your home.</p>
+                                </a>
+                                <a href="/household-efficiency-calculators/home-insurance-audit-calculator/" class="card card-link">
+                                    <div class="card-icon">I</div>
+                                    <h3>Home Insurance Audit</h3>
+                                    <p>Check if your home is properly insured.</p>
+                                </a>
+                                <a href="/household-efficiency-calculators/appliance-efficiency-calculator/" class="card card-link">
+                                    <div class="card-icon">A</div>
+                                    <h3>Appliance Efficiency</h3>
+                                    <p>Annual energy cost and upgrade ROI for appliances.</p>
+                                </a>
+                            </div>
+                        </section>
+
+                        <div class="disclaimer">
+                            <strong>Disclaimer:</strong> Maintenance budget estimates are based on industry averages and may not reflect your specific region, labor costs, or home systems. Use this calculator as a starting guideline and consult a home inspector or contractor for a detailed assessment.
+                        </div>
+
+                        <div class="ad-slot ad-slot-leaderboard"></div>
+                    </div>
+
+                    <aside class="calc-page-sidebar">
+                        <div class="sidebar-card">
+                            <h3>Household Efficiency Tools</h3>
+                            <a href="/household-efficiency-calculators/home-maintenance-budget-calculator/">Home Maintenance Budget</a>
+                            <a href="/household-efficiency-calculators/diy-vs-hire-calculator/">DIY vs Hire</a>
+                            <a href="/household-efficiency-calculators/car-cost-per-mile-calculator/">Car Cost Per Mile</a>
+                            <a href="/household-efficiency-calculators/meal-prep-savings-calculator/">Meal Prep Savings</a>
+                            <a href="/household-efficiency-calculators/appliance-efficiency-calculator/">Appliance Efficiency</a>
+                            <a href="/household-efficiency-calculators/home-insurance-audit-calculator/">Home Insurance Audit</a>
+                            <a href="/household-efficiency-calculators/utility-savings-calculator/">Utility Savings</a>
+                            <a href="/household-efficiency-calculators/energy-efficiency-savings-calculator/">Energy Efficiency Savings</a>
+                            <a href="/household-efficiency-calculators/water-usage-savings-calculator/">Water Usage Savings</a>
+                            <a href="/household-efficiency-calculators/grocery-waste-savings-calculator/">Grocery Waste Savings</a>
+                        </div>
+                        <div class="ad-slot ad-slot-rectangle"></div>
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="/" class="logo">
+                        <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+                        CalcWise
+                    </a>
+                    <p>Free, accurate financial calculators for everyone. Make smarter money decisions with CalcWise.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Household Efficiency</h4>
+                    <a href="/household-efficiency-calculators/home-maintenance-budget-calculator/">Home Maintenance Budget</a>
+                    <a href="/household-efficiency-calculators/diy-vs-hire-calculator/">DIY vs Hire</a>
+                    <a href="/household-efficiency-calculators/appliance-efficiency-calculator/">Appliance Efficiency</a>
+                    <a href="/household-efficiency-calculators/home-insurance-audit-calculator/">Home Insurance Audit</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Energy &amp; Utility</h4>
+                    <a href="/energy-utility-calculators/electricity-cost-calculator/">Electricity Cost</a>
+                    <a href="/energy-utility-calculators/solar-savings-calculator/">Solar Savings</a>
+                    <a href="/energy-utility-calculators/gas-bill-calculator/">Gas Bill</a>
+                    <a href="/energy-utility-calculators/home-energy-efficiency-calculator/">Home Energy Efficiency</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <a href="/about/">About</a>
+                    <a href="/contact/">Contact</a>
+                    <a href="/privacy/">Privacy Policy</a>
+                    <a href="/terms/">Terms of Use</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; 2026 CalcWise. All rights reserved.</span>
+                <div class="footer-links">
+                    <a href="/privacy/">Privacy</a>
+                    <a href="/terms/">Terms</a>
+                    <a href="/sitemap.xml">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/calculator-engine.js"></script>
+    <script src="/js/search-index.js"></script>
+    <script>
+    const ageMultipliers = [
+        { max: 10,  mult: 0.75 },
+        { max: 20,  mult: 1.00 },
+        { max: 35,  mult: 1.35 },
+        { max: Infinity, mult: 1.65 }
+    ];
+
+    const conditionMultipliers = {
+        excellent: 0.80,
+        good:      1.00,
+        fair:      1.25,
+        poor:      1.55
+    };
+
+    function calculateMaintenanceBudget() {
+        if (!CalcWise.validateForm('hmb-form')) return;
+
+        const values = CalcWise.getFormValues('hmb-form');
+        const homeValue = values.homeValue;
+        const homeAge   = values.homeAge;
+        const homeSqft  = values.homeSqft;
+        const condition = document.getElementById('home-condition').value;
+
+        const ageMult  = ageMultipliers.find(a => homeAge <= a.max).mult;
+        const condMult = conditionMultipliers[condition];
+
+        const annualBudget = homeValue * 0.01 * ageMult * condMult;
+        const monthly      = annualBudget / 12;
+        const pct          = (annualBudget / homeValue) * 100;
+        const perSqft      = annualBudget / homeSqft;
+
+        const hvac      = annualBudget * 0.30;
+        const roof      = annualBudget * 0.25;
+        const interior  = annualBudget * 0.25;
+        const landscape = annualBudget * 0.20;
+        const fiveYr    = annualBudget * 5;
+
+        CalcWise.setText('result-annual-budget', CalcWise.formatCurrency(annualBudget, 0));
+        CalcWise.setText('result-monthly',   CalcWise.formatCurrency(monthly, 0));
+        CalcWise.setText('result-pct',       pct.toFixed(2) + '%');
+        CalcWise.setText('result-per-sqft',  CalcWise.formatCurrency(perSqft, 2));
+        CalcWise.setText('result-hvac',      CalcWise.formatCurrency(hvac, 0));
+        CalcWise.setText('result-roof',      CalcWise.formatCurrency(roof, 0));
+        CalcWise.setText('result-interior',  CalcWise.formatCurrency(interior, 0));
+        CalcWise.setText('result-landscape', CalcWise.formatCurrency(landscape, 0));
+        CalcWise.setText('result-5yr',       CalcWise.formatCurrency(fiveYr, 0));
+
+        CalcWise.showResults('results');
+    }
+
+    document.getElementById('hmb-form').addEventListener('reset', function() {
+        setTimeout(() => CalcWise.hideResults('results'), 0);
+    });
+    </script>
+</body>
+</html>

@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Financial Momentum Calculator - Measure Your Wealth Velocity | CalcWise</title>
+  <meta name="description" content="Measure your financial momentum with wealth velocity (dollars growing per month), a momentum score, and a timeline to reach $100k, $250k, $500k, and $1M milestones.">
+  <meta name="keywords" content="financial momentum calculator, wealth velocity, momentum score, financial milestones, net worth growth rate">
+  <link rel="canonical" href="https://calcwise.io/wealth-building-calculators/financial-momentum-calculator/">
+
+  <meta property="og:title" content="Financial Momentum Calculator - Measure Your Wealth Velocity">
+  <meta property="og:description" content="Calculate your wealth velocity, momentum score, and timeline to $100k, $250k, $500k, and $1M milestones.">
+  <meta property="og:url" content="https://calcwise.io/wealth-building-calculators/financial-momentum-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Financial Momentum Calculator - Measure Your Wealth Velocity">
+  <meta name="twitter:description" content="Calculate your wealth velocity, momentum score, and timeline to $100k, $250k, $500k, and $1M milestones.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Wealth Building Calculators", "item": "https://calcwise.io/wealth-building-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "Financial Momentum Calculator", "item": "https://calcwise.io/wealth-building-calculators/financial-momentum-calculator/" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is wealth velocity?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Wealth velocity is how fast your net worth is growing in dollar terms per month. It combines your monthly savings contributions with investment returns on your existing portfolio. As your portfolio grows, investment returns add more to velocity even without increasing contributions — this is the core compounding dynamic." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is a good momentum score?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The momentum score in this calculator is the ratio of your monthly wealth velocity to your current net worth, expressed as a monthly growth percentage. A score above 1% per month indicates strong momentum. Most wealth-builders operate in the 0.3–0.8% range depending on net worth and savings rate." }
+      },
+      {
+        "@type": "Question",
+        "name": "Why does momentum accelerate over time?",
+        "acceptedAnswer": { "@type": "Answer", "text": "As your net worth grows, investment returns generate an increasing dollar amount per month even at the same percentage return. Your momentum 'snowballs' — a 7% annual return on $100,000 adds about $583/month, but the same return on $500,000 adds $2,917/month — nearly a 5x velocity increase without any change in behavior." }
+      },
+      {
+        "@type": "Question",
+        "name": "How is the savings rate calculated in this context?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The savings rate here is your monthly savings as a percentage of your monthly income. It is used to calculate your financial momentum score and to contextualize your wealth-building pace. A higher savings rate directly increases both your monthly contributions and long-term momentum." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/wealth-building-calculators/" aria-current="page">Wealth Building</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/wealth-building-calculators/">Wealth Building Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/wealth-building-calculators/">Wealth Building Calculators</a></li>
+          <li><span aria-current="page">Financial Momentum Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="article-content">
+          <h1>Financial Momentum Calculator</h1>
+          <p>Financial momentum is the speed at which your wealth is growing right now — measured in dollars per month. Unlike a simple balance snapshot, momentum shows you whether your wealth is accelerating, decelerating, or stalling. This calculator computes your current wealth velocity, assigns a momentum score, and tells you exactly when your financial trajectory will reach the key milestones of $100k, $250k, $500k, and $1 million.</p>
+
+          <div class="calc-container mt-8">
+            <div class="calc-header">
+              <h2>Calculate Your Financial Momentum</h2>
+              <p>Measure wealth velocity and milestone timeline</p>
+            </div>
+            <div class="calc-body">
+              <form id="fm-form" onsubmit="return false;">
+                <div class="form-group">
+                  <label class="form-label" for="fm-net-worth">Current Net Worth</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="fm-net-worth" name="currentNetWorth" class="form-input" placeholder="75000" min="0" step="1000" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="fm-monthly-savings">Monthly Savings Rate ($)</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="fm-monthly-savings" name="monthlySavings" class="form-input" placeholder="1000" min="0" step="50" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="fm-income">Current Monthly Income</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="fm-income" name="monthlyIncome" class="form-input" placeholder="6000" min="1" step="100" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="fm-return">Annual Return Rate</label>
+                  <div class="input-suffix">
+                    <input type="number" id="fm-return" name="returnRate" class="form-input" placeholder="7" min="0" max="50" step="0.1" required>
+                    <span class="suffix">%</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="fm-years">Years to Project</label>
+                  <input type="number" id="fm-years" name="years" class="form-input" placeholder="20" min="1" max="60" step="1" required>
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calculateMomentum()">Calculate Momentum</button>
+                  <button type="button" class="btn btn-reset" onclick="resetMomentum()">Reset</button>
+                </div>
+              </form>
+
+              <div id="fm-results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">Wealth Velocity (Current)</div>
+                  <div class="result-value" id="fm-velocity"></div>
+                </div>
+                <div class="result-grid">
+                  <div class="result-item">
+                    <div class="result-label">Momentum Score</div>
+                    <div class="result-value" id="fm-score"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Savings Rate</div>
+                    <div class="result-value" id="fm-savings-rate"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Investment Return (Monthly)</div>
+                    <div class="result-value" id="fm-inv-return"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Projected Net Worth (Final)</div>
+                    <div class="result-value" id="fm-final-nw"></div>
+                  </div>
+                </div>
+                <div id="fm-milestones" class="mt-8"></div>
+              </div>
+            </div>
+          </div>
+
+          <section class="content-section">
+            <h2>Financial Momentum Formula</h2>
+            <p>Wealth velocity is the sum of monthly savings plus the monthly investment return on existing net worth:</p>
+            <div class="formula-box">
+              <div class="formula-label">Wealth Velocity ($/month)</div>
+              V = PMT<sub>monthly</sub> + NW &times; (r / 12)
+            </div>
+            <div class="formula-box">
+              <div class="formula-label">Momentum Score</div>
+              Score = V / NW &times; 100 (monthly growth %)
+            </div>
+            <div class="formula-box">
+              <div class="formula-label">Years to Milestone</div>
+              t = ln(Target / NW<sub>0</sub> + PMT/r &times; NW<sub>0</sub>) / ln(1 + r/12)
+            </div>
+            <p>Where <strong>PMT</strong> is monthly savings, <strong>NW</strong> is current net worth, and <strong>r</strong> is annual return rate. Milestone years are calculated by iterative projection until each target is reached.</p>
+          </section>
+
+          <section class="content-section">
+            <h2>How to Use This Calculator</h2>
+            <ol>
+              <li><strong>Enter your current net worth</strong> — your total assets minus liabilities.</li>
+              <li><strong>Enter your monthly savings rate ($)</strong> — how much you save and invest each month.</li>
+              <li><strong>Enter your current monthly income</strong> — used to calculate your savings rate percentage.</li>
+              <li><strong>Enter your annual return rate</strong> — expected annual investment return.</li>
+              <li><strong>Enter years to project</strong> — your planning horizon.</li>
+              <li><strong>Click "Calculate Momentum"</strong> to see your wealth velocity, momentum score, and milestone timeline.</li>
+            </ol>
+          </section>
+
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>A 35-year-old with a $75,000 net worth, saving $1,000/month, earning $6,000/month, with a 7% annual return has a current wealth velocity of $1,438/month ($1,000 savings + $438 monthly investment return). The momentum score is 1.92% per month. At this trajectory, they reach $250,000 in about 8 years, $500,000 in 14 years, and $1 million in approximately 22 years — demonstrating how momentum accelerates as the portfolio grows.</p>
+          </section>
+
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What is wealth velocity?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Wealth velocity is how fast your net worth is growing in dollar terms per month. It combines your monthly savings contributions with investment returns on your existing portfolio. As your portfolio grows, investment returns add more to velocity even without increasing contributions — this is the core compounding dynamic.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What is a good momentum score?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>The momentum score in this calculator is the ratio of your monthly wealth velocity to your current net worth, expressed as a monthly growth percentage. A score above 1% per month indicates strong momentum. Most wealth-builders operate in the 0.3–0.8% range depending on net worth and savings rate.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Why does momentum accelerate over time?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>As your net worth grows, investment returns generate an increasing dollar amount per month even at the same percentage return. Your momentum "snowballs" — a 7% annual return on $100,000 adds about $583/month, but the same return on $500,000 adds $2,917/month — nearly a 5x velocity increase without any change in behavior.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                How is the savings rate calculated in this context?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>The savings rate here is your monthly savings as a percentage of your monthly income. It is used to calculate your financial momentum score and to contextualize your wealth-building pace. A higher savings rate directly increases both your monthly contributions and long-term momentum.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/wealth-building-calculators/net-worth-growth-calculator/" class="card card-link">
+                <h3>Net Worth Growth Calculator</h3>
+                <p>Project your net worth at 5, 10, 20, and 30 years.</p>
+              </a>
+              <a href="/wealth-building-calculators/wealth-milestone-calculator/" class="card card-link">
+                <h3>Wealth Milestone Calculator</h3>
+                <p>Get exact dates for each wealth milestone.</p>
+              </a>
+              <a href="/wealth-building-calculators/savings-acceleration-calculator/" class="card card-link">
+                <h3>Savings Acceleration Calculator</h3>
+                <p>See how extra savings boost your momentum.</p>
+              </a>
+              <a href="/wealth-building-calculators/millionaire-timeline-calculator/" class="card card-link">
+                <h3>Millionaire Timeline Calculator</h3>
+                <p>Find out when you'll hit $1M, $2M, and $5M.</p>
+              </a>
+            </div>
+          </section>
+
+          <div class="ad-slot ad-slot-leaderboard"></div>
+
+          <div class="disclaimer">
+            <strong>Disclaimer:</strong> This calculator provides estimates for informational and educational purposes only. Wealth velocity and momentum scores are illustrative metrics and not recognized financial benchmarks. Actual results will vary. This is not financial advice. Consult a qualified financial professional before making financial decisions.
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Wealth Building</h4>
+          <a href="/wealth-building-calculators/">All Wealth Building Calculators</a>
+          <a href="/wealth-building-calculators/millionaire-timeline-calculator/">Millionaire Timeline</a>
+          <a href="/wealth-building-calculators/wealth-milestone-calculator/">Wealth Milestones</a>
+        </div>
+        <div class="footer-col">
+          <h4>Finance</h4>
+          <a href="/finance-calculators/">All Finance Calculators</a>
+          <a href="/finance-calculators/compound-interest-calculator/">Compound Interest</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function projectNW(nw, pmt, r, months) {
+      if (r === 0) return nw + pmt * months;
+      const rMonthly = r / 12;
+      return nw * Math.pow(1 + rMonthly, months) + pmt * ((Math.pow(1 + rMonthly, months) - 1) / rMonthly);
+    }
+
+    function calculateMomentum() {
+      if (!CalcWise.validateForm('fm-form')) return;
+
+      const nw      = CalcWise.parseNumber(document.getElementById('fm-net-worth').value);
+      const pmt     = CalcWise.parseNumber(document.getElementById('fm-monthly-savings').value);
+      const income  = CalcWise.parseNumber(document.getElementById('fm-income').value);
+      const annRate = parseFloat(document.getElementById('fm-return').value) || 0;
+      const years   = parseInt(document.getElementById('fm-years').value) || 20;
+      const r       = annRate / 100;
+      const rMonthly = r / 12;
+
+      // Wealth velocity
+      const invReturnMonthly = nw * rMonthly;
+      const velocity = pmt + invReturnMonthly;
+      const momentumScore = nw > 0 ? (velocity / nw * 100) : 0;
+      const savingsRate = income > 0 ? (pmt / income * 100) : 0;
+      const finalNW = projectNW(nw, pmt, r, years * 12);
+
+      CalcWise.setText('fm-velocity', CalcWise.formatCurrency(velocity) + '/mo');
+      CalcWise.setText('fm-score', momentumScore.toFixed(2) + '% / mo');
+      CalcWise.setText('fm-savings-rate', savingsRate.toFixed(1) + '% of income');
+      CalcWise.setText('fm-inv-return', CalcWise.formatCurrency(invReturnMonthly) + '/mo');
+      CalcWise.setText('fm-final-nw', CalcWise.formatCurrency(finalNW));
+
+      // Milestones
+      const milestones = [100000, 250000, 500000, 1000000];
+      const milestoneLabels = ['$100k', '$250k', '$500k', '$1M'];
+      let html = '<h3 style="margin-bottom:1rem;">Years to Wealth Milestones</h3><div class="result-grid">';
+      milestones.forEach((target, i) => {
+        if (target <= nw) {
+          html += `<div class="result-item"><div class="result-label">${milestoneLabels[i]}</div><div class="result-value">Already reached!</div></div>`;
+          return;
+        }
+        let mo = null;
+        for (let m = 1; m <= 600; m++) {
+          if (projectNW(nw, pmt, r, m) >= target) { mo = m; break; }
+        }
+        const display = mo !== null
+          ? (mo >= 12 ? Math.floor(mo / 12) + ' yrs ' + (mo % 12) + ' mo' : mo + ' months')
+          : '50+ years';
+        html += `<div class="result-item"><div class="result-label">${milestoneLabels[i]} milestone</div><div class="result-value">${display}</div></div>`;
+      });
+      html += '</div>';
+      CalcWise.setHtml('fm-milestones', html);
+
+      CalcWise.showResults('fm-results');
+    }
+
+    function resetMomentum() {
+      document.getElementById('fm-form').reset();
+      CalcWise.hideResults('fm-results');
+    }
+  </script>
+</body>
+</html>

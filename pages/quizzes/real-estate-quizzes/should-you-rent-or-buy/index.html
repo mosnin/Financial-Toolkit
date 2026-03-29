@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Should You Rent or Buy? Quiz | CalcWise</title>
+  <meta name="description" content="Take this 8-question rent vs. buy quiz to find out which path makes more financial and lifestyle sense for you right now. We weigh timeline, market conditions, flexibility, and your finances.">
+  <link rel="canonical" href="https://calcwise.io/quizzes/real-estate-quizzes/should-you-rent-or-buy/">
+  <meta property="og:title" content="Should You Rent or Buy? Quiz | CalcWise">
+  <meta property="og:description" content="8 questions covering timeline, down payment, price-to-rent ratio, job stability, flexibility, and financial goals. Get a clear rent-vs-buy verdict.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcwise.io/quizzes/real-estate-quizzes/should-you-rent-or-buy/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Should You Rent or Buy? Quiz | CalcWise">
+  <meta name="twitter:description" content="8-question quiz to find out whether renting or buying makes more sense for your finances and lifestyle.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+  <link rel="stylesheet" href="/css/quiz.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/"},
+      {"@type": "ListItem", "position": 2, "name": "Quizzes", "item": "https://calcwise.io/quizzes/"},
+      {"@type": "ListItem", "position": 3, "name": "Real Estate Quizzes", "item": "https://calcwise.io/quizzes/real-estate-quizzes/"},
+      {"@type": "ListItem", "position": 4, "name": "Should You Rent or Buy?", "item": "https://calcwise.io/quizzes/real-estate-quizzes/should-you-rent-or-buy/"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Should You Rent or Buy? Quiz",
+    "description": "8-question quiz weighing how long you plan to stay, down payment savings, price-to-rent ratio, job stability, flexibility needs, customization desire, market trajectory, and financial goals.",
+    "url": "https://calcwise.io/quizzes/real-estate-quizzes/should-you-rent-or-buy/",
+    "isPartOf": {"@type": "WebSite", "name": "CalcWise", "url": "https://calcwise.io/"}
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="32" height="32" rx="8" fill="currentColor"/>
+          <path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+        </svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/business-calculators/">Business</a>
+        <a href="/quizzes/" aria-current="page">Quizzes</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/business-calculators/">Business Calculators</a>
+      <a href="/quizzes/">Quizzes</a>
+      <a href="/about.html">About</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/quizzes/">Quizzes</a></li>
+          <li><a href="/quizzes/real-estate-quizzes/">Real Estate Quizzes</a></li>
+          <li><span aria-current="page">Should You Rent or Buy?</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <h1>Should You Rent or Buy?</h1>
+        <p class="intro">The rent vs. buy debate doesn't have a universal answer — it depends on your market, your timeline, your finances, and your lifestyle priorities. This 8-question quiz weighs all of those factors, from the local price-to-rent ratio and your financial readiness to your flexibility needs and long-term goals, to help you make the decision that genuinely makes sense for your situation.</p>
+
+        <div class="quiz-container" id="quiz">
+          <div class="quiz-progress">
+            <div class="quiz-progress__label">
+              <span id="progress-text">Question 1 of 8</span>
+              <span id="progress-pct">0%</span>
+            </div>
+            <div class="quiz-progress__bar">
+              <div class="quiz-progress__fill" id="progress-bar" style="width:0%"></div>
+            </div>
+          </div>
+          <div id="question-container"></div>
+          <div id="result-container" class="quiz-result hidden"></div>
+        </div>
+
+        <!-- Ad Slot -->
+        <div class="ad-slot" aria-label="Advertisement" style="margin:2rem 0;text-align:center;min-height:90px;background:var(--color-bg);border:1px dashed var(--color-border);border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;color:var(--color-text-muted);font-size:0.875rem;">Advertisement</div>
+
+        <!-- FAQ -->
+        <section class="faq-section" aria-labelledby="faq-heading" style="margin-top:3rem">
+          <h2 id="faq-heading">Frequently Asked Questions</h2>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false"><span>What is the price-to-rent ratio and why does it matter?</span><svg class="faq-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M10 4v12M4 10h12"/></svg></button>
+            <div class="faq-answer"><p>The price-to-rent ratio divides a home's purchase price by annual rent for a comparable property. A ratio below 15 generally favours buying; 15–20 is neutral; above 20 tilts toward renting. In high-cost cities like San Francisco or New York, ratios often exceed 30, meaning renting is usually the better financial choice unless you plan to stay for a very long time.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false"><span>How many years do I need to stay for buying to make sense?</span><svg class="faq-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M10 4v12M4 10h12"/></svg></button>
+            <div class="faq-answer"><p>Most financial models show that buying starts to beat renting financially after 4–7 years, accounting for transaction costs (typically 8–10% of the home's value to buy and sell). In high price-to-rent markets, the breakeven point can stretch to 10+ years. The shorter your expected stay, the stronger the case for renting.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false"><span>Is renting always "throwing money away"?</span><svg class="faq-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M10 4v12M4 10h12"/></svg></button>
+            <div class="faq-answer"><p>No — this is a persistent myth. Renters avoid property taxes, maintenance costs, mortgage interest (especially heavy in early years), and the risk of price depreciation. If a renter invests the difference between their rent and what ownership would cost, they can build equal or greater wealth over time. Renting is the smarter financial choice in many markets and life situations.</p></div>
+          </div>
+        </section>
+
+        <!-- Related Quizzes -->
+        <section aria-labelledby="related-heading" style="margin-top:3rem">
+          <h2 id="related-heading">Related Real Estate Quizzes</h2>
+          <div class="quiz-grid" style="grid-template-columns:repeat(auto-fill,minmax(260px,1fr))">
+            <a href="/quizzes/real-estate-quizzes/are-you-ready-to-buy-a-house/" class="quiz-card">
+              <div class="quiz-card__badge">Real Estate</div>
+              <h3>Are You Ready to Buy a House?</h3>
+              <p>Assess your credit, savings, DTI, and stability to find out if you're truly prepared to buy.</p>
+              <span class="quiz-card__cta">Take quiz <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </a>
+            <a href="/quizzes/real-estate-quizzes/is-your-rent-too-high/" class="quiz-card">
+              <div class="quiz-card__badge">Real Estate</div>
+              <h3>Is Your Rent Too High?</h3>
+              <p>Find out if you're overpaying for rent relative to your income and local market benchmarks.</p>
+              <span class="quiz-card__cta">Take quiz <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </a>
+            <a href="/quizzes/real-estate-quizzes/what-house-can-you-afford/" class="quiz-card">
+              <div class="quiz-card__badge">Real Estate</div>
+              <h3>What House Can You Afford?</h3>
+              <p>Get an estimated home price range based on your income, debts, and down payment savings.</p>
+              <span class="quiz-card__cta">Take quiz <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </a>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect width="32" height="32" rx="8" fill="currentColor"/>
+              <path d="M8 10h16M8 16h16M8 22h10" stroke="#1B4D3E" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators and quizzes built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Real Estate Quizzes</h4>
+          <a href="/quizzes/real-estate-quizzes/are-you-ready-to-buy-a-house/">Ready to Buy?</a>
+          <a href="/quizzes/real-estate-quizzes/should-you-rent-or-buy/">Rent or Buy?</a>
+          <a href="/quizzes/real-estate-quizzes/what-house-can-you-afford/">What Can You Afford?</a>
+          <a href="/quizzes/real-estate-quizzes/">View All</a>
+        </div>
+        <div class="footer-col">
+          <h4>Real Estate Calculators</h4>
+          <a href="/real-estate-calculators/rent-vs-buy-calculator/">Rent vs Buy Calculator</a>
+          <a href="/real-estate-calculators/mortgage-calculator/">Mortgage Calculator</a>
+          <a href="/real-estate-calculators/affordability-calculator/">Affordability Calculator</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about.html">About</a>
+          <a href="/contact.html">Contact</a>
+          <a href="/privacy.html">Privacy Policy</a>
+          <a href="/terms.html">Terms of Use</a>
+          <a href="/disclaimer.html">Disclaimer</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/privacy.html">Privacy</a>
+          <a href="/terms.html">Terms</a>
+          <a href="/disclaimer.html">Disclaimer</a>
+          <a href="/sitemap.xml">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    document.querySelector('.mobile-menu-toggle').addEventListener('click', function() {
+      const nav = document.querySelector('.mobile-nav');
+      const isOpen = nav.classList.toggle('is-open');
+      this.setAttribute('aria-expanded', isOpen);
+      this.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+    });
+    document.querySelectorAll('.faq-question').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        const item = this.closest('.faq-item');
+        const isOpen = item.classList.toggle('is-open');
+        this.setAttribute('aria-expanded', isOpen);
+      });
+    });
+
+    const questions = [
+      {
+        question: "How long do you plan to stay in the same city or area?",
+        options: ["Less than 2 years", "2–3 years", "4–6 years", "7+ years"],
+        correct: 3,
+        explanation: "Time horizon is the single biggest factor in rent vs. buy math. With buying and selling costing roughly 8–10% of a home's value in transaction costs, staying 7+ years gives you the best chance of coming out ahead financially."
+      },
+      {
+        question: "How much do you have saved for a down payment?",
+        options: ["Less than 3% of homes in my target market", "3%–9% of target price", "10%–19% of target price", "20%+ of target price"],
+        correct: 3,
+        explanation: "A 20% down payment eliminates PMI, gives you instant equity, and shows financial discipline. Less than 3% saved is a signal that buying may be premature — your monthly payments and total cost will be significantly higher."
+      },
+      {
+        question: "What is the price-to-rent ratio in your target area? (Median home price ÷ annual rent for a comparable home)",
+        options: ["Above 25 — homes are very expensive relative to rents", "20–25 — homes cost significantly more than renting", "15–20 — roughly comparable", "Below 15 — buying is clearly cheaper than renting"],
+        correct: 3,
+        explanation: "A price-to-rent ratio below 15 strongly favours buying. Above 20 tilts toward renting unless you plan to stay long-term. In many coastal cities, ratios exceed 30, making renting the mathematically better choice for most people."
+      },
+      {
+        question: "How stable is your job and income?",
+        options: ["Uncertain — I may change jobs or cities soon", "Fairly stable but I might move for the right opportunity", "Stable with good job security in this area", "Very stable — I work locally in a secure role and am not expecting to move"],
+        correct: 3,
+        explanation: "Job and income stability matters doubly for buying: lenders require 2+ years of stable employment, and unexpected job loss or relocation can force a costly home sale at a bad time. High job uncertainty strongly favours renting."
+      },
+      {
+        question: "How much do you value flexibility and mobility?",
+        options: ["Very much — I want to be able to move with minimal hassle", "Somewhat — I'd prefer flexibility but could handle owning", "Not very much — I'm fairly settled in my plans", "Not at all — I'm committed to staying and want roots"],
+        correct: 3,
+        explanation: "Homeownership dramatically reduces your financial flexibility to relocate. If career opportunities, family changes, or lifestyle preferences might pull you elsewhere, renting preserves your ability to move without a six-figure transaction cost."
+      },
+      {
+        question: "How important is it to you to customise, renovate, or personalise your living space?",
+        options: ["Not important — I'm happy living in a standard rental", "Slightly important — minor decor changes would be nice", "Moderately important — I want to paint and make it mine", "Very important — I have strong visions for my home and want to build equity through improvements"],
+        correct: 3,
+        explanation: "The desire to customise and improve your space is a strong lifestyle argument for buying. Renters are limited in what they can change, and improvements don't benefit them financially. Homeowners can build equity through thoughtful improvements."
+      },
+      {
+        question: "What is the current direction of home prices in your target market?",
+        options: ["Declining — prices have been falling", "Flat — prices have been stable for a year or more", "Slowly rising — modest appreciation expected", "Strongly rising — significant appreciation is expected"],
+        correct: 3,
+        explanation: "Buying in an appreciating market builds equity faster, potentially justifying a purchase even at a high price-to-rent ratio. In declining markets, renting until prices stabilise protects you from negative equity. Market trajectory doesn't override fundamentals but should influence timing."
+      },
+      {
+        question: "Which of these best describes your long-term financial goals?",
+        options: ["I want maximum liquidity and flexibility for investments", "I'm focused on paying off debt before making big commitments", "I want to build net worth through a combination of investments and real estate", "I want a paid-off home as the cornerstone of my retirement plan"],
+        correct: 3,
+        explanation: "If homeownership is a central part of your long-term wealth-building strategy, buying sooner (when financially ready) makes sense. If you prioritise liquidity or debt payoff, renting while you optimise your finances can be the smarter intermediate path."
+      }
+    ];
+
+    const results = [
+      {
+        min: 6,
+        label: "Buy Makes More Sense",
+        colorClass: "result-score--high",
+        title: "Buying Makes More Financial Sense",
+        desc: "Based on your timeline, market conditions, financial readiness, and goals, buying a home appears to be the stronger choice for your situation. You have the stability, savings, and long-term commitment that makes homeownership financially advantageous over renting in your case.",
+        recs: [
+          "Use the Rent vs. Buy Calculator to run precise numbers for your specific market.",
+          "Get mortgage pre-approval to understand your exact borrowing power and rate.",
+          "Research first-time buyer programs and down payment assistance in your state.",
+          "Factor all ownership costs into your budget: property tax, insurance, HOA, and maintenance."
+        ]
+      },
+      {
+        min: 4,
+        label: "Rent Makes More Sense",
+        colorClass: "result-score--low",
+        title: "Renting Makes More Sense Right Now",
+        desc: "Your timeline, market conditions, or financial situation make renting the smarter financial choice at this stage. That doesn't mean you'll never buy — it means the conditions for a financially sound purchase aren't fully in place yet. Renting strategically while you build your position is a smart move.",
+        recs: [
+          "Use this time to aggressively build your down payment savings.",
+          "Work on improving your credit score to qualify for better mortgage rates when you're ready.",
+          "Monitor the local market — price-to-rent ratios change over time.",
+          "Invest the difference between renting and hypothetical ownership costs to build wealth in the meantime."
+        ]
+      },
+      {
+        min: 0,
+        label: "Either Could Work",
+        colorClass: "",
+        title: "Either Could Work — It Depends on the Details",
+        desc: "Your situation doesn't strongly favour either renting or buying based on these questions alone. The right answer likely depends on specific numbers: the exact price-to-rent ratio in your area, your mortgage rate, and how long you realistically plan to stay. Use the calculator below to run your personal scenario.",
+        recs: [
+          "Run your specific numbers in the Rent vs. Buy Calculator — the math may surprise you.",
+          "Talk to a fee-only financial advisor who can review your full financial picture.",
+          "Consider a time-limited trial: set a savings goal and market-watch period before deciding.",
+          "Re-evaluate your timeline honestly — even a 1–2 year difference can change the outcome significantly."
+        ]
+      }
+    ];
+
+    const calculatorLinks = [
+      { href: "/real-estate-calculators/rent-vs-buy-calculator/", label: "Rent vs Buy Calculator" },
+      { href: "/real-estate-calculators/mortgage-calculator/", label: "Mortgage Calculator" },
+      { href: "/real-estate-calculators/affordability-calculator/", label: "Affordability Calculator" }
+    ];
+
+    let current = 0, score = 0, answered = false;
+
+    function renderQuestion() {
+      answered = false;
+      const q = questions[current];
+      const pct = Math.round((current / questions.length) * 100);
+      document.getElementById('progress-bar').style.width = pct + '%';
+      document.getElementById('progress-text').textContent = 'Question ' + (current + 1) + ' of ' + questions.length;
+      document.getElementById('progress-pct').textContent = pct + '%';
+      document.getElementById('question-container').innerHTML = `
+        <div class="quiz-question">
+          <div class="quiz-question__number">Question ${current + 1}</div>
+          <p class="quiz-question__text">${q.question}</p>
+          <ul class="quiz-options" role="list">
+            ${q.options.map((opt, i) => `
+              <li>
+                <button class="quiz-option" data-index="${i}" onclick="selectAnswer(${i})">
+                  <span class="quiz-option__indicator"></span>
+                  <span>${opt}</span>
+                </button>
+              </li>`).join('')}
+          </ul>
+          <div id="explanation" class="quiz-explanation" style="display:none"></div>
+          <div class="quiz-nav">
+            <span></span>
+            <button class="btn btn-primary" id="next-btn" onclick="nextQuestion()" disabled>
+              ${current < questions.length - 1 ? 'Next Question' : 'See Results'}
+            </button>
+          </div>
+        </div>`;
+    }
+
+    function selectAnswer(idx) {
+      if (answered) return;
+      answered = true;
+      const q = questions[current];
+      const btns = document.querySelectorAll('.quiz-option');
+      btns.forEach(function(btn, i) {
+        btn.classList.remove('selected');
+        if (i === q.correct) btn.classList.add('correct');
+        else if (i === idx && idx !== q.correct) btn.classList.add('incorrect');
+      });
+      btns[idx].classList.add('selected');
+      if (idx === q.correct) score++;
+      const expEl = document.getElementById('explanation');
+      expEl.style.display = 'block';
+      expEl.className = 'quiz-explanation ' + (idx === q.correct ? 'quiz-explanation--correct' : 'quiz-explanation--incorrect');
+      expEl.textContent = q.explanation;
+      document.getElementById('next-btn').disabled = false;
+    }
+
+    function nextQuestion() {
+      current++;
+      if (current < questions.length) { renderQuestion(); } else { showResult(); }
+    }
+
+    function showResult() {
+      document.getElementById('progress-bar').style.width = '100%';
+      document.getElementById('progress-text').textContent = 'Complete!';
+      document.getElementById('progress-pct').textContent = '100%';
+      document.getElementById('question-container').innerHTML = '';
+      const result = results.find(r => score >= r.min);
+      const rc = document.getElementById('result-container');
+      rc.classList.remove('hidden');
+      rc.innerHTML = `
+        <div class="result-score ${result.colorClass}">
+          <span class="result-score__number">${score}/${questions.length}</span>
+          <span class="result-score__label">Score</span>
+        </div>
+        <div class="result-category">${result.label}</div>
+        <h2>${result.title}</h2>
+        <p>${result.desc}</p>
+        <div class="result-recommendations">
+          <h3>Recommended Next Steps</h3>
+          <ul>${result.recs.map(r => `<li>${r}</li>`).join('')}</ul>
+        </div>
+        <div class="result-actions">
+          ${calculatorLinks.map(l => `<a href="${l.href}" class="btn btn-secondary">${l.label}</a>`).join('')}
+        </div>
+        <div class="result-actions" style="margin-top:1rem">
+          <button class="btn btn-outline" onclick="restartQuiz()">Retake Quiz</button>
+        </div>`;
+    }
+
+    function restartQuiz() {
+      current = 0; score = 0;
+      document.getElementById('result-container').classList.add('hidden');
+      renderQuestion();
+    }
+
+    renderQuestion();
+  </script>
+</body>
+</html>

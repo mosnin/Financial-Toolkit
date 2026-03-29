@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Course Revenue Calculator | CalcWise</title>
+  <meta name="description" content="Project your online course revenue based on audience size, launch frequency, price, and enrollment rate. Get monthly and annual income projections.">
+  <link rel="canonical" href="https://calcwise.io/digital-income-calculators/online-course-revenue-calculator/">
+  <meta property="og:title" content="Online Course Revenue Calculator | CalcWise">
+  <meta property="og:description" content="Estimate your online course earnings with our free calculator. Enter audience size, conversion rate, course price, and launch frequency to see your revenue potential.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcwise.io/digital-income-calculators/online-course-revenue-calculator/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Online Course Revenue Calculator | CalcWise">
+  <meta name="twitter:description" content="Estimate your online course revenue based on audience size, price, and enrollment rate.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/"},
+      {"@type": "ListItem", "position": 2, "name": "Digital Income Calculators", "item": "https://calcwise.io/digital-income-calculators/"},
+      {"@type": "ListItem", "position": 3, "name": "Online Course Revenue Calculator"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is a realistic conversion rate for an online course launch?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Typical email list conversion rates for course launches range from 1% to 5%. Warm, engaged audiences with strong pre-launch sequences can achieve 3-8%. Cold traffic from paid ads typically converts at 0.5-2%. Webinar-based launches often achieve higher rates of 5-15% from attendees."}
+      },
+      {
+        "@type": "Question",
+        "name": "How should I price my online course?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Course pricing depends on the depth of content, your authority in the niche, and the transformation promised. Introductory courses often sell for $47-$197, mid-tier courses $197-$997, and premium programs $1,000-$5,000+. Higher-priced courses with strong outcomes tend to convert just as well as lower-priced ones when marketed correctly."}
+      },
+      {
+        "@type": "Question",
+        "name": "How many times per year should I launch my course?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Most course creators launch 2-4 times per year using cohort or open/close cart models. More frequent launches (6-12x) work well for lower-priced self-paced courses. Evergreen funnels allow continuous enrollment and are popular for automating income. Each approach has different audience fatigue and conversion implications."}
+      },
+      {
+        "@type": "Question",
+        "name": "What expenses should I account for when calculating course profit?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Key course business expenses include platform fees (Teachable, Kajabi, Thinkific take 0-10%), payment processing (2-3%), email marketing software, course production costs, advertising spend for each launch, and any affiliate commissions (typically 30-50% of sale price for partner promotions)."}
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="logo">
+        <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav">
+        <a href="/">Home</a>
+        <a href="/pages/business-calculators/">Business</a>
+        <a href="/pages/financial-calculators/">Financial</a>
+        <a href="/pages/tax-calculators/">Tax</a>
+        <a href="/pages/digital-income-calculators/" aria-current="page">Digital Income</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav">
+      <a href="/">Home</a>
+      <a href="/pages/business-calculators/">Business Calculators</a>
+      <a href="/pages/financial-calculators/">Financial Calculators</a>
+      <a href="/pages/tax-calculators/">Tax Calculators</a>
+      <a href="/pages/digital-income-calculators/">Digital Income Calculators</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/pages/digital-income-calculators/">Digital Income Calculators</a></li>
+          <li><span aria-current="page">Online Course Revenue Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="calc-page-layout">
+          <div class="calc-page-main">
+            <h1>Online Course Revenue Calculator</h1>
+            <p class="subtitle" style="font-size:var(--text-lg);color:var(--color-gray-600);margin-bottom:var(--space-8);line-height:var(--leading-relaxed);">Estimate your online course revenue by entering your audience size, enrollment conversion rate, course price, and how many times per year you launch. See per-launch revenue, annual income, and average monthly earnings.</p>
+
+            <div class="calc-container">
+              <div class="calc-header">
+                <h2>Online Course Revenue Calculator</h2>
+                <p>Project your course revenue from audience size and launch metrics</p>
+              </div>
+              <div class="calc-body">
+                <form id="course-form" onsubmit="return false;">
+                  <div class="form-group">
+                    <label class="form-label" for="audience-size">Audience / Email List Size</label>
+                    <input type="number" id="audience-size" name="audienceSize" class="form-input" placeholder="5000" min="1" step="1" required>
+                    <span class="form-hint">Total subscribers, followers, or potential buyers you market to per launch</span>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="enrollment-rate">Enrollment Conversion Rate (%)</label>
+                    <div class="input-suffix">
+                      <input type="number" id="enrollment-rate" name="enrollmentRate" class="form-input" placeholder="2" min="0.01" max="100" step="0.01" required>
+                      <span class="suffix">%</span>
+                    </div>
+                    <span class="form-hint">Percentage of your audience that purchases the course per launch</span>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="course-price">Course Price ($)</label>
+                    <div class="input-prefix">
+                      <span class="prefix">$</span>
+                      <input type="number" id="course-price" name="coursePrice" class="form-input" placeholder="297" min="0.01" step="0.01" required>
+                    </div>
+                    <span class="form-hint">Selling price of your course (or average order value if you have payment plans)</span>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="launches-per-year">Launches per Year</label>
+                    <input type="number" id="launches-per-year" name="launchesPerYear" class="form-input" placeholder="3" min="1" max="52" step="1" required>
+                    <span class="form-hint">How many times per year you open enrollment (1 for annual, 12 for monthly, etc.)</span>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="platform-fee">Platform Fee (%)</label>
+                    <div class="input-suffix">
+                      <input type="number" id="platform-fee" name="platformFee" class="form-input" placeholder="5" min="0" max="50" step="0.1">
+                      <span class="suffix">%</span>
+                    </div>
+                    <span class="form-hint">Optional: platform transaction fee (e.g., Teachable, Thinkific). Leave blank or 0 to skip.</span>
+                  </div>
+
+                  <div class="calc-actions">
+                    <button type="button" class="btn btn-calculate btn-full" onclick="calculateCourseRevenue()">Calculate Revenue</button>
+                    <button type="button" class="btn btn-reset" onclick="resetCourseForm()">Reset</button>
+                  </div>
+                </form>
+
+                <div id="course-results" class="calc-results hidden">
+                  <div class="result-primary">
+                    <div class="result-label">Revenue Per Launch</div>
+                    <div class="result-value" id="result-per-launch">$0</div>
+                  </div>
+                  <div class="result-grid result-grid-2">
+                    <div class="result-item">
+                      <div class="result-label">Students Per Launch</div>
+                      <div class="result-value" id="result-students-launch">0</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Annual Students</div>
+                      <div class="result-value" id="result-annual-students">0</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Annual Gross Revenue</div>
+                      <div class="result-value" id="result-annual-gross">$0</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Annual Net Revenue</div>
+                      <div class="result-value" id="result-annual-net">$0</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Avg Monthly Income</div>
+                      <div class="result-value" id="result-monthly-avg">$0</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Revenue per Subscriber</div>
+                      <div class="result-value" id="result-per-subscriber">$0.00</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="ad-slot ad-slot-leaderboard"></div>
+
+            <section class="content-section">
+              <h2>Online Course Revenue Formulas</h2>
+              <div class="formula-box">
+                <div class="formula-label">Students Per Launch</div>
+                Students = Audience Size x (Enrollment Rate / 100)
+              </div>
+              <div class="formula-box">
+                <div class="formula-label">Gross Revenue Per Launch</div>
+                Gross Revenue = Students x Course Price
+              </div>
+              <div class="formula-box">
+                <div class="formula-label">Annual Gross Revenue</div>
+                Annual Gross = Gross Revenue per Launch x Launches per Year
+              </div>
+              <div class="formula-box">
+                <div class="formula-label">Annual Net Revenue</div>
+                Annual Net = Annual Gross x (1 - Platform Fee / 100)
+              </div>
+            </section>
+
+            <section class="content-section">
+              <h2>How to Use This Calculator</h2>
+              <ol>
+                <li>Enter your <strong>audience size</strong> — the total number of email subscribers or followers you promote the course to during a launch.</li>
+                <li>Set your <strong>enrollment conversion rate</strong> — the percentage of your audience who purchase. Use 1-3% for cold or disengaged lists, 3-8% for warm, engaged audiences.</li>
+                <li>Enter your <strong>course price</strong> — the full price or average order value if you offer payment plans.</li>
+                <li>Set <strong>launches per year</strong> — how many times you open enrollment. Evergreen funnels can use 12 as a monthly approximation.</li>
+                <li>Optionally enter your <strong>platform fee</strong> to see net revenue after transaction costs.</li>
+                <li>Click <strong>Calculate Revenue</strong> to see per-launch figures, annual projections, and revenue per subscriber.</li>
+              </ol>
+            </section>
+
+            <section class="content-section">
+              <h2>Example Scenario</h2>
+              <p>A productivity coach has an email list of 8,000 subscribers and launches a $497 course three times per year with a 2.5% conversion rate and 5% platform fee.</p>
+              <ul>
+                <li>Students per launch: 8,000 x 2.5% = <strong>200 students</strong></li>
+                <li>Gross revenue per launch: 200 x $497 = <strong>$99,400</strong></li>
+                <li>Annual gross revenue: $99,400 x 3 = <strong>$298,200</strong></li>
+                <li>Annual net revenue (5% fee): $298,200 x 0.95 = <strong>$283,290</strong></li>
+                <li>Average monthly income: $283,290 / 12 = <strong>$23,608/month</strong></li>
+              </ul>
+            </section>
+
+            <section class="faq-section">
+              <h2>Frequently Asked Questions</h2>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  What is a realistic conversion rate for an online course launch?
+                  <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                </button>
+                <div class="faq-answer">
+                  <p>Typical email list conversion rates for course launches range from 1% to 5%. Warm, engaged audiences with strong pre-launch sequences can achieve 3-8%. Cold traffic from paid ads typically converts at 0.5-2%. Webinar-based launches often achieve higher rates of 5-15% from attendees.</p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  How should I price my online course?
+                  <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                </button>
+                <div class="faq-answer">
+                  <p>Course pricing depends on the depth of content, your authority in the niche, and the transformation promised. Introductory courses often sell for $47-$197, mid-tier courses $197-$997, and premium programs $1,000-$5,000+. Higher-priced courses with strong outcomes tend to convert just as well as lower-priced ones when marketed correctly.</p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  How many times per year should I launch my course?
+                  <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                </button>
+                <div class="faq-answer">
+                  <p>Most course creators launch 2-4 times per year using cohort or open/close cart models. More frequent launches (6-12x) work well for lower-priced self-paced courses. Evergreen funnels allow continuous enrollment and are popular for automating income. Each approach has different audience fatigue and conversion implications.</p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  What expenses should I account for when calculating course profit?
+                  <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                </button>
+                <div class="faq-answer">
+                  <p>Key course business expenses include platform fees (Teachable, Kajabi, Thinkific take 0-10%), payment processing (2-3%), email marketing software, course production costs, advertising spend for each launch, and any affiliate commissions (typically 30-50% of sale price for partner promotions).</p>
+                </div>
+              </div>
+            </section>
+
+            <section class="related-calculators">
+              <h2>Related Calculators</h2>
+              <div class="grid grid-3">
+                <a href="/pages/digital-income-calculators/ebook-sales-calculator/" class="card card-link">
+                  <h3>Ebook Sales Calculator</h3>
+                  <p>Calculate ebook revenue and royalties from sales volume and pricing.</p>
+                </a>
+                <a href="/pages/digital-income-calculators/membership-revenue-calculator/" class="card card-link">
+                  <h3>Membership Revenue Calculator</h3>
+                  <p>Project recurring revenue from membership sites and communities.</p>
+                </a>
+                <a href="/pages/digital-income-calculators/affiliate-income-calculator/" class="card card-link">
+                  <h3>Affiliate Income Calculator</h3>
+                  <p>Estimate affiliate marketing earnings from traffic and conversion metrics.</p>
+                </a>
+                <a href="/pages/digital-income-calculators/newsletter-revenue-calculator/" class="card card-link">
+                  <h3>Newsletter Revenue Calculator</h3>
+                  <p>Calculate paid newsletter revenue and subscriber growth value.</p>
+                </a>
+                <a href="/pages/digital-income-calculators/saas-revenue-calculator/" class="card card-link">
+                  <h3>SaaS Revenue Calculator</h3>
+                  <p>Model MRR, ARR, and churn for your software subscription business.</p>
+                </a>
+              </div>
+            </section>
+
+            <div class="disclaimer">
+              <strong>Disclaimer:</strong> This calculator provides estimates for educational and planning purposes only. Actual course revenue depends on audience quality, marketing execution, content quality, market competition, and many other factors. Results are not guaranteed.
+            </div>
+          </div>
+
+          <aside class="calc-page-sidebar">
+            <div class="ad-slot ad-slot-rectangle"></div>
+            <div class="sidebar-card">
+              <h3>Digital Income Calculators</h3>
+              <a href="/pages/digital-income-calculators/affiliate-income-calculator/">Affiliate Income</a>
+              <a href="/pages/digital-income-calculators/membership-revenue-calculator/">Membership Revenue</a>
+              <a href="/pages/digital-income-calculators/saas-revenue-calculator/">SaaS Revenue</a>
+              <a href="/pages/digital-income-calculators/subscription-revenue-calculator/">Subscription Revenue</a>
+              <a href="/pages/digital-income-calculators/ebook-sales-calculator/">Ebook Sales</a>
+              <a href="/pages/digital-income-calculators/podcast-monetization-calculator/">Podcast Monetization</a>
+              <a href="/pages/digital-income-calculators/newsletter-revenue-calculator/">Newsletter Revenue</a>
+              <a href="/pages/digital-income-calculators/social-media-monetization-calculator/">Social Media Monetization</a>
+              <a href="/pages/digital-income-calculators/app-revenue-calculator/">App Revenue</a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free online calculators for business, finance, tax, and investment decisions.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Calculators</h4>
+          <a href="/pages/business-calculators/">Business</a>
+          <a href="/pages/financial-calculators/">Financial</a>
+          <a href="/pages/tax-calculators/">Tax</a>
+          <a href="/pages/digital-income-calculators/">Digital Income</a>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <a href="/about/">About</a>
+          <a href="/blog/">Blog</a>
+          <a href="/contact/">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="/privacy/">Privacy Policy</a>
+          <a href="/terms/">Terms of Service</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/privacy/">Privacy</a>
+          <a href="/terms/">Terms</a>
+          <a href="/contact/">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateCourseRevenue() {
+      const audienceSize = CalcWise.parseNumber(document.getElementById('audience-size').value);
+      const enrollmentRate = CalcWise.parseNumber(document.getElementById('enrollment-rate').value);
+      const coursePrice = CalcWise.parseNumber(document.getElementById('course-price').value);
+      const launchesPerYear = CalcWise.parseNumber(document.getElementById('launches-per-year').value);
+      const platformFee = CalcWise.parseNumber(document.getElementById('platform-fee').value) || 0;
+
+      if (audienceSize <= 0) { alert('Please enter an audience size greater than zero.'); return; }
+      if (enrollmentRate <= 0 || enrollmentRate > 100) { alert('Enrollment rate must be between 0.01% and 100%.'); return; }
+      if (coursePrice <= 0) { alert('Course price must be greater than zero.'); return; }
+      if (launchesPerYear < 1) { alert('Launches per year must be at least 1.'); return; }
+      if (platformFee < 0 || platformFee > 50) { alert('Platform fee must be between 0% and 50%.'); return; }
+
+      const studentsPerLaunch = audienceSize * (enrollmentRate / 100);
+      const grossPerLaunch = studentsPerLaunch * coursePrice;
+      const annualGross = grossPerLaunch * launchesPerYear;
+      const annualNet = annualGross * (1 - platformFee / 100);
+      const monthlyAvg = annualNet / 12;
+      const perSubscriber = audienceSize > 0 ? annualNet / audienceSize : 0;
+
+      CalcWise.setText('result-per-launch', CalcWise.formatCurrency(grossPerLaunch, 0));
+      CalcWise.setText('result-students-launch', CalcWise.formatNumber(studentsPerLaunch, 0));
+      CalcWise.setText('result-annual-students', CalcWise.formatNumber(studentsPerLaunch * launchesPerYear, 0));
+      CalcWise.setText('result-annual-gross', CalcWise.formatCurrency(annualGross, 0));
+      CalcWise.setText('result-annual-net', CalcWise.formatCurrency(annualNet, 0));
+      CalcWise.setText('result-monthly-avg', CalcWise.formatCurrency(monthlyAvg, 0));
+      CalcWise.setText('result-per-subscriber', CalcWise.formatCurrency(perSubscriber, 2));
+      CalcWise.showResults('course-results');
+    }
+
+    function resetCourseForm() {
+      document.getElementById('course-form').reset();
+      CalcWise.hideResults('course-results');
+    }
+  </script>
+</body>
+</html>

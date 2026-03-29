@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Debt-to-Wealth Ratio Calculator - Track Progress to Positive Net Worth | CalcWise</title>
+  <meta name="description" content="Calculate your debt-to-wealth ratio and track your progress toward positive net worth. See how your liabilities compare to your assets and model a payoff timeline.">
+  <meta name="keywords" content="debt to wealth ratio calculator, net worth calculator, debt ratio, liabilities vs assets, positive net worth, wealth tracker">
+  <link rel="canonical" href="https://calcwise.io/wealth-building-calculators/debt-to-wealth-ratio-calculator/">
+
+  <meta property="og:title" content="Debt-to-Wealth Ratio Calculator - Track Progress to Positive Net Worth">
+  <meta property="og:description" content="Calculate your debt-to-wealth ratio and track your progress toward positive net worth.">
+  <meta property="og:url" content="https://calcwise.io/wealth-building-calculators/debt-to-wealth-ratio-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Debt-to-Wealth Ratio Calculator - Track Progress to Positive Net Worth">
+  <meta name="twitter:description" content="Calculate your debt-to-wealth ratio and track your progress toward positive net worth.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Wealth Building Calculators", "item": "https://calcwise.io/wealth-building-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "Debt-to-Wealth Ratio Calculator", "item": "https://calcwise.io/wealth-building-calculators/debt-to-wealth-ratio-calculator/" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is a good debt-to-wealth ratio?",
+        "acceptedAnswer": { "@type": "Answer", "text": "A debt-to-wealth ratio below 1.0 means your assets exceed your liabilities, which is the foundation of positive net worth. A ratio of 0.5 or lower is generally considered healthy, meaning debts are no more than half of total assets. A ratio above 1.0 indicates negative net worth — your debts exceed what you own." }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I calculate my debt-to-wealth ratio?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Divide your total liabilities (all debts, loans, and obligations) by your total assets (everything you own at current market value). For example, $60,000 in debt divided by $100,000 in assets equals a ratio of 0.60. A ratio below 1.0 means positive net worth; above 1.0 means negative net worth." }
+      },
+      {
+        "@type": "Question",
+        "name": "What assets should I include in this calculation?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Include all assets at current market value: checking and savings accounts, investment and retirement accounts (401k, IRA, brokerage), real estate equity, vehicle values, and other valuable property. Use realistic current market values, not purchase prices." }
+      },
+      {
+        "@type": "Question",
+        "name": "How long will it take to reach a positive net worth?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The timeline depends on three factors: how much you reduce debt each month, how much your assets grow through savings and investment returns, and the gap between your current net worth and zero. This calculator models both scenarios to give you a projected month and year when you will cross into positive net worth territory." }
+      }
+    ]
+  }
+  </script>
+  <style>
+    .ratio-bar-wrap { background: var(--color-gray-200); border-radius: 8px; height: 18px; overflow: hidden; margin: 0.5rem 0 1rem; }
+    .ratio-bar-fill { height: 100%; border-radius: 8px; transition: width 0.4s ease; background: var(--color-primary); }
+    .ratio-bar-fill.negative { background: #dc2626; }
+    .timeline-table { width: 100%; border-collapse: collapse; font-size: 0.875rem; margin-top: 1rem; }
+    .timeline-table th, .timeline-table td { padding: 0.5rem 0.75rem; text-align: right; border-bottom: 1px solid var(--color-gray-200); }
+    .timeline-table th { background: var(--color-primary-50); color: var(--color-primary); font-weight: 600; }
+    .timeline-table th:first-child, .timeline-table td:first-child { text-align: left; }
+    .timeline-table tbody tr:hover { background: var(--color-gray-50); }
+    .table-wrapper { overflow-x: auto; margin-top: 1rem; }
+    .status-positive { color: var(--color-primary); font-weight: 700; }
+    .status-negative { color: #dc2626; font-weight: 700; }
+  </style>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/wealth-building-calculators/" aria-current="page">Wealth Building</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/wealth-building-calculators/">Wealth Building Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/wealth-building-calculators/">Wealth Building Calculators</a></li>
+          <li><span aria-current="page">Debt-to-Wealth Ratio Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="article-content">
+          <h1>Debt-to-Wealth Ratio Calculator</h1>
+          <p>Your debt-to-wealth ratio is one of the clearest signals of financial health. It compares everything you owe to everything you own — and when that ratio drops below 1.0, you have crossed into positive net worth territory. This calculator shows your current ratio, visualizes it on a progress bar, and projects a month-by-month timeline to the moment your net worth turns positive, factoring in both debt paydown and asset growth.</p>
+
+          <div class="calc-container mt-8">
+            <div class="calc-header">
+              <h2>Calculate Your Debt-to-Wealth Ratio</h2>
+              <p>Enter your assets and liabilities to see your ratio and payoff timeline</p>
+            </div>
+            <div class="calc-body">
+              <form id="dw-form" onsubmit="return false;">
+                <div class="form-group">
+                  <label class="form-label" for="dw-assets">Total Assets (Current Market Value)</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="dw-assets" name="assets" class="form-input" placeholder="100000" min="0" step="1000" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="dw-debts">Total Liabilities (All Debts)</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="dw-debts" name="debts" class="form-input" placeholder="60000" min="0" step="1000" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="dw-monthly-debt">Monthly Debt Paydown</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="dw-monthly-debt" name="monthlyDebt" class="form-input" placeholder="500" min="0" step="50" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="dw-monthly-savings">Monthly Savings / Asset Growth</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="dw-monthly-savings" name="monthlySavings" class="form-input" placeholder="300" min="0" step="50" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="dw-asset-return">Annual Asset Return Rate (Optional)</label>
+                  <div class="input-suffix">
+                    <input type="number" id="dw-asset-return" name="assetReturn" class="form-input" placeholder="5" min="0" max="30" step="0.1">
+                    <span class="suffix">%</span>
+                  </div>
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calculateDebtWealth()">Calculate Ratio</button>
+                  <button type="button" class="btn btn-reset" onclick="resetDebtWealth()">Reset</button>
+                </div>
+              </form>
+
+              <div id="dw-results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">Debt-to-Wealth Ratio</div>
+                  <div class="result-value" id="dw-ratio"></div>
+                </div>
+                <div class="ratio-bar-wrap"><div class="ratio-bar-fill" id="dw-bar"></div></div>
+                <div class="result-grid">
+                  <div class="result-item">
+                    <div class="result-label">Net Worth</div>
+                    <div class="result-value" id="dw-networth"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Status</div>
+                    <div class="result-value" id="dw-status"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Assets</div>
+                    <div class="result-value" id="dw-assets-out"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Liabilities</div>
+                    <div class="result-value" id="dw-debts-out"></div>
+                  </div>
+                </div>
+                <div id="dw-timeline-wrap">
+                  <h3 style="font-size:1rem;margin:1.5rem 0 0.5rem;">Progress Timeline</h3>
+                  <div class="table-wrapper">
+                    <table class="timeline-table">
+                      <thead>
+                        <tr>
+                          <th>Year</th>
+                          <th>Assets</th>
+                          <th>Debts</th>
+                          <th>Net Worth</th>
+                          <th>Ratio</th>
+                        </tr>
+                      </thead>
+                      <tbody id="dw-table-body"></tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <section class="content-section">
+            <h2>Debt-to-Wealth Ratio Formula</h2>
+            <p>The debt-to-wealth ratio divides total liabilities by total assets to produce a simple decimal that signals where you stand relative to financial independence:</p>
+            <div class="formula-box">
+              <div class="formula-label">Debt-to-Wealth Ratio</div>
+              Ratio = Total Liabilities &divide; Total Assets
+            </div>
+            <div class="formula-box">
+              <div class="formula-label">Net Worth</div>
+              Net Worth = Total Assets &minus; Total Liabilities
+            </div>
+            <div class="formula-box">
+              <div class="formula-label">Projected Assets (Month m)</div>
+              Assets<sub>m</sub> = Assets &times; (1 + r/12)<sup>m</sup> + MonthlySavings &times; [((1 + r/12)<sup>m</sup> &minus; 1) / (r/12)]
+            </div>
+            <p>Where <strong>r</strong> is the annual asset return rate and <strong>m</strong> is months elapsed. Debts decrease by the monthly paydown amount each period.</p>
+          </section>
+
+          <section class="content-section">
+            <h2>How to Use This Calculator</h2>
+            <ol>
+              <li><strong>Enter total assets</strong> — sum all savings, investments, property values, and other owned assets at current market value.</li>
+              <li><strong>Enter total liabilities</strong> — all outstanding balances: mortgage, auto loans, student loans, credit cards, and any other debts.</li>
+              <li><strong>Enter monthly debt paydown</strong> — the extra amount you apply to reducing debt principal each month beyond minimum interest.</li>
+              <li><strong>Enter monthly savings</strong> — how much you add to savings or investments each month.</li>
+              <li><strong>Optionally enter annual asset return rate</strong> — expected growth rate on your existing asset base.</li>
+              <li><strong>Click "Calculate Ratio"</strong> to see your ratio, net worth status, and a year-by-year progress table.</li>
+            </ol>
+          </section>
+
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>Suppose you have $80,000 in assets (savings, 401k, car) and $95,000 in liabilities (student loans, car loan, credit cards). Your debt-to-wealth ratio is 1.19 — meaning you owe 19% more than you own, a negative net worth of -$15,000. If you pay down $600 in debt and add $400 to savings each month with a 6% annual return on assets, this calculator projects you will cross into positive net worth in approximately 14 months and reach a 0.50 ratio within five years.</p>
+          </section>
+
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What is a good debt-to-wealth ratio?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>A debt-to-wealth ratio below 1.0 means your assets exceed your liabilities, which is the foundation of positive net worth. A ratio of 0.5 or lower is generally considered healthy, meaning debts are no more than half of total assets. A ratio above 1.0 indicates negative net worth — your debts exceed what you own.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                How do I calculate my debt-to-wealth ratio?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Divide your total liabilities (all debts, loans, and obligations) by your total assets (everything you own at current market value). For example, $60,000 in debt divided by $100,000 in assets equals a ratio of 0.60. A ratio below 1.0 means positive net worth; above 1.0 means negative net worth.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What assets should I include in this calculation?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Include all assets at current market value: checking and savings accounts, investment and retirement accounts (401k, IRA, brokerage), real estate equity, vehicle values, and other valuable property. Use realistic current market values, not purchase prices.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                How long will it take to reach a positive net worth?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>The timeline depends on three factors: how much you reduce debt each month, how much your assets grow through savings and investment returns, and the gap between your current net worth and zero. This calculator models both scenarios to give you a projected month and year when you will cross into positive net worth territory.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/wealth-building-calculators/net-worth-growth-calculator/" class="card card-link">
+                <h3>Net Worth Growth Calculator</h3>
+                <p>Project how your net worth grows over time.</p>
+              </a>
+              <a href="/wealth-building-calculators/wealth-gap-calculator/" class="card card-link">
+                <h3>Wealth Gap Calculator</h3>
+                <p>Find the gap between your current net worth and your target goal.</p>
+              </a>
+              <a href="/wealth-building-calculators/millionaire-timeline-calculator/" class="card card-link">
+                <h3>Millionaire Timeline Calculator</h3>
+                <p>See how long to reach $1M based on savings rate and returns.</p>
+              </a>
+            </div>
+          </section>
+
+          <div class="ad-slot ad-slot-leaderboard"></div>
+
+          <div class="disclaimer">
+            <strong>Disclaimer:</strong> This calculator provides estimates for informational and educational purposes only. Asset values and debt balances change over time and results may differ from projections. This is not financial advice. Consult a qualified financial professional before making financial decisions.
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Wealth Building</h4>
+          <a href="/wealth-building-calculators/">All Wealth Building Calculators</a>
+          <a href="/wealth-building-calculators/millionaire-timeline-calculator/">Millionaire Timeline</a>
+          <a href="/wealth-building-calculators/wealth-gap-calculator/">Wealth Gap</a>
+        </div>
+        <div class="footer-col">
+          <h4>Finance</h4>
+          <a href="/finance-calculators/">All Finance Calculators</a>
+          <a href="/finance-calculators/compound-interest-calculator/">Compound Interest</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateDebtWealth() {
+      if (!CalcWise.validateForm('dw-form')) return;
+
+      const assets = CalcWise.parseNumber(document.getElementById('dw-assets').value) || 0;
+      const debts = CalcWise.parseNumber(document.getElementById('dw-debts').value) || 0;
+      const monthlyDebt = CalcWise.parseNumber(document.getElementById('dw-monthly-debt').value) || 0;
+      const monthlySavings = CalcWise.parseNumber(document.getElementById('dw-monthly-savings').value) || 0;
+      const annualReturn = parseFloat(document.getElementById('dw-asset-return').value) || 0;
+      const r = annualReturn / 100;
+
+      const ratio = debts > 0 ? debts / Math.max(assets, 1) : 0;
+      const netWorth = assets - debts;
+
+      CalcWise.setText('dw-ratio', ratio.toFixed(3));
+      CalcWise.setText('dw-networth', CalcWise.formatCurrency(netWorth));
+      CalcWise.setText('dw-assets-out', CalcWise.formatCurrency(assets));
+      CalcWise.setText('dw-debts-out', CalcWise.formatCurrency(debts));
+
+      const statusEl = document.getElementById('dw-status');
+      if (netWorth >= 0) {
+        statusEl.textContent = 'Positive';
+        statusEl.className = 'result-value status-positive';
+      } else {
+        statusEl.textContent = 'Negative';
+        statusEl.className = 'result-value status-negative';
+      }
+
+      // Ratio bar: cap display at 200% (ratio of 2.0)
+      const barPct = Math.min((ratio / 2) * 100, 100);
+      const bar = document.getElementById('dw-bar');
+      bar.style.width = barPct + '%';
+      bar.className = 'ratio-bar-fill' + (ratio > 1 ? ' negative' : '');
+
+      // Build year-by-year timeline (up to 30 years)
+      let curAssets = assets;
+      let curDebts = debts;
+      const monthlyRate = r / 12;
+      let tbody = '';
+      const years = 30;
+
+      for (let y = 1; y <= years; y++) {
+        for (let m = 0; m < 12; m++) {
+          curDebts = Math.max(0, curDebts - monthlyDebt);
+          if (monthlyRate > 0) {
+            curAssets = curAssets * (1 + monthlyRate) + monthlySavings;
+          } else {
+            curAssets += monthlySavings;
+          }
+        }
+        const yr = new Date().getFullYear() + y;
+        const curRatio = curDebts > 0 ? curDebts / Math.max(curAssets, 1) : 0;
+        const curNW = curAssets - curDebts;
+        tbody += `<tr>
+          <td>${yr}</td>
+          <td>${CalcWise.formatCurrency(curAssets)}</td>
+          <td>${CalcWise.formatCurrency(curDebts)}</td>
+          <td>${CalcWise.formatCurrency(curNW)}</td>
+          <td>${curRatio.toFixed(3)}</td>
+        </tr>`;
+        if (curDebts <= 0 && y >= 5) break;
+      }
+      CalcWise.setHtml('dw-table-body', tbody);
+
+      CalcWise.showResults('dw-results');
+    }
+
+    function resetDebtWealth() {
+      document.getElementById('dw-form').reset();
+      CalcWise.hideResults('dw-results');
+    }
+  </script>
+</body>
+</html>

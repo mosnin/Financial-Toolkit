@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coast FIRE Calculator - CalcWise</title>
+  <meta name="description" content="Calculate your Coast FIRE number — the amount you need to invest today so compounding handles the rest. Find out if you've already coasted and your monthly surplus if you stop contributing now.">
+  <link rel="canonical" href="https://calcwise.io/financial-independence-calculators/coast-fire-calculator/">
+  <meta property="og:title" content="Coast FIRE Calculator - CalcWise">
+  <meta property="og:description" content="Have you already hit Coast FIRE? Find your Coast FIRE number — the lump sum needed today for compounding to cover your retirement without further contributions.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcwise.io/financial-independence-calculators/coast-fire-calculator/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Coast FIRE Calculator - CalcWise">
+  <meta name="twitter:description" content="Calculate your Coast FIRE number. See if you've coasted, how much you need to save first, and the monthly income freed up when you stop contributing.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/"},
+      {"@type": "ListItem", "position": 2, "name": "Financial Independence Calculators", "item": "https://calcwise.io/financial-independence-calculators/"},
+      {"@type": "ListItem", "position": 3, "name": "Coast FIRE Calculator"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is Coast FIRE?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Coast FIRE means you've invested enough money that, left to compound at your expected return rate, it will grow to your full FI number by your target retirement age — without any additional contributions. Once you reach Coast FIRE, you only need to earn enough to cover current expenses, freeing your investment contributions for other purposes."}
+      },
+      {
+        "@type": "Question",
+        "name": "How is the Coast FIRE number calculated?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Your Coast FIRE number is the present value of your FI number discounted back to today at your expected return rate. Formula: Coast FIRE = FI Number / (1 + r)^years, where r is your annual return and years is the time until your target retirement age. The further you are from retirement, the smaller your Coast FIRE number."}
+      },
+      {
+        "@type": "Question",
+        "name": "What happens after reaching Coast FIRE?",
+        "acceptedAnswer": {"@type": "Answer", "text": "After hitting Coast FIRE, you can theoretically stop contributing to retirement accounts and let compounding do the rest. You still need to cover living expenses, but you no longer need to save aggressively for retirement. Many people coast to a lower-stress or part-time job after this milestone."}
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between Coast FIRE and Barista FIRE?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Coast FIRE focuses on the investment portfolio milestone — you've saved enough to coast. Barista FIRE is a lifestyle choice — working a low-stress part-time job for enjoyment, benefits, or supplemental income while a smaller portfolio grows. Coast FIRE can be part of a Barista FIRE strategy."}
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="logo">
+        <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav">
+        <a href="/">Home</a>
+        <a href="/pages/finance-calculators/">Finance</a>
+        <a href="/pages/financial-independence-calculators/" aria-current="page">FI Calculators</a>
+        <a href="/pages/investment-calculators/">Investment</a>
+        <a href="/pages/tax-calculators/">Tax</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav">
+      <a href="/">Home</a>
+      <a href="/pages/finance-calculators/">Finance Calculators</a>
+      <a href="/pages/financial-independence-calculators/">FI Calculators</a>
+      <a href="/pages/investment-calculators/">Investment Calculators</a>
+      <a href="/pages/tax-calculators/">Tax Calculators</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li><a href="/pages/financial-independence-calculators/">Financial Independence Calculators</a></li>
+        <li><span aria-current="page">Coast FIRE Calculator</span></li>
+      </ol>
+    </nav>
+
+    <div class="page-content">
+      <div class="article-content">
+        <h1>Coast FIRE Calculator</h1>
+        <p>Coast FIRE is the milestone where your existing investments — without any new contributions — will compound to your full FI number by your target retirement age. This calculator finds your Coast FIRE number (the present value of your FI goal), tells you whether you've already coasted, and shows the monthly surplus you'd free up if you stopped contributing to retirement accounts today.</p>
+
+        <div class="ad-slot ad-slot-leaderboard"></div>
+
+        <div class="calc-container">
+          <div class="calc-header">
+            <h2>Your Coast FIRE Number</h2>
+            <p>Find the lump sum needed today for compounding to handle the rest</p>
+          </div>
+          <div class="calc-body">
+            <form id="cfire-form">
+              <div class="result-grid result-grid-2" style="gap: var(--space-4);">
+                <div class="form-group">
+                  <label class="form-label" for="currentAge">Current Age</label>
+                  <input type="number" id="currentAge" name="currentAge" class="form-input" placeholder="32" min="18" max="70" step="1" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="targetRetirementAge">Target Retirement Age</label>
+                  <input type="number" id="targetRetirementAge" name="targetRetirementAge" class="form-input" placeholder="60" min="30" max="80" step="1" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="currentSavings">Current Savings</label>
+                  <div class="input-prefix"><span class="prefix">$</span>
+                    <input type="number" id="currentSavings" name="currentSavings" class="form-input" placeholder="150000" min="0" step="1000" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="retirementAnnualExpenses">Annual Expenses in Retirement</label>
+                  <div class="input-prefix"><span class="prefix">$</span>
+                    <input type="number" id="retirementAnnualExpenses" name="retirementAnnualExpenses" class="form-input" placeholder="60000" min="1000" step="1000" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="returnRate">Expected Annual Return</label>
+                  <div class="input-suffix">
+                    <input type="number" id="returnRate" name="returnRate" class="form-input" placeholder="7" min="0" max="20" step="0.1" value="7" required>
+                    <span class="suffix">%</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="swr">Safe Withdrawal Rate</label>
+                  <div class="input-suffix">
+                    <input type="number" id="swr" name="swr" class="form-input" placeholder="4" min="1" max="8" step="0.1" value="4" required>
+                    <span class="suffix">%</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="monthlySavings">Current Monthly Savings (for surplus calc)</label>
+                  <div class="input-prefix"><span class="prefix">$</span>
+                    <input type="number" id="monthlySavings" name="monthlySavings" class="form-input" placeholder="2000" min="0" step="100">
+                  </div>
+                </div>
+              </div>
+              <div class="calc-actions">
+                <button type="button" class="btn btn-calculate" onclick="calcCoastFIRE()">Calculate Coast FIRE</button>
+                <button type="button" class="btn btn-reset" onclick="resetCoastFIRE()">Reset</button>
+              </div>
+            </form>
+
+            <div id="cfire-results" class="calc-results hidden">
+              <div class="result-primary">
+                <div class="result-label">Coast FIRE Number</div>
+                <div class="result-value" id="coastNum">$0</div>
+              </div>
+              <div class="result-grid result-grid-3" style="margin-top: var(--space-4);">
+                <div class="result-item">
+                  <div class="result-label">Coasted Status</div>
+                  <div class="result-value" id="coastStatus">—</div>
+                </div>
+                <div class="result-item">
+                  <div class="result-label">Amount Still Needed</div>
+                  <div class="result-value" id="coastGap" style="color: var(--color-info);">$0</div>
+                </div>
+                <div class="result-item">
+                  <div class="result-label">Monthly Surplus If Coasted</div>
+                  <div class="result-value" id="monthlySurplus" style="color: var(--color-success);">$0</div>
+                </div>
+              </div>
+              <div id="cfireDetails" style="margin-top: var(--space-5);"></div>
+            </div>
+          </div>
+        </div>
+
+        <section class="content-section">
+          <h2>How the Coast FIRE Number Is Calculated</h2>
+          <div class="formula-box">
+            <div class="formula-label">Formula</div>
+            FI Number = Annual Expenses &divide; SWR<br>
+            Coast FIRE Number = FI Number &divide; (1 + r)^years<br><br>
+            Where: r = annual return rate, years = target age &minus; current age<br><br>
+            Coasted if: Current Savings &ge; Coast FIRE Number<br>
+            Monthly Surplus = Monthly Savings (freed up if no longer contributing)
+          </div>
+          <p>The Coast FIRE number is the present value of your full FI number discounted at your expected return rate. The longer your runway to retirement, the smaller your Coast FIRE number — because compounding has more time to work. Once your current savings exceeds this amount, you've officially coasted: no new retirement contributions are technically required.</p>
+        </section>
+
+        <section class="content-section">
+          <h2>How to Use This Calculator</h2>
+          <ol>
+            <li><strong>Enter your current and target retirement ages:</strong> Longer runway = smaller Coast FIRE number.</li>
+            <li><strong>Add your current savings and annual retirement expenses:</strong> These determine your full FI number target.</li>
+            <li><strong>Set return rate and SWR:</strong> 7% return and 4% SWR are standard starting points.</li>
+            <li><strong>Enter monthly savings (optional):</strong> Used to show the monthly surplus freed up if you stop contributing today.</li>
+            <li><strong>Review results:</strong> See your Coast FIRE number, whether you've coasted, and the gap or surplus.</li>
+          </ol>
+        </section>
+
+        <section class="content-section">
+          <h2>Example Scenario</h2>
+          <p>Taylor is 35 with $180,000 saved, planning to retire at 60 with $70,000/year in expenses. FI number: $1,750,000. Coast FIRE number: $1,750,000 / (1.07)^25 = approximately $321,000. Taylor's $180,000 hasn't reached the Coast FIRE number yet — a gap of $141,000. Once Taylor's savings reach $321,000, compounding alone will grow it to $1,750,000 by age 60. Currently contributing $2,500/month — that monthly surplus would be freed up upon hitting Coast FIRE.</p>
+        </section>
+
+        <section class="faq-section">
+          <h2>Frequently Asked Questions</h2>
+          <div class="faq-item">
+            <button class="faq-question">What is Coast FIRE?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>Coast FIRE means your portfolio is large enough that — with no new contributions — it will compound to your FI number by retirement age. You can "coast" by only covering living expenses without needing to save more for retirement.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">How is the Coast FIRE number calculated?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>Coast FIRE Number = FI Number ÷ (1 + return rate)^years remaining. The longer until retirement, the smaller the number, since compounding has more time to grow the investment. This is essentially the present value of your FI goal.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">What can I do after reaching Coast FIRE?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>After Coast FIRE, you no longer need to invest for retirement. Options include transitioning to a lower-stress career, working part-time (Barista FIRE), traveling, pursuing passion projects, or simply spending your previous investment contributions on life experiences.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">What is the difference between Coast FIRE and Barista FIRE?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>Coast FIRE is a portfolio milestone — savings sufficient for compounding to handle retirement. Barista FIRE is a lifestyle strategy — working part-time for income and benefits while a smaller portfolio grows. The two often overlap: coasting to a Barista FIRE lifestyle is a popular combination.</p></div>
+          </div>
+        </section>
+
+        <section class="related-calculators">
+          <h2>Related Calculators</h2>
+          <div class="grid grid-3">
+            <a href="/pages/financial-independence-calculators/barista-fire-calculator/" class="card card-link">
+              <h3>Barista FIRE Calculator</h3>
+              <p>Combine a smaller portfolio with part-time income for semi-retirement.</p>
+            </a>
+            <a href="/pages/financial-independence-calculators/fire-timeline-calculator/" class="card card-link">
+              <h3>FIRE Timeline Calculator</h3>
+              <p>Find your full FIRE number and timeline with monthly milestones.</p>
+            </a>
+            <a href="/pages/financial-independence-calculators/lean-fire-calculator/" class="card card-link">
+              <h3>Lean FIRE Calculator</h3>
+              <p>Calculate a smaller Coast FIRE target with lean lifestyle expenses.</p>
+            </a>
+            <a href="/pages/financial-independence-calculators/safe-withdrawal-rate-calculator/" class="card card-link">
+              <h3>Safe Withdrawal Rate Calculator</h3>
+              <p>Assess portfolio sustainability at your planned retirement spending level.</p>
+            </a>
+            <a href="/pages/personal-finance-calculators/financial-independence-calculator/" class="card card-link">
+              <h3>Financial Independence Calculator</h3>
+              <p>Full FI planner with years-to-FI and savings scenario analysis.</p>
+            </a>
+          </div>
+        </section>
+
+        <div class="disclaimer">
+          <strong>Disclaimer:</strong> This calculator is for informational and educational purposes only. Coast FIRE calculations assume a constant annual return, which real markets do not provide. Sequence-of-returns risk means actual results may differ significantly. This is not financial advice. Consult a qualified financial advisor before reducing retirement contributions.
+        </div>
+
+        <div class="ad-slot ad-slot-rectangle"></div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free online financial calculators to help you make smarter money decisions.</p>
+        </div>
+        <div class="footer-col">
+          <h4>FI Calculators</h4>
+          <a href="/pages/financial-independence-calculators/fire-timeline-calculator/">FIRE Timeline</a>
+          <a href="/pages/financial-independence-calculators/lean-fire-calculator/">Lean FIRE</a>
+          <a href="/pages/financial-independence-calculators/barista-fire-calculator/">Barista FIRE</a>
+          <a href="/pages/financial-independence-calculators/safe-withdrawal-rate-calculator/">SWR Calculator</a>
+        </div>
+        <div class="footer-col">
+          <h4>Tools</h4>
+          <a href="/pages/finance-calculators/retirement-savings-calculator/">Retirement Savings</a>
+          <a href="/pages/investment-calculators/">Investment Calculators</a>
+          <a href="/pages/tax-calculators/">Tax Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about/">About</a>
+          <a href="/contact/">Contact</a>
+          <a href="/privacy/">Privacy Policy</a>
+          <a href="/terms/">Terms of Service</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 CalcWise. All rights reserved.</span>
+        <div class="footer-links">
+          <a href="/privacy/">Privacy</a>
+          <a href="/terms/">Terms</a>
+          <a href="/contact/">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calcCoastFIRE() {
+      if (!CalcWise.validateForm('cfire-form')) return;
+      const v = CalcWise.getFormValues('cfire-form');
+
+      const currentAge = v.currentAge;
+      const targetAge = v.targetRetirementAge;
+      const currentSavings = v.currentSavings;
+      const annualExpenses = v.retirementAnnualExpenses;
+      const returnRate = v.returnRate / 100;
+      const swr = v.swr / 100;
+      const monthlySavings = v.monthlySavings || 0;
+
+      if (targetAge <= currentAge) {
+        alert('Target retirement age must be greater than current age.');
+        return;
+      }
+
+      const years = targetAge - currentAge;
+      const fiNumber = annualExpenses / swr;
+      const coastFireNum = fiNumber / Math.pow(1 + returnRate, years);
+      const isCoasted = currentSavings >= coastFireNum;
+      const coastGap = coastFireNum - currentSavings;
+      const projectedAtRetirement = currentSavings * Math.pow(1 + returnRate, years);
+
+      CalcWise.setText('coastNum', CalcWise.formatCurrency(coastFireNum, 0));
+
+      const statusEl = document.getElementById('coastStatus');
+      if (isCoasted) {
+        statusEl.textContent = 'You have coasted!';
+        statusEl.style.color = 'var(--color-success)';
+      } else {
+        statusEl.textContent = 'Not yet coasted';
+        statusEl.style.color = 'var(--color-warning)';
+      }
+
+      const gapEl = document.getElementById('coastGap');
+      if (isCoasted) {
+        gapEl.textContent = '+' + CalcWise.formatCurrency(Math.abs(coastGap), 0) + ' surplus';
+        gapEl.style.color = 'var(--color-success)';
+      } else {
+        gapEl.textContent = CalcWise.formatCurrency(coastGap, 0) + ' needed';
+        gapEl.style.color = 'var(--color-error)';
+      }
+
+      CalcWise.setText('monthlySurplus', monthlySavings > 0 ? CalcWise.formatCurrency(monthlySavings, 0) + '/mo freed' : 'Enter monthly savings above');
+
+      let detailHtml = `<div class="table-container"><table class="data-table"><thead><tr><th>Metric</th><th>Value</th></tr></thead><tbody>`;
+      detailHtml += `<tr><td>Full FI Number (at retirement)</td><td>${CalcWise.formatCurrency(fiNumber, 0)}</td></tr>`;
+      detailHtml += `<tr><td>Coast FIRE Number (today)</td><td>${CalcWise.formatCurrency(coastFireNum, 0)}</td></tr>`;
+      detailHtml += `<tr><td>Current Savings</td><td>${CalcWise.formatCurrency(currentSavings, 0)}</td></tr>`;
+      detailHtml += `<tr><td>Projected Value at Age ${targetAge} (no new contributions)</td><td>${CalcWise.formatCurrency(projectedAtRetirement, 0)}</td></tr>`;
+      detailHtml += `<tr><td>Years Until Retirement</td><td>${years} years</td></tr>`;
+      detailHtml += `<tr><td>Status</td><td style="color:${isCoasted ? 'var(--color-success)' : 'var(--color-warning)'}">${isCoasted ? 'Coasted — compounding handles the rest' : `Need ${CalcWise.formatCurrency(coastGap, 0)} more to coast`}</td></tr>`;
+      detailHtml += `</tbody></table></div>`;
+
+      if (!isCoasted) {
+        // How long until coast is reached with current contributions?
+        const monthlyRate = returnRate / 12;
+        let coastMonths = null;
+        for (let m = 1; m <= 600; m++) {
+          let fv;
+          if (monthlyRate === 0) {
+            fv = currentSavings + monthlySavings * m;
+          } else {
+            const fvf = Math.pow(1 + monthlyRate, m);
+            fv = currentSavings * fvf + monthlySavings * (fvf - 1) / monthlyRate;
+          }
+          if (fv >= coastFireNum) { coastMonths = m; break; }
+        }
+        if (coastMonths && monthlySavings > 0) {
+          const cYrs = Math.floor(coastMonths / 12);
+          const cMos = coastMonths % 12;
+          detailHtml += `<p style="background:var(--color-primary-50);border-radius:var(--radius-md);padding:var(--space-3) var(--space-4);margin-top:var(--space-3);font-size:var(--text-sm);"><strong>At your current savings rate:</strong> You'll reach Coast FIRE in approximately ${cYrs}y ${cMos}m — at age ${currentAge + cYrs + (cMos > 0 ? 1 : 0)}.</p>`;
+        }
+      }
+
+      CalcWise.setHtml('cfireDetails', detailHtml);
+      CalcWise.showResults('cfire-results');
+    }
+
+    function resetCoastFIRE() {
+      document.getElementById('cfire-form').reset();
+      CalcWise.hideResults('cfire-results');
+    }
+  </script>
+</body>
+</html>

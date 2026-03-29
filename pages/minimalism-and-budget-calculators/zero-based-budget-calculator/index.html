@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zero-Based Budget Calculator - CalcWise</title>
+  <meta name="description" content="Build a zero-based budget where every dollar of income is assigned a purpose. Income minus all expense categories equals zero — no money left unaccounted for.">
+  <link rel="canonical" href="https://calcwise.io/minimalism-and-budget-calculators/zero-based-budget-calculator/">
+  <meta property="og:title" content="Zero-Based Budget Calculator - CalcWise">
+  <meta property="og:description" content="Assign every dollar of income a job with a zero-based budget. See exactly where your money goes and ensure income minus expenses equals zero.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcwise.io/minimalism-and-budget-calculators/zero-based-budget-calculator/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Zero-Based Budget Calculator - CalcWise">
+  <meta name="twitter:description" content="Build a zero-based budget and assign every dollar of income a purpose.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/"},
+      {"@type": "ListItem", "position": 2, "name": "Minimalism & Budget Calculators", "item": "https://calcwise.io/minimalism-and-budget-calculators/"},
+      {"@type": "ListItem", "position": 3, "name": "Zero-Based Budget Calculator"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is a zero-based budget?",
+        "acceptedAnswer": {"@type": "Answer", "text": "A zero-based budget is a budgeting method where you assign every dollar of your monthly income to a specific category — expenses, savings, or debt repayment — so that income minus all allocations equals zero. This does not mean spending everything; savings and investments are also assigned categories."}
+      },
+      {
+        "@type": "Question",
+        "name": "How is zero-based budgeting different from other methods?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Unlike the 50/30/20 rule or envelope method, zero-based budgeting starts from zero each month and forces you to justify every dollar you allocate. This makes it more intentional and precise, though it requires more upfront effort to set up correctly."}
+      },
+      {
+        "@type": "Question",
+        "name": "What should I do if my budget doesn't reach zero?",
+        "acceptedAnswer": {"@type": "Answer", "text": "If you have leftover income (positive balance), allocate that surplus to savings, an emergency fund, or extra debt payments — never leave it unassigned. If expenses exceed income (negative balance), you need to reduce spending in discretionary categories like dining out, entertainment, or subscriptions until the budget balances."}
+      },
+      {
+        "@type": "Question",
+        "name": "How often should I redo my zero-based budget?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Zero-based budgets should be rebuilt each month because income and expenses change. Variable costs like utilities, groceries, and entertainment fluctuate, so a fresh budget each month gives you the most accurate picture and keeps you in full control of your finances."}
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="logo">
+        <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav">
+        <a href="/">Home</a>
+        <a href="/pages/finance-calculators/">Finance</a>
+        <a href="/pages/business-calculators/">Business</a>
+        <a href="/pages/investment-calculators/">Investment</a>
+        <a href="/pages/minimalism-and-budget-calculators/" aria-current="page">Minimalism</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav">
+      <a href="/">Home</a>
+      <a href="/pages/finance-calculators/">Finance Calculators</a>
+      <a href="/pages/business-calculators/">Business Calculators</a>
+      <a href="/pages/investment-calculators/">Investment Calculators</a>
+      <a href="/pages/minimalism-and-budget-calculators/">Minimalism &amp; Budget Calculators</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li><a href="/pages/minimalism-and-budget-calculators/">Minimalism &amp; Budget Calculators</a></li>
+        <li><span aria-current="page">Zero-Based Budget Calculator</span></li>
+      </ol>
+    </nav>
+
+    <div class="page-content">
+      <div class="article-content">
+        <h1>Zero-Based Budget Calculator</h1>
+        <p>A zero-based budget assigns every dollar of your income a specific job — whether that's rent, groceries, savings, or debt repayment — so that income minus all allocations equals exactly zero. This method gives you complete intentionality over your money and eliminates untracked spending. Use this calculator to build your monthly zero-based budget and instantly see your balance.</p>
+
+        <div class="ad-slot ad-slot-leaderboard"></div>
+
+        <div class="calc-container">
+          <div class="calc-header">
+            <h2>Build Your Zero-Based Budget</h2>
+            <p>Enter your monthly income, then allocate it across all expense and savings categories</p>
+          </div>
+          <div class="calc-body">
+            <form id="zbb-form">
+              <h3 style="font-size:var(--text-base); margin-bottom:var(--space-3); color:var(--color-primary);">Monthly Income</h3>
+              <div class="form-group">
+                <label class="form-label" for="zbbIncome">Total Monthly Take-Home Income ($)</label>
+                <div class="input-prefix">
+                  <span class="prefix">$</span>
+                  <input type="number" id="zbbIncome" name="zbbIncome" class="form-input" placeholder="5000" min="0" step="1">
+                </div>
+              </div>
+
+              <h3 style="font-size:var(--text-base); margin: var(--space-5) 0 var(--space-3); color:var(--color-primary);">Fixed Expenses</h3>
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="zbbHousing">Housing (rent/mortgage) ($)</label>
+                  <div class="input-prefix"><span class="prefix">$</span><input type="number" id="zbbHousing" name="zbbHousing" class="form-input" placeholder="1500" min="0" step="1"></div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="zbbInsurance">Insurance (health/auto/home) ($)</label>
+                  <div class="input-prefix"><span class="prefix">$</span><input type="number" id="zbbInsurance" name="zbbInsurance" class="form-input" placeholder="300" min="0" step="1"></div>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="zbbDebt">Debt Payments (loans/credit cards) ($)</label>
+                  <div class="input-prefix"><span class="prefix">$</span><input type="number" id="zbbDebt" name="zbbDebt" class="form-input" placeholder="400" min="0" step="1"></div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="zbbSubscriptions">Subscriptions &amp; Memberships ($)</label>
+                  <div class="input-prefix"><span class="prefix">$</span><input type="number" id="zbbSubscriptions" name="zbbSubscriptions" class="form-input" placeholder="80" min="0" step="1"></div>
+                </div>
+              </div>
+
+              <h3 style="font-size:var(--text-base); margin: var(--space-5) 0 var(--space-3); color:var(--color-primary);">Variable Expenses</h3>
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="zbbGroceries">Groceries ($)</label>
+                  <div class="input-prefix"><span class="prefix">$</span><input type="number" id="zbbGroceries" name="zbbGroceries" class="form-input" placeholder="400" min="0" step="1"></div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="zbbUtilities">Utilities &amp; Phone ($)</label>
+                  <div class="input-prefix"><span class="prefix">$</span><input type="number" id="zbbUtilities" name="zbbUtilities" class="form-input" placeholder="180" min="0" step="1"></div>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="zbbTransport">Transportation &amp; Gas ($)</label>
+                  <div class="input-prefix"><span class="prefix">$</span><input type="number" id="zbbTransport" name="zbbTransport" class="form-input" placeholder="250" min="0" step="1"></div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="zbbDining">Dining Out &amp; Coffee ($)</label>
+                  <div class="input-prefix"><span class="prefix">$</span><input type="number" id="zbbDining" name="zbbDining" class="form-input" placeholder="200" min="0" step="1"></div>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="zbbEntertainment">Entertainment &amp; Hobbies ($)</label>
+                  <div class="input-prefix"><span class="prefix">$</span><input type="number" id="zbbEntertainment" name="zbbEntertainment" class="form-input" placeholder="150" min="0" step="1"></div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="zbbPersonal">Personal Care &amp; Clothing ($)</label>
+                  <div class="input-prefix"><span class="prefix">$</span><input type="number" id="zbbPersonal" name="zbbPersonal" class="form-input" placeholder="100" min="0" step="1"></div>
+                </div>
+              </div>
+
+              <h3 style="font-size:var(--text-base); margin: var(--space-5) 0 var(--space-3); color:var(--color-primary);">Savings &amp; Investments</h3>
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="zbbEmergency">Emergency Fund ($)</label>
+                  <div class="input-prefix"><span class="prefix">$</span><input type="number" id="zbbEmergency" name="zbbEmergency" class="form-input" placeholder="200" min="0" step="1"></div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="zbbRetirement">Retirement &amp; Investments ($)</label>
+                  <div class="input-prefix"><span class="prefix">$</span><input type="number" id="zbbRetirement" name="zbbRetirement" class="form-input" placeholder="300" min="0" step="1"></div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="zbbOther">Other / Miscellaneous ($)</label>
+                <div class="input-prefix"><span class="prefix">$</span><input type="number" id="zbbOther" name="zbbOther" class="form-input" placeholder="0" min="0" step="1"></div>
+              </div>
+
+              <div class="calc-actions">
+                <button type="button" class="btn btn-calculate" onclick="calculateZBB()">Calculate Budget Balance</button>
+                <button type="button" class="btn btn-reset" onclick="CalcWise.resetForm('zbb-form'); CalcWise.hideResults('zbb-results');">Reset</button>
+              </div>
+            </form>
+
+            <div id="zbb-results" class="calc-results hidden">
+              <div class="result-primary">
+                <div class="result-label">Budget Balance (Income − All Allocations)</div>
+                <div class="result-value" id="zbbBalance">$0</div>
+              </div>
+              <div class="result-grid result-grid-3">
+                <div class="result-item">
+                  <div class="result-label">Total Income</div>
+                  <div class="result-value" id="zbbTotalIncome">$0</div>
+                </div>
+                <div class="result-item">
+                  <div class="result-label">Total Allocated</div>
+                  <div class="result-value" id="zbbTotalAllocated">$0</div>
+                </div>
+                <div class="result-item">
+                  <div class="result-label">Savings Rate</div>
+                  <div class="result-value" id="zbbSavingsRate">0%</div>
+                </div>
+              </div>
+              <div style="margin-top:var(--space-6);">
+                <h3 style="font-size:var(--text-base); margin-bottom:var(--space-3);">Budget Breakdown</h3>
+                <div id="zbbBreakdown"></div>
+              </div>
+              <div id="zbbMessage" style="margin-top:var(--space-4);"></div>
+            </div>
+          </div>
+        </div>
+
+        <section class="content-section">
+          <h2>How Zero-Based Budgeting Works</h2>
+          <div class="formula-box">
+            <div class="formula-label">Core Formula</div>
+            Monthly Income − (Fixed Expenses + Variable Expenses + Savings) = $0<br><br>
+            Savings Rate = (Emergency Fund + Retirement + Investments) / Total Income × 100<br>
+            Budget Balance = Income − Total Allocated (target: exactly $0)
+          </div>
+          <p>Every dollar must have a destination. If your balance is positive, you have unassigned money — allocate it to savings or debt payoff. If it's negative, you're overspending and must reduce category allocations until you reach zero.</p>
+        </section>
+
+        <section class="content-section">
+          <h2>How to Use This Calculator</h2>
+          <ol>
+            <li><strong>Enter your net income:</strong> Use your take-home pay after taxes, not gross income.</li>
+            <li><strong>Fill in every fixed expense:</strong> Include rent, insurance, and loan payments that don't change month to month.</li>
+            <li><strong>Estimate variable expenses:</strong> Use last month's bank statements for accurate figures on groceries, utilities, and dining.</li>
+            <li><strong>Assign savings:</strong> Treat savings as a non-negotiable expense category, not a leftover.</li>
+            <li><strong>Aim for zero:</strong> Adjust categories until the balance reads $0. Any surplus should go directly to savings or debt.</li>
+          </ol>
+        </section>
+
+        <section class="content-section">
+          <h2>Example Zero-Based Budget</h2>
+          <p>Alex earns $5,000/month take-home. Here is a balanced zero-based budget:</p>
+          <ul>
+            <li><strong>Housing:</strong> $1,400 (28%)</li>
+            <li><strong>Groceries + Utilities:</strong> $550 (11%)</li>
+            <li><strong>Transportation:</strong> $300 (6%)</li>
+            <li><strong>Insurance + Subscriptions:</strong> $380 (7.6%)</li>
+            <li><strong>Dining + Entertainment:</strong> $370 (7.4%)</li>
+            <li><strong>Debt Payments:</strong> $500 (10%)</li>
+            <li><strong>Savings + Retirement:</strong> $500 (10%)</li>
+            <li><strong>Other:</strong> $1,000 (20%)</li>
+          </ul>
+          <p>Total allocated: <strong>$5,000. Balance: $0.</strong> Every dollar has a purpose.</p>
+        </section>
+
+        <section class="faq-section">
+          <h2>Frequently Asked Questions</h2>
+          <div class="faq-item">
+            <button class="faq-question">What is a zero-based budget?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>A zero-based budget assigns every dollar of your monthly income to a specific category so that income minus all allocations equals zero. This does not mean spending everything — savings and investments are also assigned categories, ensuring no dollar is left unaccounted for.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">How is zero-based budgeting different from other methods?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>Unlike the 50/30/20 rule or envelope method, zero-based budgeting starts from zero each month and forces you to justify every dollar you allocate. This makes it more intentional and precise, though it requires more upfront effort to set up correctly each month.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">What should I do if my budget doesn't reach zero?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>If you have leftover income (positive balance), allocate that surplus to savings, an emergency fund, or extra debt payments. If expenses exceed income (negative balance), reduce spending in discretionary categories like dining out, entertainment, or subscriptions until the budget balances.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">How often should I redo my zero-based budget?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>Zero-based budgets should be rebuilt each month because income and expenses change. Variable costs like utilities, groceries, and entertainment fluctuate, so a fresh budget each month gives you the most accurate picture and keeps you in full control of your finances.</p></div>
+          </div>
+        </section>
+
+        <section class="related-calculators">
+          <h2>Related Calculators</h2>
+          <div class="grid grid-3">
+            <a href="/pages/minimalism-and-budget-calculators/needs-vs-wants-calculator/" class="card card-link">
+              <h3>Needs vs Wants Calculator</h3>
+              <p>Categorize spending into needs and wants to find discretionary savings.</p>
+            </a>
+            <a href="/pages/minimalism-and-budget-calculators/spending-audit-calculator/" class="card card-link">
+              <h3>Spending Audit Calculator</h3>
+              <p>Full monthly spending audit with category breakdown and savings potential.</p>
+            </a>
+            <a href="/pages/minimalism-and-budget-calculators/expense-reduction-calculator/" class="card card-link">
+              <h3>Expense Reduction Calculator</h3>
+              <p>Cut costs across 8 spending categories with targeted reduction percentages.</p>
+            </a>
+            <a href="/pages/minimalism-and-budget-calculators/monthly-spending-simplification-calculator/" class="card card-link">
+              <h3>Monthly Spending Simplification</h3>
+              <p>Simplify and consolidate your monthly spending into fewer, cleaner categories.</p>
+            </a>
+          </div>
+        </section>
+
+        <div class="disclaimer">
+          <strong>Disclaimer:</strong> This calculator is for informational and educational purposes only. Budget figures are based on user-entered data and do not constitute financial advice. Actual results will vary based on your individual circumstances.
+        </div>
+
+        <div class="ad-slot ad-slot-rectangle"></div>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free online financial calculators to help you make smarter money decisions.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Minimalism &amp; Budget</h4>
+          <a href="/pages/minimalism-and-budget-calculators/subscription-reduction-calculator/">Subscription Reduction</a>
+          <a href="/pages/minimalism-and-budget-calculators/expense-reduction-calculator/">Expense Reduction</a>
+          <a href="/pages/minimalism-and-budget-calculators/zero-based-budget-calculator/">Zero-Based Budget</a>
+          <a href="/pages/minimalism-and-budget-calculators/spending-audit-calculator/">Spending Audit</a>
+        </div>
+        <div class="footer-col">
+          <h4>Finance</h4>
+          <a href="/pages/finance-calculators/budget-calculator/">Budget (50/30/20)</a>
+          <a href="/pages/finance-calculators/net-worth-calculator/">Net Worth</a>
+          <a href="/pages/finance-calculators/retirement-savings-calculator/">Retirement Savings</a>
+          <a href="/pages/finance-calculators/emergency-fund-calculator/">Emergency Fund</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about/">About</a>
+          <a href="/contact/">Contact</a>
+          <a href="/privacy/">Privacy Policy</a>
+          <a href="/terms/">Terms of Service</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 CalcWise. All rights reserved.</span>
+        <div class="footer-links">
+          <a href="/privacy/">Privacy</a>
+          <a href="/terms/">Terms</a>
+          <a href="/contact/">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateZBB() {
+      const v = CalcWise.getFormValues('zbb-form');
+      const income = v.zbbIncome || 0;
+      const housing = v.zbbHousing || 0;
+      const insurance = v.zbbInsurance || 0;
+      const debt = v.zbbDebt || 0;
+      const subscriptions = v.zbbSubscriptions || 0;
+      const groceries = v.zbbGroceries || 0;
+      const utilities = v.zbbUtilities || 0;
+      const transport = v.zbbTransport || 0;
+      const dining = v.zbbDining || 0;
+      const entertainment = v.zbbEntertainment || 0;
+      const personal = v.zbbPersonal || 0;
+      const emergency = v.zbbEmergency || 0;
+      const retirement = v.zbbRetirement || 0;
+      const other = v.zbbOther || 0;
+
+      const fixedTotal = housing + insurance + debt + subscriptions;
+      const variableTotal = groceries + utilities + transport + dining + entertainment + personal;
+      const savingsTotal = emergency + retirement;
+      const totalAllocated = fixedTotal + variableTotal + savingsTotal + other;
+      const balance = income - totalAllocated;
+      const savingsRate = income > 0 ? (savingsTotal / income * 100) : 0;
+
+      const balanceEl = document.getElementById('zbbBalance');
+      balanceEl.textContent = CalcWise.formatCurrency(balance, 2);
+      balanceEl.style.color = Math.abs(balance) < 1 ? 'var(--color-success)' : (balance > 0 ? 'var(--color-info)' : 'var(--color-error)');
+
+      CalcWise.setText('zbbTotalIncome', CalcWise.formatCurrency(income, 0));
+      CalcWise.setText('zbbTotalAllocated', CalcWise.formatCurrency(totalAllocated, 0));
+      CalcWise.setText('zbbSavingsRate', savingsRate.toFixed(1) + '%');
+
+      const categories = [
+        { name: 'Housing', amount: housing },
+        { name: 'Insurance', amount: insurance },
+        { name: 'Debt Payments', amount: debt },
+        { name: 'Subscriptions', amount: subscriptions },
+        { name: 'Groceries', amount: groceries },
+        { name: 'Utilities & Phone', amount: utilities },
+        { name: 'Transportation', amount: transport },
+        { name: 'Dining Out', amount: dining },
+        { name: 'Entertainment', amount: entertainment },
+        { name: 'Personal Care', amount: personal },
+        { name: 'Emergency Fund', amount: emergency },
+        { name: 'Retirement & Investments', amount: retirement },
+        { name: 'Other / Miscellaneous', amount: other }
+      ].filter(c => c.amount > 0);
+
+      let html = '<div class="table-container"><table class="data-table"><thead><tr><th>Category</th><th>Amount</th><th>% of Income</th></tr></thead><tbody>';
+      categories.forEach(c => {
+        const pct = income > 0 ? (c.amount / income * 100).toFixed(1) : '—';
+        html += `<tr><td>${c.name}</td><td>${CalcWise.formatCurrency(c.amount, 0)}</td><td>${pct}%</td></tr>`;
+      });
+      html += `<tr style="font-weight:600; border-top: 2px solid var(--color-gray-300);">
+        <td>Total Allocated</td>
+        <td>${CalcWise.formatCurrency(totalAllocated, 0)}</td>
+        <td>${income > 0 ? (totalAllocated / income * 100).toFixed(1) : '—'}%</td>
+      </tr>`;
+      html += '</tbody></table></div>';
+      CalcWise.setHtml('zbbBreakdown', html);
+
+      let msg = '';
+      if (Math.abs(balance) < 1) {
+        msg = `<div style="padding:var(--space-4);background:var(--color-success-light);border-radius:var(--radius-lg);"><strong>Perfect zero-based budget!</strong> Every dollar of your income is assigned a purpose. Your savings rate is ${savingsRate.toFixed(1)}%.</div>`;
+      } else if (balance > 0) {
+        msg = `<div style="padding:var(--space-4);background:var(--color-info-light, #e0f0ff);border-radius:var(--radius-lg);"><strong>You have ${CalcWise.formatCurrency(balance, 2)} unassigned.</strong> Allocate this surplus to savings, your emergency fund, or extra debt payments to complete your zero-based budget.</div>`;
+      } else {
+        msg = `<div style="padding:var(--space-4);background:#fff3f3;border-radius:var(--radius-lg);"><strong>You are over budget by ${CalcWise.formatCurrency(Math.abs(balance), 2)}.</strong> Reduce spending in discretionary categories like dining, entertainment, or subscriptions to balance your budget.</div>`;
+      }
+      CalcWise.setHtml('zbbMessage', msg);
+      CalcWise.showResults('zbb-results');
+    }
+  </script>
+</body>
+</html>

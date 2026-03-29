@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Financial Glossary | CalcWise</title>
+  <meta name="description" content="Learn 50 essential financial terms with clear, jargon-free definitions. From amortization to yield, understand the language of personal finance and investing.">
+  <meta name="keywords" content="financial glossary, financial terms, finance definitions, investing glossary, personal finance terms">
+  <link rel="canonical" href="https://calcwise.io/financial-glossary/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Financial Glossary | CalcWise">
+  <meta property="og:description" content="Learn 50 essential financial terms with clear, jargon-free definitions.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcwise.io/financial-glossary/">
+  <meta property="og:site_name" content="CalcWise">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Financial Glossary | CalcWise">
+  <meta name="twitter:description" content="Learn 50 essential financial terms with clear, jargon-free definitions.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <style>
+    .glossary-intro {
+      max-width: 760px;
+      margin: 0 auto var(--space-12);
+    }
+    .glossary-intro p {
+      font-size: 1.125rem;
+      color: var(--color-text-secondary);
+      line-height: 1.7;
+    }
+    .glossary-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-2);
+      margin-bottom: var(--space-10);
+      padding: var(--space-4);
+      background: var(--color-surface-alt, #f5f7f5);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--color-border);
+    }
+    .glossary-nav a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      border-radius: var(--radius-md);
+      font-weight: 600;
+      font-size: 0.9375rem;
+      text-decoration: none;
+      color: var(--color-text);
+      transition: background 0.15s, color 0.15s;
+    }
+    .glossary-nav a:hover {
+      background: var(--color-primary);
+      color: white;
+    }
+    .glossary-letter {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--color-primary);
+      margin-top: var(--space-10);
+      margin-bottom: var(--space-4);
+      padding-bottom: var(--space-2);
+      border-bottom: 2px solid var(--color-primary);
+      display: inline-block;
+    }
+    .glossary-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 var(--space-8);
+    }
+    .glossary-term {
+      padding: var(--space-5) 0;
+      border-bottom: 1px solid var(--color-border);
+    }
+    .glossary-term:last-child {
+      border-bottom: none;
+    }
+    .glossary-term dt {
+      font-size: 1.0625rem;
+      font-weight: 600;
+      color: var(--color-text);
+      margin-bottom: var(--space-2);
+    }
+    .glossary-term dd {
+      margin: 0;
+      font-size: 0.9375rem;
+      color: var(--color-text-secondary);
+      line-height: 1.7;
+    }
+    .glossary-term dd a {
+      color: var(--color-primary);
+      font-weight: 500;
+      text-decoration: none;
+    }
+    .glossary-term dd a:hover {
+      text-decoration: underline;
+    }
+    .term-count-banner {
+      background: var(--color-primary);
+      color: white;
+      border-radius: var(--radius-lg);
+      padding: var(--space-6) var(--space-8);
+      text-align: center;
+      margin-bottom: var(--space-12);
+    }
+    .term-count-banner .count-number {
+      font-size: 2.5rem;
+      font-weight: 700;
+      line-height: 1;
+    }
+    .term-count-banner .count-label {
+      font-size: 1rem;
+      opacity: 0.85;
+      margin-top: var(--space-1);
+    }
+    .search-cta {
+      background: var(--color-surface-alt, #f5f7f5);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: var(--space-8);
+      text-align: center;
+      margin-top: var(--space-16);
+    }
+    .search-cta h2 {
+      margin-bottom: var(--space-3);
+    }
+    .search-cta p {
+      color: var(--color-text-secondary);
+      margin-bottom: var(--space-5);
+    }
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-2);
+      background: var(--color-primary);
+      color: white;
+      font-weight: 600;
+      padding: var(--space-3) var(--space-6);
+      border-radius: var(--radius-md);
+      text-decoration: none;
+      transition: opacity 0.15s;
+    }
+    .btn-primary:hover { opacity: 0.88; color: white; }
+    @media (max-width: 640px) {
+      .term-count-banner .count-number { font-size: 2rem; }
+      .glossary-nav a { width: 32px; height: 32px; font-size: 0.8125rem; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="32" height="32" rx="8" fill="currentColor"/>
+          <path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+        </svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/business-calculators/">Business</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/business-calculators/">Business Calculators</a>
+      <a href="/about.html">About</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><span aria-current="page">Financial Glossary</span></li>
+        </ol>
+      </nav>
+
+      <section class="hub-header glossary-intro">
+        <h1>Financial Glossary</h1>
+        <p>Clear, jargon-free definitions for 50 essential financial terms. Whether you are just starting to manage your money or brushing up before a big decision, this glossary has you covered. Where applicable, each term links to a relevant CalcWise calculator so you can put the concept into practice.</p>
+      </section>
+
+      <div class="term-count-banner" role="note" aria-label="Total term count">
+        <div class="count-number">50</div>
+        <div class="count-label">Essential financial terms defined</div>
+      </div>
+
+      <!-- Alphabet Navigation -->
+      <nav class="glossary-nav" aria-label="Jump to letter">
+        <a href="#letter-4">4</a>
+        <a href="#letter-5">5</a>
+        <a href="#letter-a">A</a>
+        <a href="#letter-b">B</a>
+        <a href="#letter-c">C</a>
+        <a href="#letter-d">D</a>
+        <a href="#letter-e">E</a>
+        <a href="#letter-f">F</a>
+        <a href="#letter-g">G</a>
+        <a href="#letter-i">I</a>
+        <a href="#letter-l">L</a>
+        <a href="#letter-m">M</a>
+        <a href="#letter-n">N</a>
+        <a href="#letter-o">O</a>
+        <a href="#letter-p">P</a>
+        <a href="#letter-r">R</a>
+        <a href="#letter-s">S</a>
+        <a href="#letter-t">T</a>
+        <a href="#letter-v">V</a>
+        <a href="#letter-y">Y</a>
+      </nav>
+
+      <!-- ===== # ===== -->
+      <h2 class="glossary-letter" id="letter-4">#</h2>
+      <dl class="glossary-list">
+        <div class="glossary-term" id="term-401k">
+          <dt>401(k)</dt>
+          <dd>An employer-sponsored retirement savings plan that lets you contribute pre-tax income, often with an employer match. Contributions grow tax-deferred until withdrawal in retirement. <a href="/retirement-calculators/401k-match-calculator/">Use the 401(k) Match Calculator</a></dd>
+        </div>
+      </dl>
+
+      <h2 class="glossary-letter" id="letter-5">&nbsp;</h2>
+      <dl class="glossary-list">
+        <div class="glossary-term" id="term-529-plan">
+          <dt>529 Plan</dt>
+          <dd>A tax-advantaged savings plan designed to help families save for future education expenses. Earnings grow tax-free when used for qualified education costs such as tuition, books, and room and board. <a href="/education-calculators/college-tuition-cost-calculator/">Use the College Tuition Cost Calculator</a></dd>
+        </div>
+      </dl>
+
+      <!-- ===== A ===== -->
+      <h2 class="glossary-letter" id="letter-a">A</h2>
+      <dl class="glossary-list">
+        <div class="glossary-term" id="term-amortization">
+          <dt>Amortization</dt>
+          <dd>The process of spreading a loan into a series of fixed payments over time. Each payment covers both interest and principal, with the interest portion decreasing as the balance shrinks. <a href="/real-estate-calculators/amortization-calculator/">Use the Amortization Calculator</a></dd>
+        </div>
+        <div class="glossary-term" id="term-apr">
+          <dt>APR (Annual Percentage Rate)</dt>
+          <dd>The yearly cost of borrowing money, expressed as a percentage. APR includes the interest rate plus any fees or additional costs, giving you a more complete picture of what a loan actually costs. <a href="/finance-calculators/loan-calculator/">Use the Loan Calculator</a></dd>
+        </div>
+        <div class="glossary-term" id="term-apy">
+          <dt>APY (Annual Percentage Yield)</dt>
+          <dd>The effective annual rate of return on a savings account or investment, accounting for compound interest. A higher APY means your money grows faster because you earn interest on previously earned interest. <a href="/finance-calculators/compound-interest-calculator/">Use the Compound Interest Calculator</a></dd>
+        </div>
+        <div class="glossary-term" id="term-asset-allocation">
+          <dt>Asset Allocation</dt>
+          <dd>The strategy of dividing your investments among different asset classes such as stocks, bonds, and cash to balance risk and reward based on your goals and risk tolerance. <a href="/wealth-building-calculators/asset-allocation-growth-calculator/">Use the Asset Allocation Growth Calculator</a></dd>
+        </div>
+      </dl>
+
+      <!-- ===== B ===== -->
+      <h2 class="glossary-letter" id="letter-b">B</h2>
+      <dl class="glossary-list">
+        <div class="glossary-term" id="term-balance-sheet">
+          <dt>Balance Sheet</dt>
+          <dd>A financial statement that shows what a person or business owns (assets), what they owe (liabilities), and the difference between the two (equity or net worth) at a specific point in time. <a href="/finance-calculators/net-worth-calculator/">Use the Net Worth Calculator</a></dd>
+        </div>
+        <div class="glossary-term" id="term-bond">
+          <dt>Bond</dt>
+          <dd>A fixed-income investment where you lend money to a government or corporation in exchange for periodic interest payments and the return of your principal at maturity. Bonds are generally considered lower-risk than stocks.</dd>
+        </div>
+        <div class="glossary-term" id="term-break-even-point">
+          <dt>Break-Even Point</dt>
+          <dd>The point at which total revenue equals total costs, meaning a business is neither making nor losing money. Knowing your break-even point helps you set sales targets and pricing. <a href="/business-calculators/break-even-calculator/">Use the Break Even Calculator</a></dd>
+        </div>
+      </dl>
+
+      <!-- ===== C ===== -->
+      <h2 class="glossary-letter" id="letter-c">C</h2>
+      <dl class="glossary-list">
+        <div class="glossary-term" id="term-capital-gains">
+          <dt>Capital Gains</dt>
+          <dd>The profit you earn when you sell an asset (such as stocks, real estate, or crypto) for more than you paid for it. Capital gains can be short-term or long-term, each taxed at different rates. <a href="/tax-calculators/capital-gains-tax-calculator/">Use the Capital Gains Tax Calculator</a></dd>
+        </div>
+        <div class="glossary-term" id="term-cash-flow">
+          <dt>Cash Flow</dt>
+          <dd>The net amount of money moving in and out of a business or personal budget over a period. Positive cash flow means more money is coming in than going out. <a href="/real-estate-calculators/rental-cash-flow-calculator/">Use the Rental Cash Flow Calculator</a></dd>
+        </div>
+        <div class="glossary-term" id="term-compound-interest">
+          <dt>Compound Interest</dt>
+          <dd>Interest calculated on both the initial principal and the accumulated interest from previous periods. Often called the "eighth wonder of the world," compounding is the engine behind long-term wealth growth. <a href="/finance-calculators/compound-interest-calculator/">Use the Compound Interest Calculator</a></dd>
+        </div>
+        <div class="glossary-term" id="term-credit-score">
+          <dt>Credit Score</dt>
+          <dd>A three-digit number (typically 300 to 850) that represents your creditworthiness based on your credit history. Lenders use it to decide whether to approve you for loans and at what interest rate. <a href="/credit-calculators/credit-score-improvement-calculator/">Use the Credit Score Improvement Calculator</a></dd>
+        </div>
+      </dl>
+
+      <!-- ===== D ===== -->
+      <h2 class="glossary-letter" id="letter-d">D</h2>
+      <dl class="glossary-list">
+        <div class="glossary-term" id="term-debt-to-income-ratio">
+          <dt>Debt-to-Income Ratio</dt>
+          <dd>The percentage of your gross monthly income that goes toward paying debts. Lenders use this ratio to assess your ability to take on new debt. A lower ratio signals stronger financial health. <a href="/credit-calculators/debt-to-income-ratio-calculator/">Use the Debt-to-Income Ratio Calculator</a></dd>
+        </div>
+        <div class="glossary-term" id="term-depreciation">
+          <dt>Depreciation</dt>
+          <dd>The gradual decrease in the value of an asset over time due to wear, age, or obsolescence. In accounting, depreciation spreads the cost of an asset across its useful life for tax purposes. <a href="/tax-calculators/depreciation-tax-calculator/">Use the Depreciation Tax Calculator</a></dd>
+        </div>
+        <div class="glossary-term" id="term-diversification">
+          <dt>Diversification</dt>
+          <dd>The practice of spreading your investments across different asset types, industries, and geographies to reduce risk. Diversification helps ensure that a loss in one area does not wipe out your entire portfolio.</dd>
+        </div>
+        <div class="glossary-term" id="term-dividend">
+          <dt>Dividend</dt>
+          <dd>A portion of a company's earnings paid out to shareholders, usually on a quarterly basis. Dividends provide a source of passive income and are common among established, profitable companies.</dd>
+        </div>
+      </dl>
+
+      <!-- ===== E ===== -->
+      <h2 class="glossary-letter" id="letter-e">E</h2>
+      <dl class="glossary-list">
+        <div class="glossary-term" id="term-emergency-fund">
+          <dt>Emergency Fund</dt>
+          <dd>A cash reserve set aside to cover unexpected expenses such as medical bills, car repairs, or job loss. Financial experts typically recommend saving three to six months of living expenses. <a href="/finance-calculators/emergency-fund-calculator/">Use the Emergency Fund Calculator</a></dd>
+        </div>
+        <div class="glossary-term" id="term-equity">
+          <dt>Equity</dt>
+          <dd>The value of ownership in an asset after subtracting any debts. In real estate, home equity is your property's market value minus the remaining mortgage balance. In investing, equity refers to stock ownership in a company.</dd>
+        </div>
+      </dl>
+
+      <!-- ===== F ===== -->
+      <h2 class="glossary-letter" id="letter-f">F</h2>
+      <dl class="glossary-list">
+        <div class="glossary-term" id="term-fire">
+          <dt>FIRE (Financial Independence, Retire Early)</dt>
+          <dd>A movement focused on aggressive saving and investing so you can retire well before the traditional age. FIRE strategies typically aim for a savings rate of 50% or more. <a href="/financial-independence-calculators/fire-timeline-calculator/">Use the FIRE Timeline Calculator</a></dd>
+        </div>
+        <div class="glossary-term" id="term-fixed-cost">
+          <dt>Fixed Cost</dt>
+          <dd>A business expense that stays the same regardless of how much you produce or sell, such as rent, insurance, or loan payments. Understanding fixed costs is essential for calculating your break-even point. <a href="/business-calculators/break-even-calculator/">Use the Break Even Calculator</a></dd>
+        </div>
+      </dl>
+
+      <!-- ===== G ===== -->
+      <h2 class="glossary-letter" id="letter-g">G</h2>
+      <dl class="glossary-list">
+        <div class="glossary-term" id="term-gross-margin">
+          <dt>Gross Margin</dt>
+          <dd>The percentage of revenue remaining after subtracting the cost of goods sold. A higher gross margin means a company retains more money from each dollar of sales to cover other expenses and generate profit. <a href="/business-calculators/profit-margin-calculator/">Use the Profit Margin Calculator</a></dd>
+        </div>
+      </dl>
+
+      <!-- ===== I ===== -->
+      <h2 class="glossary-letter" id="letter-i">I</h2>
+      <dl class="glossary-list">
+        <div class="glossary-term" id="term-index-fund">
+          <dt>Index Fund</dt>
+          <dd>A type of mutual fund or ETF designed to track the performance of a specific market index, such as the S&amp;P 500. Index funds offer broad diversification at low cost and are a cornerstone of passive investing. <a href="/finance-calculators/investment-return-calculator/">Use the Investment Return Calculator</a></dd>
+        </div>
+        <div class="glossary-term" id="term-inflation">
+          <dt>Inflation</dt>
+          <dd>The rate at which the general price level of goods and services rises over time, reducing purchasing power. If your savings do not grow faster than inflation, you are effectively losing money. <a href="/finance-calculators/inflation-calculator/">Use the Inflation Calculator</a></dd>
+        </div>
+        <div class="glossary-term" id="term-interest-rate">
+          <dt>Interest Rate</dt>
+          <dd>The percentage charged by a lender for borrowing money, or the percentage earned on savings and investments. Interest rates are set by market conditions and central bank policy. <a href="/finance-calculators/interest-calculator/">Use the Interest Calculator</a></dd>
+        </div>
+        <div class="glossary-term" id="term-ira">
+          <dt>IRA (Individual Retirement Account)</dt>
+          <dd>A tax-advantaged account designed for retirement savings. Traditional IRAs offer tax-deductible contributions with taxed withdrawals, while Roth IRAs use after-tax contributions with tax-free withdrawals. <a href="/finance-calculators/retirement-savings-calculator/">Use the Retirement Savings Calculator</a></dd>
+        </div>
+      </dl>
+
+      <!-- ===== L ===== -->
+      <h2 class="glossary-letter" id="letter-l">L</h2>
+      <dl class="glossary-list">
+        <div class="glossary-term" id="term-liability">
+          <dt>Liability</dt>
+          <dd>A financial obligation or debt that you owe. Liabilities include mortgages, car loans, credit card balances, and student loans. Your net worth equals your assets minus your liabilities. <a href="/finance-calculators/net-worth-calculator/">Use the Net Worth Calculator</a></dd>
+        </div>
+        <div class="glossary-term" id="term-liquidity">
+          <dt>Liquidity</dt>
+          <dd>How quickly and easily an asset can be converted into cash without losing significant value. Cash is the most liquid asset, while real estate and collectibles are less liquid.</dd>
+        </div>
+        <div class="glossary-term" id="term-loan-to-value">
+          <dt>Loan-to-Value (LTV)</dt>
+          <dd>The ratio of a loan amount to the appraised value of the asset being purchased. In mortgages, a lower LTV means you have more equity and typically qualifies you for better terms. <a href="/advanced-real-estate-calculators/loan-to-value-ratio-calculator/">Use the Loan-to-Value Ratio Calculator</a></dd>
+        </div>
+      </dl>
+
+      <!-- ===== M ===== -->
+      <h2 class="glossary-letter" id="letter-m">M</h2>
+      <dl class="glossary-list">
+        <div class="glossary-term" id="term-margin">
+          <dt>Margin</dt>
+          <dd>In business, the difference between revenue and cost, expressed as a percentage. In investing, margin refers to borrowing money from a broker to buy securities, which amplifies both gains and losses. <a href="/business-calculators/profit-margin-calculator/">Use the Profit Margin Calculator</a></dd>
+        </div>
+        <div class="glossary-term" id="term-market-cap">
+          <dt>Market Cap (Market Capitalization)</dt>
+          <dd>The total market value of a company's outstanding shares, calculated by multiplying the share price by the number of shares. Market cap is used to classify companies as small-cap, mid-cap, or large-cap.</dd>
+        </div>
+        <div class="glossary-term" id="term-mortgage">
+          <dt>Mortgage</dt>
+          <dd>A loan used to purchase real estate, with the property itself serving as collateral. Mortgages typically have 15- or 30-year terms and can carry fixed or adjustable interest rates. <a href="/real-estate-calculators/mortgage-calculator/">Use the Mortgage Calculator</a></dd>
+        </div>
+      </dl>
+
+      <!-- ===== N ===== -->
+      <h2 class="glossary-letter" id="letter-n">N</h2>
+      <dl class="glossary-list">
+        <div class="glossary-term" id="term-net-income">
+          <dt>Net Income</dt>
+          <dd>The amount of money remaining after all expenses, taxes, and deductions have been subtracted from total revenue. For individuals, net income is your take-home pay. <a href="/personal-finance-calculators/net-income-calculator/">Use the Net Income Calculator</a></dd>
+        </div>
+        <div class="glossary-term" id="term-net-worth">
+          <dt>Net Worth</dt>
+          <dd>The total value of everything you own (assets) minus everything you owe (liabilities). Net worth is the single best snapshot of your overall financial health. <a href="/finance-calculators/net-worth-calculator/">Use the Net Worth Calculator</a></dd>
+        </div>
+      </dl>
+
+      <!-- ===== O ===== -->
+      <h2 class="glossary-letter" id="letter-o">O</h2>
+      <dl class="glossary-list">
+        <div class="glossary-term" id="term-operating-expense">
+          <dt>Operating Expense</dt>
+          <dd>The ongoing costs of running a business that are not directly tied to producing goods or services, such as rent, utilities, salaries, and marketing. Lower operating expenses generally improve profitability.</dd>
+        </div>
+      </dl>
+
+      <!-- ===== P ===== -->
+      <h2 class="glossary-letter" id="letter-p">P</h2>
+      <dl class="glossary-list">
+        <div class="glossary-term" id="term-pe-ratio">
+          <dt>P/E Ratio (Price-to-Earnings Ratio)</dt>
+          <dd>A valuation metric that compares a company's stock price to its earnings per share. A high P/E may suggest the market expects future growth, while a low P/E could indicate undervaluation or declining prospects.</dd>
+        </div>
+        <div class="glossary-term" id="term-portfolio">
+          <dt>Portfolio</dt>
+          <dd>The collection of all your investments, including stocks, bonds, real estate, cash, and other assets. A well-constructed portfolio balances risk and return according to your goals and timeline. <a href="/wealth-building-calculators/asset-allocation-growth-calculator/">Use the Asset Allocation Growth Calculator</a></dd>
+        </div>
+        <div class="glossary-term" id="term-principal">
+          <dt>Principal</dt>
+          <dd>The original amount of money borrowed in a loan or the initial amount invested. In a mortgage, your monthly payment goes toward both principal and interest, with more going toward principal over time. <a href="/real-estate-calculators/mortgage-calculator/">Use the Mortgage Calculator</a></dd>
+        </div>
+        <div class="glossary-term" id="term-profit-margin">
+          <dt>Profit Margin</dt>
+          <dd>The percentage of revenue that remains as profit after all expenses are paid. Profit margin measures how efficiently a business converts sales into actual earnings. <a href="/business-calculators/profit-margin-calculator/">Use the Profit Margin Calculator</a></dd>
+        </div>
+      </dl>
+
+      <!-- ===== R ===== -->
+      <h2 class="glossary-letter" id="letter-r">R</h2>
+      <dl class="glossary-list">
+        <div class="glossary-term" id="term-roi">
+          <dt>ROI (Return on Investment)</dt>
+          <dd>A measure of how much profit or loss an investment generates relative to its cost, expressed as a percentage. ROI helps you compare the efficiency of different investments. <a href="/business-calculators/roi-calculator/">Use the ROI Calculator</a></dd>
+        </div>
+        <div class="glossary-term" id="term-roth-ira">
+          <dt>Roth IRA</dt>
+          <dd>A type of individual retirement account funded with after-tax dollars. Qualified withdrawals in retirement are completely tax-free, making it ideal for those who expect to be in a higher tax bracket later. <a href="/finance-calculators/retirement-savings-calculator/">Use the Retirement Savings Calculator</a></dd>
+        </div>
+      </dl>
+
+      <!-- ===== S ===== -->
+      <h2 class="glossary-letter" id="letter-s">S</h2>
+      <dl class="glossary-list">
+        <div class="glossary-term" id="term-sp500">
+          <dt>S&amp;P 500</dt>
+          <dd>A stock market index that tracks the performance of 500 of the largest publicly traded companies in the United States. It is widely regarded as the best single gauge of the U.S. stock market. <a href="/finance-calculators/investment-return-calculator/">Use the Investment Return Calculator</a></dd>
+        </div>
+        <div class="glossary-term" id="term-savings-rate">
+          <dt>Savings Rate</dt>
+          <dd>The percentage of your income that you save or invest rather than spend. A higher savings rate accelerates your path to financial independence and builds a stronger safety net. <a href="/personal-finance-calculators/savings-rate-calculator/">Use the Savings Rate Calculator</a></dd>
+        </div>
+        <div class="glossary-term" id="term-stock">
+          <dt>Stock</dt>
+          <dd>A share of ownership in a company. When you buy stock, you become a partial owner and can benefit from the company's growth through price appreciation and dividends.</dd>
+        </div>
+      </dl>
+
+      <!-- ===== T ===== -->
+      <h2 class="glossary-letter" id="letter-t">T</h2>
+      <dl class="glossary-list">
+        <div class="glossary-term" id="term-tax-bracket">
+          <dt>Tax Bracket</dt>
+          <dd>The range of income taxed at a specific rate in a progressive tax system. Only the income within each bracket is taxed at that bracket's rate, not your entire income. <a href="/tax-calculators/tax-bracket-calculator/">Use the Tax Bracket Calculator</a></dd>
+        </div>
+        <div class="glossary-term" id="term-tax-deduction">
+          <dt>Tax Deduction</dt>
+          <dd>An expense you can subtract from your taxable income, which reduces the amount of income subject to tax. Common deductions include mortgage interest, charitable contributions, and student loan interest. <a href="/tax-calculators/standard-vs-itemized-deduction-calculator/">Use the Standard vs Itemized Deduction Calculator</a></dd>
+        </div>
+        <div class="glossary-term" id="term-tax-credit">
+          <dt>Tax Credit</dt>
+          <dd>A dollar-for-dollar reduction in the amount of tax you owe. Tax credits are more valuable than deductions because they directly reduce your tax bill rather than just lowering your taxable income. <a href="/tax-calculators/child-tax-credit-calculator/">Use the Child Tax Credit Calculator</a></dd>
+        </div>
+      </dl>
+
+      <!-- ===== V ===== -->
+      <h2 class="glossary-letter" id="letter-v">V</h2>
+      <dl class="glossary-list">
+        <div class="glossary-term" id="term-variable-cost">
+          <dt>Variable Cost</dt>
+          <dd>A business expense that changes in proportion to production or sales volume, such as raw materials, shipping, and sales commissions. Variable costs rise when sales increase and fall when they drop. <a href="/business-calculators/break-even-calculator/">Use the Break Even Calculator</a></dd>
+        </div>
+        <div class="glossary-term" id="term-venture-capital">
+          <dt>Venture Capital</dt>
+          <dd>Funding provided by investors to startups and early-stage companies with high growth potential in exchange for equity. Venture capital is a common funding source for tech startups. <a href="/business-calculators/burn-rate-calculator/">Use the Startup Burn Rate Calculator</a></dd>
+        </div>
+      </dl>
+
+      <!-- ===== Y ===== -->
+      <h2 class="glossary-letter" id="letter-y">Y</h2>
+      <dl class="glossary-list">
+        <div class="glossary-term" id="term-yield">
+          <dt>Yield</dt>
+          <dd>The income generated by an investment, expressed as a percentage of the investment's cost or current value. Yield is commonly used to describe returns from bonds, dividends, and real estate. <a href="/finance-calculators/investment-return-calculator/">Use the Investment Return Calculator</a></dd>
+        </div>
+      </dl>
+
+      <!-- Search CTA -->
+      <div class="search-cta">
+        <h2>Ready to put these terms into action?</h2>
+        <p>Browse all 140+ free financial calculators organized by category or topic.</p>
+        <a href="/calculators-by-topic/" class="btn-primary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          Browse by Topic
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect width="32" height="32" rx="8" fill="currentColor"/>
+              <path d="M8 10h16M8 16h16M8 22h10" stroke="#1B4D3E" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed. Make smarter money decisions with tools you can trust.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Real Estate</h4>
+          <a href="/real-estate-calculators/mortgage-calculator/">Mortgage Calculator</a>
+          <a href="/real-estate-calculators/affordability-calculator/">Affordability Calculator</a>
+          <a href="/real-estate-calculators/rent-vs-buy-calculator/">Rent vs Buy</a>
+          <a href="/real-estate-calculators/">View All</a>
+        </div>
+        <div class="footer-col">
+          <h4>Finance</h4>
+          <a href="/finance-calculators/compound-interest-calculator/">Compound Interest</a>
+          <a href="/finance-calculators/loan-calculator/">Loan Calculator</a>
+          <a href="/finance-calculators/retirement-savings-calculator/">Retirement Savings</a>
+          <a href="/finance-calculators/">View All</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about.html">About</a>
+          <a href="/contact.html">Contact</a>
+          <a href="/privacy.html">Privacy Policy</a>
+          <a href="/terms.html">Terms of Use</a>
+          <a href="/disclaimer.html">Disclaimer</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/privacy.html">Privacy</a>
+          <a href="/terms.html">Terms</a>
+          <a href="/disclaimer.html">Disclaimer</a>
+          <a href="/sitemap.xml">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    // Mobile menu toggle
+    document.querySelector('.mobile-menu-toggle').addEventListener('click', function() {
+      const nav = document.querySelector('.mobile-nav');
+      const isOpen = nav.classList.toggle('is-open');
+      this.setAttribute('aria-expanded', isOpen);
+      this.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+    });
+  </script>
+
+  <!-- Schema: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://calcwise.io/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Financial Glossary",
+        "item": "https://calcwise.io/financial-glossary/"
+      }
+    ]
+  }
+  </script>
+
+  <!-- Schema: WebPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Financial Glossary",
+    "description": "Learn 50 essential financial terms with clear, jargon-free definitions. From amortization to yield, understand the language of personal finance and investing.",
+    "url": "https://calcwise.io/financial-glossary/",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "CalcWise",
+      "url": "https://calcwise.io/"
+    }
+  }
+  </script>
+</body>
+</html>

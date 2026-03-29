@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How Much Should You Be Saving? Quiz | CalcWise</title>
+  <meta name="description" content="Answer 7 questions about your age, income, goals, and debt to get a personalised savings rate recommendation — 10%, 15%, 20%, or 25%+.">
+  <link rel="canonical" href="https://calcwise.io/quizzes/finance-quizzes/how-much-should-you-be-saving/">
+  <meta property="og:title" content="How Much Should You Be Saving? Quiz | CalcWise">
+  <meta property="og:description" content="7-question quiz to determine your ideal savings rate based on age, income, retirement goals, and current debt situation.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcwise.io/quizzes/finance-quizzes/how-much-should-you-be-saving/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="How Much Should You Be Saving? Quiz | CalcWise">
+  <meta name="twitter:description" content="Find your ideal savings rate in 7 questions. Personalised recommendation from 10% to 25%+.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+  <link rel="stylesheet" href="/css/quiz.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/"},
+      {"@type": "ListItem", "position": 2, "name": "Quizzes", "item": "https://calcwise.io/quizzes/"},
+      {"@type": "ListItem", "position": 3, "name": "Finance Quizzes", "item": "https://calcwise.io/quizzes/finance-quizzes/"},
+      {"@type": "ListItem", "position": 4, "name": "How Much Should You Be Saving?", "item": "https://calcwise.io/quizzes/finance-quizzes/how-much-should-you-be-saving/"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "How Much Should You Be Saving? Quiz",
+    "description": "7-question quiz covering age, income level, savings rate, retirement goal, 401k status, emergency fund, and debt situation to deliver a personalised savings rate recommendation.",
+    "url": "https://calcwise.io/quizzes/finance-quizzes/how-much-should-you-be-saving/",
+    "isPartOf": {"@type": "WebSite", "name": "CalcWise", "url": "https://calcwise.io/"}
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="32" height="32" rx="8" fill="currentColor"/>
+          <path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+        </svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/business-calculators/">Business</a>
+        <a href="/quizzes/" aria-current="page">Quizzes</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/business-calculators/">Business Calculators</a>
+      <a href="/quizzes/">Quizzes</a>
+      <a href="/about.html">About</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/quizzes/">Quizzes</a></li>
+          <li><a href="/quizzes/finance-quizzes/">Finance Quizzes</a></li>
+          <li><span aria-current="page">How Much Should You Be Saving?</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <h1>How Much Should You Be Saving?</h1>
+        <p class="intro">The right savings rate isn't a one-size-fits-all number — it depends on your age, income, goals, and current financial situation. This 7-question quiz analyses your profile to give you a personalised savings rate target with a clear rationale and practical steps to reach it.</p>
+
+        <div class="quiz-container" id="quiz">
+          <div class="quiz-progress">
+            <div class="quiz-progress__label">
+              <span id="progress-text">Question 1 of 7</span>
+              <span id="progress-pct">0%</span>
+            </div>
+            <div class="quiz-progress__bar">
+              <div class="quiz-progress__fill" id="progress-bar" style="width:0%"></div>
+            </div>
+          </div>
+          <div id="question-container"></div>
+          <div id="result-container" class="quiz-result hidden"></div>
+        </div>
+
+        <section class="faq-section" aria-labelledby="faq-heading" style="margin-top:3rem">
+          <h2 id="faq-heading">Frequently Asked Questions</h2>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false"><span>What is the ideal savings rate by age?</span><svg class="faq-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M10 4v12M4 10h12"/></svg></button>
+            <div class="faq-answer"><p>In your 20s, saving 10–15% is a strong start. In your 30s, aim for 15–20% as retirement draws closer. By your 40s, 20–25% helps compensate for any earlier shortfalls. If you started late, 30%+ may be needed to reach your goals on time.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false"><span>Should I save more if I have high income?</span><svg class="faq-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M10 4v12M4 10h12"/></svg></button>
+            <div class="faq-answer"><p>Higher income creates an opportunity to save more in absolute terms, but the percentage matters too. Lifestyle inflation — spending more as you earn more — is the biggest savings killer. Locking in a fixed savings rate before lifestyle creep sets in is essential.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false"><span>Does my employer's 401k match count toward my savings rate?</span><svg class="faq-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M10 4v12M4 10h12"/></svg></button>
+            <div class="faq-answer"><p>Yes — employer matching contributions count as part of your total savings rate. A 5% employee contribution plus a 3% employer match equals an 8% total rate. Always contribute at least enough to capture the full employer match before directing money elsewhere.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false"><span>What if I can't afford my recommended savings rate right now?</span><svg class="faq-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M10 4v12M4 10h12"/></svg></button>
+            <div class="faq-answer"><p>Start with whatever you can — even 1% — and increase it by 1% every 3–6 months. Automating the increase means you barely notice it. Use our savings calculator to model how different rates affect your long-term balance.</p></div>
+          </div>
+        </section>
+
+        <section aria-labelledby="related-heading" style="margin-top:3rem">
+          <h2 id="related-heading">Related Finance Quizzes</h2>
+          <div class="quiz-grid" style="grid-template-columns:repeat(auto-fill,minmax(260px,1fr))">
+            <a href="/quizzes/finance-quizzes/how-financially-healthy-are-you/" class="quiz-card">
+              <div class="quiz-card__badge">Finance</div>
+              <h3>How Financially Healthy Are You?</h3>
+              <p>Get a comprehensive financial health score across all key pillars of personal finance.</p>
+              <span class="quiz-card__cta">Take quiz <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </a>
+            <a href="/quizzes/finance-quizzes/how-close-are-you-to-financial-independence/" class="quiz-card">
+              <div class="quiz-card__badge">Finance</div>
+              <h3>How Close Are You to Financial Independence?</h3>
+              <p>Assess your portfolio, savings rate, and spending to estimate your FI timeline.</p>
+              <span class="quiz-card__cta">Take quiz <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </a>
+            <a href="/quizzes/finance-quizzes/can-you-afford-your-lifestyle/" class="quiz-card">
+              <div class="quiz-card__badge">Finance</div>
+              <h3>Can You Afford Your Lifestyle?</h3>
+              <p>Find out if your spending is sustainable or quietly outpacing your income.</p>
+              <span class="quiz-card__cta">Take quiz <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </a>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect width="32" height="32" rx="8" fill="currentColor"/>
+              <path d="M8 10h16M8 16h16M8 22h10" stroke="#1B4D3E" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators and quizzes built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Finance Quizzes</h4>
+          <a href="/quizzes/finance-quizzes/how-financially-healthy-are-you/">Financial Health</a>
+          <a href="/quizzes/finance-quizzes/how-much-should-you-be-saving/">Savings Rate</a>
+          <a href="/quizzes/finance-quizzes/how-strong-is-your-emergency-fund/">Emergency Fund</a>
+          <a href="/quizzes/finance-quizzes/">View All</a>
+        </div>
+        <div class="footer-col">
+          <h4>Real Estate Quizzes</h4>
+          <a href="/quizzes/real-estate-quizzes/are-you-ready-to-buy-a-house/">Ready to Buy?</a>
+          <a href="/quizzes/real-estate-quizzes/should-you-rent-or-buy/">Rent or Buy?</a>
+          <a href="/quizzes/real-estate-quizzes/">View All</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about.html">About</a>
+          <a href="/contact.html">Contact</a>
+          <a href="/privacy.html">Privacy Policy</a>
+          <a href="/terms.html">Terms of Use</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/privacy.html">Privacy</a>
+          <a href="/terms.html">Terms</a>
+          <a href="/disclaimer.html">Disclaimer</a>
+          <a href="/sitemap.xml">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    document.querySelector('.mobile-menu-toggle').addEventListener('click', function() {
+      const nav = document.querySelector('.mobile-nav');
+      const isOpen = nav.classList.toggle('is-open');
+      this.setAttribute('aria-expanded', isOpen);
+      this.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+    });
+    document.querySelectorAll('.faq-question').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        const item = this.closest('.faq-item');
+        const isOpen = item.classList.toggle('is-open');
+        this.setAttribute('aria-expanded', isOpen);
+      });
+    });
+
+    const questions = [
+      {
+        question: "What is your current age range?",
+        options: ["Under 25", "25–34", "35–44", "45 or older"],
+        correct: 0,
+        explanation: "Younger savers have more time for compound growth, but older savers need higher rates to catch up. Age is the single biggest factor in how much you need to save."
+      },
+      {
+        question: "Which best describes your annual household income?",
+        options: ["Under $40,000", "$40,000–$75,000", "$75,000–$150,000", "Above $150,000"],
+        correct: 3,
+        explanation: "Higher incomes offer more flexibility to save larger percentages. Those earning under $40k may struggle to save much, but even small amounts automated early create meaningful wealth."
+      },
+      {
+        question: "What is your current savings rate (savings ÷ take-home pay)?",
+        options: ["0%–4%", "5%–9%", "10%–19%", "20% or more"],
+        correct: 3,
+        explanation: "Your current rate is your baseline. The quiz will tell you whether to maintain, increase, or significantly accelerate your saving."
+      },
+      {
+        question: "When do you want to retire?",
+        options: ["Never / doesn't apply", "Age 65 or later", "Age 55–64", "Before age 55 (early retirement)"],
+        correct: 2,
+        explanation: "The earlier you want to retire, the higher your savings rate needs to be. Early retirement (before 55) typically requires a 30–50% savings rate over many years."
+      },
+      {
+        question: "Do you contribute to an employer-sponsored retirement plan (401k, 403b, etc.)?",
+        options: ["No employer plan available", "No, I don't contribute", "Yes, below employer match", "Yes, at or above employer match"],
+        correct: 3,
+        explanation: "Capturing the full employer match is a 50–100% immediate return on your contribution — the highest-return investment available to most people."
+      },
+      {
+        question: "Do you have an emergency fund covering at least 3 months of expenses?",
+        options: ["No savings at all", "Less than 1 month", "1–2 months", "3+ months"],
+        correct: 3,
+        explanation: "An emergency fund must be funded before aggressively investing. Without it, any unexpected expense forces you to take on debt or sell investments at the wrong time."
+      },
+      {
+        question: "How would you describe your current debt situation?",
+        options: ["High-interest debt (credit cards above 15% APR)", "Moderate debt (student loans, auto)", "Only a mortgage", "Debt-free"],
+        correct: 3,
+        explanation: "High-interest debt should be prioritised over investing because its guaranteed negative return exceeds likely investment gains. Once cleared, redirect payments to savings."
+      }
+    ];
+
+    const results = [
+      {
+        min: 6, label: "Save 25%+", colorClass: "result-score--high",
+        title: "You Should Be Saving 25% or More",
+        desc: "Your profile — whether due to age, income, early retirement goals, or catching up — calls for an aggressive savings rate of 25% or more. This is ambitious but achievable with the right systems in place.",
+        recs: ["Automate savings first: set transfers on payday before bills are paid.", "Max out tax-advantaged accounts (401k, IRA, HSA) before taxable investing.", "Track spending monthly and identify one category to cut meaningfully.", "Consider a side income stream to boost your savings rate without cutting lifestyle."]
+      },
+      {
+        min: 4, label: "Save 20%", colorClass: "result-score--high",
+        title: "Aim for a 20% Savings Rate",
+        desc: "Your situation calls for a solid 20% savings rate. This is the classic benchmark that balances present enjoyment with future security. You're in a position to achieve this with consistent discipline.",
+        recs: ["If not already, increase 401k contributions to at least get the full employer match.", "Open or fund a Roth IRA (up to $7,000/year in 2026) for tax-free retirement growth.", "Set a specific savings target in dollars each month, not just a percentage.", "Review subscriptions and recurring expenses annually to free up extra savings."]
+      },
+      {
+        min: 2, label: "Save 15%", colorClass: "",
+        title: "Target a 15% Savings Rate",
+        desc: "A 15% savings rate is the right target for your current situation. It's achievable without extreme sacrifice and will build meaningful wealth over time if maintained consistently.",
+        recs: ["Increase your retirement contributions by 1% every 3 months until you reach 15%.", "Make sure your emergency fund is fully funded at 3–6 months of expenses.", "Use our savings calculator to see what 15% today will be worth at retirement.", "Avoid lifestyle inflation — when income rises, increase savings before spending more."]
+      },
+      {
+        min: 0, label: "Start at 10%", colorClass: "result-score--mid",
+        title: "Start with a 10% Savings Rate",
+        desc: "Given your current situation — high debt, low income, or just starting out — a 10% savings rate is a realistic and meaningful first goal. Getting the habit established now is more important than the perfect number.",
+        recs: ["Prioritise paying off any debt above 15% APR before increasing investments.", "Even saving $50–$100/month automatically builds the habit that accelerates wealth.", "Once high-interest debt is cleared, redirect every payment dollar to savings.", "Use the budget calculator to find hidden savings opportunities in your spending."]
+      }
+    ];
+
+    const calculatorLinks = [
+      { href: "/finance-calculators/savings-calculator/", label: "Savings Calculator" },
+      { href: "/finance-calculators/retirement-savings-calculator/", label: "Retirement Savings Calculator" },
+      { href: "/finance-calculators/budget-calculator/", label: "Budget Calculator" }
+    ];
+
+    let current = 0, score = 0, answered = false;
+
+    function renderQuestion() {
+      answered = false;
+      const q = questions[current];
+      const pct = Math.round((current / questions.length) * 100);
+      document.getElementById('progress-bar').style.width = pct + '%';
+      document.getElementById('progress-text').textContent = 'Question ' + (current + 1) + ' of ' + questions.length;
+      document.getElementById('progress-pct').textContent = pct + '%';
+      document.getElementById('question-container').innerHTML = `
+        <div class="quiz-question">
+          <div class="quiz-question__number">Question ${current + 1}</div>
+          <p class="quiz-question__text">${q.question}</p>
+          <ul class="quiz-options" role="list">
+            ${q.options.map((opt, i) => `
+              <li><button class="quiz-option" data-index="${i}" onclick="selectAnswer(${i})">
+                <span class="quiz-option__indicator"></span><span>${opt}</span>
+              </button></li>`).join('')}
+          </ul>
+          <div id="explanation" class="quiz-explanation" style="display:none"></div>
+          <div class="quiz-nav">
+            <span></span>
+            <button class="btn btn-primary" id="next-btn" onclick="nextQuestion()" disabled>
+              ${current < questions.length - 1 ? 'Next Question' : 'See Results'}
+            </button>
+          </div>
+        </div>`;
+    }
+
+    function selectAnswer(idx) {
+      if (answered) return;
+      answered = true;
+      const q = questions[current];
+      document.querySelectorAll('.quiz-option').forEach(function(btn, i) {
+        if (i === q.correct) btn.classList.add('correct');
+        else if (i === idx && idx !== q.correct) btn.classList.add('incorrect');
+      });
+      if (idx === q.correct) score++;
+      const expEl = document.getElementById('explanation');
+      expEl.style.display = 'block';
+      expEl.className = 'quiz-explanation ' + (idx === q.correct ? 'quiz-explanation--correct' : 'quiz-explanation--incorrect');
+      expEl.textContent = q.explanation;
+      document.getElementById('next-btn').disabled = false;
+    }
+
+    function nextQuestion() {
+      current++;
+      if (current < questions.length) renderQuestion();
+      else showResult();
+    }
+
+    function showResult() {
+      document.getElementById('progress-bar').style.width = '100%';
+      document.getElementById('progress-text').textContent = 'Complete!';
+      document.getElementById('progress-pct').textContent = '100%';
+      document.getElementById('question-container').innerHTML = '';
+      const result = results.find(r => score >= r.min);
+      const rc = document.getElementById('result-container');
+      rc.classList.remove('hidden');
+      rc.innerHTML = `
+        <div class="result-score ${result.colorClass}">
+          <span class="result-score__number">${score}/${questions.length}</span>
+          <span class="result-score__label">Score</span>
+        </div>
+        <div class="result-category">${result.label}</div>
+        <h2>${result.title}</h2>
+        <p>${result.desc}</p>
+        <div class="result-recommendations">
+          <h3>Recommended Next Steps</h3>
+          <ul>${result.recs.map(r => `<li>${r}</li>`).join('')}</ul>
+        </div>
+        <div class="result-actions">
+          ${calculatorLinks.map(l => `<a href="${l.href}" class="btn btn-secondary">${l.label}</a>`).join('')}
+        </div>
+        <div class="result-actions" style="margin-top:1rem">
+          <button class="btn btn-outline" onclick="restartQuiz()">Retake Quiz</button>
+        </div>`;
+    }
+
+    function restartQuiz() {
+      current = 0; score = 0;
+      document.getElementById('result-container').classList.add('hidden');
+      renderQuestion();
+    }
+
+    renderQuestion();
+  </script>
+</body>
+</html>

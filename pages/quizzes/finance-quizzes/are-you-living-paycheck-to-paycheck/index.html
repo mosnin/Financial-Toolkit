@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Are You Living Paycheck to Paycheck? Quiz | CalcWise</title>
+  <meta name="description" content="7-question quiz to determine if you are financially stable, at risk, or caught in a paycheck-to-paycheck cycle — with a clear plan to break free.">
+  <link rel="canonical" href="https://calcwise.io/quizzes/finance-quizzes/are-you-living-paycheck-to-paycheck/">
+  <meta property="og:title" content="Are You Living Paycheck to Paycheck? Quiz | CalcWise">
+  <meta property="og:description" content="Find out if you are financially stable, at risk, or living paycheck to paycheck — and get a personalised action plan to change it.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcwise.io/quizzes/finance-quizzes/are-you-living-paycheck-to-paycheck/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Are You Living Paycheck to Paycheck? Quiz | CalcWise">
+  <meta name="twitter:description" content="7 questions to reveal whether you are caught in a paycheck-to-paycheck cycle, with steps to break free.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+  <link rel="stylesheet" href="/css/quiz.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/"},
+      {"@type": "ListItem", "position": 2, "name": "Quizzes", "item": "https://calcwise.io/quizzes/"},
+      {"@type": "ListItem", "position": 3, "name": "Finance Quizzes", "item": "https://calcwise.io/quizzes/finance-quizzes/"},
+      {"@type": "ListItem", "position": 4, "name": "Are You Living Paycheck to Paycheck?", "item": "https://calcwise.io/quizzes/finance-quizzes/are-you-living-paycheck-to-paycheck/"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Are You Living Paycheck to Paycheck? Quiz",
+    "description": "7-question quiz covering checking balance before payday, unexpected expense ability, savings account, automatic savings, credit card usage, financial stress, and savings goal progress.",
+    "url": "https://calcwise.io/quizzes/finance-quizzes/are-you-living-paycheck-to-paycheck/",
+    "isPartOf": {"@type": "WebSite", "name": "CalcWise", "url": "https://calcwise.io/"}
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="32" height="32" rx="8" fill="currentColor"/>
+          <path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+        </svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/business-calculators/">Business</a>
+        <a href="/quizzes/" aria-current="page">Quizzes</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/business-calculators/">Business Calculators</a>
+      <a href="/quizzes/">Quizzes</a>
+      <a href="/about.html">About</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/quizzes/">Quizzes</a></li>
+          <li><a href="/quizzes/finance-quizzes/">Finance Quizzes</a></li>
+          <li><span aria-current="page">Are You Living Paycheck to Paycheck?</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <h1>Are You Living Paycheck to Paycheck?</h1>
+        <p class="intro">Living paycheck to paycheck affects people at every income level — it is less about how much you earn and more about the gap between income and spending. This 7-question quiz identifies the specific warning signs in your situation and shows you what to do about it with a realistic, step-by-step action plan.</p>
+
+        <div class="quiz-container" id="quiz">
+          <div class="quiz-progress">
+            <div class="quiz-progress__label">
+              <span id="progress-text">Question 1 of 7</span>
+              <span id="progress-pct">0%</span>
+            </div>
+            <div class="quiz-progress__bar">
+              <div class="quiz-progress__fill" id="progress-bar" style="width:0%"></div>
+            </div>
+          </div>
+          <div id="question-container"></div>
+          <div id="result-container" class="quiz-result hidden"></div>
+        </div>
+
+        <section class="faq-section" aria-labelledby="faq-heading" style="margin-top:3rem">
+          <h2 id="faq-heading">Frequently Asked Questions</h2>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false"><span>Can high earners live paycheck to paycheck?</span><svg class="faq-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M10 4v12M4 10h12"/></svg></button>
+            <div class="faq-answer"><p>Absolutely. Studies consistently show that a significant portion of six-figure earners have minimal savings. Lifestyle inflation — expanding spending to match every income increase — is the primary cause regardless of income level.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false"><span>What is the fastest way to stop living paycheck to paycheck?</span><svg class="faq-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M10 4v12M4 10h12"/></svg></button>
+            <div class="faq-answer"><p>The fastest way is to create an immediate gap between income and spending: cut one major expense (housing, car, subscriptions), automate a savings transfer on payday before you can spend it, and stop adding new debt. Even $200/month saved changes your financial psychology.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false"><span>How much should I have in my checking account before payday?</span><svg class="faq-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M10 4v12M4 10h12"/></svg></button>
+            <div class="faq-answer"><p>A healthy checking account buffer is 1–2 months of expenses, separate from your emergency fund. This prevents overdrafts from timing mismatches and reduces the financial anxiety of watching your balance hit zero before payday.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false"><span>Does using credit cards mean I'm living paycheck to paycheck?</span><svg class="faq-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M10 4v12M4 10h12"/></svg></button>
+            <div class="faq-answer"><p>Using credit cards is not a problem if you pay the full balance every month. The red flag is carrying a balance — it means you're spending money you don't yet have, creating a debt cycle that typically worsens over time without deliberate intervention.</p></div>
+          </div>
+        </section>
+
+        <section aria-labelledby="related-heading" style="margin-top:3rem">
+          <h2 id="related-heading">Related Finance Quizzes</h2>
+          <div class="quiz-grid" style="grid-template-columns:repeat(auto-fill,minmax(260px,1fr))">
+            <a href="/quizzes/finance-quizzes/can-you-afford-your-lifestyle/" class="quiz-card">
+              <div class="quiz-card__badge">Finance</div>
+              <h3>Can You Afford Your Lifestyle?</h3>
+              <p>Find out if your spending patterns are sustainable or quietly outpacing your means.</p>
+              <span class="quiz-card__cta">Take quiz <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </a>
+            <a href="/quizzes/finance-quizzes/how-strong-is-your-emergency-fund/" class="quiz-card">
+              <div class="quiz-card__badge">Finance</div>
+              <h3>How Strong Is Your Emergency Fund?</h3>
+              <p>Assess whether your safety net is truly strong enough to handle surprises.</p>
+              <span class="quiz-card__cta">Take quiz <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </a>
+            <a href="/quizzes/finance-quizzes/how-much-should-you-be-saving/" class="quiz-card">
+              <div class="quiz-card__badge">Finance</div>
+              <h3>How Much Should You Be Saving?</h3>
+              <p>Get your personalised savings rate recommendation based on your situation.</p>
+              <span class="quiz-card__cta">Take quiz <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </a>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect width="32" height="32" rx="8" fill="currentColor"/>
+              <path d="M8 10h16M8 16h16M8 22h10" stroke="#1B4D3E" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators and quizzes built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Finance Quizzes</h4>
+          <a href="/quizzes/finance-quizzes/how-financially-healthy-are-you/">Financial Health</a>
+          <a href="/quizzes/finance-quizzes/how-much-should-you-be-saving/">Savings Rate</a>
+          <a href="/quizzes/finance-quizzes/how-strong-is-your-emergency-fund/">Emergency Fund</a>
+          <a href="/quizzes/finance-quizzes/">View All</a>
+        </div>
+        <div class="footer-col">
+          <h4>Real Estate Quizzes</h4>
+          <a href="/quizzes/real-estate-quizzes/are-you-ready-to-buy-a-house/">Ready to Buy?</a>
+          <a href="/quizzes/real-estate-quizzes/should-you-rent-or-buy/">Rent or Buy?</a>
+          <a href="/quizzes/real-estate-quizzes/">View All</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about.html">About</a>
+          <a href="/contact.html">Contact</a>
+          <a href="/privacy.html">Privacy Policy</a>
+          <a href="/terms.html">Terms of Use</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/privacy.html">Privacy</a>
+          <a href="/terms.html">Terms</a>
+          <a href="/disclaimer.html">Disclaimer</a>
+          <a href="/sitemap.xml">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    document.querySelector('.mobile-menu-toggle').addEventListener('click', function() {
+      const nav = document.querySelector('.mobile-nav');
+      const isOpen = nav.classList.toggle('is-open');
+      this.setAttribute('aria-expanded', isOpen);
+      this.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+    });
+    document.querySelectorAll('.faq-question').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        const item = this.closest('.faq-item');
+        const isOpen = item.classList.toggle('is-open');
+        this.setAttribute('aria-expanded', isOpen);
+      });
+    });
+
+    const questions = [
+      {
+        question: "How much money is typically in your checking account just before payday?",
+        options: ["Near zero or overdrawn", "Less than $200", "$200–$500", "More than $500"],
+        correct: 3,
+        explanation: "A healthy checking account buffer before payday indicates you are not spending right up to your income limit. Routinely hitting near-zero is the classic paycheck-to-paycheck indicator."
+      },
+      {
+        question: "If you faced an unexpected $1,000 expense today, how would you handle it?",
+        options: ["I'd have to use a credit card or borrow money", "I'd drain my savings completely", "I'd manage but it would be tight", "I could cover it easily from savings"],
+        correct: 3,
+        explanation: "Being able to absorb a $1,000 surprise without debt is a key benchmark of financial stability. Most financial experts recommend a minimum $1,000 starter emergency fund before any other financial goal."
+      },
+      {
+        question: "Do you have a separate savings account with money set aside?",
+        options: ["No savings account at all", "I have one but it's usually empty", "I have one with a small balance (under 1 month expenses)", "Yes, with a meaningful balance (1+ months expenses)"],
+        correct: 3,
+        explanation: "A funded savings account — even a small one — is the first structural break from the paycheck-to-paycheck cycle. It creates a buffer that prevents debt from compounding."
+      },
+      {
+        question: "Do you have automatic savings transfers set up?",
+        options: ["No, I save whatever is left over (usually nothing)", "I try to save manually when I remember", "I have automation but it's inconsistent", "Yes, automatic transfers happen on every payday"],
+        correct: 3,
+        explanation: "Automated savings is the single most effective strategy for escaping the paycheck-to-paycheck cycle. Paying yourself first — before discretionary spending — is the key habit."
+      },
+      {
+        question: "How do you use credit cards?",
+        options: ["I use them to cover essentials I can't otherwise afford", "I carry a growing balance each month", "I carry a small balance but manage it", "I pay the full balance every month"],
+        correct: 3,
+        explanation: "Using credit cards to cover essentials signals that income doesn't cover basic expenses. High-interest debt compounds quickly and can make the paycheck-to-paycheck trap permanent without intervention."
+      },
+      {
+        question: "How would you rate your financial stress level on a typical week?",
+        options: ["Very high — I think about money anxiety daily", "High — financial stress is frequent", "Moderate — occasional money worries", "Low — I feel secure about my finances"],
+        correct: 3,
+        explanation: "Chronic financial stress is both a symptom and a cause of financial instability. It impairs decision-making and often leads to avoidance behaviours that worsen the situation over time."
+      },
+      {
+        question: "Are you making progress toward a specific savings goal?",
+        options: ["No goal and no savings", "Have a goal but haven't started saving", "Saving inconsistently toward a goal", "Consistently saving toward a clear goal"],
+        correct: 3,
+        explanation: "Having a goal-linked savings habit — even a small one — is a strong predictor of long-term financial stability. It shifts the mindset from reactive to proactive money management."
+      }
+    ];
+
+    const results = [
+      {
+        min: 6, label: "Financially Stable", colorClass: "result-score--high",
+        title: "You Are Financially Stable",
+        desc: "You are not living paycheck to paycheck. You have savings buffers, automated habits, and low financial stress. Your focus now should be on building wealth rather than just maintaining stability.",
+        recs: ["Increase your emergency fund to 6 months if not already there.", "Redirect any surplus into investing — index funds, retirement accounts, or real estate.", "Review your budget annually and ensure your savings rate is increasing over time.", "Consider the financial independence quiz to see how close you are to true financial freedom."]
+      },
+      {
+        min: 4, label: "At Risk", colorClass: "",
+        title: "You Are At Risk",
+        desc: "You are not fully paycheck to paycheck but you lack the buffers that would prevent you from becoming so if income dropped or expenses rose. A few targeted changes can significantly improve your security.",
+        recs: ["Set up an automatic transfer of even $100–$200 per payday to a separate savings account.", "Build a starter emergency fund of $1,000 before paying off debt or investing.", "Audit subscriptions and dining expenses — these two categories offer the quickest savings.", "Use the budget calculator to model a simple 50/30/20 allocation for your income."]
+      },
+      {
+        min: 0, label: "Paycheck to Paycheck", colorClass: "result-score--low",
+        title: "You Are Living Paycheck to Paycheck",
+        desc: "Your current pattern shows you are spending all or nearly all of your income each cycle with little buffer. This is stressful and financially fragile — but it is fixable. Start with the most impactful step below.",
+        recs: ["Step 1: Track every expense for 2 weeks — most people discover $200–$400 in easy cuts.", "Step 2: Open a separate savings account and transfer $25 on your next payday.", "Step 3: Stop all non-essential spending (streaming, dining out) for 30 days and save the difference.", "Step 4: Contact a free non-profit credit counsellor if debt is making the cycle impossible to break.", "Use the emergency fund calculator to set a specific savings goal to work toward."]
+      }
+    ];
+
+    const calculatorLinks = [
+      { href: "/finance-calculators/budget-calculator/", label: "Budget Calculator" },
+      { href: "/finance-calculators/emergency-fund-calculator/", label: "Emergency Fund Calculator" },
+      { href: "/finance-calculators/savings-calculator/", label: "Savings Calculator" }
+    ];
+
+    let current = 0, score = 0, answered = false;
+
+    function renderQuestion() {
+      answered = false;
+      const q = questions[current];
+      const pct = Math.round((current / questions.length) * 100);
+      document.getElementById('progress-bar').style.width = pct + '%';
+      document.getElementById('progress-text').textContent = 'Question ' + (current + 1) + ' of ' + questions.length;
+      document.getElementById('progress-pct').textContent = pct + '%';
+      document.getElementById('question-container').innerHTML = `
+        <div class="quiz-question">
+          <div class="quiz-question__number">Question ${current + 1}</div>
+          <p class="quiz-question__text">${q.question}</p>
+          <ul class="quiz-options" role="list">
+            ${q.options.map((opt, i) => `
+              <li><button class="quiz-option" data-index="${i}" onclick="selectAnswer(${i})">
+                <span class="quiz-option__indicator"></span><span>${opt}</span>
+              </button></li>`).join('')}
+          </ul>
+          <div id="explanation" class="quiz-explanation" style="display:none"></div>
+          <div class="quiz-nav">
+            <span></span>
+            <button class="btn btn-primary" id="next-btn" onclick="nextQuestion()" disabled>
+              ${current < questions.length - 1 ? 'Next Question' : 'See Results'}
+            </button>
+          </div>
+        </div>`;
+    }
+
+    function selectAnswer(idx) {
+      if (answered) return;
+      answered = true;
+      const q = questions[current];
+      document.querySelectorAll('.quiz-option').forEach(function(btn, i) {
+        if (i === q.correct) btn.classList.add('correct');
+        else if (i === idx && idx !== q.correct) btn.classList.add('incorrect');
+      });
+      if (idx === q.correct) score++;
+      const expEl = document.getElementById('explanation');
+      expEl.style.display = 'block';
+      expEl.className = 'quiz-explanation ' + (idx === q.correct ? 'quiz-explanation--correct' : 'quiz-explanation--incorrect');
+      expEl.textContent = q.explanation;
+      document.getElementById('next-btn').disabled = false;
+    }
+
+    function nextQuestion() {
+      current++;
+      if (current < questions.length) renderQuestion();
+      else showResult();
+    }
+
+    function showResult() {
+      document.getElementById('progress-bar').style.width = '100%';
+      document.getElementById('progress-text').textContent = 'Complete!';
+      document.getElementById('progress-pct').textContent = '100%';
+      document.getElementById('question-container').innerHTML = '';
+      const result = results.find(r => score >= r.min);
+      const rc = document.getElementById('result-container');
+      rc.classList.remove('hidden');
+      rc.innerHTML = `
+        <div class="result-score ${result.colorClass}">
+          <span class="result-score__number">${score}/${questions.length}</span>
+          <span class="result-score__label">Score</span>
+        </div>
+        <div class="result-category">${result.label}</div>
+        <h2>${result.title}</h2>
+        <p>${result.desc}</p>
+        <div class="result-recommendations">
+          <h3>Recommended Next Steps</h3>
+          <ul>${result.recs.map(r => `<li>${r}</li>`).join('')}</ul>
+        </div>
+        <div class="result-actions">
+          ${calculatorLinks.map(l => `<a href="${l.href}" class="btn btn-secondary">${l.label}</a>`).join('')}
+        </div>
+        <div class="result-actions" style="margin-top:1rem">
+          <button class="btn btn-outline" onclick="restartQuiz()">Retake Quiz</button>
+        </div>`;
+    }
+
+    function restartQuiz() {
+      current = 0; score = 0;
+      document.getElementById('result-container').classList.add('hidden');
+      renderQuestion();
+    }
+
+    renderQuestion();
+  </script>
+</body>
+</html>

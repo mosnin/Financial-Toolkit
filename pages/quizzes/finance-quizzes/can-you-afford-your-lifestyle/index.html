@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Can You Afford Your Lifestyle? Quiz | CalcWise</title>
+  <meta name="description" content="8-question quiz to find out if your lifestyle is financially sustainable, borderline, or quietly outpacing your means — with specific actionable advice.">
+  <link rel="canonical" href="https://calcwise.io/quizzes/finance-quizzes/can-you-afford-your-lifestyle/">
+  <meta property="og:title" content="Can You Afford Your Lifestyle? Quiz | CalcWise">
+  <meta property="og:description" content="Check whether your rent, car, dining, subscriptions, and spending align with your income. Get a Sustainable / Borderline / Unsustainable verdict.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcwise.io/quizzes/finance-quizzes/can-you-afford-your-lifestyle/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Can You Afford Your Lifestyle? Quiz | CalcWise">
+  <meta name="twitter:description" content="Is your lifestyle sustainable? Find out in 8 questions with specific, actionable advice.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+  <link rel="stylesheet" href="/css/quiz.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/"},
+      {"@type": "ListItem", "position": 2, "name": "Quizzes", "item": "https://calcwise.io/quizzes/"},
+      {"@type": "ListItem", "position": 3, "name": "Finance Quizzes", "item": "https://calcwise.io/quizzes/finance-quizzes/"},
+      {"@type": "ListItem", "position": 4, "name": "Can You Afford Your Lifestyle?", "item": "https://calcwise.io/quizzes/finance-quizzes/can-you-afford-your-lifestyle/"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Can You Afford Your Lifestyle? Quiz",
+    "description": "8-question quiz evaluating income vs rent ratio, car payment, dining frequency, subscriptions, savings, credit card balance, investments, and lifestyle inflation.",
+    "url": "https://calcwise.io/quizzes/finance-quizzes/can-you-afford-your-lifestyle/",
+    "isPartOf": {"@type": "WebSite", "name": "CalcWise", "url": "https://calcwise.io/"}
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="32" height="32" rx="8" fill="currentColor"/>
+          <path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+        </svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/business-calculators/">Business</a>
+        <a href="/quizzes/" aria-current="page">Quizzes</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/business-calculators/">Business Calculators</a>
+      <a href="/quizzes/">Quizzes</a>
+      <a href="/about.html">About</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/quizzes/">Quizzes</a></li>
+          <li><a href="/quizzes/finance-quizzes/">Finance Quizzes</a></li>
+          <li><span aria-current="page">Can You Afford Your Lifestyle?</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <h1>Can You Afford Your Lifestyle?</h1>
+        <p class="intro">Lifestyle affordability isn't just about whether you can pay your bills this month — it's about whether your spending patterns are sustainable long-term. This 8-question quiz examines the key spending ratios and habits that determine if your lifestyle is within your means, on the edge, or quietly accumulating financial pressure you'll feel later.</p>
+
+        <div class="quiz-container" id="quiz">
+          <div class="quiz-progress">
+            <div class="quiz-progress__label">
+              <span id="progress-text">Question 1 of 8</span>
+              <span id="progress-pct">0%</span>
+            </div>
+            <div class="quiz-progress__bar">
+              <div class="quiz-progress__fill" id="progress-bar" style="width:0%"></div>
+            </div>
+          </div>
+          <div id="question-container"></div>
+          <div id="result-container" class="quiz-result hidden"></div>
+        </div>
+
+        <section class="faq-section" aria-labelledby="faq-heading" style="margin-top:3rem">
+          <h2 id="faq-heading">Frequently Asked Questions</h2>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false"><span>What percentage of income should go to rent?</span><svg class="faq-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M10 4v12M4 10h12"/></svg></button>
+            <div class="faq-answer"><p>The traditional rule is to spend no more than 30% of gross income on housing. In high-cost cities this often isn't realistic, but exceeding 40% leaves very little room for savings, debt repayment, or unexpected expenses.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false"><span>What is lifestyle inflation and why is it dangerous?</span><svg class="faq-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M10 4v12M4 10h12"/></svg></button>
+            <div class="faq-answer"><p>Lifestyle inflation — or lifestyle creep — occurs when spending increases at the same rate as income, leaving savings unchanged. It's dangerous because it normalises a higher cost of living that becomes hard to reverse and leaves you dependent on maintaining your current income indefinitely.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false"><span>How much should I spend on a car?</span><svg class="faq-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M10 4v12M4 10h12"/></svg></button>
+            <div class="faq-answer"><p>A common guideline is to keep all vehicle costs (payment, insurance, fuel, maintenance) under 15–20% of take-home pay. A car payment exceeding 10% of monthly income alone is a financial strain signal.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false"><span>How many subscriptions is too many?</span><svg class="faq-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M10 4v12M4 10h12"/></svg></button>
+            <div class="faq-answer"><p>There's no magic number, but the issue is subscription creep — small charges that individually feel trivial but collectively add up to $100–$500/month. Do a quarterly audit and cancel anything you haven't used in the past 30 days.</p></div>
+          </div>
+        </section>
+
+        <section aria-labelledby="related-heading" style="margin-top:3rem">
+          <h2 id="related-heading">Related Finance Quizzes</h2>
+          <div class="quiz-grid" style="grid-template-columns:repeat(auto-fill,minmax(260px,1fr))">
+            <a href="/quizzes/finance-quizzes/are-you-living-paycheck-to-paycheck/" class="quiz-card">
+              <div class="quiz-card__badge">Finance</div>
+              <h3>Are You Living Paycheck to Paycheck?</h3>
+              <p>Identify the warning signs and find a clear path to financial stability.</p>
+              <span class="quiz-card__cta">Take quiz <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </a>
+            <a href="/quizzes/finance-quizzes/what-type-of-spender-are-you/" class="quiz-card">
+              <div class="quiz-card__badge">Finance</div>
+              <h3>What Type of Spender Are You?</h3>
+              <p>Discover your spending personality and how it shapes your financial outcomes.</p>
+              <span class="quiz-card__cta">Take quiz <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </a>
+            <a href="/quizzes/finance-quizzes/how-financially-disciplined-are-you/" class="quiz-card">
+              <div class="quiz-card__badge">Finance</div>
+              <h3>How Financially Disciplined Are You?</h3>
+              <p>Rate your self-control around budgeting, impulse purchases, and goal tracking.</p>
+              <span class="quiz-card__cta">Take quiz <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </a>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect width="32" height="32" rx="8" fill="currentColor"/>
+              <path d="M8 10h16M8 16h16M8 22h10" stroke="#1B4D3E" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators and quizzes built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Finance Quizzes</h4>
+          <a href="/quizzes/finance-quizzes/how-financially-healthy-are-you/">Financial Health</a>
+          <a href="/quizzes/finance-quizzes/how-much-should-you-be-saving/">Savings Rate</a>
+          <a href="/quizzes/finance-quizzes/how-strong-is-your-emergency-fund/">Emergency Fund</a>
+          <a href="/quizzes/finance-quizzes/">View All</a>
+        </div>
+        <div class="footer-col">
+          <h4>Real Estate Quizzes</h4>
+          <a href="/quizzes/real-estate-quizzes/are-you-ready-to-buy-a-house/">Ready to Buy?</a>
+          <a href="/quizzes/real-estate-quizzes/should-you-rent-or-buy/">Rent or Buy?</a>
+          <a href="/quizzes/real-estate-quizzes/">View All</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about.html">About</a>
+          <a href="/contact.html">Contact</a>
+          <a href="/privacy.html">Privacy Policy</a>
+          <a href="/terms.html">Terms of Use</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/privacy.html">Privacy</a>
+          <a href="/terms.html">Terms</a>
+          <a href="/disclaimer.html">Disclaimer</a>
+          <a href="/sitemap.xml">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    document.querySelector('.mobile-menu-toggle').addEventListener('click', function() {
+      const nav = document.querySelector('.mobile-nav');
+      const isOpen = nav.classList.toggle('is-open');
+      this.setAttribute('aria-expanded', isOpen);
+      this.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+    });
+    document.querySelectorAll('.faq-question').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        const item = this.closest('.faq-item');
+        const isOpen = item.classList.toggle('is-open');
+        this.setAttribute('aria-expanded', isOpen);
+      });
+    });
+
+    const questions = [
+      {
+        question: "What percentage of your gross income goes to rent or mortgage?",
+        options: ["More than 40%", "31%–40%", "25%–30%", "Under 25%"],
+        correct: 3,
+        explanation: "Housing costs under 25% of gross income leave plenty of room for savings and other expenses. Above 40% creates serious financial pressure — look for ways to reduce this ratio."
+      },
+      {
+        question: "What is your monthly car payment as a percentage of take-home pay?",
+        options: ["More than 15%", "10%–15%", "5%–9%", "Under 5% or no car payment"],
+        correct: 3,
+        explanation: "All vehicle costs combined should be under 15–20% of take-home pay. A payment alone over 10% is a warning sign — consider refinancing or downsizing."
+      },
+      {
+        question: "How often do you eat out or order food delivery?",
+        options: ["Almost daily", "4–5 times per week", "2–3 times per week", "Once a week or less"],
+        correct: 3,
+        explanation: "Frequent dining out is one of the highest variable expenses. Cooking at home more often can free up $200–$800/month depending on your current habits."
+      },
+      {
+        question: "How many paid subscriptions do you have (streaming, apps, memberships)?",
+        options: ["More than 10", "7–10", "4–6", "3 or fewer"],
+        correct: 3,
+        explanation: "Subscription creep is a silent budget killer. Most people underestimate their total subscription spend by 40%. Quarterly audits can reveal hundreds in unnecessary charges."
+      },
+      {
+        question: "After paying all bills, how much of your income is left over each month?",
+        options: ["Nothing or I go negative", "Less than 5%", "5%–15%", "More than 15%"],
+        correct: 3,
+        explanation: "Having 15%+ left after bills gives you flexibility for savings, investing, and unexpected costs. Less than 5% means you're one surprise expense away from debt."
+      },
+      {
+        question: "Do you carry a credit card balance month to month?",
+        options: ["Yes, a large balance (over 50% utilisation)", "Yes, moderate balance (20%–50%)", "Yes, small balance (under 20%)", "No, I pay in full every month"],
+        correct: 3,
+        explanation: "Carrying a balance means you're spending more than you earn. Credit card interest (often 20–30%) dramatically amplifies the true cost of your spending."
+      },
+      {
+        question: "How much do you invest each month (outside of retirement accounts)?",
+        options: ["Nothing", "Less than 1% of income", "1%–5% of income", "More than 5% of income"],
+        correct: 3,
+        explanation: "Investing outside retirement accounts — in index funds, real estate, or other assets — accelerates wealth building and demonstrates genuine surplus after expenses."
+      },
+      {
+        question: "When your income increases, what typically happens to your spending?",
+        options: ["Spending increases by the same amount", "Spending increases significantly", "Spending increases slightly", "Spending stays the same or I save the difference"],
+        correct: 3,
+        explanation: "Lifestyle inflation is the reason people earning $100k feel as broke as when they earned $50k. Saving at least 50% of every income increase is the key to building wealth."
+      }
+    ];
+
+    const results = [
+      {
+        min: 6, label: "Sustainable", colorClass: "result-score--high",
+        title: "Your Lifestyle Is Financially Sustainable",
+        desc: "Your spending patterns are well within your means. You maintain healthy cost ratios, avoid carrying debt, invest regularly, and resist lifestyle inflation. Keep these habits — they are the foundation of long-term wealth.",
+        recs: ["Continue increasing your investment rate as income grows.", "Reassess your budget annually to ensure ratios stay healthy.", "Consider increasing contributions to tax-advantaged accounts.", "Look into automating net-worth tracking to measure wealth growth."]
+      },
+      {
+        min: 4, label: "Borderline", colorClass: "",
+        title: "Your Lifestyle Is Borderline",
+        desc: "Your spending is close to — or occasionally exceeding — what your income can sustain. A few targeted changes can quickly shift you into a stronger position, but without action, financial stress is likely to increase.",
+        recs: ["Identify your top 2 overspend categories and set specific monthly limits.", "Do a subscription audit this week — cancel anything unused in 30+ days.", "Set up a small automatic savings transfer for payday — even $100 helps.", "Use the budget calculator to see exactly where adjustments will have the most impact."]
+      },
+      {
+        min: 0, label: "Unsustainable", colorClass: "result-score--low",
+        title: "Your Lifestyle Is Currently Unsustainable",
+        desc: "Your spending is outpacing your income in multiple areas. This is a common situation — but it does require honest, deliberate action before the gap widens. Start with the highest-impact changes first.",
+        recs: ["Housing: If rent exceeds 35%+ of income, explore roommates, relocation, or renegotiation.", "Debt: Stop adding to credit card balances — pay cash or don't buy.", "Food: Meal prep one day a week to cut dining costs by 30–50%.", "Use the debt payoff calculator to build a plan for clearing high-interest balances.", "Track every expense for 30 days — visibility is the first step to change."]
+      }
+    ];
+
+    const calculatorLinks = [
+      { href: "/finance-calculators/budget-calculator/", label: "Budget Calculator" },
+      { href: "/finance-calculators/net-worth-calculator/", label: "Net Worth Calculator" },
+      { href: "/finance-calculators/debt-payoff-calculator/", label: "Debt Payoff Calculator" }
+    ];
+
+    let current = 0, score = 0, answered = false;
+
+    function renderQuestion() {
+      answered = false;
+      const q = questions[current];
+      const pct = Math.round((current / questions.length) * 100);
+      document.getElementById('progress-bar').style.width = pct + '%';
+      document.getElementById('progress-text').textContent = 'Question ' + (current + 1) + ' of ' + questions.length;
+      document.getElementById('progress-pct').textContent = pct + '%';
+      document.getElementById('question-container').innerHTML = `
+        <div class="quiz-question">
+          <div class="quiz-question__number">Question ${current + 1}</div>
+          <p class="quiz-question__text">${q.question}</p>
+          <ul class="quiz-options" role="list">
+            ${q.options.map((opt, i) => `
+              <li><button class="quiz-option" data-index="${i}" onclick="selectAnswer(${i})">
+                <span class="quiz-option__indicator"></span><span>${opt}</span>
+              </button></li>`).join('')}
+          </ul>
+          <div id="explanation" class="quiz-explanation" style="display:none"></div>
+          <div class="quiz-nav">
+            <span></span>
+            <button class="btn btn-primary" id="next-btn" onclick="nextQuestion()" disabled>
+              ${current < questions.length - 1 ? 'Next Question' : 'See Results'}
+            </button>
+          </div>
+        </div>`;
+    }
+
+    function selectAnswer(idx) {
+      if (answered) return;
+      answered = true;
+      const q = questions[current];
+      document.querySelectorAll('.quiz-option').forEach(function(btn, i) {
+        if (i === q.correct) btn.classList.add('correct');
+        else if (i === idx && idx !== q.correct) btn.classList.add('incorrect');
+      });
+      if (idx === q.correct) score++;
+      const expEl = document.getElementById('explanation');
+      expEl.style.display = 'block';
+      expEl.className = 'quiz-explanation ' + (idx === q.correct ? 'quiz-explanation--correct' : 'quiz-explanation--incorrect');
+      expEl.textContent = q.explanation;
+      document.getElementById('next-btn').disabled = false;
+    }
+
+    function nextQuestion() {
+      current++;
+      if (current < questions.length) renderQuestion();
+      else showResult();
+    }
+
+    function showResult() {
+      document.getElementById('progress-bar').style.width = '100%';
+      document.getElementById('progress-text').textContent = 'Complete!';
+      document.getElementById('progress-pct').textContent = '100%';
+      document.getElementById('question-container').innerHTML = '';
+      const result = results.find(r => score >= r.min);
+      const rc = document.getElementById('result-container');
+      rc.classList.remove('hidden');
+      rc.innerHTML = `
+        <div class="result-score ${result.colorClass}">
+          <span class="result-score__number">${score}/${questions.length}</span>
+          <span class="result-score__label">Score</span>
+        </div>
+        <div class="result-category">${result.label}</div>
+        <h2>${result.title}</h2>
+        <p>${result.desc}</p>
+        <div class="result-recommendations">
+          <h3>Recommended Next Steps</h3>
+          <ul>${result.recs.map(r => `<li>${r}</li>`).join('')}</ul>
+        </div>
+        <div class="result-actions">
+          ${calculatorLinks.map(l => `<a href="${l.href}" class="btn btn-secondary">${l.label}</a>`).join('')}
+        </div>
+        <div class="result-actions" style="margin-top:1rem">
+          <button class="btn btn-outline" onclick="restartQuiz()">Retake Quiz</button>
+        </div>`;
+    }
+
+    function restartQuiz() {
+      current = 0; score = 0;
+      document.getElementById('result-container').classList.add('hidden');
+      renderQuestion();
+    }
+
+    renderQuestion();
+  </script>
+</body>
+</html>

@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Are You Underpaid? – Career Quiz | CalcWise</title>
+  <meta name="description" content="Assess whether your total compensation reflects your skills, output, and market value. Take this 8-question quiz to find out if you're being fairly paid.">
+  <link rel="canonical" href="https://calcwise.io/quizzes/career-quizzes/are-you-underpaid/">
+  <meta property="og:title" content="Are You Underpaid? – Career Quiz | CalcWise">
+  <meta property="og:description" content="Assess your total compensation vs. market value. 8 questions, instant results.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcwise.io/quizzes/career-quizzes/are-you-underpaid/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Are You Underpaid? – Career Quiz | CalcWise">
+  <meta name="twitter:description" content="Assess your total compensation vs. market value. 8 questions, instant results.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+  <link rel="stylesheet" href="/css/quiz.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/"},
+      {"@type": "ListItem", "position": 2, "name": "Quizzes", "item": "https://calcwise.io/quizzes/"},
+      {"@type": "ListItem", "position": 3, "name": "Career Quizzes", "item": "https://calcwise.io/quizzes/career-quizzes/"},
+      {"@type": "ListItem", "position": 4, "name": "Are You Underpaid?", "item": "https://calcwise.io/quizzes/career-quizzes/are-you-underpaid/"}
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/business-calculators/">Business</a>
+        <a href="/quizzes/" aria-current="page">Quizzes</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/business-calculators/">Business Calculators</a>
+      <a href="/quizzes/">Quizzes</a>
+      <a href="/about.html">About</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/quizzes/">Quizzes</a></li>
+          <li><a href="/quizzes/career-quizzes/">Career Quizzes</a></li>
+          <li><span aria-current="page">Are You Underpaid?</span></li>
+        </ol>
+      </nav>
+
+      <div class="quiz-container">
+        <h1>Are You Underpaid?</h1>
+        <p>Feeling underpaid is common — but proving it requires looking at the full picture. This quiz examines your salary vs. industry median, benefits quality, workload, peer comparisons, and employer context to give you an honest assessment of where you stand. Answer 8 questions to find out.</p>
+
+        <div style="margin: 1.5rem 0; text-align:center; min-height:90px; background:var(--color-gray-100); border-radius:8px; display:flex; align-items:center; justify-content:center; color:var(--color-gray-400); font-size:0.85rem;">Advertisement</div>
+
+        <div id="quiz-area">
+          <div id="quiz-start">
+            <div class="quiz-question" style="text-align:center;">
+              <p style="font-size:1.1rem; color:var(--color-text-muted); margin-bottom:1.5rem;">8 questions &bull; About 4 minutes &bull; Instant results</p>
+              <button class="btn btn-primary btn-lg" onclick="startQuiz()">Start Quiz</button>
+            </div>
+          </div>
+          <div id="quiz-main" style="display:none;"></div>
+          <div id="quiz-results" style="display:none;"></div>
+        </div>
+
+        <section class="faq-section" aria-labelledby="faq-heading" style="margin-top:3rem;">
+          <h2 id="faq-heading">Frequently Asked Questions</h2>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false"><span>How do I find the industry median salary for my role?</span><svg class="faq-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M10 4v12M4 10h12"/></svg></button>
+            <div class="faq-answer"><p>Use the Bureau of Labor Statistics Occupational Employment Statistics, Glassdoor, LinkedIn Salary Insights, Levels.fyi (for tech), and industry-specific salary surveys. Always filter by your location, years of experience, and company size for accurate comparisons.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false"><span>Does benefits quality matter when comparing pay?</span><svg class="faq-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M10 4v12M4 10h12"/></svg></button>
+            <div class="faq-answer"><p>Absolutely. Employer-paid health insurance can be worth $8,000–$20,000 per year. A 401(k) match adds 3–6% of your salary. Generous PTO, remote work flexibility, and stock compensation all add meaningful value. Always compare total compensation, not just base pay.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false"><span>What's the fastest way to fix being underpaid?</span><svg class="faq-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M10 4v12M4 10h12"/></svg></button>
+            <div class="faq-answer"><p>Research shows that switching employers increases pay by 10–20% on average, versus 3–5% for a typical internal raise. If you are significantly underpaid, pursuing external offers — even as negotiating leverage — is often the most effective strategy. Always use a job offer comparison calculator to evaluate any offer fully.</p></div>
+          </div>
+        </section>
+
+        <section style="margin-top:3rem;" aria-labelledby="related-heading">
+          <h2 id="related-heading">Related Career Quizzes</h2>
+          <div class="quiz-grid">
+            <a href="/quizzes/career-quizzes/is-your-salary-competitive/" class="quiz-card">
+              <div class="quiz-card__badge">Career</div>
+              <h3>Is Your Salary Competitive?</h3>
+              <p>Benchmark your pay across experience, industry, and location.</p>
+              <span class="quiz-card__cta">Take quiz <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </a>
+            <a href="/quizzes/career-quizzes/should-you-change-jobs/" class="quiz-card">
+              <div class="quiz-card__badge">Career</div>
+              <h3>Should You Change Jobs?</h3>
+              <p>Determine if a job change is the right financial and career move.</p>
+              <span class="quiz-card__cta">Take quiz <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </a>
+            <a href="/quizzes/career-quizzes/are-you-ready-for-a-promotion/" class="quiz-card">
+              <div class="quiz-card__badge">Career</div>
+              <h3>Are You Ready for a Promotion?</h3>
+              <p>See if a title change and raise is within reach at your current employer.</p>
+              <span class="quiz-card__cta">Take quiz <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </a>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="#1B4D3E" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators and quizzes built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Career Quizzes</h4>
+          <a href="/quizzes/career-quizzes/is-your-salary-competitive/">Salary Check</a>
+          <a href="/quizzes/career-quizzes/should-you-change-jobs/">Change Jobs?</a>
+          <a href="/quizzes/career-quizzes/should-you-freelance-or-stay-employed/">Freelance or Employed?</a>
+          <a href="/quizzes/career-quizzes/">View All</a>
+        </div>
+        <div class="footer-col">
+          <h4>Other Quizzes</h4>
+          <a href="/quizzes/business-quizzes/">Business Quizzes</a>
+          <a href="/quizzes/lifestyle-cost-quizzes/">Lifestyle Quizzes</a>
+          <a href="/quizzes/retirement-quizzes/">Retirement Quizzes</a>
+          <a href="/quizzes/">All Quizzes</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about.html">About</a>
+          <a href="/contact.html">Contact</a>
+          <a href="/privacy.html">Privacy Policy</a>
+          <a href="/terms.html">Terms of Use</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/privacy.html">Privacy</a>
+          <a href="/terms.html">Terms</a>
+          <a href="/disclaimer.html">Disclaimer</a>
+          <a href="/sitemap.xml">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    const questions = [
+      {
+        question: "How does your salary compare to the industry median for your role and location?",
+        options: ["I earn 10%+ above median", "I'm roughly at the median", "I'm 10–25% below median", "I'm 25%+ below median or I don't know"],
+        correct: 0,
+        explanation: "The industry median is your baseline. Anything below it — especially by 10% or more — signals you may be underpaid relative to market.",
+        weight: 2
+      },
+      {
+        question: "How would you rate your employer-provided benefits?",
+        options: ["Excellent — comprehensive health, dental, vision, 401k match, generous PTO", "Good — solid health coverage and some retirement benefits", "Below average — minimal coverage or high out-of-pocket costs", "Poor — little to no benefits or I pay heavily out of pocket"],
+        correct: 0,
+        explanation: "Benefits can represent 30–40% of your total compensation. Poor benefits can mean you're earning thousands less than your paycheck suggests.",
+        weight: 1
+      },
+      {
+        question: "How does your total compensation compare to peers at similar companies doing similar work?",
+        options: ["I earn more than or equal to peers I know of", "I'm slightly behind peers", "I'm noticeably behind — peers earn more for comparable work", "I have no idea how I compare"],
+        correct: 0,
+        explanation: "Peer comparisons are imperfect but informative. If coworkers with similar output earn more, that's a meaningful data point worth investigating.",
+        weight: 1
+      },
+      {
+        question: "How does your workload and output compare to your pay?",
+        options: ["My pay feels proportional to what I produce", "I do a bit more than average but it's acceptable", "I consistently go above and beyond without pay recognition", "I carry significantly more than others at my pay level"],
+        correct: 0,
+        explanation: "Chronic overwork without compensation is a red flag. If your output consistently exceeds expectations, you have a strong case for a raise.",
+        weight: 1
+      },
+      {
+        question: "Has your company been profitable or growing recently?",
+        options: ["Yes — strong profits and/or growth", "Mostly stable — no major gains or losses", "Struggling — budget cuts, layoffs, or cost freezes", "I don't know / not applicable"],
+        correct: 0,
+        explanation: "Company financial health directly affects raise potential. A profitable employer who isn't paying market rates has less excuse than one in genuine financial distress.",
+        weight: 1
+      },
+      {
+        question: "When did you last receive a meaningful raise (above inflation)?",
+        options: ["Within the past 12 months", "12–24 months ago", "2–3 years ago", "More than 3 years ago — or never"],
+        correct: 0,
+        explanation: "Inflation erodes purchasing power at 3–4% per year. If your last real raise was 2+ years ago, your effective pay has likely declined in real terms.",
+        weight: 2
+      },
+      {
+        question: "Have you received competing job offers or salary data suggesting higher pay elsewhere?",
+        options: ["Yes — I've seen clear evidence I could earn significantly more elsewhere", "I've seen some data suggesting I might earn more", "I haven't looked seriously but suspect it", "No evidence — I seem fairly paid from what I can find"],
+        correct: 0,
+        explanation: "External market data is the strongest proof of underpayment. Job postings and offers are real-world evidence of what employers will actually pay.",
+        weight: 2
+      },
+      {
+        question: "How have your formal performance reviews gone?",
+        options: ["Consistently exceeds expectations", "Meets expectations with some highlights", "Mixed reviews or no formal review process", "Reviews below expectations or infrequent feedback"],
+        correct: 0,
+        explanation: "Strong performance reviews that haven't translated into raises indicate a disconnect between your employer's stated recognition and financial compensation.",
+        weight: 1
+      }
+    ];
+
+    let currentQ = 0, score = 0, answers = [];
+
+    function startQuiz() {
+      document.getElementById('quiz-start').style.display = 'none';
+      document.getElementById('quiz-main').style.display = 'block';
+      renderQuestion();
+    }
+
+    function renderQuestion() {
+      const q = questions[currentQ];
+      const pct = Math.round((currentQ / questions.length) * 100);
+      document.getElementById('quiz-main').innerHTML = `
+        <div class="quiz-progress">
+          <div class="quiz-progress__label">
+            <span>Question ${currentQ + 1} of ${questions.length}</span>
+            <span>${pct}% complete</span>
+          </div>
+          <div class="quiz-progress__bar"><div class="quiz-progress__fill" style="width:${pct}%"></div></div>
+        </div>
+        <div class="quiz-question">
+          <div class="quiz-question__number">Question ${currentQ + 1}</div>
+          <div class="quiz-question__text">${q.question}</div>
+          <ul class="quiz-options">
+            ${q.options.map((opt, i) => `
+              <li><button class="quiz-option" onclick="selectAnswer(${i})" aria-label="${opt}">
+                <span class="quiz-option__indicator"></span>
+                <span>${opt}</span>
+              </button></li>`).join('')}
+          </ul>
+          <div id="explanation" style="display:none;" class="quiz-explanation"></div>
+        </div>
+        <div class="quiz-nav">
+          <span style="color:var(--color-text-muted);font-size:0.875rem;">${currentQ + 1} / ${questions.length}</span>
+          <button class="btn btn-primary" id="next-btn" style="display:none;" onclick="nextQuestion()">
+            ${currentQ + 1 === questions.length ? 'See Results' : 'Next Question'}
+          </button>
+        </div>`;
+    }
+
+    function selectAnswer(idx) {
+      if (document.querySelector('.quiz-option.selected')) return;
+      const q = questions[currentQ];
+      answers.push(idx);
+      // Higher index = worse situation (more underpaid), score based on selecting lower index (better)
+      score += (q.options.length - 1 - idx) * q.weight;
+      const opts = document.querySelectorAll('.quiz-option');
+      opts.forEach((btn, i) => {
+        btn.disabled = true;
+        if (i === idx) btn.classList.add('selected');
+        if (i === 0) btn.classList.add('correct');
+        if (i === idx && i !== 0) btn.classList.add('incorrect');
+      });
+      const expEl = document.getElementById('explanation');
+      expEl.style.display = 'block';
+      expEl.className = 'quiz-explanation ' + (idx === 0 ? 'quiz-explanation--correct' : 'quiz-explanation--incorrect');
+      expEl.textContent = q.explanation;
+      document.getElementById('next-btn').style.display = 'inline-flex';
+    }
+
+    function nextQuestion() {
+      currentQ++;
+      if (currentQ < questions.length) {
+        renderQuestion();
+      } else {
+        showResults();
+      }
+    }
+
+    function showResults() {
+      document.getElementById('quiz-main').style.display = 'none';
+      const resultsEl = document.getElementById('quiz-results');
+      resultsEl.style.display = 'block';
+
+      const maxScore = questions.reduce((sum, q) => sum + (q.options.length - 1) * q.weight, 0);
+      const pct = score / maxScore;
+
+      let tier, tierClass, desc, recs;
+      if (pct >= 0.75) {
+        tier = 'Fairly Paid';
+        tierClass = 'result-score--high';
+        desc = 'Your answers suggest your compensation is broadly fair relative to your market, performance, and benefits. Continue to benchmark annually and don\'t leave raises on the table at review time.';
+        recs = ['Keep tracking market data with annual salary surveys', 'Use the salary after-tax calculator to understand your true take-home', 'Ensure you are capturing all benefits in your total comp assessment'];
+      } else if (pct >= 0.5) {
+        tier = 'Possibly Underpaid';
+        tierClass = '';
+        desc = 'Some signals suggest you may be getting less than you deserve — particularly around raise timing or benefits. A targeted negotiation conversation is worth having.';
+        recs = ['Gather 3–5 data points from salary databases for your exact role', 'Calculate the raise percentage you would need to reach market rate', 'Schedule a compensation review before your next performance cycle'];
+      } else if (pct >= 0.25) {
+        tier = 'Likely Underpaid';
+        tierClass = 'result-score--mid';
+        desc = 'Multiple indicators point to genuine underpayment. Your market alternatives, workload, and raise history all suggest it\'s time to take concrete action.';
+        recs = ['Document your achievements and quantify your impact before negotiating', 'Pull real job postings to build a salary evidence file', 'Use the job offer comparison calculator to evaluate any external offers you receive', 'Consider whether a job change is necessary to close the gap'];
+      } else {
+        tier = 'Definitely Underpaid';
+        tierClass = 'result-score--low';
+        desc = 'The evidence strongly suggests you are being materially underpaid. This is a financial problem worth treating seriously — every month of underpayment has a compounding cost on your lifetime earnings.';
+        recs = ['Start a job search immediately to establish market value externally', 'Calculate the lifetime cost of your pay gap using a salary calculator', 'Use competing offers as leverage — even if you prefer to stay', 'Evaluate your after-tax take-home at a higher salary to understand the real gain'];
+      }
+
+      const scoreDisplay = Math.round(pct * 100);
+      resultsEl.innerHTML = `
+        <div class="quiz-result">
+          <div class="result-score ${tierClass}">
+            <span class="result-score__number">${scoreDisplay}%</span>
+            <span class="result-score__label">Score</span>
+          </div>
+          <div class="result-category">${tier}</div>
+          <h2>Your result: ${tier}</h2>
+          <p>${desc}</p>
+          <div class="result-recommendations">
+            <h3>Recommended Next Steps</h3>
+            <ul>${recs.map(r => `<li>${r}</li>`).join('')}</ul>
+          </div>
+          <div class="result-actions">
+            <a href="/finance-calculators/salary-after-tax-calculator/" class="btn btn-primary">Salary After-Tax Calculator</a>
+            <a href="/finance-calculators/raise-percentage-calculator/" class="btn btn-secondary">Raise Percentage Calculator</a>
+            <a href="/finance-calculators/job-offer-comparison-calculator/" class="btn btn-secondary">Job Offer Comparison</a>
+          </div>
+          <div style="margin-top:1.5rem;">
+            <button class="btn btn-ghost" onclick="restartQuiz()">Retake Quiz</button>
+          </div>
+        </div>`;
+    }
+
+    function restartQuiz() {
+      currentQ = 0; score = 0; answers = [];
+      document.getElementById('quiz-results').style.display = 'none';
+      document.getElementById('quiz-main').style.display = 'block';
+      renderQuestion();
+    }
+
+    document.querySelector('.mobile-menu-toggle').addEventListener('click', function() {
+      const nav = document.querySelector('.mobile-nav');
+      const isOpen = nav.classList.toggle('is-open');
+      this.setAttribute('aria-expanded', isOpen);
+      this.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+    });
+    document.querySelectorAll('.faq-question').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        const item = this.closest('.faq-item');
+        const isOpen = item.classList.toggle('is-open');
+        this.setAttribute('aria-expanded', isOpen);
+      });
+    });
+  </script>
+</body>
+</html>

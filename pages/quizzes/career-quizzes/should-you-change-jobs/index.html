@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Should You Change Jobs? – Career Quiz | CalcWise</title>
+  <meta name="description" content="Weigh compensation, career growth, work-life balance, and financial risk to find out if it's time to change jobs. 9-question quiz with instant results.">
+  <link rel="canonical" href="https://calcwise.io/quizzes/career-quizzes/should-you-change-jobs/">
+  <meta property="og:title" content="Should You Change Jobs? – Career Quiz | CalcWise">
+  <meta property="og:description" content="9 questions to determine if you should stay, explore, or leave your job now.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcwise.io/quizzes/career-quizzes/should-you-change-jobs/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Should You Change Jobs? – Career Quiz | CalcWise">
+  <meta name="twitter:description" content="9 questions to determine if you should stay, explore, or leave your job now.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+  <link rel="stylesheet" href="/css/quiz.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://calcwise.io/"},
+    {"@type":"ListItem","position":2,"name":"Quizzes","item":"https://calcwise.io/quizzes/"},
+    {"@type":"ListItem","position":3,"name":"Career Quizzes","item":"https://calcwise.io/quizzes/career-quizzes/"},
+    {"@type":"ListItem","position":4,"name":"Should You Change Jobs?","item":"https://calcwise.io/quizzes/career-quizzes/should-you-change-jobs/"}
+  ]}
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/business-calculators/">Business</a>
+        <a href="/quizzes/" aria-current="page">Quizzes</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/business-calculators/">Business Calculators</a>
+      <a href="/quizzes/">Quizzes</a>
+      <a href="/about.html">About</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/quizzes/">Quizzes</a></li>
+          <li><a href="/quizzes/career-quizzes/">Career Quizzes</a></li>
+          <li><span aria-current="page">Should You Change Jobs?</span></li>
+        </ol>
+      </nav>
+
+      <div class="quiz-container">
+        <h1>Should You Change Jobs?</h1>
+        <p>Changing jobs is one of the most impactful financial decisions you can make — but timing and preparation matter enormously. This quiz looks beyond gut feelings to evaluate your compensation gap, growth trajectory, job satisfaction, financial cushion, and risk exposure. Answer 9 questions to get a clear recommendation.</p>
+
+        <div style="margin:1.5rem 0;text-align:center;min-height:90px;background:var(--color-gray-100);border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--color-gray-400);font-size:0.85rem;">Advertisement</div>
+
+        <div id="quiz-area">
+          <div id="quiz-start">
+            <div class="quiz-question" style="text-align:center;">
+              <p style="font-size:1.1rem;color:var(--color-text-muted);margin-bottom:1.5rem;">9 questions &bull; About 5 minutes &bull; Instant results</p>
+              <button class="btn btn-primary btn-lg" onclick="startQuiz()">Start Quiz</button>
+            </div>
+          </div>
+          <div id="quiz-main" style="display:none;"></div>
+          <div id="quiz-results" style="display:none;"></div>
+        </div>
+
+        <section class="faq-section" aria-labelledby="faq-heading" style="margin-top:3rem;">
+          <h2 id="faq-heading">Frequently Asked Questions</h2>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false"><span>How much should I expect to earn with a job change?</span><svg class="faq-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M10 4v12M4 10h12"/></svg></button>
+            <div class="faq-answer"><p>On average, job changers see salary increases of 10–20% compared to 3–5% for internal raises. In competitive industries like tech, finance, or healthcare, increases of 20–30% are not unusual. Use a job offer comparison calculator to evaluate the full financial picture including benefits.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false"><span>What financial cushion do I need before job searching?</span><svg class="faq-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M10 4v12M4 10h12"/></svg></button>
+            <div class="faq-answer"><p>If you plan to job search while employed, you need minimal cash cushion — just time. If you plan to quit first, have at least 3–6 months of expenses saved, preferably 6–12 in an uncertain market. Factor in COBRA health insurance costs, which can run $500–$700/month.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false"><span>How do I evaluate a job offer vs. my current role?</span><svg class="faq-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M10 4v12M4 10h12"/></svg></button>
+            <div class="faq-answer"><p>Compare total compensation including base salary, bonus, equity, benefits, retirement match, PTO, and remote work savings. A higher base salary with worse benefits can net out to less. Use a job offer comparison calculator to put a dollar value on every element of the offer.</p></div>
+          </div>
+        </section>
+
+        <section style="margin-top:3rem;" aria-labelledby="related-heading">
+          <h2 id="related-heading">Related Career Quizzes</h2>
+          <div class="quiz-grid">
+            <a href="/quizzes/career-quizzes/are-you-underpaid/" class="quiz-card">
+              <div class="quiz-card__badge">Career</div>
+              <h3>Are You Underpaid?</h3>
+              <p>Assess your compensation vs. market value before you decide to leave.</p>
+              <span class="quiz-card__cta">Take quiz <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </a>
+            <a href="/quizzes/career-quizzes/can-you-afford-to-quit-your-job/" class="quiz-card">
+              <div class="quiz-card__badge">Career</div>
+              <h3>Can You Afford to Quit?</h3>
+              <p>Evaluate your financial runway before walking away from a paycheck.</p>
+              <span class="quiz-card__cta">Take quiz <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </a>
+            <a href="/quizzes/career-quizzes/how-financially-secure-is-your-career/" class="quiz-card">
+              <div class="quiz-card__badge">Career</div>
+              <h3>How Financially Secure Is Your Career?</h3>
+              <p>Assess your income security and long-term career resilience.</p>
+              <span class="quiz-card__cta">Take quiz <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </a>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="#1B4D3E" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators and quizzes built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Career Quizzes</h4>
+          <a href="/quizzes/career-quizzes/is-your-salary-competitive/">Salary Check</a>
+          <a href="/quizzes/career-quizzes/should-you-change-jobs/">Change Jobs?</a>
+          <a href="/quizzes/career-quizzes/should-you-freelance-or-stay-employed/">Freelance or Employed?</a>
+          <a href="/quizzes/career-quizzes/">View All</a>
+        </div>
+        <div class="footer-col">
+          <h4>Other Quizzes</h4>
+          <a href="/quizzes/business-quizzes/">Business Quizzes</a>
+          <a href="/quizzes/lifestyle-cost-quizzes/">Lifestyle Quizzes</a>
+          <a href="/quizzes/retirement-quizzes/">Retirement Quizzes</a>
+          <a href="/quizzes/">All Quizzes</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about.html">About</a>
+          <a href="/contact.html">Contact</a>
+          <a href="/privacy.html">Privacy Policy</a>
+          <a href="/terms.html">Terms of Use</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/privacy.html">Privacy</a>
+          <a href="/terms.html">Terms</a>
+          <a href="/disclaimer.html">Disclaimer</a>
+          <a href="/sitemap.xml">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    const questions = [
+      {
+        question: "How satisfied are you with your current job overall?",
+        options: ["Very satisfied — I genuinely enjoy my work", "Somewhat satisfied — mostly fine with minor issues", "Dissatisfied — I dread more days than I enjoy", "Very dissatisfied — I count the minutes until I can leave"],
+        correct: 0,
+        explanation: "Job satisfaction has financial implications too — low satisfaction leads to lower productivity, worse performance reviews, and ultimately lower income trajectory.",
+        weight: 1
+      },
+      {
+        question: "How does your current compensation compare to what you could earn elsewhere?",
+        options: ["I'm at or above market — leaving wouldn't improve my pay much", "I might earn slightly more elsewhere", "I could earn 10–20% more by switching", "I could earn 20%+ more — the gap is significant"],
+        correct: 0,
+        explanation: "Compensation gap is the strongest financial argument for switching. A 20% raise compounded over a career creates dramatically higher lifetime earnings.",
+        weight: 2
+      },
+      {
+        question: "What are the growth and promotion opportunities at your current employer?",
+        options: ["Clear advancement path with regular promotions available", "Some growth possible but slow or unclear", "Limited — I feel stuck in my current level", "No real path upward — I've been stagnant for years"],
+        correct: 0,
+        explanation: "Career stagnation compounds financially over time. Missing even one promotion cycle can cost $50,000–$100,000 in lifetime earnings.",
+        weight: 1
+      },
+      {
+        question: "How is your work-life balance?",
+        options: ["Excellent — I maintain clear boundaries and rarely overwork", "Good — occasionally stressful but manageable", "Poor — I regularly work excessive hours without proportional pay", "Terrible — my job is consuming my personal life and health"],
+        correct: 0,
+        explanation: "Work-life imbalance has real financial costs: burnout, health issues, and reduced performance all carry price tags beyond job satisfaction.",
+        weight: 1
+      },
+      {
+        question: "How would you describe your relationship with your manager?",
+        options: ["Strong — my manager supports my growth and advocates for me", "Adequate — professional but not particularly helpful", "Strained — my manager is an obstacle to my advancement", "Toxic — the relationship is a major source of stress"],
+        correct: 0,
+        explanation: "Manager quality is one of the top reasons people leave jobs. A bad manager limits your visibility, raises, and career trajectory.",
+        weight: 1
+      },
+      {
+        question: "How stable does your current company appear to be?",
+        options: ["Very stable — strong financials, growing market position", "Mostly stable — no major warning signs", "Somewhat unstable — layoffs, cuts, or financial difficulties", "Risky — the company may not exist in 1–2 years"],
+        correct: 0,
+        explanation: "Company instability adds involuntary risk to your income. Proactive job searching while still employed puts you in a much stronger negotiating position.",
+        weight: 2
+      },
+      {
+        question: "Are you developing marketable skills in your current role?",
+        options: ["Yes — I'm gaining skills that increase my market value", "Somewhat — limited growth but maintaining my baseline", "No — my skills are stagnating or becoming outdated", "Actively negative — my skills are narrowing with no new development"],
+        correct: 0,
+        explanation: "Skill development is a long-term financial investment. Stagnating skills reduce future earning potential and negotiating power.",
+        weight: 1
+      },
+      {
+        question: "How is your commute or work flexibility situation?",
+        options: ["Remote or very flexible — minimal commute burden", "Reasonable commute or hybrid arrangement", "Long commute — significant time and cost impact", "Inflexible and costly — it's materially reducing my quality of life"],
+        correct: 0,
+        explanation: "A 1-hour daily commute costs roughly $5,000–$10,000/year in time and direct expenses. This should be factored into any job offer comparison.",
+        weight: 1
+      },
+      {
+        question: "Do you have enough financial cushion to job search (without quitting first)?",
+        options: ["Yes — 6+ months of expenses saved and could easily job search while employed", "Mostly — 3–6 months saved and can job search while employed", "Limited — 1–3 months saved, would be stressful but manageable", "No cushion — a gap in income would be a serious problem"],
+        correct: 0,
+        explanation: "Financial cushion determines your negotiating power. Searching while employed with savings means you can walk away from bad offers and wait for the right one.",
+        weight: 2
+      }
+    ];
+
+    let currentQ = 0, score = 0, answers = [];
+
+    function startQuiz() {
+      document.getElementById('quiz-start').style.display = 'none';
+      document.getElementById('quiz-main').style.display = 'block';
+      renderQuestion();
+    }
+
+    function renderQuestion() {
+      const q = questions[currentQ];
+      const pct = Math.round((currentQ / questions.length) * 100);
+      document.getElementById('quiz-main').innerHTML = `
+        <div class="quiz-progress">
+          <div class="quiz-progress__label">
+            <span>Question ${currentQ + 1} of ${questions.length}</span>
+            <span>${pct}% complete</span>
+          </div>
+          <div class="quiz-progress__bar"><div class="quiz-progress__fill" style="width:${pct}%"></div></div>
+        </div>
+        <div class="quiz-question">
+          <div class="quiz-question__number">Question ${currentQ + 1}</div>
+          <div class="quiz-question__text">${q.question}</div>
+          <ul class="quiz-options">
+            ${q.options.map((opt, i) => `
+              <li><button class="quiz-option" onclick="selectAnswer(${i})" aria-label="${opt}">
+                <span class="quiz-option__indicator"></span>
+                <span>${opt}</span>
+              </button></li>`).join('')}
+          </ul>
+          <div id="explanation" style="display:none;" class="quiz-explanation"></div>
+        </div>
+        <div class="quiz-nav">
+          <span style="color:var(--color-text-muted);font-size:0.875rem;">${currentQ + 1} / ${questions.length}</span>
+          <button class="btn btn-primary" id="next-btn" style="display:none;" onclick="nextQuestion()">
+            ${currentQ + 1 === questions.length ? 'See Results' : 'Next Question'}
+          </button>
+        </div>`;
+    }
+
+    function selectAnswer(idx) {
+      if (document.querySelector('.quiz-option.selected')) return;
+      const q = questions[currentQ];
+      answers.push(idx);
+      score += idx * q.weight;
+      const opts = document.querySelectorAll('.quiz-option');
+      opts.forEach((btn, i) => {
+        btn.disabled = true;
+        if (i === idx) btn.classList.add('selected');
+        if (i === 0) btn.classList.add('correct');
+        if (i === idx && i !== 0) btn.classList.add('incorrect');
+      });
+      const expEl = document.getElementById('explanation');
+      expEl.style.display = 'block';
+      expEl.className = 'quiz-explanation ' + (idx === 0 ? 'quiz-explanation--correct' : 'quiz-explanation--incorrect');
+      expEl.textContent = q.explanation;
+      document.getElementById('next-btn').style.display = 'inline-flex';
+    }
+
+    function nextQuestion() {
+      currentQ++;
+      if (currentQ < questions.length) renderQuestion();
+      else showResults();
+    }
+
+    function showResults() {
+      document.getElementById('quiz-main').style.display = 'none';
+      const resultsEl = document.getElementById('quiz-results');
+      resultsEl.style.display = 'block';
+
+      const maxScore = questions.reduce((sum, q) => sum + (q.options.length - 1) * q.weight, 0);
+      const pct = score / maxScore;
+
+      let tier, tierClass, desc, recs;
+      if (pct <= 0.25) {
+        tier = 'Stay and Improve';
+        tierClass = 'result-score--high';
+        desc = 'Your current situation is generally strong. You have solid compensation, good growth prospects, and healthy job satisfaction. Focus on optimizing what you have rather than jumping ship.';
+        recs = ['Negotiate your next raise proactively rather than waiting to be offered one', 'Use a job offer comparison calculator to evaluate any unsolicited offers', 'Build your financial cushion to 6+ months to always have options'];
+      } else if (pct <= 0.5) {
+        tier = 'Consider Opportunities';
+        tierClass = '';
+        desc = 'There are enough friction points in your current role to make passive job market exploration worthwhile. You don\'t need to leave, but you should know your options.';
+        recs = ['Update your resume and LinkedIn profile now, while the stakes are low', 'Run your current budget through the budget calculator to understand your financial flexibility', 'Respond to strong inbound recruiters and compare offers properly'];
+      } else if (pct <= 0.75) {
+        tier = 'Actively Job Search';
+        tierClass = 'result-score--mid';
+        desc = 'Multiple factors — compensation, growth, stability, or satisfaction — are materially pointing toward a job change. The financial case for moving is strong.';
+        recs = ['Start actively applying while still employed — your leverage is highest here', 'Calculate your post-tax take-home at your target salary range', 'Use a job offer comparison calculator for every offer you receive', 'Build your emergency fund to cover a potential gap in employment'];
+      } else {
+        tier = 'Leave Soon';
+        tierClass = 'result-score--low';
+        desc = 'Your current situation shows strong indicators across compensation, stability, satisfaction, and growth. Staying is costing you — financially and professionally. The risks of leaving are lower than the risks of staying.';
+        recs = ['Prioritize building 3+ months of emergency savings before resigning', 'Research budget scenarios for a transition period', 'Line up multiple offers to maximize your negotiating position', 'Factor in health insurance costs during any gap period'];
+      }
+
+      const scoreDisplay = Math.round(pct * 100);
+      resultsEl.innerHTML = `
+        <div class="quiz-result">
+          <div class="result-score ${tierClass}">
+            <span class="result-score__number">${scoreDisplay}%</span>
+            <span class="result-score__label">Score</span>
+          </div>
+          <div class="result-category">${tier}</div>
+          <h2>Your result: ${tier}</h2>
+          <p>${desc}</p>
+          <div class="result-recommendations">
+            <h3>Recommended Next Steps</h3>
+            <ul>${recs.map(r => `<li>${r}</li>`).join('')}</ul>
+          </div>
+          <div class="result-actions">
+            <a href="/finance-calculators/job-offer-comparison-calculator/" class="btn btn-primary">Job Offer Comparison Calculator</a>
+            <a href="/finance-calculators/salary-after-tax-calculator/" class="btn btn-secondary">Salary After-Tax Calculator</a>
+            <a href="/finance-calculators/budget-calculator/" class="btn btn-secondary">Budget Calculator</a>
+          </div>
+          <div style="margin-top:1.5rem;">
+            <button class="btn btn-ghost" onclick="restartQuiz()">Retake Quiz</button>
+          </div>
+        </div>`;
+    }
+
+    function restartQuiz() {
+      currentQ = 0; score = 0; answers = [];
+      document.getElementById('quiz-results').style.display = 'none';
+      document.getElementById('quiz-main').style.display = 'block';
+      renderQuestion();
+    }
+
+    document.querySelector('.mobile-menu-toggle').addEventListener('click', function() {
+      const nav = document.querySelector('.mobile-nav');
+      const isOpen = nav.classList.toggle('is-open');
+      this.setAttribute('aria-expanded', isOpen);
+      this.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+    });
+    document.querySelectorAll('.faq-question').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        const item = this.closest('.faq-item');
+        const isOpen = item.classList.toggle('is-open');
+        this.setAttribute('aria-expanded', isOpen);
+      });
+    });
+  </script>
+</body>
+</html>

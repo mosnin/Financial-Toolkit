@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How Financially Healthy Are You? Quiz | CalcWise</title>
+  <meta name="description" content="Take this 8-question financial health quiz to assess your emergency fund, debt-to-income ratio, savings rate, investments, and more. Get a personalised health score.">
+  <link rel="canonical" href="https://calcwise.io/quizzes/finance-quizzes/how-financially-healthy-are-you/">
+  <meta property="og:title" content="How Financially Healthy Are You? Quiz | CalcWise">
+  <meta property="og:description" content="Assess your emergency fund, savings rate, debt, investments and insurance in 8 questions. Get your financial health score and personalised recommendations.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcwise.io/quizzes/finance-quizzes/how-financially-healthy-are-you/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="How Financially Healthy Are You? Quiz | CalcWise">
+  <meta name="twitter:description" content="8-question quiz to assess your overall financial health with a personalised score and action plan.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+  <link rel="stylesheet" href="/css/quiz.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/"},
+      {"@type": "ListItem", "position": 2, "name": "Quizzes", "item": "https://calcwise.io/quizzes/"},
+      {"@type": "ListItem", "position": 3, "name": "Finance Quizzes", "item": "https://calcwise.io/quizzes/finance-quizzes/"},
+      {"@type": "ListItem", "position": 4, "name": "How Financially Healthy Are You?", "item": "https://calcwise.io/quizzes/finance-quizzes/how-financially-healthy-are-you/"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "How Financially Healthy Are You? Quiz",
+    "description": "8-question quiz covering emergency fund, debt-to-income ratio, savings rate, investment diversification, insurance, budget tracking, net worth, and retirement contributions.",
+    "url": "https://calcwise.io/quizzes/finance-quizzes/how-financially-healthy-are-you/",
+    "isPartOf": {"@type": "WebSite", "name": "CalcWise", "url": "https://calcwise.io/"}
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="32" height="32" rx="8" fill="currentColor"/>
+          <path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+        </svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/business-calculators/">Business</a>
+        <a href="/quizzes/" aria-current="page">Quizzes</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/business-calculators/">Business Calculators</a>
+      <a href="/quizzes/">Quizzes</a>
+      <a href="/about.html">About</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/quizzes/">Quizzes</a></li>
+          <li><a href="/quizzes/finance-quizzes/">Finance Quizzes</a></li>
+          <li><span aria-current="page">How Financially Healthy Are You?</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <h1>How Financially Healthy Are You?</h1>
+        <p class="intro">This 8-question quiz evaluates the core pillars of personal financial health — from your emergency fund and debt load to your savings rate, investment diversification, and retirement contributions. Answer honestly to receive a financial health score and targeted recommendations you can act on today.</p>
+
+        <div class="quiz-container" id="quiz">
+          <div class="quiz-progress">
+            <div class="quiz-progress__label">
+              <span id="progress-text">Question 1 of 8</span>
+              <span id="progress-pct">0%</span>
+            </div>
+            <div class="quiz-progress__bar">
+              <div class="quiz-progress__fill" id="progress-bar" style="width:0%"></div>
+            </div>
+          </div>
+          <div id="question-container"></div>
+          <div id="result-container" class="quiz-result hidden"></div>
+        </div>
+
+        <!-- FAQ -->
+        <section class="faq-section" aria-labelledby="faq-heading" style="margin-top:3rem">
+          <h2 id="faq-heading">Frequently Asked Questions</h2>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false"><span>What makes someone financially healthy?</span><svg class="faq-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M10 4v12M4 10h12"/></svg></button>
+            <div class="faq-answer"><p>Financial health means having a stable income, manageable debt, an adequate emergency fund, consistent savings, and a growing net worth. Key benchmarks include a debt-to-income ratio below 36%, emergency savings of 3–6 months of expenses, and a savings rate of at least 15–20%.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false"><span>What is a good debt-to-income ratio?</span><svg class="faq-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M10 4v12M4 10h12"/></svg></button>
+            <div class="faq-answer"><p>Lenders generally want your total DTI (all debt payments divided by gross monthly income) below 43%. A DTI under 28% for housing costs alone is considered excellent. Above 43% total indicates financial strain and limits your borrowing options.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false"><span>How often should I review my financial health?</span><svg class="faq-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M10 4v12M4 10h12"/></svg></button>
+            <div class="faq-answer"><p>Do a full financial review at least once a year — or whenever a major life change occurs (new job, marriage, child, home purchase). Monthly check-ins on your budget and savings keep you on track between annual reviews.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false"><span>What insurance coverage is considered essential?</span><svg class="faq-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M10 4v12M4 10h12"/></svg></button>
+            <div class="faq-answer"><p>At minimum, you should have health insurance, auto insurance (if you own a car), renters or homeowners insurance, and ideally a term life insurance policy if others depend on your income. Disability insurance is often overlooked but critically important.</p></div>
+          </div>
+        </section>
+
+        <!-- Related Quizzes -->
+        <section aria-labelledby="related-heading" style="margin-top:3rem">
+          <h2 id="related-heading">Related Finance Quizzes</h2>
+          <div class="quiz-grid" style="grid-template-columns:repeat(auto-fill,minmax(260px,1fr))">
+            <a href="/quizzes/finance-quizzes/how-much-should-you-be-saving/" class="quiz-card">
+              <div class="quiz-card__badge">Finance</div>
+              <h3>How Much Should You Be Saving?</h3>
+              <p>Discover your ideal savings rate based on your age, income, and financial goals.</p>
+              <span class="quiz-card__cta">Take quiz <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </a>
+            <a href="/quizzes/finance-quizzes/how-risky-is-your-debt/" class="quiz-card">
+              <div class="quiz-card__badge">Finance</div>
+              <h3>How Risky Is Your Debt?</h3>
+              <p>Find out whether your current debt load poses a real threat to your financial stability.</p>
+              <span class="quiz-card__cta">Take quiz <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </a>
+            <a href="/quizzes/finance-quizzes/how-strong-is-your-emergency-fund/" class="quiz-card">
+              <div class="quiz-card__badge">Finance</div>
+              <h3>How Strong Is Your Emergency Fund?</h3>
+              <p>Assess whether your safety net is truly strong enough to handle life's surprises.</p>
+              <span class="quiz-card__cta">Take quiz <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </a>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect width="32" height="32" rx="8" fill="currentColor"/>
+              <path d="M8 10h16M8 16h16M8 22h10" stroke="#1B4D3E" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators and quizzes built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Finance Quizzes</h4>
+          <a href="/quizzes/finance-quizzes/how-financially-healthy-are-you/">Financial Health</a>
+          <a href="/quizzes/finance-quizzes/how-much-should-you-be-saving/">Savings Rate</a>
+          <a href="/quizzes/finance-quizzes/how-strong-is-your-emergency-fund/">Emergency Fund</a>
+          <a href="/quizzes/finance-quizzes/">View All</a>
+        </div>
+        <div class="footer-col">
+          <h4>Real Estate Quizzes</h4>
+          <a href="/quizzes/real-estate-quizzes/are-you-ready-to-buy-a-house/">Ready to Buy?</a>
+          <a href="/quizzes/real-estate-quizzes/should-you-rent-or-buy/">Rent or Buy?</a>
+          <a href="/quizzes/real-estate-quizzes/">View All</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about.html">About</a>
+          <a href="/contact.html">Contact</a>
+          <a href="/privacy.html">Privacy Policy</a>
+          <a href="/terms.html">Terms of Use</a>
+          <a href="/disclaimer.html">Disclaimer</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/privacy.html">Privacy</a>
+          <a href="/terms.html">Terms</a>
+          <a href="/disclaimer.html">Disclaimer</a>
+          <a href="/sitemap.xml">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    // Mobile menu
+    document.querySelector('.mobile-menu-toggle').addEventListener('click', function() {
+      const nav = document.querySelector('.mobile-nav');
+      const isOpen = nav.classList.toggle('is-open');
+      this.setAttribute('aria-expanded', isOpen);
+      this.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+    });
+    // FAQ accordion
+    document.querySelectorAll('.faq-question').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        const item = this.closest('.faq-item');
+        const isOpen = item.classList.toggle('is-open');
+        this.setAttribute('aria-expanded', isOpen);
+      });
+    });
+
+    // ── Quiz Engine ──
+    const questions = [
+      {
+        question: "How many months of living expenses do you have saved in an emergency fund?",
+        options: ["Less than 1 month", "1–2 months", "3–5 months", "6+ months"],
+        correct: 3,
+        explanation: "Financial experts recommend 3–6 months of expenses as a minimum. 6+ months provides strong protection against job loss or major unexpected costs."
+      },
+      {
+        question: "What is your total debt-to-income ratio (all monthly debt payments ÷ gross monthly income)?",
+        options: ["Above 50%", "36%–50%", "20%–35%", "Under 20%"],
+        correct: 3,
+        explanation: "A DTI under 20% is excellent. Above 43% is considered high risk by most lenders. Keeping debt payments low preserves cash flow for saving and investing."
+      },
+      {
+        question: "What percentage of your take-home pay do you save each month?",
+        options: ["Less than 5%", "5%–9%", "10%–19%", "20% or more"],
+        correct: 3,
+        explanation: "Saving 20%+ of take-home pay is the gold standard. Even 10–15% gets you on a solid path. Below 5% leaves little cushion for emergencies or retirement."
+      },
+      {
+        question: "How would you describe your investment portfolio?",
+        options: ["I have no investments", "Only one type (e.g. just stocks)", "Some diversification (2–3 asset classes)", "Well diversified across stocks, bonds, and other assets"],
+        correct: 3,
+        explanation: "Diversification across asset classes reduces risk. A well-diversified portfolio including stocks, bonds, real estate, or index funds can smooth out market volatility."
+      },
+      {
+        question: "Which of these insurance policies do you currently have?",
+        options: ["None", "Health insurance only", "Health + one other (auto/renters)", "Health, life, disability, and property insurance"],
+        correct: 3,
+        explanation: "Comprehensive insurance coverage protects your financial health from catastrophic losses. Disability insurance is particularly important yet commonly overlooked."
+      },
+      {
+        question: "How do you track your monthly budget and spending?",
+        options: ["I don't track it at all", "I check occasionally but have no system", "I review monthly but informally", "I use a consistent system or app every month"],
+        correct: 3,
+        explanation: "Regular, systematic budget tracking is one of the strongest predictors of long-term financial success. It reveals spending patterns you can't see otherwise."
+      },
+      {
+        question: "Do you know your current net worth (assets minus liabilities)?",
+        options: ["No idea", "Rough estimate only", "I've calculated it once", "Yes, I track it at least annually"],
+        correct: 3,
+        explanation: "Tracking net worth annually shows whether you're building wealth over time. It's the single most important financial metric you can monitor."
+      },
+      {
+        question: "Are you contributing to a retirement account (401k, IRA, pension)?",
+        options: ["No contributions at all", "Contributing, but less than employer match", "Contributing up to employer match", "Maxing out contributions beyond the employer match"],
+        correct: 3,
+        explanation: "At minimum, contribute enough to get the full employer match — that's an immediate 50–100% return. Maxing out retirement accounts accelerates wealth building significantly."
+      }
+    ];
+
+    const results = [
+      { min: 7, label: "Excellent", colorClass: "result-score--high", title: "Excellent Financial Health", desc: "You are demonstrating strong financial habits across the board. Your emergency fund, savings rate, debt management, and retirement contributions are all in excellent shape. Keep maintaining these habits and look for opportunities to optimise further.", recs: ["Consider increasing your investment allocation to international and alternative assets.", "Review your insurance coverage annually to ensure it keeps pace with your lifestyle.", "Look into tax-optimisation strategies like HSAs, backdoor Roth IRAs, or tax-loss harvesting."] },
+      { min: 5, label: "Good", colorClass: "", title: "Good Financial Health", desc: "You have solid financial foundations with a few areas worth strengthening. Your core habits are good, but there are specific gaps that, if addressed, could significantly improve your long-term financial security.", recs: ["Identify your weakest scoring area and set a 90-day improvement goal.", "Automate savings transfers so they happen before you can spend the money.", "If you're not tracking net worth, start now — even a simple spreadsheet works."] },
+      { min: 3, label: "Needs Work", colorClass: "result-score--mid", title: "Needs Some Work", desc: "You have some positive financial habits, but significant gaps are putting your financial future at risk. The good news is that targeted changes in 2–3 areas can have a major impact quickly.", recs: ["Build your emergency fund to at least 1 month of expenses as your first priority.", "Calculate your exact debt-to-income ratio and create a debt repayment plan.", "Start contributing at least enough to your 401k to capture any employer match."] },
+      { min: 0, label: "Critical", colorClass: "result-score--low", title: "Critical — Action Needed", desc: "Your financial health needs immediate attention across multiple fronts. The most important thing right now is to take one step at a time — start with the highest-impact action and build from there.", recs: ["Track every dollar you spend for 30 days to understand where your money is going.", "Open a separate savings account and set up even a $25/month automatic transfer.", "Address any high-interest debt (above 15%) with the avalanche or snowball method.", "Speak with a non-profit credit counsellor if debt feels overwhelming — it's free."] }
+    ];
+
+    const calculatorLinks = [
+      { href: "/finance-calculators/budget-calculator/", label: "Budget Calculator" },
+      { href: "/finance-calculators/emergency-fund-calculator/", label: "Emergency Fund Calculator" },
+      { href: "/finance-calculators/net-worth-calculator/", label: "Net Worth Calculator" },
+      { href: "/finance-calculators/savings-calculator/", label: "Savings Calculator" }
+    ];
+
+    let current = 0;
+    let score = 0;
+    let answered = false;
+
+    function renderQuestion() {
+      answered = false;
+      const q = questions[current];
+      const pct = Math.round((current / questions.length) * 100);
+      document.getElementById('progress-bar').style.width = pct + '%';
+      document.getElementById('progress-text').textContent = 'Question ' + (current + 1) + ' of ' + questions.length;
+      document.getElementById('progress-pct').textContent = pct + '%';
+      document.getElementById('question-container').innerHTML = `
+        <div class="quiz-question">
+          <div class="quiz-question__number">Question ${current + 1}</div>
+          <p class="quiz-question__text">${q.question}</p>
+          <ul class="quiz-options" role="list">
+            ${q.options.map((opt, i) => `
+              <li>
+                <button class="quiz-option" data-index="${i}" onclick="selectAnswer(${i})">
+                  <span class="quiz-option__indicator"></span>
+                  <span>${opt}</span>
+                </button>
+              </li>`).join('')}
+          </ul>
+          <div id="explanation" class="quiz-explanation" style="display:none"></div>
+          <div class="quiz-nav">
+            <span></span>
+            <button class="btn btn-primary" id="next-btn" onclick="nextQuestion()" disabled>
+              ${current < questions.length - 1 ? 'Next Question' : 'See Results'}
+            </button>
+          </div>
+        </div>`;
+    }
+
+    function selectAnswer(idx) {
+      if (answered) return;
+      answered = true;
+      const q = questions[current];
+      const btns = document.querySelectorAll('.quiz-option');
+      btns.forEach(function(btn, i) {
+        btn.classList.remove('selected');
+        if (i === q.correct) btn.classList.add('correct');
+        else if (i === idx && idx !== q.correct) btn.classList.add('incorrect');
+      });
+      btns[idx].classList.add('selected');
+      if (idx === q.correct) score++;
+      const expEl = document.getElementById('explanation');
+      expEl.style.display = 'block';
+      expEl.className = 'quiz-explanation ' + (idx === q.correct ? 'quiz-explanation--correct' : 'quiz-explanation--incorrect');
+      expEl.textContent = q.explanation;
+      document.getElementById('next-btn').disabled = false;
+    }
+
+    function nextQuestion() {
+      current++;
+      if (current < questions.length) {
+        renderQuestion();
+      } else {
+        showResult();
+      }
+    }
+
+    function showResult() {
+      document.getElementById('progress-bar').style.width = '100%';
+      document.getElementById('progress-text').textContent = 'Complete!';
+      document.getElementById('progress-pct').textContent = '100%';
+      document.getElementById('question-container').innerHTML = '';
+      const result = results.find(r => score >= r.min);
+      const rc = document.getElementById('result-container');
+      rc.classList.remove('hidden');
+      rc.innerHTML = `
+        <div class="result-score ${result.colorClass}">
+          <span class="result-score__number">${score}/${questions.length}</span>
+          <span class="result-score__label">Score</span>
+        </div>
+        <div class="result-category">${result.label}</div>
+        <h2>${result.title}</h2>
+        <p>${result.desc}</p>
+        <div class="result-recommendations">
+          <h3>Recommended Next Steps</h3>
+          <ul>${result.recs.map(r => `<li>${r}</li>`).join('')}</ul>
+        </div>
+        <div class="result-actions">
+          ${calculatorLinks.map(l => `<a href="${l.href}" class="btn btn-secondary">${l.label}</a>`).join('')}
+        </div>
+        <div class="result-actions" style="margin-top:1rem">
+          <button class="btn btn-outline" onclick="restartQuiz()">Retake Quiz</button>
+        </div>`;
+    }
+
+    function restartQuiz() {
+      current = 0; score = 0;
+      document.getElementById('result-container').classList.add('hidden');
+      renderQuestion();
+    }
+
+    renderQuestion();
+  </script>
+</body>
+</html>

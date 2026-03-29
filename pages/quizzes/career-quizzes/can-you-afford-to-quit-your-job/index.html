@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Can You Afford to Quit Your Job? – Career Quiz | CalcWise</title>
+  <meta name="description" content="Evaluate your financial runway before quitting — savings, expenses, healthcare, and income timeline. 8-question quiz with instant readiness results.">
+  <link rel="canonical" href="https://calcwise.io/quizzes/career-quizzes/can-you-afford-to-quit-your-job/">
+  <meta property="og:title" content="Can You Afford to Quit Your Job? – Career Quiz | CalcWise">
+  <meta property="og:description" content="Find out if you have the financial runway to quit your job safely.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcwise.io/quizzes/career-quizzes/can-you-afford-to-quit-your-job/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Can You Afford to Quit Your Job? – Career Quiz | CalcWise">
+  <meta name="twitter:description" content="Find out if you have the financial runway to quit your job safely.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+  <link rel="stylesheet" href="/css/quiz.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://calcwise.io/"},
+    {"@type":"ListItem","position":2,"name":"Quizzes","item":"https://calcwise.io/quizzes/"},
+    {"@type":"ListItem","position":3,"name":"Career Quizzes","item":"https://calcwise.io/quizzes/career-quizzes/"},
+    {"@type":"ListItem","position":4,"name":"Can You Afford to Quit Your Job?","item":"https://calcwise.io/quizzes/career-quizzes/can-you-afford-to-quit-your-job/"}
+  ]}
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/business-calculators/">Business</a>
+        <a href="/quizzes/" aria-current="page">Quizzes</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/business-calculators/">Business Calculators</a>
+      <a href="/quizzes/">Quizzes</a>
+      <a href="/about.html">About</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/quizzes/">Quizzes</a></li>
+          <li><a href="/quizzes/career-quizzes/">Career Quizzes</a></li>
+          <li><span aria-current="page">Can You Afford to Quit Your Job?</span></li>
+        </ol>
+      </nav>
+
+      <div class="quiz-container">
+        <h1>Can You Afford to Quit Your Job?</h1>
+        <p>Quitting without a financial plan is one of the most common money mistakes people make. This quiz evaluates your savings cushion, monthly obligations, healthcare coverage, income replacement timeline, and income alternatives to give you an honest readiness score. Answer 8 questions to find out where you stand.</p>
+
+        <div style="margin:1.5rem 0;text-align:center;min-height:90px;background:var(--color-gray-100);border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--color-gray-400);font-size:0.85rem;">Advertisement</div>
+
+        <div id="quiz-area">
+          <div id="quiz-start">
+            <div class="quiz-question" style="text-align:center;">
+              <p style="font-size:1.1rem;color:var(--color-text-muted);margin-bottom:1.5rem;">8 questions &bull; About 4 minutes &bull; Instant results</p>
+              <button class="btn btn-primary btn-lg" onclick="startQuiz()">Start Quiz</button>
+            </div>
+          </div>
+          <div id="quiz-main" style="display:none;"></div>
+          <div id="quiz-results" style="display:none;"></div>
+        </div>
+
+        <section class="faq-section" aria-labelledby="faq-heading" style="margin-top:3rem;">
+          <h2 id="faq-heading">Frequently Asked Questions</h2>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false"><span>How many months of savings do I need before quitting?</span><svg class="faq-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M10 4v12M4 10h12"/></svg></button>
+            <div class="faq-answer"><p>The standard recommendation is 6 months, but the right number depends on your situation. If you have a clear job offer in hand or reliable freelance income starting soon, 3 months may be sufficient. If you're starting a business with no guaranteed revenue, 12+ months is safer.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false"><span>What happens to my health insurance when I quit?</span><svg class="faq-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M10 4v12M4 10h12"/></svg></button>
+            <div class="faq-answer"><p>You can continue your employer coverage for up to 18 months through COBRA, but you'll pay the full premium — often $500–$1,200/month for an individual, more for a family. ACA marketplace plans are another option. Healthcare is frequently the largest unexpected cost of unemployment, so plan for it explicitly.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false"><span>Can I use a freelance income or side hustle to bridge the gap?</span><svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M10 4v12M4 10h12"/></svg></button>
+            <div class="faq-answer"><p>Yes — but only count income you have already confirmed, not speculative income. If you have existing clients paying a predictable monthly amount, that's a real asset. Use the freelance rate calculator to confirm your rate covers taxes, expenses, and a savings buffer.</p></div>
+          </div>
+        </section>
+
+        <section style="margin-top:3rem;" aria-labelledby="related-heading">
+          <h2 id="related-heading">Related Career Quizzes</h2>
+          <div class="quiz-grid">
+            <a href="/quizzes/career-quizzes/should-you-change-jobs/" class="quiz-card">
+              <div class="quiz-card__badge">Career</div>
+              <h3>Should You Change Jobs?</h3>
+              <p>Evaluate all the factors driving your desire to leave your current role.</p>
+              <span class="quiz-card__cta">Take quiz <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </a>
+            <a href="/quizzes/career-quizzes/should-you-freelance-or-stay-employed/" class="quiz-card">
+              <div class="quiz-card__badge">Career</div>
+              <h3>Should You Freelance or Stay Employed?</h3>
+              <p>Compare the financial realities of freelancing vs. employment.</p>
+              <span class="quiz-card__cta">Take quiz <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </a>
+            <a href="/quizzes/career-quizzes/how-stable-is-your-income/" class="quiz-card">
+              <div class="quiz-card__badge">Career</div>
+              <h3>How Stable Is Your Income?</h3>
+              <p>Assess the security of your income before making any big career move.</p>
+              <span class="quiz-card__cta">Take quiz <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </a>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="#1B4D3E" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators and quizzes built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Career Quizzes</h4>
+          <a href="/quizzes/career-quizzes/is-your-salary-competitive/">Salary Check</a>
+          <a href="/quizzes/career-quizzes/should-you-change-jobs/">Change Jobs?</a>
+          <a href="/quizzes/career-quizzes/should-you-freelance-or-stay-employed/">Freelance or Employed?</a>
+          <a href="/quizzes/career-quizzes/">View All</a>
+        </div>
+        <div class="footer-col">
+          <h4>Other Quizzes</h4>
+          <a href="/quizzes/business-quizzes/">Business Quizzes</a>
+          <a href="/quizzes/lifestyle-cost-quizzes/">Lifestyle Quizzes</a>
+          <a href="/quizzes/retirement-quizzes/">Retirement Quizzes</a>
+          <a href="/quizzes/">All Quizzes</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about.html">About</a>
+          <a href="/contact.html">Contact</a>
+          <a href="/privacy.html">Privacy Policy</a>
+          <a href="/terms.html">Terms of Use</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/privacy.html">Privacy</a>
+          <a href="/terms.html">Terms</a>
+          <a href="/disclaimer.html">Disclaimer</a>
+          <a href="/sitemap.xml">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    const questions = [
+      {
+        question: "How many months of essential living expenses do you have saved right now?",
+        options: ["12 or more months", "6–11 months", "3–5 months", "Less than 3 months"],
+        correct: 0,
+        explanation: "Six months is the standard minimum; 12 months provides genuine security. Savings are your primary safety net when income stops.",
+        weight: 3
+      },
+      {
+        question: "Do you have a partner or spouse with income that would cover essential bills?",
+        options: ["Yes — their income covers all essential expenses comfortably", "Yes — their income partially covers essentials", "No partner income, but I have significant side income", "No — I am the sole income source for our household"],
+        correct: 0,
+        explanation: "A partner's income can dramatically reduce the savings cushion needed, effectively sharing the financial risk of a career transition.",
+        weight: 2
+      },
+      {
+        question: "Do you have existing freelance, consulting, or side business income?",
+        options: ["Yes — I earn $2,000+/month consistently from side work", "Some — $500–$2,000/month but variable", "Very little — under $500/month", "No side income currently"],
+        correct: 0,
+        explanation: "Existing side income reduces the savings you need. However, only count income you already have, not income you hope to create.",
+        weight: 2
+      },
+      {
+        question: "What is your estimated monthly burn rate (essential expenses only)?",
+        options: ["Under $2,000/month", "$2,000–$3,500/month", "$3,500–$5,500/month", "Over $5,500/month"],
+        correct: 0,
+        explanation: "Lower burn rate means your savings last longer and your runway extends further. Consider which expenses can be reduced if needed.",
+        weight: 1
+      },
+      {
+        question: "What is your plan for health insurance after quitting?",
+        options: ["Covered by a partner's employer plan", "ACA marketplace plan budgeted for", "COBRA budgeted for (typically $500–$1,200/month)", "No plan yet — this is a gap"],
+        correct: 0,
+        explanation: "Healthcare is the largest hidden cost of unemployment. COBRA alone can cost $6,000–$14,000/year. This must be in your plan before you quit.",
+        weight: 2
+      },
+      {
+        question: "How quickly do you realistically expect to replace your income?",
+        options: ["I have a signed offer or confirmed clients starting immediately", "Within 1–2 months — I have strong leads", "3–6 months — I need time to find work", "6–12 months or longer — I'm making a major career shift"],
+        correct: 0,
+        explanation: "The longer your income replacement timeline, the more savings you need. A signed offer means almost no financial gap; a career pivot can mean a year of uncertainty.",
+        weight: 2
+      },
+      {
+        question: "What are your debt obligations (monthly minimum payments)?",
+        options: ["Under $300/month — minimal debt", "$300–$800/month — manageable obligations", "$800–$1,500/month — significant commitments", "Over $1,500/month — high fixed debt load"],
+        correct: 0,
+        explanation: "High fixed debt payments reduce your financial flexibility dramatically during a career transition and extend how long your savings must cover your needs.",
+        weight: 1
+      },
+      {
+        question: "How flexible are you willing to be with your lifestyle during a transition?",
+        options: ["Very flexible — I can cut spending by 30–50% if needed", "Somewhat flexible — 15–25% reduction is manageable", "Limited flexibility — my expenses are mostly fixed", "Not flexible — I need to maintain my current standard"],
+        correct: 0,
+        explanation: "Lifestyle flexibility is a hidden financial asset. The ability to reduce your burn rate extends your runway significantly and reduces the risk of a bad financial outcome.",
+        weight: 1
+      }
+    ];
+
+    let currentQ = 0, score = 0, answers = [];
+
+    function startQuiz() {
+      document.getElementById('quiz-start').style.display = 'none';
+      document.getElementById('quiz-main').style.display = 'block';
+      renderQuestion();
+    }
+
+    function renderQuestion() {
+      const q = questions[currentQ];
+      const pct = Math.round((currentQ / questions.length) * 100);
+      document.getElementById('quiz-main').innerHTML = `
+        <div class="quiz-progress">
+          <div class="quiz-progress__label">
+            <span>Question ${currentQ + 1} of ${questions.length}</span>
+            <span>${pct}% complete</span>
+          </div>
+          <div class="quiz-progress__bar"><div class="quiz-progress__fill" style="width:${pct}%"></div></div>
+        </div>
+        <div class="quiz-question">
+          <div class="quiz-question__number">Question ${currentQ + 1}</div>
+          <div class="quiz-question__text">${q.question}</div>
+          <ul class="quiz-options">
+            ${q.options.map((opt, i) => `
+              <li><button class="quiz-option" onclick="selectAnswer(${i})" aria-label="${opt}">
+                <span class="quiz-option__indicator"></span>
+                <span>${opt}</span>
+              </button></li>`).join('')}
+          </ul>
+          <div id="explanation" style="display:none;" class="quiz-explanation"></div>
+        </div>
+        <div class="quiz-nav">
+          <span style="color:var(--color-text-muted);font-size:0.875rem;">${currentQ + 1} / ${questions.length}</span>
+          <button class="btn btn-primary" id="next-btn" style="display:none;" onclick="nextQuestion()">
+            ${currentQ + 1 === questions.length ? 'See Results' : 'Next Question'}
+          </button>
+        </div>`;
+    }
+
+    function selectAnswer(idx) {
+      if (document.querySelector('.quiz-option.selected')) return;
+      const q = questions[currentQ];
+      answers.push(idx);
+      score += (q.options.length - 1 - idx) * q.weight;
+      const opts = document.querySelectorAll('.quiz-option');
+      opts.forEach((btn, i) => {
+        btn.disabled = true;
+        if (i === idx) btn.classList.add('selected');
+        if (i === 0) btn.classList.add('correct');
+        if (i === idx && i !== 0) btn.classList.add('incorrect');
+      });
+      const expEl = document.getElementById('explanation');
+      expEl.style.display = 'block';
+      expEl.className = 'quiz-explanation ' + (idx === 0 ? 'quiz-explanation--correct' : 'quiz-explanation--incorrect');
+      expEl.textContent = q.explanation;
+      document.getElementById('next-btn').style.display = 'inline-flex';
+    }
+
+    function nextQuestion() {
+      currentQ++;
+      if (currentQ < questions.length) renderQuestion();
+      else showResults();
+    }
+
+    function showResults() {
+      document.getElementById('quiz-main').style.display = 'none';
+      const resultsEl = document.getElementById('quiz-results');
+      resultsEl.style.display = 'block';
+
+      const maxScore = questions.reduce((sum, q) => sum + (q.options.length - 1) * q.weight, 0);
+      const pct = score / maxScore;
+
+      let tier, tierClass, desc, recs;
+      if (pct >= 0.75) {
+        tier = 'Financially Ready';
+        tierClass = 'result-score--high';
+        desc = 'Your savings, income alternatives, and flexibility put you in a strong position to leave your job with manageable financial risk. You have done the preparation needed.';
+        recs = ['Confirm your healthcare plan is set up before your last day', 'Run your transition budget through the budget calculator for the first 6 months', 'Calculate your freelance rate if going independent to ensure it covers self-employment taxes'];
+      } else if (pct >= 0.5) {
+        tier = 'Nearly Ready';
+        tierClass = '';
+        desc = 'You are close, but there are one or two gaps — likely savings, healthcare, or income timing — that are worth closing before you quit. A few more months of preparation could make a big difference.';
+        recs = ['Build savings by an additional 1–2 months before quitting', 'Research and price your healthcare options explicitly', 'Use the emergency fund calculator to identify your exact target number', 'Look for ways to reduce your monthly burn rate'];
+      } else if (pct >= 0.25) {
+        tier = '3–6 Months Away';
+        tierClass = 'result-score--mid';
+        desc = 'You need more preparation before quitting safely. Your savings, debt obligations, or income replacement plan are not yet solid enough to minimize financial risk.';
+        recs = ['Set a specific savings target and timeline before quitting', 'Build or verify side income streams while still employed', 'Use the freelance rate calculator to model your post-job income scenario', 'Address high-interest debt to reduce your monthly obligations'];
+      } else {
+        tier = 'Not Yet';
+        tierClass = 'result-score--low';
+        desc = 'Quitting right now carries high financial risk based on your savings, obligations, and income situation. Taking action now while employed puts you in a much stronger position for a future transition.';
+        recs = ['Open a dedicated emergency fund savings account and automate contributions', 'Use the budget calculator to find 15–20% of income to save monthly', 'Build side income now — starting while employed is far easier', 'Set a 12-month plan with specific savings and income milestones'];
+      }
+
+      const scoreDisplay = Math.round(pct * 100);
+      resultsEl.innerHTML = `
+        <div class="quiz-result">
+          <div class="result-score ${tierClass}">
+            <span class="result-score__number">${scoreDisplay}%</span>
+            <span class="result-score__label">Score</span>
+          </div>
+          <div class="result-category">${tier}</div>
+          <h2>Your result: ${tier}</h2>
+          <p>${desc}</p>
+          <div class="result-recommendations">
+            <h3>Recommended Next Steps</h3>
+            <ul>${recs.map(r => `<li>${r}</li>`).join('')}</ul>
+          </div>
+          <div class="result-actions">
+            <a href="/finance-calculators/emergency-fund-calculator/" class="btn btn-primary">Emergency Fund Calculator</a>
+            <a href="/finance-calculators/budget-calculator/" class="btn btn-secondary">Budget Calculator</a>
+            <a href="/business-calculators/freelance-rate-calculator/" class="btn btn-secondary">Freelance Rate Calculator</a>
+          </div>
+          <div style="margin-top:1.5rem;">
+            <button class="btn btn-ghost" onclick="restartQuiz()">Retake Quiz</button>
+          </div>
+        </div>`;
+    }
+
+    function restartQuiz() {
+      currentQ = 0; score = 0; answers = [];
+      document.getElementById('quiz-results').style.display = 'none';
+      document.getElementById('quiz-main').style.display = 'block';
+      renderQuestion();
+    }
+
+    document.querySelector('.mobile-menu-toggle').addEventListener('click', function() {
+      const nav = document.querySelector('.mobile-nav');
+      const isOpen = nav.classList.toggle('is-open');
+      this.setAttribute('aria-expanded', isOpen);
+      this.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+    });
+    document.querySelectorAll('.faq-question').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        const item = this.closest('.faq-item');
+        const isOpen = item.classList.toggle('is-open');
+        this.setAttribute('aria-expanded', isOpen);
+      });
+    });
+  </script>
+</body>
+</html>

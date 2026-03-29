@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amazon Seller Profit Calculator - FBA Net Profit & ROI | CalcWise</title>
+  <meta name="description" content="Calculate Amazon seller profit after referral fees, FBA fees, storage, ad spend, and product costs. Get your net profit per unit and ROI instantly.">
+  <link rel="canonical" href="https://calcwise.io/side-hustle-calculators/amazon-seller-profit-calculator/">
+
+  <meta property="og:title" content="Amazon Seller Profit Calculator - CalcWise">
+  <meta property="og:description" content="Find your true Amazon FBA profit after all fees, ad spend, and COGS. Calculate ROI per unit.">
+  <meta property="og:url" content="https://calcwise.io/side-hustle-calculators/amazon-seller-profit-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Amazon Seller Profit Calculator - CalcWise">
+  <meta name="twitter:description" content="Find your true Amazon FBA profit after all fees, ad spend, and COGS. Calculate ROI per unit.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Side Hustle Calculators", "item": "https://calcwise.io/side-hustle-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "Amazon Seller Profit Calculator", "item": "https://calcwise.io/side-hustle-calculators/amazon-seller-profit-calculator/" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is Amazon's referral fee?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Amazon's referral fee is a percentage of the total selling price paid to Amazon for each sale. It typically ranges from 6% to 45% depending on the product category. Most categories fall between 8% and 15%." }
+      },
+      {
+        "@type": "Question",
+        "name": "What are Amazon FBA fees?",
+        "acceptedAnswer": { "@type": "Answer", "text": "FBA (Fulfillment by Amazon) fees cover picking, packing, and shipping your product to the buyer. They are based on the product's size and weight tier. Small standard items may cost around $3-4, while large or heavy products can exceed $10 per unit." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is a good ROI for Amazon FBA?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Most experienced Amazon sellers target a minimum ROI of 30–50% on their cost of goods. A 50% ROI means for every $1 invested in inventory, you net $0.50 in profit. Higher ROI products are preferable but harder to find." }
+      },
+      {
+        "@type": "Question",
+        "name": "Should I include Amazon PPC (ad spend) in my profit calculation?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes, absolutely. Amazon PPC is a real cost of doing business and can be significant. Always include your ad spend per unit sold (total monthly ad spend divided by units sold) to get a true picture of profitability." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/business-calculators/">Business</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/business-calculators/">Business Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container page-content">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/side-hustle-calculators/">Side Hustle Calculators</a></li>
+          <li><span aria-current="page">Amazon Seller Profit Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="calc-page-layout">
+        <div class="calc-page-main">
+          <h1>Amazon Seller Profit Calculator</h1>
+          <p class="mt-4 mb-8" style="font-size:var(--text-lg); color:var(--color-gray-600); max-width:700px; line-height:var(--leading-relaxed);">Calculate your true Amazon FBA net profit per unit by accounting for referral fees, FBA fulfillment fees, storage fees, advertising spend, product cost, and shipping to Amazon. Know your ROI before you invest in inventory.</p>
+
+          <div class="calc-container">
+            <div class="calc-header">
+              <h2>Calculate Amazon FBA Profit</h2>
+              <p>Enter your product details, costs, and Amazon fees</p>
+            </div>
+            <div class="calc-body">
+              <form id="amazonForm" novalidate>
+                <div class="form-group">
+                  <label class="form-label" for="sellingPrice">Selling Price <span class="form-hint">Price on Amazon listing</span></label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="sellingPrice" name="sellingPrice" class="form-input" placeholder="29.99" min="0" step="0.01" required>
+                  </div>
+                  <span class="form-error">Please enter a valid selling price.</span>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="productCost">Product Cost (COGS) <span class="form-hint">Cost to source or manufacture one unit</span></label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="productCost" name="productCost" class="form-input" placeholder="7.50" min="0" step="0.01" required>
+                  </div>
+                  <span class="form-error">Please enter a valid product cost.</span>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="referralFee">Amazon Referral Fee <span class="form-hint">Category-based percentage (e.g. 15 for 15%)</span></label>
+                  <div class="input-suffix">
+                    <input type="number" id="referralFee" name="referralFee" class="form-input" placeholder="15" min="0" max="45" step="0.1" required>
+                    <span class="suffix">%</span>
+                  </div>
+                  <span class="form-error">Please enter a valid referral fee percentage.</span>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="fbaFee">FBA Fulfillment Fee <span class="form-hint">Per-unit fulfillment cost (from Amazon fee schedule)</span></label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="fbaFee" name="fbaFee" class="form-input" placeholder="3.22" min="0" step="0.01" required>
+                  </div>
+                  <span class="form-error">Please enter a valid FBA fee.</span>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="storageFee">Monthly Storage Fee <span class="form-hint">Estimated per-unit storage cost per month</span></label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="storageFee" name="storageFee" class="form-input" placeholder="0.50" min="0" step="0.01" required>
+                  </div>
+                  <span class="form-error">Please enter a valid storage fee.</span>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="adSpend">Ad Spend Per Unit <span class="form-hint">Total PPC spend divided by units sold per month</span></label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="adSpend" name="adSpend" class="form-input" placeholder="2.00" min="0" step="0.01" required>
+                  </div>
+                  <span class="form-error">Please enter a valid ad spend per unit.</span>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="shippingToAmazon">Shipping to Amazon <span class="form-hint">Per-unit cost to ship inventory to FBA warehouse</span></label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="shippingToAmazon" name="shippingToAmazon" class="form-input" placeholder="0.75" min="0" step="0.01" required>
+                  </div>
+                  <span class="form-error">Please enter a valid shipping to Amazon cost.</span>
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calculateAmazonProfit()">Calculate Amazon Profit</button>
+                  <button type="button" class="btn btn-reset" onclick="resetForm()">Reset</button>
+                </div>
+              </form>
+
+              <div id="results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">Net Profit Per Unit</div>
+                  <div class="result-value" id="resultNetProfit">$0</div>
+                </div>
+                <div class="result-grid result-grid-2">
+                  <div class="result-item">
+                    <div class="result-label">Amazon Referral Fee</div>
+                    <div class="result-value" id="resultReferralFee">$0</div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Total Amazon Fees</div>
+                    <div class="result-value" id="resultTotalFees">$0</div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Total Costs Per Unit</div>
+                    <div class="result-value" id="resultTotalCosts">$0</div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">ROI</div>
+                    <div class="result-value" id="resultROI">0%</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="disclaimer">
+            <strong>Disclaimer:</strong> Amazon fee structures change periodically. Always verify current fees in Amazon Seller Central. This calculator is for planning purposes only and does not constitute financial or business advice.
+          </div>
+
+          <div class="ad-slot ad-slot-leaderboard"></div>
+
+          <section class="content-section">
+            <h2>Amazon Profit Formulas</h2>
+            <div class="formula-box">
+              <div class="formula-label">Referral Fee</div>
+              Referral Fee = Selling Price x Referral Fee %
+            </div>
+            <div class="formula-box">
+              <div class="formula-label">Total Amazon Fees</div>
+              Total Amazon Fees = Referral Fee + FBA Fee + Storage Fee
+            </div>
+            <div class="formula-box">
+              <div class="formula-label">Total Costs Per Unit</div>
+              Total Costs = Product Cost + Total Amazon Fees + Ad Spend + Shipping to Amazon
+            </div>
+            <div class="formula-box">
+              <div class="formula-label">Net Profit Per Unit</div>
+              Net Profit = Selling Price - Total Costs
+            </div>
+            <div class="formula-box">
+              <div class="formula-label">ROI</div>
+              ROI = (Net Profit / Product Cost) x 100
+            </div>
+          </section>
+
+          <section class="content-section">
+            <h2>How to Use This Calculator</h2>
+            <ol>
+              <li><strong>Enter your selling price</strong> — what buyers pay on Amazon.</li>
+              <li><strong>Enter product cost</strong> — your landed cost from the manufacturer or supplier.</li>
+              <li><strong>Enter referral fee %</strong> — find your category's rate in Amazon Seller Central (typically 8–15%).</li>
+              <li><strong>Enter FBA fee</strong> — use Amazon's FBA Revenue Calculator for your specific product dimensions and weight.</li>
+              <li><strong>Enter storage and ad spend</strong> — amortize monthly totals down to a per-unit cost.</li>
+              <li><strong>Enter shipping to Amazon</strong> — your per-unit freight cost to the fulfillment center.</li>
+              <li><strong>Click Calculate</strong> to see your full cost breakdown, net profit, and ROI.</li>
+            </ol>
+          </section>
+
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>Marcus sells a kitchen gadget on Amazon for <strong>$29.99</strong>. His product cost is <strong>$7.50</strong>, referral fee is <strong>15%</strong>, FBA fee is <strong>$3.22</strong>, storage is <strong>$0.50/unit</strong>, ad spend is <strong>$2.00/unit</strong>, and shipping to Amazon is <strong>$0.75</strong>.</p>
+            <ul>
+              <li><strong>Referral fee:</strong> $29.99 x 15% = $4.50</li>
+              <li><strong>Total Amazon fees:</strong> $4.50 + $3.22 + $0.50 = $8.22</li>
+              <li><strong>Total costs:</strong> $7.50 + $8.22 + $2.00 + $0.75 = $18.47</li>
+              <li><strong>Net profit:</strong> $29.99 - $18.47 = $11.52</li>
+              <li><strong>ROI:</strong> ($11.52 / $7.50) x 100 = 153.6%</li>
+            </ul>
+            <p>An ROI of over 150% is excellent for Amazon FBA, indicating strong product viability.</p>
+          </section>
+
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What is Amazon's referral fee?
+                <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Amazon's referral fee is a percentage of the total selling price paid to Amazon for each sale. It typically ranges from 6% to 45% depending on the product category. Most categories fall between 8% and 15%.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What are Amazon FBA fees?
+                <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 011-1z"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>FBA (Fulfillment by Amazon) fees cover picking, packing, and shipping your product to the buyer. They are based on the product's size and weight tier. Small standard items may cost around $3-4, while large or heavy products can exceed $10 per unit.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What is a good ROI for Amazon FBA?
+                <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 011-1z"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Most experienced Amazon sellers target a minimum ROI of 30–50% on their cost of goods. A 50% ROI means for every $1 invested in inventory, you net $0.50 in profit. Higher ROI products are preferable but harder to find.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Should I include Amazon PPC in my profit calculation?
+                <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 011-1z"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Yes, absolutely. Amazon PPC is a real cost of doing business and can be significant. Always include your ad spend per unit sold (total monthly ad spend divided by units sold) to get a true picture of profitability.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/side-hustle-calculators/etsy-profit-calculator/" class="card card-link">
+                <h3>Etsy Profit Calculator</h3>
+                <p>Calculate per-item profit after all Etsy fees and your time cost.</p>
+              </a>
+              <a href="/side-hustle-calculators/dropshipping-profit-calculator/" class="card card-link">
+                <h3>Dropshipping Profit Calculator</h3>
+                <p>Estimate net profit per sale and break-even price for dropshipping.</p>
+              </a>
+              <a href="/side-hustle-calculators/side-hustle-profit-calculator/" class="card card-link">
+                <h3>Side Hustle Profit Calculator</h3>
+                <p>Evaluate any side hustle's overall monthly profitability.</p>
+              </a>
+              <a href="/business-calculators/roi-calculator/" class="card card-link">
+                <h3>ROI Calculator</h3>
+                <p>Calculate return on investment and annualized ROI for any investment.</p>
+              </a>
+              <a href="/business-calculators/break-even-calculator/" class="card card-link">
+                <h3>Break-Even Calculator</h3>
+                <p>Find the number of units you must sell to cover all costs.</p>
+              </a>
+            </div>
+          </section>
+        </div>
+
+        <aside class="calc-page-sidebar">
+          <div class="sidebar-card">
+            <h3>Side Hustle Calculators</h3>
+            <a href="/side-hustle-calculators/side-hustle-profit-calculator/">Side Hustle Profit</a>
+            <a href="/side-hustle-calculators/etsy-profit-calculator/">Etsy Profit</a>
+            <a href="/side-hustle-calculators/amazon-seller-profit-calculator/">Amazon Seller Profit</a>
+            <a href="/side-hustle-calculators/dropshipping-profit-calculator/">Dropshipping Profit</a>
+            <a href="/side-hustle-calculators/youtube-earnings-calculator/">YouTube Earnings</a>
+            <a href="/side-hustle-calculators/tiktok-earnings-calculator/">TikTok Earnings</a>
+            <a href="/side-hustle-calculators/freelance-hourly-rate-calculator/">Freelance Hourly Rate</a>
+            <a href="/side-hustle-calculators/delivery-driver-earnings-calculator/">Delivery Driver Earnings</a>
+            <a href="/side-hustle-calculators/rideshare-income-calculator/">Rideshare Income</a>
+            <a href="/side-hustle-calculators/online-course-profit-calculator/">Online Course Profit</a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Real Estate</h4>
+          <a href="/real-estate-calculators/">All Real Estate</a>
+        </div>
+        <div class="footer-col">
+          <h4>Finance</h4>
+          <a href="/finance-calculators/">All Finance</a>
+        </div>
+        <div class="footer-col">
+          <h4>Business</h4>
+          <a href="/business-calculators/">All Business</a>
+        </div>
+        <div class="footer-col">
+          <h4>Side Hustles</h4>
+          <a href="/side-hustle-calculators/">All Side Hustle</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/about.html">About</a>
+          <a href="/contact.html">Contact</a>
+          <a href="/privacy.html">Privacy</a>
+          <a href="/terms.html">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateAmazonProfit() {
+      if (!CalcWise.validateForm('amazonForm')) return;
+
+      const price       = CalcWise.parseNumber(document.getElementById('sellingPrice').value);
+      const productCost = CalcWise.parseNumber(document.getElementById('productCost').value);
+      const refPct      = CalcWise.parseNumber(document.getElementById('referralFee').value);
+      const fbaFee      = CalcWise.parseNumber(document.getElementById('fbaFee').value);
+      const storage     = CalcWise.parseNumber(document.getElementById('storageFee').value);
+      const adSpend     = CalcWise.parseNumber(document.getElementById('adSpend').value);
+      const shipToAmz   = CalcWise.parseNumber(document.getElementById('shippingToAmazon').value);
+
+      if (price <= 0) { alert('Selling price must be greater than zero.'); return; }
+
+      const referralFee  = price * (refPct / 100);
+      const totalAmazon  = referralFee + fbaFee + storage;
+      const totalCosts   = productCost + totalAmazon + adSpend + shipToAmz;
+      const netProfit    = price - totalCosts;
+      const roi          = productCost > 0 ? (netProfit / productCost) * 100 : 0;
+
+      CalcWise.setText('resultReferralFee',  CalcWise.formatCurrency(referralFee));
+      CalcWise.setText('resultTotalFees',    CalcWise.formatCurrency(totalAmazon));
+      CalcWise.setText('resultTotalCosts',   CalcWise.formatCurrency(totalCosts));
+      CalcWise.setText('resultNetProfit',    CalcWise.formatCurrency(netProfit));
+      CalcWise.setText('resultROI',          CalcWise.formatPercent(roi));
+
+      CalcWise.showResults('results');
+    }
+
+    function resetForm() {
+      document.getElementById('amazonForm').reset();
+      CalcWise.hideResults('results');
+    }
+  </script>
+</body>
+</html>

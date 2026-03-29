@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inflation-Adjusted Savings Calculator - CalcWise</title>
+  <meta name="description" content="Calculate the real, inflation-adjusted future value of your savings. Compare nominal vs real growth, find your real return rate, and see how much purchasing power your savings maintain.">
+  <link rel="canonical" href="https://calcwise.io/inflation-calculators/inflation-adjusted-savings-calculator/">
+  <meta property="og:title" content="Inflation-Adjusted Savings Calculator - CalcWise">
+  <meta property="og:description" content="Is your savings rate beating inflation? Find your real return and see the true future value of your savings after inflation.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcwise.io/inflation-calculators/inflation-adjusted-savings-calculator/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Inflation-Adjusted Savings Calculator - CalcWise">
+  <meta name="twitter:description" content="Is your savings rate beating inflation? Find your real return and see the true future value of your savings after inflation.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/"},
+      {"@type": "ListItem", "position": 2, "name": "Inflation Calculators", "item": "https://calcwise.io/inflation-calculators/"},
+      {"@type": "ListItem", "position": 3, "name": "Inflation-Adjusted Savings Calculator"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the real return rate on savings?",
+        "acceptedAnswer": {"@type": "Answer", "text": "The real return rate is your investment return after subtracting inflation. It is approximated by: Real Rate ≈ Nominal Rate − Inflation Rate. The precise formula is: Real Rate = ((1 + Nominal Rate) / (1 + Inflation Rate)) − 1. If inflation exceeds your return, your real return is negative."}
+      },
+      {
+        "@type": "Question",
+        "name": "What is nominal vs. real future value of savings?",
+        "acceptedAnswer": {"@type": "Answer", "text": "The nominal future value is the raw dollar amount your savings will grow to. The real future value adjusts that figure for inflation, showing what those future dollars will actually be worth in today's purchasing power. The difference between the two represents the erosion caused by inflation."}
+      },
+      {
+        "@type": "Question",
+        "name": "What does purchasing power maintained % mean?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Purchasing power maintained % is the real future value divided by what you would need to maintain 100% of today's purchasing power (i.e., current savings inflated to the future). A value above 100% means your savings grew faster than inflation; below 100% means inflation outpaced your returns."}
+      },
+      {
+        "@type": "Question",
+        "name": "Should I be worried if inflation is higher than my savings rate?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Yes — if your savings account earns less than the inflation rate, your money is losing purchasing power in real terms even as the balance grows. This is why keeping large cash savings in low-interest accounts can be financially harmful over long periods, and why investing is recommended for long-term goals."}
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="logo">
+        <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav">
+        <a href="/">Home</a>
+        <a href="/pages/finance-calculators/">Finance</a>
+        <a href="/pages/business-calculators/">Business</a>
+        <a href="/pages/investment-calculators/">Investment</a>
+        <a href="/inflation-calculators/" aria-current="page">Inflation</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav">
+      <a href="/">Home</a>
+      <a href="/pages/finance-calculators/">Finance Calculators</a>
+      <a href="/pages/business-calculators/">Business Calculators</a>
+      <a href="/pages/investment-calculators/">Investment Calculators</a>
+      <a href="/inflation-calculators/">Inflation Calculators</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <!-- Breadcrumbs -->
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li><a href="/inflation-calculators/">Inflation Calculators</a></li>
+        <li><span aria-current="page">Inflation-Adjusted Savings Calculator</span></li>
+      </ol>
+    </nav>
+
+    <div class="page-content">
+      <div class="article-content">
+        <h1>Inflation-Adjusted Savings Calculator</h1>
+        <p>Your savings account balance might be growing — but is it growing fast enough to beat inflation? This calculator compares the nominal future value of your savings against the inflation-adjusted real value, calculates your true real return rate, and shows what percentage of your purchasing power you are actually maintaining or growing over time.</p>
+
+        <!-- Ad Slot -->
+        <div class="ad-slot ad-slot-leaderboard"></div>
+
+        <!-- Calculator -->
+        <div class="calc-container">
+          <div class="calc-header">
+            <h2>Calculate Real Savings Growth After Inflation</h2>
+            <p>Compare nominal and real future value of your savings</p>
+          </div>
+          <div class="calc-body">
+            <form id="savings-form">
+              <div class="form-group">
+                <label class="form-label" for="currentSavings">Current Savings</label>
+                <div class="input-prefix">
+                  <span class="prefix">$</span>
+                  <input type="number" id="currentSavings" name="currentSavings" class="form-input" placeholder="25000" min="1" step="500" required>
+                </div>
+              </div>
+              <div class="calc-grid calc-grid-2col">
+                <div class="form-group">
+                  <label class="form-label" for="annualReturn">Annual Return Rate <span class="form-hint">(%)</span></label>
+                  <div class="input-suffix">
+                    <input type="number" id="annualReturn" name="annualReturn" class="form-input" placeholder="7" min="0" max="50" step="0.1" required>
+                    <span class="suffix">%</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="inflationRate">Annual Inflation Rate <span class="form-hint">(%)</span></label>
+                  <div class="input-suffix">
+                    <input type="number" id="inflationRate" name="inflationRate" class="form-input" placeholder="3" min="0.1" max="50" step="0.1" required>
+                    <span class="suffix">%</span>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="years">Investment Period <span class="form-hint">(years)</span></label>
+                <div class="input-suffix">
+                  <input type="number" id="years" name="years" class="form-input" placeholder="20" min="1" max="60" step="1" required>
+                  <span class="suffix">yrs</span>
+                </div>
+              </div>
+
+              <div class="calc-actions">
+                <button type="button" class="btn btn-calculate" onclick="calculateSavings()">Calculate Real Returns</button>
+                <button type="button" class="btn btn-reset" onclick="resetSavings()">Reset</button>
+              </div>
+            </form>
+
+            <!-- Results -->
+            <div id="results" class="calc-results hidden">
+              <div class="result-primary">
+                <div class="result-label">Real (Inflation-Adjusted) Future Value</div>
+                <div class="result-value" id="realFutureValue">$0</div>
+              </div>
+              <div class="result-grid result-grid-3">
+                <div class="result-item">
+                  <div class="result-label">Nominal Future Value</div>
+                  <div class="result-value" id="nominalFutureValue">$0</div>
+                </div>
+                <div class="result-item">
+                  <div class="result-label">Real Return Rate</div>
+                  <div class="result-value" id="realReturnRate">0%</div>
+                </div>
+                <div class="result-item">
+                  <div class="result-label">Purchasing Power Maintained</div>
+                  <div class="result-value" id="powerMaintained">0%</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Formula Section -->
+        <section class="content-section">
+          <h2>Inflation-Adjusted Savings Formulas</h2>
+          <div class="formula-box">
+            <div class="formula-label">Formulas Used</div>
+            Nominal Future Value = Current Savings × (1 + Annual Return)^Years<br><br>
+            Real Future Value = Nominal Future Value ÷ (1 + Inflation Rate)^Years<br><br>
+            Real Return Rate = ((1 + Nominal Return) / (1 + Inflation Rate)) − 1<br><br>
+            Purchasing Power Maintained % = Real Future Value ÷ Current Savings × 100
+          </div>
+          <p>The nominal future value shows raw account growth. Dividing by the inflation factor converts this to today's purchasing power — the real future value. The real return rate (Fisher equation) gives the true annual growth in buying power. Purchasing power maintained percentage directly answers: "Am I getting richer or poorer in real terms?"</p>
+        </section>
+
+        <!-- How to Use -->
+        <section class="content-section">
+          <h2>How to Use This Calculator</h2>
+          <ol>
+            <li><strong>Enter your current savings:</strong> The total balance you are starting with today.</li>
+            <li><strong>Set your annual return rate:</strong> High-yield savings accounts earn 4–5%; index funds historically average 7–10%; conservative bonds around 3–5%.</li>
+            <li><strong>Enter the inflation rate:</strong> Use 3% for the US historical average, or your own estimate.</li>
+            <li><strong>Set the investment period:</strong> How many years you plan to let your savings grow.</li>
+            <li><strong>Click "Calculate Real Returns":</strong> Compare the four outputs to understand the true growth of your savings in real purchasing power terms.</li>
+          </ol>
+        </section>
+
+        <!-- Example Scenario -->
+        <section class="content-section">
+          <h2>Example Scenario</h2>
+          <p>You have $25,000 in savings. You are considering a high-yield savings account at 4.5% versus investing in an index fund at 7%. Inflation is 3%. Over 20 years:</p>
+          <ul>
+            <li><strong>High-yield savings (4.5%):</strong> Nominal FV = $60,199 | Real FV = $33,338 | Real return = 1.46%/yr | Power maintained: 133%</li>
+            <li><strong>Index fund (7%):</strong> Nominal FV = $96,742 | Real FV = $53,574 | Real return = 3.88%/yr | Power maintained: 214%</li>
+            <li><strong>Simple savings (0.5%):</strong> Nominal FV = $27,628 | Real FV = $15,303 | Real return = −2.43%/yr | Power maintained: 61% — a real loss!</li>
+          </ul>
+          <p>Only returns above the inflation rate actually grow your purchasing power — and the gap compounds dramatically over 20+ years.</p>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+          <h2>Frequently Asked Questions</h2>
+          <div class="faq-item">
+            <button class="faq-question">
+              What is the real return rate on savings?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>The real return rate is your investment return after subtracting inflation. The precise formula is: Real Rate = ((1 + Nominal Rate) / (1 + Inflation Rate)) − 1. If inflation exceeds your return, your real return is negative — meaning your savings are losing purchasing power.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              What is nominal vs. real future value of savings?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>The nominal future value is the raw dollar amount your savings will grow to. The real future value adjusts that figure for inflation, showing what those future dollars will actually be worth in today's purchasing power. The difference represents the erosion caused by inflation.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              What does purchasing power maintained % mean?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>Purchasing power maintained % is the real future value divided by your current savings. A value above 100% means your savings grew faster than inflation. Below 100% means inflation outpaced your returns and you are poorer in real terms.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              Should I be worried if inflation is higher than my savings rate?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>Yes — if your savings account earns less than the inflation rate, your money is losing purchasing power in real terms even as the balance grows. This is why keeping large cash savings in low-interest accounts can be financially harmful over long periods, and why investing is recommended for long-term goals.</p></div>
+          </div>
+        </section>
+
+        <!-- Related Calculators -->
+        <section class="related-calculators">
+          <h2>Related Calculators</h2>
+          <div class="grid grid-3">
+            <a href="/inflation-calculators/inflation-impact-calculator/" class="card card-link">
+              <h3>Inflation Impact Calculator</h3>
+              <p>See the full purchasing power loss on any amount over time.</p>
+            </a>
+            <a href="/inflation-calculators/inflation-adjusted-retirement-calculator/" class="card card-link">
+              <h3>Inflation-Adjusted Retirement Calculator</h3>
+              <p>Plan retirement income in real, inflation-adjusted dollars.</p>
+            </a>
+            <a href="/pages/finance-calculators/retirement-savings-calculator/" class="card card-link">
+              <h3>Retirement Savings Calculator</h3>
+              <p>Project your retirement savings with compound interest.</p>
+            </a>
+            <a href="/inflation-calculators/future-purchasing-power-calculator/" class="card card-link">
+              <h3>Future Purchasing Power Calculator</h3>
+              <p>See what today's dollars will buy in any future year.</p>
+            </a>
+            <a href="/pages/finance-calculators/inflation-calculator/" class="card card-link">
+              <h3>General Inflation Calculator</h3>
+              <p>Quick inflation calculation for any amount.</p>
+            </a>
+          </div>
+        </section>
+
+        <!-- Disclaimer -->
+        <div class="disclaimer">
+          <strong>Disclaimer:</strong> This calculator is provided for informational and educational purposes only. It does not constitute financial or investment advice. Investment returns are not guaranteed and actual results may vary. Consult a qualified financial advisor before making investment decisions.
+        </div>
+
+        <!-- Ad Slot -->
+        <div class="ad-slot ad-slot-rectangle"></div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free online financial calculators to help you make smarter money decisions.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Inflation Tools</h4>
+          <a href="/inflation-calculators/inflation-impact-calculator/">Inflation Impact</a>
+          <a href="/inflation-calculators/future-purchasing-power-calculator/">Purchasing Power</a>
+          <a href="/inflation-calculators/inflation-adjusted-salary-calculator/">Salary Adjustment</a>
+          <a href="/inflation-calculators/inflation-adjusted-retirement-calculator/">Retirement Inflation</a>
+        </div>
+        <div class="footer-col">
+          <h4>Finance</h4>
+          <a href="/pages/finance-calculators/net-worth-calculator/">Net Worth</a>
+          <a href="/pages/finance-calculators/budget-calculator/">Budget (50/30/20)</a>
+          <a href="/pages/finance-calculators/emergency-fund-calculator/">Emergency Fund</a>
+          <a href="/pages/finance-calculators/retirement-savings-calculator/">Retirement Savings</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about/">About</a>
+          <a href="/contact/">Contact</a>
+          <a href="/privacy/">Privacy Policy</a>
+          <a href="/terms/">Terms of Service</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 CalcWise. All rights reserved.</span>
+        <div class="footer-links">
+          <a href="/privacy/">Privacy</a>
+          <a href="/terms/">Terms</a>
+          <a href="/contact/">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateSavings() {
+      if (!CalcWise.validateForm('savings-form')) return;
+      const v = CalcWise.getFormValues('savings-form');
+
+      const nominalFV = CalcWise.futureValueWithInflation(v.currentSavings, v.annualReturn, v.years);
+      const realFV = CalcWise.inflationAdjusted(nominalFV, v.inflationRate, v.years);
+      const realRate = ((1 + v.annualReturn / 100) / (1 + v.inflationRate / 100) - 1) * 100;
+      const powerMaintained = (realFV / v.currentSavings) * 100;
+
+      CalcWise.setText('nominalFutureValue', CalcWise.formatCurrency(nominalFV));
+      CalcWise.setText('realFutureValue', CalcWise.formatCurrency(realFV));
+
+      const rateSign = realRate >= 0 ? '+' : '';
+      CalcWise.setText('realReturnRate', rateSign + realRate.toFixed(2) + '%/yr');
+
+      const pmEl = document.getElementById('powerMaintained');
+      pmEl.textContent = CalcWise.formatPercent(powerMaintained);
+      pmEl.style.color = powerMaintained >= 100 ? 'var(--color-success)' : 'var(--color-error)';
+
+      const realEl = document.getElementById('realFutureValue');
+      realEl.style.color = realFV >= v.currentSavings ? 'var(--color-success)' : 'var(--color-error)';
+
+      CalcWise.showResults('results');
+    }
+
+    function resetSavings() {
+      document.getElementById('savings-form').reset();
+      CalcWise.hideResults('results');
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SaaS Revenue Calculator | CalcWise</title>
+  <meta name="description" content="Calculate SaaS MRR, ARR, LTV, churn cost, net MRR growth, and a 6-month revenue forecast. Free SaaS metrics calculator for founders and operators.">
+  <link rel="canonical" href="https://calcwise.io/digital-income-calculators/saas-revenue-calculator/">
+  <meta property="og:title" content="SaaS Revenue Calculator | CalcWise">
+  <meta property="og:description" content="Model your SaaS MRR, ARR, LTV, churn impact, and 6-month revenue forecast with growth and expansion revenue inputs.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcwise.io/digital-income-calculators/saas-revenue-calculator/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="SaaS Revenue Calculator | CalcWise">
+  <meta name="twitter:description" content="Calculate SaaS MRR, ARR, LTV, and 6-month forecasts with churn and expansion revenue modeling.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/"},
+      {"@type": "ListItem", "position": 2, "name": "Digital Income Calculators", "item": "https://calcwise.io/digital-income-calculators/"},
+      {"@type": "ListItem", "position": 3, "name": "SaaS Revenue Calculator"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is a good LTV to CAC ratio for SaaS?",
+        "acceptedAnswer": {"@type": "Answer", "text": "A healthy SaaS business targets an LTV:CAC ratio of at least 3:1, meaning customer lifetime value is at least three times the cost to acquire them. Ratios above 5:1 indicate strong unit economics, while below 1:1 means the business loses money on every customer."}
+      },
+      {
+        "@type": "Question",
+        "name": "How is SaaS LTV calculated?",
+        "acceptedAnswer": {"@type": "Answer", "text": "SaaS LTV (Customer Lifetime Value) is calculated as Average Revenue Per Customer / Monthly Churn Rate. For example, if a customer pays $100/month and churn is 2%, LTV = $100 / 0.02 = $5,000."}
+      },
+      {
+        "@type": "Question",
+        "name": "What is expansion revenue in SaaS?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Expansion revenue is additional MRR generated from existing customers through upgrades, upsells, or add-ons. It is expressed as a percentage of MRR and can partially or fully offset churn, creating a 'negative churn' scenario where expansion exceeds losses."}
+      },
+      {
+        "@type": "Question",
+        "name": "What is net MRR growth?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Net MRR growth is the sum of new MRR added from new customers, expansion MRR from existing customers, minus churned MRR from cancellations. It represents the true monthly increase or decrease in recurring revenue."}
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="logo">
+        <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav">
+        <a href="/">Home</a>
+        <a href="/pages/business-calculators/">Business</a>
+        <a href="/pages/financial-calculators/">Financial</a>
+        <a href="/pages/tax-calculators/">Tax</a>
+        <a href="/pages/digital-income-calculators/" aria-current="page">Digital Income</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav">
+      <a href="/">Home</a>
+      <a href="/pages/business-calculators/">Business Calculators</a>
+      <a href="/pages/financial-calculators/">Financial Calculators</a>
+      <a href="/pages/tax-calculators/">Tax Calculators</a>
+      <a href="/pages/digital-income-calculators/">Digital Income Calculators</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/pages/digital-income-calculators/">Digital Income Calculators</a></li>
+          <li><span aria-current="page">SaaS Revenue Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="calc-page-layout">
+          <div class="calc-page-main">
+            <h1>SaaS Revenue Calculator</h1>
+            <p class="subtitle" style="font-size:var(--text-lg);color:var(--color-gray-600);margin-bottom:var(--space-8);line-height:var(--leading-relaxed);">Model your SaaS business with MRR, ARR, net MRR growth, customer LTV, monthly churn cost, and a 6-month forward forecast. Essential metrics for SaaS founders, operators, and investors.</p>
+
+            <div class="calc-container">
+              <div class="calc-header">
+                <h2>SaaS Revenue Calculator</h2>
+                <p>Core SaaS metrics with churn, growth, and expansion revenue</p>
+              </div>
+              <div class="calc-body">
+                <form id="saas-form" onsubmit="return false;">
+                  <div class="form-group">
+                    <label class="form-label" for="paying-customers">Paying Customers</label>
+                    <input type="number" id="paying-customers" name="payingCustomers" class="form-input" placeholder="200" min="1" step="1" required>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="mrr-per-customer">Average MRR per Customer ($)</label>
+                    <div class="input-prefix">
+                      <span class="prefix">$</span>
+                      <input type="number" id="mrr-per-customer" name="mrrPerCustomer" class="form-input" placeholder="79" min="0.01" step="0.01" required>
+                    </div>
+                    <span class="form-hint">Average monthly revenue per paying customer (ARPU)</span>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="saas-churn-rate">Monthly Churn Rate (%)</label>
+                    <div class="input-suffix">
+                      <input type="number" id="saas-churn-rate" name="saasChurnRate" class="form-input" placeholder="2" min="0" max="100" step="0.01" required>
+                      <span class="suffix">%</span>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="saas-growth-rate">Monthly New Customer Growth Rate (%)</label>
+                    <div class="input-suffix">
+                      <input type="number" id="saas-growth-rate" name="saasGrowthRate" class="form-input" placeholder="6" min="0" max="200" step="0.01" required>
+                      <span class="suffix">%</span>
+                    </div>
+                    <span class="form-hint">New customers added per month as % of current customer count</span>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="expansion-revenue">Expansion Revenue (% of MRR monthly)</label>
+                    <div class="input-suffix">
+                      <input type="number" id="expansion-revenue" name="expansionRevenue" class="form-input" placeholder="1.5" min="0" max="50" step="0.01" required>
+                      <span class="suffix">%</span>
+                    </div>
+                    <span class="form-hint">Additional MRR from upgrades, upsells, or add-ons each month</span>
+                  </div>
+
+                  <div class="calc-actions">
+                    <button type="button" class="btn btn-calculate btn-full" onclick="calculateSaaS()">Calculate SaaS Metrics</button>
+                    <button type="button" class="btn btn-reset" onclick="resetSaaSForm()">Reset</button>
+                  </div>
+                </form>
+
+                <div id="saas-results" class="calc-results hidden">
+                  <div class="result-primary">
+                    <div class="result-label">Current MRR</div>
+                    <div class="result-value" id="saas-result-mrr">$0</div>
+                  </div>
+                  <div class="result-grid result-grid-2">
+                    <div class="result-item">
+                      <div class="result-label">ARR</div>
+                      <div class="result-value" id="saas-result-arr">$0</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Net MRR Growth</div>
+                      <div class="result-value" id="saas-result-net-mrr-growth">$0</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Customer LTV Estimate</div>
+                      <div class="result-value" id="saas-result-ltv">$0</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Monthly Churn Cost</div>
+                      <div class="result-value" id="saas-result-churn-cost">$0</div>
+                    </div>
+                  </div>
+                  <div id="saas-forecast-table" style="margin-top:var(--space-6);overflow-x:auto;"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="ad-slot ad-slot-leaderboard"></div>
+
+            <section class="content-section">
+              <h2>SaaS Revenue Formulas</h2>
+              <div class="formula-box">
+                <div class="formula-label">MRR</div>
+                MRR = Paying Customers x Average MRR per Customer
+              </div>
+              <div class="formula-box">
+                <div class="formula-label">ARR</div>
+                ARR = MRR x 12
+              </div>
+              <div class="formula-box">
+                <div class="formula-label">Customer LTV</div>
+                LTV = Average MRR per Customer / (Churn Rate / 100)
+              </div>
+              <div class="formula-box">
+                <div class="formula-label">Net MRR Growth</div>
+                Net MRR Growth = (New Customer MRR + Expansion MRR) - Churn MRR
+              </div>
+              <div class="formula-box">
+                <div class="formula-label">6-Month Forecast</div>
+                Month N MRR = Previous MRR x (1 + Growth Rate + Expansion Rate - Churn Rate)
+              </div>
+            </section>
+
+            <section class="content-section">
+              <h2>How to Use This Calculator</h2>
+              <ol>
+                <li>Enter your <strong>paying customers</strong> — active subscribers generating recurring revenue.</li>
+                <li>Set your <strong>average MRR per customer</strong> — divide total MRR by number of customers for this figure.</li>
+                <li>Enter your <strong>monthly churn rate</strong> — the percentage of customers who cancel each month.</li>
+                <li>Set your <strong>monthly growth rate</strong> — new customer additions as a percentage of current count.</li>
+                <li>Enter your <strong>expansion revenue rate</strong> — additional MRR from upgrades/upsells as a percentage of current MRR.</li>
+                <li>Click <strong>Calculate SaaS Metrics</strong> for MRR, ARR, LTV, churn cost, net MRR growth, and a 6-month forecast.</li>
+              </ol>
+            </section>
+
+            <section class="content-section">
+              <h2>Example Scenario</h2>
+              <p>A B2B SaaS tool has 150 customers at $99/month average, 1.5% monthly churn, 8% monthly growth, and 2% expansion revenue.</p>
+              <ul>
+                <li>MRR: 150 x $99 = <strong>$14,850</strong></li>
+                <li>ARR: $14,850 x 12 = <strong>$178,200</strong></li>
+                <li>Customer LTV: $99 / 0.015 = <strong>$6,600</strong></li>
+                <li>Monthly Churn Cost: $14,850 x 1.5% = <strong>$223</strong></li>
+                <li>New Customer MRR: $14,850 x 8% = <strong>$1,188</strong></li>
+                <li>Expansion MRR: $14,850 x 2% = <strong>$297</strong></li>
+                <li>Net MRR Growth: $1,188 + $297 - $223 = <strong>$1,262/month</strong></li>
+              </ul>
+            </section>
+
+            <section class="faq-section">
+              <h2>Frequently Asked Questions</h2>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  What is a good LTV to CAC ratio for SaaS?
+                  <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                </button>
+                <div class="faq-answer">
+                  <p>A healthy SaaS business targets an LTV:CAC ratio of at least 3:1. Ratios above 5:1 indicate strong unit economics, while below 1:1 means the business loses money on every customer acquired.</p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  How is SaaS LTV calculated?
+                  <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                </button>
+                <div class="faq-answer">
+                  <p>SaaS LTV is calculated as Average Revenue Per Customer divided by Monthly Churn Rate. For example, if a customer pays $100/month and churn is 2%, LTV = $100 / 0.02 = $5,000.</p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  What is expansion revenue in SaaS?
+                  <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 011-1z"/></svg>
+                </button>
+                <div class="faq-answer">
+                  <p>Expansion revenue is additional MRR from existing customers through upgrades, upsells, or add-ons. It can partially or fully offset churn, creating a "negative churn" scenario where expansion exceeds cancellation losses.</p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  What is net MRR growth?
+                  <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                </button>
+                <div class="faq-answer">
+                  <p>Net MRR growth is new MRR from new customers plus expansion MRR from existing customers minus churned MRR from cancellations. It represents the true monthly change in recurring revenue.</p>
+                </div>
+              </div>
+            </section>
+
+            <section class="related-calculators">
+              <h2>Related Calculators</h2>
+              <div class="grid grid-3">
+                <a href="/pages/digital-income-calculators/subscription-revenue-calculator/" class="card card-link">
+                  <h3>Subscription Revenue Calculator</h3>
+                  <p>Model MRR, ARR, and 12-month subscription projections.</p>
+                </a>
+                <a href="/pages/digital-income-calculators/membership-revenue-calculator/" class="card card-link">
+                  <h3>Membership Revenue Calculator</h3>
+                  <p>Calculate revenue from membership tiers and free-to-paid conversion.</p>
+                </a>
+                <a href="/pages/business-calculators/revenue-growth-calculator/" class="card card-link">
+                  <h3>Revenue Growth Calculator</h3>
+                  <p>Analyze total, monthly, and annualized revenue growth rates.</p>
+                </a>
+                <a href="/pages/business-calculators/cash-runway-calculator/" class="card card-link">
+                  <h3>Cash Runway Calculator</h3>
+                  <p>Calculate how long your cash will last at current burn rate.</p>
+                </a>
+              </div>
+            </section>
+
+            <div class="disclaimer">
+              <strong>Disclaimer:</strong> This calculator provides estimates for informational and planning purposes only. SaaS metrics depend on many factors including pricing changes, market conditions, product quality, and competitive dynamics. LTV assumes constant churn, which varies in practice.
+            </div>
+          </div>
+
+          <aside class="calc-page-sidebar">
+            <div class="ad-slot ad-slot-rectangle"></div>
+            <div class="sidebar-card">
+              <h3>Digital Income Calculators</h3>
+              <a href="/pages/digital-income-calculators/subscription-revenue-calculator/">Subscription Revenue</a>
+              <a href="/pages/digital-income-calculators/membership-revenue-calculator/">Membership Revenue</a>
+              <a href="/pages/digital-income-calculators/affiliate-income-calculator/">Affiliate Income</a>
+              <a href="/pages/digital-income-calculators/digital-product-revenue-calculator/">Digital Product Revenue</a>
+              <a href="/pages/digital-income-calculators/platform-fee-calculator/">Platform Fee Calculator</a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free online calculators for business, finance, tax, and investment decisions.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Calculators</h4>
+          <a href="/pages/business-calculators/">Business</a>
+          <a href="/pages/financial-calculators/">Financial</a>
+          <a href="/pages/tax-calculators/">Tax</a>
+          <a href="/pages/digital-income-calculators/">Digital Income</a>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <a href="/about/">About</a>
+          <a href="/blog/">Blog</a>
+          <a href="/contact/">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="/privacy/">Privacy Policy</a>
+          <a href="/terms/">Terms of Service</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/privacy/">Privacy</a>
+          <a href="/terms/">Terms</a>
+          <a href="/contact/">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateSaaS() {
+      const customers = CalcWise.parseNumber(document.getElementById('paying-customers').value);
+      const mrrPerCustomer = CalcWise.parseNumber(document.getElementById('mrr-per-customer').value);
+      const churnRate = CalcWise.parseNumber(document.getElementById('saas-churn-rate').value);
+      const growthRate = CalcWise.parseNumber(document.getElementById('saas-growth-rate').value);
+      const expansionRate = CalcWise.parseNumber(document.getElementById('expansion-revenue').value);
+
+      if (customers <= 0) { alert('Paying customers must be greater than zero.'); return; }
+      if (mrrPerCustomer <= 0) { alert('MRR per customer must be greater than zero.'); return; }
+      if (churnRate < 0 || churnRate > 100) { alert('Churn rate must be between 0% and 100%.'); return; }
+
+      const mrr = customers * mrrPerCustomer;
+      const arr = mrr * 12;
+      const churnCost = mrr * (churnRate / 100);
+      const newMRR = mrr * (growthRate / 100);
+      const expansionMRR = mrr * (expansionRate / 100);
+      const netMRRGrowth = newMRR + expansionMRR - churnCost;
+      const ltv = churnRate > 0 ? mrrPerCustomer / (churnRate / 100) : 0;
+
+      // 6-month forecast
+      let currentMRR = mrr;
+      let rows = '';
+      for (let m = 1; m <= 6; m++) {
+        const gained = currentMRR * (growthRate / 100);
+        const expanded = currentMRR * (expansionRate / 100);
+        const churned = currentMRR * (churnRate / 100);
+        currentMRR = currentMRR + gained + expanded - churned;
+        rows += `<tr>
+          <td>Month ${m}</td>
+          <td>${CalcWise.formatCurrency(currentMRR, 0)}</td>
+          <td>${CalcWise.formatCurrency(currentMRR * 12, 0)}</td>
+          <td style="color:${(gained + expanded - churned) >= 0 ? 'var(--color-success)' : 'var(--color-error)'}">${CalcWise.formatCurrency(gained + expanded - churned, 0)}</td>
+        </tr>`;
+      }
+
+      const tableHTML = `<h4 style="margin-bottom:var(--space-3);">6-Month Forecast</h4>
+        <table style="width:100%;border-collapse:collapse;font-size:var(--text-sm);">
+        <thead><tr style="background:var(--color-gray-100);">
+          <th style="padding:var(--space-2) var(--space-3);text-align:left;">Month</th>
+          <th style="padding:var(--space-2) var(--space-3);text-align:left;">MRR</th>
+          <th style="padding:var(--space-2) var(--space-3);text-align:left;">ARR Run Rate</th>
+          <th style="padding:var(--space-2) var(--space-3);text-align:left;">Net MRR Change</th>
+        </tr></thead>
+        <tbody>${rows}</tbody>
+      </table>`;
+
+      CalcWise.setText('saas-result-mrr', CalcWise.formatCurrency(mrr, 0));
+      CalcWise.setText('saas-result-arr', CalcWise.formatCurrency(arr, 0));
+      CalcWise.setText('saas-result-net-mrr-growth', CalcWise.formatCurrency(netMRRGrowth, 0));
+      CalcWise.setText('saas-result-ltv', ltv > 0 ? CalcWise.formatCurrency(ltv, 0) : 'N/A (0% churn)');
+      CalcWise.setText('saas-result-churn-cost', '-' + CalcWise.formatCurrency(churnCost, 0));
+      CalcWise.setHtml('saas-forecast-table', tableHTML);
+      CalcWise.showResults('saas-results');
+    }
+
+    function resetSaaSForm() {
+      document.getElementById('saas-form').reset();
+      CalcWise.hideResults('saas-results');
+    }
+  </script>
+</body>
+</html>

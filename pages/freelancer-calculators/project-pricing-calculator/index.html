@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Pricing Calculator for Freelancers | CalcWise</title>
+  <meta name="description" content="Calculate the right project price based on hours, complexity, overhead, profit margin, and rush fees. Stop undercharging for freelance projects.">
+  <link rel="canonical" href="https://calcwise.io/freelancer-calculators/project-pricing-calculator/">
+  <meta property="og:title" content="Project Pricing Calculator for Freelancers | CalcWise">
+  <meta property="og:description" content="Calculate the right project price based on hours, complexity, overhead, profit margin, and rush fees. Stop undercharging for freelance projects.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcwise.io/freelancer-calculators/project-pricing-calculator/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Project Pricing Calculator for Freelancers | CalcWise">
+  <meta name="twitter:description" content="Calculate the right project price based on hours, complexity, overhead, profit margin, and rush fees.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/"},
+      {"@type": "ListItem", "position": 2, "name": "Freelancer Calculators", "item": "https://calcwise.io/freelancer-calculators/"},
+      {"@type": "ListItem", "position": 3, "name": "Project Pricing Calculator"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is a complexity multiplier in project pricing?",
+        "acceptedAnswer": {"@type": "Answer", "text": "A complexity multiplier accounts for the additional difficulty of a project beyond standard work. A multiplier of 1.0 is baseline; 1.5 means 50% more complex. Factors include unfamiliar technology, tight timelines, stakeholder count, and level of required expertise."}
+      },
+      {
+        "@type": "Question",
+        "name": "Should I charge a rush fee for tight deadlines?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Yes. Rush fees compensate for the opportunity cost of rearranging your schedule, working overtime, and taking on additional stress. A 25-50% rush fee is standard for projects requiring turnaround in under half the normal timeframe."}
+      },
+      {
+        "@type": "Question",
+        "name": "What overhead should freelancers allocate per project?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Overhead includes software subscriptions, marketing costs, accounting, insurance, and non-billable admin time. Divide total annual overhead by estimated projects per year to get a per-project allocation. Typically ranges from $200 to $1,500+ per project."}
+      },
+      {
+        "@type": "Question",
+        "name": "How do I set a profit margin on freelance projects?",
+        "acceptedAnswer": {"@type": "Answer", "text": "A profit margin above your break-even rate rewards business risk and funds growth. Most freelancers target 15-30% margin above cost. Higher-value, strategic projects can command 40-50% margin especially when you have specialized expertise."}
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="logo">
+        <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav">
+        <a href="/">Home</a>
+        <a href="/pages/business-calculators/">Business</a>
+        <a href="/pages/financial-calculators/">Financial</a>
+        <a href="/pages/tax-calculators/">Tax</a>
+        <a href="/pages/freelancer-calculators/" aria-current="page">Freelancer</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav">
+      <a href="/">Home</a>
+      <a href="/pages/business-calculators/">Business Calculators</a>
+      <a href="/pages/financial-calculators/">Financial Calculators</a>
+      <a href="/pages/tax-calculators/">Tax Calculators</a>
+      <a href="/pages/freelancer-calculators/">Freelancer Calculators</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/pages/freelancer-calculators/">Freelancer Calculators</a></li>
+          <li><span aria-current="page">Project Pricing Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="calc-page-layout">
+          <div class="calc-page-main">
+            <h1>Project Pricing Calculator</h1>
+            <p class="subtitle" style="font-size:var(--text-lg);color:var(--color-gray-600);margin-bottom:var(--space-8);line-height:var(--leading-relaxed);">Stop guessing on project quotes. This calculator builds a complete project price from your estimated hours, complexity, overhead allocation, and profit margin, then shows you the rush-fee version and your true effective hourly rate. Proper project pricing ensures every job contributes to your income goals.</p>
+
+            <div class="calc-container">
+              <div class="calc-header">
+                <h2>Project Pricing Calculator</h2>
+                <p>Build a fully-loaded project quote from the ground up</p>
+              </div>
+              <div class="calc-body">
+                <form id="pricing-form" onsubmit="return false;">
+                  <div class="calc-grid calc-grid-2col">
+                    <div class="form-group">
+                      <label class="form-label" for="est-hours">Estimated Hours</label>
+                      <input type="number" id="est-hours" class="form-input" placeholder="40" min="0.5" step="0.5" required>
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label" for="hourly-rate">Your Hourly Rate</label>
+                      <div class="input-prefix">
+                        <span class="prefix">$</span>
+                        <input type="number" id="hourly-rate" class="form-input" placeholder="100" min="0" step="1" required>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="calc-grid calc-grid-2col">
+                    <div class="form-group">
+                      <label class="form-label" for="complexity">Complexity Multiplier</label>
+                      <input type="number" id="complexity" class="form-input" placeholder="1.2" min="0.5" max="5" step="0.05">
+                      <span class="form-hint" style="display:block;margin-top:var(--space-1);">1.0 = standard, 1.5 = complex, 2.0 = highly complex</span>
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label" for="rush-fee">Rush Fee</label>
+                      <div class="input-suffix">
+                        <input type="number" id="rush-fee" class="form-input" placeholder="25" min="0" max="200" step="1">
+                        <span class="suffix">%</span>
+                      </div>
+                      <span class="form-hint" style="display:block;margin-top:var(--space-1);">Applies only to the rush price output</span>
+                    </div>
+                  </div>
+
+                  <div class="calc-grid calc-grid-2col">
+                    <div class="form-group">
+                      <label class="form-label" for="overhead">Overhead Allocation</label>
+                      <div class="input-prefix">
+                        <span class="prefix">$</span>
+                        <input type="number" id="overhead" class="form-input" placeholder="500" min="0" step="10">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label" for="profit-margin">Profit Margin</label>
+                      <div class="input-suffix">
+                        <input type="number" id="profit-margin" class="form-input" placeholder="20" min="0" max="100" step="1">
+                        <span class="suffix">%</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="calc-actions">
+                    <button type="button" class="btn btn-calculate btn-full" onclick="calculateProjectPrice()">Calculate Project Price</button>
+                    <button type="button" class="btn btn-reset" onclick="resetPricingForm()">Reset</button>
+                  </div>
+                </form>
+
+                <div id="results" class="calc-results hidden">
+                  <div class="result-primary">
+                    <div class="result-label">Recommended Project Price (with margin)</div>
+                    <div class="result-value" id="result-final-price">$0</div>
+                  </div>
+                  <div class="result-grid result-grid-3">
+                    <div class="result-item">
+                      <div class="result-label">Base Price (hours × rate × complexity)</div>
+                      <div class="result-value" id="result-base">$0</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">With Overhead</div>
+                      <div class="result-value" id="result-with-overhead">$0</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Rush Price</div>
+                      <div class="result-value" id="result-rush">$0</div>
+                    </div>
+                  </div>
+                  <div class="result-grid result-grid-3">
+                    <div class="result-item">
+                      <div class="result-label">Effective Hourly Rate</div>
+                      <div class="result-value" id="result-eff-hourly">$0/hr</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Profit Amount</div>
+                      <div class="result-value" id="result-profit-amt">$0</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Actual Hours Rate</div>
+                      <div class="result-value" id="result-actual-rate">$0/hr</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="ad-slot ad-slot-leaderboard"></div>
+
+            <section class="content-section">
+              <h2>Project Pricing Formula</h2>
+              <div class="formula-box">
+                <div class="formula-label">Base Price</div>
+                Base = Estimated Hours × Hourly Rate × Complexity Multiplier
+              </div>
+              <div class="formula-box">
+                <div class="formula-label">Price with Overhead</div>
+                With Overhead = Base Price + Overhead Allocation
+              </div>
+              <div class="formula-box">
+                <div class="formula-label">Final Price (with Margin)</div>
+                Final = (Base + Overhead) / (1 - Profit Margin %)
+              </div>
+              <div class="formula-box">
+                <div class="formula-label">Rush Price</div>
+                Rush Price = Final Price × (1 + Rush Fee %)
+              </div>
+              <div class="formula-box">
+                <div class="formula-label">Effective Hourly Rate</div>
+                Effective Rate = Final Price / Estimated Hours
+              </div>
+            </section>
+
+            <section class="content-section">
+              <h2>How to Use This Calculator</h2>
+              <ol>
+                <li>Enter your <strong>estimated hours</strong> for the project and your <strong>standard hourly rate</strong>.</li>
+                <li>Set the <strong>complexity multiplier</strong> — use 1.0 for routine work, higher for specialized or difficult projects.</li>
+                <li>Enter a <strong>rush fee percentage</strong> to see what the project would cost on an accelerated timeline.</li>
+                <li>Add your <strong>overhead allocation</strong> — the share of annual overhead this project should absorb.</li>
+                <li>Set your <strong>profit margin</strong> above break-even to reward business risk and fuel growth.</li>
+                <li>Click <strong>Calculate Project Price</strong> to see your complete pricing breakdown.</li>
+              </ol>
+            </section>
+
+            <section class="content-section">
+              <h2>Example Scenario</h2>
+              <p>A freelance developer estimates 40 hours for a web app, charges $100/hr, applies a 1.25 complexity multiplier, $500 overhead, and 20% profit margin.</p>
+              <ul>
+                <li>Base Price: 40 × $100 × 1.25 = <strong>$5,000</strong></li>
+                <li>With Overhead: $5,000 + $500 = <strong>$5,500</strong></li>
+                <li>Final Price (20% margin): $5,500 / 0.80 = <strong>$6,875</strong></li>
+                <li>Rush Price (25% fee): $6,875 × 1.25 = <strong>$8,594</strong></li>
+                <li>Effective Hourly Rate: $6,875 / 40 = <strong>$171.88/hr</strong></li>
+              </ul>
+            </section>
+
+            <section class="faq-section">
+              <h2>Frequently Asked Questions</h2>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  What is a complexity multiplier in project pricing?
+                  <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                </button>
+                <div class="faq-answer">
+                  <p>A complexity multiplier accounts for difficulty beyond standard work. A value of 1.0 is baseline; 1.5 means 50% more complex. Factors include unfamiliar technology, tight timelines, stakeholder count, and level of required expertise.</p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  Should I charge a rush fee for tight deadlines?
+                  <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                </button>
+                <div class="faq-answer">
+                  <p>Yes. Rush fees compensate for rearranging your schedule, overtime, and additional stress. A 25-50% rush fee is standard for projects requiring turnaround in under half the normal timeframe.</p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  What overhead should freelancers allocate per project?
+                  <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                </button>
+                <div class="faq-answer">
+                  <p>Overhead includes software, marketing, accounting, insurance, and non-billable admin time. Divide total annual overhead by estimated projects per year for a per-project allocation. Typically $200 to $1,500+ per project.</p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  How do I set a profit margin on freelance projects?
+                  <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                </button>
+                <div class="faq-answer">
+                  <p>A profit margin rewards business risk and funds growth. Most freelancers target 15-30% above cost. High-value, strategic projects can command 40-50% margin especially with specialized expertise.</p>
+                </div>
+              </div>
+            </section>
+
+            <section class="related-calculators">
+              <h2>Related Calculators</h2>
+              <div class="grid grid-3">
+                <a href="/pages/freelancer-calculators/client-profitability-calculator/" class="card card-link">
+                  <h3>Client Profitability Calculator</h3>
+                  <p>See which clients are worth keeping after factoring in overhead and revisions.</p>
+                </a>
+                <a href="/pages/freelancer-calculators/retainer-pricing-calculator/" class="card card-link">
+                  <h3>Retainer Pricing Calculator</h3>
+                  <p>Convert project clients to profitable monthly retainer agreements.</p>
+                </a>
+                <a href="/pages/business-calculators/freelance-rate-calculator/" class="card card-link">
+                  <h3>Freelance Rate Calculator</h3>
+                  <p>Calculate your minimum hourly rate to meet your income goals.</p>
+                </a>
+                <a href="/pages/freelancer-calculators/freelance-break-even-calculator/" class="card card-link">
+                  <h3>Break-Even Calculator</h3>
+                  <p>Know your minimum monthly revenue to stay profitable.</p>
+                </a>
+              </div>
+            </section>
+
+            <div class="disclaimer">
+              <strong>Disclaimer:</strong> This calculator provides project pricing estimates for informational purposes only. Actual project scope, market rates, and client negotiations will influence final pricing. Always review quotes with consideration of local market conditions.
+            </div>
+          </div>
+
+          <aside class="calc-page-sidebar">
+            <div class="ad-slot ad-slot-rectangle"></div>
+            <div class="sidebar-card">
+              <h3>Freelancer Calculators</h3>
+              <a href="/pages/freelancer-calculators/freelance-tax-estimator/">Tax Estimator</a>
+              <a href="/pages/freelancer-calculators/freelance-income-stability-calculator/">Income Stability</a>
+              <a href="/pages/freelancer-calculators/project-pricing-calculator/">Project Pricing</a>
+              <a href="/pages/freelancer-calculators/client-profitability-calculator/">Client Profitability</a>
+              <a href="/pages/freelancer-calculators/freelance-break-even-calculator/">Break-Even Calculator</a>
+              <a href="/pages/freelancer-calculators/retainer-pricing-calculator/">Retainer Pricing</a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free online calculators for business, finance, tax, and investment decisions.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Calculators</h4>
+          <a href="/pages/business-calculators/">Business</a>
+          <a href="/pages/financial-calculators/">Financial</a>
+          <a href="/pages/tax-calculators/">Tax</a>
+          <a href="/pages/investment-calculators/">Investment</a>
+          <a href="/pages/freelancer-calculators/">Freelancer</a>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <a href="/about/">About</a>
+          <a href="/blog/">Blog</a>
+          <a href="/contact/">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="/privacy/">Privacy Policy</a>
+          <a href="/terms/">Terms of Service</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/privacy/">Privacy</a>
+          <a href="/terms/">Terms</a>
+          <a href="/contact/">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateProjectPrice() {
+      const hours = CalcWise.parseNumber(document.getElementById('est-hours').value);
+      const rate = CalcWise.parseNumber(document.getElementById('hourly-rate').value);
+      const complexity = CalcWise.parseNumber(document.getElementById('complexity').value) || 1.0;
+      const rushFeePct = (CalcWise.parseNumber(document.getElementById('rush-fee').value) || 0) / 100;
+      const overhead = CalcWise.parseNumber(document.getElementById('overhead').value) || 0;
+      const marginPct = (CalcWise.parseNumber(document.getElementById('profit-margin').value) || 0) / 100;
+
+      if (hours <= 0 || rate <= 0) { alert('Please enter estimated hours and hourly rate.'); return; }
+      if (marginPct >= 1) { alert('Profit margin must be less than 100%.'); return; }
+
+      const base = hours * rate * complexity;
+      const withOverhead = base + overhead;
+      const finalPrice = marginPct > 0 ? withOverhead / (1 - marginPct) : withOverhead;
+      const rushPrice = finalPrice * (1 + rushFeePct);
+      const profitAmt = finalPrice - withOverhead;
+      const effHourly = finalPrice / hours;
+      const actualRate = base / hours;
+
+      CalcWise.setText('result-base', CalcWise.formatCurrency(base));
+      CalcWise.setText('result-with-overhead', CalcWise.formatCurrency(withOverhead));
+      CalcWise.setText('result-final-price', CalcWise.formatCurrency(finalPrice));
+      CalcWise.setText('result-rush', CalcWise.formatCurrency(rushPrice));
+      CalcWise.setText('result-eff-hourly', CalcWise.formatCurrency(effHourly) + '/hr');
+      CalcWise.setText('result-profit-amt', CalcWise.formatCurrency(profitAmt));
+      CalcWise.setText('result-actual-rate', CalcWise.formatCurrency(actualRate) + '/hr');
+      CalcWise.showResults('results');
+    }
+
+    function resetPricingForm() {
+      document.getElementById('pricing-form').reset();
+      CalcWise.hideResults('results');
+    }
+
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', !expanded);
+        btn.nextElementSibling.style.display = expanded ? 'none' : 'block';
+      });
+    });
+
+    const toggle = document.querySelector('.mobile-menu-toggle');
+    const mobileNav = document.querySelector('.mobile-nav');
+    if (toggle && mobileNav) {
+      toggle.addEventListener('click', () => {
+        const open = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', !open);
+        mobileNav.classList.toggle('open', !open);
+      });
+    }
+  </script>
+</body>
+</html>

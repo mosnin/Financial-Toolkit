@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Usage Savings Calculator - Low-Flow, Efficient Appliances & Drip Irrigation | CalcWise</title>
+    <meta name="description" content="Calculate gallons saved per day and bill reduction from water efficiency upgrades. Enter your current usage, water rate, and upgrade type to see annual savings and payback period.">
+    <link rel="canonical" href="https://calcwise.io/household-efficiency-calculators/water-usage-savings-calculator/">
+    <meta property="og:title" content="Water Usage Savings Calculator | CalcWise">
+    <meta property="og:description" content="Find out how much water and money you can save with low-flow fixtures, efficient appliances, or drip irrigation.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://calcwise.io/household-efficiency-calculators/water-usage-savings-calculator/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Water Usage Savings Calculator | CalcWise">
+    <meta name="twitter:description" content="Calculate water and dollar savings from efficiency upgrades including low-flow fixtures and drip irrigation.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/design-system.css">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/"},
+            {"@type": "ListItem", "position": 2, "name": "Household Efficiency Calculators", "item": "https://calcwise.io/household-efficiency-calculators/"},
+            {"@type": "ListItem", "position": 3, "name": "Water Usage Savings Calculator"}
+        ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {"@type": "Question", "name": "How much water do low-flow fixtures save?", "acceptedAnswer": {"@type": "Answer", "text": "Low-flow showerheads use 1.8-2.0 gallons per minute (GPM) versus 2.5 GPM for standard showerheads -- a 20-28% reduction. Low-flow faucet aerators cut kitchen and bathroom faucet use from 2.2 GPM to 1.0-1.5 GPM. For a family of four, switching all fixtures can save 15,000-25,000 gallons per year."}},
+            {"@type": "Question", "name": "What is the average US water rate?", "acceptedAnswer": {"@type": "Answer", "text": "The average US household pays approximately $0.004 to $0.008 per gallon depending on their city, often expressed as cost per 1,000 gallons ($4-8 per 1,000 gallons). Costs are significantly higher in drought-prone states like California, Arizona, and Texas where tiered pricing applies."}},
+            {"@type": "Question", "name": "Do efficient washing machines really save water?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. An ENERGY STAR certified front-loading washing machine uses about 13 gallons per load compared to 23-40 gallons for a top-loader. A family doing 5 loads per week can save 50-100 gallons per week, or 2,600-5,200 gallons per year just from the washer."}},
+            {"@type": "Question", "name": "How much does drip irrigation save compared to sprinklers?", "acceptedAnswer": {"@type": "Answer", "text": "Drip irrigation is 30-50% more efficient than conventional sprinklers. Traditional sprinkler systems lose significant water to evaporation, wind drift, and runoff. Drip systems deliver water directly to the root zone, saving 15-30 gallons per day for an average-sized lawn or garden during the irrigation season."}}
+        ]
+    }
+    </script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="/" class="logo">
+                <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+                CalcWise
+            </a>
+            <nav class="main-nav">
+                <a href="/real-estate-calculators/">Real Estate</a>
+                <a href="/advanced-real-estate-calculators/">Advanced RE</a>
+                <a href="/energy-utility-calculators/">Energy</a>
+                <a href="/household-efficiency-calculators/">Household</a>
+                <a href="/finance-calculators/">Finance</a>
+            </nav>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+            </button>
+        </div>
+        <nav class="mobile-nav">
+            <a href="/real-estate-calculators/">Real Estate Calculators</a>
+            <a href="/advanced-real-estate-calculators/">Advanced Real Estate</a>
+            <a href="/energy-utility-calculators/">Energy &amp; Utility</a>
+            <a href="/household-efficiency-calculators/">Household Efficiency</a>
+            <a href="/finance-calculators/">Finance Calculators</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <nav class="breadcrumbs" aria-label="Breadcrumb">
+                <ol>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/household-efficiency-calculators/">Household Efficiency Calculators</a></li>
+                    <li><span aria-current="page">Water Usage Savings Calculator</span></li>
+                </ol>
+            </nav>
+
+            <div class="page-content">
+                <div class="calc-page-layout">
+                    <div class="calc-page-main">
+                        <h1>Water Usage Savings Calculator</h1>
+                        <p class="subtitle" style="color: var(--color-gray-600); font-size: var(--text-lg); line-height: var(--leading-relaxed); margin-bottom: var(--space-8);">
+                            Calculate how many gallons you can save per day and how much your monthly water bill will drop after installing low-flow fixtures, efficient appliances, or drip irrigation. Enter your upgrade cost to see the payback period.
+                        </p>
+
+                        <div class="calc-container">
+                            <div class="calc-header">
+                                <h2>Water Savings</h2>
+                                <p>Gallons saved, bill reduction, and payback period</p>
+                            </div>
+                            <div class="calc-body">
+                                <form id="water-form">
+                                    <div class="form-group">
+                                        <label class="form-label" for="monthly-bill">Current Monthly Water Bill</label>
+                                        <div class="input-prefix">
+                                            <span class="prefix">$</span>
+                                            <input type="number" id="monthly-bill" name="monthlyBill" class="form-input" placeholder="60" min="1" step="1" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label" for="gallons-day">Current Daily Water Use (gallons)</label>
+                                        <input type="number" id="gallons-day" name="gallonsDay" class="form-input" placeholder="100" min="1" step="1" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label" for="water-rate">Water Rate (per 1,000 gallons)</label>
+                                        <div class="input-prefix">
+                                            <span class="prefix">$</span>
+                                            <input type="number" id="water-rate" name="waterRate" class="form-input" placeholder="6.00" min="0.01" step="0.01" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label" for="upgrade-type">Upgrade Type</label>
+                                        <select id="upgrade-type" name="upgradeType" class="form-input">
+                                            <option value="lowflow">Low-Flow Fixtures (showerheads, faucets)</option>
+                                            <option value="appliances">Efficient Appliances (washer, dishwasher)</option>
+                                            <option value="drip">Drip Irrigation System</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label" for="upgrade-cost">Upgrade Cost (optional)</label>
+                                        <div class="input-prefix">
+                                            <span class="prefix">$</span>
+                                            <input type="number" id="upgrade-cost" name="upgradeCost" class="form-input" placeholder="0" min="0" step="10">
+                                        </div>
+                                    </div>
+                                    <div class="calc-actions">
+                                        <button type="button" class="btn btn-calculate btn-full" onclick="calculateWaterSavings()">Calculate Savings</button>
+                                        <button type="reset" class="btn btn-reset">Reset</button>
+                                    </div>
+                                </form>
+
+                                <div id="results" class="calc-results hidden">
+                                    <div class="result-primary">
+                                        <div class="result-label">Gallons Saved Per Day</div>
+                                        <div class="result-value" id="result-gallons-day">0</div>
+                                    </div>
+                                    <div class="result-grid result-grid-3">
+                                        <div class="result-item">
+                                            <div class="result-label">Monthly Bill Reduction</div>
+                                            <div class="result-value" id="result-monthly-reduction">$0</div>
+                                        </div>
+                                        <div class="result-item">
+                                            <div class="result-label">Annual Savings</div>
+                                            <div class="result-value" id="result-annual-savings">$0</div>
+                                        </div>
+                                        <div class="result-item">
+                                            <div class="result-label">Payback Period</div>
+                                            <div class="result-value" id="result-payback">N/A</div>
+                                        </div>
+                                        <div class="result-item">
+                                            <div class="result-label">Gallons Saved/Year</div>
+                                            <div class="result-value" id="result-gallons-year">0</div>
+                                        </div>
+                                        <div class="result-item">
+                                            <div class="result-label">New Monthly Bill</div>
+                                            <div class="result-value" id="result-new-bill">$0</div>
+                                        </div>
+                                        <div class="result-item">
+                                            <div class="result-label">% Water Reduction</div>
+                                            <div class="result-value" id="result-pct">0%</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="ad-slot ad-slot-leaderboard"></div>
+
+                        <section class="content-section">
+                            <h2>Water Savings Formula</h2>
+                            <div class="formula-box">
+                                <div class="formula-label">Savings Calculation</div>
+                                Gallons Saved/Day = Current Daily Use &times; Savings %
+Annual Gallons Saved = Gallons Saved/Day &times; 365
+Annual Bill Savings = (Annual Gallons Saved / 1,000) &times; Water Rate
+Monthly Bill Reduction = Annual Bill Savings / 12
+Payback Period = Upgrade Cost / Annual Bill Savings
+
+Savings % by upgrade type:
+  Low-Flow Fixtures: ~25% of indoor water use
+  Efficient Appliances: ~20% of total use
+  Drip Irrigation: ~35% of outdoor water use
+                            </div>
+                            <p>Average US household uses approximately 80-100 gallons per person per day. Indoor uses include toilets (24%), showers (20%), faucets (19%), and laundry (17%). The calculator applies savings percentages based on EPA WaterSense research.</p>
+                        </section>
+
+                        <section class="content-section">
+                            <h2>How to Use This Calculator</h2>
+                            <ol>
+                                <li><strong>Find your current monthly water bill</strong> from your utility statement.</li>
+                                <li><strong>Estimate your daily usage</strong> -- your bill may show gallons used per billing period; divide by days to get daily use.</li>
+                                <li><strong>Enter your water rate</strong> per 1,000 gallons -- found on your utility bill.</li>
+                                <li><strong>Select your upgrade type</strong> -- each has a different typical savings percentage.</li>
+                                <li><strong>Enter upgrade cost</strong> (optional) to see the payback period.</li>
+                            </ol>
+                        </section>
+
+                        <section class="content-section">
+                            <h2>Example Scenario</h2>
+                            <h3>Low-Flow Fixture Installation -- Family of 4</h3>
+                            <p>Monthly bill: $60 | Daily use: 320 gallons | Rate: $6.00/1,000 gal | Upgrade: Low-Flow Fixtures | Cost: $300</p>
+                            <p>Gallons saved per day: 320 &times; 25% = <strong>80 gallons/day</strong></p>
+                            <p>Annual gallons saved: 80 &times; 365 = <strong>29,200 gallons/year</strong></p>
+                            <p>Annual bill savings: (29,200 / 1,000) &times; $6.00 = <strong>$175.20/year</strong></p>
+                            <p>Monthly reduction: $175.20 / 12 = <strong>$14.60/month</strong></p>
+                            <p>Payback period: $300 / $175.20 = <strong>1.7 years</strong></p>
+                        </section>
+
+                        <section class="faq-section">
+                            <h2>Frequently Asked Questions</h2>
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">
+                                    How much water do low-flow fixtures save?
+                                    <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>Low-flow showerheads use 1.8-2.0 GPM versus 2.5 GPM for standard models. Low-flow faucet aerators cut use from 2.2 GPM to 1.0-1.5 GPM. For a family of four, this can save 15,000-25,000 gallons per year.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">
+                                    What is the average US water rate?
+                                    <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>The average US household pays approximately $4-8 per 1,000 gallons. Costs are significantly higher in drought-prone states like California, Arizona, and Texas where tiered pricing applies.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">
+                                    Do efficient washing machines really save water?
+                                    <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>Yes. An ENERGY STAR certified front-loading washer uses about 13 gallons per load versus 23-40 gallons for older top-loaders. A family doing 5 loads per week can save 2,600-5,200 gallons per year from the washer alone.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">
+                                    How much does drip irrigation save compared to sprinklers?
+                                    <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>Drip irrigation is 30-50% more efficient than conventional sprinklers, delivering water directly to the root zone with minimal evaporation. Typical savings are 15-30 gallons per day during irrigation season for an average-sized yard.</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="related-calculators">
+                            <h2>Related Calculators</h2>
+                            <div class="grid grid-3">
+                                <a href="/household-efficiency-calculators/utility-savings-calculator/" class="card card-link">
+                                    <div class="card-icon">U</div>
+                                    <h3>Utility Savings Calculator</h3>
+                                    <p>Set reduction targets across all three utilities at once.</p>
+                                </a>
+                                <a href="/energy-utility-calculators/water-usage-cost-calculator/" class="card card-link">
+                                    <div class="card-icon">W</div>
+                                    <h3>Water Usage Cost Calculator</h3>
+                                    <p>Calculate your exact water cost by gallons and rate.</p>
+                                </a>
+                                <a href="/household-efficiency-calculators/home-operating-cost-calculator/" class="card card-link">
+                                    <div class="card-icon">H</div>
+                                    <h3>Home Operating Cost</h3>
+                                    <p>Full breakdown of all monthly home operating costs.</p>
+                                </a>
+                                <a href="/household-efficiency-calculators/appliance-cost-comparison-calculator/" class="card card-link">
+                                    <div class="card-icon">A</div>
+                                    <h3>Appliance Cost Comparison</h3>
+                                    <p>Compare energy costs of old vs. new appliances.</p>
+                                </a>
+                            </div>
+                        </section>
+
+                        <div class="disclaimer">
+                            <strong>Disclaimer:</strong> Savings estimates are based on average usage reduction percentages from EPA WaterSense research. Actual savings depend on household size, local water rates, current fixture flow rates, and usage patterns. Contact your local water utility for a personalized conservation assessment.
+                        </div>
+
+                        <div class="ad-slot ad-slot-leaderboard"></div>
+                    </div>
+
+                    <aside class="calc-page-sidebar">
+                        <div class="sidebar-card">
+                            <h3>Household Efficiency Tools</h3>
+                            <a href="/household-efficiency-calculators/utility-savings-calculator/">Utility Savings</a>
+                            <a href="/household-efficiency-calculators/energy-efficiency-savings-calculator/">Energy Efficiency Savings</a>
+                            <a href="/household-efficiency-calculators/water-usage-savings-calculator/">Water Usage Savings</a>
+                            <a href="/household-efficiency-calculators/grocery-waste-savings-calculator/">Grocery Waste Savings</a>
+                            <a href="/household-efficiency-calculators/home-efficiency-savings-calculator/">Home Efficiency Savings</a>
+                            <a href="/household-efficiency-calculators/appliance-cost-comparison-calculator/">Appliance Cost Comparison</a>
+                            <a href="/household-efficiency-calculators/heating-cost-efficiency-calculator/">Heating Cost Efficiency</a>
+                            <a href="/household-efficiency-calculators/cooling-cost-efficiency-calculator/">Cooling Cost Efficiency</a>
+                            <a href="/household-efficiency-calculators/household-maintenance-savings-calculator/">Maintenance Savings</a>
+                            <a href="/household-efficiency-calculators/home-operating-cost-calculator/">Home Operating Cost</a>
+                        </div>
+                        <div class="ad-slot ad-slot-rectangle"></div>
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="/" class="logo">
+                        <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+                        CalcWise
+                    </a>
+                    <p>Free, accurate financial calculators for everyone. Make smarter money decisions with CalcWise.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Household Efficiency</h4>
+                    <a href="/household-efficiency-calculators/utility-savings-calculator/">Utility Savings</a>
+                    <a href="/household-efficiency-calculators/water-usage-savings-calculator/">Water Usage Savings</a>
+                    <a href="/household-efficiency-calculators/energy-efficiency-savings-calculator/">Energy Efficiency</a>
+                    <a href="/household-efficiency-calculators/home-operating-cost-calculator/">Home Operating Cost</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Energy &amp; Utility</h4>
+                    <a href="/energy-utility-calculators/electricity-cost-calculator/">Electricity Cost</a>
+                    <a href="/energy-utility-calculators/water-usage-cost-calculator/">Water Usage Cost</a>
+                    <a href="/energy-utility-calculators/gas-bill-calculator/">Gas Bill</a>
+                    <a href="/energy-utility-calculators/solar-savings-calculator/">Solar Savings</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <a href="/about/">About</a>
+                    <a href="/contact/">Contact</a>
+                    <a href="/privacy/">Privacy Policy</a>
+                    <a href="/terms/">Terms of Use</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; 2026 CalcWise. All rights reserved.</span>
+                <div class="footer-links">
+                    <a href="/privacy/">Privacy</a>
+                    <a href="/terms/">Terms</a>
+                    <a href="/sitemap.xml">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/calculator-engine.js"></script>
+    <script src="/js/search-index.js"></script>
+    <script>
+    const waterUpgrades = {
+        lowflow:    { savingsPct: 0.25 },
+        appliances: { savingsPct: 0.20 },
+        drip:       { savingsPct: 0.35 }
+    };
+
+    function calculateWaterSavings() {
+        if (!CalcWise.validateForm('water-form')) return;
+
+        const values = CalcWise.getFormValues('water-form');
+        const monthlyBill = values.monthlyBill;
+        const gallonsDay = values.gallonsDay;
+        const waterRate = values.waterRate;
+        const upgradeType = document.getElementById('upgrade-type').value;
+        const upgradeCost = values.upgradeCost || 0;
+
+        const savingsPct = waterUpgrades[upgradeType].savingsPct;
+        const gallonsSavedDay = gallonsDay * savingsPct;
+        const gallonsSavedYear = gallonsSavedDay * 365;
+        const annualSavings = (gallonsSavedYear / 1000) * waterRate;
+        const monthlyReduction = annualSavings / 12;
+        const newMonthlyBill = monthlyBill - monthlyReduction;
+        const paybackYears = (upgradeCost > 0 && annualSavings > 0) ? upgradeCost / annualSavings : null;
+
+        CalcWise.setText('result-gallons-day', CalcWise.formatNumber(Math.round(gallonsSavedDay)) + ' gal');
+        CalcWise.setText('result-monthly-reduction', CalcWise.formatCurrency(monthlyReduction));
+        CalcWise.setText('result-annual-savings', CalcWise.formatCurrency(annualSavings, 0));
+        CalcWise.setText('result-payback', paybackYears !== null ? paybackYears.toFixed(1) + ' yrs' : 'N/A');
+        CalcWise.setText('result-gallons-year', CalcWise.formatNumber(Math.round(gallonsSavedYear)) + ' gal');
+        CalcWise.setText('result-new-bill', CalcWise.formatCurrency(Math.max(0, newMonthlyBill)));
+        CalcWise.setText('result-pct', (savingsPct * 100).toFixed(0) + '%');
+
+        CalcWise.showResults('results');
+    }
+
+    document.getElementById('water-form').addEventListener('reset', function() {
+        setTimeout(() => CalcWise.hideResults('results'), 0);
+    });
+    </script>
+</body>
+</html>

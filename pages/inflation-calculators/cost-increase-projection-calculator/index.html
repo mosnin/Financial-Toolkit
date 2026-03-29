@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cost Increase Projection Calculator - CalcWise</title>
+  <meta name="description" content="Project how any cost grows over 1 to 20 years at a given annual increase rate. Get a full projection table, total extra spend over the period, and monthly budget impact.">
+  <link rel="canonical" href="https://calcwise.io/inflation-calculators/cost-increase-projection-calculator/">
+  <meta property="og:title" content="Cost Increase Projection Calculator - CalcWise">
+  <meta property="og:description" content="See how any recurring cost grows at a given annual rate. Get projections for 1, 3, 5, 10, and 20 years with total extra spend and monthly budget impact.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcwise.io/inflation-calculators/cost-increase-projection-calculator/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Cost Increase Projection Calculator - CalcWise">
+  <meta name="twitter:description" content="Project how any cost grows over time with a full year-by-year table and budget impact summary.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/"},
+      {"@type": "ListItem", "position": 2, "name": "Inflation Calculators", "item": "https://calcwise.io/inflation-calculators/"},
+      {"@type": "ListItem", "position": 3, "name": "Cost Increase Projection Calculator"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do I project the future cost of something that increases annually?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Use the compound growth formula: Future Cost = Current Cost × (1 + Annual Increase Rate)^Years. This accounts for the compounding nature of annual price increases, where each year's increase is applied to the previous year's higher price."}
+      },
+      {
+        "@type": "Question",
+        "name": "What is total extra spend over a period?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Total extra spend is the cumulative additional amount you will pay over a period because of annual cost increases, compared to if the cost had stayed flat. It is calculated by summing each year's cost and subtracting what you would have paid at the original flat cost."}
+      },
+      {
+        "@type": "Question",
+        "name": "What annual increase rates should I use for different costs?",
+        "acceptedAnswer": {"@type": "Answer", "text": "General inflation: 2-4%. Rent: 3-6% depending on location. Healthcare: 5-8%. College tuition: 5-7%. Groceries: 2-5%. Utilities: 3-5%. Car insurance: 4-7%. Use the actual historical rate for the specific cost category you are projecting."}
+      },
+      {
+        "@type": "Question",
+        "name": "Why is monthly budget impact a useful metric?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Monthly budget impact translates the cumulative extra spend into a monthly average, making it easier to plan. For instance, knowing that healthcare inflation will cost you an extra $150/month on average over 10 years helps you decide how much extra to set aside each month now."}
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="logo">
+        <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav">
+        <a href="/">Home</a>
+        <a href="/pages/finance-calculators/">Finance</a>
+        <a href="/pages/business-calculators/">Business</a>
+        <a href="/pages/investment-calculators/">Investment</a>
+        <a href="/inflation-calculators/" aria-current="page">Inflation</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav">
+      <a href="/">Home</a>
+      <a href="/pages/finance-calculators/">Finance Calculators</a>
+      <a href="/pages/business-calculators/">Business Calculators</a>
+      <a href="/pages/investment-calculators/">Investment Calculators</a>
+      <a href="/inflation-calculators/">Inflation Calculators</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <!-- Breadcrumbs -->
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li><a href="/inflation-calculators/">Inflation Calculators</a></li>
+        <li><span aria-current="page">Cost Increase Projection Calculator</span></li>
+      </ol>
+    </nav>
+
+    <div class="page-content">
+      <div class="article-content">
+        <h1>Cost Increase Projection Calculator</h1>
+        <p>Whether it's rent, healthcare, tuition, or groceries, most costs increase by some percentage every year. This calculator projects any current cost forward at an annual increase rate, generates a detailed table for 1, 3, 5, 10, and 20 years, calculates the total extra you will spend over the entire period, and translates that into a monthly budget impact figure so you can plan effectively.</p>
+
+        <!-- Ad Slot -->
+        <div class="ad-slot ad-slot-leaderboard"></div>
+
+        <!-- Calculator -->
+        <div class="calc-container">
+          <div class="calc-header">
+            <h2>Project Future Cost Increases</h2>
+            <p>See exactly how much more you will pay as costs rise annually</p>
+          </div>
+          <div class="calc-body">
+            <form id="cost-form">
+              <div class="form-group">
+                <label class="form-label" for="currentCost">Current Annual Cost</label>
+                <div class="input-prefix">
+                  <span class="prefix">$</span>
+                  <input type="number" id="currentCost" name="currentCost" class="form-input" placeholder="5000" min="1" step="100" required>
+                </div>
+                <span class="form-hint">Enter the current annual cost (e.g., for monthly costs multiply by 12)</span>
+              </div>
+              <div class="calc-grid calc-grid-2col">
+                <div class="form-group">
+                  <label class="form-label" for="annualIncrease">Annual Cost Increase Rate <span class="form-hint">(%)</span></label>
+                  <div class="input-suffix">
+                    <input type="number" id="annualIncrease" name="annualIncrease" class="form-input" placeholder="5" min="0.1" max="50" step="0.1" required>
+                    <span class="suffix">%</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="yearsAhead">Years to Project</label>
+                  <div class="input-suffix">
+                    <input type="number" id="yearsAhead" name="yearsAhead" class="form-input" placeholder="20" min="1" max="50" step="1" required>
+                    <span class="suffix">yrs</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="calc-actions">
+                <button type="button" class="btn btn-calculate" onclick="calculateCostProjection()">Project Costs</button>
+                <button type="button" class="btn btn-reset" onclick="resetCost()">Reset</button>
+              </div>
+            </form>
+
+            <!-- Results -->
+            <div id="results" class="calc-results hidden">
+              <div class="result-primary">
+                <div class="result-label">Total Extra Spend Over Period</div>
+                <div class="result-value" id="totalExtraSpend">$0</div>
+              </div>
+              <div class="result-grid result-grid-3">
+                <div class="result-item">
+                  <div class="result-label">Monthly Budget Impact (Avg)</div>
+                  <div class="result-value" id="monthlyImpact">$0/mo</div>
+                </div>
+                <div class="result-item">
+                  <div class="result-label">Cost at End of Period</div>
+                  <div class="result-value" id="finalCost">$0</div>
+                </div>
+                <div class="result-item">
+                  <div class="result-label">Total % Increase</div>
+                  <div class="result-value" id="totalPctIncrease">0%</div>
+                </div>
+              </div>
+
+              <!-- Milestone table -->
+              <div style="margin-top: 1.5rem;">
+                <h3 style="margin-bottom:0.75rem; font-size:var(--text-lg);">Cost at Key Milestones</h3>
+                <div style="overflow-x:auto;">
+                  <table class="data-table">
+                    <thead>
+                      <tr>
+                        <th>Milestone</th>
+                        <th>Annual Cost</th>
+                        <th>Monthly Cost</th>
+                        <th>Increase vs Today</th>
+                      </tr>
+                    </thead>
+                    <tbody id="milestoneTableBody"></tbody>
+                  </table>
+                </div>
+              </div>
+
+              <!-- Full projection table -->
+              <div style="margin-top: 1.5rem;">
+                <h3 style="margin-bottom:0.75rem; font-size:var(--text-lg);">Full Year-by-Year Projection</h3>
+                <div style="overflow-x:auto; max-height:360px; overflow-y:auto;">
+                  <table class="data-table">
+                    <thead>
+                      <tr>
+                        <th>Year</th>
+                        <th>Annual Cost</th>
+                        <th>Monthly Cost</th>
+                        <th>Cumulative Extra Spend</th>
+                      </tr>
+                    </thead>
+                    <tbody id="projectionTableBody"></tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Formula Section -->
+        <section class="content-section">
+          <h2>Cost Projection Formula</h2>
+          <div class="formula-box">
+            <div class="formula-label">Formulas Used</div>
+            Projected Cost (Year N) = Current Cost × (1 + Annual Increase Rate)^N<br><br>
+            Total Extra Spend = Σ(Year 1 to N: Projected Cost − Current Cost)<br><br>
+            Monthly Budget Impact = Total Extra Spend ÷ (Years × 12)<br><br>
+            Total % Increase = ((Final Cost − Current Cost) / Current Cost) × 100
+          </div>
+          <p>The compound growth formula shows how costs escalate non-linearly over time. Total extra spend sums up all the additional dollars paid above today's flat cost across every year. The monthly budget impact figure is particularly useful for planning how much to set aside each month to absorb future cost increases.</p>
+        </section>
+
+        <!-- How to Use -->
+        <section class="content-section">
+          <h2>How to Use This Calculator</h2>
+          <ol>
+            <li><strong>Enter the current annual cost:</strong> For monthly costs (like rent or insurance), multiply by 12 to get the annual figure.</li>
+            <li><strong>Set the annual increase rate:</strong> Use historical data for your cost category — see the FAQ for typical rates by category.</li>
+            <li><strong>Set the projection period:</strong> Up to 50 years. Try 20 years to see the long-term picture.</li>
+            <li><strong>Review the milestone table:</strong> Quickly see costs at 1, 3, 5, 10, and 20 years.</li>
+            <li><strong>Use the full table:</strong> Year-by-year data helps with detailed budgeting and retirement planning.</li>
+          </ol>
+        </section>
+
+        <!-- Example Scenario -->
+        <section class="content-section">
+          <h2>Example Scenario</h2>
+          <p>Your current health insurance premium is $4,800 per year ($400/month). Healthcare costs increase at 6% per year. Over 20 years:</p>
+          <ul>
+            <li><strong>Cost at year 1:</strong> $5,088 ($424/mo)</li>
+            <li><strong>Cost at year 5:</strong> $6,422 ($535/mo)</li>
+            <li><strong>Cost at year 10:</strong> $8,598 ($717/mo)</li>
+            <li><strong>Cost at year 20:</strong> $15,395 ($1,283/mo)</li>
+            <li><strong>Total extra spend over 20 years:</strong> Approximately $82,000 more than if costs stayed flat</li>
+            <li><strong>Monthly budget impact:</strong> ~$342/month average extra over the 20-year period</li>
+          </ul>
+          <p>Without planning for this increase, a major portion of your retirement budget will be consumed by healthcare cost inflation.</p>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+          <h2>Frequently Asked Questions</h2>
+          <div class="faq-item">
+            <button class="faq-question">
+              How do I project the future cost of something that increases annually?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>Use the compound growth formula: Future Cost = Current Cost × (1 + Annual Increase Rate)^Years. This accounts for compounding — each year's increase is applied to the previous year's higher price, not the original price.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              What is total extra spend over a period?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>Total extra spend is the cumulative additional amount you will pay over a period because of annual cost increases, compared to if the cost had stayed flat. It is calculated by summing each year's cost and subtracting what you would have paid at the original flat cost.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              What annual increase rates should I use for different costs?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>General inflation: 2–4%. Rent: 3–6%. Healthcare: 5–8%. College tuition: 5–7%. Groceries: 2–5%. Utilities: 3–5%. Car insurance: 4–7%. Use the actual historical rate for the specific cost category you are projecting for the most accurate results.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              Why is monthly budget impact a useful metric?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>Monthly budget impact translates the cumulative extra spend into a monthly average, making it easier to plan. For instance, knowing that healthcare inflation will cost you an extra $150/month on average over 10 years helps you decide how much extra to set aside each month now.</p></div>
+          </div>
+        </section>
+
+        <!-- Related Calculators -->
+        <section class="related-calculators">
+          <h2>Related Calculators</h2>
+          <div class="grid grid-3">
+            <a href="/inflation-calculators/inflation-adjusted-healthcare-calculator/" class="card card-link">
+              <h3>Healthcare Inflation Calculator</h3>
+              <p>Project rising healthcare costs and their retirement impact.</p>
+            </a>
+            <a href="/inflation-calculators/inflation-adjusted-rent-calculator/" class="card card-link">
+              <h3>Rent Inflation Calculator</h3>
+              <p>See projected rent costs over 1 to 10 years.</p>
+            </a>
+            <a href="/inflation-calculators/inflation-adjusted-tuition-calculator/" class="card card-link">
+              <h3>Tuition Inflation Calculator</h3>
+              <p>Plan for rising college costs with monthly savings targets.</p>
+            </a>
+            <a href="/inflation-calculators/inflation-impact-calculator/" class="card card-link">
+              <h3>Inflation Impact Calculator</h3>
+              <p>See full purchasing power loss on any amount over time.</p>
+            </a>
+            <a href="/inflation-calculators/inflation-adjusted-grocery-cost-calculator/" class="card card-link">
+              <h3>Grocery Cost Inflation Calculator</h3>
+              <p>Project rising food costs for your household size.</p>
+            </a>
+          </div>
+        </section>
+
+        <!-- Disclaimer -->
+        <div class="disclaimer">
+          <strong>Disclaimer:</strong> This calculator is provided for informational and educational purposes only. It does not constitute financial advice. Actual cost increases vary by category, region, and time period. Consult a qualified financial advisor for personalized planning guidance.
+        </div>
+
+        <!-- Ad Slot -->
+        <div class="ad-slot ad-slot-rectangle"></div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free online financial calculators to help you make smarter money decisions.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Inflation Tools</h4>
+          <a href="/inflation-calculators/inflation-impact-calculator/">Inflation Impact</a>
+          <a href="/inflation-calculators/future-purchasing-power-calculator/">Purchasing Power</a>
+          <a href="/inflation-calculators/inflation-adjusted-salary-calculator/">Salary Adjustment</a>
+          <a href="/inflation-calculators/inflation-adjusted-retirement-calculator/">Retirement Inflation</a>
+        </div>
+        <div class="footer-col">
+          <h4>Finance</h4>
+          <a href="/pages/finance-calculators/net-worth-calculator/">Net Worth</a>
+          <a href="/pages/finance-calculators/budget-calculator/">Budget (50/30/20)</a>
+          <a href="/pages/finance-calculators/emergency-fund-calculator/">Emergency Fund</a>
+          <a href="/pages/finance-calculators/retirement-savings-calculator/">Retirement Savings</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about/">About</a>
+          <a href="/contact/">Contact</a>
+          <a href="/privacy/">Privacy Policy</a>
+          <a href="/terms/">Terms of Service</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 CalcWise. All rights reserved.</span>
+        <div class="footer-links">
+          <a href="/privacy/">Privacy</a>
+          <a href="/terms/">Terms</a>
+          <a href="/contact/">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateCostProjection() {
+      if (!CalcWise.validateForm('cost-form')) return;
+      const v = CalcWise.getFormValues('cost-form');
+      const years = Math.min(v.yearsAhead, 50);
+
+      // Build full projection
+      let totalPaid = 0;
+      let totalFlat = v.currentCost * years;
+      const rows = [];
+      let cumulativeExtra = 0;
+
+      for (let y = 1; y <= years; y++) {
+        const cost = CalcWise.futureValueWithInflation(v.currentCost, v.annualIncrease, y);
+        cumulativeExtra += cost - v.currentCost;
+        rows.push({ year: y, cost, monthly: cost / 12, cumExtra: cumulativeExtra });
+      }
+
+      const finalCost = rows[rows.length - 1].cost;
+      const totalExtraSpend = cumulativeExtra;
+      const monthlyImpact = totalExtraSpend / (years * 12);
+      const totalPct = ((finalCost - v.currentCost) / v.currentCost) * 100;
+
+      CalcWise.setText('totalExtraSpend', CalcWise.formatCurrency(totalExtraSpend));
+      CalcWise.setText('monthlyImpact', CalcWise.formatCurrency(monthlyImpact) + '/mo');
+      CalcWise.setText('finalCost', CalcWise.formatCurrency(finalCost) + '/yr');
+      CalcWise.setText('totalPctIncrease', '+' + totalPct.toFixed(1) + '%');
+
+      // Milestone table
+      const milestones = [1, 3, 5, 10, 20].filter(m => m <= years);
+      const mBody = milestones.map(m => {
+        const r = rows[m - 1];
+        const increase = r.cost - v.currentCost;
+        return `<tr>
+          <td>${m} Year${m > 1 ? 's' : ''}</td>
+          <td>${CalcWise.formatCurrency(r.cost)}</td>
+          <td>${CalcWise.formatCurrency(r.monthly)}</td>
+          <td style="color:var(--color-error);">+${CalcWise.formatCurrency(increase)}</td>
+        </tr>`;
+      }).join('');
+      document.getElementById('milestoneTableBody').innerHTML = mBody;
+
+      // Full table
+      const pBody = rows.map(r => `<tr>
+        <td>${r.year}</td>
+        <td>${CalcWise.formatCurrency(r.cost)}</td>
+        <td>${CalcWise.formatCurrency(r.monthly)}</td>
+        <td>${CalcWise.formatCurrency(r.cumExtra)}</td>
+      </tr>`).join('');
+      document.getElementById('projectionTableBody').innerHTML = pBody;
+
+      CalcWise.showResults('results');
+    }
+
+    function resetCost() {
+      document.getElementById('cost-form').reset();
+      CalcWise.hideResults('results');
+    }
+  </script>
+</body>
+</html>

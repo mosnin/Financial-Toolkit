@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inflation-Adjusted Salary Calculator - CalcWise</title>
+  <meta name="description" content="Find out if your raise actually kept up with inflation. Compare two salaries across years to see real salary change, nominal vs real raise, and whether you got a true raise.">
+  <link rel="canonical" href="https://calcwise.io/inflation-calculators/inflation-adjusted-salary-calculator/">
+  <meta property="og:title" content="Inflation-Adjusted Salary Calculator - CalcWise">
+  <meta property="og:description" content="Did your pay raise actually beat inflation? Calculate real salary change and purchasing power difference between any two years.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcwise.io/inflation-calculators/inflation-adjusted-salary-calculator/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Inflation-Adjusted Salary Calculator - CalcWise">
+  <meta name="twitter:description" content="Did your pay raise actually beat inflation? Calculate real salary change and purchasing power difference between any two years.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/"},
+      {"@type": "ListItem", "position": 2, "name": "Inflation Calculators", "item": "https://calcwise.io/inflation-calculators/"},
+      {"@type": "ListItem", "position": 3, "name": "Inflation-Adjusted Salary Calculator"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is a real salary change vs. a nominal salary change?",
+        "acceptedAnswer": {"@type": "Answer", "text": "A nominal salary change is the raw percentage difference between two salaries. A real salary change adjusts for inflation — it tells you whether your purchasing power actually increased. A nominal raise of 5% in a year with 6% inflation is actually a real pay cut of about 1%."}
+      },
+      {
+        "@type": "Question",
+        "name": "How do I know if I got a true raise?",
+        "acceptedAnswer": {"@type": "Answer", "text": "You got a true raise only if your salary grew faster than inflation over the same period. If your nominal raise percentage exceeds the cumulative inflation rate between the two years, your real purchasing power increased. If not, you effectively took a pay cut in real terms."}
+      },
+      {
+        "@type": "Question",
+        "name": "How is the real salary change percentage calculated?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Real Salary Change = ((Salary Year 2 / Inflation Adjustment Factor) - Salary Year 1) / Salary Year 1 × 100. The inflation adjustment factor is (1 + Inflation Rate)^Years between the two salaries."}
+      },
+      {
+        "@type": "Question",
+        "name": "What average inflation rate should I use to compare salaries?",
+        "acceptedAnswer": {"@type": "Answer", "text": "For historical salary comparisons, use the actual average CPI inflation for the period. The US historical long-term average is about 3% per year, but specific years may vary significantly. You can look up official CPI data at the Bureau of Labor Statistics website for exact figures."}
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="logo">
+        <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav">
+        <a href="/">Home</a>
+        <a href="/pages/finance-calculators/">Finance</a>
+        <a href="/pages/business-calculators/">Business</a>
+        <a href="/pages/investment-calculators/">Investment</a>
+        <a href="/inflation-calculators/" aria-current="page">Inflation</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav">
+      <a href="/">Home</a>
+      <a href="/pages/finance-calculators/">Finance Calculators</a>
+      <a href="/pages/business-calculators/">Business Calculators</a>
+      <a href="/pages/investment-calculators/">Investment Calculators</a>
+      <a href="/inflation-calculators/">Inflation Calculators</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <!-- Breadcrumbs -->
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li><a href="/inflation-calculators/">Inflation Calculators</a></li>
+        <li><span aria-current="page">Inflation-Adjusted Salary Calculator</span></li>
+      </ol>
+    </nav>
+
+    <div class="page-content">
+      <div class="article-content">
+        <h1>Inflation-Adjusted Salary Calculator</h1>
+        <p>A raise sounds great — but did it actually increase your standard of living? This calculator compares your salary from two different years, adjusts for inflation, and tells you the real percentage change in your purchasing power, the difference between your nominal and real raises, and whether you actually received a true pay increase or a hidden pay cut.</p>
+
+        <!-- Ad Slot -->
+        <div class="ad-slot ad-slot-leaderboard"></div>
+
+        <!-- Calculator -->
+        <div class="calc-container">
+          <div class="calc-header">
+            <h2>Compare Real vs. Nominal Salary Growth</h2>
+            <p>Find out if your pay raise actually beat inflation</p>
+          </div>
+          <div class="calc-body">
+            <form id="salary-form">
+              <div class="calc-grid calc-grid-2col">
+                <div class="form-group">
+                  <label class="form-label" for="salary1">Salary — Year 1</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="salary1" name="salary1" class="form-input" placeholder="55000" min="1" step="500" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="salary2">Salary — Year 2 (Current)</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="salary2" name="salary2" class="form-input" placeholder="62000" min="1" step="500" required>
+                  </div>
+                </div>
+              </div>
+              <div class="calc-grid calc-grid-2col">
+                <div class="form-group">
+                  <label class="form-label" for="startYear">Start Year</label>
+                  <input type="number" id="startYear" name="startYear" class="form-input" placeholder="2019" min="1900" max="2026" step="1" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="endYear">End Year (Current)</label>
+                  <input type="number" id="endYear" name="endYear" class="form-input" placeholder="2026" min="1901" max="2100" step="1" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="avgInflation">Average Annual Inflation Rate <span class="form-hint">(% per year over this period)</span></label>
+                <div class="input-suffix">
+                  <input type="number" id="avgInflation" name="avgInflation" class="form-input" placeholder="3" min="0.1" max="50" step="0.1" required>
+                  <span class="suffix">%</span>
+                </div>
+              </div>
+
+              <div class="calc-actions">
+                <button type="button" class="btn btn-calculate" onclick="calculateSalary()">Analyze My Raise</button>
+                <button type="button" class="btn btn-reset" onclick="resetSalary()">Reset</button>
+              </div>
+            </form>
+
+            <!-- Results -->
+            <div id="results" class="calc-results hidden">
+              <div class="result-primary">
+                <div class="result-label">Real Salary Change</div>
+                <div class="result-value" id="realSalaryChange">0%</div>
+              </div>
+              <div class="result-grid result-grid-3">
+                <div class="result-item">
+                  <div class="result-label">Nominal Raise</div>
+                  <div class="result-value" id="nominalRaise">0%</div>
+                </div>
+                <div class="result-item">
+                  <div class="result-label">Real Raise (After Inflation)</div>
+                  <div class="result-value" id="realRaise">0%</div>
+                </div>
+                <div class="result-item">
+                  <div class="result-label">Purchasing Power Change</div>
+                  <div class="result-value" id="purchasingPowerChange">$0</div>
+                </div>
+              </div>
+              <div id="raiseVerdict" style="margin-top:1rem; padding:1rem; border-radius:8px; font-weight:600; font-size:var(--text-lg); text-align:center;"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Formula Section -->
+        <section class="content-section">
+          <h2>Inflation-Adjusted Salary Formula</h2>
+          <div class="formula-box">
+            <div class="formula-label">Formulas Used</div>
+            Nominal Raise % = ((Salary Year 2 − Salary Year 1) / Salary Year 1) × 100<br><br>
+            Inflation-Adjusted Salary Year 1 = Salary Year 1 × (1 + Inflation Rate)^Years<br><br>
+            Real Salary Change % = ((Salary Year 2 − Adjusted Salary Year 1) / Adjusted Salary Year 1) × 100<br><br>
+            Purchasing Power Change = Salary Year 2 − Inflation-Adjusted Salary Year 1
+          </div>
+          <p>To compare salaries across years, the starting salary must be adjusted to today's dollars using the cumulative inflation over the period. The real salary change reveals the true change in buying power, while the purchasing power change shows the dollar difference in today's money.</p>
+        </section>
+
+        <!-- How to Use -->
+        <section class="content-section">
+          <h2>How to Use This Calculator</h2>
+          <ol>
+            <li><strong>Enter Salary Year 1:</strong> Your starting salary in the earlier year.</li>
+            <li><strong>Enter Salary Year 2:</strong> Your current or more recent salary.</li>
+            <li><strong>Set the start and end years:</strong> The calculator uses these to determine the number of years for inflation compounding.</li>
+            <li><strong>Enter the average inflation rate:</strong> Use approximately 3% for a typical period, or look up the actual CPI average for your specific years at BLS.gov.</li>
+            <li><strong>Click "Analyze My Raise":</strong> The calculator will instantly tell you whether your raise was a real increase, kept pace, or fell behind inflation.</li>
+          </ol>
+        </section>
+
+        <!-- Example Scenario -->
+        <section class="content-section">
+          <h2>Example Scenario</h2>
+          <p>You earned $55,000 in 2019 and now earn $65,000 in 2026 — a 7-year period with an average inflation rate of 4.5% (reflecting the higher inflation of the early 2020s):</p>
+          <ul>
+            <li><strong>Nominal raise:</strong> ($65,000 − $55,000) / $55,000 = +18.2%</li>
+            <li><strong>Inflation-adjusted 2019 salary in 2026 dollars:</strong> $55,000 × (1.045)^7 = $75,468</li>
+            <li><strong>Real salary change:</strong> ($65,000 − $75,468) / $75,468 = −13.9%</li>
+            <li><strong>Verdict:</strong> Despite a nominal 18.2% raise, your purchasing power actually fell by 13.9% — a real pay cut.</li>
+          </ul>
+          <p>This illustrates how high inflation periods can mask real wage stagnation behind seemingly positive nominal raises.</p>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+          <h2>Frequently Asked Questions</h2>
+          <div class="faq-item">
+            <button class="faq-question">
+              What is a real salary change vs. a nominal salary change?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>A nominal salary change is the raw percentage difference between two salaries. A real salary change adjusts for inflation — it tells you whether your purchasing power actually increased. A nominal raise of 5% in a year with 6% inflation is actually a real pay cut of about 1%.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              How do I know if I got a true raise?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>You got a true raise only if your salary grew faster than inflation over the same period. If your nominal raise percentage exceeds the cumulative inflation rate between the two years, your real purchasing power increased. If not, you effectively took a pay cut in real terms.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              How is the real salary change percentage calculated?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>Real Salary Change = ((Salary Year 2 / Inflation Adjustment Factor) − Salary Year 1) / Salary Year 1 × 100. The inflation adjustment factor is (1 + Inflation Rate)^Years between the two salaries.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              What average inflation rate should I use to compare salaries?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>For historical salary comparisons, use the actual average CPI inflation for the period. The US historical long-term average is about 3% per year, but specific years may vary significantly. You can look up official CPI data at the Bureau of Labor Statistics website for exact figures.</p></div>
+          </div>
+        </section>
+
+        <!-- Related Calculators -->
+        <section class="related-calculators">
+          <h2>Related Calculators</h2>
+          <div class="grid grid-3">
+            <a href="/inflation-calculators/inflation-impact-calculator/" class="card card-link">
+              <h3>Inflation Impact Calculator</h3>
+              <p>Calculate the full dollar impact of inflation on any amount.</p>
+            </a>
+            <a href="/inflation-calculators/future-purchasing-power-calculator/" class="card card-link">
+              <h3>Future Purchasing Power Calculator</h3>
+              <p>See what today's dollars will be worth in any future year.</p>
+            </a>
+            <a href="/inflation-calculators/inflation-adjusted-savings-calculator/" class="card card-link">
+              <h3>Inflation-Adjusted Savings Calculator</h3>
+              <p>Find the real return on your savings after inflation.</p>
+            </a>
+            <a href="/pages/finance-calculators/salary-to-hourly-calculator/" class="card card-link">
+              <h3>Salary to Hourly Calculator</h3>
+              <p>Convert your annual salary to an hourly rate quickly.</p>
+            </a>
+            <a href="/pages/finance-calculators/inflation-calculator/" class="card card-link">
+              <h3>General Inflation Calculator</h3>
+              <p>Project inflation for any amount and time period.</p>
+            </a>
+          </div>
+        </section>
+
+        <!-- Disclaimer -->
+        <div class="disclaimer">
+          <strong>Disclaimer:</strong> This calculator is provided for informational and educational purposes only. It does not constitute financial or employment advice. Use actual historical CPI data for the most accurate comparisons. Consult a qualified financial advisor for personalized guidance.
+        </div>
+
+        <!-- Ad Slot -->
+        <div class="ad-slot ad-slot-rectangle"></div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free online financial calculators to help you make smarter money decisions.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Inflation Tools</h4>
+          <a href="/inflation-calculators/inflation-impact-calculator/">Inflation Impact</a>
+          <a href="/inflation-calculators/future-purchasing-power-calculator/">Purchasing Power</a>
+          <a href="/inflation-calculators/inflation-adjusted-salary-calculator/">Salary Adjustment</a>
+          <a href="/inflation-calculators/inflation-adjusted-retirement-calculator/">Retirement Inflation</a>
+        </div>
+        <div class="footer-col">
+          <h4>Finance</h4>
+          <a href="/pages/finance-calculators/net-worth-calculator/">Net Worth</a>
+          <a href="/pages/finance-calculators/budget-calculator/">Budget (50/30/20)</a>
+          <a href="/pages/finance-calculators/emergency-fund-calculator/">Emergency Fund</a>
+          <a href="/pages/finance-calculators/retirement-savings-calculator/">Retirement Savings</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about/">About</a>
+          <a href="/contact/">Contact</a>
+          <a href="/privacy/">Privacy Policy</a>
+          <a href="/terms/">Terms of Service</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 CalcWise. All rights reserved.</span>
+        <div class="footer-links">
+          <a href="/privacy/">Privacy</a>
+          <a href="/terms/">Terms</a>
+          <a href="/contact/">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateSalary() {
+      if (!CalcWise.validateForm('salary-form')) return;
+      const v = CalcWise.getFormValues('salary-form');
+      const years = v.endYear - v.startYear;
+
+      if (years <= 0) {
+        alert('End year must be after start year.');
+        return;
+      }
+
+      const nominalRaise = ((v.salary2 - v.salary1) / v.salary1) * 100;
+      const adjustedSalary1 = CalcWise.futureValueWithInflation(v.salary1, v.avgInflation, years);
+      const realChange = ((v.salary2 - adjustedSalary1) / adjustedSalary1) * 100;
+      const powerChange = v.salary2 - adjustedSalary1;
+
+      const nominalSign = nominalRaise >= 0 ? '+' : '';
+      const realSign = realChange >= 0 ? '+' : '';
+
+      CalcWise.setText('realSalaryChange', realSign + CalcWise.formatPercent(realChange));
+      CalcWise.setText('nominalRaise', nominalSign + CalcWise.formatPercent(nominalRaise));
+      CalcWise.setText('realRaise', realSign + CalcWise.formatPercent(realChange));
+      CalcWise.setText('purchasingPowerChange', (powerChange >= 0 ? '+' : '') + CalcWise.formatCurrency(powerChange));
+
+      const verdictEl = document.getElementById('raiseVerdict');
+      if (realChange > 1) {
+        verdictEl.style.background = 'var(--color-success-light)';
+        verdictEl.style.color = 'var(--color-success)';
+        verdictEl.textContent = 'You got a TRUE raise! Your purchasing power increased by ' + realChange.toFixed(1) + '%.';
+      } else if (realChange >= -1) {
+        verdictEl.style.background = 'var(--color-warning-light)';
+        verdictEl.style.color = 'var(--color-warning)';
+        verdictEl.textContent = 'Your salary roughly kept pace with inflation — purchasing power is approximately flat.';
+      } else {
+        verdictEl.style.background = 'var(--color-error-light)';
+        verdictEl.style.color = 'var(--color-error)';
+        verdictEl.textContent = 'Hidden pay cut: Your purchasing power DECREASED by ' + Math.abs(realChange).toFixed(1) + '% in real terms.';
+      }
+
+      CalcWise.showResults('results');
+    }
+
+    function resetSalary() {
+      document.getElementById('salary-form').reset();
+      CalcWise.hideResults('results');
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Can Your Business Afford to Hire? Quiz | CalcWise</title>
+  <meta name="description" content="Take this 8-question quiz to find out if your business is financially ready to hire. Assess revenue, margins, cash reserves, and payroll capacity before making your next hire.">
+  <link rel="canonical" href="https://calcwise.io/quizzes/business-quizzes/can-your-business-afford-to-hire/">
+  <meta property="og:title" content="Can Your Business Afford to Hire? Quiz | CalcWise">
+  <meta property="og:description" content="8 questions covering revenue, net margin, cash reserves, and growth trajectory to determine if you're ready to make your next hire.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcwise.io/quizzes/business-quizzes/can-your-business-afford-to-hire/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Can Your Business Afford to Hire? Quiz | CalcWise">
+  <meta name="twitter:description" content="8-question hiring readiness quiz for business owners. Get your result: Hire Now, 3–6 Months, 12 Month Plan, or Not Yet.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+  <link rel="stylesheet" href="/css/quiz.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/"},
+      {"@type": "ListItem", "position": 2, "name": "Quizzes", "item": "https://calcwise.io/quizzes/"},
+      {"@type": "ListItem", "position": 3, "name": "Business Quizzes", "item": "https://calcwise.io/quizzes/business-quizzes/"},
+      {"@type": "ListItem", "position": 4, "name": "Can Your Business Afford to Hire?", "item": "https://calcwise.io/quizzes/business-quizzes/can-your-business-afford-to-hire/"}
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="32" height="32" rx="8" fill="currentColor"/>
+          <path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+        </svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/business-calculators/">Business</a>
+        <a href="/quizzes/" aria-current="page">Quizzes</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/business-calculators/">Business Calculators</a>
+      <a href="/quizzes/">Quizzes</a>
+      <a href="/about.html">About</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/quizzes/">Quizzes</a></li>
+          <li><a href="/quizzes/business-quizzes/">Business Quizzes</a></li>
+          <li><span aria-current="page">Can Your Business Afford to Hire?</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <h1>Can Your Business Afford to Hire?</h1>
+        <p class="intro">Hiring too early is one of the most common ways small businesses damage their cash flow. Hiring too late costs you growth. This 8-question quiz evaluates your revenue base, profit margins, cash reserves, and growth trajectory to give you a clear hiring readiness verdict.</p>
+
+        <!-- Ad Slot -->
+        <div class="ad-slot ad-slot--top" aria-hidden="true"></div>
+
+        <div class="quiz-container" id="quiz">
+          <div class="quiz-progress">
+            <div class="quiz-progress__label">
+              <span id="progress-text">Question 1 of 8</span>
+              <span id="progress-pct">0%</span>
+            </div>
+            <div class="quiz-progress__bar">
+              <div class="quiz-progress__fill" id="progress-bar" style="width:0%"></div>
+            </div>
+          </div>
+          <div id="question-container"></div>
+          <div id="result-container" class="quiz-result hidden"></div>
+        </div>
+
+        <!-- FAQ -->
+        <section class="faq-section" aria-labelledby="faq-heading" style="margin-top:3rem">
+          <h2 id="faq-heading">Frequently Asked Questions</h2>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false"><span>How much revenue do you need before hiring your first employee?</span><svg class="faq-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M10 4v12M4 10h12"/></svg></button>
+            <div class="faq-answer"><p>A common rule of thumb is that your annual revenue should be at least 3–5x the cost of the hire (including salary, benefits, payroll taxes, and equipment). So for a $60,000 salary, you'd want at least $180,000–$300,000 in annual revenue, and the role should either generate or free up significant additional revenue.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false"><span>What is a good revenue per employee benchmark?</span><svg class="faq-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M10 4v12M4 10h12"/></svg></button>
+            <div class="faq-answer"><p>Revenue per employee varies significantly by industry. Service businesses typically target $100,000–$200,000 per employee. Software companies often exceed $400,000 per employee. Retail and restaurants run lower, around $80,000–$120,000. Before hiring, model what your revenue per employee will be after the addition.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false"><span>How much cash reserve should I have before hiring?</span><svg class="faq-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M10 4v12M4 10h12"/></svg></button>
+            <div class="faq-answer"><p>Ideally, you should have at least 3–6 months of the new hire's total compensation cost in cash reserves above your normal operating buffer. New hires often take 3–6 months to reach full productivity, so you need runway to cover their cost during the ramp-up period.</p></div>
+          </div>
+        </section>
+
+        <!-- Related Quizzes -->
+        <section aria-labelledby="related-heading" style="margin-top:3rem">
+          <h2 id="related-heading">Related Business Quizzes</h2>
+          <div class="quiz-grid" style="grid-template-columns:repeat(auto-fill,minmax(260px,1fr))">
+            <a href="/quizzes/business-quizzes/is-your-business-profitable/" class="quiz-card">
+              <div class="quiz-card__badge">Business</div>
+              <h3>Is Your Business Profitable?</h3>
+              <p>Before you hire, make sure your business has a solid profit foundation to support new payroll.</p>
+              <span class="quiz-card__cta">Take quiz <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </a>
+            <a href="/quizzes/business-quizzes/is-your-business-growing-fast-enough/" class="quiz-card">
+              <div class="quiz-card__badge">Business</div>
+              <h3>Is Your Business Growing Fast Enough?</h3>
+              <p>Growth trajectory is a key factor in determining hiring readiness. Check yours now.</p>
+              <span class="quiz-card__cta">Take quiz <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </a>
+            <a href="/quizzes/business-quizzes/how-healthy-is-your-cash-flow/" class="quiz-card">
+              <div class="quiz-card__badge">Business</div>
+              <h3>How Healthy Is Your Cash Flow?</h3>
+              <p>Cash flow is the lifeblood of payroll. Assess your liquidity before taking on a new salary.</p>
+              <span class="quiz-card__cta">Take quiz <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </a>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect width="32" height="32" rx="8" fill="currentColor"/>
+              <path d="M8 10h16M8 16h16M8 22h10" stroke="#1B4D3E" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators and quizzes built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Business Quizzes</h4>
+          <a href="/quizzes/business-quizzes/is-your-business-profitable/">Is It Profitable?</a>
+          <a href="/quizzes/business-quizzes/how-healthy-is-your-cash-flow/">Cash Flow Health</a>
+          <a href="/quizzes/business-quizzes/should-you-start-a-business/">Start a Business?</a>
+          <a href="/quizzes/business-quizzes/">View All</a>
+        </div>
+        <div class="footer-col">
+          <h4>Business Calculators</h4>
+          <a href="/business-calculators/revenue-per-employee-calculator/">Revenue Per Employee</a>
+          <a href="/business-calculators/employee-turnover-cost-calculator/">Employee Turnover Cost</a>
+          <a href="/business-calculators/burn-rate-calculator/">Burn Rate</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about.html">About</a>
+          <a href="/contact.html">Contact</a>
+          <a href="/privacy.html">Privacy Policy</a>
+          <a href="/terms.html">Terms of Use</a>
+          <a href="/disclaimer.html">Disclaimer</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/privacy.html">Privacy</a>
+          <a href="/terms.html">Terms</a>
+          <a href="/disclaimer.html">Disclaimer</a>
+          <a href="/sitemap.xml">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    document.querySelector('.mobile-menu-toggle').addEventListener('click', function() {
+      const nav = document.querySelector('.mobile-nav');
+      const isOpen = nav.classList.toggle('is-open');
+      this.setAttribute('aria-expanded', isOpen);
+      this.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+    });
+    document.querySelectorAll('.faq-question').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        const item = this.closest('.faq-item');
+        const isOpen = item.classList.toggle('is-open');
+        this.setAttribute('aria-expanded', isOpen);
+      });
+    });
+
+    const questions = [
+      {
+        question: "What is your current monthly revenue (average over the last 3 months)?",
+        options: ["Under $10,000", "$10,000–$30,000", "$30,000–$100,000", "Over $100,000"],
+        scores: [0, 1, 2, 3],
+        explanation: "Revenue level sets the baseline for hiring capacity. Higher and more stable revenue means more confidence that payroll can be sustained."
+      },
+      {
+        question: "What is your current net profit margin?",
+        options: ["Negative or breaking even", "1%–10%", "10%–20%", "Over 20%"],
+        scores: [0, 1, 2, 3],
+        explanation: "Healthy margins provide the buffer to absorb new payroll costs. Hiring into thin margins is risky unless the role directly generates additional revenue."
+      },
+      {
+        question: "How many months of operating expenses (including new payroll) do you have in cash reserves?",
+        options: ["Less than 1 month", "1–2 months", "3–5 months", "6+ months"],
+        scores: [0, 1, 2, 3],
+        explanation: "You need runway to cover a new hire during their ramp-up period (typically 3–6 months). Insufficient reserves make hiring a high-risk move even if revenue looks good on paper."
+      },
+      {
+        question: "What is your revenue per current employee (or per owner if solo)?",
+        options: ["Under $75,000 per person", "$75,000–$150,000 per person", "$150,000–$300,000 per person", "Over $300,000 per person"],
+        scores: [0, 1, 2, 3],
+        explanation: "High revenue per person indicates capacity to bring on additional staff efficiently. Low revenue per person may suggest the team is already stretched thin on value generation."
+      },
+      {
+        question: "How urgent is this hire for maintaining or growing your business?",
+        options: ["Nice to have — no immediate need", "Would help but not critical", "Growth is being bottlenecked without this role", "We are losing clients or revenue without this hire"],
+        scores: [0, 1, 2, 3],
+        explanation: "Urgency driven by real revenue impact justifies the risk better than convenience-based hiring. Clearly defined need increases the chance the hire delivers positive ROI."
+      },
+      {
+        question: "Can you clearly define the ROI of this new role within 6–12 months?",
+        options: ["No, it's primarily a cost centre", "Possibly, but it's hard to quantify", "Yes, it should generate or free up measurable value", "Yes, I have a clear model showing the expected return"],
+        scores: [0, 1, 2, 3],
+        explanation: "Every hire should have a clear financial justification. Roles that generate revenue or free the owner to focus on high-value work have the strongest ROI case."
+      },
+      {
+        question: "After adding the new hire's fully loaded cost, how comfortable is your payroll-to-revenue ratio?",
+        options: ["Payroll would exceed 60% of revenue", "Payroll would be 40%–60% of revenue", "Payroll would be 25%–40% of revenue", "Payroll would remain below 25% of revenue"],
+        scores: [0, 1, 2, 3],
+        explanation: "Payroll above 50% of revenue significantly limits profitability and financial flexibility. The 20–30% range is ideal for most service businesses."
+      },
+      {
+        question: "What is your revenue growth trajectory over the last 6 months?",
+        options: ["Declining", "Flat", "Growing slowly (under 5% per month)", "Growing strongly (5%+ per month)"],
+        scores: [0, 1, 2, 3],
+        explanation: "A strong growth trend makes hiring a forward-looking investment. Flat or declining revenue makes new payroll a liability until the trajectory improves."
+      }
+    ];
+
+    const results = [
+      {
+        min: 20,
+        label: "Hire Now",
+        colorClass: "result-score--high",
+        title: "Your Business Is Ready to Hire Now",
+        desc: "Your revenue, margins, cash reserves, and growth trajectory all support making a hire. You have the financial runway and clarity of need to bring someone on confidently.",
+        recs: [
+          "Write a detailed job description with clear 30/60/90-day performance metrics.",
+          "Model the fully loaded cost (salary + benefits + equipment + onboarding) before finalising your budget.",
+          "Set specific revenue or output targets that define success for the new role."
+        ]
+      },
+      {
+        min: 13,
+        label: "3–6 Months",
+        colorClass: "",
+        title: "You Could Be Ready Within 3–6 Months",
+        desc: "Your business shows promise but has one or two gaps — likely in cash reserves or margin — that make hiring slightly premature. A few months of focused improvement will put you in a strong position.",
+        recs: [
+          "Build your cash reserve to at least 3 months of projected fully-loaded payroll.",
+          "Identify and close the 1–2 weakest areas flagged by this quiz.",
+          "Begin the hiring process (job description, recruiting) now so you're ready to move quickly."
+        ]
+      },
+      {
+        min: 7,
+        label: "12 Month Plan",
+        colorClass: "result-score--mid",
+        title: "Build a 12-Month Hiring Plan",
+        desc: "Several financial indicators suggest hiring now would put significant strain on your business. Build the foundation first — improve margins, grow revenue, and strengthen cash reserves over the next year.",
+        recs: [
+          "Create a 12-month revenue and margin target that would justify the hire.",
+          "Consider lower-risk alternatives: freelancers, contractors, or part-time help.",
+          "Use the Revenue Per Employee calculator to model your hiring capacity at different revenue levels."
+        ]
+      },
+      {
+        min: 0,
+        label: "Not Yet",
+        colorClass: "result-score--low",
+        title: "Your Business Is Not Ready to Hire",
+        desc: "Hiring right now would likely cause serious financial strain. The business needs stronger revenue, healthier margins, and more cash runway before taking on additional payroll obligations.",
+        recs: [
+          "Focus entirely on revenue growth and margin improvement before revisiting hiring.",
+          "Explore automation or process improvements to increase capacity without adding headcount.",
+          "Calculate your burn rate to understand exactly how long your current reserves will last.",
+          "Set a clear revenue milestone that must be hit before hiring becomes viable."
+        ]
+      }
+    ];
+
+    const calculatorLinks = [
+      { href: "/business-calculators/revenue-per-employee-calculator/", label: "Revenue Per Employee Calculator" },
+      { href: "/business-calculators/employee-turnover-cost-calculator/", label: "Employee Turnover Cost Calculator" },
+      { href: "/business-calculators/burn-rate-calculator/", label: "Burn Rate Calculator" }
+    ];
+
+    let current = 0;
+    let totalScore = 0;
+    let answered = false;
+
+    function renderQuestion() {
+      answered = false;
+      const q = questions[current];
+      const pct = Math.round((current / questions.length) * 100);
+      document.getElementById('progress-bar').style.width = pct + '%';
+      document.getElementById('progress-text').textContent = 'Question ' + (current + 1) + ' of ' + questions.length;
+      document.getElementById('progress-pct').textContent = pct + '%';
+      document.getElementById('question-container').innerHTML = `
+        <div class="quiz-question">
+          <div class="quiz-question__number">Question ${current + 1}</div>
+          <p class="quiz-question__text">${q.question}</p>
+          <ul class="quiz-options" role="list">
+            ${q.options.map((opt, i) => `
+              <li>
+                <button class="quiz-option" data-index="${i}" onclick="selectAnswer(${i})">
+                  <span class="quiz-option__indicator"></span>
+                  <span>${opt}</span>
+                </button>
+              </li>`).join('')}
+          </ul>
+          <div id="explanation" class="quiz-explanation" style="display:none"></div>
+          <div class="quiz-nav">
+            <span></span>
+            <button class="btn btn-primary" id="next-btn" onclick="nextQuestion()" disabled>
+              ${current < questions.length - 1 ? 'Next Question' : 'See Results'}
+            </button>
+          </div>
+        </div>`;
+    }
+
+    function selectAnswer(idx) {
+      if (answered) return;
+      answered = true;
+      const q = questions[current];
+      const btns = document.querySelectorAll('.quiz-option');
+      const bestIdx = q.scores.indexOf(Math.max(...q.scores));
+      btns.forEach(function(btn, i) {
+        if (i === bestIdx) btn.classList.add('correct');
+        else if (i === idx && idx !== bestIdx) btn.classList.add('incorrect');
+      });
+      btns[idx].classList.add('selected');
+      totalScore += q.scores[idx];
+      const expEl = document.getElementById('explanation');
+      expEl.style.display = 'block';
+      expEl.className = 'quiz-explanation ' + (idx === bestIdx ? 'quiz-explanation--correct' : 'quiz-explanation--incorrect');
+      expEl.textContent = q.explanation;
+      document.getElementById('next-btn').disabled = false;
+    }
+
+    function nextQuestion() {
+      current++;
+      if (current < questions.length) { renderQuestion(); } else { showResult(); }
+    }
+
+    function showResult() {
+      document.getElementById('progress-bar').style.width = '100%';
+      document.getElementById('progress-text').textContent = 'Complete!';
+      document.getElementById('progress-pct').textContent = '100%';
+      document.getElementById('question-container').innerHTML = '';
+      const maxScore = questions.length * 3;
+      const result = results.find(r => totalScore >= r.min);
+      const rc = document.getElementById('result-container');
+      rc.classList.remove('hidden');
+      rc.innerHTML = `
+        <div class="result-score ${result.colorClass}">
+          <span class="result-score__number">${totalScore}/${maxScore}</span>
+          <span class="result-score__label">Score</span>
+        </div>
+        <div class="result-category">${result.label}</div>
+        <h2>${result.title}</h2>
+        <p>${result.desc}</p>
+        <div class="result-recommendations">
+          <h3>Recommended Next Steps</h3>
+          <ul>${result.recs.map(r => `<li>${r}</li>`).join('')}</ul>
+        </div>
+        <div class="result-actions">
+          ${calculatorLinks.map(l => `<a href="${l.href}" class="btn btn-secondary">${l.label}</a>`).join('')}
+        </div>
+        <div class="result-actions" style="margin-top:1rem">
+          <button class="btn btn-outline" onclick="restartQuiz()">Retake Quiz</button>
+        </div>`;
+    }
+
+    function restartQuiz() {
+      current = 0; totalScore = 0;
+      document.getElementById('result-container').classList.add('hidden');
+      renderQuestion();
+    }
+
+    renderQuestion();
+  </script>
+</body>
+</html>

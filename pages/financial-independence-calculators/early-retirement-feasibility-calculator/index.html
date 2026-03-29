@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Early Retirement Feasibility Calculator - CalcWise</title>
+  <meta name="description" content="Check if early retirement is feasible at your target age. Enter current savings, monthly contributions, return rate, and retirement expenses to get a feasibility verdict with gap or surplus.">
+  <link rel="canonical" href="https://calcwise.io/financial-independence-calculators/early-retirement-feasibility-calculator/">
+  <meta property="og:title" content="Early Retirement Feasibility Calculator - CalcWise">
+  <meta property="og:description" content="Is early retirement possible at your target age? Get a clear feasibility verdict, projected savings, and the gap or surplus between your portfolio and your FI number.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcwise.io/financial-independence-calculators/early-retirement-feasibility-calculator/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Early Retirement Feasibility Calculator - CalcWise">
+  <meta name="twitter:description" content="Find out if early retirement is feasible. See projected savings, annual income supported, and your gap or surplus at your target retirement age.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/"},
+      {"@type": "ListItem", "position": 2, "name": "Financial Independence Calculators", "item": "https://calcwise.io/financial-independence-calculators/"},
+      {"@type": "ListItem", "position": 3, "name": "Early Retirement Feasibility Calculator"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do I know if early retirement is feasible?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Early retirement is feasible when your projected portfolio at your target retirement age meets or exceeds your FI number (annual expenses divided by your safe withdrawal rate). This calculator computes that projection and compares it to your required FI number, returning a clear feasibility verdict with any gap or surplus."}
+      },
+      {
+        "@type": "Question",
+        "name": "What return rate should I use for early retirement planning?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Common assumptions are 6–8% nominal returns for a stock-heavy portfolio. A 7% nominal rate (roughly 5% real after inflation) is widely used for planning. Using a more conservative 6% can help stress-test your feasibility against weaker market conditions."}
+      },
+      {
+        "@type": "Question",
+        "name": "What happens if there is a gap at my target retirement age?",
+        "acceptedAnswer": {"@type": "Answer", "text": "A gap means your projected savings won't fully cover your FI number at the target age. You can close the gap by increasing monthly savings, working an additional year or two, reducing planned retirement expenses, or lowering your target retirement age."}
+      },
+      {
+        "@type": "Question",
+        "name": "How does annual income from portfolio work in retirement?",
+        "acceptedAnswer": {"@type": "Answer", "text": "In retirement, your annual income is the amount you can safely withdraw from your portfolio each year. Using the 4% rule, you multiply your projected portfolio by 0.04. This determines if that income is sufficient to cover your planned retirement expenses."}
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="logo">
+        <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav">
+        <a href="/">Home</a>
+        <a href="/pages/finance-calculators/">Finance</a>
+        <a href="/pages/financial-independence-calculators/" aria-current="page">FI Calculators</a>
+        <a href="/pages/investment-calculators/">Investment</a>
+        <a href="/pages/tax-calculators/">Tax</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav">
+      <a href="/">Home</a>
+      <a href="/pages/finance-calculators/">Finance Calculators</a>
+      <a href="/pages/financial-independence-calculators/">FI Calculators</a>
+      <a href="/pages/investment-calculators/">Investment Calculators</a>
+      <a href="/pages/tax-calculators/">Tax Calculators</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li><a href="/pages/financial-independence-calculators/">Financial Independence Calculators</a></li>
+        <li><span aria-current="page">Early Retirement Feasibility Calculator</span></li>
+      </ol>
+    </nav>
+
+    <div class="page-content">
+      <div class="article-content">
+        <h1>Early Retirement Feasibility Calculator</h1>
+        <p>Wondering if you can realistically retire early? This calculator projects your portfolio value at your target retirement age based on current savings, monthly contributions, and expected investment returns. It then compares your projected savings against your required FI number to deliver a clear feasibility verdict — along with the exact dollar gap you need to close or surplus you'll enjoy.</p>
+
+        <div class="ad-slot ad-slot-leaderboard"></div>
+
+        <div class="calc-container">
+          <div class="calc-header">
+            <h2>Early Retirement Feasibility Check</h2>
+            <p>Project your savings and check feasibility at your target retirement age</p>
+          </div>
+          <div class="calc-body">
+            <form id="erf-form">
+              <div class="result-grid result-grid-2" style="gap: var(--space-4);">
+                <div class="form-group">
+                  <label class="form-label" for="currentAge">Current Age</label>
+                  <input type="number" id="currentAge" name="currentAge" class="form-input" placeholder="32" min="18" max="70" step="1" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="targetRetirementAge">Target Retirement Age</label>
+                  <input type="number" id="targetRetirementAge" name="targetRetirementAge" class="form-input" placeholder="50" min="25" max="80" step="1" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="currentSavings">Current Investment Savings</label>
+                  <div class="input-prefix"><span class="prefix">$</span>
+                    <input type="number" id="currentSavings" name="currentSavings" class="form-input" placeholder="75000" min="0" step="1000" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="monthlySavings">Monthly Savings Contributions</label>
+                  <div class="input-prefix"><span class="prefix">$</span>
+                    <input type="number" id="monthlySavings" name="monthlySavings" class="form-input" placeholder="2000" min="0" step="100" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="returnRate">Expected Annual Return</label>
+                  <div class="input-suffix">
+                    <input type="number" id="returnRate" name="returnRate" class="form-input" placeholder="7" min="0" max="20" step="0.1" value="7" required>
+                    <span class="suffix">%</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="annualExpenses">Annual Expenses in Retirement</label>
+                  <div class="input-prefix"><span class="prefix">$</span>
+                    <input type="number" id="annualExpenses" name="annualExpenses" class="form-input" placeholder="60000" min="1000" step="1000" required>
+                  </div>
+                </div>
+              </div>
+              <div class="calc-actions">
+                <button type="button" class="btn btn-calculate" onclick="calcERF()">Check Feasibility</button>
+                <button type="button" class="btn btn-reset" onclick="resetERF()">Reset</button>
+              </div>
+            </form>
+
+            <div id="erf-results" class="calc-results hidden">
+              <div class="result-primary">
+                <div class="result-label">Feasibility Verdict</div>
+                <div class="result-value" id="verdict">—</div>
+              </div>
+              <div class="result-grid result-grid-3" style="margin-top: var(--space-4);">
+                <div class="result-item">
+                  <div class="result-label">Projected Savings at Target Age</div>
+                  <div class="result-value" id="projectedSavings" style="color: var(--color-info);">$0</div>
+                </div>
+                <div class="result-item">
+                  <div class="result-label">Annual Income Supported (4% SWR)</div>
+                  <div class="result-value" id="annualIncome" style="color: var(--color-success);">$0</div>
+                </div>
+                <div class="result-item">
+                  <div class="result-label">Gap / Surplus</div>
+                  <div class="result-value" id="gapSurplus" style="color: var(--color-accent);">$0</div>
+                </div>
+              </div>
+              <div id="erfDetails" style="margin-top: var(--space-5);"></div>
+            </div>
+          </div>
+        </div>
+
+        <section class="content-section">
+          <h2>How Feasibility Is Calculated</h2>
+          <div class="formula-box">
+            <div class="formula-label">Formula</div>
+            Years to Retire = Target Age &minus; Current Age<br>
+            Projected Portfolio = PV &times; (1+r)^n + PMT &times; [((1+r)^n &minus; 1) / r]<br>
+            FI Number = Annual Expenses &divide; 0.04<br>
+            Gap/Surplus = Projected Portfolio &minus; FI Number<br><br>
+            Feasible if Projected Portfolio &ge; FI Number
+          </div>
+          <p>The future value formula compounds your current savings and monthly contributions at your expected annual return over the years remaining until your target retirement age. The result is compared to your FI number (annual expenses divided by 4% SWR) to determine feasibility. A positive gap means you're on track; a negative gap means adjustments are needed.</p>
+        </section>
+
+        <section class="content-section">
+          <h2>How to Use This Calculator</h2>
+          <ol>
+            <li><strong>Enter your current and target ages:</strong> The gap between them determines your accumulation window.</li>
+            <li><strong>Add current savings and monthly contributions:</strong> Include all investment accounts — 401k, IRA, taxable accounts.</li>
+            <li><strong>Set your expected return:</strong> 7% nominal is a common assumption for a diversified stock portfolio.</li>
+            <li><strong>Enter retirement annual expenses:</strong> Estimate what you'll spend per year in retirement in today's dollars.</li>
+            <li><strong>Read the verdict:</strong> Green means feasible, yellow means close, red means a gap — with exact dollar amounts shown.</li>
+          </ol>
+        </section>
+
+        <section class="content-section">
+          <h2>Example Scenario</h2>
+          <p>Jordan is 33 years old with $85,000 saved and contributes $2,500/month. Targeting retirement at age 50 (17 years away) with $65,000/year in retirement expenses, Jordan's FI number is $1,625,000. At a 7% return, the projected portfolio at age 50 is approximately $1,422,000 — a gap of $203,000. The verdict: not quite feasible at the current savings rate. Increasing contributions by $400/month would close the gap and make age-50 retirement achievable.</p>
+        </section>
+
+        <section class="faq-section">
+          <h2>Frequently Asked Questions</h2>
+          <div class="faq-item">
+            <button class="faq-question">How do I know if early retirement is feasible?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>Early retirement is feasible when your projected portfolio at your target age meets or exceeds your FI number — the amount needed to fund 25+ years of expenses at a 4% withdrawal rate. This calculator makes that comparison directly.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">What return rate should I use?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>7% nominal is a widely used assumption based on historical US stock market returns. For more conservative planning, use 6%. Always run a range of scenarios — return assumptions have a large effect on long-term projections.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">What happens if there is a gap?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>A gap means your savings won't fully cover your FI number by your target age. You can close it by increasing monthly contributions, retiring one or two years later, reducing planned expenses, or accepting part-time work income in early retirement (Barista FIRE approach).</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">How does portfolio income work in retirement?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>In retirement, you withdraw from your portfolio each year. Using the 4% rule, you can take 4% of the initial portfolio value annually (adjusted for inflation). This calculator shows the annual income your projected portfolio supports at retirement age.</p></div>
+          </div>
+        </section>
+
+        <section class="related-calculators">
+          <h2>Related Calculators</h2>
+          <div class="grid grid-3">
+            <a href="/pages/financial-independence-calculators/fire-timeline-calculator/" class="card card-link">
+              <h3>FIRE Timeline Calculator</h3>
+              <p>Find the exact date you'll reach your FI number at current savings rate.</p>
+            </a>
+            <a href="/pages/financial-independence-calculators/financial-independence-number-calculator/" class="card card-link">
+              <h3>FI Number Calculator</h3>
+              <p>Calculate your FI number across multiple safe withdrawal rate scenarios.</p>
+            </a>
+            <a href="/pages/financial-independence-calculators/barista-fire-calculator/" class="card card-link">
+              <h3>Barista FIRE Calculator</h3>
+              <p>Close a retirement gap by adding part-time income to a smaller portfolio.</p>
+            </a>
+            <a href="/pages/financial-independence-calculators/coast-fire-calculator/" class="card card-link">
+              <h3>Coast FIRE Calculator</h3>
+              <p>Check if your current savings can coast to your retirement number with no new contributions.</p>
+            </a>
+            <a href="/pages/personal-finance-calculators/financial-independence-calculator/" class="card card-link">
+              <h3>Financial Independence Calculator</h3>
+              <p>Full FI planner with monthly savings scenarios and FI age projection.</p>
+            </a>
+          </div>
+        </section>
+
+        <div class="disclaimer">
+          <strong>Disclaimer:</strong> This calculator is for informational and educational purposes only. Projections assume constant returns and contributions, which do not reflect real-world variability. Actual results will differ. The 4% rule is a historical guideline, not a guarantee. This is not financial advice. Consult a qualified financial advisor before making retirement planning decisions.
+        </div>
+
+        <div class="ad-slot ad-slot-rectangle"></div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free online financial calculators to help you make smarter money decisions.</p>
+        </div>
+        <div class="footer-col">
+          <h4>FI Calculators</h4>
+          <a href="/pages/financial-independence-calculators/fire-timeline-calculator/">FIRE Timeline</a>
+          <a href="/pages/financial-independence-calculators/coast-fire-calculator/">Coast FIRE</a>
+          <a href="/pages/financial-independence-calculators/lean-fire-calculator/">Lean FIRE</a>
+          <a href="/pages/financial-independence-calculators/barista-fire-calculator/">Barista FIRE</a>
+        </div>
+        <div class="footer-col">
+          <h4>Tools</h4>
+          <a href="/pages/finance-calculators/retirement-savings-calculator/">Retirement Savings</a>
+          <a href="/pages/investment-calculators/">Investment Calculators</a>
+          <a href="/pages/tax-calculators/">Tax Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about/">About</a>
+          <a href="/contact/">Contact</a>
+          <a href="/privacy/">Privacy Policy</a>
+          <a href="/terms/">Terms of Service</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 CalcWise. All rights reserved.</span>
+        <div class="footer-links">
+          <a href="/privacy/">Privacy</a>
+          <a href="/terms/">Terms</a>
+          <a href="/contact/">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calcERF() {
+      if (!CalcWise.validateForm('erf-form')) return;
+      const v = CalcWise.getFormValues('erf-form');
+
+      const currentAge = v.currentAge;
+      const targetAge = v.targetRetirementAge;
+      const currentSavings = v.currentSavings;
+      const monthlySavings = v.monthlySavings;
+      const annualReturn = v.returnRate / 100;
+      const monthlyReturn = annualReturn / 12;
+      const annualExpenses = v.annualExpenses;
+
+      if (targetAge <= currentAge) {
+        alert('Target retirement age must be greater than current age.');
+        return;
+      }
+
+      const years = targetAge - currentAge;
+      const n = years * 12;
+      const fiNumber = annualExpenses / 0.04;
+
+      let projectedSavings;
+      if (monthlyReturn === 0) {
+        projectedSavings = currentSavings + monthlySavings * n;
+      } else {
+        const fvFactor = Math.pow(1 + monthlyReturn, n);
+        projectedSavings = currentSavings * fvFactor + monthlySavings * (fvFactor - 1) / monthlyReturn;
+      }
+
+      const annualIncome = projectedSavings * 0.04;
+      const gapSurplus = projectedSavings - fiNumber;
+      const isFeasible = gapSurplus >= 0;
+      const isClose = gapSurplus >= -fiNumber * 0.1;
+
+      let verdictText, verdictColor;
+      if (isFeasible) {
+        verdictText = 'Feasible';
+        verdictColor = 'var(--color-success)';
+      } else if (isClose) {
+        verdictText = 'Almost Feasible';
+        verdictColor = 'var(--color-warning)';
+      } else {
+        verdictText = 'Gap Exists — Adjustments Needed';
+        verdictColor = 'var(--color-error)';
+      }
+
+      document.getElementById('verdict').textContent = verdictText;
+      document.getElementById('verdict').style.color = verdictColor;
+      CalcWise.setText('projectedSavings', CalcWise.formatCurrency(projectedSavings, 0));
+      CalcWise.setText('annualIncome', CalcWise.formatCurrency(annualIncome, 0) + '/yr');
+      const gapEl = document.getElementById('gapSurplus');
+      gapEl.textContent = (gapSurplus >= 0 ? '+' : '') + CalcWise.formatCurrency(gapSurplus, 0);
+      gapEl.style.color = gapSurplus >= 0 ? 'var(--color-success)' : 'var(--color-error)';
+
+      // Detail breakdown
+      const incomeVsExpenses = annualIncome / annualExpenses * 100;
+      let detailHtml = `<div class="table-container"><table class="data-table"><thead><tr><th>Metric</th><th>Value</th></tr></thead><tbody>`;
+      detailHtml += `<tr><td>Years Until Retirement</td><td>${years} years</td></tr>`;
+      detailHtml += `<tr><td>Required FI Number (4% SWR)</td><td>${CalcWise.formatCurrency(fiNumber, 0)}</td></tr>`;
+      detailHtml += `<tr><td>Projected Portfolio</td><td>${CalcWise.formatCurrency(projectedSavings, 0)}</td></tr>`;
+      detailHtml += `<tr><td>Annual Income Supported</td><td>${CalcWise.formatCurrency(annualIncome, 0)}/yr (${incomeVsExpenses.toFixed(1)}% of expenses)</td></tr>`;
+      detailHtml += `<tr><td>Gap / Surplus</td><td style="color:${gapSurplus >= 0 ? 'var(--color-success)' : 'var(--color-error)'}">${(gapSurplus >= 0 ? '+' : '')}${CalcWise.formatCurrency(gapSurplus, 0)}</td></tr>`;
+      detailHtml += `</tbody></table></div>`;
+
+      if (!isFeasible) {
+        const additionalMonthly = (fiNumber - currentSavings * Math.pow(1 + monthlyReturn, n)) * monthlyReturn / (Math.pow(1 + monthlyReturn, n) - 1) - monthlySavings;
+        detailHtml += `<p style="background:var(--color-warning-light);border-radius:var(--radius-md);padding:var(--space-3) var(--space-4);margin-top:var(--space-3);font-size:var(--text-sm);"><strong>To close the gap:</strong> Increase monthly savings by approximately ${CalcWise.formatCurrency(Math.max(0, additionalMonthly), 0)}/month to reach your FI number by age ${targetAge}.</p>`;
+      }
+
+      CalcWise.setHtml('erfDetails', detailHtml);
+      CalcWise.showResults('erf-results');
+    }
+
+    function resetERF() {
+      document.getElementById('erf-form').reset();
+      CalcWise.hideResults('erf-results');
+    }
+  </script>
+</body>
+</html>

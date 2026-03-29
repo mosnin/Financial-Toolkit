@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FIRE Timeline Calculator - CalcWise</title>
+  <meta name="description" content="Calculate your exact FIRE timeline. Enter current savings, monthly contributions, annual expenses, and return rate to find your FIRE number, years to FIRE, and your projected FIRE age.">
+  <link rel="canonical" href="https://calcwise.io/financial-independence-calculators/fire-timeline-calculator/">
+  <meta property="og:title" content="FIRE Timeline Calculator - CalcWise">
+  <meta property="og:description" content="Find your FIRE number and timeline. See months and years to financial independence, your FIRE age, and the impact of saving an extra $500/month.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcwise.io/financial-independence-calculators/fire-timeline-calculator/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="FIRE Timeline Calculator - CalcWise">
+  <meta name="twitter:description" content="Calculate when you'll reach FIRE. Get your FIRE number, years to financial independence, and the impact of increasing your savings rate.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/"},
+      {"@type": "ListItem", "position": 2, "name": "Financial Independence Calculators", "item": "https://calcwise.io/financial-independence-calculators/"},
+      {"@type": "ListItem", "position": 3, "name": "FIRE Timeline Calculator"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the FIRE number?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Your FIRE number is the total portfolio value needed to retire early and sustain your lifestyle indefinitely. It equals 25 times your annual retirement expenses (based on the 4% safe withdrawal rate). Once your investments reach this amount, work becomes optional."}
+      },
+      {
+        "@type": "Question",
+        "name": "How long does it take to reach FIRE?",
+        "acceptedAnswer": {"@type": "Answer", "text": "The time to reach FIRE depends primarily on your savings rate, current savings, investment return, and your FIRE number. Higher savings rates dramatically reduce the timeline — going from a 10% savings rate to 50% can cut years off your FIRE date. This calculator shows your precise timeline given your inputs."}
+      },
+      {
+        "@type": "Question",
+        "name": "Does adding $500/month really make a big difference?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Yes — due to compound growth, an extra $500/month in earlier years can shave 1–3 years off a typical FIRE timeline. The earlier you increase contributions, the greater the compounding benefit. This calculator shows you the exact impact of an additional $500/month on your FIRE date."}
+      },
+      {
+        "@type": "Question",
+        "name": "What FIRE variants exist beyond traditional FIRE?",
+        "acceptedAnswer": {"@type": "Answer", "text": "The main FIRE variants are Lean FIRE (frugal early retirement with minimal expenses), Fat FIRE (comfortable retirement with higher spending), Barista FIRE (semi-retirement with part-time income), and Coast FIRE (investing enough early that compounding handles the rest). Each has a different target number and timeline."}
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="logo">
+        <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav">
+        <a href="/">Home</a>
+        <a href="/pages/finance-calculators/">Finance</a>
+        <a href="/pages/financial-independence-calculators/" aria-current="page">FI Calculators</a>
+        <a href="/pages/investment-calculators/">Investment</a>
+        <a href="/pages/tax-calculators/">Tax</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav">
+      <a href="/">Home</a>
+      <a href="/pages/finance-calculators/">Finance Calculators</a>
+      <a href="/pages/financial-independence-calculators/">FI Calculators</a>
+      <a href="/pages/investment-calculators/">Investment Calculators</a>
+      <a href="/pages/tax-calculators/">Tax Calculators</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li><a href="/pages/financial-independence-calculators/">Financial Independence Calculators</a></li>
+        <li><span aria-current="page">FIRE Timeline Calculator</span></li>
+      </ol>
+    </nav>
+
+    <div class="page-content">
+      <div class="article-content">
+        <h1>FIRE Timeline Calculator</h1>
+        <p>FIRE — Financial Independence, Retire Early — begins with knowing your number and your timeline. This calculator computes your exact FIRE number (25x annual expenses), projects how many months and years it will take to reach it at your current savings rate, estimates your FIRE age, and shows you how much faster you'd reach FIRE by adding just $500/month to your contributions.</p>
+
+        <div class="ad-slot ad-slot-leaderboard"></div>
+
+        <div class="calc-container">
+          <div class="calc-header">
+            <h2>Your FIRE Timeline</h2>
+            <p>Find your FIRE number and projected FIRE date</p>
+          </div>
+          <div class="calc-body">
+            <form id="fire-form">
+              <div class="result-grid result-grid-2" style="gap: var(--space-4);">
+                <div class="form-group">
+                  <label class="form-label" for="currentAge">Current Age</label>
+                  <input type="number" id="currentAge" name="currentAge" class="form-input" placeholder="30" min="18" max="70" step="1" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="currentSavings">Current Savings</label>
+                  <div class="input-prefix"><span class="prefix">$</span>
+                    <input type="number" id="currentSavings" name="currentSavings" class="form-input" placeholder="50000" min="0" step="1000" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="monthlySavings">Monthly Savings</label>
+                  <div class="input-prefix"><span class="prefix">$</span>
+                    <input type="number" id="monthlySavings" name="monthlySavings" class="form-input" placeholder="2000" min="0" step="100" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="annualExpenses">Annual Expenses in Retirement</label>
+                  <div class="input-prefix"><span class="prefix">$</span>
+                    <input type="number" id="annualExpenses" name="annualExpenses" class="form-input" placeholder="50000" min="1000" step="1000" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="returnRate">Expected Annual Return</label>
+                  <div class="input-suffix">
+                    <input type="number" id="returnRate" name="returnRate" class="form-input" placeholder="7" min="0" max="20" step="0.1" value="7" required>
+                    <span class="suffix">%</span>
+                  </div>
+                </div>
+              </div>
+              <div class="calc-actions">
+                <button type="button" class="btn btn-calculate" onclick="calcFIRE()">Calculate FIRE Timeline</button>
+                <button type="button" class="btn btn-reset" onclick="resetFIRE()">Reset</button>
+              </div>
+            </form>
+
+            <div id="fire-results" class="calc-results hidden">
+              <div class="result-primary">
+                <div class="result-label">Your FIRE Number</div>
+                <div class="result-value" id="fireNumber">$0</div>
+              </div>
+              <div class="result-grid result-grid-3" style="margin-top: var(--space-4);">
+                <div class="result-item">
+                  <div class="result-label">Time to FIRE</div>
+                  <div class="result-value" id="timeToFire" style="color: var(--color-success);">—</div>
+                </div>
+                <div class="result-item">
+                  <div class="result-label">FIRE Age</div>
+                  <div class="result-value" id="fireAge" style="color: var(--color-primary);">—</div>
+                </div>
+                <div class="result-item">
+                  <div class="result-label">With +$500/mo Savings</div>
+                  <div class="result-value" id="with500" style="color: var(--color-accent);">—</div>
+                </div>
+              </div>
+              <div id="fireDetails" style="margin-top: var(--space-5);"></div>
+            </div>
+          </div>
+        </div>
+
+        <section class="content-section">
+          <h2>How the FIRE Timeline Is Calculated</h2>
+          <div class="formula-box">
+            <div class="formula-label">Formula</div>
+            FIRE Number = Annual Expenses &times; 25 (4% SWR)<br>
+            FV(month n) = PV &times; (1+r)^n + PMT &times; [(1+r)^n &minus; 1] / r<br>
+            Months to FIRE = first n where FV &ge; FIRE Number<br><br>
+            +$500/mo Impact = Months to FIRE (base) &minus; Months to FIRE (PMT+500)
+          </div>
+          <p>The calculator iterates month by month, compounding your current savings and adding your monthly contribution at the monthly rate (annual rate / 12), until the growing portfolio meets your FIRE number. The same calculation runs again with an extra $500/month to show the time savings from a modest contribution increase.</p>
+        </section>
+
+        <section class="content-section">
+          <h2>How to Use This Calculator</h2>
+          <ol>
+            <li><strong>Enter your current age and savings:</strong> Include all investment accounts.</li>
+            <li><strong>Add your monthly savings amount:</strong> This is your total monthly investment contribution.</li>
+            <li><strong>Enter annual retirement expenses:</strong> What you'll spend each year in retirement in today's dollars.</li>
+            <li><strong>Set your expected return:</strong> 7% is a standard nominal return assumption for diversified portfolios.</li>
+            <li><strong>See your timeline:</strong> Years, months, and FIRE age — plus the impact of $500 more per month.</li>
+          </ol>
+        </section>
+
+        <section class="content-section">
+          <h2>Example Scenario</h2>
+          <p>Casey is 29 with $40,000 saved, contributes $2,200/month, and plans to spend $55,000/year in retirement. FIRE number: $1,375,000 (25x). At 7% annual return, Casey reaches FIRE in approximately 19 years and 4 months, at age 48. By increasing monthly savings to $2,700 (+$500), the FIRE date moves up by about 1 year and 8 months — FIRE at age 47 instead of 48.</p>
+        </section>
+
+        <section class="faq-section">
+          <h2>Frequently Asked Questions</h2>
+          <div class="faq-item">
+            <button class="faq-question">What is the FIRE number?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>Your FIRE number is 25x your annual retirement expenses — the portfolio value at which a 4% withdrawal rate covers all your costs indefinitely. Once you hit it, you've achieved financial independence and can retire early.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">How long does FIRE typically take?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>Timeline depends on savings rate, current savings, and expenses. Saving 50%+ of income can lead to FIRE in 15–20 years from a zero balance. Higher savings rates compress the timeline significantly — it's the single biggest lever in FIRE planning.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">Does an extra $500/month really matter?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>Yes — due to compounding, an extra $500/month can shave 1–3 years off most FIRE timelines. The earlier it's added, the greater the compounding benefit. Small consistent increases in savings rate have outsized effects on FIRE dates.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">What are the main FIRE variants?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>Lean FIRE targets minimal expenses, Fat FIRE targets high spending, Barista FIRE uses a smaller portfolio plus part-time income, and Coast FIRE means investing enough early to let compounding handle the rest. Each variant has different numbers and timelines.</p></div>
+          </div>
+        </section>
+
+        <section class="related-calculators">
+          <h2>Related Calculators</h2>
+          <div class="grid grid-3">
+            <a href="/pages/financial-independence-calculators/lean-fire-calculator/" class="card card-link">
+              <h3>Lean FIRE Calculator</h3>
+              <p>Calculate your FIRE number for a frugal, minimalist retirement.</p>
+            </a>
+            <a href="/pages/financial-independence-calculators/barista-fire-calculator/" class="card card-link">
+              <h3>Barista FIRE Calculator</h3>
+              <p>Reach FIRE sooner with a smaller portfolio plus part-time income.</p>
+            </a>
+            <a href="/pages/financial-independence-calculators/coast-fire-calculator/" class="card card-link">
+              <h3>Coast FIRE Calculator</h3>
+              <p>Find the lump sum today that lets compounding handle the rest.</p>
+            </a>
+            <a href="/pages/financial-independence-calculators/financial-independence-number-calculator/" class="card card-link">
+              <h3>FI Number Calculator</h3>
+              <p>Compare your FI number across multiple safe withdrawal rate scenarios.</p>
+            </a>
+            <a href="/pages/personal-finance-calculators/financial-independence-calculator/" class="card card-link">
+              <h3>Financial Independence Calculator</h3>
+              <p>Full FI planner with savings scenarios and FI age projection.</p>
+            </a>
+          </div>
+        </section>
+
+        <div class="disclaimer">
+          <strong>Disclaimer:</strong> This calculator is for informational and educational purposes only. FIRE timeline projections assume constant investment returns and contributions. Actual results will vary due to market volatility, tax changes, and life events. The 4% rule is a historical benchmark, not a guarantee. This is not financial advice. Consult a qualified financial advisor before making major financial decisions.
+        </div>
+
+        <div class="ad-slot ad-slot-rectangle"></div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free online financial calculators to help you make smarter money decisions.</p>
+        </div>
+        <div class="footer-col">
+          <h4>FI Calculators</h4>
+          <a href="/pages/financial-independence-calculators/lean-fire-calculator/">Lean FIRE</a>
+          <a href="/pages/financial-independence-calculators/coast-fire-calculator/">Coast FIRE</a>
+          <a href="/pages/financial-independence-calculators/barista-fire-calculator/">Barista FIRE</a>
+          <a href="/pages/financial-independence-calculators/safe-withdrawal-rate-calculator/">SWR Calculator</a>
+        </div>
+        <div class="footer-col">
+          <h4>Tools</h4>
+          <a href="/pages/finance-calculators/retirement-savings-calculator/">Retirement Savings</a>
+          <a href="/pages/investment-calculators/">Investment Calculators</a>
+          <a href="/pages/tax-calculators/">Tax Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about/">About</a>
+          <a href="/contact/">Contact</a>
+          <a href="/privacy/">Privacy Policy</a>
+          <a href="/terms/">Terms of Service</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 CalcWise. All rights reserved.</span>
+        <div class="footer-links">
+          <a href="/privacy/">Privacy</a>
+          <a href="/terms/">Terms</a>
+          <a href="/contact/">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function solveMonthsToFIRE(currentSavings, monthlySavings, monthlyRate, fireNumber) {
+      for (let m = 1; m <= 720; m++) {
+        let fv;
+        if (monthlyRate === 0) {
+          fv = currentSavings + monthlySavings * m;
+        } else {
+          const fvFactor = Math.pow(1 + monthlyRate, m);
+          fv = currentSavings * fvFactor + monthlySavings * (fvFactor - 1) / monthlyRate;
+        }
+        if (fv >= fireNumber) return m;
+      }
+      return null;
+    }
+
+    function calcFIRE() {
+      if (!CalcWise.validateForm('fire-form')) return;
+      const v = CalcWise.getFormValues('fire-form');
+
+      const currentAge = v.currentAge;
+      const currentSavings = v.currentSavings;
+      const monthlySavings = v.monthlySavings;
+      const annualExpenses = v.annualExpenses;
+      const annualReturn = v.returnRate / 100;
+      const monthlyRate = annualReturn / 12;
+
+      const fireNumber = annualExpenses * 25;
+
+      if (currentSavings >= fireNumber) {
+        CalcWise.setText('fireNumber', CalcWise.formatCurrency(fireNumber, 0));
+        CalcWise.setText('timeToFire', 'Already at FIRE!');
+        CalcWise.setText('fireAge', 'Age ' + currentAge);
+        CalcWise.setText('with500', 'Already at FIRE!');
+        CalcWise.setHtml('fireDetails', '<p style="color:var(--color-success);font-weight:600;">Congratulations — your current savings already meets your FIRE number!</p>');
+        CalcWise.showResults('fire-results');
+        return;
+      }
+
+      const months = solveMonthsToFIRE(currentSavings, monthlySavings, monthlyRate, fireNumber);
+      const monthsWith500 = solveMonthsToFIRE(currentSavings, monthlySavings + 500, monthlyRate, fireNumber);
+
+      const years = months ? Math.floor(months / 12) : null;
+      const remainingMonths = months ? months % 12 : null;
+      const fireAge = months ? currentAge + years + (remainingMonths > 0 ? 1 : 0) : null;
+
+      CalcWise.setText('fireNumber', CalcWise.formatCurrency(fireNumber, 0));
+
+      if (months) {
+        const timeStr = years > 0 ? `${years} yr${years !== 1 ? 's' : ''} ${remainingMonths} mo` : `${remainingMonths} months`;
+        CalcWise.setText('timeToFire', timeStr);
+        CalcWise.setText('fireAge', 'Age ' + (currentAge + Math.ceil(months / 12)));
+      } else {
+        CalcWise.setText('timeToFire', '60+ years');
+        CalcWise.setText('fireAge', '—');
+      }
+
+      if (monthsWith500 && months) {
+        const savedMonths = months - monthsWith500;
+        const savedYrs = Math.floor(savedMonths / 12);
+        const savedMos = savedMonths % 12;
+        const savedStr = savedYrs > 0 ? `${savedYrs}y ${savedMos}m sooner` : `${savedMos} months sooner`;
+        CalcWise.setText('with500', savedStr);
+      } else {
+        CalcWise.setText('with500', '—');
+      }
+
+      // Detail table: savings milestones
+      const milestones = [0.25, 0.5, 0.75, 1.0];
+      let detailHtml = `<div class="table-container"><table class="data-table"><thead><tr><th>Milestone</th><th>Portfolio Value</th><th>Approx. Month Reached</th></tr></thead><tbody>`;
+      milestones.forEach(pct => {
+        const target = fireNumber * pct;
+        const mth = solveMonthsToFIRE(currentSavings, monthlySavings, monthlyRate, target);
+        const yrs = mth ? Math.floor(mth / 12) : null;
+        const mos = mth ? mth % 12 : null;
+        const label = pct === 1.0 ? 'FIRE !' : `${pct * 100}% of FIRE`;
+        const timeLabel = mth ? (yrs > 0 ? `${yrs}y ${mos}m` : `${mos}mo`) : '—';
+        detailHtml += `<tr><td>${label}</td><td>${CalcWise.formatCurrency(target, 0)}</td><td>${timeLabel}</td></tr>`;
+      });
+      detailHtml += `</tbody></table></div>`;
+      detailHtml += `<p style="font-size:var(--text-sm);color:var(--color-text-secondary);margin-top:var(--space-3);">FIRE Number: ${CalcWise.formatCurrency(fireNumber, 0)} &bull; ${v.returnRate}% annual return &bull; ${CalcWise.formatCurrency(monthlySavings, 0)}/mo contributions</p>`;
+      CalcWise.setHtml('fireDetails', detailHtml);
+      CalcWise.showResults('fire-results');
+    }
+
+    function resetFIRE() {
+      document.getElementById('fire-form').reset();
+      CalcWise.hideResults('fire-results');
+    }
+  </script>
+</body>
+</html>

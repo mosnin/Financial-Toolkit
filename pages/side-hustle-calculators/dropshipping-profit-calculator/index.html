@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dropshipping Profit Calculator - Net Margin & Break-Even Price | CalcWise</title>
+  <meta name="description" content="Calculate dropshipping net profit per sale, profit margin, monthly profit at volume, and the minimum selling price needed to break even.">
+  <link rel="canonical" href="https://calcwise.io/side-hustle-calculators/dropshipping-profit-calculator/">
+
+  <meta property="og:title" content="Dropshipping Profit Calculator - CalcWise">
+  <meta property="og:description" content="Find your dropshipping net profit, margin, and break-even price after platform fees, ad spend, and returns.">
+  <meta property="og:url" content="https://calcwise.io/side-hustle-calculators/dropshipping-profit-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Dropshipping Profit Calculator - CalcWise">
+  <meta name="twitter:description" content="Find your dropshipping net profit, margin, and break-even price after platform fees, ad spend, and returns.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Side Hustle Calculators", "item": "https://calcwise.io/side-hustle-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "Dropshipping Profit Calculator", "item": "https://calcwise.io/side-hustle-calculators/dropshipping-profit-calculator/" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is a good profit margin for dropshipping?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Most successful dropshippers target a net profit margin of 15–30% after all costs including ad spend. Margins below 10% leave very little room for error. High-ticket dropshipping often achieves better margins with lower volume." }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I calculate the break-even selling price for dropshipping?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Break-even price = (Supplier Cost + Ad Spend per Sale) / (1 - Platform Fee % - Payment Processing % - Return Rate %). This is the minimum price where you neither gain nor lose money." }
+      },
+      {
+        "@type": "Question",
+        "name": "How does a return rate affect dropshipping profit?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Return rate directly erodes profit because you typically refund the customer but may not recover supplier costs or ad spend. A 5% return rate on a $30 product can eliminate hundreds of dollars of monthly profit at scale." }
+      },
+      {
+        "@type": "Question",
+        "name": "What platform fees should I expect for dropshipping?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Shopify charges 0–2% transaction fees plus payment processing (typically 2.9% + $0.30 on Shopify Payments). Shopify Basic plans have no transaction fee if using Shopify Payments. Third-party payment processors add 0.5–2% extra fees." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/business-calculators/">Business</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/business-calculators/">Business Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container page-content">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/side-hustle-calculators/">Side Hustle Calculators</a></li>
+          <li><span aria-current="page">Dropshipping Profit Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="calc-page-layout">
+        <div class="calc-page-main">
+          <h1>Dropshipping Profit Calculator</h1>
+          <p class="mt-4 mb-8" style="font-size:var(--text-lg); color:var(--color-gray-600); max-width:700px; line-height:var(--leading-relaxed);">Calculate your true dropshipping net profit per sale after supplier cost, platform fees, payment processing, advertising spend, and return rate. Find your break-even selling price and monthly profit projection at your target volume.</p>
+
+          <div class="calc-container">
+            <div class="calc-header">
+              <h2>Calculate Dropshipping Profit</h2>
+              <p>Enter your product details, fees, and monthly volume</p>
+            </div>
+            <div class="calc-body">
+              <form id="dropshippingForm" novalidate>
+                <div class="form-group">
+                  <label class="form-label" for="sellingPrice">Selling Price <span class="form-hint">Price customer pays in your store</span></label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="sellingPrice" name="sellingPrice" class="form-input" placeholder="49.99" min="0" step="0.01" required>
+                  </div>
+                  <span class="form-error">Please enter a valid selling price.</span>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="supplierCost">Supplier Cost <span class="form-hint">What you pay the supplier per unit including shipping</span></label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="supplierCost" name="supplierCost" class="form-input" placeholder="15.00" min="0" step="0.01" required>
+                  </div>
+                  <span class="form-error">Please enter a valid supplier cost.</span>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="platformFee">Platform Fee <span class="form-hint">Shopify/WooCommerce transaction fee % (e.g. 2 for 2%)</span></label>
+                  <div class="input-suffix">
+                    <input type="number" id="platformFee" name="platformFee" class="form-input" placeholder="2" min="0" max="20" step="0.1" required>
+                    <span class="suffix">%</span>
+                  </div>
+                  <span class="form-error">Please enter a valid platform fee.</span>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="paymentProcessing">Payment Processing Fee <span class="form-hint">Credit card / payment processor % (e.g. 2.9 for 2.9%)</span></label>
+                  <div class="input-suffix">
+                    <input type="number" id="paymentProcessing" name="paymentProcessing" class="form-input" placeholder="2.9" min="0" max="10" step="0.1" required>
+                    <span class="suffix">%</span>
+                  </div>
+                  <span class="form-error">Please enter a valid processing fee.</span>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="adSpend">Ad Spend Per Sale <span class="form-hint">Average advertising cost to generate one sale</span></label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="adSpend" name="adSpend" class="form-input" placeholder="8.00" min="0" step="0.01" required>
+                  </div>
+                  <span class="form-error">Please enter a valid ad spend per sale.</span>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="returnRate">Return Rate <span class="form-hint">Percentage of orders that are returned (e.g. 5 for 5%)</span></label>
+                  <div class="input-suffix">
+                    <input type="number" id="returnRate" name="returnRate" class="form-input" placeholder="5" min="0" max="100" step="0.1" required>
+                    <span class="suffix">%</span>
+                  </div>
+                  <span class="form-error">Please enter a valid return rate.</span>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="monthlySales">Monthly Sales Volume <span class="form-hint">Number of orders per month</span></label>
+                  <div class="input-suffix">
+                    <input type="number" id="monthlySales" name="monthlySales" class="form-input" placeholder="100" min="1" step="1" required>
+                    <span class="suffix">orders</span>
+                  </div>
+                  <span class="form-error">Please enter a valid monthly sales volume.</span>
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calculateDropshipping()">Calculate Dropshipping Profit</button>
+                  <button type="button" class="btn btn-reset" onclick="resetForm()">Reset</button>
+                </div>
+              </form>
+
+              <div id="results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">Net Profit Per Sale</div>
+                  <div class="result-value" id="resultNetPerSale">$0</div>
+                </div>
+                <div class="result-grid result-grid-2">
+                  <div class="result-item">
+                    <div class="result-label">Profit Margin</div>
+                    <div class="result-value" id="resultMargin">0%</div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Monthly Profit</div>
+                    <div class="result-value" id="resultMonthlyProfit">$0</div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Break-Even Selling Price</div>
+                    <div class="result-value" id="resultBreakEven">$0</div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Total Fees Per Sale</div>
+                    <div class="result-value" id="resultTotalFees">$0</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="disclaimer">
+            <strong>Disclaimer:</strong> This calculator provides estimates for educational purposes only. Actual results depend on supplier reliability, return policies, advertising performance, and market conditions. Always validate with real data before scaling.
+          </div>
+
+          <div class="ad-slot ad-slot-leaderboard"></div>
+
+          <section class="content-section">
+            <h2>Dropshipping Profit Formulas</h2>
+            <div class="formula-box">
+              <div class="formula-label">Fees Per Sale</div>
+              Fees = (Platform Fee % + Payment Processing %) x Selling Price
+            </div>
+            <div class="formula-box">
+              <div class="formula-label">Return Cost Per Sale</div>
+              Return Cost = Return Rate % x (Supplier Cost + Ad Spend)
+            </div>
+            <div class="formula-box">
+              <div class="formula-label">Net Profit Per Sale</div>
+              Net Profit = Selling Price - Supplier Cost - Fees - Ad Spend - Return Cost
+            </div>
+            <div class="formula-box">
+              <div class="formula-label">Monthly Profit</div>
+              Monthly Profit = Net Profit Per Sale x Monthly Sales Volume
+            </div>
+            <div class="formula-box">
+              <div class="formula-label">Break-Even Selling Price</div>
+              Break-Even = (Supplier Cost + Ad Spend) / (1 - Platform % - Processing % - Return Rate %)
+            </div>
+          </section>
+
+          <section class="content-section">
+            <h2>How to Use This Calculator</h2>
+            <ol>
+              <li><strong>Enter the selling price</strong> — what customers pay in your store.</li>
+              <li><strong>Enter supplier cost</strong> — the total amount you pay the supplier, including their shipping charge.</li>
+              <li><strong>Enter platform and payment processing fees</strong> — check your Shopify plan and payment processor for exact rates.</li>
+              <li><strong>Enter ad spend per sale</strong> — divide your total monthly ad spend by the number of sales it generates.</li>
+              <li><strong>Enter your return rate</strong> — use industry averages or your own data (5–10% is common for general merchandise).</li>
+              <li><strong>Enter monthly sales volume</strong> to see projected monthly profit at scale.</li>
+              <li><strong>Review the break-even price</strong> — if your current price is below this, you are losing money per sale.</li>
+            </ol>
+          </section>
+
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>Alex runs a Shopify store selling a fitness product for <strong>$49.99</strong>. Supplier cost is <strong>$15.00</strong>, platform fee is <strong>2%</strong>, payment processing is <strong>2.9%</strong>, ad spend per sale is <strong>$8.00</strong>, return rate is <strong>5%</strong>, and he sells <strong>100 units/month</strong>.</p>
+            <ul>
+              <li><strong>Platform + processing fees:</strong> $49.99 x 4.9% = $2.45</li>
+              <li><strong>Return cost:</strong> 5% x ($15 + $8) = $1.15</li>
+              <li><strong>Net profit per sale:</strong> $49.99 - $15 - $2.45 - $8 - $1.15 = $23.39</li>
+              <li><strong>Profit margin:</strong> ($23.39 / $49.99) x 100 = 46.8%</li>
+              <li><strong>Monthly profit:</strong> $23.39 x 100 = $2,339</li>
+            </ul>
+            <p>A 46.8% margin is strong for dropshipping, leaving good runway for increased ad spend or price testing.</p>
+          </section>
+
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What is a good profit margin for dropshipping?
+                <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Most successful dropshippers target a net profit margin of 15–30% after all costs including ad spend. Margins below 10% leave very little room for error. High-ticket dropshipping often achieves better margins with lower volume.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                How do I calculate break-even selling price for dropshipping?
+                <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 011-1z"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Break-even price = (Supplier Cost + Ad Spend per Sale) / (1 - Platform Fee % - Payment Processing % - Return Rate %). This is the minimum price where you neither gain nor lose money.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                How does a return rate affect dropshipping profit?
+                <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 011-1z"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Return rate directly erodes profit because you typically refund the customer but may not recover supplier costs or ad spend. A 5% return rate on a $30 product can eliminate hundreds of dollars of monthly profit at scale.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What platform fees should I expect for dropshipping?
+                <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 011-1z"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Shopify charges 0–2% transaction fees plus payment processing (typically 2.9% + $0.30 on Shopify Payments). Shopify Basic plans have no transaction fee if using Shopify Payments. Third-party payment processors add 0.5–2% extra fees.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/side-hustle-calculators/amazon-seller-profit-calculator/" class="card card-link">
+                <h3>Amazon Seller Profit Calculator</h3>
+                <p>Calculate net profit and ROI for Amazon FBA products.</p>
+              </a>
+              <a href="/side-hustle-calculators/etsy-profit-calculator/" class="card card-link">
+                <h3>Etsy Profit Calculator</h3>
+                <p>See your real Etsy profit after all platform fees and time costs.</p>
+              </a>
+              <a href="/side-hustle-calculators/side-hustle-profit-calculator/" class="card card-link">
+                <h3>Side Hustle Profit Calculator</h3>
+                <p>Evaluate overall monthly profitability of any side hustle.</p>
+              </a>
+              <a href="/business-calculators/break-even-calculator/" class="card card-link">
+                <h3>Break-Even Calculator</h3>
+                <p>Calculate the exact units needed to cover your fixed costs.</p>
+              </a>
+              <a href="/business-calculators/profit-margin-calculator/" class="card card-link">
+                <h3>Profit Margin Calculator</h3>
+                <p>Quickly calculate gross profit margin for any product.</p>
+              </a>
+            </div>
+          </section>
+        </div>
+
+        <aside class="calc-page-sidebar">
+          <div class="sidebar-card">
+            <h3>Side Hustle Calculators</h3>
+            <a href="/side-hustle-calculators/side-hustle-profit-calculator/">Side Hustle Profit</a>
+            <a href="/side-hustle-calculators/etsy-profit-calculator/">Etsy Profit</a>
+            <a href="/side-hustle-calculators/amazon-seller-profit-calculator/">Amazon Seller Profit</a>
+            <a href="/side-hustle-calculators/dropshipping-profit-calculator/">Dropshipping Profit</a>
+            <a href="/side-hustle-calculators/youtube-earnings-calculator/">YouTube Earnings</a>
+            <a href="/side-hustle-calculators/tiktok-earnings-calculator/">TikTok Earnings</a>
+            <a href="/side-hustle-calculators/freelance-hourly-rate-calculator/">Freelance Hourly Rate</a>
+            <a href="/side-hustle-calculators/delivery-driver-earnings-calculator/">Delivery Driver Earnings</a>
+            <a href="/side-hustle-calculators/rideshare-income-calculator/">Rideshare Income</a>
+            <a href="/side-hustle-calculators/online-course-profit-calculator/">Online Course Profit</a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Real Estate</h4>
+          <a href="/real-estate-calculators/">All Real Estate</a>
+        </div>
+        <div class="footer-col">
+          <h4>Finance</h4>
+          <a href="/finance-calculators/">All Finance</a>
+        </div>
+        <div class="footer-col">
+          <h4>Business</h4>
+          <a href="/business-calculators/">All Business</a>
+        </div>
+        <div class="footer-col">
+          <h4>Side Hustles</h4>
+          <a href="/side-hustle-calculators/">All Side Hustle</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/about.html">About</a>
+          <a href="/contact.html">Contact</a>
+          <a href="/privacy.html">Privacy</a>
+          <a href="/terms.html">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateDropshipping() {
+      if (!CalcWise.validateForm('dropshippingForm')) return;
+
+      const price      = CalcWise.parseNumber(document.getElementById('sellingPrice').value);
+      const supplier   = CalcWise.parseNumber(document.getElementById('supplierCost').value);
+      const platPct    = CalcWise.parseNumber(document.getElementById('platformFee').value);
+      const procPct    = CalcWise.parseNumber(document.getElementById('paymentProcessing').value);
+      const adSpend    = CalcWise.parseNumber(document.getElementById('adSpend').value);
+      const returnPct  = CalcWise.parseNumber(document.getElementById('returnRate').value);
+      const volume     = CalcWise.parseNumber(document.getElementById('monthlySales').value);
+
+      if (price <= 0) { alert('Selling price must be greater than zero.'); return; }
+
+      const totalFeePct  = (platPct + procPct) / 100;
+      const feesPerSale  = price * totalFeePct;
+      const returnCost   = (returnPct / 100) * (supplier + adSpend);
+      const netPerSale   = price - supplier - feesPerSale - adSpend - returnCost;
+      const margin       = (netPerSale / price) * 100;
+      const monthlyProfit= netPerSale * volume;
+
+      // Break-even: price = (supplier + adSpend) / (1 - totalFeePct - returnPct/100)
+      const denominator  = 1 - totalFeePct - (returnPct / 100);
+      const breakEven    = denominator > 0 ? (supplier + adSpend) / denominator : 0;
+
+      CalcWise.setText('resultNetPerSale',     CalcWise.formatCurrency(netPerSale));
+      CalcWise.setText('resultMargin',         CalcWise.formatPercent(margin));
+      CalcWise.setText('resultMonthlyProfit',  CalcWise.formatCurrency(monthlyProfit));
+      CalcWise.setText('resultBreakEven',      CalcWise.formatCurrency(breakEven));
+      CalcWise.setText('resultTotalFees',      CalcWise.formatCurrency(feesPerSale));
+
+      CalcWise.showResults('results');
+    }
+
+    function resetForm() {
+      document.getElementById('dropshippingForm').reset();
+      CalcWise.hideResults('results');
+    }
+  </script>
+</body>
+</html>

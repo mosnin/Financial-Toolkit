@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Etsy Profit Calculator - Net Profit Per Item After All Fees | CalcWise</title>
+  <meta name="description" content="Calculate your true Etsy profit per item after listing fees, transaction fees, payment processing, shipping, and your time. See your exact profit margin.">
+  <link rel="canonical" href="https://calcwise.io/side-hustle-calculators/etsy-profit-calculator/">
+
+  <meta property="og:title" content="Etsy Profit Calculator - CalcWise">
+  <meta property="og:description" content="See your exact Etsy profit after all fees including the 6.5% transaction fee, payment processing, listing fee, and your time cost.">
+  <meta property="og:url" content="https://calcwise.io/side-hustle-calculators/etsy-profit-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Etsy Profit Calculator - CalcWise">
+  <meta name="twitter:description" content="See your exact Etsy profit after all fees including the 6.5% transaction fee, payment processing, listing fee, and your time cost.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Side Hustle Calculators", "item": "https://calcwise.io/side-hustle-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "Etsy Profit Calculator", "item": "https://calcwise.io/side-hustle-calculators/etsy-profit-calculator/" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What fees does Etsy charge sellers?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Etsy charges a $0.20 listing fee per item, a 6.5% transaction fee on the sale price (including shipping), and a payment processing fee of 3% plus $0.25 per transaction when using Etsy Payments." }
+      },
+      {
+        "@type": "Question",
+        "name": "Does Etsy charge fees on shipping?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Etsy's 6.5% transaction fee applies to the total order amount, which includes the item price plus any shipping charges you collect. Only your actual out-of-pocket shipping cost is a true expense." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is a good profit margin on Etsy?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Most successful Etsy sellers aim for a profit margin of 30–50% after all Etsy fees and material costs. Once you factor in your time, margins tighten — so pricing your time correctly is critical." }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I price items on Etsy for profit?",
+        "acceptedAnswer": { "@type": "Answer", "text": "A common Etsy pricing formula is: Selling Price = (Material Cost + Labor Cost) x 2-3 for wholesale, and x 4-6 for retail. Use this calculator to work backwards from your desired profit margin to find the right price." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/business-calculators/">Business</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/business-calculators/">Business Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container page-content">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/side-hustle-calculators/">Side Hustle Calculators</a></li>
+          <li><span aria-current="page">Etsy Profit Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="calc-page-layout">
+        <div class="calc-page-main">
+          <h1>Etsy Profit Calculator</h1>
+          <p class="mt-4 mb-8" style="font-size:var(--text-lg); color:var(--color-gray-600); max-width:700px; line-height:var(--leading-relaxed);">Calculate your exact net profit per Etsy item after the $0.20 listing fee, 6.5% transaction fee, 3% + $0.25 payment processing fee, material costs, shipping, and your time. Price your handmade products correctly from day one.</p>
+
+          <div class="calc-container">
+            <div class="calc-header">
+              <h2>Calculate Etsy Item Profit</h2>
+              <p>Enter your item details, costs, and time investment per item</p>
+            </div>
+            <div class="calc-body">
+              <form id="etsyForm" novalidate>
+                <div class="form-group">
+                  <label class="form-label" for="sellingPrice">Item Selling Price <span class="form-hint">Price the buyer pays for the item</span></label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="sellingPrice" name="sellingPrice" class="form-input" placeholder="45.00" min="0" step="0.01" required>
+                  </div>
+                  <span class="form-error">Please enter a valid selling price.</span>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="materialCost">Material Cost <span class="form-hint">Raw materials, supplies, packaging</span></label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="materialCost" name="materialCost" class="form-input" placeholder="12.00" min="0" step="0.01" required>
+                  </div>
+                  <span class="form-error">Please enter a valid material cost.</span>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="shippingCost">Shipping Cost <span class="form-hint">Your actual out-of-pocket shipping expense</span></label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="shippingCost" name="shippingCost" class="form-input" placeholder="5.50" min="0" step="0.01" required>
+                  </div>
+                  <span class="form-error">Please enter a valid shipping cost.</span>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="timePerItem">Time per Item <span class="form-hint">Hours to make, photograph, list, pack, and ship one item</span></label>
+                  <div class="input-suffix">
+                    <input type="number" id="timePerItem" name="timePerItem" class="form-input" placeholder="1.5" min="0" step="0.25" required>
+                    <span class="suffix">hours</span>
+                  </div>
+                  <span class="form-error">Please enter a valid time per item.</span>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="hourlyRate">Your Hourly Rate <span class="form-hint">What you want to earn per hour of labor</span></label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="hourlyRate" name="hourlyRate" class="form-input" placeholder="20.00" min="0" step="0.01" required>
+                  </div>
+                  <span class="form-error">Please enter a valid hourly rate.</span>
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calculateEtsyProfit()">Calculate Etsy Profit</button>
+                  <button type="button" class="btn btn-reset" onclick="resetForm()">Reset</button>
+                </div>
+              </form>
+
+              <div id="results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">Net Profit Per Item</div>
+                  <div class="result-value" id="resultNetProfit">$0</div>
+                </div>
+                <div class="result-grid result-grid-2">
+                  <div class="result-item">
+                    <div class="result-label">Listing Fee</div>
+                    <div class="result-value" id="resultListingFee">$0.20</div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Transaction Fee (6.5%)</div>
+                    <div class="result-value" id="resultTransactionFee">$0</div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Payment Processing</div>
+                    <div class="result-value" id="resultProcessingFee">$0</div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Total Etsy Fees</div>
+                    <div class="result-value" id="resultTotalFees">$0</div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Profit Margin</div>
+                    <div class="result-value" id="resultMargin">0%</div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Effective Hourly Rate</div>
+                    <div class="result-value" id="resultEffectiveRate">$0/hr</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="disclaimer">
+            <strong>Disclaimer:</strong> Etsy fee rates shown are current as of 2026 but may change. This calculator is for educational purposes only. Verify current fee rates at etsy.com/seller-handbook. Consult a tax professional regarding self-employment income.
+          </div>
+
+          <div class="ad-slot ad-slot-leaderboard"></div>
+
+          <section class="content-section">
+            <h2>Etsy Fee Formulas</h2>
+            <p>Etsy charges multiple fees per transaction. Here is how each is calculated:</p>
+            <div class="formula-box">
+              <div class="formula-label">Listing Fee</div>
+              $0.20 per item listed (charged at listing, renews every 4 months or when sold)
+            </div>
+            <div class="formula-box">
+              <div class="formula-label">Transaction Fee</div>
+              6.5% x Selling Price (applied to item price + any shipping collected)
+            </div>
+            <div class="formula-box">
+              <div class="formula-label">Payment Processing Fee</div>
+              (3% x Selling Price) + $0.25 per transaction
+            </div>
+            <div class="formula-box">
+              <div class="formula-label">Net Profit Per Item</div>
+              Selling Price - Material Cost - Shipping Cost - Listing Fee - Transaction Fee - Processing Fee - (Hours x Hourly Rate)
+            </div>
+            <div class="formula-box">
+              <div class="formula-label">Effective Hourly Rate</div>
+              (Net Profit + Labor Cost) / Time per Item
+            </div>
+          </section>
+
+          <section class="content-section">
+            <h2>How to Use This Calculator</h2>
+            <ol>
+              <li><strong>Enter your selling price</strong> — the total price the buyer sees and pays on Etsy.</li>
+              <li><strong>Enter material cost</strong> — the direct cost of all supplies, components, and packaging for one item.</li>
+              <li><strong>Enter your shipping cost</strong> — your actual out-of-pocket expense to ship one package.</li>
+              <li><strong>Enter time per item</strong> — include production, photography, listing, packing, and drop-off time.</li>
+              <li><strong>Enter your desired hourly rate</strong> — what you want your labor to be worth.</li>
+              <li><strong>Click Calculate</strong> to see the full fee breakdown, net profit, and whether your pricing supports your goals.</li>
+            </ol>
+          </section>
+
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>Emma sells hand-poured soy candles on Etsy. Her candle selling price is <strong>$28.00</strong>, materials cost <strong>$7.50</strong>, shipping is <strong>$5.00</strong>, and she spends <strong>1.5 hours</strong> per item at a target rate of <strong>$18/hour</strong>.</p>
+            <ul>
+              <li><strong>Listing fee:</strong> $0.20</li>
+              <li><strong>Transaction fee:</strong> $28.00 x 6.5% = $1.82</li>
+              <li><strong>Processing fee:</strong> ($28.00 x 3%) + $0.25 = $1.09</li>
+              <li><strong>Total Etsy fees:</strong> $0.20 + $1.82 + $1.09 = $3.11</li>
+              <li><strong>Labor cost:</strong> 1.5 x $18 = $27.00</li>
+              <li><strong>Net profit:</strong> $28.00 - $7.50 - $5.00 - $3.11 - $27.00 = -$14.61</li>
+            </ul>
+            <p>This example reveals Emma needs to either raise her price or reduce material costs to meet her $18/hour labor goal — a critical insight before scaling.</p>
+          </section>
+
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What fees does Etsy charge sellers?
+                <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Etsy charges a $0.20 listing fee per item, a 6.5% transaction fee on the sale price (including shipping), and a payment processing fee of 3% plus $0.25 per transaction when using Etsy Payments.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Does Etsy charge fees on shipping?
+                <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 011-1z"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Yes. Etsy's 6.5% transaction fee applies to the total order amount, which includes the item price plus any shipping charges you collect. Only your actual out-of-pocket shipping cost is a true expense.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What is a good profit margin on Etsy?
+                <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 011-1z"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Most successful Etsy sellers aim for a profit margin of 30–50% after all Etsy fees and material costs. Once you factor in your time, margins tighten — so pricing your time correctly is critical.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                How do I price items on Etsy for profit?
+                <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 011-1z"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>A common Etsy pricing formula is: Selling Price = (Material Cost + Labor Cost) x 2-3 for wholesale, and x 4-6 for retail. Use this calculator to work backwards from your desired profit margin to find the right price.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/side-hustle-calculators/side-hustle-profit-calculator/" class="card card-link">
+                <h3>Side Hustle Profit Calculator</h3>
+                <p>Evaluate any side hustle's overall monthly profitability and hourly rate.</p>
+              </a>
+              <a href="/side-hustle-calculators/amazon-seller-profit-calculator/" class="card card-link">
+                <h3>Amazon Seller Profit Calculator</h3>
+                <p>Calculate net profit on Amazon after referral fees, FBA, and ad spend.</p>
+              </a>
+              <a href="/side-hustle-calculators/dropshipping-profit-calculator/" class="card card-link">
+                <h3>Dropshipping Profit Calculator</h3>
+                <p>Find break-even price and net profit for dropshipping businesses.</p>
+              </a>
+              <a href="/side-hustle-calculators/freelance-hourly-rate-calculator/" class="card card-link">
+                <h3>Freelance Rate Calculator</h3>
+                <p>Determine the minimum rate you must charge to hit your income goals.</p>
+              </a>
+              <a href="/business-calculators/profit-margin-calculator/" class="card card-link">
+                <h3>Profit Margin Calculator</h3>
+                <p>Calculate gross and net profit margins for any product or business.</p>
+              </a>
+            </div>
+          </section>
+        </div>
+
+        <aside class="calc-page-sidebar">
+          <div class="sidebar-card">
+            <h3>Side Hustle Calculators</h3>
+            <a href="/side-hustle-calculators/side-hustle-profit-calculator/">Side Hustle Profit</a>
+            <a href="/side-hustle-calculators/etsy-profit-calculator/">Etsy Profit</a>
+            <a href="/side-hustle-calculators/amazon-seller-profit-calculator/">Amazon Seller Profit</a>
+            <a href="/side-hustle-calculators/dropshipping-profit-calculator/">Dropshipping Profit</a>
+            <a href="/side-hustle-calculators/youtube-earnings-calculator/">YouTube Earnings</a>
+            <a href="/side-hustle-calculators/tiktok-earnings-calculator/">TikTok Earnings</a>
+            <a href="/side-hustle-calculators/freelance-hourly-rate-calculator/">Freelance Hourly Rate</a>
+            <a href="/side-hustle-calculators/delivery-driver-earnings-calculator/">Delivery Driver Earnings</a>
+            <a href="/side-hustle-calculators/rideshare-income-calculator/">Rideshare Income</a>
+            <a href="/side-hustle-calculators/online-course-profit-calculator/">Online Course Profit</a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Real Estate</h4>
+          <a href="/real-estate-calculators/">All Real Estate</a>
+        </div>
+        <div class="footer-col">
+          <h4>Finance</h4>
+          <a href="/finance-calculators/">All Finance</a>
+        </div>
+        <div class="footer-col">
+          <h4>Business</h4>
+          <a href="/business-calculators/">All Business</a>
+        </div>
+        <div class="footer-col">
+          <h4>Side Hustles</h4>
+          <a href="/side-hustle-calculators/">All Side Hustle</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/about.html">About</a>
+          <a href="/contact.html">Contact</a>
+          <a href="/privacy.html">Privacy</a>
+          <a href="/terms.html">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateEtsyProfit() {
+      if (!CalcWise.validateForm('etsyForm')) return;
+
+      const price        = CalcWise.parseNumber(document.getElementById('sellingPrice').value);
+      const materials    = CalcWise.parseNumber(document.getElementById('materialCost').value);
+      const shipping     = CalcWise.parseNumber(document.getElementById('shippingCost').value);
+      const hours        = CalcWise.parseNumber(document.getElementById('timePerItem').value);
+      const rate         = CalcWise.parseNumber(document.getElementById('hourlyRate').value);
+
+      if (price <= 0) { alert('Selling price must be greater than zero.'); return; }
+
+      const listingFee    = 0.20;
+      const txFee         = price * 0.065;
+      const procFee       = (price * 0.03) + 0.25;
+      const totalFees     = listingFee + txFee + procFee;
+      const laborCost     = hours * rate;
+      const netProfit     = price - materials - shipping - totalFees - laborCost;
+      const margin        = price > 0 ? ((price - materials - shipping - totalFees) / price) * 100 : 0;
+      const effectiveRate = hours > 0 ? (price - materials - shipping - totalFees) / hours : 0;
+
+      CalcWise.setText('resultListingFee',    CalcWise.formatCurrency(listingFee));
+      CalcWise.setText('resultTransactionFee', CalcWise.formatCurrency(txFee));
+      CalcWise.setText('resultProcessingFee', CalcWise.formatCurrency(procFee));
+      CalcWise.setText('resultTotalFees',     CalcWise.formatCurrency(totalFees));
+      CalcWise.setText('resultNetProfit',     CalcWise.formatCurrency(netProfit));
+      CalcWise.setText('resultMargin',        CalcWise.formatPercent(margin));
+      CalcWise.setText('resultEffectiveRate', CalcWise.formatCurrency(effectiveRate) + '/hr');
+
+      CalcWise.showResults('results');
+    }
+
+    function resetForm() {
+      document.getElementById('etsyForm').reset();
+      CalcWise.hideResults('results');
+    }
+  </script>
+</body>
+</html>

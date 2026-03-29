@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inflation Impact Calculator - CalcWise</title>
+  <meta name="description" content="Calculate the full impact of inflation on any amount. See the future cost, purchasing power loss, real value decline, and monthly inflation cost over time.">
+  <link rel="canonical" href="https://calcwise.io/inflation-calculators/inflation-impact-calculator/">
+  <meta property="og:title" content="Inflation Impact Calculator - CalcWise">
+  <meta property="og:description" content="See exactly how inflation erodes your money. Calculate future costs, purchasing power loss, and monthly inflation costs.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcwise.io/inflation-calculators/inflation-impact-calculator/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Inflation Impact Calculator - CalcWise">
+  <meta name="twitter:description" content="See exactly how inflation erodes your money. Calculate future costs, purchasing power loss, and monthly inflation costs.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/"},
+      {"@type": "ListItem", "position": 2, "name": "Inflation Calculators", "item": "https://calcwise.io/inflation-calculators/"},
+      {"@type": "ListItem", "position": 3, "name": "Inflation Impact Calculator"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the inflation impact on purchasing power?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Inflation reduces purchasing power by making each dollar worth less over time. At 3% annual inflation, $1,000 today will only buy the equivalent of about $744 worth of goods in 10 years — a 25.6% loss in purchasing power."}
+      },
+      {
+        "@type": "Question",
+        "name": "How do I calculate real value decline due to inflation?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Real value decline is calculated as: Real Value = Current Amount / (1 + Inflation Rate)^Years. The percentage decline is ((Current Amount - Real Value) / Current Amount) × 100. This tells you how much buying power your money has lost."}
+      },
+      {
+        "@type": "Question",
+        "name": "What is monthly inflation cost?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Monthly inflation cost is the average extra amount you pay per month due to inflation over a given period. It is calculated by dividing the total extra cost (Future Cost - Current Amount) by the total number of months in the period."}
+      },
+      {
+        "@type": "Question",
+        "name": "What inflation rate should I use?",
+        "acceptedAnswer": {"@type": "Answer", "text": "The US long-term average is approximately 3% per year. For conservative planning use 3-4%; for recent conditions or specific categories like healthcare or tuition, you may want to use 5-8%. The Federal Reserve targets 2% as its inflation goal."}
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="logo">
+        <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav">
+        <a href="/">Home</a>
+        <a href="/pages/finance-calculators/">Finance</a>
+        <a href="/pages/business-calculators/">Business</a>
+        <a href="/pages/investment-calculators/">Investment</a>
+        <a href="/inflation-calculators/" aria-current="page">Inflation</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav">
+      <a href="/">Home</a>
+      <a href="/pages/finance-calculators/">Finance Calculators</a>
+      <a href="/pages/business-calculators/">Business Calculators</a>
+      <a href="/pages/investment-calculators/">Investment Calculators</a>
+      <a href="/inflation-calculators/">Inflation Calculators</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <!-- Breadcrumbs -->
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li><a href="/inflation-calculators/">Inflation Calculators</a></li>
+        <li><span aria-current="page">Inflation Impact Calculator</span></li>
+      </ol>
+    </nav>
+
+    <div class="page-content">
+      <div class="article-content">
+        <h1>Inflation Impact Calculator</h1>
+        <p>Inflation silently erodes the value of every dollar you hold, but most people underestimate its cumulative effect. This calculator shows you exactly how much any given amount will cost in the future, how much purchasing power you'll lose, how steeply the real value declines, and what inflation is costing you every single month.</p>
+
+        <!-- Ad Slot -->
+        <div class="ad-slot ad-slot-leaderboard"></div>
+
+        <!-- Calculator -->
+        <div class="calc-container">
+          <div class="calc-header">
+            <h2>Calculate the Full Impact of Inflation</h2>
+            <p>Enter your amount, inflation rate, and time horizon to see the complete picture</p>
+          </div>
+          <div class="calc-body">
+            <form id="impact-form">
+              <div class="form-group">
+                <label class="form-label" for="currentAmount">Current Amount</label>
+                <div class="input-prefix">
+                  <span class="prefix">$</span>
+                  <input type="number" id="currentAmount" name="currentAmount" class="form-input" placeholder="10000" min="1" step="100" required>
+                </div>
+              </div>
+              <div class="calc-grid calc-grid-2col">
+                <div class="form-group">
+                  <label class="form-label" for="inflationRate">Inflation Rate <span class="form-hint">(%)</span></label>
+                  <div class="input-suffix">
+                    <input type="number" id="inflationRate" name="inflationRate" class="form-input" placeholder="3" min="0.1" max="50" step="0.1" required>
+                    <span class="suffix">%</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="years">Number of Years</label>
+                  <div class="input-suffix">
+                    <input type="number" id="years" name="years" class="form-input" placeholder="10" min="1" max="100" step="1" required>
+                    <span class="suffix">yrs</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="calc-actions">
+                <button type="button" class="btn btn-calculate" onclick="calculateImpact()">Calculate Impact</button>
+                <button type="button" class="btn btn-reset" onclick="resetImpact()">Reset</button>
+              </div>
+            </form>
+
+            <!-- Results -->
+            <div id="results" class="calc-results hidden">
+              <div class="result-primary">
+                <div class="result-label">Future Cost at This Inflation Rate</div>
+                <div class="result-value" id="futureCostResult">$0</div>
+              </div>
+              <div class="result-grid result-grid-3">
+                <div class="result-item">
+                  <div class="result-label">Purchasing Power Loss</div>
+                  <div class="result-value" id="powerLossResult" style="color: var(--color-error);">$0</div>
+                </div>
+                <div class="result-item">
+                  <div class="result-label">Real Value Decline</div>
+                  <div class="result-value" id="realDeclineResult" style="color: var(--color-error);">0%</div>
+                </div>
+                <div class="result-item">
+                  <div class="result-label">Monthly Inflation Cost</div>
+                  <div class="result-value" id="monthlyInflationResult">$0</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Formula Section -->
+        <section class="content-section">
+          <h2>Inflation Impact Formula</h2>
+          <div class="formula-box">
+            <div class="formula-label">Formulas Used</div>
+            Future Cost = Current Amount × (1 + Inflation Rate)^Years<br><br>
+            Purchasing Power Loss = Future Cost − Current Amount<br><br>
+            Real Value Decline % = (1 − 1/(1 + Inflation Rate)^Years) × 100<br><br>
+            Monthly Inflation Cost = Purchasing Power Loss ÷ (Years × 12)
+          </div>
+          <p>The future cost formula uses compound inflation to project what today's price will be in the future. The purchasing power loss is the raw dollar erosion. The real value decline percentage tells you how much less your money buys. The monthly inflation cost breaks the total erosion down into an average monthly figure, making it easier to budget for.</p>
+        </section>
+
+        <!-- How to Use -->
+        <section class="content-section">
+          <h2>How to Use This Calculator</h2>
+          <ol>
+            <li><strong>Enter the current amount:</strong> This could be the price of a specific item, your monthly budget, savings balance, or any dollar figure you want to project forward.</li>
+            <li><strong>Set the inflation rate:</strong> Use 3% for the US historical average, 2% for the Fed's target, or a higher rate for categories like healthcare or education.</li>
+            <li><strong>Enter the number of years:</strong> How many years into the future you want to project — try 5, 10, or 20 years to see the long-term effect.</li>
+            <li><strong>Click "Calculate Impact":</strong> Review all four output metrics to understand the full scope of inflation's effect on your money.</li>
+          </ol>
+        </section>
+
+        <!-- Example Scenario -->
+        <section class="content-section">
+          <h2>Example Scenario</h2>
+          <p>Suppose you currently spend $2,000 per month on living expenses and want to know the inflation impact over 15 years at 3% annual inflation:</p>
+          <ul>
+            <li><strong>Current monthly expenses:</strong> $2,000 (enter $24,000 as the annual amount)</li>
+            <li><strong>Future cost after 15 years:</strong> $24,000 × (1.03)^15 = $37,371</li>
+            <li><strong>Purchasing power loss:</strong> $37,371 − $24,000 = $13,371</li>
+            <li><strong>Real value decline:</strong> 36.2% — your $24,000 only buys what $15,475 bought before</li>
+            <li><strong>Monthly inflation cost:</strong> $13,371 ÷ (15 × 12) = $74.28 per month on average</li>
+          </ul>
+          <p>This means to maintain the same standard of living in 15 years, you would need to earn an extra $74 per month just to keep up with inflation.</p>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+          <h2>Frequently Asked Questions</h2>
+          <div class="faq-item">
+            <button class="faq-question">
+              What is the inflation impact on purchasing power?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>Inflation reduces purchasing power by making each dollar worth less over time. At 3% annual inflation, $1,000 today will only buy the equivalent of about $744 worth of goods in 10 years — a 25.6% loss in purchasing power.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              How do I calculate real value decline due to inflation?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>Real value decline is calculated as: Real Value = Current Amount / (1 + Inflation Rate)^Years. The percentage decline is ((Current Amount − Real Value) / Current Amount) × 100. This tells you how much buying power your money has lost.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              What is monthly inflation cost?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>Monthly inflation cost is the average extra amount you pay per month due to inflation over a given period. It is calculated by dividing the total extra cost (Future Cost − Current Amount) by the total number of months in the period.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              What inflation rate should I use?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>The US long-term average is approximately 3% per year. For conservative planning use 3–4%; for recent conditions or specific categories like healthcare or tuition, you may want to use 5–8%. The Federal Reserve targets 2% as its inflation goal.</p></div>
+          </div>
+        </section>
+
+        <!-- Related Calculators -->
+        <section class="related-calculators">
+          <h2>Related Calculators</h2>
+          <div class="grid grid-3">
+            <a href="/inflation-calculators/future-purchasing-power-calculator/" class="card card-link">
+              <h3>Future Purchasing Power Calculator</h3>
+              <p>Find out what today's dollars will be worth in any future year.</p>
+            </a>
+            <a href="/inflation-calculators/inflation-adjusted-savings-calculator/" class="card card-link">
+              <h3>Inflation-Adjusted Savings Calculator</h3>
+              <p>See your real savings growth after accounting for inflation.</p>
+            </a>
+            <a href="/inflation-calculators/cost-increase-projection-calculator/" class="card card-link">
+              <h3>Cost Increase Projection Calculator</h3>
+              <p>Project how any specific cost grows over 1 to 20 years.</p>
+            </a>
+            <a href="/inflation-calculators/inflation-adjusted-salary-calculator/" class="card card-link">
+              <h3>Inflation-Adjusted Salary Calculator</h3>
+              <p>Find out if your raise actually kept up with inflation.</p>
+            </a>
+            <a href="/pages/finance-calculators/inflation-calculator/" class="card card-link">
+              <h3>General Inflation Calculator</h3>
+              <p>Quick inflation calculation for any amount and time period.</p>
+            </a>
+          </div>
+        </section>
+
+        <!-- Disclaimer -->
+        <div class="disclaimer">
+          <strong>Disclaimer:</strong> This calculator is provided for informational and educational purposes only. It does not constitute financial advice. Actual inflation rates vary and past rates do not guarantee future performance. Consult a qualified financial advisor for personalized guidance.
+        </div>
+
+        <!-- Ad Slot -->
+        <div class="ad-slot ad-slot-rectangle"></div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free online financial calculators to help you make smarter money decisions.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Inflation Tools</h4>
+          <a href="/inflation-calculators/inflation-impact-calculator/">Inflation Impact</a>
+          <a href="/inflation-calculators/future-purchasing-power-calculator/">Purchasing Power</a>
+          <a href="/inflation-calculators/inflation-adjusted-salary-calculator/">Salary Adjustment</a>
+          <a href="/inflation-calculators/inflation-adjusted-retirement-calculator/">Retirement Inflation</a>
+        </div>
+        <div class="footer-col">
+          <h4>Finance</h4>
+          <a href="/pages/finance-calculators/net-worth-calculator/">Net Worth</a>
+          <a href="/pages/finance-calculators/budget-calculator/">Budget (50/30/20)</a>
+          <a href="/pages/finance-calculators/emergency-fund-calculator/">Emergency Fund</a>
+          <a href="/pages/finance-calculators/retirement-savings-calculator/">Retirement Savings</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about/">About</a>
+          <a href="/contact/">Contact</a>
+          <a href="/privacy/">Privacy Policy</a>
+          <a href="/terms/">Terms of Service</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 CalcWise. All rights reserved.</span>
+        <div class="footer-links">
+          <a href="/privacy/">Privacy</a>
+          <a href="/terms/">Terms</a>
+          <a href="/contact/">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateImpact() {
+      if (!CalcWise.validateForm('impact-form')) return;
+      const v = CalcWise.getFormValues('impact-form');
+
+      const futureCost = CalcWise.futureValueWithInflation(v.currentAmount, v.inflationRate, v.years);
+      const powerLoss = futureCost - v.currentAmount;
+      const realValueDecline = (1 - 1 / Math.pow(1 + v.inflationRate / 100, v.years)) * 100;
+      const monthlyInflationCost = powerLoss / (v.years * 12);
+
+      CalcWise.setText('futureCostResult', CalcWise.formatCurrency(futureCost));
+      CalcWise.setText('powerLossResult', '+' + CalcWise.formatCurrency(powerLoss));
+      CalcWise.setText('realDeclineResult', '-' + CalcWise.formatPercent(realValueDecline));
+      CalcWise.setText('monthlyInflationResult', CalcWise.formatCurrency(monthlyInflationCost) + '/mo');
+
+      CalcWise.showResults('results');
+    }
+
+    function resetImpact() {
+      document.getElementById('impact-form').reset();
+      CalcWise.hideResults('results');
+    }
+  </script>
+</body>
+</html>

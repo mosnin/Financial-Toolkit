@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Subscription Revenue Calculator | CalcWise</title>
+  <meta name="description" content="Calculate MRR, ARR, churn impact, and 12-month subscription revenue projections. Free subscription business calculator for creators and entrepreneurs.">
+  <link rel="canonical" href="https://calcwise.io/digital-income-calculators/subscription-revenue-calculator/">
+  <meta property="og:title" content="Subscription Revenue Calculator | CalcWise">
+  <meta property="og:description" content="Calculate MRR, ARR, churn impact, and 12-month subscription revenue projections.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcwise.io/digital-income-calculators/subscription-revenue-calculator/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Subscription Revenue Calculator | CalcWise">
+  <meta name="twitter:description" content="Project MRR, ARR, and 12-month subscription growth with churn and new subscriber inputs.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/"},
+      {"@type": "ListItem", "position": 2, "name": "Digital Income Calculators", "item": "https://calcwise.io/digital-income-calculators/"},
+      {"@type": "ListItem", "position": 3, "name": "Subscription Revenue Calculator"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is MRR and how is it calculated?",
+        "acceptedAnswer": {"@type": "Answer", "text": "MRR (Monthly Recurring Revenue) is calculated by multiplying the number of active subscribers by the monthly subscription price. It is the most fundamental metric for subscription businesses, representing predictable monthly income."}
+      },
+      {
+        "@type": "Question",
+        "name": "What is a healthy churn rate for a subscription business?",
+        "acceptedAnswer": {"@type": "Answer", "text": "For consumer subscriptions, monthly churn below 5% is considered acceptable, while below 2% is strong. For B2B SaaS, monthly churn below 1% is ideal. High churn above 8% monthly is a serious warning sign that requires immediate attention."}
+      },
+      {
+        "@type": "Question",
+        "name": "What is net new MRR?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Net New MRR is the net change in MRR after accounting for both new subscriber revenue gained and churned subscriber revenue lost. A positive Net New MRR means the business is growing; negative means it is contracting."}
+      },
+      {
+        "@type": "Question",
+        "name": "How does subscriber growth rate compound over 12 months?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Monthly growth compounds by applying the growth rate each month to the previous month's subscriber count minus churned subscribers. Even small monthly growth rates compound significantly over a year — 5% monthly growth yields roughly 80% annual growth."}
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="logo">
+        <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav">
+        <a href="/">Home</a>
+        <a href="/pages/business-calculators/">Business</a>
+        <a href="/pages/financial-calculators/">Financial</a>
+        <a href="/pages/tax-calculators/">Tax</a>
+        <a href="/pages/digital-income-calculators/" aria-current="page">Digital Income</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav">
+      <a href="/">Home</a>
+      <a href="/pages/business-calculators/">Business Calculators</a>
+      <a href="/pages/financial-calculators/">Financial Calculators</a>
+      <a href="/pages/tax-calculators/">Tax Calculators</a>
+      <a href="/pages/digital-income-calculators/">Digital Income Calculators</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/pages/digital-income-calculators/">Digital Income Calculators</a></li>
+          <li><span aria-current="page">Subscription Revenue Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="calc-page-layout">
+          <div class="calc-page-main">
+            <h1>Subscription Revenue Calculator</h1>
+            <p class="subtitle" style="font-size:var(--text-lg);color:var(--color-gray-600);margin-bottom:var(--space-8);line-height:var(--leading-relaxed);">Calculate your MRR, ARR, churn impact, and 12-month revenue projection for any subscription business — newsletters, membership sites, SaaS products, or creator subscriptions.</p>
+
+            <div class="calc-container">
+              <div class="calc-header">
+                <h2>Subscription Revenue Calculator</h2>
+                <p>Model your MRR growth accounting for churn and new subscribers</p>
+              </div>
+              <div class="calc-body">
+                <form id="subscription-form" onsubmit="return false;">
+                  <div class="form-group">
+                    <label class="form-label" for="num-subscribers">Current Number of Subscribers</label>
+                    <input type="number" id="num-subscribers" name="numSubscribers" class="form-input" placeholder="500" min="1" step="1" required>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="sub-price">Monthly Subscription Price ($)</label>
+                    <div class="input-prefix">
+                      <span class="prefix">$</span>
+                      <input type="number" id="sub-price" name="subPrice" class="form-input" placeholder="19" min="0.01" step="0.01" required>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="churn-rate">Monthly Churn Rate (%)</label>
+                    <div class="input-suffix">
+                      <input type="number" id="churn-rate" name="churnRate" class="form-input" placeholder="3" min="0" max="100" step="0.01" required>
+                      <span class="suffix">%</span>
+                    </div>
+                    <span class="form-hint">Percentage of subscribers who cancel each month</span>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="growth-rate">New Subscriber Growth Rate (% monthly)</label>
+                    <div class="input-suffix">
+                      <input type="number" id="growth-rate" name="growthRate" class="form-input" placeholder="5" min="0" max="200" step="0.01" required>
+                      <span class="suffix">%</span>
+                    </div>
+                    <span class="form-hint">Monthly rate at which new subscribers are added (as % of current base)</span>
+                  </div>
+
+                  <div class="calc-actions">
+                    <button type="button" class="btn btn-calculate btn-full" onclick="calculateSubscription()">Calculate Revenue</button>
+                    <button type="button" class="btn btn-reset" onclick="resetSubscriptionForm()">Reset</button>
+                  </div>
+                </form>
+
+                <div id="subscription-results" class="calc-results hidden">
+                  <div class="result-primary">
+                    <div class="result-label">Current MRR</div>
+                    <div class="result-value" id="result-mrr">$0</div>
+                  </div>
+                  <div class="result-grid result-grid-2">
+                    <div class="result-item">
+                      <div class="result-label">Annual Recurring Revenue (ARR)</div>
+                      <div class="result-value" id="result-arr">$0</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Monthly Churn Impact</div>
+                      <div class="result-value" id="result-churn-impact">$0</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Net New MRR (Monthly)</div>
+                      <div class="result-value" id="result-net-new-mrr">$0</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Projected MRR at Month 12</div>
+                      <div class="result-value" id="result-month12-mrr">$0</div>
+                    </div>
+                  </div>
+                  <div id="projection-table-wrap" style="margin-top:var(--space-6);overflow-x:auto;"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="ad-slot ad-slot-leaderboard"></div>
+
+            <section class="content-section">
+              <h2>Subscription Revenue Formulas</h2>
+              <div class="formula-box">
+                <div class="formula-label">MRR (Monthly Recurring Revenue)</div>
+                MRR = Number of Subscribers x Monthly Price
+              </div>
+              <div class="formula-box">
+                <div class="formula-label">ARR (Annual Recurring Revenue)</div>
+                ARR = MRR x 12
+              </div>
+              <div class="formula-box">
+                <div class="formula-label">Churn Impact</div>
+                Monthly Churn Loss = MRR x (Churn Rate / 100)
+              </div>
+              <div class="formula-box">
+                <div class="formula-label">Net New MRR</div>
+                Net New MRR = (New Subscribers Gained x Price) - (Churned Subscribers x Price)
+              </div>
+              <div class="formula-box">
+                <div class="formula-label">Month N Subscribers (Projection)</div>
+                Subscribers(N) = Subscribers(N-1) x (1 + Growth Rate - Churn Rate)
+              </div>
+            </section>
+
+            <section class="content-section">
+              <h2>How to Use This Calculator</h2>
+              <ol>
+                <li>Enter your <strong>current number of subscribers</strong> (active paying members).</li>
+                <li>Set your <strong>monthly subscription price</strong> per subscriber.</li>
+                <li>Enter your <strong>monthly churn rate</strong> — the percentage who cancel each month. Check your payment platform analytics for this figure.</li>
+                <li>Set your <strong>monthly growth rate</strong> — how fast you are adding new subscribers as a percentage of your current base.</li>
+                <li>Click <strong>Calculate Revenue</strong> to see MRR, ARR, churn impact, net new MRR, and a 12-month projection table.</li>
+              </ol>
+            </section>
+
+            <section class="content-section">
+              <h2>Example Scenario</h2>
+              <p>A newsletter creator has 800 paid subscribers at $15/month, 4% monthly churn, and 7% monthly new subscriber growth.</p>
+              <ul>
+                <li>Current MRR: 800 x $15 = <strong>$12,000</strong></li>
+                <li>ARR: $12,000 x 12 = <strong>$144,000</strong></li>
+                <li>Monthly Churn Loss: $12,000 x 4% = <strong>$480</strong></li>
+                <li>New Subscriber MRR: 800 x 7% x $15 = <strong>$840 new MRR</strong></li>
+                <li>Net New MRR: $840 - $480 = <strong>$360/month</strong></li>
+                <li>Month 12 Projected MRR: approximately <strong>$15,420</strong></li>
+              </ul>
+            </section>
+
+            <section class="faq-section">
+              <h2>Frequently Asked Questions</h2>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  What is MRR and how is it calculated?
+                  <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                </button>
+                <div class="faq-answer">
+                  <p>MRR (Monthly Recurring Revenue) is calculated by multiplying the number of active subscribers by the monthly subscription price. It represents predictable monthly income and is the most fundamental metric for subscription businesses.</p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  What is a healthy churn rate for a subscription business?
+                  <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                </button>
+                <div class="faq-answer">
+                  <p>For consumer subscriptions, monthly churn below 5% is considered acceptable, while below 2% is strong. For B2B SaaS, monthly churn below 1% is ideal. High churn above 8% monthly is a serious warning sign requiring immediate attention.</p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  What is net new MRR?
+                  <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                </button>
+                <div class="faq-answer">
+                  <p>Net New MRR is the net change in MRR after accounting for both new subscriber revenue gained and churned subscriber revenue lost. A positive Net New MRR means the business is growing; negative means it is contracting.</p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  How does subscriber growth rate compound over 12 months?
+                  <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                </button>
+                <div class="faq-answer">
+                  <p>Monthly growth compounds by applying the growth rate each month to the previous month's subscriber count minus churned subscribers. Even small monthly growth rates compound significantly — 5% monthly growth yields roughly 80% annual growth.</p>
+                </div>
+              </div>
+            </section>
+
+            <section class="related-calculators">
+              <h2>Related Calculators</h2>
+              <div class="grid grid-3">
+                <a href="/pages/digital-income-calculators/saas-revenue-calculator/" class="card card-link">
+                  <h3>SaaS Revenue Calculator</h3>
+                  <p>Model MRR, LTV, churn cost, and 6-month SaaS forecasts.</p>
+                </a>
+                <a href="/pages/digital-income-calculators/membership-revenue-calculator/" class="card card-link">
+                  <h3>Membership Revenue Calculator</h3>
+                  <p>Calculate revenue from free-to-paid membership conversion and retention.</p>
+                </a>
+                <a href="/pages/digital-income-calculators/newsletter-revenue-calculator/" class="card card-link">
+                  <h3>Newsletter Revenue Calculator</h3>
+                  <p>Estimate total newsletter income from sponsorships and paid subscriptions.</p>
+                </a>
+                <a href="/pages/business-calculators/revenue-growth-calculator/" class="card card-link">
+                  <h3>Revenue Growth Calculator</h3>
+                  <p>Calculate total, monthly, and annualized revenue growth rates.</p>
+                </a>
+              </div>
+            </section>
+
+            <div class="disclaimer">
+              <strong>Disclaimer:</strong> This calculator provides estimates for planning purposes only. Actual subscription revenue depends on pricing strategy, audience behavior, platform performance, and market conditions. Churn and growth rates fluctuate and past rates do not predict future performance.
+            </div>
+          </div>
+
+          <aside class="calc-page-sidebar">
+            <div class="ad-slot ad-slot-rectangle"></div>
+            <div class="sidebar-card">
+              <h3>Digital Income Calculators</h3>
+              <a href="/pages/digital-income-calculators/affiliate-income-calculator/">Affiliate Income</a>
+              <a href="/pages/digital-income-calculators/saas-revenue-calculator/">SaaS Revenue</a>
+              <a href="/pages/digital-income-calculators/membership-revenue-calculator/">Membership Revenue</a>
+              <a href="/pages/digital-income-calculators/digital-product-revenue-calculator/">Digital Product Revenue</a>
+              <a href="/pages/digital-income-calculators/creator-revenue-calculator/">Creator Revenue</a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free online calculators for business, finance, tax, and investment decisions.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Calculators</h4>
+          <a href="/pages/business-calculators/">Business</a>
+          <a href="/pages/financial-calculators/">Financial</a>
+          <a href="/pages/tax-calculators/">Tax</a>
+          <a href="/pages/digital-income-calculators/">Digital Income</a>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <a href="/about/">About</a>
+          <a href="/blog/">Blog</a>
+          <a href="/contact/">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="/privacy/">Privacy Policy</a>
+          <a href="/terms/">Terms of Service</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/privacy/">Privacy</a>
+          <a href="/terms/">Terms</a>
+          <a href="/contact/">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateSubscription() {
+      const subscribers = CalcWise.parseNumber(document.getElementById('num-subscribers').value);
+      const price = CalcWise.parseNumber(document.getElementById('sub-price').value);
+      const churnRate = CalcWise.parseNumber(document.getElementById('churn-rate').value);
+      const growthRate = CalcWise.parseNumber(document.getElementById('growth-rate').value);
+
+      if (subscribers <= 0) { alert('Number of subscribers must be greater than zero.'); return; }
+      if (price <= 0) { alert('Monthly subscription price must be greater than zero.'); return; }
+      if (churnRate < 0 || churnRate > 100) { alert('Churn rate must be between 0% and 100%.'); return; }
+      if (growthRate < 0) { alert('Growth rate cannot be negative.'); return; }
+
+      const mrr = subscribers * price;
+      const arr = mrr * 12;
+      const churnedSubscribersMonthly = subscribers * (churnRate / 100);
+      const newSubscribersMonthly = subscribers * (growthRate / 100);
+      const churnImpact = churnedSubscribersMonthly * price;
+      const newMRR = newSubscribersMonthly * price;
+      const netNewMRR = newMRR - churnImpact;
+
+      // 12-month projection
+      let currentSubs = subscribers;
+      let rows = '';
+      for (let m = 1; m <= 12; m++) {
+        const gained = currentSubs * (growthRate / 100);
+        const lost = currentSubs * (churnRate / 100);
+        currentSubs = currentSubs + gained - lost;
+        const projMRR = currentSubs * price;
+        rows += `<tr><td>Month ${m}</td><td>${CalcWise.formatNumber(Math.round(currentSubs))}</td><td>${CalcWise.formatCurrency(projMRR, 0)}</td></tr>`;
+      }
+
+      const tableHTML = `<table style="width:100%;border-collapse:collapse;font-size:var(--text-sm);">
+        <thead><tr style="background:var(--color-gray-100);">
+          <th style="padding:var(--space-2) var(--space-3);text-align:left;">Month</th>
+          <th style="padding:var(--space-2) var(--space-3);text-align:left;">Subscribers</th>
+          <th style="padding:var(--space-2) var(--space-3);text-align:left;">MRR</th>
+        </tr></thead>
+        <tbody>${rows}</tbody>
+      </table>`;
+
+      CalcWise.setText('result-mrr', CalcWise.formatCurrency(mrr, 0));
+      CalcWise.setText('result-arr', CalcWise.formatCurrency(arr, 0));
+      CalcWise.setText('result-churn-impact', '-' + CalcWise.formatCurrency(churnImpact, 0));
+      CalcWise.setText('result-net-new-mrr', CalcWise.formatCurrency(netNewMRR, 0));
+      CalcWise.setText('result-month12-mrr', CalcWise.formatCurrency(currentSubs * price, 0));
+      CalcWise.setHtml('projection-table-wrap', tableHTML);
+      CalcWise.showResults('subscription-results');
+    }
+
+    function resetSubscriptionForm() {
+      document.getElementById('subscription-form').reset();
+      CalcWise.hideResults('subscription-results');
+    }
+  </script>
+</body>
+</html>

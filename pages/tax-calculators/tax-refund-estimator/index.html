@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tax Refund Estimator 2026 | CalcWise</title>
+  <meta name="description" content="Estimate your 2026 federal tax refund or amount owed. Enter income, withholding, filing status, deductions, and credits to see your estimated refund and effective tax rate.">
+  <link rel="canonical" href="https://calcwise.io/tax-calculators/tax-refund-estimator/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://calcwise.io/"},{"@type":"ListItem","position":2,"name":"Tax Calculators","item":"https://calcwise.io/tax-calculators/"},{"@type":"ListItem","position":3,"name":"Tax Refund Estimator"}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why am I getting a large tax refund?","acceptedAnswer":{"@type":"Answer","text":"A large refund means your employer withheld more taxes from your paychecks than you actually owe. While a refund feels good, it means you gave the IRS an interest-free loan. Consider adjusting your W4 to increase your take-home pay throughout the year."}},{"@type":"Question","name":"How can I increase my tax refund?","acceptedAnswer":{"@type":"Answer","text":"You can increase your refund by maximizing deductions (charitable contributions, mortgage interest, medical expenses if itemizing), contributing to tax-deferred accounts (IRA, 401k), claiming all eligible credits (Child Tax Credit, EITC, education credits), and ensuring all withholding is properly credited."}},{"@type":"Question","name":"When will I receive my tax refund?","acceptedAnswer":{"@type":"Answer","text":"The IRS typically issues refunds within 21 days of receiving your return when filed electronically with direct deposit. Paper returns can take 6-8 weeks or longer. You can check refund status at IRS Where's My Refund tool."}},{"@type":"Question","name":"What does it mean if I owe taxes?","acceptedAnswer":{"@type":"Answer","text":"Owing taxes at filing means your withholding and estimated payments were less than your actual tax liability. You can correct this by updating your W4 with your employer to increase withholding, or making quarterly estimated tax payments if you're self-employed."}}]}</script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="logo"><svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>CalcWise</a>
+      <nav class="main-nav"><a href="/">Home</a><a href="/pages/business-calculators/">Business</a><a href="/pages/financial-calculators/">Financial</a><a href="/pages/tax-calculators/" aria-current="page">Tax</a><a href="/pages/investment-calculators/">Investment</a></nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+    </div>
+    <nav class="mobile-nav"><a href="/">Home</a><a href="/pages/business-calculators/">Business Calculators</a><a href="/pages/financial-calculators/">Financial Calculators</a><a href="/pages/tax-calculators/">Tax Calculators</a><a href="/pages/investment-calculators/">Investment Calculators</a></nav>
+  </header>
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/pages/tax-calculators/">Tax Calculators</a></li><li><span aria-current="page">Tax Refund Estimator</span></li></ol></nav>
+      <div class="page-content">
+        <div class="calc-page-layout">
+          <div class="calc-page-main">
+            <h1>Tax Refund Estimator 2026</h1>
+            <p class="subtitle" style="font-size:var(--text-lg);color:var(--color-gray-600);margin-bottom:var(--space-8);line-height:var(--leading-relaxed);">Estimate whether you'll get a tax refund or owe money when you file your 2026 federal return. Enter your income, withholding, deductions, and credits to see your estimated refund or balance due, plus your effective tax rate and tips to optimize.</p>
+            <div class="calc-container">
+              <div class="calc-header"><h2>Tax Refund Estimator</h2><p>Estimate your 2026 federal refund or amount owed</p></div>
+              <div class="calc-body">
+                <form id="calc-form" onsubmit="return false;">
+                  <div class="form-group"><label class="form-label" for="total-income">Total Annual Income (all sources)</label><div class="input-prefix"><span class="prefix">$</span><input type="number" id="total-income" class="form-input" placeholder="75000" min="0" step="1000"></div></div>
+                  <div class="form-group"><label class="form-label" for="withholding">Federal Tax Withheld (W2 Box 2 + other withholding)</label><div class="input-prefix"><span class="prefix">$</span><input type="number" id="withholding" class="form-input" placeholder="9000" min="0" step="100"></div></div>
+                  <div class="form-group"><label class="form-label" for="filing-status">Filing Status</label><select id="filing-status" class="form-select"><option value="single">Single</option><option value="married">Married Filing Jointly</option><option value="hoh">Head of Household</option><option value="mfs">Married Filing Separately</option></select></div>
+                  <div class="form-group"><label class="form-label" for="pretax-ded">Pre-Tax Deductions (401k, HSA, etc.)</label><div class="input-prefix"><span class="prefix">$</span><input type="number" id="pretax-ded" class="form-input" placeholder="3000" min="0" step="100"></div></div>
+                  <div class="form-group"><label class="form-label" for="itemized">Itemized Deductions (if over standard deduction, otherwise enter 0)</label><div class="input-prefix"><span class="prefix">$</span><input type="number" id="itemized" class="form-input" placeholder="0" min="0" step="100"></div></div>
+                  <div class="form-group"><label class="form-label" for="credits">Total Tax Credits (CTC, EITC, education, etc.)</label><div class="input-prefix"><span class="prefix">$</span><input type="number" id="credits" class="form-input" placeholder="0" min="0" step="100"></div></div>
+                  <div class="calc-actions">
+                    <button type="button" class="btn btn-calculate btn-full" onclick="estimateRefund()">Estimate Refund</button>
+                    <button type="button" class="btn btn-reset" onclick="resetForm()">Reset</button>
+                  </div>
+                </form>
+                <div id="results" class="calc-results hidden">
+                  <div class="result-primary"><div class="result-label" id="refund-label">Estimated Refund</div><div class="result-value" id="result-refund" style="font-size:var(--text-3xl);">$0</div></div>
+                  <div class="result-grid">
+                    <div class="result-item"><div class="result-label">Gross Tax Liability</div><div class="result-value" id="result-tax-liability">$0</div></div>
+                    <div class="result-item"><div class="result-label">Credits Applied</div><div class="result-value" id="result-credits">$0</div></div>
+                    <div class="result-item"><div class="result-label">Net Tax After Credits</div><div class="result-value" id="result-net-tax">$0</div></div>
+                    <div class="result-item"><div class="result-label">Federal Withholding</div><div class="result-value" id="result-withholding">$0</div></div>
+                    <div class="result-item"><div class="result-label">Effective Tax Rate</div><div class="result-value" id="result-eff-rate">0%</div></div>
+                    <div class="result-item"><div class="result-label">Marginal Tax Rate</div><div class="result-value" id="result-marginal">0%</div></div>
+                  </div>
+                  <div id="optimization-tips" style="margin-top:var(--space-6);padding:var(--space-4);background:var(--color-primary-50);border-radius:var(--radius-lg);"></div>
+                </div>
+              </div>
+            </div>
+            <div class="ad-slot ad-slot-leaderboard"></div>
+            <section class="content-section"><h2>How the Tax Refund Estimate Works</h2>
+              <div class="formula-box"><div class="formula-label">Step 1: Taxable Income</div>AGI = Total Income − Pre-Tax Deductions<br>Taxable Income = AGI − max(Standard Deduction, Itemized Deductions)</div>
+              <div class="formula-box"><div class="formula-label">Step 2: Tax Liability</div>Gross Tax = Apply progressive brackets to Taxable Income<br>Net Tax = max(0, Gross Tax − Tax Credits)</div>
+              <div class="formula-box"><div class="formula-label">Step 3: Refund or Amount Owed</div>Refund = Federal Withholding − Net Tax (if positive, you get a refund)<br>Amount Owed = Net Tax − Federal Withholding (if positive, you owe)</div>
+            </section>
+            <section class="content-section"><h2>How to Use This Calculator</h2><ol><li>Enter your <strong>total income</strong> from all sources.</li><li>Enter your <strong>federal tax withheld</strong> — find this in Box 2 of your W2 form.</li><li>Select your <strong>filing status</strong>.</li><li>Enter <strong>pre-tax deductions</strong> like 401(k) or HSA contributions.</li><li>Enter <strong>itemized deductions</strong> if higher than the standard deduction (otherwise enter 0).</li><li>Enter any <strong>tax credits</strong> you qualify for.</li><li>Click <strong>Estimate Refund</strong>.</li></ol></section>
+            <section class="content-section"><h2>Example Scenario</h2><p>Single filer with $72,000 income, $8,500 withheld, $3,000 in 401k, $2,000 child tax credit:</p><ul><li>AGI: $72,000 − $3,000 = $69,000</li><li>Taxable Income: $69,000 − $14,600 = $54,400</li><li>Gross Tax: ~$7,738</li><li>Credits: −$2,000 → Net Tax: <strong>$5,738</strong></li><li>Withholding: $8,500 − $5,738 = <strong>Refund: $2,762</strong></li></ul></section>
+            <section class="faq-section"><h2>Frequently Asked Questions</h2>
+              <div class="faq-item"><button class="faq-question" aria-expanded="false">Why am I getting a large tax refund?<svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg></button><div class="faq-answer"><p>A large refund means your employer withheld more taxes than you owed. While it feels like a bonus, it means you gave the IRS an interest-free loan. Consider adjusting your W4 to keep more throughout the year.</p></div></div>
+              <div class="faq-item"><button class="faq-question" aria-expanded="false">How can I increase my tax refund?<svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg></button><div class="faq-answer"><p>Maximize deductions, contribute to IRA/401k, claim all eligible credits (Child Tax Credit, EITC, education credits), and ensure all withholding is properly reported.</p></div></div>
+              <div class="faq-item"><button class="faq-question" aria-expanded="false">When will I receive my tax refund?<svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg></button><div class="faq-answer"><p>The IRS typically issues refunds within 21 days of receiving an electronically filed return with direct deposit. Paper returns can take 6-8 weeks.</p></div></div>
+              <div class="faq-item"><button class="faq-question" aria-expanded="false">What does it mean if I owe taxes?<svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg></button><div class="faq-answer"><p>Owing taxes means your withholding and estimated payments were less than your actual tax liability. Update your W4 to increase withholding, or make quarterly estimated payments if self-employed.</p></div></div>
+            </section>
+            <section class="related-calculators"><h2>Related Calculators</h2><div class="grid grid-3">
+              <a href="/pages/tax-calculators/tax-bracket-calculator/" class="card card-link"><h3>Tax Bracket Calculator</h3><p>See your full federal bracket breakdown.</p></a>
+              <a href="/pages/tax-calculators/after-tax-income-calculator/" class="card card-link"><h3>After-Tax Income Calculator</h3><p>Calculate complete annual net take-home pay.</p></a>
+              <a href="/pages/tax-calculators/child-tax-credit-calculator/" class="card card-link"><h3>Child Tax Credit Calculator</h3><p>Estimate credits that can increase your refund.</p></a>
+              <a href="/pages/tax-calculators/standard-vs-itemized-deduction-calculator/" class="card card-link"><h3>Deduction Calculator</h3><p>Find the best deduction strategy for your return.</p></a>
+            </div></section>
+            <div class="disclaimer"><strong>Tax Disclaimer:</strong> This calculator provides estimates for educational purposes only and does not constitute tax advice. Your actual refund or amount owed will depend on your complete tax situation, including income types, specific credits, deductions, and state taxes. This tool does not account for AMT, self-employment tax, or other special tax situations. Consult a qualified tax professional or use certified tax software to file your return. Results are based on estimated 2026 federal tax parameters.</div>
+          </div>
+          <aside class="calc-page-sidebar">
+            <div class="ad-slot ad-slot-rectangle"></div>
+            <div class="sidebar-card"><h3>Tax Calculators</h3><a href="/pages/tax-calculators/tax-bracket-calculator/">Tax Bracket Calculator</a><a href="/pages/tax-calculators/after-tax-income-calculator/">After-Tax Income</a><a href="/pages/tax-calculators/child-tax-credit-calculator/">Child Tax Credit</a><a href="/pages/tax-calculators/earned-income-tax-credit-calculator/">EITC Calculator</a><a href="/pages/tax-calculators/standard-vs-itemized-deduction-calculator/">Deduction Calculator</a></div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><a href="/" class="logo"><svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>CalcWise</a><p>Free online calculators for business, finance, tax, and investment decisions.</p></div>
+        <div class="footer-col"><h4>Calculators</h4><a href="/pages/business-calculators/">Business</a><a href="/pages/financial-calculators/">Financial</a><a href="/pages/tax-calculators/">Tax</a><a href="/pages/investment-calculators/">Investment</a></div>
+        <div class="footer-col"><h4>Resources</h4><a href="/about/">About</a><a href="/blog/">Blog</a><a href="/contact/">Contact</a></div>
+        <div class="footer-col"><h4>Legal</h4><a href="/privacy/">Privacy Policy</a><a href="/terms/">Terms of Service</a></div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2026 CalcWise. All rights reserved.</p><div class="footer-links"><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="/contact/">Contact</a></div></div>
+    </div>
+  </footer>
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    const BRACKETS = {
+      single:[{rate:0.10,min:0,max:11925},{rate:0.12,min:11925,max:48475},{rate:0.22,min:48475,max:103350},{rate:0.24,min:103350,max:197300},{rate:0.32,min:197300,max:250525},{rate:0.35,min:250525,max:626350},{rate:0.37,min:626350,max:Infinity}],
+      married:[{rate:0.10,min:0,max:23850},{rate:0.12,min:23850,max:96950},{rate:0.22,min:96950,max:206700},{rate:0.24,min:206700,max:394600},{rate:0.32,min:394600,max:501050},{rate:0.35,min:501050,max:751600},{rate:0.37,min:751600,max:Infinity}],
+      hoh:[{rate:0.10,min:0,max:17000},{rate:0.12,min:17000,max:64850},{rate:0.22,min:64850,max:103350},{rate:0.24,min:103350,max:197300},{rate:0.32,min:197300,max:250500},{rate:0.35,min:250500,max:626350},{rate:0.37,min:626350,max:Infinity}],
+      mfs:[{rate:0.10,min:0,max:11925},{rate:0.12,min:11925,max:48475},{rate:0.22,min:48475,max:103350},{rate:0.24,min:103350,max:197300},{rate:0.32,min:197300,max:250525},{rate:0.35,min:250525,max:313175},{rate:0.37,min:313175,max:Infinity}]
+    };
+    const STD_DED = {single:14600,married:29200,hoh:21900,mfs:14600};
+
+    function calcTax(taxable, status) {
+      const b = BRACKETS[status] || BRACKETS.single;
+      let tax = 0;
+      for (const br of b) { if (taxable <= br.min) break; tax += (Math.min(taxable, br.max) - br.min) * br.rate; }
+      return tax;
+    }
+    function getMarginal(taxable, status) {
+      const b = BRACKETS[status] || BRACKETS.single;
+      for (let i = b.length - 1; i >= 0; i--) { if (taxable > b[i].min) return b[i].rate; }
+      return 0.10;
+    }
+
+    function estimateRefund() {
+      const income = CalcWise.parseNumber(document.getElementById('total-income').value);
+      const withholding = CalcWise.parseNumber(document.getElementById('withholding').value);
+      const status = document.getElementById('filing-status').value;
+      const pretaxDed = CalcWise.parseNumber(document.getElementById('pretax-ded').value);
+      const itemized = CalcWise.parseNumber(document.getElementById('itemized').value);
+      const credits = CalcWise.parseNumber(document.getElementById('credits').value);
+
+      if (income <= 0) { alert('Please enter total income.'); return; }
+
+      const agi = Math.max(0, income - pretaxDed);
+      const stdDed = STD_DED[status] || 14600;
+      const deduction = Math.max(stdDed, itemized);
+      const taxableIncome = Math.max(0, agi - deduction);
+      const grossTax = calcTax(taxableIncome, status);
+      const netTax = Math.max(0, grossTax - credits);
+      const difference = withholding - netTax;
+      const effRate = income > 0 ? (netTax / income) * 100 : 0;
+      const marginal = getMarginal(taxableIncome, status) * 100;
+
+      const isRefund = difference >= 0;
+      CalcWise.setText('refund-label', isRefund ? 'Estimated Refund' : 'Estimated Amount Owed');
+      const refundEl = document.getElementById('result-refund');
+      refundEl.textContent = CalcWise.formatCurrency(Math.abs(difference));
+      refundEl.style.color = isRefund ? 'var(--color-success)' : 'var(--color-error)';
+
+      CalcWise.setText('result-tax-liability', CalcWise.formatCurrency(grossTax));
+      CalcWise.setText('result-credits', CalcWise.formatCurrency(credits));
+      CalcWise.setText('result-net-tax', CalcWise.formatCurrency(netTax));
+      CalcWise.setText('result-withholding', CalcWise.formatCurrency(withholding));
+      CalcWise.setText('result-eff-rate', effRate.toFixed(1) + '%');
+      CalcWise.setText('result-marginal', marginal.toFixed(0) + '%');
+
+      // Optimization tips
+      let tips = '<h3 style="font-size:var(--text-base);font-weight:var(--font-semibold);color:var(--color-primary);margin-bottom:var(--space-2);">Optimization Tips</h3><ul style="font-size:var(--text-sm);color:var(--color-gray-700);padding-left:var(--space-5);">';
+      if (!isRefund) tips += '<li>Increase W4 withholding or make estimated tax payments to avoid a bill next year.</li>';
+      if (difference > 2000) tips += '<li>Your refund is large — consider adjusting your W4 to reduce excess withholding and increase monthly take-home pay.</li>';
+      if (itemized < stdDed) tips += '<li>You are using the standard deduction ($' + stdDed.toLocaleString() + '). Track deductible expenses to see if itemizing could save more.</li>';
+      if (credits === 0) tips += '<li>Check if you qualify for credits: Child Tax Credit, Earned Income Credit, education credits, or retirement savings credit.</li>';
+      if (pretaxDed < 5000) tips += '<li>Contributing more to a 401(k) or HSA reduces taxable income and can lower your tax bill.</li>';
+      tips += '</ul>';
+      document.getElementById('optimization-tips').innerHTML = tips;
+
+      CalcWise.showResults('results');
+    }
+    function resetForm() { document.getElementById('calc-form').reset(); document.getElementById('optimization-tips').innerHTML = ''; const refundEl = document.getElementById('result-refund'); refundEl.style.color = ''; CalcWise.hideResults('results'); }
+    document.querySelectorAll('.faq-question').forEach(btn => { btn.addEventListener('click', () => { const e = btn.getAttribute('aria-expanded') === 'true'; btn.setAttribute('aria-expanded', !e); btn.nextElementSibling.style.display = e ? 'none' : 'block'; }); });
+    document.querySelectorAll('.faq-answer').forEach(a => a.style.display = 'none');
+    const toggle = document.querySelector('.mobile-menu-toggle'); const mobileNav = document.querySelector('.mobile-nav');
+    if (toggle && mobileNav) { toggle.addEventListener('click', () => { const open = toggle.getAttribute('aria-expanded') === 'true'; toggle.setAttribute('aria-expanded', !open); mobileNav.style.display = open ? 'none' : 'block'; }); }
+  </script>
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How Close Are You to Financial Independence? Quiz | CalcWise</title>
+  <meta name="description" content="8-question quiz to assess your progress toward financial independence. Find out if you are FI Ready, Getting Close, On Track, or in Early Stage with a personalised action plan.">
+  <link rel="canonical" href="https://calcwise.io/quizzes/finance-quizzes/how-close-are-you-to-financial-independence/">
+  <meta property="og:title" content="How Close Are You to Financial Independence? Quiz | CalcWise">
+  <meta property="og:description" content="Evaluate your savings rate, investment portfolio, passive income, and FI number in 8 questions. Discover your place on the path to financial freedom.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcwise.io/quizzes/finance-quizzes/how-close-are-you-to-financial-independence/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="How Close Are You to Financial Independence? Quiz | CalcWise">
+  <meta name="twitter:description" content="8 questions to reveal whether you are FI Ready, Getting Close, On Track, or in Early Stage.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+  <link rel="stylesheet" href="/css/quiz.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://calcwise.io/"},{"@type":"ListItem","position":2,"name":"Quizzes","item":"https://calcwise.io/quizzes/"},{"@type":"ListItem","position":3,"name":"Finance Quizzes","item":"https://calcwise.io/quizzes/finance-quizzes/"},{"@type":"ListItem","position":4,"name":"How Close Are You to Financial Independence?","item":"https://calcwise.io/quizzes/finance-quizzes/how-close-are-you-to-financial-independence/"}]}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebPage","name":"How Close Are You to Financial Independence? Quiz","description":"8-question FI quiz covering savings rate, investment portfolio, passive income, monthly expenses, FI number awareness, side income, real estate, and expected retirement age.","url":"https://calcwise.io/quizzes/finance-quizzes/how-close-are-you-to-financial-independence/","isPartOf":{"@type":"WebSite","name":"CalcWise","url":"https://calcwise.io/"}}
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a><a href="/real-estate-calculators/">Real Estate</a><a href="/finance-calculators/">Finance</a><a href="/business-calculators/">Business</a><a href="/quizzes/" aria-current="page">Quizzes</a><a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a><a href="/real-estate-calculators/">Real Estate Calculators</a><a href="/finance-calculators/">Finance Calculators</a><a href="/business-calculators/">Business Calculators</a><a href="/quizzes/">Quizzes</a><a href="/about.html">About</a><a href="/contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li><li><a href="/quizzes/">Quizzes</a></li><li><a href="/quizzes/finance-quizzes/">Finance Quizzes</a></li><li><span aria-current="page">How Close Are You to Financial Independence?</span></li>
+        </ol>
+      </nav>
+      <div class="page-content">
+        <h1>How Close Are You to Financial Independence?</h1>
+        <p class="intro">Financial independence means having enough invested assets to cover your living expenses indefinitely without needing to work. This 8-question quiz assesses your savings rate, investment portfolio, passive income, and FI number awareness to show you exactly where you stand on the path to financial freedom — and what to do next.</p>
+
+        <div class="quiz-container" id="quiz">
+          <div class="quiz-progress">
+            <div class="quiz-progress__label"><span id="progress-text">Question 1 of 8</span><span id="progress-pct">0%</span></div>
+            <div class="quiz-progress__bar"><div class="quiz-progress__fill" id="progress-bar" style="width:0%"></div></div>
+          </div>
+          <div id="question-container"></div>
+          <div id="result-container" class="quiz-result hidden"></div>
+        </div>
+
+        <section class="faq-section" aria-labelledby="faq-heading" style="margin-top:3rem">
+          <h2 id="faq-heading">Frequently Asked Questions</h2>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false"><span>What is the 4% rule for financial independence?</span><svg class="faq-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M10 4v12M4 10h12"/></svg></button>
+            <div class="faq-answer"><p>The 4% rule states that you can safely withdraw 4% of your investment portfolio each year without running out of money over a 30-year period. Your FI number is therefore 25 times your annual spending (annual spending ÷ 0.04). A household spending $60,000/year needs $1.5 million invested.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false"><span>How does savings rate affect FI timeline?</span><svg class="faq-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M10 4v12M4 10h12"/></svg></button>
+            <div class="faq-answer"><p>Savings rate has an enormous effect. Saving 10% takes roughly 43 years to reach FI. Saving 25% takes about 32 years. Saving 50% takes 17 years. Saving 75% takes just 7 years. The compounding effect of both more savings and lower spending dramatically shortens the timeline.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false"><span>Does passive income count toward financial independence?</span><svg class="faq-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M10 4v12M4 10h12"/></svg></button>
+            <div class="faq-answer"><p>Yes. Passive income from rental properties, dividends, royalties, or businesses that run without your active involvement directly reduces the portfolio size needed for FI. $2,000/month in passive income reduces your required FI portfolio by $600,000 (using the 4% rule).</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false"><span>Should I invest in index funds or individual stocks for FI?</span><svg class="faq-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M10 4v12M4 10h12"/></svg></button>
+            <div class="faq-answer"><p>Most FI community members and academic research favour low-cost index funds (such as total market index funds) over individual stocks. They provide instant diversification, low fees, and historically match or beat most active management strategies over long periods. Our investment return calculator can model both scenarios.</p></div>
+          </div>
+        </section>
+
+        <section aria-labelledby="related-heading" style="margin-top:3rem">
+          <h2 id="related-heading">Related Finance Quizzes</h2>
+          <div class="quiz-grid" style="grid-template-columns:repeat(auto-fill,minmax(260px,1fr))">
+            <a href="/quizzes/finance-quizzes/how-much-should-you-be-saving/" class="quiz-card"><div class="quiz-card__badge">Finance</div><h3>How Much Should You Be Saving?</h3><p>Get your personalised savings rate recommendation to accelerate your FI timeline.</p><span class="quiz-card__cta">Take quiz <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></a>
+            <a href="/quizzes/finance-quizzes/how-financially-disciplined-are-you/" class="quiz-card"><div class="quiz-card__badge">Finance</div><h3>How Financially Disciplined Are You?</h3><p>Financial discipline is the engine that drives FI — find out how strong yours is.</p><span class="quiz-card__cta">Take quiz <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></a>
+            <a href="/quizzes/finance-quizzes/how-prepared-are-you-for-a-recession/" class="quiz-card"><div class="quiz-card__badge">Finance</div><h3>How Prepared Are You for a Recession?</h3><p>Protecting your FI portfolio through market downturns is just as important as building it.</p><span class="quiz-card__cta">Take quiz <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></a>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><a href="/" class="logo" aria-label="CalcWise Home"><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="#1B4D3E" stroke-width="2.5" stroke-linecap="round"/></svg>CalcWise</a><p>Free financial calculators and quizzes built for clarity, accuracy, and speed.</p></div>
+        <div class="footer-col"><h4>Finance Quizzes</h4><a href="/quizzes/finance-quizzes/how-close-are-you-to-financial-independence/">Financial Independence</a><a href="/quizzes/finance-quizzes/how-much-should-you-be-saving/">Savings Rate</a><a href="/quizzes/finance-quizzes/">View All</a></div>
+        <div class="footer-col"><h4>Real Estate Quizzes</h4><a href="/quizzes/real-estate-quizzes/are-you-ready-to-invest-in-real-estate/">Real Estate Investing</a><a href="/quizzes/real-estate-quizzes/">View All</a></div>
+        <div class="footer-col"><h4>Company</h4><a href="/about.html">About</a><a href="/privacy.html">Privacy Policy</a><a href="/terms.html">Terms of Use</a></div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2026 CalcWise. All rights reserved.</p><div class="footer-links"><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a><a href="/disclaimer.html">Disclaimer</a><a href="/sitemap.xml">Sitemap</a></div></div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    document.querySelector('.mobile-menu-toggle').addEventListener('click', function() {
+      const nav = document.querySelector('.mobile-nav');
+      const isOpen = nav.classList.toggle('is-open');
+      this.setAttribute('aria-expanded', isOpen);
+      this.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+    });
+    document.querySelectorAll('.faq-question').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        const item = this.closest('.faq-item');
+        const isOpen = item.classList.toggle('is-open');
+        this.setAttribute('aria-expanded', isOpen);
+      });
+    });
+
+    const questions = [
+      { question: "What is your current savings rate (total savings + investments ÷ gross income)?", options: ["Under 10%", "10%–19%", "20%–34%", "35% or more"], correct: 3, explanation: "A 35%+ savings rate puts you on the fast track to FI. At 50% you reach FI in roughly 17 years from zero. Under 10% extends the timeline to 40+ years, making FI very difficult without major changes." },
+      { question: "How large is your investment portfolio relative to your annual expenses?", options: ["Less than 5x annual expenses", "5x–10x annual expenses", "10x–20x annual expenses", "20x–25x or more annual expenses (near FI threshold)"], correct: 3, explanation: "The FI threshold is 25x annual expenses (the 4% rule). At 20–25x you are very close. Under 5x annual expenses means you are early in the accumulation phase." },
+      { question: "Do you have meaningful passive income (rental income, dividends, royalties, etc.)?", options: ["No passive income at all", "Minimal — under $500/month", "Moderate — $500–$2,000/month", "Significant — over $2,000/month"], correct: 3, explanation: "$2,000/month in passive income reduces your required FI portfolio by approximately $600,000. Building multiple income streams accelerates FI significantly while reducing portfolio risk." },
+      { question: "How do your monthly essential expenses compare to your investments' sustainable income?", options: ["My investments cover almost nothing", "They cover under 25% of expenses", "They cover 25%–75% of expenses", "My investments could cover 75%+ of my monthly expenses"], correct: 3, explanation: "When your portfolio generates enough to cover 100% of expenses at a safe withdrawal rate (typically 3.5–4%), you have reached financial independence. Tracking this ratio shows your real FI progress." },
+      { question: "Do you know your FI number (the portfolio size needed to retire)?", options: ["No — I've never calculated it", "I have a vague idea but haven't calculated it precisely", "I know roughly what it is", "Yes — I know my exact FI number and track progress toward it"], correct: 3, explanation: "Knowing your FI number is the prerequisite for planning. Without it, FI remains an abstract goal. Calculate it as: annual spending × 25 (or ÷ 0.04). Our FI calculator can do this instantly." },
+      { question: "Do you have significant side income or a scalable business beyond your main job?", options: ["No other income source", "Occasional freelance work under $500/month", "Regular side income of $500–$2,000/month", "Substantial side income or business over $2,000/month"], correct: 3, explanation: "Side income accelerates FI in two ways: it directly increases savings, and building a scalable business can generate income that continues after leaving employment." },
+      { question: "Do you invest in real estate (primary home equity or investment properties)?", options: ["No real estate ownership", "Primary home only with minimal equity", "Significant primary home equity (over 40% of value)", "Investment property (or properties) generating income"], correct: 2, explanation: "Real estate — especially income-producing investment properties — is a powerful FI accelerator. Home equity also contributes to net worth but doesn't generate income unless tapped." },
+      { question: "At what age do you expect or hope to achieve financial independence?", options: ["After age 65 (traditional retirement)", "Age 55–65", "Age 45–54", "Before age 45 (early FI / FIRE)"], correct: 3, explanation: "Early FI requires a significantly higher savings rate and potentially more conservative withdrawal rates (3–3.5% instead of 4%) to support a 40–50 year retirement. Knowing your target age shapes every financial decision." }
+    ];
+
+    const results = [
+      { min: 7, label: "FI Ready", colorClass: "result-score--high", title: "You Are FI Ready or Very Close", desc: "Your savings rate, portfolio size, passive income, and financial knowledge are all aligned with financial independence. You may already be at or very close to your FI number. This is a rare and significant achievement.", recs: ["Run a detailed sequence-of-returns risk analysis before fully retiring.", "Consider a 3.5% withdrawal rate rather than 4% for early retirement lasting 40+ years.", "Build a 1–2 year cash buffer to avoid selling investments in a downturn.", "Explore whether a 'barista FI' or part-time income bridges any remaining gap.", "Use the FI calculator to stress-test your number against different inflation scenarios."] },
+      { min: 5, label: "Getting Close", colorClass: "", title: "You Are Getting Close to Financial Independence", desc: "You have made substantial progress. You know your FI number, have significant investments, and maintain a strong savings rate. You are within striking distance — focused optimisation can accelerate your timeline meaningfully.", recs: ["Calculate exactly how many months away you are using current savings rate and portfolio growth.", "Look for opportunities to increase your savings rate by 5% — the impact is significant this close.", "Optimise investment allocation for tax efficiency: max tax-advantaged accounts first.", "Model different retirement scenarios using the financial independence calculator.", "Consider whether increasing passive income could get you to FI 2–3 years sooner."] },
+      { min: 3, label: "On Track", colorClass: "result-score--mid", title: "You Are On Track for Financial Independence", desc: "You are making real progress toward FI with a solid savings rate, some investments, and growing financial knowledge. You are not there yet, but the foundation is in place. Consistency and increasing your savings rate are the keys.", recs: ["Calculate your FI number today if you haven't already — use the FI calculator.", "Increase your savings rate by 5% this year — automate it immediately.", "Focus on low-cost, diversified index fund investing for the long-term accumulation phase.", "Explore one passive income stream that aligns with your skills or existing assets.", "Track your portfolio as a multiple of annual expenses to see real FI progress."] },
+      { min: 0, label: "Early Stage", colorClass: "result-score--low", title: "You Are in the Early Stage", desc: "You are early in your FI journey. This is not a problem — every FI story starts here. The most important thing is to establish the right habits and understanding now, because they compound dramatically over time.", recs: ["Calculate your FI number: annual expenses × 25. Write it down today.", "Start or increase retirement account contributions — especially to capture any employer match.", "Set a 1-year goal: know your FI number, hit 10% savings rate, open an investment account.", "Read about the FIRE movement (Financial Independence, Retire Early) to find your motivation.", "Use the financial independence calculator to see what consistent 20% saving looks like at retirement."] }
+    ];
+
+    const calculatorLinks = [
+      { href: "/finance-calculators/financial-independence-calculator/", label: "FI Calculator" },
+      { href: "/finance-calculators/investment-return-calculator/", label: "Investment Return Calculator" },
+      { href: "/finance-calculators/retirement-savings-calculator/", label: "Retirement Savings Calculator" }
+    ];
+
+    let current = 0, score = 0, answered = false;
+    function renderQuestion() {
+      answered = false;
+      const q = questions[current];
+      const pct = Math.round((current / questions.length) * 100);
+      document.getElementById('progress-bar').style.width = pct + '%';
+      document.getElementById('progress-text').textContent = 'Question ' + (current + 1) + ' of ' + questions.length;
+      document.getElementById('progress-pct').textContent = pct + '%';
+      document.getElementById('question-container').innerHTML = `<div class="quiz-question"><div class="quiz-question__number">Question ${current + 1}</div><p class="quiz-question__text">${q.question}</p><ul class="quiz-options" role="list">${q.options.map((opt, i) => `<li><button class="quiz-option" onclick="selectAnswer(${i})"><span class="quiz-option__indicator"></span><span>${opt}</span></button></li>`).join('')}</ul><div id="explanation" class="quiz-explanation" style="display:none"></div><div class="quiz-nav"><span></span><button class="btn btn-primary" id="next-btn" onclick="nextQuestion()" disabled>${current < questions.length - 1 ? 'Next Question' : 'See Results'}</button></div></div>`;
+    }
+    function selectAnswer(idx) {
+      if (answered) return; answered = true;
+      const q = questions[current];
+      document.querySelectorAll('.quiz-option').forEach(function(btn, i) { if (i === q.correct) btn.classList.add('correct'); else if (i === idx && idx !== q.correct) btn.classList.add('incorrect'); });
+      if (idx === q.correct) score++;
+      const expEl = document.getElementById('explanation');
+      expEl.style.display = 'block'; expEl.className = 'quiz-explanation ' + (idx === q.correct ? 'quiz-explanation--correct' : 'quiz-explanation--incorrect'); expEl.textContent = q.explanation;
+      document.getElementById('next-btn').disabled = false;
+    }
+    function nextQuestion() { current++; if (current < questions.length) renderQuestion(); else showResult(); }
+    function showResult() {
+      document.getElementById('progress-bar').style.width = '100%'; document.getElementById('progress-text').textContent = 'Complete!'; document.getElementById('progress-pct').textContent = '100%';
+      document.getElementById('question-container').innerHTML = '';
+      const result = results.find(r => score >= r.min);
+      const rc = document.getElementById('result-container'); rc.classList.remove('hidden');
+      rc.innerHTML = `<div class="result-score ${result.colorClass}"><span class="result-score__number">${score}/${questions.length}</span><span class="result-score__label">Score</span></div><div class="result-category">${result.label}</div><h2>${result.title}</h2><p>${result.desc}</p><div class="result-recommendations"><h3>Recommended Next Steps</h3><ul>${result.recs.map(r => `<li>${r}</li>`).join('')}</ul></div><div class="result-actions">${calculatorLinks.map(l => `<a href="${l.href}" class="btn btn-secondary">${l.label}</a>`).join('')}</div><div class="result-actions" style="margin-top:1rem"><button class="btn btn-outline" onclick="restartQuiz()">Retake Quiz</button></div>`;
+    }
+    function restartQuiz() { current = 0; score = 0; document.getElementById('result-container').classList.add('hidden'); renderQuestion(); }
+    renderQuestion();
+  </script>
+</body>
+</html>

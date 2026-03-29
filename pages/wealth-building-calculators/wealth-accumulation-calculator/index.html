@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wealth Accumulation Calculator - Nominal & Real Wealth Growth | CalcWise</title>
+  <meta name="description" content="Calculate how wealth accumulates over time with monthly contributions and investment returns. See both nominal and inflation-adjusted real wealth, total contributions vs. gains.">
+  <meta name="keywords" content="wealth accumulation calculator, real wealth, inflation adjusted wealth, investment growth, wealth building">
+  <link rel="canonical" href="https://calcwise.io/wealth-building-calculators/wealth-accumulation-calculator/">
+
+  <meta property="og:title" content="Wealth Accumulation Calculator - Nominal & Real Wealth Growth">
+  <meta property="og:description" content="See how wealth accumulates over time with our free inflation-adjusted wealth accumulation calculator.">
+  <meta property="og:url" content="https://calcwise.io/wealth-building-calculators/wealth-accumulation-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Wealth Accumulation Calculator - Nominal & Real Wealth Growth">
+  <meta name="twitter:description" content="See how wealth accumulates over time with our free inflation-adjusted wealth accumulation calculator.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Wealth Building Calculators", "item": "https://calcwise.io/wealth-building-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "Wealth Accumulation Calculator", "item": "https://calcwise.io/wealth-building-calculators/wealth-accumulation-calculator/" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the difference between nominal and real wealth?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Nominal wealth is the dollar figure of your portfolio without adjusting for inflation. Real wealth, or inflation-adjusted wealth, represents what that money is actually worth in today's purchasing power. For example, $500,000 in 20 years at 3% inflation has the purchasing power of about $277,000 today." }
+      },
+      {
+        "@type": "Question",
+        "name": "Why does the contribution vs. gain ratio matter?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The contribution vs. gain ratio shows how much of your final wealth came from money you saved vs. money your money earned. Early on, contributions dominate. Over longer horizons, investment gains overtake contributions — a sign that compounding is doing the heavy lifting for you." }
+      },
+      {
+        "@type": "Question",
+        "name": "What inflation rate should I use?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The long-term average US inflation rate is approximately 3% per year. For conservative planning use 3–3.5%; for optimistic projections use 2–2.5%. The Federal Reserve targets 2% inflation over the long run." }
+      },
+      {
+        "@type": "Question",
+        "name": "How much should I save monthly to build meaningful wealth?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Consistently saving $500/month at 7% annual returns over 30 years produces over $600,000. Saving $1,000/month under the same conditions produces over $1.2 million. The exact amount matters less than starting early and staying consistent." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/wealth-building-calculators/" aria-current="page">Wealth Building</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/wealth-building-calculators/">Wealth Building Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/wealth-building-calculators/">Wealth Building Calculators</a></li>
+          <li><span aria-current="page">Wealth Accumulation Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="article-content">
+          <h1>Wealth Accumulation Calculator</h1>
+          <p>This calculator projects how your wealth grows through consistent monthly contributions and compound investment returns — and critically shows you what that future wealth is worth in today's dollars after inflation. Understanding the gap between nominal and real wealth helps you set savings targets that actually meet your future lifestyle needs. Enter your starting amount, monthly contributions, expected return, and time horizon to see the full picture.</p>
+
+          <div class="calc-container mt-8">
+            <div class="calc-header">
+              <h2>Calculate Wealth Accumulation</h2>
+              <p>Compare nominal vs. inflation-adjusted wealth growth</p>
+            </div>
+            <div class="calc-body">
+              <form id="wa-form" onsubmit="return false;">
+                <div class="form-group">
+                  <label class="form-label" for="wa-starting">Starting Amount</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="wa-starting" name="startingAmount" class="form-input" placeholder="10000" min="0" step="500" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="wa-monthly">Monthly Contributions</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="wa-monthly" name="monthlyContributions" class="form-input" placeholder="500" min="0" step="50" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="wa-return">Annual Return Rate</label>
+                  <div class="input-suffix">
+                    <input type="number" id="wa-return" name="annualReturn" class="form-input" placeholder="7" min="0" max="50" step="0.1" required>
+                    <span class="suffix">%</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="wa-years">Years</label>
+                  <input type="number" id="wa-years" name="years" class="form-input" placeholder="25" min="1" max="60" step="1" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="wa-inflation">Inflation Rate</label>
+                  <div class="input-suffix">
+                    <input type="number" id="wa-inflation" name="inflationRate" class="form-input" placeholder="3" min="0" max="20" step="0.1" required>
+                    <span class="suffix">%</span>
+                  </div>
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calculateWealthAccumulation()">Calculate Wealth</button>
+                  <button type="button" class="btn btn-reset" onclick="resetWealthAccumulation()">Reset</button>
+                </div>
+              </form>
+
+              <div id="wa-results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">Nominal Wealth (Final Value)</div>
+                  <div class="result-value" id="wa-nominal"></div>
+                </div>
+                <div class="result-grid">
+                  <div class="result-item">
+                    <div class="result-label">Real Wealth (Today's $)</div>
+                    <div class="result-value" id="wa-real"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Total Contributions</div>
+                    <div class="result-value" id="wa-contributions"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Total Investment Gains</div>
+                    <div class="result-value" id="wa-gains"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Contribution vs. Gain Ratio</div>
+                    <div class="result-value" id="wa-ratio"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Inflation Loss</div>
+                    <div class="result-value" id="wa-inflation-loss"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Effective Real Return</div>
+                    <div class="result-value" id="wa-real-return"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <section class="content-section">
+            <h2>Wealth Accumulation Formula</h2>
+            <p>Nominal wealth is calculated using the standard future value of annuity formula. Real wealth adjusts for inflation using the Fisher equation:</p>
+            <div class="formula-box">
+              <div class="formula-label">Nominal Wealth</div>
+              FV = P(1 + r)<sup>n</sup> + PMT &times; [((1 + r)<sup>n</sup> &minus; 1) / r]
+            </div>
+            <div class="formula-box">
+              <div class="formula-label">Real Wealth (Inflation-Adjusted)</div>
+              Real FV = FV / (1 + i)<sup>n</sup>
+            </div>
+            <div class="formula-box">
+              <div class="formula-label">Real Return Rate (Fisher Equation)</div>
+              r<sub>real</sub> = ((1 + r<sub>nominal</sub>) / (1 + i)) &minus; 1
+            </div>
+            <p>Where <strong>P</strong> is the starting principal, <strong>r</strong> is the monthly return rate, <strong>PMT</strong> is the monthly contribution, <strong>n</strong> is total months, and <strong>i</strong> is the annual inflation rate.</p>
+          </section>
+
+          <section class="content-section">
+            <h2>How to Use This Calculator</h2>
+            <ol>
+              <li><strong>Enter your starting amount</strong> — any lump sum you're beginning with.</li>
+              <li><strong>Enter your monthly contributions</strong> — the fixed amount you invest each month.</li>
+              <li><strong>Enter the annual return rate</strong> — your expected portfolio return (7–10% is historically typical for diversified equities).</li>
+              <li><strong>Enter the number of years</strong> — your investment time horizon.</li>
+              <li><strong>Enter the inflation rate</strong> — use 3% as a reasonable long-term estimate.</li>
+              <li><strong>Click "Calculate Wealth"</strong> to see nominal wealth, real wealth, and the contribution vs. gain breakdown.</li>
+            </ol>
+          </section>
+
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>Starting with $10,000 and contributing $500 per month at a 7% annual return over 25 years, you would accumulate approximately $456,000 in nominal terms. Adjusted for 3% inflation, that is worth about $221,000 in today's purchasing power. Your total contributions would be $160,000 and investment gains $296,000 — meaning compounding generates nearly twice as much wealth as your direct contributions over this period.</p>
+          </section>
+
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What is the difference between nominal and real wealth?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Nominal wealth is the dollar figure of your portfolio without adjusting for inflation. Real wealth, or inflation-adjusted wealth, represents what that money is actually worth in today's purchasing power. For example, $500,000 in 20 years at 3% inflation has the purchasing power of about $277,000 today.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Why does the contribution vs. gain ratio matter?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>The contribution vs. gain ratio shows how much of your final wealth came from money you saved vs. money your money earned. Early on, contributions dominate. Over longer horizons, investment gains overtake contributions — a sign that compounding is doing the heavy lifting for you.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What inflation rate should I use?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>The long-term average US inflation rate is approximately 3% per year. For conservative planning use 3–3.5%; for optimistic projections use 2–2.5%. The Federal Reserve targets 2% inflation over the long run.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                How much should I save monthly to build meaningful wealth?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Consistently saving $500/month at 7% annual returns over 30 years produces over $600,000. Saving $1,000/month under the same conditions produces over $1.2 million. The exact amount matters less than starting early and staying consistent.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/wealth-building-calculators/net-worth-growth-calculator/" class="card card-link">
+                <h3>Net Worth Growth Calculator</h3>
+                <p>Project your total net worth at 5, 10, 20, and 30 years.</p>
+              </a>
+              <a href="/wealth-building-calculators/compound-growth-calculator/" class="card card-link">
+                <h3>Compound Growth Calculator</h3>
+                <p>See year-by-year growth with flexible compounding.</p>
+              </a>
+              <a href="/wealth-building-calculators/savings-acceleration-calculator/" class="card card-link">
+                <h3>Savings Acceleration Calculator</h3>
+                <p>See how extra savings dramatically boost long-term wealth.</p>
+              </a>
+              <a href="/finance-calculators/compound-interest-calculator/" class="card card-link">
+                <h3>Compound Interest Calculator</h3>
+                <p>Calculate compound interest with flexible compounding frequency.</p>
+              </a>
+            </div>
+          </section>
+
+          <div class="ad-slot ad-slot-leaderboard"></div>
+
+          <div class="disclaimer">
+            <strong>Disclaimer:</strong> This calculator provides estimates for informational and educational purposes only. Projections assume constant returns and inflation rates. Actual investment returns are variable and not guaranteed. This is not financial advice. Consult a qualified financial professional before making investment decisions.
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Wealth Building</h4>
+          <a href="/wealth-building-calculators/">All Wealth Building Calculators</a>
+          <a href="/wealth-building-calculators/millionaire-timeline-calculator/">Millionaire Timeline</a>
+          <a href="/wealth-building-calculators/wealth-milestone-calculator/">Wealth Milestones</a>
+        </div>
+        <div class="footer-col">
+          <h4>Finance</h4>
+          <a href="/finance-calculators/">All Finance Calculators</a>
+          <a href="/finance-calculators/compound-interest-calculator/">Compound Interest</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateWealthAccumulation() {
+      if (!CalcWise.validateForm('wa-form')) return;
+
+      const P = CalcWise.parseNumber(document.getElementById('wa-starting').value);
+      const pmt = CalcWise.parseNumber(document.getElementById('wa-monthly').value);
+      const annualReturn = parseFloat(document.getElementById('wa-return').value) || 0;
+      const years = parseInt(document.getElementById('wa-years').value) || 1;
+      const inflationRate = parseFloat(document.getElementById('wa-inflation').value) || 0;
+
+      const r = annualReturn / 100 / 12;
+      const n = years * 12;
+
+      let nominal;
+      if (r === 0) {
+        nominal = P + pmt * n;
+      } else {
+        nominal = P * Math.pow(1 + r, n) + pmt * ((Math.pow(1 + r, n) - 1) / r);
+      }
+
+      const totalContributions = P + pmt * n;
+      const gains = nominal - totalContributions;
+      const realWealth = nominal / Math.pow(1 + inflationRate / 100, years);
+      const inflationLoss = nominal - realWealth;
+      const realReturnRate = ((1 + annualReturn / 100) / (1 + inflationRate / 100) - 1) * 100;
+      const contribPct = totalContributions / nominal * 100;
+      const gainPct = gains / nominal * 100;
+
+      CalcWise.setText('wa-nominal', CalcWise.formatCurrency(nominal));
+      CalcWise.setText('wa-real', CalcWise.formatCurrency(realWealth));
+      CalcWise.setText('wa-contributions', CalcWise.formatCurrency(totalContributions));
+      CalcWise.setText('wa-gains', CalcWise.formatCurrency(gains));
+      CalcWise.setText('wa-ratio', contribPct.toFixed(1) + '% contributions / ' + gainPct.toFixed(1) + '% gains');
+      CalcWise.setText('wa-inflation-loss', CalcWise.formatCurrency(inflationLoss));
+      CalcWise.setText('wa-real-return', realReturnRate.toFixed(2) + '% / yr');
+
+      CalcWise.showResults('wa-results');
+    }
+
+    function resetWealthAccumulation() {
+      document.getElementById('wa-form').reset();
+      CalcWise.hideResults('wa-results');
+    }
+  </script>
+</body>
+</html>

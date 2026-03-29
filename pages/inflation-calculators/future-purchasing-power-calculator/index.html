@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Future Purchasing Power Calculator - CalcWise</title>
+  <meta name="description" content="Find out what today's dollars will be worth in any future year. See equivalent future value needed, projected purchasing power, and a year-by-year breakdown table.">
+  <link rel="canonical" href="https://calcwise.io/inflation-calculators/future-purchasing-power-calculator/">
+  <meta property="og:title" content="Future Purchasing Power Calculator - CalcWise">
+  <meta property="og:description" content="See how much your money will be worth in any future year. Get a year-by-year purchasing power table with multiple inflation assumptions.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcwise.io/inflation-calculators/future-purchasing-power-calculator/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Future Purchasing Power Calculator - CalcWise">
+  <meta name="twitter:description" content="See how much your money will be worth in any future year. Get a year-by-year purchasing power table.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/"},
+      {"@type": "ListItem", "position": 2, "name": "Inflation Calculators", "item": "https://calcwise.io/inflation-calculators/"},
+      {"@type": "ListItem", "position": 3, "name": "Future Purchasing Power Calculator"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is purchasing power and how does inflation affect it?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Purchasing power is the quantity of goods or services that one unit of currency can buy. Inflation reduces purchasing power over time — at 3% annual inflation, $1,000 today will only have the purchasing power of about $744 in 10 years."}
+      },
+      {
+        "@type": "Question",
+        "name": "How do I calculate future purchasing power?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Future Purchasing Power = Today's Amount / (1 + Inflation Rate)^Years. This tells you how much future money you will need to have the same buying power as your current amount. Equivalently, the amount you need in the future to match today's value is Today's Amount × (1 + Inflation Rate)^Years."}
+      },
+      {
+        "@type": "Question",
+        "name": "Which inflation rate assumption should I use?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Use 2% for the Federal Reserve's target scenario (optimistic), 3% for the US historical long-run average (moderate), or a custom rate if you expect higher inflation based on current economic conditions or specific spending categories."}
+      },
+      {
+        "@type": "Question",
+        "name": "Why does the year-by-year table matter for financial planning?",
+        "acceptedAnswer": {"@type": "Answer", "text": "The year-by-year table shows the compounding effect of inflation clearly — small annual losses accumulate significantly over decades. This helps you plan ahead for retirement, education savings, and long-term investment goals by understanding the real value of money at each future point."}
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="logo">
+        <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav">
+        <a href="/">Home</a>
+        <a href="/pages/finance-calculators/">Finance</a>
+        <a href="/pages/business-calculators/">Business</a>
+        <a href="/pages/investment-calculators/">Investment</a>
+        <a href="/inflation-calculators/" aria-current="page">Inflation</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav">
+      <a href="/">Home</a>
+      <a href="/pages/finance-calculators/">Finance Calculators</a>
+      <a href="/pages/business-calculators/">Business Calculators</a>
+      <a href="/pages/investment-calculators/">Investment Calculators</a>
+      <a href="/inflation-calculators/">Inflation Calculators</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <!-- Breadcrumbs -->
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li><a href="/inflation-calculators/">Inflation Calculators</a></li>
+        <li><span aria-current="page">Future Purchasing Power Calculator</span></li>
+      </ol>
+    </nav>
+
+    <div class="page-content">
+      <div class="article-content">
+        <h1>Future Purchasing Power Calculator</h1>
+        <p>Understanding what your money will actually be worth in the future is essential for sound financial planning. This calculator shows you the equivalent future value you will need to match today's purchasing power, displays your projected purchasing power in any target year, and provides a year-by-year breakdown so you can see inflation's compounding effect over time.</p>
+
+        <!-- Ad Slot -->
+        <div class="ad-slot ad-slot-leaderboard"></div>
+
+        <!-- Calculator -->
+        <div class="calc-container">
+          <div class="calc-header">
+            <h2>Calculate Future Purchasing Power</h2>
+            <p>See what today's dollars will be worth in any future year</p>
+          </div>
+          <div class="calc-body">
+            <form id="fpp-form">
+              <div class="form-group">
+                <label class="form-label" for="todayAmount">Today's Dollar Amount</label>
+                <div class="input-prefix">
+                  <span class="prefix">$</span>
+                  <input type="number" id="todayAmount" name="todayAmount" class="form-input" placeholder="10000" min="1" step="100" required>
+                </div>
+              </div>
+              <div class="calc-grid calc-grid-2col">
+                <div class="form-group">
+                  <label class="form-label" for="targetYear">Target Year</label>
+                  <input type="number" id="targetYear" name="targetYear" class="form-input" placeholder="2045" min="2026" max="2126" step="1" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="inflationPreset">Inflation Assumption</label>
+                  <select id="inflationPreset" name="inflationPreset" class="form-input" onchange="updateInflationField()">
+                    <option value="2">2% (Fed Target)</option>
+                    <option value="3" selected>3% (Historical Avg)</option>
+                    <option value="custom">Custom Rate</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group" id="customRateGroup" style="display:none;">
+                <label class="form-label" for="customInflation">Custom Inflation Rate <span class="form-hint">(%)</span></label>
+                <div class="input-suffix">
+                  <input type="number" id="customInflation" name="customInflation" class="form-input" placeholder="4.5" min="0.1" max="50" step="0.1">
+                  <span class="suffix">%</span>
+                </div>
+              </div>
+
+              <div class="calc-actions">
+                <button type="button" class="btn btn-calculate" onclick="calculatePurchasingPower()">Calculate</button>
+                <button type="button" class="btn btn-reset" onclick="resetFPP()">Reset</button>
+              </div>
+            </form>
+
+            <!-- Results -->
+            <div id="results" class="calc-results hidden">
+              <div class="result-primary">
+                <div class="result-label">Equivalent Future Value Needed</div>
+                <div class="result-value" id="futureValueNeeded">$0</div>
+              </div>
+              <div class="result-grid result-grid-3">
+                <div class="result-item">
+                  <div class="result-label">Purchasing Power in Target Year</div>
+                  <div class="result-value" id="purchasingPowerFuture">$0</div>
+                </div>
+                <div class="result-item">
+                  <div class="result-label">Years Until Target</div>
+                  <div class="result-value" id="yearsUntilTarget">0</div>
+                </div>
+                <div class="result-item">
+                  <div class="result-label">Inflation Rate Used</div>
+                  <div class="result-value" id="inflationRateUsed">0%</div>
+                </div>
+              </div>
+
+              <!-- Year-by-year table -->
+              <div style="margin-top: 1.5rem;">
+                <h3 style="margin-bottom: 0.75rem; font-size: var(--text-lg);">Year-by-Year Purchasing Power</h3>
+                <div style="overflow-x: auto;">
+                  <table class="data-table" id="yearTable">
+                    <thead>
+                      <tr>
+                        <th>Year</th>
+                        <th>Years From Now</th>
+                        <th>Purchasing Power (Today's $)</th>
+                        <th>Amount Needed (Future $)</th>
+                        <th>Power Lost</th>
+                      </tr>
+                    </thead>
+                    <tbody id="yearTableBody"></tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Formula Section -->
+        <section class="content-section">
+          <h2>Purchasing Power Formula</h2>
+          <div class="formula-box">
+            <div class="formula-label">Formulas Used</div>
+            Purchasing Power (Future) = Today's Amount ÷ (1 + Inflation Rate)^Years<br><br>
+            Future Value Needed = Today's Amount × (1 + Inflation Rate)^Years<br><br>
+            Years = Target Year − Current Year (2026)
+          </div>
+          <p>The purchasing power formula discounts today's amount by inflation to show you its real value in the future. The future value needed is the inverse — how many future dollars you will need to match today's buying power. These two formulas together give you the complete picture of inflation's impact on your money.</p>
+        </section>
+
+        <!-- How to Use -->
+        <section class="content-section">
+          <h2>How to Use This Calculator</h2>
+          <ol>
+            <li><strong>Enter today's dollar amount:</strong> This is the amount in today's dollars you want to evaluate — could be savings, a salary target, or a planned expense.</li>
+            <li><strong>Set the target year:</strong> Choose the year you want to project to. The calculator computes the number of years automatically.</li>
+            <li><strong>Choose an inflation assumption:</strong> Select 2% (Fed target), 3% (historical average), or enter a custom rate if you have a specific scenario in mind.</li>
+            <li><strong>Review the table:</strong> The year-by-year table shows how purchasing power erodes each year, helping you spot key milestones in your financial timeline.</li>
+          </ol>
+        </section>
+
+        <!-- Example Scenario -->
+        <section class="content-section">
+          <h2>Example Scenario</h2>
+          <p>You have $50,000 in savings today (2026) and want to know its real value when you plan to retire in 2046 — 20 years from now — at 3% inflation:</p>
+          <ul>
+            <li><strong>Future value needed to match today's $50,000:</strong> $50,000 × (1.03)^20 = $90,306</li>
+            <li><strong>Purchasing power of $50,000 in 2046:</strong> $50,000 ÷ (1.03)^20 = $27,684</li>
+            <li><strong>What this means:</strong> Your $50,000 today will only feel like $27,684 in 2046. To have the same buying power, you will need over $90,000.</li>
+          </ul>
+          <p>This dramatic difference underscores why investing savings to outpace inflation is critical for retirement planning.</p>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+          <h2>Frequently Asked Questions</h2>
+          <div class="faq-item">
+            <button class="faq-question">
+              What is purchasing power and how does inflation affect it?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>Purchasing power is the quantity of goods or services that one unit of currency can buy. Inflation reduces purchasing power over time — at 3% annual inflation, $1,000 today will only have the purchasing power of about $744 in 10 years.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              How do I calculate future purchasing power?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>Future Purchasing Power = Today's Amount / (1 + Inflation Rate)^Years. The equivalent future amount you need is Today's Amount × (1 + Inflation Rate)^Years. Both formulas are used in this calculator to give you the complete picture.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              Which inflation rate assumption should I use?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>Use 2% for the Federal Reserve's target scenario (optimistic), 3% for the US historical long-run average (moderate), or a custom rate if you expect higher inflation based on current economic conditions or specific spending categories.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              Why does the year-by-year table matter for financial planning?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>The year-by-year table shows the compounding effect of inflation clearly — small annual losses accumulate significantly over decades. This helps you plan ahead for retirement, education savings, and long-term investment goals by understanding the real value of money at each future point.</p></div>
+          </div>
+        </section>
+
+        <!-- Related Calculators -->
+        <section class="related-calculators">
+          <h2>Related Calculators</h2>
+          <div class="grid grid-3">
+            <a href="/inflation-calculators/inflation-impact-calculator/" class="card card-link">
+              <h3>Inflation Impact Calculator</h3>
+              <p>See the full impact of inflation including monthly cost breakdown.</p>
+            </a>
+            <a href="/inflation-calculators/inflation-adjusted-retirement-calculator/" class="card card-link">
+              <h3>Inflation-Adjusted Retirement Calculator</h3>
+              <p>Calculate how much you really need for retirement after inflation.</p>
+            </a>
+            <a href="/inflation-calculators/inflation-adjusted-savings-calculator/" class="card card-link">
+              <h3>Inflation-Adjusted Savings Calculator</h3>
+              <p>Compare nominal and real growth of your savings over time.</p>
+            </a>
+            <a href="/inflation-calculators/inflation-adjusted-salary-calculator/" class="card card-link">
+              <h3>Inflation-Adjusted Salary Calculator</h3>
+              <p>Determine if your salary increases are keeping pace with inflation.</p>
+            </a>
+            <a href="/pages/finance-calculators/inflation-calculator/" class="card card-link">
+              <h3>General Inflation Calculator</h3>
+              <p>Quick inflation projection for any amount and time period.</p>
+            </a>
+          </div>
+        </section>
+
+        <!-- Disclaimer -->
+        <div class="disclaimer">
+          <strong>Disclaimer:</strong> This calculator is provided for informational and educational purposes only. It does not constitute financial advice. Actual inflation rates vary and future rates cannot be predicted with certainty. Consult a qualified financial advisor for personalized guidance.
+        </div>
+
+        <!-- Ad Slot -->
+        <div class="ad-slot ad-slot-rectangle"></div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free online financial calculators to help you make smarter money decisions.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Inflation Tools</h4>
+          <a href="/inflation-calculators/inflation-impact-calculator/">Inflation Impact</a>
+          <a href="/inflation-calculators/future-purchasing-power-calculator/">Purchasing Power</a>
+          <a href="/inflation-calculators/inflation-adjusted-salary-calculator/">Salary Adjustment</a>
+          <a href="/inflation-calculators/inflation-adjusted-retirement-calculator/">Retirement Inflation</a>
+        </div>
+        <div class="footer-col">
+          <h4>Finance</h4>
+          <a href="/pages/finance-calculators/net-worth-calculator/">Net Worth</a>
+          <a href="/pages/finance-calculators/budget-calculator/">Budget (50/30/20)</a>
+          <a href="/pages/finance-calculators/emergency-fund-calculator/">Emergency Fund</a>
+          <a href="/pages/finance-calculators/retirement-savings-calculator/">Retirement Savings</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about/">About</a>
+          <a href="/contact/">Contact</a>
+          <a href="/privacy/">Privacy Policy</a>
+          <a href="/terms/">Terms of Service</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 CalcWise. All rights reserved.</span>
+        <div class="footer-links">
+          <a href="/privacy/">Privacy</a>
+          <a href="/terms/">Terms</a>
+          <a href="/contact/">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    const CURRENT_YEAR = 2026;
+
+    function updateInflationField() {
+      const preset = document.getElementById('inflationPreset').value;
+      document.getElementById('customRateGroup').style.display = preset === 'custom' ? 'block' : 'none';
+    }
+
+    function getInflationRate() {
+      const preset = document.getElementById('inflationPreset').value;
+      if (preset === 'custom') {
+        return parseFloat(document.getElementById('customInflation').value) || 0;
+      }
+      return parseFloat(preset);
+    }
+
+    function calculatePurchasingPower() {
+      if (!CalcWise.validateForm('fpp-form')) return;
+      const v = CalcWise.getFormValues('fpp-form');
+      const rate = getInflationRate();
+      const years = v.targetYear - CURRENT_YEAR;
+
+      if (years <= 0) {
+        alert('Target year must be after 2026.');
+        return;
+      }
+      if (rate <= 0) {
+        alert('Please enter a valid inflation rate.');
+        return;
+      }
+
+      const futureValueNeeded = CalcWise.futureValueWithInflation(v.todayAmount, rate, years);
+      const purchasingPower = CalcWise.inflationAdjusted(v.todayAmount, rate, years);
+
+      CalcWise.setText('futureValueNeeded', CalcWise.formatCurrency(futureValueNeeded));
+      CalcWise.setText('purchasingPowerFuture', CalcWise.formatCurrency(purchasingPower));
+      CalcWise.setText('yearsUntilTarget', years + ' years');
+      CalcWise.setText('inflationRateUsed', rate.toFixed(1) + '%');
+
+      // Build year-by-year table
+      const tbody = document.getElementById('yearTableBody');
+      let rows = '';
+      const step = years <= 20 ? 1 : years <= 50 ? 2 : 5;
+      for (let y = 1; y <= years; y += step) {
+        const fv = CalcWise.futureValueWithInflation(v.todayAmount, rate, y);
+        const pp = CalcWise.inflationAdjusted(v.todayAmount, rate, y);
+        const lost = ((v.todayAmount - pp) / v.todayAmount * 100).toFixed(1);
+        rows += `<tr>
+          <td>${CURRENT_YEAR + y}</td>
+          <td>${y}</td>
+          <td>${CalcWise.formatCurrency(pp)}</td>
+          <td>${CalcWise.formatCurrency(fv)}</td>
+          <td style="color: var(--color-error);">-${lost}%</td>
+        </tr>`;
+      }
+      tbody.innerHTML = rows;
+
+      CalcWise.showResults('results');
+    }
+
+    function resetFPP() {
+      document.getElementById('fpp-form').reset();
+      document.getElementById('customRateGroup').style.display = 'none';
+      CalcWise.hideResults('results');
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Subscription Reduction Calculator - CalcWise</title>
+  <meta name="description" content="Audit up to 10 subscriptions, calculate cost per use, identify which ones to cut based on usage, and see your potential annual savings and 5-year invested value.">
+  <link rel="canonical" href="https://calcwise.io/minimalism-and-budget-calculators/subscription-reduction-calculator/">
+  <meta property="og:title" content="Subscription Reduction Calculator - CalcWise">
+  <meta property="og:description" content="Audit your subscriptions, find low-usage costs, and calculate the 5-year wealth impact of canceling unused services.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcwise.io/minimalism-and-budget-calculators/subscription-reduction-calculator/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Subscription Reduction Calculator - CalcWise">
+  <meta name="twitter:description" content="Audit your subscriptions and calculate the 5-year wealth impact of canceling unused services.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/"},
+      {"@type": "ListItem", "position": 2, "name": "Minimalism & Budget Calculators", "item": "https://calcwise.io/minimalism-and-budget-calculators/"},
+      {"@type": "ListItem", "position": 3, "name": "Subscription Reduction Calculator"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do I calculate cost per use for a subscription?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Cost per use is calculated by dividing the monthly subscription cost by the number of times you use it per month. For example, a $15/month streaming service used 4 times per month costs $3.75 per use. Subscriptions with a high cost per use are candidates for cancellation."}
+      },
+      {
+        "@type": "Question",
+        "name": "Which subscriptions should I cancel first?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Cancel subscriptions you use rarely or never first. Next, look for overlapping services (multiple music or streaming platforms) and consolidate to just one. Finally, evaluate whether annual billing options would save money on services you actively use."}
+      },
+      {
+        "@type": "Question",
+        "name": "How much do Americans spend on subscriptions on average?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Studies suggest the average American household spends over $200 per month on subscriptions, though many people underestimate their total by 50% or more. Regular audits using a tool like this calculator help keep subscription creep under control."}
+      },
+      {
+        "@type": "Question",
+        "name": "What is subscription creep?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Subscription creep (also called subscription fatigue or subscription bloat) is the gradual accumulation of recurring monthly charges over time. Each individual subscription seems small and reasonable, but collectively they can drain hundreds of dollars from your budget each month without you noticing."}
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="logo">
+        <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav">
+        <a href="/">Home</a>
+        <a href="/pages/finance-calculators/">Finance</a>
+        <a href="/pages/business-calculators/">Business</a>
+        <a href="/pages/investment-calculators/">Investment</a>
+        <a href="/pages/minimalism-and-budget-calculators/" aria-current="page">Minimalism</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav">
+      <a href="/">Home</a>
+      <a href="/pages/finance-calculators/">Finance Calculators</a>
+      <a href="/pages/business-calculators/">Business Calculators</a>
+      <a href="/pages/investment-calculators/">Investment Calculators</a>
+      <a href="/pages/minimalism-and-budget-calculators/">Minimalism &amp; Budget Calculators</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li><a href="/pages/minimalism-and-budget-calculators/">Minimalism &amp; Budget Calculators</a></li>
+        <li><span aria-current="page">Subscription Reduction Calculator</span></li>
+      </ol>
+    </nav>
+
+    <div class="page-content">
+      <div class="article-content">
+        <h1>Subscription Reduction Calculator</h1>
+        <p>Subscription costs add up quickly and are easy to forget. This calculator helps you audit up to 10 subscriptions, calculate the true cost per use, identify which services to cut based on low usage frequency, and show your potential annual savings plus the 5-year invested value of canceling underused subscriptions.</p>
+
+        <div class="ad-slot ad-slot-leaderboard"></div>
+
+        <div class="calc-container">
+          <div class="calc-header">
+            <h2>Audit Your Subscriptions</h2>
+            <p>Enter each subscription's name, monthly cost, and how often you actually use it</p>
+          </div>
+          <div class="calc-body">
+            <form id="subscription-form">
+              <div style="display:grid; gap: var(--space-3);">
+                <div style="display:grid; grid-template-columns: 2fr 1fr 1.5fr; gap: var(--space-3); font-weight: var(--font-semibold); font-size: var(--text-sm); color: var(--color-gray-600); padding-bottom: var(--space-2); border-bottom: 2px solid var(--color-gray-200);">
+                  <span>Subscription Name</span>
+                  <span>Monthly Cost ($)</span>
+                  <span>Usage Frequency</span>
+                </div>
+                <div id="subscription-rows">
+                  <!-- rows injected by JS -->
+                </div>
+              </div>
+
+              <div class="form-group" style="margin-top: var(--space-5);">
+                <label class="form-label" for="subReturnRate">Investment Return Rate (% per year)</label>
+                <div class="input-suffix">
+                  <input type="number" id="subReturnRate" name="subReturnRate" class="form-input" placeholder="7" min="0" max="30" step="0.5">
+                  <span class="suffix">%</span>
+                </div>
+              </div>
+
+              <div class="calc-actions">
+                <button type="button" class="btn btn-calculate" onclick="calculateSubscriptions()">Analyze Subscriptions</button>
+                <button type="button" class="btn btn-reset" onclick="resetSubscriptionForm()">Reset</button>
+              </div>
+            </form>
+
+            <div id="results" class="calc-results hidden">
+              <div class="result-primary">
+                <div class="result-label">Total Monthly Subscriptions</div>
+                <div class="result-value" id="totalMonthly" style="color: var(--color-error);">$0</div>
+              </div>
+              <div class="result-grid result-grid-3">
+                <div class="result-item">
+                  <div class="result-label">Recommended Cuts/Month</div>
+                  <div class="result-value" id="recommendedCuts" style="color: var(--color-success);">$0</div>
+                </div>
+                <div class="result-item">
+                  <div class="result-label">Annual Savings if Cut</div>
+                  <div class="result-value" id="annualSavings" style="color: var(--color-success);">$0</div>
+                </div>
+                <div class="result-item">
+                  <div class="result-label">5-Year Invested Value</div>
+                  <div class="result-value" id="fiveYearValue" style="color: var(--color-info);">$0</div>
+                </div>
+              </div>
+              <div style="margin-top: var(--space-6);">
+                <h3 style="font-size: var(--text-base); margin-bottom: var(--space-3);">Subscription Analysis</h3>
+                <div id="subBreakdown"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <section class="content-section">
+          <h2>How the Subscription Analysis Works</h2>
+          <div class="formula-box">
+            <div class="formula-label">Formulas</div>
+            Cost per Use (Daily) = Monthly Cost / 30<br>
+            Cost per Use (Weekly) = Monthly Cost / 4<br>
+            Cost per Use (Monthly) = Monthly Cost / 1<br>
+            Cost per Use (Rarely) = Monthly Cost / 0.5 (2× monthly cost per actual use)<br>
+            5-Year Invested Value = Savings × [((1 + r/12)^60 − 1) / (r/12)]
+          </div>
+          <p>Subscriptions used "rarely" (less than once per month) are automatically flagged as recommended cuts since their cost-per-use is extremely high. Monthly usage subscriptions are kept. The 5-year projection shows how much the monthly savings grow if invested in a diversified portfolio.</p>
+        </section>
+
+        <section class="content-section">
+          <h2>How to Use This Calculator</h2>
+          <ol>
+            <li><strong>List all subscriptions:</strong> Include streaming, software, news, fitness, food delivery, apps, and any other recurring monthly charge.</li>
+            <li><strong>Enter the monthly cost:</strong> If you pay annually, divide by 12 to get the monthly equivalent.</li>
+            <li><strong>Choose usage frequency:</strong> Be honest — select "rarely" if you haven't used a service in the past month.</li>
+            <li><strong>Set your investment return:</strong> Default is 7% for a diversified index fund portfolio.</li>
+            <li><strong>Review recommendations:</strong> The calculator flags all "rarely" used subscriptions as immediate cut candidates.</li>
+          </ol>
+        </section>
+
+        <section class="content-section">
+          <h2>Example Scenario</h2>
+          <p>Taylor has 8 active subscriptions totaling $187/month. After auditing usage:</p>
+          <ul>
+            <li><strong>Netflix ($17, weekly):</strong> Keep — high usage, low cost per use</li>
+            <li><strong>Gym membership ($45, rarely):</strong> Cancel — $90 per actual visit</li>
+            <li><strong>Magazine app ($12, rarely):</strong> Cancel — barely opened in 6 months</li>
+            <li><strong>Cloud storage backup ($10, daily):</strong> Keep — critical utility</li>
+            <li><strong>Meal kit service ($80, monthly):</strong> Downgrade — only using 2 of 4 kits</li>
+          </ul>
+          <p>By canceling rarely-used subscriptions, Taylor saves $57/month ($684/year). Invested at 7%, that becomes <strong>$4,041 in 5 years</strong>.</p>
+        </section>
+
+        <section class="faq-section">
+          <h2>Frequently Asked Questions</h2>
+          <div class="faq-item">
+            <button class="faq-question">How do I calculate cost per use for a subscription?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>Cost per use is calculated by dividing the monthly subscription cost by the estimated number of times you use it per month. A $15/month streaming service used 4 times per month costs $3.75 per use. Subscriptions with a high cost per use are prime candidates for cancellation.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">Which subscriptions should I cancel first?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>Cancel subscriptions you use rarely or never first. Next, look for overlapping services (multiple music or streaming platforms) and consolidate to just one. Finally, evaluate whether annual billing options would save money on services you actively use.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">How much do Americans spend on subscriptions on average?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>Studies suggest the average American household spends over $200 per month on subscriptions, though many people underestimate their total by 50% or more. Regular audits using a tool like this calculator help keep subscription creep under control.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">What is subscription creep?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>Subscription creep is the gradual accumulation of recurring monthly charges over time. Each individual subscription seems small and reasonable, but collectively they can drain hundreds of dollars from your budget each month without you noticing. Regular audits are essential.</p></div>
+          </div>
+        </section>
+
+        <section class="related-calculators">
+          <h2>Related Calculators</h2>
+          <div class="grid grid-3">
+            <a href="/pages/minimalism-and-budget-calculators/expense-reduction-calculator/" class="card card-link">
+              <h3>Expense Reduction Calculator</h3>
+              <p>Cut costs across 8 spending categories with targeted reduction percentages.</p>
+            </a>
+            <a href="/pages/minimalism-and-budget-calculators/spending-reduction-impact-calculator/" class="card card-link">
+              <h3>Spending Reduction Impact Calculator</h3>
+              <p>Project long-term wealth from monthly spending cuts.</p>
+            </a>
+            <a href="/pages/minimalism-and-budget-calculators/minimalist-lifestyle-savings-calculator/" class="card card-link">
+              <h3>Minimalist Lifestyle Savings Calculator</h3>
+              <p>See the 10- and 20-year wealth impact of a minimalist lifestyle.</p>
+            </a>
+            <a href="/pages/minimalism-and-budget-calculators/budget-optimization-calculator/" class="card card-link">
+              <h3>Budget Optimization Calculator</h3>
+              <p>Optimize your spending allocations across all categories.</p>
+            </a>
+          </div>
+        </section>
+
+        <div class="disclaimer">
+          <strong>Disclaimer:</strong> This calculator is for informational and educational purposes only. Investment projections assume a constant annual return, which is not guaranteed. Subscription costs and savings estimates are based on user-entered data. This does not constitute financial advice.
+        </div>
+
+        <div class="ad-slot ad-slot-rectangle"></div>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free online financial calculators to help you make smarter money decisions.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Minimalism &amp; Budget</h4>
+          <a href="/pages/minimalism-and-budget-calculators/subscription-reduction-calculator/">Subscription Reduction</a>
+          <a href="/pages/minimalism-and-budget-calculators/expense-reduction-calculator/">Expense Reduction</a>
+          <a href="/pages/minimalism-and-budget-calculators/budget-optimization-calculator/">Budget Optimization</a>
+          <a href="/pages/minimalism-and-budget-calculators/spending-reduction-impact-calculator/">Spending Reduction Impact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Finance</h4>
+          <a href="/pages/finance-calculators/budget-calculator/">Budget (50/30/20)</a>
+          <a href="/pages/finance-calculators/net-worth-calculator/">Net Worth</a>
+          <a href="/pages/finance-calculators/retirement-savings-calculator/">Retirement Savings</a>
+          <a href="/pages/finance-calculators/emergency-fund-calculator/">Emergency Fund</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about/">About</a>
+          <a href="/contact/">Contact</a>
+          <a href="/privacy/">Privacy Policy</a>
+          <a href="/terms/">Terms of Service</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 CalcWise. All rights reserved.</span>
+        <div class="footer-links">
+          <a href="/privacy/">Privacy</a>
+          <a href="/terms/">Terms</a>
+          <a href="/contact/">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    const USAGE_OPTIONS = ['daily', 'weekly', 'monthly', 'rarely'];
+    const USAGE_LABELS = { daily: 'Daily', weekly: 'Weekly', monthly: 'Monthly', rarely: 'Rarely' };
+    const USAGE_PER_MONTH = { daily: 30, weekly: 4, monthly: 1, rarely: 0.5 };
+
+    function buildRows() {
+      const container = document.getElementById('subscription-rows');
+      let html = '';
+      for (let i = 1; i <= 10; i++) {
+        html += `<div style="display:grid; grid-template-columns: 2fr 1fr 1.5fr; gap: var(--space-3); align-items: center;">
+          <input type="text" name="subName${i}" class="form-input" placeholder="e.g. Netflix" style="font-size:var(--text-sm);">
+          <input type="number" name="subCost${i}" class="form-input" placeholder="0.00" min="0" step="0.01" style="font-size:var(--text-sm);">
+          <select name="subUsage${i}" class="form-input" style="font-size:var(--text-sm);">
+            <option value="">-- Select --</option>
+            <option value="daily">Daily</option>
+            <option value="weekly">Weekly</option>
+            <option value="monthly">Monthly</option>
+            <option value="rarely">Rarely</option>
+          </select>
+        </div>`;
+      }
+      container.innerHTML = html;
+    }
+
+    function fvAnnuity(monthly, annualRate, years) {
+      if (annualRate === 0) return monthly * 12 * years;
+      const r = annualRate / 100 / 12;
+      const n = years * 12;
+      return monthly * ((Math.pow(1 + r, n) - 1) / r);
+    }
+
+    function calculateSubscriptions() {
+      const v = CalcWise.getFormValues('subscription-form');
+      const returnRate = v.subReturnRate || 7;
+
+      let totalMonthly = 0;
+      let recommendedCutTotal = 0;
+      const subs = [];
+
+      for (let i = 1; i <= 10; i++) {
+        const name = v[`subName${i}`];
+        const cost = v[`subCost${i}`] || 0;
+        const usage = v[`subUsage${i}`];
+        if (!name && cost === 0) continue;
+        if (cost === 0) continue;
+
+        const usagePerMonth = USAGE_PER_MONTH[usage] || 1;
+        const costPerUse = cost / usagePerMonth;
+        const isRecommendedCut = usage === 'rarely';
+
+        totalMonthly += cost;
+        if (isRecommendedCut) recommendedCutTotal += cost;
+
+        subs.push({ name: name || `Subscription ${i}`, cost, usage, costPerUse, isRecommendedCut });
+      }
+
+      const annualSavings = recommendedCutTotal * 12;
+      const fiveYearValue = fvAnnuity(recommendedCutTotal, returnRate, 5);
+
+      CalcWise.setText('totalMonthly', CalcWise.formatCurrency(totalMonthly, 2));
+      CalcWise.setText('recommendedCuts', CalcWise.formatCurrency(recommendedCutTotal, 2));
+      CalcWise.setText('annualSavings', CalcWise.formatCurrency(annualSavings, 0));
+      CalcWise.setText('fiveYearValue', CalcWise.formatCurrency(fiveYearValue, 0));
+
+      let html = '<div class="table-container"><table class="data-table"><thead><tr><th>Subscription</th><th>Monthly Cost</th><th>Usage</th><th>Cost/Use</th><th>Recommendation</th></tr></thead><tbody>';
+      subs.forEach(s => {
+        const rec = s.isRecommendedCut
+          ? '<span style="color:var(--color-error);font-weight:600;">Cancel</span>'
+          : '<span style="color:var(--color-success);font-weight:600;">Keep</span>';
+        const usageLabel = USAGE_LABELS[s.usage] || s.usage || 'Unknown';
+        html += `<tr>
+          <td>${s.name}</td>
+          <td>${CalcWise.formatCurrency(s.cost, 2)}</td>
+          <td>${usageLabel}</td>
+          <td>${CalcWise.formatCurrency(s.costPerUse, 2)}</td>
+          <td>${rec}</td>
+        </tr>`;
+      });
+      html += '</tbody></table></div>';
+
+      if (recommendedCutTotal > 0) {
+        html += `<div style="margin-top:var(--space-4);padding:var(--space-4);background:var(--color-success-light);border-radius:var(--radius-lg);">
+          <strong>Recommended cuts total ${CalcWise.formatCurrency(recommendedCutTotal, 2)}/month.</strong>
+          Canceling these subscriptions saves ${CalcWise.formatCurrency(annualSavings, 0)}/year and
+          could grow to ${CalcWise.formatCurrency(fiveYearValue, 0)} in 5 years when invested at ${returnRate}%.
+        </div>`;
+      }
+
+      CalcWise.setHtml('subBreakdown', html);
+      CalcWise.showResults('results');
+    }
+
+    function resetSubscriptionForm() {
+      buildRows();
+      document.getElementById('subReturnRate').value = '';
+      CalcWise.hideResults('results');
+    }
+
+    buildRows();
+  </script>
+</body>
+</html>

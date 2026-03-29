@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Are You Ready to Buy a House? Quiz | CalcWise</title>
+  <meta name="description" content="Take this 10-question quiz to find out if you're truly ready to buy a home. We assess your credit score, down payment, DTI ratio, job stability, and more to give you a clear readiness verdict.">
+  <link rel="canonical" href="https://calcwise.io/quizzes/real-estate-quizzes/are-you-ready-to-buy-a-house/">
+  <meta property="og:title" content="Are You Ready to Buy a House? Quiz | CalcWise">
+  <meta property="og:description" content="10 questions covering credit, savings, debt, job stability, and market knowledge. Find out if homeownership is within reach right now.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcwise.io/quizzes/real-estate-quizzes/are-you-ready-to-buy-a-house/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Are You Ready to Buy a House? Quiz | CalcWise">
+  <meta name="twitter:description" content="10-question quiz to assess your true home-buying readiness with a clear verdict and action plan.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+  <link rel="stylesheet" href="/css/quiz.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/"},
+      {"@type": "ListItem", "position": 2, "name": "Quizzes", "item": "https://calcwise.io/quizzes/"},
+      {"@type": "ListItem", "position": 3, "name": "Real Estate Quizzes", "item": "https://calcwise.io/quizzes/real-estate-quizzes/"},
+      {"@type": "ListItem", "position": 4, "name": "Are You Ready to Buy a House?", "item": "https://calcwise.io/quizzes/real-estate-quizzes/are-you-ready-to-buy-a-house/"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Are You Ready to Buy a House? Quiz",
+    "description": "10-question quiz covering credit score, down payment savings, DTI ratio, job stability, emergency fund, buying motivation, market knowledge, pre-approval status, repair budget, and area commitment.",
+    "url": "https://calcwise.io/quizzes/real-estate-quizzes/are-you-ready-to-buy-a-house/",
+    "isPartOf": {"@type": "WebSite", "name": "CalcWise", "url": "https://calcwise.io/"}
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="32" height="32" rx="8" fill="currentColor"/>
+          <path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+        </svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/business-calculators/">Business</a>
+        <a href="/quizzes/" aria-current="page">Quizzes</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/business-calculators/">Business Calculators</a>
+      <a href="/quizzes/">Quizzes</a>
+      <a href="/about.html">About</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/quizzes/">Quizzes</a></li>
+          <li><a href="/quizzes/real-estate-quizzes/">Real Estate Quizzes</a></li>
+          <li><span aria-current="page">Are You Ready to Buy a House?</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <h1>Are You Ready to Buy a House?</h1>
+        <p class="intro">Buying a home is one of the largest financial decisions you'll ever make, and timing matters enormously. This 10-question quiz evaluates the key financial and lifestyle factors lenders and financial planners look at — from your credit score and down payment to your debt load, job stability, and commitment to the area. Answer honestly to get a clear readiness verdict and a personalised action plan.</p>
+
+        <div class="quiz-container" id="quiz">
+          <div class="quiz-progress">
+            <div class="quiz-progress__label">
+              <span id="progress-text">Question 1 of 10</span>
+              <span id="progress-pct">0%</span>
+            </div>
+            <div class="quiz-progress__bar">
+              <div class="quiz-progress__fill" id="progress-bar" style="width:0%"></div>
+            </div>
+          </div>
+          <div id="question-container"></div>
+          <div id="result-container" class="quiz-result hidden"></div>
+        </div>
+
+        <!-- Ad Slot -->
+        <div class="ad-slot" aria-label="Advertisement" style="margin:2rem 0;text-align:center;min-height:90px;background:var(--color-bg);border:1px dashed var(--color-border);border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;color:var(--color-text-muted);font-size:0.875rem;">Advertisement</div>
+
+        <!-- FAQ -->
+        <section class="faq-section" aria-labelledby="faq-heading" style="margin-top:3rem">
+          <h2 id="faq-heading">Frequently Asked Questions</h2>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false"><span>What credit score do I need to buy a house?</span><svg class="faq-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M10 4v12M4 10h12"/></svg></button>
+            <div class="faq-answer"><p>Most conventional loans require a minimum credit score of 620, though 740+ earns the best rates. FHA loans allow scores as low as 580 with 3.5% down, or 500 with 10% down. A higher score can save you tens of thousands of dollars over the life of a loan through a lower interest rate.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false"><span>How much should I save before buying?</span><svg class="faq-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M10 4v12M4 10h12"/></svg></button>
+            <div class="faq-answer"><p>Beyond the down payment (typically 3–20% of the purchase price), you'll need 2–5% of the loan amount for closing costs, plus a 3–6 month emergency fund that remains intact after the purchase. Many buyers underestimate closing costs and post-purchase repair expenses, which can quickly exceed $10,000 on a median-priced home.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false"><span>What is a good debt-to-income ratio for a mortgage?</span><svg class="faq-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M10 4v12M4 10h12"/></svg></button>
+            <div class="faq-answer"><p>Lenders generally cap your total DTI at 43–45% for conventional loans, and prefer a front-end (housing only) DTI below 28%. A DTI under 36% total puts you in a strong position. If your DTI is above 43%, paying down existing debts before applying will improve your approval odds and the interest rate you're offered.</p></div>
+          </div>
+        </section>
+
+        <!-- Related Quizzes -->
+        <section aria-labelledby="related-heading" style="margin-top:3rem">
+          <h2 id="related-heading">Related Real Estate Quizzes</h2>
+          <div class="quiz-grid" style="grid-template-columns:repeat(auto-fill,minmax(260px,1fr))">
+            <a href="/quizzes/real-estate-quizzes/should-you-rent-or-buy/" class="quiz-card">
+              <div class="quiz-card__badge">Real Estate</div>
+              <h3>Should You Rent or Buy?</h3>
+              <p>Weigh the financial and lifestyle factors to find the right path for your situation right now.</p>
+              <span class="quiz-card__cta">Take quiz <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </a>
+            <a href="/quizzes/real-estate-quizzes/what-house-can-you-afford/" class="quiz-card">
+              <div class="quiz-card__badge">Real Estate</div>
+              <h3>What House Can You Afford?</h3>
+              <p>Get a quick estimated price range based on your income, debts, and down payment savings.</p>
+              <span class="quiz-card__cta">Take quiz <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </a>
+            <a href="/quizzes/real-estate-quizzes/should-you-refinance-your-mortgage/" class="quiz-card">
+              <div class="quiz-card__badge">Real Estate</div>
+              <h3>Should You Refinance Your Mortgage?</h3>
+              <p>Find out whether today's rates and your situation make a refinance genuinely worthwhile.</p>
+              <span class="quiz-card__cta">Take quiz <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </a>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect width="32" height="32" rx="8" fill="currentColor"/>
+              <path d="M8 10h16M8 16h16M8 22h10" stroke="#1B4D3E" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators and quizzes built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Real Estate Quizzes</h4>
+          <a href="/quizzes/real-estate-quizzes/are-you-ready-to-buy-a-house/">Ready to Buy?</a>
+          <a href="/quizzes/real-estate-quizzes/should-you-rent-or-buy/">Rent or Buy?</a>
+          <a href="/quizzes/real-estate-quizzes/what-house-can-you-afford/">What Can You Afford?</a>
+          <a href="/quizzes/real-estate-quizzes/">View All</a>
+        </div>
+        <div class="footer-col">
+          <h4>Real Estate Calculators</h4>
+          <a href="/real-estate-calculators/mortgage-calculator/">Mortgage Calculator</a>
+          <a href="/real-estate-calculators/affordability-calculator/">Affordability Calculator</a>
+          <a href="/real-estate-calculators/down-payment-calculator/">Down Payment Calculator</a>
+          <a href="/real-estate-calculators/closing-cost-calculator/">Closing Cost Calculator</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about.html">About</a>
+          <a href="/contact.html">Contact</a>
+          <a href="/privacy.html">Privacy Policy</a>
+          <a href="/terms.html">Terms of Use</a>
+          <a href="/disclaimer.html">Disclaimer</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/privacy.html">Privacy</a>
+          <a href="/terms.html">Terms</a>
+          <a href="/disclaimer.html">Disclaimer</a>
+          <a href="/sitemap.xml">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    // Mobile menu
+    document.querySelector('.mobile-menu-toggle').addEventListener('click', function() {
+      const nav = document.querySelector('.mobile-nav');
+      const isOpen = nav.classList.toggle('is-open');
+      this.setAttribute('aria-expanded', isOpen);
+      this.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+    });
+    // FAQ accordion
+    document.querySelectorAll('.faq-question').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        const item = this.closest('.faq-item');
+        const isOpen = item.classList.toggle('is-open');
+        this.setAttribute('aria-expanded', isOpen);
+      });
+    });
+
+    // ── Quiz Engine ──
+    const questions = [
+      {
+        question: "What is your current credit score range?",
+        options: ["Below 580", "580–619", "620–739", "740 or above"],
+        correct: 3,
+        explanation: "A score of 740+ qualifies you for the best mortgage rates, potentially saving tens of thousands over your loan term. A 620+ score is the conventional loan minimum, while below 580 will severely limit your options and increase costs."
+      },
+      {
+        question: "How much have you saved for a down payment relative to your target home price?",
+        options: ["Less than 3%", "3%–4.9%", "5%–19%", "20% or more"],
+        correct: 3,
+        explanation: "A 20% down payment eliminates Private Mortgage Insurance (PMI), which can add $100–$200/month to your payment. Less than 20% is workable, but PMI adds significant cost. Less than 3% severely limits your loan options."
+      },
+      {
+        question: "What is your total debt-to-income ratio (all monthly debt payments ÷ gross monthly income)?",
+        options: ["Above 43%", "36%–43%", "28%–35%", "Under 28%"],
+        correct: 3,
+        explanation: "A DTI under 28% puts you in excellent shape for mortgage approval and the best rates. 36–43% is the danger zone — lenders will still approve you but will scrutinize your application. Above 43% will disqualify you from many loan programs."
+      },
+      {
+        question: "How stable is your employment situation?",
+        options: ["Unemployed or very recent new job", "Employed less than 1 year", "Employed 1–2 years", "Employed 2+ years at same employer or in same field"],
+        correct: 3,
+        explanation: "Lenders want to see 2+ years of stable employment history in the same field. They typically require 2 years of W-2s or tax returns. Job gaps or recent career changes can complicate or delay mortgage approval."
+      },
+      {
+        question: "After making your down payment and paying closing costs, how much emergency fund will remain?",
+        options: ["Nothing — savings will be depleted", "Less than 1 month of expenses", "1–2 months of expenses", "3+ months of expenses"],
+        correct: 3,
+        explanation: "Homeownership brings unexpected repair costs — the average homeowner spends 1–2% of home value annually on maintenance. Depleting savings at closing leaves you financially exposed to even minor repairs. A 3-month cushion is the minimum safety net."
+      },
+      {
+        question: "What is your primary reason for wanting to buy right now?",
+        options: ["Feeling pressure or FOMO from others", "Tired of renting and want to own something", "It makes financial sense for my timeline and budget", "I've done the math — it beats renting in my market"],
+        correct: 3,
+        explanation: "Emotional or social pressure are poor reasons to make a $300,000+ financial commitment. The best buyers have a clear financial rationale — buying costs less than renting over their expected horizon, and they've run the numbers."
+      },
+      {
+        question: "How well do you know your local housing market?",
+        options: ["I haven't researched it at all", "I've looked at listings occasionally", "I know general price ranges for neighbourhoods I like", "I've tracked prices, inventory, and days-on-market for months"],
+        correct: 3,
+        explanation: "Understanding local market conditions — whether it's a buyer's or seller's market, typical price-per-square-foot, and seasonal trends — protects you from overpaying and helps you negotiate effectively."
+      },
+      {
+        question: "Have you been pre-approved for a mortgage?",
+        options: ["No, and I haven't started the process", "I've only done a soft pre-qualification online", "I've talked to one lender but not formally applied", "Yes, I have a pre-approval letter from a lender"],
+        correct: 3,
+        explanation: "A full pre-approval (not just pre-qualification) requires a hard credit pull and full document review. Sellers take pre-approved buyers far more seriously, and you'll know exactly what you can borrow before falling in love with a home."
+      },
+      {
+        question: "Do you have a budget set aside for repairs, upgrades, and maintenance after buying?",
+        options: ["No — I'll figure it out as issues arise", "I have a small fund but it wouldn't cover major repairs", "I have about 1% of the home's value set aside", "I have 1–3% of the home's value in a dedicated repair fund"],
+        correct: 3,
+        explanation: "Financial planners recommend keeping 1–3% of your home's value accessible for annual maintenance. A $400,000 home could need $4,000–$12,000 in maintenance each year. Without this buffer, one burst pipe can create a financial crisis."
+      },
+      {
+        question: "How long do you plan to stay in the area where you're buying?",
+        options: ["Less than 2 years", "2–3 years", "4–5 years", "5+ years"],
+        correct: 3,
+        explanation: "Buying and selling a home costs 8–10% of the home's value in transaction costs. You typically need 5+ years just to break even versus renting. Buying with a short time horizon often leads to a financial loss when you factor in all costs."
+      }
+    ];
+
+    const results = [
+      {
+        min: 8,
+        label: "Ready to Buy",
+        colorClass: "result-score--high",
+        title: "You're Ready to Buy",
+        desc: "Your financial profile, market knowledge, and life situation are well-aligned for homeownership. You've done the preparation work — solid credit, sufficient savings, manageable debt, and a long-term commitment to the area. Now is a great time to act with confidence.",
+        recs: [
+          "Get formal mortgage pre-approval from at least two lenders to compare rates.",
+          "Work with a buyer's agent who specialises in your target neighbourhoods.",
+          "Build a home inspection contingency into every offer — never waive it.",
+          "Keep your finances stable: don't open new credit accounts or make large purchases before closing.",
+          "Use the affordability and mortgage calculators below to nail down your exact budget."
+        ]
+      },
+      {
+        min: 6,
+        label: "Almost Ready",
+        colorClass: "",
+        title: "Almost Ready — A Few More Steps",
+        desc: "You're close to being ready, but one or two key areas need attention before you commit. Address the gaps identified in your quiz answers and you could be in a position to buy within 3–6 months.",
+        recs: [
+          "Identify your weakest area (credit, savings, or DTI) and create a 90-day improvement plan.",
+          "Start the mortgage pre-approval process to understand exactly where you stand.",
+          "Continue tracking your local market so you're ready to move quickly when the time comes.",
+          "Use the down payment calculator to set a concrete savings target and timeline."
+        ]
+      },
+      {
+        min: 4,
+        label: "6–12 Months Away",
+        colorClass: "result-score--mid",
+        title: "You're About 6–12 Months Away",
+        desc: "You have the right intentions but several important financial foundations still need strengthening. Rushing into a purchase now could leave you financially stretched and at risk. Focused preparation over the next 6–12 months will put you in a much stronger position.",
+        recs: [
+          "Set a specific down payment savings goal and automate monthly transfers to reach it.",
+          "Work on reducing your DTI by paying down high-interest debt aggressively.",
+          "Check your credit report for errors and take steps to improve your score.",
+          "Research first-time homebuyer programs in your state — many offer down payment assistance."
+        ]
+      },
+      {
+        min: 0,
+        label: "Not Yet Ready",
+        colorClass: "result-score--low",
+        title: "Not Yet Ready — Build Your Foundation First",
+        desc: "Multiple key readiness factors are not yet in place. Buying a home before you're ready is one of the most common causes of financial hardship. The good news: every area identified here is fixable with a clear plan and focused effort over 12–24 months.",
+        recs: [
+          "Focus first on building an emergency fund of at least 3 months of expenses.",
+          "Get your credit score to at least 620 before applying — use a secured card if needed.",
+          "Create a debt repayment plan to bring your DTI below 36% before applying for a mortgage.",
+          "Set a realistic timeline: 18–24 months of focused saving and debt reduction could transform your readiness.",
+          "Consider speaking with a HUD-approved housing counsellor — this free service can map out your path."
+        ]
+      }
+    ];
+
+    const calculatorLinks = [
+      { href: "/real-estate-calculators/mortgage-calculator/", label: "Mortgage Calculator" },
+      { href: "/real-estate-calculators/affordability-calculator/", label: "Affordability Calculator" },
+      { href: "/real-estate-calculators/down-payment-calculator/", label: "Down Payment Calculator" },
+      { href: "/real-estate-calculators/closing-cost-calculator/", label: "Closing Cost Calculator" }
+    ];
+
+    let current = 0, score = 0, answered = false;
+
+    function renderQuestion() {
+      answered = false;
+      const q = questions[current];
+      const pct = Math.round((current / questions.length) * 100);
+      document.getElementById('progress-bar').style.width = pct + '%';
+      document.getElementById('progress-text').textContent = 'Question ' + (current + 1) + ' of ' + questions.length;
+      document.getElementById('progress-pct').textContent = pct + '%';
+      document.getElementById('question-container').innerHTML = `
+        <div class="quiz-question">
+          <div class="quiz-question__number">Question ${current + 1}</div>
+          <p class="quiz-question__text">${q.question}</p>
+          <ul class="quiz-options" role="list">
+            ${q.options.map((opt, i) => `
+              <li>
+                <button class="quiz-option" data-index="${i}" onclick="selectAnswer(${i})">
+                  <span class="quiz-option__indicator"></span>
+                  <span>${opt}</span>
+                </button>
+              </li>`).join('')}
+          </ul>
+          <div id="explanation" class="quiz-explanation" style="display:none"></div>
+          <div class="quiz-nav">
+            <span></span>
+            <button class="btn btn-primary" id="next-btn" onclick="nextQuestion()" disabled>
+              ${current < questions.length - 1 ? 'Next Question' : 'See Results'}
+            </button>
+          </div>
+        </div>`;
+    }
+
+    function selectAnswer(idx) {
+      if (answered) return;
+      answered = true;
+      const q = questions[current];
+      const btns = document.querySelectorAll('.quiz-option');
+      btns.forEach(function(btn, i) {
+        btn.classList.remove('selected');
+        if (i === q.correct) btn.classList.add('correct');
+        else if (i === idx && idx !== q.correct) btn.classList.add('incorrect');
+      });
+      btns[idx].classList.add('selected');
+      if (idx === q.correct) score++;
+      const expEl = document.getElementById('explanation');
+      expEl.style.display = 'block';
+      expEl.className = 'quiz-explanation ' + (idx === q.correct ? 'quiz-explanation--correct' : 'quiz-explanation--incorrect');
+      expEl.textContent = q.explanation;
+      document.getElementById('next-btn').disabled = false;
+    }
+
+    function nextQuestion() {
+      current++;
+      if (current < questions.length) {
+        renderQuestion();
+      } else {
+        showResult();
+      }
+    }
+
+    function showResult() {
+      document.getElementById('progress-bar').style.width = '100%';
+      document.getElementById('progress-text').textContent = 'Complete!';
+      document.getElementById('progress-pct').textContent = '100%';
+      document.getElementById('question-container').innerHTML = '';
+      const result = results.find(r => score >= r.min);
+      const rc = document.getElementById('result-container');
+      rc.classList.remove('hidden');
+      rc.innerHTML = `
+        <div class="result-score ${result.colorClass}">
+          <span class="result-score__number">${score}/${questions.length}</span>
+          <span class="result-score__label">Score</span>
+        </div>
+        <div class="result-category">${result.label}</div>
+        <h2>${result.title}</h2>
+        <p>${result.desc}</p>
+        <div class="result-recommendations">
+          <h3>Recommended Next Steps</h3>
+          <ul>${result.recs.map(r => `<li>${r}</li>`).join('')}</ul>
+        </div>
+        <div class="result-actions">
+          ${calculatorLinks.map(l => `<a href="${l.href}" class="btn btn-secondary">${l.label}</a>`).join('')}
+        </div>
+        <div class="result-actions" style="margin-top:1rem">
+          <button class="btn btn-outline" onclick="restartQuiz()">Retake Quiz</button>
+        </div>`;
+    }
+
+    function restartQuiz() {
+      current = 0; score = 0;
+      document.getElementById('result-container').classList.add('hidden');
+      renderQuestion();
+    }
+
+    renderQuestion();
+  </script>
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tax Penalty Calculator | CalcWise</title>
+  <meta name="description" content="Estimate IRS tax penalties for underpayment, late filing, and late payment. Calculate penalty amount, interest, and total amount owed to the IRS.">
+  <link rel="canonical" href="https://calcwise.io/tax-calculators/tax-penalty-calculator/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://calcwise.io/"},{"@type":"ListItem","position":2,"name":"Tax Calculators","item":"https://calcwise.io/tax-calculators/"},{"@type":"ListItem","position":3,"name":"Tax Penalty Calculator"}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the IRS late filing penalty?","acceptedAnswer":{"@type":"Answer","text":"The IRS failure-to-file penalty is 5% of unpaid tax per month (or partial month) the return is late, up to a maximum of 25% of the unpaid tax. If you file more than 60 days late, the minimum penalty is the lesser of $485 (2026) or 100% of unpaid tax."}},{"@type":"Question","name":"What is the late payment penalty?","acceptedAnswer":{"@type":"Answer","text":"The failure-to-pay penalty is 0.5% per month (or partial month) of unpaid tax, up to 25%. If both the failure-to-file and failure-to-pay penalties apply in the same month, the failure-to-file penalty is reduced by the failure-to-pay penalty amount."}},{"@type":"Question","name":"What is the underpayment penalty?","acceptedAnswer":{"@type":"Answer","text":"The underpayment of estimated tax penalty applies when you pay less than 90% of the current year tax or 100%/110% of the prior year tax. The penalty is based on the IRS federal short-term rate plus 3 percentage points, applied to the underpaid amount."}},{"@type":"Question","name":"How can I avoid IRS penalties?","acceptedAnswer":{"@type":"Answer","text":"Avoid failure-to-file penalties by filing on time or requesting an extension. Avoid failure-to-pay penalties by paying at least the minimum due by the deadline. Avoid underpayment penalties by meeting the safe harbor rule: pay 90% of current year tax or 100%/110% of prior year tax in quarterly installments."}}]}</script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="logo"><svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>CalcWise</a>
+      <nav class="main-nav"><a href="/">Home</a><a href="/pages/business-calculators/">Business</a><a href="/pages/financial-calculators/">Financial</a><a href="/pages/tax-calculators/" aria-current="page">Tax</a><a href="/pages/investment-calculators/">Investment</a></nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+    </div>
+    <nav class="mobile-nav"><a href="/">Home</a><a href="/pages/business-calculators/">Business Calculators</a><a href="/pages/financial-calculators/">Financial Calculators</a><a href="/pages/tax-calculators/">Tax Calculators</a><a href="/pages/investment-calculators/">Investment Calculators</a></nav>
+  </header>
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/pages/tax-calculators/">Tax Calculators</a></li><li><span aria-current="page">Tax Penalty Calculator</span></li></ol></nav>
+      <div class="page-content">
+        <div class="calc-page-layout">
+          <div class="calc-page-main">
+            <h1>Tax Penalty Calculator</h1>
+            <p class="subtitle" style="font-size:var(--text-lg);color:var(--color-gray-600);margin-bottom:var(--space-8);line-height:var(--leading-relaxed);">Estimate IRS penalties for underpayment of estimated taxes, late filing, and late payment. Find out how much you may owe in penalties and interest so you can plan accordingly and take steps to reduce or avoid them.</p>
+            <div class="calc-container">
+              <div class="calc-header"><h2>Tax Penalty Calculator</h2><p>Estimate IRS penalties and interest</p></div>
+              <div class="calc-body">
+                <form id="calc-form" onsubmit="return false;">
+                  <div class="form-group"><label class="form-label" for="penalty-type">Penalty Type</label>
+                    <select id="penalty-type" class="form-select" onchange="updatePenaltyHelp()">
+                      <option value="underpayment">Underpayment of Estimated Tax</option>
+                      <option value="late-filing">Failure to File (Late Filing)</option>
+                      <option value="late-payment">Failure to Pay (Late Payment)</option>
+                    </select>
+                    <p id="penalty-help" class="form-hint" style="margin-top:var(--space-2);">Applies when quarterly estimated tax payments are less than required safe harbor amount.</p>
+                  </div>
+                  <div class="form-group"><label class="form-label" for="unpaid-amount">Unpaid / Underpaid Tax Amount</label><div class="input-prefix"><span class="prefix">$</span><input type="number" id="unpaid-amount" class="form-input" placeholder="5000" min="0" step="100"></div></div>
+                  <div class="form-group"><label class="form-label" for="months-late">Months Late (or underpaid period in months)</label><input type="number" id="months-late" class="form-input" placeholder="3" min="1" max="60" step="1"></div>
+                  <div class="form-group"><label class="form-label" for="irs-rate">IRS Underpayment Rate (% per year)</label><div class="input-suffix"><input type="number" id="irs-rate" class="form-input" placeholder="8" min="1" max="20" step="0.5"><span class="suffix">%</span></div><p class="form-hint">Current IRS rate = federal short-term rate + 3%. Approximately 8% as of 2026 (verify with IRS).</p></div>
+                  <div class="calc-actions">
+                    <button type="button" class="btn btn-calculate btn-full" onclick="calculatePenalty()">Calculate Penalty</button>
+                    <button type="button" class="btn btn-reset" onclick="resetForm()">Reset</button>
+                  </div>
+                </form>
+                <div id="results" class="calc-results hidden">
+                  <div class="result-primary"><div class="result-label">Total Amount Owed (Tax + Penalty + Interest)</div><div class="result-value" id="result-total">$0</div></div>
+                  <div class="result-grid">
+                    <div class="result-item"><div class="result-label">Original Tax Owed</div><div class="result-value" id="result-original">$0</div></div>
+                    <div class="result-item"><div class="result-label">Penalty Amount</div><div class="result-value" id="result-penalty">$0</div></div>
+                    <div class="result-item"><div class="result-label">Interest</div><div class="result-value" id="result-interest">$0</div></div>
+                    <div class="result-item"><div class="result-label">Effective Penalty Rate</div><div class="result-value" id="result-penalty-rate">0%</div></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="ad-slot ad-slot-leaderboard"></div>
+            <section class="content-section"><h2>IRS Penalty Formulas</h2>
+              <div class="formula-box"><div class="formula-label">Failure to File (Late Filing)</div>5% of unpaid tax per month (or partial month) late, maximum 25% of unpaid tax.<br>Minimum penalty (if &gt;60 days late): lesser of $485 or 100% of unpaid tax.</div>
+              <div class="formula-box"><div class="formula-label">Failure to Pay (Late Payment)</div>0.5% of unpaid tax per month (or partial month) late, maximum 25% of unpaid tax.<br>Rate increases to 1% per month if taxes remain unpaid 10 days after IRS notice.</div>
+              <div class="formula-box"><div class="formula-label">Underpayment of Estimated Tax</div>Penalty = Underpaid Amount × (IRS Rate / 100) × (Days / 365)<br>Applies quarterly to each period of underpayment.</div>
+              <div class="formula-box"><div class="formula-label">Interest on Unpaid Tax</div>Interest = Unpaid Tax × (IRS Rate / 100) × (Months / 12)<br>Interest compounds daily. Current rate ≈ federal short-term rate + 3%.</div>
+            </section>
+            <section class="content-section"><h2>How to Use This Calculator</h2><ol><li>Select the <strong>penalty type</strong> that applies to your situation.</li><li>Enter the <strong>unpaid or underpaid tax amount</strong>.</li><li>Enter the <strong>number of months</strong> the amount has been late or unpaid.</li><li>Enter the current <strong>IRS underpayment rate</strong> (check irs.gov for current rate).</li><li>Click <strong>Calculate Penalty</strong>.</li></ol></section>
+            <section class="content-section"><h2>Example Scenario</h2><p>A taxpayer owes $8,000 in taxes and files 4 months late without paying:</p><ul><li>Late Filing Penalty: $8,000 × 5% × 4 months = <strong>$1,600</strong></li><li>Late Payment Penalty: $8,000 × 0.5% × 4 months = <strong>$160</strong> (reduces late filing penalty)</li><li>Combined Penalty: $1,600 (late filing net) + $160 (late payment) = but capped; effectively $1,600</li><li>Interest (8% annual): $8,000 × 8% × (4/12) = <strong>$213</strong></li><li>Total Owed: $8,000 + $1,600 + $213 = <strong>~$9,813</strong></li></ul></section>
+            <section class="faq-section"><h2>Frequently Asked Questions</h2>
+              <div class="faq-item"><button class="faq-question" aria-expanded="false">What is the IRS late filing penalty?<svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg></button><div class="faq-answer"><p>The IRS failure-to-file penalty is 5% of unpaid tax per month (or partial month) the return is late, up to 25% of the unpaid tax. If you file more than 60 days late, the minimum penalty is $485 (2026) or 100% of unpaid tax, whichever is less.</p></div></div>
+              <div class="faq-item"><button class="faq-question" aria-expanded="false">What is the late payment penalty?<svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg></button><div class="faq-answer"><p>The failure-to-pay penalty is 0.5% per month of unpaid tax, up to 25%. When both penalties apply in the same month, the failure-to-file penalty is reduced by the failure-to-pay amount.</p></div></div>
+              <div class="faq-item"><button class="faq-question" aria-expanded="false">What is the underpayment penalty?<svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg></button><div class="faq-answer"><p>The underpayment penalty applies when quarterly payments are less than required. The penalty rate is the IRS federal short-term rate plus 3 percentage points, applied to the underpaid amount for the underpayment period.</p></div></div>
+              <div class="faq-item"><button class="faq-question" aria-expanded="false">How can I avoid IRS penalties?<svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg></button><div class="faq-answer"><p>File on time or request an extension. Pay at least the minimum amount due by the deadline. For estimated taxes, meet the safe harbor rule: pay 90% of current year tax or 100%/110% of prior year tax in quarterly installments.</p></div></div>
+            </section>
+            <section class="related-calculators"><h2>Related Calculators</h2><div class="grid grid-3">
+              <a href="/pages/tax-calculators/quarterly-estimated-tax-calculator/" class="card card-link"><h3>Quarterly Estimated Tax</h3><p>Calculate quarterly payments to avoid underpayment penalties.</p></a>
+              <a href="/pages/tax-calculators/tax-refund-estimator/" class="card card-link"><h3>Tax Refund Estimator</h3><p>See if you'll owe or get a refund at tax time.</p></a>
+              <a href="/pages/tax-calculators/after-tax-income-calculator/" class="card card-link"><h3>After-Tax Income Calculator</h3><p>Plan your finances based on true net income.</p></a>
+              <a href="/pages/tax-calculators/self-employment-tax-calculator/" class="card card-link"><h3>Self-Employment Tax Calculator</h3><p>Estimate SE tax to make correct estimated payments.</p></a>
+            </div></section>
+            <div class="disclaimer"><strong>Tax Disclaimer:</strong> This calculator provides estimates for educational purposes only and does not constitute tax advice. IRS penalty and interest calculations are complex and situation-specific. The IRS underpayment rate changes quarterly. This calculator uses simplified formulas and may not reflect all applicable penalty rules, caps, or waivers. Consult a qualified tax professional or the IRS website at irs.gov for accurate penalty information. &copy; 2026 CalcWise.</div>
+          </div>
+          <aside class="calc-page-sidebar">
+            <div class="ad-slot ad-slot-rectangle"></div>
+            <div class="sidebar-card"><h3>Tax Calculators</h3><a href="/pages/tax-calculators/quarterly-estimated-tax-calculator/">Quarterly Estimated Tax</a><a href="/pages/tax-calculators/tax-refund-estimator/">Tax Refund Estimator</a><a href="/pages/tax-calculators/self-employment-tax-calculator/">Self-Employment Tax</a><a href="/pages/tax-calculators/after-tax-income-calculator/">After-Tax Income</a><a href="/pages/tax-calculators/tax-bracket-calculator/">Tax Bracket Calculator</a></div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><a href="/" class="logo"><svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>CalcWise</a><p>Free online calculators for business, finance, tax, and investment decisions.</p></div>
+        <div class="footer-col"><h4>Calculators</h4><a href="/pages/business-calculators/">Business</a><a href="/pages/financial-calculators/">Financial</a><a href="/pages/tax-calculators/">Tax</a><a href="/pages/investment-calculators/">Investment</a></div>
+        <div class="footer-col"><h4>Resources</h4><a href="/about/">About</a><a href="/blog/">Blog</a><a href="/contact/">Contact</a></div>
+        <div class="footer-col"><h4>Legal</h4><a href="/privacy/">Privacy Policy</a><a href="/terms/">Terms of Service</a></div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2026 CalcWise. All rights reserved.</p><div class="footer-links"><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="/contact/">Contact</a></div></div>
+    </div>
+  </footer>
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function updatePenaltyHelp() {
+      const type = document.getElementById('penalty-type').value;
+      const help = document.getElementById('penalty-help');
+      const msgs = {
+        'underpayment': 'Applies when quarterly estimated tax payments are less than required safe harbor amount.',
+        'late-filing': 'Applies when your tax return is filed after the due date (including extensions) with taxes owed.',
+        'late-payment': 'Applies when taxes owed are not paid by the due date, even if you file on time.'
+      };
+      help.textContent = msgs[type] || '';
+    }
+
+    function calculatePenalty() {
+      const type = document.getElementById('penalty-type').value;
+      const unpaid = CalcWise.parseNumber(document.getElementById('unpaid-amount').value);
+      const months = CalcWise.parseNumber(document.getElementById('months-late').value);
+      const irsRate = CalcWise.parseNumber(document.getElementById('irs-rate').value) / 100;
+      if (unpaid <= 0) { alert('Please enter the unpaid tax amount.'); return; }
+      if (months <= 0) { alert('Please enter the number of months late.'); return; }
+
+      let penalty = 0, interest = 0;
+
+      if (type === 'late-filing') {
+        const rawPenalty = unpaid * 0.05 * Math.min(months, 5); // max 25% = 5 months at 5%
+        penalty = Math.min(rawPenalty, unpaid * 0.25);
+        if (months > 2) penalty = Math.max(penalty, Math.min(485, unpaid));
+        interest = unpaid * irsRate * (months / 12);
+      } else if (type === 'late-payment') {
+        penalty = Math.min(unpaid * 0.005 * months, unpaid * 0.25);
+        interest = unpaid * irsRate * (months / 12);
+      } else { // underpayment
+        penalty = unpaid * irsRate * (months / 12);
+        interest = 0; // underpayment penalty IS the interest-based calculation
+      }
+
+      const total = unpaid + penalty + interest;
+      const penaltyRate = unpaid > 0 ? ((penalty + interest) / unpaid) * 100 : 0;
+
+      CalcWise.setText('result-total', CalcWise.formatCurrency(total));
+      CalcWise.setText('result-original', CalcWise.formatCurrency(unpaid));
+      CalcWise.setText('result-penalty', CalcWise.formatCurrency(penalty));
+      CalcWise.setText('result-interest', CalcWise.formatCurrency(interest));
+      CalcWise.setText('result-penalty-rate', penaltyRate.toFixed(1) + '%');
+      CalcWise.showResults('results');
+    }
+    function resetForm() { document.getElementById('calc-form').reset(); updatePenaltyHelp(); CalcWise.hideResults('results'); }
+    document.querySelectorAll('.faq-question').forEach(btn => { btn.addEventListener('click', () => { const e = btn.getAttribute('aria-expanded') === 'true'; btn.setAttribute('aria-expanded', !e); btn.nextElementSibling.style.display = e ? 'none' : 'block'; }); });
+    document.querySelectorAll('.faq-answer').forEach(a => a.style.display = 'none');
+    const toggle = document.querySelector('.mobile-menu-toggle'); const mobileNav = document.querySelector('.mobile-nav');
+    if (toggle && mobileNav) { toggle.addEventListener('click', () => { const open = toggle.getAttribute('aria-expanded') === 'true'; toggle.setAttribute('aria-expanded', !open); mobileNav.style.display = open ? 'none' : 'block'; }); }
+  </script>
+</body>
+</html>

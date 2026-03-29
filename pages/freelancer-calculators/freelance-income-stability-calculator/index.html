@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Freelance Income Stability Calculator | CalcWise</title>
+  <meta name="description" content="Measure your freelance income variability, get a stability score, and find out the right emergency fund size to handle income swings.">
+  <link rel="canonical" href="https://calcwise.io/freelancer-calculators/freelance-income-stability-calculator/">
+  <meta property="og:title" content="Freelance Income Stability Calculator | CalcWise">
+  <meta property="og:description" content="Measure your freelance income variability, get a stability score, and find out the right emergency fund size to handle income swings.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcwise.io/freelancer-calculators/freelance-income-stability-calculator/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Freelance Income Stability Calculator | CalcWise">
+  <meta name="twitter:description" content="Measure your freelance income variability, get a stability score, and find out the right emergency fund size to handle income swings.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/"},
+      {"@type": "ListItem", "position": 2, "name": "Freelancer Calculators", "item": "https://calcwise.io/freelancer-calculators/"},
+      {"@type": "ListItem", "position": 3, "name": "Freelance Income Stability Calculator"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How much emergency fund does a freelancer need?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Most financial advisors recommend 3-6 months of expenses for employees, but freelancers should aim for 6-12 months due to income variability. The higher your income variability percentage, the larger the cushion you need."}
+      },
+      {
+        "@type": "Question",
+        "name": "What is income variability percentage?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Income variability is the coefficient of variation of your monthly income — the standard deviation divided by the mean, expressed as a percentage. Higher numbers mean more unpredictable earnings. Under 20% is considered stable; above 50% is high risk."}
+      },
+      {
+        "@type": "Question",
+        "name": "What is income smoothing for freelancers?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Income smoothing means paying yourself a fixed 'salary' from a business account, letting surplus build during high months and drawing it down during slow months. This reduces the psychological stress of variable income and aids budgeting."}
+      },
+      {
+        "@type": "Question",
+        "name": "How do I improve my freelance income stability score?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Diversify your client base, pursue retainer contracts, add a passive income stream, and build a pipeline ahead of current work. Recurring revenue contracts are the single most effective way to improve income stability."}
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="logo">
+        <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav">
+        <a href="/">Home</a>
+        <a href="/pages/business-calculators/">Business</a>
+        <a href="/pages/financial-calculators/">Financial</a>
+        <a href="/pages/tax-calculators/">Tax</a>
+        <a href="/pages/freelancer-calculators/" aria-current="page">Freelancer</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav">
+      <a href="/">Home</a>
+      <a href="/pages/business-calculators/">Business Calculators</a>
+      <a href="/pages/financial-calculators/">Financial Calculators</a>
+      <a href="/pages/tax-calculators/">Tax Calculators</a>
+      <a href="/pages/freelancer-calculators/">Freelancer Calculators</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/pages/freelancer-calculators/">Freelancer Calculators</a></li>
+          <li><span aria-current="page">Freelance Income Stability Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="calc-page-layout">
+          <div class="calc-page-main">
+            <h1>Freelance Income Stability Calculator</h1>
+            <p class="subtitle" style="font-size:var(--text-lg);color:var(--color-gray-600);margin-bottom:var(--space-8);line-height:var(--leading-relaxed);">Understand the volatility of your freelance income, get a stability score, and calculate the right emergency fund to weather slow months with confidence. Knowing your variability percentage is the first step toward building a financially resilient freelance business.</p>
+
+            <div class="calc-container">
+              <div class="calc-header">
+                <h2>Income Stability Calculator</h2>
+                <p>Assess variability and set the right safety net</p>
+              </div>
+              <div class="calc-body">
+                <form id="stability-form" onsubmit="return false;">
+                  <p style="font-weight:var(--font-semibold);margin-bottom:var(--space-3);">Last 3 Months of Income</p>
+                  <div class="calc-grid calc-grid-3col">
+                    <div class="form-group">
+                      <label class="form-label" for="month1">Month 1</label>
+                      <div class="input-prefix">
+                        <span class="prefix">$</span>
+                        <input type="number" id="month1" class="form-input" placeholder="7000" min="0" step="1" required>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label" for="month2">Month 2</label>
+                      <div class="input-prefix">
+                        <span class="prefix">$</span>
+                        <input type="number" id="month2" class="form-input" placeholder="4500" min="0" step="1" required>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label" for="month3">Month 3</label>
+                      <div class="input-prefix">
+                        <span class="prefix">$</span>
+                        <input type="number" id="month3" class="form-input" placeholder="9000" min="0" step="1" required>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="calc-grid calc-grid-2col">
+                    <div class="form-group">
+                      <label class="form-label" for="monthly-expenses">Monthly Expenses</label>
+                      <div class="input-prefix">
+                        <span class="prefix">$</span>
+                        <input type="number" id="monthly-expenses" class="form-input" placeholder="4000" min="0" step="1" required>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label" for="ef-months">Emergency Fund Target (months)</label>
+                      <input type="number" id="ef-months" class="form-input" placeholder="6" min="1" max="24" step="1">
+                    </div>
+                  </div>
+
+                  <div class="calc-actions">
+                    <button type="button" class="btn btn-calculate btn-full" onclick="calculateStability()">Analyze Stability</button>
+                    <button type="button" class="btn btn-reset" onclick="resetStabilityForm()">Reset</button>
+                  </div>
+                </form>
+
+                <div id="results" class="calc-results hidden">
+                  <div class="result-primary">
+                    <div class="result-label">Stability Score</div>
+                    <div class="result-value" id="result-score">0/100</div>
+                  </div>
+                  <div class="result-grid result-grid-3">
+                    <div class="result-item">
+                      <div class="result-label">Average Monthly Income</div>
+                      <div class="result-value" id="result-avg">$0</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Income Variability</div>
+                      <div class="result-value" id="result-variability">0%</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Recommended Emergency Fund</div>
+                      <div class="result-value" id="result-ef">$0</div>
+                    </div>
+                  </div>
+                  <div class="result-item" style="margin-top:var(--space-4);padding:var(--space-4);background:var(--color-primary-50);border-radius:var(--radius-md);">
+                    <div class="result-label">Income Smoothing Strategy</div>
+                    <div id="result-strategy" style="margin-top:var(--space-2);font-size:var(--text-sm);color:var(--color-gray-700);line-height:var(--leading-relaxed);"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="ad-slot ad-slot-leaderboard"></div>
+
+            <section class="content-section">
+              <h2>Income Stability Formula</h2>
+              <div class="formula-box">
+                <div class="formula-label">Average Monthly Income</div>
+                Average = (Month 1 + Month 2 + Month 3) / 3
+              </div>
+              <div class="formula-box">
+                <div class="formula-label">Income Variability (Coefficient of Variation)</div>
+                Variability % = (Standard Deviation / Average) × 100
+              </div>
+              <div class="formula-box">
+                <div class="formula-label">Stability Score (0–100)</div>
+                Score = max(0, 100 - Variability %)
+              </div>
+              <div class="formula-box">
+                <div class="formula-label">Recommended Emergency Fund</div>
+                Emergency Fund = Monthly Expenses × Adjusted Months Target
+              </div>
+            </section>
+
+            <section class="content-section">
+              <h2>How to Use This Calculator</h2>
+              <ol>
+                <li>Enter your <strong>last 3 months of gross freelance income</strong> as accurately as possible.</li>
+                <li>Enter your <strong>total monthly expenses</strong> including rent, utilities, food, debt payments, and discretionary spending.</li>
+                <li>Set your <strong>emergency fund target</strong> in months (default 6; higher variability warrants more).</li>
+                <li>Click <strong>Analyze Stability</strong> to see your variability score and personalized income smoothing strategy.</li>
+              </ol>
+            </section>
+
+            <section class="content-section">
+              <h2>Example Scenario</h2>
+              <p>A freelance copywriter earned $7,000, $4,500, and $9,000 over three months with $4,000 in monthly expenses.</p>
+              <ul>
+                <li>Average Income: ($7,000 + $4,500 + $9,000) / 3 = <strong>$6,833</strong></li>
+                <li>Standard Deviation: approx. <strong>$1,870</strong></li>
+                <li>Variability: $1,870 / $6,833 = <strong>27.4%</strong></li>
+                <li>Stability Score: 100 - 27.4 = <strong>73 / 100 (Moderate)</strong></li>
+                <li>Emergency Fund (6 months): $4,000 × 6 = <strong>$24,000</strong></li>
+                <li>Strategy: Build retainer relationships; smooth income by paying yourself $5,500/month</li>
+              </ul>
+            </section>
+
+            <section class="faq-section">
+              <h2>Frequently Asked Questions</h2>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  How much emergency fund does a freelancer need?
+                  <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                </button>
+                <div class="faq-answer">
+                  <p>Most financial advisors recommend 3-6 months for employees, but freelancers should aim for 6-12 months due to income variability. The higher your variability percentage, the larger the cushion you need.</p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  What is income variability percentage?
+                  <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                </button>
+                <div class="faq-answer">
+                  <p>Income variability is the coefficient of variation — standard deviation divided by the mean, as a percentage. Under 20% is stable; above 50% is high risk requiring a larger financial buffer.</p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  What is income smoothing for freelancers?
+                  <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                </button>
+                <div class="faq-answer">
+                  <p>Income smoothing means paying yourself a fixed monthly salary from a business buffer account. Surplus builds during high months and draws down during slow months, reducing stress and aiding household budgeting.</p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  How do I improve my freelance income stability score?
+                  <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                </button>
+                <div class="faq-answer">
+                  <p>Diversify your client base, pursue retainer contracts, and build your pipeline ahead of current projects. Recurring revenue is the single most effective stabilizer for freelance income.</p>
+                </div>
+              </div>
+            </section>
+
+            <section class="related-calculators">
+              <h2>Related Calculators</h2>
+              <div class="grid grid-3">
+                <a href="/pages/freelancer-calculators/freelance-revenue-forecast-calculator/" class="card card-link">
+                  <h3>Revenue Forecast Calculator</h3>
+                  <p>Project 3- and 6-month revenue from current clients and pipeline.</p>
+                </a>
+                <a href="/pages/freelancer-calculators/retainer-pricing-calculator/" class="card card-link">
+                  <h3>Retainer Pricing Calculator</h3>
+                  <p>Price monthly retainers to build predictable recurring income.</p>
+                </a>
+                <a href="/pages/freelancer-calculators/freelance-break-even-calculator/" class="card card-link">
+                  <h3>Break-Even Calculator</h3>
+                  <p>Find the minimum monthly revenue to cover all your expenses.</p>
+                </a>
+                <a href="/pages/freelancer-calculators/freelance-utilization-rate-calculator/" class="card card-link">
+                  <h3>Utilization Rate Calculator</h3>
+                  <p>Optimize billable hours to maximize and stabilize earnings.</p>
+                </a>
+              </div>
+            </section>
+
+            <div class="disclaimer">
+              <strong>Disclaimer:</strong> This calculator provides estimates based on 3 months of data, which may not represent long-term income patterns. Results are for informational purposes only and do not constitute financial advice. Consult a financial advisor for personalized guidance.
+            </div>
+          </div>
+
+          <aside class="calc-page-sidebar">
+            <div class="ad-slot ad-slot-rectangle"></div>
+            <div class="sidebar-card">
+              <h3>Freelancer Calculators</h3>
+              <a href="/pages/freelancer-calculators/freelance-tax-estimator/">Tax Estimator</a>
+              <a href="/pages/freelancer-calculators/freelance-income-stability-calculator/">Income Stability</a>
+              <a href="/pages/freelancer-calculators/project-pricing-calculator/">Project Pricing</a>
+              <a href="/pages/freelancer-calculators/client-profitability-calculator/">Client Profitability</a>
+              <a href="/pages/freelancer-calculators/freelance-break-even-calculator/">Break-Even Calculator</a>
+              <a href="/pages/freelancer-calculators/retainer-pricing-calculator/">Retainer Pricing</a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free online calculators for business, finance, tax, and investment decisions.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Calculators</h4>
+          <a href="/pages/business-calculators/">Business</a>
+          <a href="/pages/financial-calculators/">Financial</a>
+          <a href="/pages/tax-calculators/">Tax</a>
+          <a href="/pages/investment-calculators/">Investment</a>
+          <a href="/pages/freelancer-calculators/">Freelancer</a>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <a href="/about/">About</a>
+          <a href="/blog/">Blog</a>
+          <a href="/contact/">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="/privacy/">Privacy Policy</a>
+          <a href="/terms/">Terms of Service</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/privacy/">Privacy</a>
+          <a href="/terms/">Terms</a>
+          <a href="/contact/">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateStability() {
+      const m1 = CalcWise.parseNumber(document.getElementById('month1').value);
+      const m2 = CalcWise.parseNumber(document.getElementById('month2').value);
+      const m3 = CalcWise.parseNumber(document.getElementById('month3').value);
+      const expenses = CalcWise.parseNumber(document.getElementById('monthly-expenses').value);
+      const efMonths = CalcWise.parseNumber(document.getElementById('ef-months').value) || 6;
+
+      if (m1 <= 0 || m2 <= 0 || m3 <= 0 || expenses <= 0) {
+        alert('Please fill in all required fields with valid values.');
+        return;
+      }
+
+      const avg = (m1 + m2 + m3) / 3;
+      const variance = ((m1-avg)**2 + (m2-avg)**2 + (m3-avg)**2) / 3;
+      const stdDev = Math.sqrt(variance);
+      const variabilityPct = (stdDev / avg) * 100;
+      const score = Math.max(0, Math.round(100 - variabilityPct));
+
+      // Adjust emergency fund months based on variability
+      let adjustedMonths = efMonths;
+      if (variabilityPct > 50) adjustedMonths = Math.max(efMonths, 9);
+      else if (variabilityPct > 30) adjustedMonths = Math.max(efMonths, 6);
+
+      const ef = expenses * adjustedMonths;
+      const smoothSalary = avg * 0.85; // conservative smoothing amount
+
+      let scoreLabel = score >= 80 ? 'Excellent' : score >= 60 ? 'Good' : score >= 40 ? 'Moderate' : 'High Risk';
+      let strategy = '';
+      if (variabilityPct < 20) {
+        strategy = 'Your income is quite stable. Maintain a 3-6 month emergency fund and consider investing surplus income. Pay yourself a fixed monthly salary of ' + CalcWise.formatCurrency(smoothSalary) + '.';
+      } else if (variabilityPct < 40) {
+        strategy = 'Moderate variability detected. Pursue 1-2 retainer clients to anchor monthly revenue. Set aside 15-20% of every payment to a buffer account. Consider paying yourself ' + CalcWise.formatCurrency(smoothSalary) + '/month from a business buffer.';
+      } else if (variabilityPct < 60) {
+        strategy = 'High variability — focus on converting project clients to retainer agreements. Build a 9-month emergency fund before aggressive spending. Smooth income to ' + CalcWise.formatCurrency(smoothSalary) + '/month and reinvest the rest.';
+      } else {
+        strategy = 'Very high variability — immediate action recommended. Diversify across at least 3 clients. Secure at least one recurring contract. Reduce expenses to increase your runway. Target smooth monthly salary of ' + CalcWise.formatCurrency(smoothSalary) + ' only after buffer is built.';
+      }
+
+      CalcWise.setText('result-score', score + '/100 — ' + scoreLabel);
+      CalcWise.setText('result-avg', CalcWise.formatCurrency(avg));
+      CalcWise.setText('result-variability', variabilityPct.toFixed(1) + '%');
+      CalcWise.setText('result-ef', CalcWise.formatCurrency(ef));
+      document.getElementById('result-strategy').textContent = strategy;
+      CalcWise.showResults('results');
+    }
+
+    function resetStabilityForm() {
+      document.getElementById('stability-form').reset();
+      CalcWise.hideResults('results');
+    }
+
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', !expanded);
+        btn.nextElementSibling.style.display = expanded ? 'none' : 'block';
+      });
+    });
+
+    const toggle = document.querySelector('.mobile-menu-toggle');
+    const mobileNav = document.querySelector('.mobile-nav');
+    if (toggle && mobileNav) {
+      toggle.addEventListener('click', () => {
+        const open = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', !open);
+        mobileNav.classList.toggle('open', !open);
+      });
+    }
+  </script>
+</body>
+</html>

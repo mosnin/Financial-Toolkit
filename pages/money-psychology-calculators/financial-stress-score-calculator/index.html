@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Financial Stress Score Calculator - CalcWise</title>
+  <meta name="description" content="Measure your financial stress level across 8 key indicators. Get your stress score out of 40, identify your stress category, and receive actionable steps to reduce financial anxiety.">
+  <link rel="canonical" href="https://calcwise.io/money-psychology-calculators/financial-stress-score-calculator/">
+  <meta property="og:title" content="Financial Stress Score Calculator - CalcWise">
+  <meta property="og:description" content="Score your financial stress across 8 indicators. Identify your stress level and get personalized recommendations to reduce money anxiety.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcwise.io/money-psychology-calculators/financial-stress-score-calculator/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Financial Stress Score Calculator - CalcWise">
+  <meta name="twitter:description" content="Find out your financial stress level and get actionable steps to improve your financial wellbeing.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/"},
+      {"@type": "ListItem", "position": 2, "name": "Money Psychology Calculators", "item": "https://calcwise.io/money-psychology-calculators/"},
+      {"@type": "ListItem", "position": 3, "name": "Financial Stress Score Calculator"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is a healthy financial stress score?",
+        "acceptedAnswer": {"@type": "Answer", "text": "A score of 33–40 indicates Low financial stress — you have strong financial foundations and healthy coping strategies. Most people score in the Moderate range (25–32), which is normal and manageable. Scores below 17 indicate Severe stress that often benefits from both financial planning assistance and emotional support resources."}
+      },
+      {
+        "@type": "Question",
+        "name": "How does financial stress affect physical health?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Research published in major medical journals links financial stress to elevated cortisol levels, disrupted sleep, increased blood pressure, weakened immune response, and higher rates of depression and anxiety. The American Psychological Association consistently ranks money as the top source of stress in the United States."}
+      },
+      {
+        "@type": "Question",
+        "name": "What is the fastest way to reduce financial stress?",
+        "acceptedAnswer": {"@type": "Answer", "text": "The single fastest stress reducer is building any emergency fund — even $500 to $1,000. Research shows that having a small cash buffer dramatically reduces anxiety about unexpected expenses, which is the most common trigger for financial crisis feelings. Open a separate savings account today and automate a small weekly transfer."}
+      },
+      {
+        "@type": "Question",
+        "name": "Should I seek professional help for financial stress?",
+        "acceptedAnswer": {"@type": "Answer", "text": "If financial stress is affecting your sleep, relationships, work performance, or physical health, professional support is appropriate. Consider a nonprofit credit counselor (free via NFCC), a fee-only financial planner, or a therapist who specializes in financial anxiety. Many offer sliding-scale fees."}
+      }
+    ]
+  }
+  </script>
+  <style>
+    .question-block { background: var(--color-white); border: 1px solid var(--color-gray-200); border-radius: var(--radius-lg); padding: var(--space-5); margin-bottom: var(--space-4); }
+    .question-block label { display: block; font-weight: var(--font-semibold); margin-bottom: var(--space-3); color: var(--color-gray-800); }
+    .slider-row { display: flex; align-items: center; gap: var(--space-3); }
+    .slider-row input[type=range] { flex: 1; accent-color: var(--color-primary); }
+    .slider-value { min-width: 2rem; text-align: center; font-weight: var(--font-bold); color: var(--color-primary); font-size: var(--text-lg); }
+    .slider-labels { display: flex; justify-content: space-between; font-size: var(--text-xs); color: var(--color-gray-500); margin-top: var(--space-1); }
+    .rec-item { background: var(--color-primary-50); border-left: 4px solid var(--color-primary); padding: var(--space-3) var(--space-4); border-radius: 0 var(--radius-md) var(--radius-md) 0; margin-bottom: var(--space-3); }
+    .stress-bar { height: 12px; border-radius: var(--radius-full); background: var(--color-gray-200); margin-top: var(--space-2); overflow: hidden; }
+    .stress-bar-fill { height: 100%; border-radius: var(--radius-full); transition: width 0.6s ease; }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="logo">
+        <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav">
+        <a href="/">Home</a>
+        <a href="/pages/finance-calculators/">Finance</a>
+        <a href="/pages/business-calculators/">Business</a>
+        <a href="/pages/investment-calculators/">Investment</a>
+        <a href="/pages/money-psychology-calculators/" aria-current="page">Psychology</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav">
+      <a href="/">Home</a>
+      <a href="/pages/finance-calculators/">Finance Calculators</a>
+      <a href="/pages/business-calculators/">Business Calculators</a>
+      <a href="/pages/investment-calculators/">Investment Calculators</a>
+      <a href="/pages/money-psychology-calculators/">Money Psychology Calculators</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li><a href="/pages/money-psychology-calculators/">Money Psychology Calculators</a></li>
+        <li><span aria-current="page">Financial Stress Score Calculator</span></li>
+      </ol>
+    </nav>
+
+    <div class="page-content">
+      <div class="article-content">
+        <h1>Financial Stress Score Calculator</h1>
+        <p>Financial stress is one of the most pervasive — and most treatable — forms of anxiety. This assessment scores 8 key stress indicators to quantify your financial wellbeing, identify your highest-stress areas, and give you a prioritized plan to start feeling better.</p>
+
+        <div class="ad-slot ad-slot-leaderboard"></div>
+
+        <div class="calc-container">
+          <div class="calc-header">
+            <h2>Rate Your Financial Stress Indicators</h2>
+            <p>1 = Highest stress / most worried &nbsp;|&nbsp; 5 = No stress / fully confident</p>
+          </div>
+          <div class="calc-body">
+            <form id="stress-form">
+
+              <div class="question-block">
+                <label for="s1">1. Bill Payment Worry — How stressed are you about paying bills on time?</label>
+                <div class="slider-row">
+                  <input type="range" id="s1" name="s1" min="1" max="5" value="3" oninput="document.getElementById('sv1').textContent=this.value">
+                  <span class="slider-value" id="sv1">3</span>
+                </div>
+                <div class="slider-labels"><span>1 – Constant worry</span><span>5 – Never worried</span></div>
+              </div>
+
+              <div class="question-block">
+                <label for="s2">2. Emergency Fund Adequacy — How prepared do you feel for unexpected expenses?</label>
+                <div class="slider-row">
+                  <input type="range" id="s2" name="s2" min="1" max="5" value="3" oninput="document.getElementById('sv2').textContent=this.value">
+                  <span class="slider-value" id="sv2">3</span>
+                </div>
+                <div class="slider-labels"><span>1 – Completely unprepared</span><span>5 – Fully prepared</span></div>
+              </div>
+
+              <div class="question-block">
+                <label for="s3">3. Debt Weight — How much does your debt burden weigh on you emotionally?</label>
+                <div class="slider-row">
+                  <input type="range" id="s3" name="s3" min="1" max="5" value="3" oninput="document.getElementById('sv3').textContent=this.value">
+                  <span class="slider-value" id="sv3">3</span>
+                </div>
+                <div class="slider-labels"><span>1 – Overwhelming</span><span>5 – Not a concern</span></div>
+              </div>
+
+              <div class="question-block">
+                <label for="s4">4. Retirement Confidence — How confident are you about having enough to retire?</label>
+                <div class="slider-row">
+                  <input type="range" id="s4" name="s4" min="1" max="5" value="3" oninput="document.getElementById('sv4').textContent=this.value">
+                  <span class="slider-value" id="sv4">3</span>
+                </div>
+                <div class="slider-labels"><span>1 – Very unconfident</span><span>5 – Very confident</span></div>
+              </div>
+
+              <div class="question-block">
+                <label for="s5">5. Income Security — How secure do you feel about your income continuing?</label>
+                <div class="slider-row">
+                  <input type="range" id="s5" name="s5" min="1" max="5" value="3" oninput="document.getElementById('sv5').textContent=this.value">
+                  <span class="slider-value" id="sv5">3</span>
+                </div>
+                <div class="slider-labels"><span>1 – Very insecure</span><span>5 – Very secure</span></div>
+              </div>
+
+              <div class="question-block">
+                <label for="s6">6. Financial Conflict Frequency — How often does money cause conflict in your relationships?</label>
+                <div class="slider-row">
+                  <input type="range" id="s6" name="s6" min="1" max="5" value="3" oninput="document.getElementById('sv6').textContent=this.value">
+                  <span class="slider-value" id="sv6">3</span>
+                </div>
+                <div class="slider-labels"><span>1 – Constant conflict</span><span>5 – Never an issue</span></div>
+              </div>
+
+              <div class="question-block">
+                <label for="s7">7. Money Anxiety Level — How much anxiety do you feel about your overall financial situation?</label>
+                <div class="slider-row">
+                  <input type="range" id="s7" name="s7" min="1" max="5" value="3" oninput="document.getElementById('sv7').textContent=this.value">
+                  <span class="slider-value" id="sv7">3</span>
+                </div>
+                <div class="slider-labels"><span>1 – Severe anxiety</span><span>5 – Calm and confident</span></div>
+              </div>
+
+              <div class="question-block">
+                <label for="s8">8. Financial Control — How in control do you feel of your financial decisions?</label>
+                <div class="slider-row">
+                  <input type="range" id="s8" name="s8" min="1" max="5" value="3" oninput="document.getElementById('sv8').textContent=this.value">
+                  <span class="slider-value" id="sv8">3</span>
+                </div>
+                <div class="slider-labels"><span>1 – No control at all</span><span>5 – Fully in control</span></div>
+              </div>
+
+              <div class="calc-actions">
+                <button type="button" class="btn btn-calculate" onclick="calcStress()">Calculate Stress Score</button>
+                <button type="button" class="btn btn-reset" onclick="resetStress()">Reset</button>
+              </div>
+            </form>
+
+            <div id="results" class="calc-results hidden">
+              <div class="result-primary">
+                <div class="result-label">Financial Stress Score</div>
+                <div class="result-value" id="stressScore">0 / 40</div>
+              </div>
+              <div style="margin: var(--space-3) 0 var(--space-5);">
+                <div style="display:flex;justify-content:space-between;font-size:var(--text-sm);margin-bottom:var(--space-2);">
+                  <span>Stress Level:</span><span id="stressLevelLabel" style="font-weight:var(--font-bold)">—</span>
+                </div>
+                <div class="stress-bar"><div class="stress-bar-fill" id="stressBarFill" style="width:0%;background:var(--color-success)"></div></div>
+              </div>
+              <div class="result-grid result-grid-3" style="margin-bottom:var(--space-5);">
+                <div class="result-item">
+                  <div class="result-label">Category</div>
+                  <div class="result-value" id="stressCategory" style="font-size:var(--text-lg)">—</div>
+                </div>
+                <div class="result-item">
+                  <div class="result-label">Highest Stress Area</div>
+                  <div class="result-value" id="highestStress" style="font-size:var(--text-base)">—</div>
+                </div>
+                <div class="result-item">
+                  <div class="result-label">Biggest Opportunity</div>
+                  <div class="result-value" id="bestOpportunity" style="font-size:var(--text-base)">—</div>
+                </div>
+              </div>
+              <h3 style="font-size:var(--text-base);margin-bottom:var(--space-3);">Actionable Recommendations</h3>
+              <div id="stressRecs"></div>
+            </div>
+          </div>
+        </div>
+
+        <section class="content-section">
+          <h2>How the Stress Score Works</h2>
+          <div class="formula-box">
+            <div class="formula-label">Scoring</div>
+            Total Score = Sum of all 8 indicators (max 40)<br>
+            Note: Higher score = LOWER stress (ratings are wellbeing indicators)<br>
+            33–40 = Low Stress &nbsp;|&nbsp; 25–32 = Moderate Stress<br>
+            17–24 = High Stress &nbsp;|&nbsp; 8–16 = Severe Stress
+          </div>
+          <p>This assessment is modeled on validated financial wellbeing scales used by the Consumer Financial Protection Bureau (CFPB) and academic researchers. Each indicator captures a distinct dimension of financial anxiety. Because the scale measures wellbeing rather than stress directly, a higher total score means lower stress — you are rating how good things are, not how bad they feel.</p>
+        </section>
+
+        <section class="content-section">
+          <h2>How to Use This Calculator</h2>
+          <ol>
+            <li><strong>Rate each indicator honestly:</strong> Think about how you have felt over the past 30 days, not just today. Financial stress fluctuates — you want a representative average.</li>
+            <li><strong>Review your stress level:</strong> Your category tells you whether your stress is within normal range or at a level that warrants direct action.</li>
+            <li><strong>Address highest-stress areas first:</strong> The indicator with the lowest score is your most acute pain point. Focus one action there this week.</li>
+            <li><strong>Track over time:</strong> Retake monthly to watch your score improve as you take financial steps. Progress is motivating.</li>
+          </ol>
+        </section>
+
+        <section class="content-section">
+          <h2>Example Scenario</h2>
+          <p>Morgan scores: Bill Worry 2, Emergency Fund 1, Debt 2, Retirement 2, Income Security 3, Conflict 3, Anxiety 2, Control 2. Total: 17/40 — High Stress.</p>
+          <p>Priority action: Emergency fund is the most acute gap (score of 1). Opening a high-yield savings account and automating $50/week can build a $600 buffer in 12 weeks — enough to cover most minor emergencies and significantly reduce "what if" anxiety.</p>
+        </section>
+
+        <section class="faq-section">
+          <h2>Frequently Asked Questions</h2>
+          <div class="faq-item">
+            <button class="faq-question">What is a healthy financial stress score?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>A score of 33–40 indicates Low financial stress with strong foundations and healthy coping strategies. Most people score in the Moderate range (25–32), which is manageable. Scores below 17 indicate Severe stress that often benefits from both financial planning assistance and emotional support resources.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">How does financial stress affect physical health?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>Research links financial stress to elevated cortisol levels, disrupted sleep, increased blood pressure, weakened immune response, and higher rates of depression and anxiety. The American Psychological Association consistently ranks money as the top source of stress in the United States.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">What is the fastest way to reduce financial stress?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>The single fastest stress reducer is building any emergency fund — even $500 to $1,000. Research shows that having a small cash buffer dramatically reduces anxiety about unexpected expenses, which is the most common trigger for financial crisis feelings. Open a separate savings account today and automate a small weekly transfer.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">Should I seek professional help for financial stress?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>If financial stress is affecting your sleep, relationships, work performance, or physical health, professional support is appropriate. Consider a nonprofit credit counselor (free via NFCC), a fee-only financial planner, or a therapist who specializes in financial anxiety.</p></div>
+          </div>
+        </section>
+
+        <section class="related-calculators">
+          <h2>Related Calculators</h2>
+          <div class="grid grid-3">
+            <a href="/pages/money-psychology-calculators/savings-discipline-calculator/" class="card card-link">
+              <h3>Savings Discipline Calculator</h3>
+              <p>Measure how consistently you are saving toward your goals.</p>
+            </a>
+            <a href="/pages/money-psychology-calculators/financial-confidence-score-calculator/" class="card card-link">
+              <h3>Financial Confidence Score</h3>
+              <p>Assess your confidence across 8 financial knowledge areas.</p>
+            </a>
+            <a href="/pages/finance-calculators/emergency-fund-calculator/" class="card card-link">
+              <h3>Emergency Fund Calculator</h3>
+              <p>Find out exactly how much you need in your emergency fund.</p>
+            </a>
+          </div>
+        </section>
+
+        <div class="disclaimer">
+          <strong>Disclaimer:</strong> This calculator is for educational and self-awareness purposes only and does not constitute financial, medical, or psychological advice. If you are experiencing severe financial stress or mental health difficulties, please seek help from a qualified professional. The CFPB (consumerfinance.gov) and NFCC (nfcc.org) offer free financial counseling resources.
+        </div>
+
+        <div class="ad-slot ad-slot-rectangle"></div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free online financial calculators to help you make smarter money decisions.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Psychology Tools</h4>
+          <a href="/pages/money-psychology-calculators/spending-behavior-calculator/">Spending Behavior</a>
+          <a href="/pages/money-psychology-calculators/financial-stress-score-calculator/">Financial Stress Score</a>
+          <a href="/pages/money-psychology-calculators/savings-discipline-calculator/">Savings Discipline</a>
+          <a href="/pages/money-psychology-calculators/financial-confidence-score-calculator/">Financial Confidence</a>
+        </div>
+        <div class="footer-col">
+          <h4>Finance</h4>
+          <a href="/pages/finance-calculators/budget-calculator/">Budget Calculator</a>
+          <a href="/pages/finance-calculators/net-worth-calculator/">Net Worth</a>
+          <a href="/pages/finance-calculators/emergency-fund-calculator/">Emergency Fund</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about/">About</a>
+          <a href="/contact/">Contact</a>
+          <a href="/privacy/">Privacy Policy</a>
+          <a href="/terms/">Terms of Service</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 CalcWise. All rights reserved.</span>
+        <div class="footer-links">
+          <a href="/privacy/">Privacy</a>
+          <a href="/terms/">Terms</a>
+          <a href="/contact/">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    const stressIndicators = ['s1','s2','s3','s4','s5','s6','s7','s8'];
+    const stressNames = ['Bill Payment Worry','Emergency Fund','Debt Burden','Retirement Confidence','Income Security','Relationship Conflict','Money Anxiety','Financial Control'];
+    const stressActions = [
+      'Create a bill calendar and set up automatic minimum payments to eliminate late fee anxiety.',
+      'Open a dedicated high-yield savings account and automate $25–$50/week. Even $500 dramatically reduces financial anxiety.',
+      'List all debts by interest rate and attack the highest rate first. Consider a balance transfer for credit card debt above 18% APR.',
+      'Enroll in your employer\'s 401k — even 1% contribution captures any employer match and builds momentum.',
+      'Diversify your income with a small side skill or build 3 months of expenses in savings to reduce job-loss anxiety.',
+      'Schedule a dedicated "money date" monthly with your partner. Shared financial transparency reduces conflict by over 50%.',
+      'Journal 3 financial wins weekly. Shifting focus from scarcity to progress rewires money anxiety over 30–60 days.',
+      'List every subscription and recurring expense. Knowing exactly where money goes restores a sense of control instantly.'
+    ];
+
+    function calcStress() {
+      let total = 0;
+      const scores = stressIndicators.map(id => {
+        const val = parseInt(document.getElementById(id).value);
+        total += val;
+        return {id, val, name: stressNames[stressIndicators.indexOf(id)]};
+      });
+
+      let level, color, barColor;
+      if (total >= 33) { level = 'Low Stress'; color = 'var(--color-success)'; barColor = '#059669'; }
+      else if (total >= 25) { level = 'Moderate Stress'; color = 'var(--color-info)'; barColor = '#2563EB'; }
+      else if (total >= 17) { level = 'High Stress'; color = 'var(--color-warning)'; barColor = '#D97706'; }
+      else { level = 'Severe Stress'; color = 'var(--color-error)'; barColor = '#DC2626'; }
+
+      document.getElementById('stressScore').textContent = total + ' / 40';
+      document.getElementById('stressLevelLabel').textContent = level;
+      document.getElementById('stressLevelLabel').style.color = color;
+      document.getElementById('stressCategory').textContent = level;
+      document.getElementById('stressCategory').style.color = color;
+
+      const pct = ((total - 8) / 32) * 100;
+      document.getElementById('stressBarFill').style.width = pct + '%';
+      document.getElementById('stressBarFill').style.background = barColor;
+
+      const sorted = [...scores].sort((a,b) => a.val - b.val);
+      document.getElementById('highestStress').textContent = sorted[0].name;
+      document.getElementById('bestOpportunity').textContent = sorted[sorted.length - 1].name;
+
+      const topPriorities = sorted.slice(0, 3);
+      let recHtml = '';
+      topPriorities.forEach(item => {
+        const idx = stressIndicators.indexOf(item.id);
+        recHtml += '<div style="background:var(--color-primary-50);border-left:4px solid var(--color-primary);padding:var(--space-3) var(--space-4);border-radius:0 var(--radius-md) var(--radius-md) 0;margin-bottom:var(--space-3);"><strong>' + item.name + ':</strong> ' + stressActions[idx] + '</div>';
+      });
+      document.getElementById('stressRecs').innerHTML = recHtml;
+
+      document.getElementById('results').classList.remove('hidden');
+      document.getElementById('results').scrollIntoView({behavior:'smooth', block:'start'});
+    }
+
+    function resetStress() {
+      stressIndicators.forEach((id, i) => {
+        document.getElementById(id).value = 3;
+        document.getElementById('sv'+(i+1)).textContent = '3';
+      });
+      document.getElementById('results').classList.add('hidden');
+    }
+
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const answer = btn.nextElementSibling;
+        const isOpen = answer.classList.contains('open');
+        document.querySelectorAll('.faq-answer').forEach(a => a.classList.remove('open'));
+        if (!isOpen) answer.classList.add('open');
+      });
+    });
+
+    const toggle = document.querySelector('.mobile-menu-toggle');
+    const mobileNav = document.querySelector('.mobile-nav');
+    if (toggle && mobileNav) {
+      toggle.addEventListener('click', () => {
+        const expanded = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', !expanded);
+        mobileNav.classList.toggle('open');
+      });
+    }
+  </script>
+</body>
+</html>

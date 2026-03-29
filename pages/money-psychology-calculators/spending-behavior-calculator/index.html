@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spending Behavior Calculator - CalcWise</title>
+  <meta name="description" content="Discover your spending personality with our free spending behavior calculator. Score your money habits across 8 key behaviors and get personalized recommendations.">
+  <link rel="canonical" href="https://calcwise.io/money-psychology-calculators/spending-behavior-calculator/">
+  <meta property="og:title" content="Spending Behavior Calculator - CalcWise">
+  <meta property="og:description" content="Score your spending habits across 8 key behaviors and uncover whether you are a Mindful Spender, Conscious, Developing, or Impulsive spender.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcwise.io/money-psychology-calculators/spending-behavior-calculator/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Spending Behavior Calculator - CalcWise">
+  <meta name="twitter:description" content="Score your spending habits and get a personalized behavior profile with actionable recommendations.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/"},
+      {"@type": "ListItem", "position": 2, "name": "Money Psychology Calculators", "item": "https://calcwise.io/money-psychology-calculators/"},
+      {"@type": "ListItem", "position": 3, "name": "Spending Behavior Calculator"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What does my spending behavior score mean?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Your score out of 40 reflects how mindfully you manage spending decisions. Scores of 33–40 indicate a Mindful Spender who consistently applies healthy financial habits. Scores of 25–32 are Conscious Spenders who are on the right track with room to improve. Scores of 17–24 are Developing Spenders building better habits. Scores below 17 indicate Impulsive spending patterns that benefit most from structured guidance."}
+      },
+      {
+        "@type": "Question",
+        "name": "How often should I retake this assessment?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Retake the assessment every 3 months. Spending behavior changes gradually, and quarterly check-ins help you track progress, celebrate improvements, and identify areas that have slipped."}
+      },
+      {
+        "@type": "Question",
+        "name": "Can my spending behavior category change?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Yes. Spending behavior is a set of habits, not a fixed personality trait. With intentional practice — such as using a budget app, implementing a 24-hour purchase rule, or automating savings — most people move up one category within 6 months."}
+      },
+      {
+        "@type": "Question",
+        "name": "What is the most impactful habit to change first?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Research consistently shows that budget tracking is the highest-leverage behavior. People who track spending reduce discretionary expenses by an average of 15–20% within 60 days, simply because awareness changes behavior. Start there before addressing other habits."}
+      }
+    ]
+  }
+  </script>
+  <style>
+    .question-block { background: var(--color-white); border: 1px solid var(--color-gray-200); border-radius: var(--radius-lg); padding: var(--space-5); margin-bottom: var(--space-4); }
+    .question-block label { display: block; font-weight: var(--font-semibold); margin-bottom: var(--space-3); color: var(--color-gray-800); }
+    .slider-row { display: flex; align-items: center; gap: var(--space-3); }
+    .slider-row input[type=range] { flex: 1; accent-color: var(--color-primary); }
+    .slider-value { min-width: 2rem; text-align: center; font-weight: var(--font-bold); color: var(--color-primary); font-size: var(--text-lg); }
+    .slider-labels { display: flex; justify-content: space-between; font-size: var(--text-xs); color: var(--color-gray-500); margin-top: var(--space-1); }
+    .score-badge { display: inline-block; padding: var(--space-2) var(--space-5); border-radius: var(--radius-full); font-weight: var(--font-bold); font-size: var(--text-xl); }
+    .rec-item { background: var(--color-primary-50); border-left: 4px solid var(--color-primary); padding: var(--space-3) var(--space-4); border-radius: 0 var(--radius-md) var(--radius-md) 0; margin-bottom: var(--space-3); }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="logo">
+        <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav">
+        <a href="/">Home</a>
+        <a href="/pages/finance-calculators/">Finance</a>
+        <a href="/pages/business-calculators/">Business</a>
+        <a href="/pages/investment-calculators/">Investment</a>
+        <a href="/pages/money-psychology-calculators/" aria-current="page">Psychology</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav">
+      <a href="/">Home</a>
+      <a href="/pages/finance-calculators/">Finance Calculators</a>
+      <a href="/pages/business-calculators/">Business Calculators</a>
+      <a href="/pages/investment-calculators/">Investment Calculators</a>
+      <a href="/pages/money-psychology-calculators/">Money Psychology Calculators</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li><a href="/pages/money-psychology-calculators/">Money Psychology Calculators</a></li>
+        <li><span aria-current="page">Spending Behavior Calculator</span></li>
+      </ol>
+    </nav>
+
+    <div class="page-content">
+      <div class="article-content">
+        <h1>Spending Behavior Calculator</h1>
+        <p>Your spending habits are shaped by psychology as much as math. This calculator scores 8 core spending behaviors on a 1–5 scale to reveal your overall money personality — and gives you targeted recommendations to level up from wherever you are today.</p>
+
+        <div class="ad-slot ad-slot-leaderboard"></div>
+
+        <div class="calc-container">
+          <div class="calc-header">
+            <h2>Rate Your Spending Behaviors</h2>
+            <p>Score each behavior honestly. 1 = Never/Poor, 5 = Always/Excellent</p>
+          </div>
+          <div class="calc-body">
+            <form id="behavior-form">
+
+              <div class="question-block">
+                <label for="q1">1. Impulsive Buying Frequency — How often do you buy things without planning?</label>
+                <div class="slider-row">
+                  <input type="range" id="q1" name="q1" min="1" max="5" value="3" oninput="document.getElementById('v1').textContent=this.value">
+                  <span class="slider-value" id="v1">3</span>
+                </div>
+                <div class="slider-labels"><span>1 – Very Often</span><span>5 – Almost Never</span></div>
+              </div>
+
+              <div class="question-block">
+                <label for="q2">2. Budget Tracking — How consistently do you track your spending?</label>
+                <div class="slider-row">
+                  <input type="range" id="q2" name="q2" min="1" max="5" value="3" oninput="document.getElementById('v2').textContent=this.value">
+                  <span class="slider-value" id="v2">3</span>
+                </div>
+                <div class="slider-labels"><span>1 – Never track</span><span>5 – Track everything</span></div>
+              </div>
+
+              <div class="question-block">
+                <label for="q3">3. Needs vs. Wants Discipline — How well do you distinguish needs from wants before buying?</label>
+                <div class="slider-row">
+                  <input type="range" id="q3" name="q3" min="1" max="5" value="3" oninput="document.getElementById('v3').textContent=this.value">
+                  <span class="slider-value" id="v3">3</span>
+                </div>
+                <div class="slider-labels"><span>1 – Rarely distinguish</span><span>5 – Always evaluate</span></div>
+              </div>
+
+              <div class="question-block">
+                <label for="q4">4. Sale Resistance — Can you resist buying something just because it's on sale?</label>
+                <div class="slider-row">
+                  <input type="range" id="q4" name="q4" min="1" max="5" value="3" oninput="document.getElementById('v4').textContent=this.value">
+                  <span class="slider-value" id="v4">3</span>
+                </div>
+                <div class="slider-labels"><span>1 – Sales always win</span><span>5 – Never swayed by sales</span></div>
+              </div>
+
+              <div class="question-block">
+                <label for="q5">5. Subscription Review Frequency — How often do you audit your recurring subscriptions?</label>
+                <div class="slider-row">
+                  <input type="range" id="q5" name="q5" min="1" max="5" value="3" oninput="document.getElementById('v5').textContent=this.value">
+                  <span class="slider-value" id="v5">3</span>
+                </div>
+                <div class="slider-labels"><span>1 – Never review</span><span>5 – Review quarterly</span></div>
+              </div>
+
+              <div class="question-block">
+                <label for="q6">6. Post-Purchase Regret — How often do you regret purchases after making them?</label>
+                <div class="slider-row">
+                  <input type="range" id="q6" name="q6" min="1" max="5" value="3" oninput="document.getElementById('v6').textContent=this.value">
+                  <span class="slider-value" id="v6">3</span>
+                </div>
+                <div class="slider-labels"><span>1 – Regret often</span><span>5 – Rarely regret</span></div>
+              </div>
+
+              <div class="question-block">
+                <label for="q7">7. Comparison Shopping — Do you compare prices before significant purchases?</label>
+                <div class="slider-row">
+                  <input type="range" id="q7" name="q7" min="1" max="5" value="3" oninput="document.getElementById('v7').textContent=this.value">
+                  <span class="slider-value" id="v7">3</span>
+                </div>
+                <div class="slider-labels"><span>1 – Buy from first option</span><span>5 – Always compare</span></div>
+              </div>
+
+              <div class="question-block">
+                <label for="q8">8. Financial Goal Alignment — Do your purchases align with your financial goals?</label>
+                <div class="slider-row">
+                  <input type="range" id="q8" name="q8" min="1" max="5" value="3" oninput="document.getElementById('v8').textContent=this.value">
+                  <span class="slider-value" id="v8">3</span>
+                </div>
+                <div class="slider-labels"><span>1 – No connection</span><span>5 – Always aligned</span></div>
+              </div>
+
+              <div class="calc-actions">
+                <button type="button" class="btn btn-calculate" onclick="calcBehavior()">Calculate My Score</button>
+                <button type="button" class="btn btn-reset" onclick="resetBehavior()">Reset</button>
+              </div>
+            </form>
+
+            <div id="results" class="calc-results hidden">
+              <div class="result-primary">
+                <div class="result-label">Your Spending Behavior Score</div>
+                <div class="result-value" id="totalScore">0 / 40</div>
+              </div>
+              <div class="result-grid result-grid-3" style="margin-bottom:var(--space-6)">
+                <div class="result-item">
+                  <div class="result-label">Category</div>
+                  <div class="result-value" id="categoryLabel" style="font-size:var(--text-lg)">—</div>
+                </div>
+                <div class="result-item">
+                  <div class="result-label">Percentile Insight</div>
+                  <div class="result-value" id="percentileLabel" style="font-size:var(--text-base)">—</div>
+                </div>
+                <div class="result-item">
+                  <div class="result-label">Priority Area</div>
+                  <div class="result-value" id="priorityLabel" style="font-size:var(--text-base)">—</div>
+                </div>
+              </div>
+              <h3 style="font-size:var(--text-base);margin-bottom:var(--space-3);">Personalized Recommendations</h3>
+              <div id="recommendations"></div>
+              <div style="margin-top:var(--space-5); padding:var(--space-4); background:var(--color-primary-50); border-radius:var(--radius-lg);">
+                <strong>Ready to take action?</strong> Use our <a href="/pages/finance-calculators/budget-calculator/">Budget Calculator</a> to build a plan that matches your spending profile.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <section class="content-section">
+          <h2>How the Scoring Works</h2>
+          <div class="formula-box">
+            <div class="formula-label">Scoring</div>
+            Total Score = Sum of all 8 behavior ratings (max 40)<br>
+            33–40 = Mindful Spender &nbsp;|&nbsp; 25–32 = Conscious Spender<br>
+            17–24 = Developing Spender &nbsp;|&nbsp; 8–16 = Impulsive Spender
+          </div>
+          <p>Each behavior is rated 1 (poor) to 5 (excellent). The assessment draws on behavioral economics research, including work by Thaler &amp; Sunstein on nudge theory and Ariely's research on predictably irrational spending. Higher scores indicate stronger spending self-regulation, which correlates with greater long-term wealth accumulation.</p>
+        </section>
+
+        <section class="content-section">
+          <h2>How to Use This Calculator</h2>
+          <ol>
+            <li><strong>Answer honestly:</strong> Rate each behavior based on your actual habits over the past 3 months, not how you aspire to behave.</li>
+            <li><strong>Review your category:</strong> Your category tells you where you stand and how your patterns compare to research benchmarks.</li>
+            <li><strong>Focus on your lowest scores:</strong> The two or three behaviors with the lowest ratings are your highest-leverage improvement opportunities.</li>
+            <li><strong>Revisit in 90 days:</strong> Habits take 60–90 days to solidify. Retake the assessment to measure your progress.</li>
+          </ol>
+        </section>
+
+        <section class="content-section">
+          <h2>Example Scenario</h2>
+          <p>Jordan scores: Impulsive Buying 2, Budget Tracking 2, Needs vs Wants 3, Sale Resistance 2, Subscription Review 1, Post-Purchase Regret 2, Comparison Shopping 3, Goal Alignment 2. Total: 17/40 — Developing Spender.</p>
+          <p>Top recommendations: Start a subscription audit (potential monthly savings: $40–$120), implement a 48-hour rule for non-essential purchases over $50, and set up a free budgeting app to begin tracking. These three changes alone could shift Jordan into the Conscious Spender tier within 90 days.</p>
+        </section>
+
+        <section class="faq-section">
+          <h2>Frequently Asked Questions</h2>
+          <div class="faq-item">
+            <button class="faq-question">What does my spending behavior score mean?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>Your score out of 40 reflects how mindfully you manage spending decisions. Scores of 33–40 indicate a Mindful Spender. Scores of 25–32 are Conscious Spenders. Scores of 17–24 are Developing Spenders. Scores below 17 indicate Impulsive spending patterns.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">How often should I retake this assessment?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>Retake the assessment every 3 months. Spending behavior changes gradually, and quarterly check-ins help you track progress, celebrate improvements, and identify areas that have slipped.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">Can my spending behavior category change?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>Yes. Spending behavior is a set of habits, not a fixed personality trait. With intentional practice — such as using a budget app, implementing a 24-hour purchase rule, or automating savings — most people move up one category within 6 months.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">What is the most impactful habit to change first?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>Research consistently shows that budget tracking is the highest-leverage behavior. People who track spending reduce discretionary expenses by an average of 15–20% within 60 days simply because awareness changes behavior. Start there before addressing other habits.</p></div>
+          </div>
+        </section>
+
+        <section class="related-calculators">
+          <h2>Related Calculators</h2>
+          <div class="grid grid-3">
+            <a href="/pages/money-psychology-calculators/impulse-purchase-impact-calculator/" class="card card-link">
+              <h3>Impulse Purchase Impact Calculator</h3>
+              <p>See the true long-term cost of impulse spending.</p>
+            </a>
+            <a href="/pages/money-psychology-calculators/money-habit-score-calculator/" class="card card-link">
+              <h3>Money Habit Score Calculator</h3>
+              <p>Grade your 10 core money habits and find gaps.</p>
+            </a>
+            <a href="/pages/finance-calculators/budget-calculator/" class="card card-link">
+              <h3>50/30/20 Budget Calculator</h3>
+              <p>Build a budget that matches your spending profile.</p>
+            </a>
+          </div>
+        </section>
+
+        <div class="disclaimer">
+          <strong>Disclaimer:</strong> This calculator is for educational and self-awareness purposes only. It does not constitute financial, psychological, or therapeutic advice. Results are based on self-reported data and general behavioral research benchmarks. Consult a qualified financial advisor or counselor for personalized guidance.
+        </div>
+
+        <div class="ad-slot ad-slot-rectangle"></div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free online financial calculators to help you make smarter money decisions.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Psychology Tools</h4>
+          <a href="/pages/money-psychology-calculators/spending-behavior-calculator/">Spending Behavior</a>
+          <a href="/pages/money-psychology-calculators/financial-stress-score-calculator/">Financial Stress Score</a>
+          <a href="/pages/money-psychology-calculators/risk-tolerance-score-calculator/">Risk Tolerance</a>
+          <a href="/pages/money-psychology-calculators/money-habit-score-calculator/">Money Habit Score</a>
+        </div>
+        <div class="footer-col">
+          <h4>Finance</h4>
+          <a href="/pages/finance-calculators/budget-calculator/">Budget Calculator</a>
+          <a href="/pages/finance-calculators/net-worth-calculator/">Net Worth</a>
+          <a href="/pages/finance-calculators/emergency-fund-calculator/">Emergency Fund</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about/">About</a>
+          <a href="/contact/">Contact</a>
+          <a href="/privacy/">Privacy Policy</a>
+          <a href="/terms/">Terms of Service</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 CalcWise. All rights reserved.</span>
+        <div class="footer-links">
+          <a href="/privacy/">Privacy</a>
+          <a href="/terms/">Terms</a>
+          <a href="/contact/">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    const behaviorRecs = {
+      q1: { low: "Implement a 48-hour waiting rule for any non-essential purchase over $30. This single habit reduces impulse spending by up to 30%." },
+      q2: { low: "Start tracking every purchase for 30 days using a free app like Mint or YNAB. Awareness alone reduces discretionary spending by 15–20%." },
+      q3: { low: "Before every purchase, ask: 'Would my future self thank me for this?' Distinguish between something you need vs. something you want in that moment." },
+      q4: { low: "A discount is only valuable on something you planned to buy. Create a wishlist and only buy sale items already on it." },
+      q5: { low: "Schedule a 'subscription audit' every 3 months. Americans average $219/month on subscriptions, often forgetting 30% of them." },
+      q6: { low: "High post-purchase regret signals misalignment between spending and values. List your top 3 financial priorities before your next big purchase." },
+      q7: { low: "For purchases over $50, spend 5 minutes comparing at least 3 options. Comparison shopping saves an average of 12% per transaction." },
+      q8: { low: "Write down your top 3 financial goals and review them before any discretionary purchase over $100. Intentional spending accelerates goal achievement." }
+    };
+
+    function calcBehavior() {
+      const qs = ['q1','q2','q3','q4','q5','q6','q7','q8'];
+      let total = 0;
+      const scores = {};
+      qs.forEach(q => {
+        const val = parseInt(document.getElementById(q).value);
+        scores[q] = val;
+        total += val;
+      });
+
+      let category, color, percentile, priority;
+      if (total >= 33) {
+        category = 'Mindful Spender'; color = 'var(--color-success)';
+        percentile = 'Top 20% of spenders'; priority = 'Maintain & optimize';
+      } else if (total >= 25) {
+        category = 'Conscious Spender'; color = 'var(--color-info)';
+        percentile = 'Top 40% of spenders'; priority = 'Refine weak areas';
+      } else if (total >= 17) {
+        category = 'Developing Spender'; color = 'var(--color-warning)';
+        percentile = 'Middle 40% of spenders'; priority = 'Build core habits';
+      } else {
+        category = 'Impulsive Spender'; color = 'var(--color-error)';
+        percentile = 'Bottom 20% of spenders'; priority = 'Start with tracking';
+      }
+
+      document.getElementById('totalScore').textContent = total + ' / 40';
+      document.getElementById('categoryLabel').textContent = category;
+      document.getElementById('categoryLabel').style.color = color;
+      document.getElementById('percentileLabel').textContent = percentile;
+      document.getElementById('priorityLabel').textContent = priority;
+
+      // Build recommendations for lowest-scoring behaviors
+      const sorted = qs.map(q => ({q, score: scores[q]})).sort((a,b) => a.score - b.score);
+      const topRecs = sorted.slice(0, 3);
+      let recHtml = '';
+      topRecs.forEach(item => {
+        recHtml += '<div class="rec-item">' + behaviorRecs[item.q].low + '</div>';
+      });
+      document.getElementById('recommendations').innerHTML = recHtml;
+
+      document.getElementById('results').classList.remove('hidden');
+      document.getElementById('results').scrollIntoView({behavior:'smooth', block:'start'});
+    }
+
+    function resetBehavior() {
+      ['q1','q2','q3','q4','q5','q6','q7','q8'].forEach((q,i) => {
+        document.getElementById(q).value = 3;
+        document.getElementById('v'+(i+1)).textContent = '3';
+      });
+      document.getElementById('results').classList.add('hidden');
+    }
+
+    // FAQ accordion
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const answer = btn.nextElementSibling;
+        const isOpen = answer.classList.contains('open');
+        document.querySelectorAll('.faq-answer').forEach(a => a.classList.remove('open'));
+        if (!isOpen) answer.classList.add('open');
+      });
+    });
+
+    // Mobile menu
+    const toggle = document.querySelector('.mobile-menu-toggle');
+    const mobileNav = document.querySelector('.mobile-nav');
+    if (toggle && mobileNav) {
+      toggle.addEventListener('click', () => {
+        const expanded = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', !expanded);
+        mobileNav.classList.toggle('open');
+      });
+    }
+  </script>
+</body>
+</html>

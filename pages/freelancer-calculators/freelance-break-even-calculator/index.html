@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Freelance Break-Even Calculator | CalcWise</title>
+  <meta name="description" content="Calculate the minimum monthly revenue, minimum hourly rate, and days per month you need to work to cover all expenses and pay yourself a desired salary as a freelancer.">
+  <link rel="canonical" href="https://calcwise.io/freelancer-calculators/freelance-break-even-calculator/">
+  <meta property="og:title" content="Freelance Break-Even Calculator | CalcWise">
+  <meta property="og:description" content="Calculate minimum monthly revenue and hourly rate needed to cover expenses and reach your income goals.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcwise.io/freelancer-calculators/freelance-break-even-calculator/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Freelance Break-Even Calculator | CalcWise">
+  <meta name="twitter:description" content="Calculate minimum monthly revenue and hourly rate needed to cover expenses and reach your income goals.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/"},
+      {"@type": "ListItem", "position": 2, "name": "Freelancer Calculators", "item": "https://calcwise.io/freelancer-calculators/"},
+      {"@type": "ListItem", "position": 3, "name": "Freelance Break-Even Calculator"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is a freelance break-even point?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Your freelance break-even point is the minimum monthly revenue needed to cover all personal and business expenses plus your desired take-home salary, after accounting for taxes. Below this number, your freelance business is operating at a loss."}
+      },
+      {
+        "@type": "Question",
+        "name": "How does tax rate affect my break-even revenue?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Because taxes are paid from revenue, your break-even revenue must be grossed up by your tax rate. For example, if you need $6,000 net and pay 30% taxes, you need $6,000 / (1 - 0.30) = $8,571 in revenue just to break even."}
+      },
+      {
+        "@type": "Question",
+        "name": "What billable hour assumptions should I use?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Most freelancers achieve 50-70% billable utilization of their working hours. If you work 8 hours a day, expect 4-6 billable hours. Use conservative estimates when planning — it is better to exceed your break-even than to fall short."}
+      },
+      {
+        "@type": "Question",
+        "name": "How many days per month do I need to work to break even?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Divide your minimum monthly revenue by your daily revenue capacity (hourly rate times billable hours per day). This tells you the minimum working days needed, helping you plan your schedule and identify how much buffer you have."}
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="logo">
+        <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav">
+        <a href="/">Home</a>
+        <a href="/pages/business-calculators/">Business</a>
+        <a href="/pages/financial-calculators/">Financial</a>
+        <a href="/pages/tax-calculators/">Tax</a>
+        <a href="/pages/freelancer-calculators/" aria-current="page">Freelancer</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav">
+      <a href="/">Home</a>
+      <a href="/pages/business-calculators/">Business Calculators</a>
+      <a href="/pages/financial-calculators/">Financial Calculators</a>
+      <a href="/pages/tax-calculators/">Tax Calculators</a>
+      <a href="/pages/freelancer-calculators/">Freelancer Calculators</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/pages/freelancer-calculators/">Freelancer Calculators</a></li>
+          <li><span aria-current="page">Freelance Break-Even Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="calc-page-layout">
+          <div class="calc-page-main">
+            <h1>Freelance Break-Even Calculator</h1>
+            <p class="subtitle" style="font-size:var(--text-lg);color:var(--color-gray-600);margin-bottom:var(--space-8);line-height:var(--leading-relaxed);">Know your floor. This calculator reveals the minimum monthly revenue, minimum hourly rate at multiple billable-hour scenarios, and days per month you must work to cover all personal and business expenses plus your desired salary. Running below your break-even is a path to depleting savings — use this to set hard revenue minimums.</p>
+
+            <div class="calc-container">
+              <div class="calc-header">
+                <h2>Freelance Break-Even Calculator</h2>
+                <p>Find your financial floor before setting rates</p>
+              </div>
+              <div class="calc-body">
+                <form id="breakeven-form" onsubmit="return false;">
+                  <div class="calc-grid calc-grid-2col">
+                    <div class="form-group">
+                      <label class="form-label" for="personal-expenses">Monthly Personal Expenses</label>
+                      <div class="input-prefix">
+                        <span class="prefix">$</span>
+                        <input type="number" id="personal-expenses" class="form-input" placeholder="3500" min="0" step="1" required>
+                      </div>
+                      <span class="form-hint" style="display:block;margin-top:var(--space-1);">Rent, food, utilities, debt, personal costs</span>
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label" for="business-expenses-be">Monthly Business Expenses</label>
+                      <div class="input-prefix">
+                        <span class="prefix">$</span>
+                        <input type="number" id="business-expenses-be" class="form-input" placeholder="800" min="0" step="1">
+                      </div>
+                      <span class="form-hint" style="display:block;margin-top:var(--space-1);">Software, tools, insurance, marketing</span>
+                    </div>
+                  </div>
+
+                  <div class="calc-grid calc-grid-2col">
+                    <div class="form-group">
+                      <label class="form-label" for="desired-salary">Desired Monthly Take-Home Pay</label>
+                      <div class="input-prefix">
+                        <span class="prefix">$</span>
+                        <input type="number" id="desired-salary" class="form-input" placeholder="5000" min="0" step="1" required>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label" for="tax-rate-be">Combined Tax Rate</label>
+                      <div class="input-suffix">
+                        <input type="number" id="tax-rate-be" class="form-input" placeholder="30" min="0" max="60" step="0.5" required>
+                        <span class="suffix">%</span>
+                      </div>
+                      <span class="form-hint" style="display:block;margin-top:var(--space-1);">SE tax + federal + state (estimate)</span>
+                    </div>
+                  </div>
+
+                  <div class="calc-actions">
+                    <button type="button" class="btn btn-calculate btn-full" onclick="calculateBreakEven()">Calculate Break-Even</button>
+                    <button type="button" class="btn btn-reset" onclick="resetBreakEvenForm()">Reset</button>
+                  </div>
+                </form>
+
+                <div id="results" class="calc-results hidden">
+                  <div class="result-primary">
+                    <div class="result-label">Minimum Monthly Revenue Needed</div>
+                    <div class="result-value" id="result-min-revenue">$0</div>
+                  </div>
+                  <div class="result-grid result-grid-3">
+                    <div class="result-item">
+                      <div class="result-label">Min Hourly Rate (20 hrs/wk)</div>
+                      <div class="result-value" id="result-rate-20">$0/hr</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Min Hourly Rate (25 hrs/wk)</div>
+                      <div class="result-value" id="result-rate-25">$0/hr</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Min Hourly Rate (30 hrs/wk)</div>
+                      <div class="result-value" id="result-rate-30">$0/hr</div>
+                    </div>
+                  </div>
+                  <div class="result-grid result-grid-3">
+                    <div class="result-item">
+                      <div class="result-label">Days/Month to Work (at $75/hr)</div>
+                      <div class="result-value" id="result-days-75">0 days</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Days/Month to Work (at $100/hr)</div>
+                      <div class="result-value" id="result-days-100">0 days</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Days/Month to Work (at $150/hr)</div>
+                      <div class="result-value" id="result-days-150">0 days</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="ad-slot ad-slot-leaderboard"></div>
+
+            <section class="content-section">
+              <h2>Break-Even Formula</h2>
+              <div class="formula-box">
+                <div class="formula-label">Total Monthly Need (gross)</div>
+                Need = (Personal Expenses + Business Expenses + Desired Salary) / (1 - Tax Rate)
+              </div>
+              <div class="formula-box">
+                <div class="formula-label">Minimum Hourly Rate</div>
+                Min Rate = Minimum Monthly Revenue / (Billable Hrs/Week × 4.33 weeks)
+              </div>
+              <div class="formula-box">
+                <div class="formula-label">Days Per Month to Break Even</div>
+                Days = Minimum Monthly Revenue / (Hourly Rate × 6 billable hrs/day)
+              </div>
+            </section>
+
+            <section class="content-section">
+              <h2>How to Use This Calculator</h2>
+              <ol>
+                <li>Enter your <strong>monthly personal expenses</strong> — rent, groceries, utilities, subscriptions, debt payments, and all other living costs.</li>
+                <li>Add <strong>monthly business expenses</strong> — software, accounting, marketing, professional insurance, and other operational costs.</li>
+                <li>Enter your <strong>desired monthly take-home pay</strong> above and beyond expenses.</li>
+                <li>Input your estimated <strong>combined tax rate</strong> (self-employment + income tax).</li>
+                <li>Click <strong>Calculate Break-Even</strong> to see your revenue floor and rate scenarios.</li>
+              </ol>
+            </section>
+
+            <section class="content-section">
+              <h2>Example Scenario</h2>
+              <p>A freelancer has $3,500 in personal expenses, $800 in business expenses, wants $5,000 take-home, and estimates a 30% tax rate.</p>
+              <ul>
+                <li>Total Monthly Need (net): $3,500 + $800 + $5,000 = <strong>$9,300</strong></li>
+                <li>Minimum Revenue: $9,300 / (1 - 0.30) = <strong>$13,286/month</strong></li>
+                <li>Min Rate at 25 hrs/wk: $13,286 / (25 × 4.33) = <strong>$122.76/hr</strong></li>
+                <li>Days to Break Even at $100/hr: $13,286 / (100 × 6) = <strong>22.1 days</strong></li>
+              </ul>
+            </section>
+
+            <section class="faq-section">
+              <h2>Frequently Asked Questions</h2>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  What is a freelance break-even point?
+                  <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                </button>
+                <div class="faq-answer">
+                  <p>Your freelance break-even is the minimum monthly revenue needed to cover all personal and business expenses plus your desired salary after taxes. Below this number, your business is operating at a loss.</p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  How does tax rate affect my break-even revenue?
+                  <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                </button>
+                <div class="faq-answer">
+                  <p>Taxes must be paid from revenue, so your break-even revenue must be grossed up. If you need $6,000 net and pay 30% taxes, you need $6,000 / 0.70 = $8,571 in revenue just to break even.</p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  What billable hour assumptions should I use?
+                  <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 011-1z"/></svg>
+                </button>
+                <div class="faq-answer">
+                  <p>Most freelancers achieve 50-70% billable utilization of their working hours. If you work 8 hours a day, expect 4-6 billable hours. Use conservative estimates to avoid falling short of break-even.</p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  How many days per month do I need to work to break even?
+                  <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                </button>
+                <div class="faq-answer">
+                  <p>Divide your minimum monthly revenue by your daily revenue capacity (hourly rate times 6 billable hours per day). This gives the minimum working days needed and shows how much buffer you have in a typical month.</p>
+                </div>
+              </div>
+            </section>
+
+            <section class="related-calculators">
+              <h2>Related Calculators</h2>
+              <div class="grid grid-3">
+                <a href="/pages/freelancer-calculators/freelance-tax-estimator/" class="card card-link">
+                  <h3>Freelance Tax Estimator</h3>
+                  <p>Get a detailed tax breakdown to set an accurate combined tax rate.</p>
+                </a>
+                <a href="/pages/business-calculators/freelance-rate-calculator/" class="card card-link">
+                  <h3>Freelance Rate Calculator</h3>
+                  <p>Calculate your ideal hourly rate to meet income goals after taxes.</p>
+                </a>
+                <a href="/pages/freelancer-calculators/freelance-income-stability-calculator/" class="card card-link">
+                  <h3>Income Stability Calculator</h3>
+                  <p>Assess your income variability and right-size your emergency fund.</p>
+                </a>
+                <a href="/pages/freelancer-calculators/freelance-utilization-rate-calculator/" class="card card-link">
+                  <h3>Utilization Rate Calculator</h3>
+                  <p>Track billable utilization and see how it impacts your break-even.</p>
+                </a>
+              </div>
+            </section>
+
+            <div class="disclaimer">
+              <strong>Disclaimer:</strong> This calculator provides estimates using simplified assumptions about tax rates and billable hours. Actual results will vary based on your specific expenses, tax situation, and billable utilization. Consult a financial advisor for personalized planning.
+            </div>
+          </div>
+
+          <aside class="calc-page-sidebar">
+            <div class="ad-slot ad-slot-rectangle"></div>
+            <div class="sidebar-card">
+              <h3>Freelancer Calculators</h3>
+              <a href="/pages/freelancer-calculators/freelance-tax-estimator/">Tax Estimator</a>
+              <a href="/pages/freelancer-calculators/freelance-income-stability-calculator/">Income Stability</a>
+              <a href="/pages/freelancer-calculators/project-pricing-calculator/">Project Pricing</a>
+              <a href="/pages/freelancer-calculators/client-profitability-calculator/">Client Profitability</a>
+              <a href="/pages/freelancer-calculators/freelance-break-even-calculator/">Break-Even Calculator</a>
+              <a href="/pages/freelancer-calculators/retainer-pricing-calculator/">Retainer Pricing</a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free online calculators for business, finance, tax, and investment decisions.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Calculators</h4>
+          <a href="/pages/business-calculators/">Business</a>
+          <a href="/pages/financial-calculators/">Financial</a>
+          <a href="/pages/tax-calculators/">Tax</a>
+          <a href="/pages/investment-calculators/">Investment</a>
+          <a href="/pages/freelancer-calculators/">Freelancer</a>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <a href="/about/">About</a>
+          <a href="/blog/">Blog</a>
+          <a href="/contact/">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="/privacy/">Privacy Policy</a>
+          <a href="/terms/">Terms of Service</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/privacy/">Privacy</a>
+          <a href="/terms/">Terms</a>
+          <a href="/contact/">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateBreakEven() {
+      const personal = CalcWise.parseNumber(document.getElementById('personal-expenses').value);
+      const business = CalcWise.parseNumber(document.getElementById('business-expenses-be').value) || 0;
+      const salary = CalcWise.parseNumber(document.getElementById('desired-salary').value);
+      const taxRate = (CalcWise.parseNumber(document.getElementById('tax-rate-be').value) || 0) / 100;
+
+      if (personal <= 0 || salary <= 0) { alert('Please enter personal expenses and desired salary.'); return; }
+      if (taxRate >= 1) { alert('Tax rate must be less than 100%.'); return; }
+
+      const totalNetNeed = personal + business + salary;
+      const minRevenue = totalNetNeed / (1 - taxRate);
+
+      // Monthly billable hours at various weekly rates (4.33 weeks/month)
+      const rate20 = minRevenue / (20 * 4.33);
+      const rate25 = minRevenue / (25 * 4.33);
+      const rate30 = minRevenue / (30 * 4.33);
+
+      // Days per month at various hourly rates (6 billable hrs/day)
+      const days75  = minRevenue / (75 * 6);
+      const days100 = minRevenue / (100 * 6);
+      const days150 = minRevenue / (150 * 6);
+
+      CalcWise.setText('result-min-revenue', CalcWise.formatCurrency(minRevenue) + '/month');
+      CalcWise.setText('result-rate-20', CalcWise.formatCurrency(rate20) + '/hr');
+      CalcWise.setText('result-rate-25', CalcWise.formatCurrency(rate25) + '/hr');
+      CalcWise.setText('result-rate-30', CalcWise.formatCurrency(rate30) + '/hr');
+      CalcWise.setText('result-days-75', days75.toFixed(1) + ' days');
+      CalcWise.setText('result-days-100', days100.toFixed(1) + ' days');
+      CalcWise.setText('result-days-150', days150.toFixed(1) + ' days');
+      CalcWise.showResults('results');
+    }
+
+    function resetBreakEvenForm() {
+      document.getElementById('breakeven-form').reset();
+      CalcWise.hideResults('results');
+    }
+
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', !expanded);
+        btn.nextElementSibling.style.display = expanded ? 'none' : 'block';
+      });
+    });
+
+    const toggle = document.querySelector('.mobile-menu-toggle');
+    const mobileNav = document.querySelector('.mobile-nav');
+    if (toggle && mobileNav) {
+      toggle.addEventListener('click', () => {
+        const open = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', !open);
+        mobileNav.classList.toggle('open', !open);
+      });
+    }
+  </script>
+</body>
+</html>

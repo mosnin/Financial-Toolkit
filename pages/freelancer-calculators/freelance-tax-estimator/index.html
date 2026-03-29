@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Freelance Tax Estimator | CalcWise</title>
+  <meta name="description" content="Estimate your freelance taxes including self-employment tax, federal income tax, state tax, quarterly payments, and effective tax rate.">
+  <link rel="canonical" href="https://calcwise.io/freelancer-calculators/freelance-tax-estimator/">
+  <meta property="og:title" content="Freelance Tax Estimator | CalcWise">
+  <meta property="og:description" content="Estimate your freelance taxes including self-employment tax, federal income tax, state tax, quarterly payments, and effective tax rate.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcwise.io/freelancer-calculators/freelance-tax-estimator/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Freelance Tax Estimator | CalcWise">
+  <meta name="twitter:description" content="Estimate your freelance taxes including self-employment tax, federal income tax, state tax, quarterly payments, and effective tax rate.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/"},
+      {"@type": "ListItem", "position": 2, "name": "Freelancer Calculators", "item": "https://calcwise.io/freelancer-calculators/"},
+      {"@type": "ListItem", "position": 3, "name": "Freelance Tax Estimator"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is self-employment tax?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Self-employment tax covers Social Security (12.4%) and Medicare (2.9%), totaling 15.3%. Employees split this with their employer, but freelancers pay the full amount. You only pay SE tax on 92.35% of net self-employment income."}
+      },
+      {
+        "@type": "Question",
+        "name": "How do I calculate my quarterly estimated tax payments?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Divide your total estimated annual tax (federal + SE + state) by 4. The IRS requires quarterly payments if you expect to owe $1,000 or more. Due dates are typically April 15, June 15, September 15, and January 15."}
+      },
+      {
+        "@type": "Question",
+        "name": "Can I deduct half of self-employment tax?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Yes. The IRS allows you to deduct 50% of your self-employment tax from your gross income when calculating your adjusted gross income. This calculator accounts for this deduction when computing federal income tax."}
+      },
+      {
+        "@type": "Question",
+        "name": "What business expenses can freelancers deduct?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Ordinary and necessary business expenses include home office, equipment, software, professional development, health insurance premiums, business travel, and contractor payments. Deductible expenses reduce your net income and therefore your total tax burden."}
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="logo">
+        <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav">
+        <a href="/">Home</a>
+        <a href="/pages/business-calculators/">Business</a>
+        <a href="/pages/financial-calculators/">Financial</a>
+        <a href="/pages/tax-calculators/">Tax</a>
+        <a href="/pages/freelancer-calculators/" aria-current="page">Freelancer</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav">
+      <a href="/">Home</a>
+      <a href="/pages/business-calculators/">Business Calculators</a>
+      <a href="/pages/financial-calculators/">Financial Calculators</a>
+      <a href="/pages/tax-calculators/">Tax Calculators</a>
+      <a href="/pages/freelancer-calculators/">Freelancer Calculators</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/pages/freelancer-calculators/">Freelancer Calculators</a></li>
+          <li><span aria-current="page">Freelance Tax Estimator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="calc-page-layout">
+          <div class="calc-page-main">
+            <h1>Freelance Tax Estimator</h1>
+            <p class="subtitle" style="font-size:var(--text-lg);color:var(--color-gray-600);margin-bottom:var(--space-8);line-height:var(--leading-relaxed);">Estimate your complete freelance tax burden — including self-employment tax, federal income tax, and state taxes — so you can set aside the right amount and make accurate quarterly payments. Understanding your tax liability upfront prevents year-end surprises and cash flow crunches.</p>
+
+            <div class="calc-container">
+              <div class="calc-header">
+                <h2>Freelance Tax Estimator</h2>
+                <p>Calculate SE tax, income tax, and quarterly payments</p>
+              </div>
+              <div class="calc-body">
+                <form id="tax-form" onsubmit="return false;">
+                  <div class="form-group">
+                    <label class="form-label" for="gross-income">Gross Annual Freelance Income</label>
+                    <div class="input-prefix">
+                      <span class="prefix">$</span>
+                      <input type="number" id="gross-income" class="form-input" placeholder="90000" min="0" step="1" required>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="business-expenses">Business Expenses</label>
+                    <div class="input-prefix">
+                      <span class="prefix">$</span>
+                      <input type="number" id="business-expenses" class="form-input" placeholder="12000" min="0" step="1">
+                    </div>
+                    <span class="form-hint" style="display:block;margin-top:var(--space-1);">Software, equipment, home office, insurance, etc.</span>
+                  </div>
+
+                  <div class="calc-grid calc-grid-2col">
+                    <div class="form-group">
+                      <label class="form-label" for="filing-status">Filing Status</label>
+                      <select id="filing-status" class="form-input">
+                        <option value="single">Single</option>
+                        <option value="mfj">Married Filing Jointly</option>
+                        <option value="mfs">Married Filing Separately</option>
+                        <option value="hoh">Head of Household</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label" for="state-rate">State Tax Rate</label>
+                      <div class="input-suffix">
+                        <input type="number" id="state-rate" class="form-input" placeholder="5" min="0" max="15" step="0.1">
+                        <span class="suffix">%</span>
+                      </div>
+                      <span class="form-hint" style="display:block;margin-top:var(--space-1);">Enter 0 for no state income tax</span>
+                    </div>
+                  </div>
+
+                  <div class="calc-actions">
+                    <button type="button" class="btn btn-calculate btn-full" onclick="calculateTax()">Estimate Taxes</button>
+                    <button type="button" class="btn btn-reset" onclick="resetTaxForm()">Reset</button>
+                  </div>
+                </form>
+
+                <div id="results" class="calc-results hidden">
+                  <div class="result-primary">
+                    <div class="result-label">Total Estimated Tax</div>
+                    <div class="result-value" id="result-total-tax">$0</div>
+                  </div>
+                  <div class="result-grid result-grid-3">
+                    <div class="result-item">
+                      <div class="result-label">Self-Employment Tax</div>
+                      <div class="result-value" id="result-se-tax">$0</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Federal Income Tax</div>
+                      <div class="result-value" id="result-federal-tax">$0</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">State Tax Estimate</div>
+                      <div class="result-value" id="result-state-tax">$0</div>
+                    </div>
+                  </div>
+                  <div class="result-grid result-grid-3">
+                    <div class="result-item">
+                      <div class="result-label">Effective Tax Rate</div>
+                      <div class="result-value" id="result-effective-rate">0%</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Take-Home Income</div>
+                      <div class="result-value" id="result-take-home">$0</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Quarterly Payment</div>
+                      <div class="result-value" id="result-quarterly">$0</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="ad-slot ad-slot-leaderboard"></div>
+
+            <section class="content-section">
+              <h2>Tax Estimation Formula</h2>
+              <div class="formula-box">
+                <div class="formula-label">Net Self-Employment Income</div>
+                Net Income = Gross Income - Business Expenses
+              </div>
+              <div class="formula-box">
+                <div class="formula-label">Self-Employment Tax</div>
+                SE Tax = Net Income × 0.9235 × 0.153
+              </div>
+              <div class="formula-box">
+                <div class="formula-label">Adjusted Gross Income (AGI)</div>
+                AGI = Net Income - (SE Tax × 0.5)
+              </div>
+              <div class="formula-box">
+                <div class="formula-label">Federal Income Tax</div>
+                Federal Tax = Apply 2025 tax brackets to (AGI - Standard Deduction)
+              </div>
+              <div class="formula-box">
+                <div class="formula-label">Quarterly Estimated Payment</div>
+                Quarterly = Total Annual Tax / 4
+              </div>
+            </section>
+
+            <section class="content-section">
+              <h2>How to Use This Calculator</h2>
+              <ol>
+                <li>Enter your <strong>gross annual freelance income</strong> — the total you invoice clients before any deductions.</li>
+                <li>Add your estimated <strong>business expenses</strong> to reduce your net taxable income.</li>
+                <li>Select your <strong>filing status</strong>, which determines your standard deduction and tax brackets.</li>
+                <li>Enter your <strong>state income tax rate</strong> (find your state's rate on your state revenue department website).</li>
+                <li>Click <strong>Estimate Taxes</strong> to see your full tax breakdown and quarterly payment amount.</li>
+              </ol>
+            </section>
+
+            <section class="content-section">
+              <h2>Example Scenario</h2>
+              <p>A single freelance designer earns $90,000 gross with $12,000 in business expenses and lives in a state with a 5% income tax rate.</p>
+              <ul>
+                <li>Net Income: $90,000 - $12,000 = <strong>$78,000</strong></li>
+                <li>SE Tax: $78,000 × 0.9235 × 0.153 = <strong>$11,021</strong></li>
+                <li>AGI: $78,000 - $5,511 (half SE) = <strong>$72,489</strong></li>
+                <li>Taxable Income: $72,489 - $14,600 (standard deduction) = <strong>$57,889</strong></li>
+                <li>Federal Income Tax (2025 brackets): approx. <strong>$8,226</strong></li>
+                <li>State Tax: $78,000 × 5% = <strong>$3,900</strong></li>
+                <li>Total Tax: <strong>$23,147</strong> | Quarterly Payment: <strong>$5,787</strong></li>
+              </ul>
+            </section>
+
+            <section class="faq-section">
+              <h2>Frequently Asked Questions</h2>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  What is self-employment tax?
+                  <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                </button>
+                <div class="faq-answer">
+                  <p>Self-employment tax covers Social Security (12.4%) and Medicare (2.9%), totaling 15.3%. Employees split this with their employer, but freelancers pay the full amount. You only pay SE tax on 92.35% of net self-employment income.</p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  How do I calculate my quarterly estimated tax payments?
+                  <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                </button>
+                <div class="faq-answer">
+                  <p>Divide your total estimated annual tax by 4. The IRS requires quarterly payments if you expect to owe $1,000 or more. Due dates are typically April 15, June 15, September 15, and January 15.</p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  Can I deduct half of self-employment tax?
+                  <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                </button>
+                <div class="faq-answer">
+                  <p>Yes. The IRS allows you to deduct 50% of your self-employment tax from gross income when computing adjusted gross income. This calculator accounts for that deduction when estimating federal income tax.</p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  What business expenses can freelancers deduct?
+                  <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                </button>
+                <div class="faq-answer">
+                  <p>Ordinary and necessary business expenses include home office, equipment, software, professional development, health insurance premiums, business travel, and contractor payments. These reduce your net income and total tax burden.</p>
+                </div>
+              </div>
+            </section>
+
+            <section class="related-calculators">
+              <h2>Related Calculators</h2>
+              <div class="grid grid-3">
+                <a href="/pages/freelancer-calculators/freelance-break-even-calculator/" class="card card-link">
+                  <h3>Freelance Break-Even Calculator</h3>
+                  <p>Find the minimum revenue needed to cover expenses and desired salary.</p>
+                </a>
+                <a href="/pages/freelancer-calculators/contractor-vs-employee-income-calculator/" class="card card-link">
+                  <h3>Contractor vs. Employee Calculator</h3>
+                  <p>Compare true net income as a contractor versus a salaried employee.</p>
+                </a>
+                <a href="/pages/freelancer-calculators/hourly-to-annual-income-calculator/" class="card card-link">
+                  <h3>Hourly to Annual Income</h3>
+                  <p>Convert your hourly rate to projected annual freelance income.</p>
+                </a>
+                <a href="/pages/business-calculators/freelance-rate-calculator/" class="card card-link">
+                  <h3>Freelance Rate Calculator</h3>
+                  <p>Determine the minimum hourly rate to meet your income goals after taxes.</p>
+                </a>
+              </div>
+            </section>
+
+            <div class="disclaimer">
+              <strong>Disclaimer:</strong> This calculator provides estimates for informational purposes only using simplified 2025 federal tax brackets. It does not account for all deductions, credits, AMT, or state-specific rules. Consult a qualified tax professional for advice specific to your situation.
+            </div>
+          </div>
+
+          <aside class="calc-page-sidebar">
+            <div class="ad-slot ad-slot-rectangle"></div>
+            <div class="sidebar-card">
+              <h3>Freelancer Calculators</h3>
+              <a href="/pages/freelancer-calculators/freelance-tax-estimator/">Tax Estimator</a>
+              <a href="/pages/freelancer-calculators/freelance-income-stability-calculator/">Income Stability</a>
+              <a href="/pages/freelancer-calculators/project-pricing-calculator/">Project Pricing</a>
+              <a href="/pages/freelancer-calculators/client-profitability-calculator/">Client Profitability</a>
+              <a href="/pages/freelancer-calculators/freelance-break-even-calculator/">Break-Even Calculator</a>
+              <a href="/pages/freelancer-calculators/retainer-pricing-calculator/">Retainer Pricing</a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free online calculators for business, finance, tax, and investment decisions.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Calculators</h4>
+          <a href="/pages/business-calculators/">Business</a>
+          <a href="/pages/financial-calculators/">Financial</a>
+          <a href="/pages/tax-calculators/">Tax</a>
+          <a href="/pages/investment-calculators/">Investment</a>
+          <a href="/pages/freelancer-calculators/">Freelancer</a>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <a href="/about/">About</a>
+          <a href="/blog/">Blog</a>
+          <a href="/contact/">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="/privacy/">Privacy Policy</a>
+          <a href="/terms/">Terms of Service</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/privacy/">Privacy</a>
+          <a href="/terms/">Terms</a>
+          <a href="/contact/">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    // 2025 Federal tax brackets (single filer standard deduction $14,600)
+    const BRACKETS = {
+      single:    { std: 14600, rates: [0.10,0.12,0.22,0.24,0.32,0.35,0.37], limits: [11600,47150,100525,191950,243725,609350] },
+      mfj:       { std: 29200, rates: [0.10,0.12,0.22,0.24,0.32,0.35,0.37], limits: [23200,94300,201050,383900,487450,731200] },
+      mfs:       { std: 14600, rates: [0.10,0.12,0.22,0.24,0.32,0.35,0.37], limits: [11600,47150,100525,191950,243725,365600] },
+      hoh:       { std: 21900, rates: [0.10,0.12,0.22,0.24,0.32,0.35,0.37], limits: [16550,63100,100500,191950,243700,609350] }
+    };
+
+    function calcFederalTax(taxableIncome, status) {
+      const b = BRACKETS[status];
+      let tax = 0, prev = 0;
+      for (let i = 0; i < b.limits.length; i++) {
+        if (taxableIncome <= b.limits[i]) {
+          tax += (taxableIncome - prev) * b.rates[i];
+          return tax;
+        }
+        tax += (b.limits[i] - prev) * b.rates[i];
+        prev = b.limits[i];
+      }
+      tax += (taxableIncome - prev) * b.rates[b.rates.length - 1];
+      return tax;
+    }
+
+    function calculateTax() {
+      const gross = CalcWise.parseNumber(document.getElementById('gross-income').value);
+      const expenses = CalcWise.parseNumber(document.getElementById('business-expenses').value) || 0;
+      const status = document.getElementById('filing-status').value;
+      const stateRate = (CalcWise.parseNumber(document.getElementById('state-rate').value) || 0) / 100;
+
+      if (gross <= 0) { alert('Please enter a valid gross income.'); return; }
+
+      const netIncome = Math.max(0, gross - expenses);
+      const seTax = netIncome * 0.9235 * 0.153;
+      const halfSE = seTax / 2;
+      const agi = netIncome - halfSE;
+      const stdDed = BRACKETS[status].std;
+      const taxableIncome = Math.max(0, agi - stdDed);
+      const federalTax = calcFederalTax(taxableIncome, status);
+      const stateTax = netIncome * stateRate;
+      const totalTax = seTax + federalTax + stateTax;
+      const takeHome = gross - expenses - totalTax;
+      const effectiveRate = gross > 0 ? (totalTax / gross) * 100 : 0;
+      const quarterly = totalTax / 4;
+
+      CalcWise.setText('result-total-tax', CalcWise.formatCurrency(totalTax));
+      CalcWise.setText('result-se-tax', CalcWise.formatCurrency(seTax));
+      CalcWise.setText('result-federal-tax', CalcWise.formatCurrency(federalTax));
+      CalcWise.setText('result-state-tax', CalcWise.formatCurrency(stateTax));
+      CalcWise.setText('result-effective-rate', effectiveRate.toFixed(1) + '%');
+      CalcWise.setText('result-take-home', CalcWise.formatCurrency(takeHome));
+      CalcWise.setText('result-quarterly', CalcWise.formatCurrency(quarterly));
+      CalcWise.showResults('results');
+    }
+
+    function resetTaxForm() {
+      document.getElementById('tax-form').reset();
+      CalcWise.hideResults('results');
+    }
+
+    // FAQ accordion
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', !expanded);
+        btn.nextElementSibling.style.display = expanded ? 'none' : 'block';
+      });
+    });
+
+    // Mobile menu
+    const toggle = document.querySelector('.mobile-menu-toggle');
+    const mobileNav = document.querySelector('.mobile-nav');
+    if (toggle && mobileNav) {
+      toggle.addEventListener('click', () => {
+        const open = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', !open);
+        mobileNav.classList.toggle('open', !open);
+      });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Safe Withdrawal Rate Calculator - CalcWise</title>
+  <meta name="description" content="Calculate your actual safe withdrawal rate from your portfolio. Get a green/yellow/red safety assessment versus the 4% rule, portfolio longevity estimate, and sustainable withdrawal amount.">
+  <link rel="canonical" href="https://calcwise.io/financial-independence-calculators/safe-withdrawal-rate-calculator/">
+  <meta property="og:title" content="Safe Withdrawal Rate Calculator - CalcWise">
+  <meta property="og:description" content="Is your withdrawal rate sustainable? Enter your portfolio value, desired income, retirement horizon, and asset allocation for a safety assessment and longevity estimate.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcwise.io/financial-independence-calculators/safe-withdrawal-rate-calculator/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Safe Withdrawal Rate Calculator - CalcWise">
+  <meta name="twitter:description" content="Check if your withdrawal rate is safe. Get a color-coded assessment, longevity estimate, and the maximum sustainable income from your portfolio.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/"},
+      {"@type": "ListItem", "position": 2, "name": "Financial Independence Calculators", "item": "https://calcwise.io/financial-independence-calculators/"},
+      {"@type": "ListItem", "position": 3, "name": "Safe Withdrawal Rate Calculator"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the 4% rule?",
+        "acceptedAnswer": {"@type": "Answer", "text": "The 4% rule, derived from the Trinity Study, states that a retiree can withdraw 4% of their initial portfolio value each year (adjusted for inflation) with a high probability of the portfolio lasting 30 years. It is based on historical US stock and bond market returns from 1926 to 1995."}
+      },
+      {
+        "@type": "Question",
+        "name": "How does portfolio allocation affect safe withdrawal rate?",
+        "acceptedAnswer": {"@type": "Answer", "text": "A higher stock allocation historically supports a higher safe withdrawal rate because equities provide more long-term growth. A 75/25 stock-bond portfolio has historically supported a higher SWR than a 50/50 portfolio. However, higher equity allocations also carry more sequence-of-returns risk early in retirement."}
+      },
+      {
+        "@type": "Question",
+        "name": "What withdrawal rate is safe for a 40-year retirement?",
+        "acceptedAnswer": {"@type": "Answer", "text": "For a 40-year retirement horizon, research suggests a 3.5% withdrawal rate provides strong historical safety. Some studies indicate 3.3–3.5% gives a 95%+ success rate over 40 years. Early retirees often target 3–3.5% to account for longer retirement horizons."}
+      },
+      {
+        "@type": "Question",
+        "name": "Can I adjust my withdrawal rate over time?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Yes — many retirees use dynamic withdrawal strategies, such as the 'guardrails' approach, where they spend more when markets are strong and less during downturns. Flexible spending can allow a slightly higher initial withdrawal rate while maintaining portfolio longevity."}
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="logo">
+        <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav">
+        <a href="/">Home</a>
+        <a href="/pages/finance-calculators/">Finance</a>
+        <a href="/pages/financial-independence-calculators/" aria-current="page">FI Calculators</a>
+        <a href="/pages/investment-calculators/">Investment</a>
+        <a href="/pages/tax-calculators/">Tax</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav">
+      <a href="/">Home</a>
+      <a href="/pages/finance-calculators/">Finance Calculators</a>
+      <a href="/pages/financial-independence-calculators/">FI Calculators</a>
+      <a href="/pages/investment-calculators/">Investment Calculators</a>
+      <a href="/pages/tax-calculators/">Tax Calculators</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li><a href="/pages/financial-independence-calculators/">Financial Independence Calculators</a></li>
+        <li><span aria-current="page">Safe Withdrawal Rate Calculator</span></li>
+      </ol>
+    </nav>
+
+    <div class="page-content">
+      <div class="article-content">
+        <h1>Safe Withdrawal Rate Calculator</h1>
+        <p>Your safe withdrawal rate (SWR) determines whether your retirement portfolio can fund your lifestyle without running out of money. This calculator computes your actual withdrawal rate from your portfolio, delivers a color-coded safety assessment against the 4% rule, estimates how long your portfolio will last, and shows the maximum sustainable withdrawal for your situation.</p>
+
+        <div class="ad-slot ad-slot-leaderboard"></div>
+
+        <div class="calc-container">
+          <div class="calc-header">
+            <h2>Safe Withdrawal Rate Assessment</h2>
+            <p>Evaluate whether your planned withdrawals are sustainable</p>
+          </div>
+          <div class="calc-body">
+            <form id="swr-form">
+              <div class="result-grid result-grid-2" style="gap: var(--space-4);">
+                <div class="form-group">
+                  <label class="form-label" for="portfolioValue">Portfolio Value</label>
+                  <div class="input-prefix"><span class="prefix">$</span>
+                    <input type="number" id="portfolioValue" name="portfolioValue" class="form-input" placeholder="1000000" min="10000" step="10000" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="desiredAnnualIncome">Desired Annual Income</label>
+                  <div class="input-prefix"><span class="prefix">$</span>
+                    <input type="number" id="desiredAnnualIncome" name="desiredAnnualIncome" class="form-input" placeholder="40000" min="1000" step="1000" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="retirementYears">Retirement Horizon (Years)</label>
+                  <input type="number" id="retirementYears" name="retirementYears" class="form-input" placeholder="30" min="10" max="60" step="1" value="30" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="stockAllocation">Stock Allocation (%)</label>
+                  <div class="input-suffix">
+                    <input type="number" id="stockAllocation" name="stockAllocation" class="form-input" placeholder="60" min="0" max="100" step="5" value="60" required>
+                    <span class="suffix">%</span>
+                  </div>
+                  <p class="form-hint">Bonds = 100% minus stock allocation</p>
+                </div>
+              </div>
+              <div class="calc-actions">
+                <button type="button" class="btn btn-calculate" onclick="calcSWR()">Assess Withdrawal Rate</button>
+                <button type="button" class="btn btn-reset" onclick="resetSWR()">Reset</button>
+              </div>
+            </form>
+
+            <div id="swr-results" class="calc-results hidden">
+              <div class="result-primary">
+                <div class="result-label">Your Withdrawal Rate</div>
+                <div class="result-value" id="yourSWR">0%</div>
+              </div>
+              <div class="result-grid result-grid-3" style="margin-top: var(--space-4);">
+                <div class="result-item">
+                  <div class="result-label">Safety Assessment</div>
+                  <div class="result-value" id="safetyRating">—</div>
+                </div>
+                <div class="result-item">
+                  <div class="result-label">Portfolio Longevity Estimate</div>
+                  <div class="result-value" id="longevity" style="color: var(--color-info);">—</div>
+                </div>
+                <div class="result-item">
+                  <div class="result-label">Sustainable Withdrawal (4% Rule)</div>
+                  <div class="result-value" id="sustainableWithdrawal" style="color: var(--color-success);">$0</div>
+                </div>
+              </div>
+              <div id="swrDetails" style="margin-top: var(--space-5);"></div>
+            </div>
+          </div>
+        </div>
+
+        <section class="content-section">
+          <h2>How the Safe Withdrawal Rate Is Assessed</h2>
+          <div class="formula-box">
+            <div class="formula-label">Formula</div>
+            Withdrawal Rate = Desired Annual Income &divide; Portfolio Value &times; 100%<br>
+            Sustainable Withdrawal = Portfolio Value &times; 0.04<br><br>
+            Safety Assessment:<br>
+            &bull; Green: &le; 3.5% — Very safe, conservative<br>
+            &bull; Yellow: 3.5%–4.5% — Safe for most horizons<br>
+            &bull; Red: &gt; 4.5% — Elevated risk of depletion<br><br>
+            Longevity: estimated years until portfolio depletes at real return minus withdrawal rate
+          </div>
+          <p>Portfolio longevity is estimated by simulating annual withdrawals at your desired income level against a real return derived from your stock/bond allocation. A 60/40 portfolio historically earned about 5% real; a 100% stock portfolio about 6.5% real. Higher stock allocations extend longevity but increase year-to-year volatility.</p>
+        </section>
+
+        <section class="content-section">
+          <h2>How to Use This Calculator</h2>
+          <ol>
+            <li><strong>Enter your portfolio value:</strong> Total of all retirement investment accounts.</li>
+            <li><strong>Set your desired annual income:</strong> The gross amount you plan to withdraw each year.</li>
+            <li><strong>Choose your retirement horizon:</strong> How many years you need the portfolio to last. 30 years is standard; use 40–50 for early retirees.</li>
+            <li><strong>Enter stock allocation:</strong> Your percentage in equities (bonds make up the remainder).</li>
+            <li><strong>Review the assessment:</strong> Green means your rate is conservative, yellow is moderate, red signals elevated risk.</li>
+          </ol>
+        </section>
+
+        <section class="content-section">
+          <h2>Example Scenario</h2>
+          <p>Morgan has a $1,200,000 portfolio and wants to withdraw $52,000/year. That's a 4.33% withdrawal rate — in the yellow zone. With a 60/40 stock-bond allocation and a 35-year horizon, the calculator estimates the portfolio lasts approximately 36 years. The 4% rule sustainable amount is $48,000/year — $4,000 less than Morgan's desired income. To stay safely in the green, Morgan could reduce spending by $4,000/year or work toward a slightly larger portfolio before retiring.</p>
+        </section>
+
+        <section class="faq-section">
+          <h2>Frequently Asked Questions</h2>
+          <div class="faq-item">
+            <button class="faq-question">What is the 4% rule?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>The 4% rule, from the Trinity Study, says you can withdraw 4% of your initial portfolio annually (inflation-adjusted) with a high probability of surviving a 30-year retirement based on historical US market returns.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">How does stock allocation affect SWR?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>Higher stock allocations historically support higher safe withdrawal rates due to greater long-term growth. A 75/25 portfolio has outperformed a 50/50 portfolio in supporting withdrawals, but with more short-term volatility. Bonds provide stability but lower overall returns.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">What withdrawal rate is safe for a 40-year retirement?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>For a 40-year horizon, 3.5% is generally considered safe based on historical data. Some research suggests 3.3% provides a 95%+ success rate over 40 years. Early retirees should target 3–3.5% for maximum durability.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">Can I adjust withdrawals during retirement?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>Yes — dynamic withdrawal strategies like the guardrails method adjust spending based on portfolio performance. Spending more in good markets and less in downturns can allow a slightly higher initial rate while preserving portfolio longevity.</p></div>
+          </div>
+        </section>
+
+        <section class="related-calculators">
+          <h2>Related Calculators</h2>
+          <div class="grid grid-3">
+            <a href="/pages/financial-independence-calculators/financial-independence-number-calculator/" class="card card-link">
+              <h3>FI Number Calculator</h3>
+              <p>Calculate your FI number at 3%, 3.5%, and 4% SWR scenarios.</p>
+            </a>
+            <a href="/pages/financial-independence-calculators/retirement-flexibility-calculator/" class="card card-link">
+              <h3>Retirement Flexibility Calculator</h3>
+              <p>Model flexible spending bands and how side income extends portfolio life.</p>
+            </a>
+            <a href="/pages/financial-independence-calculators/fire-timeline-calculator/" class="card card-link">
+              <h3>FIRE Timeline Calculator</h3>
+              <p>Find out how long until you reach your FI number at your savings rate.</p>
+            </a>
+            <a href="/pages/financial-independence-calculators/coast-fire-calculator/" class="card card-link">
+              <h3>Coast FIRE Calculator</h3>
+              <p>Find the lump sum needed now so compounding handles the rest.</p>
+            </a>
+            <a href="/pages/personal-finance-calculators/financial-independence-calculator/" class="card card-link">
+              <h3>Financial Independence Calculator</h3>
+              <p>Full FI number and timeline planner with monthly savings scenarios.</p>
+            </a>
+          </div>
+        </section>
+
+        <div class="disclaimer">
+          <strong>Disclaimer:</strong> This calculator is for informational and educational purposes only. Withdrawal rate safety assessments are based on historical research and simplified return assumptions. Actual market returns are variable. The 4% rule is a historical guideline, not a guarantee of portfolio survival. This is not financial advice. Consult a qualified financial advisor before making retirement income decisions.
+        </div>
+
+        <div class="ad-slot ad-slot-rectangle"></div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free online financial calculators to help you make smarter money decisions.</p>
+        </div>
+        <div class="footer-col">
+          <h4>FI Calculators</h4>
+          <a href="/pages/financial-independence-calculators/fire-timeline-calculator/">FIRE Timeline</a>
+          <a href="/pages/financial-independence-calculators/coast-fire-calculator/">Coast FIRE</a>
+          <a href="/pages/financial-independence-calculators/lean-fire-calculator/">Lean FIRE</a>
+          <a href="/pages/financial-independence-calculators/barista-fire-calculator/">Barista FIRE</a>
+        </div>
+        <div class="footer-col">
+          <h4>Tools</h4>
+          <a href="/pages/finance-calculators/retirement-savings-calculator/">Retirement Savings</a>
+          <a href="/pages/investment-calculators/">Investment Calculators</a>
+          <a href="/pages/tax-calculators/">Tax Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about/">About</a>
+          <a href="/contact/">Contact</a>
+          <a href="/privacy/">Privacy Policy</a>
+          <a href="/terms/">Terms of Service</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 CalcWise. All rights reserved.</span>
+        <div class="footer-links">
+          <a href="/privacy/">Privacy</a>
+          <a href="/terms/">Terms</a>
+          <a href="/contact/">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calcSWR() {
+      if (!CalcWise.validateForm('swr-form')) return;
+      const v = CalcWise.getFormValues('swr-form');
+
+      const portfolio = v.portfolioValue;
+      const desiredIncome = v.desiredAnnualIncome;
+      const years = v.retirementYears;
+      const stockPct = v.stockAllocation / 100;
+      const bondPct = 1 - stockPct;
+
+      const withdrawalRate = desiredIncome / portfolio * 100;
+      const sustainableWithdrawal = portfolio * 0.04;
+
+      // Estimate real return from allocation (stocks ~6.5% real, bonds ~1.5% real)
+      const realReturn = stockPct * 0.065 + bondPct * 0.015;
+
+      // Estimate portfolio longevity: simulate annual withdrawals
+      let balance = portfolio;
+      let longevityYears = 0;
+      for (let y = 0; y < 100; y++) {
+        balance = balance * (1 + realReturn) - desiredIncome;
+        if (balance <= 0) break;
+        longevityYears = y + 1;
+      }
+      const longevityText = longevityYears >= 99 ? '99+ years' : longevityYears + ' years';
+
+      // Safety rating
+      let ratingText, ratingColor;
+      if (withdrawalRate <= 3.5) {
+        ratingText = 'Very Safe (Green)';
+        ratingColor = 'var(--color-success)';
+      } else if (withdrawalRate <= 4.5) {
+        ratingText = 'Moderate (Yellow)';
+        ratingColor = 'var(--color-warning)';
+      } else {
+        ratingText = 'Elevated Risk (Red)';
+        ratingColor = 'var(--color-error)';
+      }
+
+      CalcWise.setText('yourSWR', withdrawalRate.toFixed(2) + '%');
+      document.getElementById('yourSWR').style.color = ratingColor;
+      document.getElementById('safetyRating').textContent = ratingText;
+      document.getElementById('safetyRating').style.color = ratingColor;
+      CalcWise.setText('longevity', longevityText);
+      CalcWise.setText('sustainableWithdrawal', CalcWise.formatCurrency(sustainableWithdrawal, 0) + '/yr');
+
+      const swrRateBenchmarks = [
+        { rate: 0.03, label: '3.0%' },
+        { rate: 0.035, label: '3.5%' },
+        { rate: 0.04, label: '4.0% (Classic)' },
+        { rate: 0.045, label: '4.5%' }
+      ];
+
+      let detailHtml = `<div class="table-container"><table class="data-table"><thead><tr><th>SWR Benchmark</th><th>Annual Income from Your Portfolio</th><th>vs. Your Desired Income</th></tr></thead><tbody>`;
+      swrRateBenchmarks.forEach(b => {
+        const income = portfolio * b.rate;
+        const diff = income - desiredIncome;
+        detailHtml += `<tr><td>${b.label}</td><td>${CalcWise.formatCurrency(income, 0)}/yr</td><td style="color:${diff >= 0 ? 'var(--color-success)' : 'var(--color-error)'}">${diff >= 0 ? '+' : ''}${CalcWise.formatCurrency(diff, 0)}</td></tr>`;
+      });
+      detailHtml += `</tbody></table></div>`;
+      detailHtml += `<p style="font-size:var(--text-sm);color:var(--color-text-secondary);margin-top:var(--space-3);">Portfolio: ${CalcWise.formatCurrency(portfolio, 0)} &bull; ${v.stockAllocation}% stocks / ${100-v.stockAllocation}% bonds &bull; Estimated real return: ${(realReturn*100).toFixed(1)}%</p>`;
+
+      CalcWise.setHtml('swrDetails', detailHtml);
+      CalcWise.showResults('swr-results');
+    }
+
+    function resetSWR() {
+      document.getElementById('swr-form').reset();
+      CalcWise.hideResults('swr-results');
+    }
+  </script>
+</body>
+</html>

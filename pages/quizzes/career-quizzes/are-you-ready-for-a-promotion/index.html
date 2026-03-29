@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Are You Ready for a Promotion? – Career Quiz | CalcWise</title>
+  <meta name="description" content="Evaluate your performance, visibility, skills gap, and negotiation readiness to see if a promotion is within reach. 8-question quiz with instant results.">
+  <link rel="canonical" href="https://calcwise.io/quizzes/career-quizzes/are-you-ready-for-a-promotion/">
+  <meta property="og:title" content="Are You Ready for a Promotion? – Career Quiz | CalcWise">
+  <meta property="og:description" content="8 questions to find out if you are promotion-ready at your current employer.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcwise.io/quizzes/career-quizzes/are-you-ready-for-a-promotion/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Are You Ready for a Promotion? – Career Quiz | CalcWise">
+  <meta name="twitter:description" content="8 questions to find out if you are promotion-ready at your current employer.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+  <link rel="stylesheet" href="/css/quiz.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://calcwise.io/"},
+    {"@type":"ListItem","position":2,"name":"Quizzes","item":"https://calcwise.io/quizzes/"},
+    {"@type":"ListItem","position":3,"name":"Career Quizzes","item":"https://calcwise.io/quizzes/career-quizzes/"},
+    {"@type":"ListItem","position":4,"name":"Are You Ready for a Promotion?","item":"https://calcwise.io/quizzes/career-quizzes/are-you-ready-for-a-promotion/"}
+  ]}
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/business-calculators/">Business</a>
+        <a href="/quizzes/" aria-current="page">Quizzes</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/business-calculators/">Business Calculators</a>
+      <a href="/quizzes/">Quizzes</a>
+      <a href="/about.html">About</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+  </header>
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/quizzes/">Quizzes</a></li>
+          <li><a href="/quizzes/career-quizzes/">Career Quizzes</a></li>
+          <li><span aria-current="page">Are You Ready for a Promotion?</span></li>
+        </ol>
+      </nav>
+      <div class="quiz-container">
+        <h1>Are You Ready for a Promotion?</h1>
+        <p>A promotion isn't just about working hard — it's about demonstrating the right skills, being visible to the right people, and making the right ask at the right time. This quiz evaluates your performance history, skills gap, organizational visibility, and readiness to negotiate. Answer 8 questions to find out where you stand.</p>
+        <div style="margin:1.5rem 0;text-align:center;min-height:90px;background:var(--color-gray-100);border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--color-gray-400);font-size:0.85rem;">Advertisement</div>
+        <div id="quiz-area">
+          <div id="quiz-start">
+            <div class="quiz-question" style="text-align:center;">
+              <p style="font-size:1.1rem;color:var(--color-text-muted);margin-bottom:1.5rem;">8 questions &bull; About 4 minutes &bull; Instant results</p>
+              <button class="btn btn-primary btn-lg" onclick="startQuiz()">Start Quiz</button>
+            </div>
+          </div>
+          <div id="quiz-main" style="display:none;"></div>
+          <div id="quiz-results" style="display:none;"></div>
+        </div>
+        <section class="faq-section" aria-labelledby="faq-heading" style="margin-top:3rem;">
+          <h2 id="faq-heading">Frequently Asked Questions</h2>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false"><span>How long should I be in a role before asking for a promotion?</span><svg class="faq-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M10 4v12M4 10h12"/></svg></button>
+            <div class="faq-answer"><p>Most companies expect 12–18 months of demonstrated performance at your current level before promoting. However, if you've taken on responsibilities clearly above your pay grade and received consistently strong reviews, you can make a compelling case earlier. Promotion timing also depends on whether a position exists to be promoted into.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false"><span>How much of a raise should I expect with a promotion?</span><svg class="faq-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M10 4v12M4 10h12"/></svg></button>
+            <div class="faq-answer"><p>Promotions typically come with 10–20% salary increases at most companies, though 15% is a common target. However, if the new title significantly changes your market value, you should negotiate based on external benchmarks — not just what the company offers. Use the raise percentage calculator to quantify your ask.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false"><span>What if my employer won't promote me despite my performance?</span><svg class="faq-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M10 4v12M4 10h12"/></svg></button>
+            <div class="faq-answer"><p>First, ask explicitly what the criteria are for promotion and what gaps you need to close. If you meet the criteria consistently and still face delay, that's a sign the opportunity may not exist internally. At that point, external offers become both a reality check and a negotiating tool — companies often promote when faced with a competing offer.</p></div>
+          </div>
+        </section>
+        <section style="margin-top:3rem;" aria-labelledby="related-heading">
+          <h2 id="related-heading">Related Career Quizzes</h2>
+          <div class="quiz-grid">
+            <a href="/quizzes/career-quizzes/is-your-salary-competitive/" class="quiz-card">
+              <div class="quiz-card__badge">Career</div>
+              <h3>Is Your Salary Competitive?</h3>
+              <p>Benchmark your current pay before negotiating a promotion.</p>
+              <span class="quiz-card__cta">Take quiz <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </a>
+            <a href="/quizzes/career-quizzes/are-you-underpaid/" class="quiz-card">
+              <div class="quiz-card__badge">Career</div>
+              <h3>Are You Underpaid?</h3>
+              <p>Determine if your compensation reflects your actual output and market value.</p>
+              <span class="quiz-card__cta">Take quiz <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </a>
+            <a href="/quizzes/career-quizzes/should-you-change-jobs/" class="quiz-card">
+              <div class="quiz-card__badge">Career</div>
+              <h3>Should You Change Jobs?</h3>
+              <p>If a promotion isn't coming, find out if it's time to move on.</p>
+              <span class="quiz-card__cta">Take quiz <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </a>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="#1B4D3E" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators and quizzes built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Career Quizzes</h4>
+          <a href="/quizzes/career-quizzes/is-your-salary-competitive/">Salary Check</a>
+          <a href="/quizzes/career-quizzes/should-you-change-jobs/">Change Jobs?</a>
+          <a href="/quizzes/career-quizzes/">View All</a>
+        </div>
+        <div class="footer-col">
+          <h4>Calculators</h4>
+          <a href="/finance-calculators/raise-percentage-calculator/">Raise Calculator</a>
+          <a href="/finance-calculators/salary-after-tax-calculator/">Salary After Tax</a>
+          <a href="/finance-calculators/job-offer-comparison-calculator/">Job Offer Comparison</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about.html">About</a>
+          <a href="/privacy.html">Privacy Policy</a>
+          <a href="/terms.html">Terms of Use</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/privacy.html">Privacy</a>
+          <a href="/terms.html">Terms</a>
+          <a href="/disclaimer.html">Disclaimer</a>
+          <a href="/sitemap.xml">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    const questions = [
+      {
+        question: "How long have you been in your current role?",
+        options: ["2+ years with consistent strong performance", "12–24 months with good reviews", "6–12 months and already outperforming expectations", "Less than 6 months"],
+        correct: 0,
+        explanation: "Most companies expect 12–18 months minimum. Longer tenure with consistent results builds the strongest case for promotion.",
+        weight: 2
+      },
+      {
+        question: "What have your recent performance reviews looked like?",
+        options: ["Consistently exceeds expectations — top rated", "Meets expectations with some 'exceeds' marks", "Mixed — some strong areas, some development needed", "Below expectations or no formal review process"],
+        correct: 0,
+        explanation: "Strong review history is the most direct evidence you are operating at the next level. Inconsistent reviews signal gaps that need addressing first.",
+        weight: 2
+      },
+      {
+        question: "Have you taken on responsibilities beyond your current job description?",
+        options: ["Yes — I regularly handle work at the next level above me", "Somewhat — I occasionally step up beyond my role", "Rarely — I focus on my defined responsibilities", "No — I stay within my scope"],
+        correct: 0,
+        explanation: "Promotions reward people already doing the next-level job, not just people ready to start doing it. Taking on stretch responsibilities is essential.",
+        weight: 2
+      },
+      {
+        question: "How closely do your skills match the requirements of the next level?",
+        options: ["Very closely — I already demonstrate most next-level competencies", "Mostly — a few gaps that I am actively closing", "Somewhat — significant gaps in several key areas", "Not closely — I need substantial development before advancing"],
+        correct: 0,
+        explanation: "The skills gap between your current and next level must be addressed before promotion, not after. Identify and close gaps proactively.",
+        weight: 2
+      },
+      {
+        question: "How visible are you to senior leadership at your company?",
+        options: ["High visibility — I present to or work directly with senior leaders regularly", "Some visibility — senior leaders know my name and work", "Limited — my work is good but mostly known only to my direct team", "Little to no visibility beyond my immediate manager"],
+        correct: 0,
+        explanation: "Promotions require sponsorship. If senior leaders don't know your work, your promotion depends entirely on your manager advocating for you.",
+        weight: 1
+      },
+      {
+        question: "Do you have a mentor, sponsor, or strong internal advocate?",
+        options: ["Yes — a senior person actively advocates for my advancement", "I have a good mentor but not a strong internal sponsor", "I have informal relationships but nothing structured", "No — I don't have a clear advocate in the organization"],
+        correct: 0,
+        explanation: "Sponsors — not just mentors — drive promotions. A sponsor actively puts your name forward in rooms you're not in.",
+        weight: 1
+      },
+      {
+        question: "Are you aware of who else might be competing for the same promotion?",
+        options: ["Yes — I've assessed the competition and I'm the strongest candidate", "Somewhat aware — competition exists but I feel well-positioned", "Unaware of competition but confident in my own qualifications", "I have no idea about internal competition"],
+        correct: 0,
+        explanation: "Awareness of competition lets you position yourself effectively. Blind spots about competitors make you vulnerable in promotion cycles.",
+        weight: 1
+      },
+      {
+        question: "Have you discussed promotion and compensation expectations with your manager?",
+        options: ["Yes — we have clear alignment on timeline and what's required", "We've talked generally but details are vague", "I've hinted at it but haven't had a direct conversation", "No — I haven't brought it up"],
+        correct: 0,
+        explanation: "Promotions rarely happen unless you ask clearly and directly. Managers are not mind-readers. A direct conversation is essential.",
+        weight: 1
+      }
+    ];
+
+    let currentQ = 0, score = 0, answers = [];
+
+    function startQuiz() {
+      document.getElementById('quiz-start').style.display = 'none';
+      document.getElementById('quiz-main').style.display = 'block';
+      renderQuestion();
+    }
+
+    function renderQuestion() {
+      const q = questions[currentQ];
+      const pct = Math.round((currentQ / questions.length) * 100);
+      document.getElementById('quiz-main').innerHTML = `
+        <div class="quiz-progress">
+          <div class="quiz-progress__label"><span>Question ${currentQ + 1} of ${questions.length}</span><span>${pct}% complete</span></div>
+          <div class="quiz-progress__bar"><div class="quiz-progress__fill" style="width:${pct}%"></div></div>
+        </div>
+        <div class="quiz-question">
+          <div class="quiz-question__number">Question ${currentQ + 1}</div>
+          <div class="quiz-question__text">${q.question}</div>
+          <ul class="quiz-options">
+            ${q.options.map((opt, i) => `<li><button class="quiz-option" onclick="selectAnswer(${i})"><span class="quiz-option__indicator"></span><span>${opt}</span></button></li>`).join('')}
+          </ul>
+          <div id="explanation" style="display:none;" class="quiz-explanation"></div>
+        </div>
+        <div class="quiz-nav">
+          <span style="color:var(--color-text-muted);font-size:0.875rem;">${currentQ + 1} / ${questions.length}</span>
+          <button class="btn btn-primary" id="next-btn" style="display:none;" onclick="nextQuestion()">${currentQ + 1 === questions.length ? 'See Results' : 'Next Question'}</button>
+        </div>`;
+    }
+
+    function selectAnswer(idx) {
+      if (document.querySelector('.quiz-option.selected')) return;
+      const q = questions[currentQ];
+      answers.push(idx);
+      score += (q.options.length - 1 - idx) * q.weight;
+      document.querySelectorAll('.quiz-option').forEach((btn, i) => {
+        btn.disabled = true;
+        if (i === idx) btn.classList.add('selected');
+        if (i === 0) btn.classList.add('correct');
+        if (i === idx && i !== 0) btn.classList.add('incorrect');
+      });
+      const expEl = document.getElementById('explanation');
+      expEl.style.display = 'block';
+      expEl.className = 'quiz-explanation ' + (idx === 0 ? 'quiz-explanation--correct' : 'quiz-explanation--incorrect');
+      expEl.textContent = q.explanation;
+      document.getElementById('next-btn').style.display = 'inline-flex';
+    }
+
+    function nextQuestion() {
+      currentQ++;
+      if (currentQ < questions.length) renderQuestion(); else showResults();
+    }
+
+    function showResults() {
+      document.getElementById('quiz-main').style.display = 'none';
+      const resultsEl = document.getElementById('quiz-results');
+      resultsEl.style.display = 'block';
+      const maxScore = questions.reduce((s, q) => s + (q.options.length - 1) * q.weight, 0);
+      const pct = score / maxScore;
+      let tier, tierClass, desc, recs;
+      if (pct >= 0.75) {
+        tier = 'Promotion Ready'; tierClass = 'result-score--high';
+        desc = 'You have the performance history, visibility, skills, and alignment needed to make a strong promotion case. Request that conversation with your manager now.';
+        recs = ['Schedule a formal promotion conversation with a written summary of your achievements', 'Calculate what raise percentage you are targeting and benchmark it against market data', 'Prepare a 30-60-90 day plan for your new role to demonstrate readiness', 'Use the salary after-tax calculator to understand your take-home at the new salary'];
+      } else if (pct >= 0.5) {
+        tier = 'Almost There'; tierClass = '';
+        desc = 'You are close but have one or two gaps — visibility, advocacy, or a direct conversation — that are preventing you from making a fully compelling case.';
+        recs = ['Identify your weakest promotion dimension and build a specific plan to close it', 'Have an explicit conversation with your manager about promotion criteria', 'Seek a senior sponsor if you lack visible internal advocacy', 'Calculate the raise percentage you will ask for when ready'];
+      } else if (pct >= 0.25) {
+        tier = '6–12 Months Away'; tierClass = 'result-score--mid';
+        desc = 'There are meaningful gaps in your promotion readiness. Focus on closing your skills gap, building visibility, and establishing a clear performance record over the next 6–12 months.';
+        recs = ['Ask your manager explicitly what would need to be true for you to be promoted', 'Volunteer for cross-functional projects to build visibility with other leaders', 'Find a mentor who has recently been promoted and learn their approach', 'Focus on measurable achievements that can be documented for your review'];
+      } else {
+        tier = 'Build Foundation First'; tierClass = 'result-score--low';
+        desc = 'Your promotion readiness has significant gaps. Rather than pushing for a title change now, invest in the foundational work that will make your case compelling 12+ months from now.';
+        recs = ['Have a candid conversation with your manager about your development areas', 'Set specific, measurable 6-month goals aligned with next-level expectations', 'Build relationships and network internally — visibility is a prerequisite, not a bonus', 'Benchmark next-level salaries so you negotiate effectively when the time comes'];
+      }
+      resultsEl.innerHTML = `
+        <div class="quiz-result">
+          <div class="result-score ${tierClass}"><span class="result-score__number">${Math.round(pct*100)}%</span><span class="result-score__label">Ready</span></div>
+          <div class="result-category">${tier}</div>
+          <h2>Your result: ${tier}</h2>
+          <p>${desc}</p>
+          <div class="result-recommendations"><h3>Recommended Next Steps</h3><ul>${recs.map(r=>`<li>${r}</li>`).join('')}</ul></div>
+          <div class="result-actions">
+            <a href="/finance-calculators/raise-percentage-calculator/" class="btn btn-primary">Raise Percentage Calculator</a>
+            <a href="/finance-calculators/salary-after-tax-calculator/" class="btn btn-secondary">Salary After-Tax Calculator</a>
+            <a href="/finance-calculators/job-offer-comparison-calculator/" class="btn btn-secondary">Job Offer Comparison</a>
+          </div>
+          <div style="margin-top:1.5rem;"><button class="btn btn-ghost" onclick="restartQuiz()">Retake Quiz</button></div>
+        </div>`;
+    }
+
+    function restartQuiz() {
+      currentQ = 0; score = 0; answers = [];
+      document.getElementById('quiz-results').style.display = 'none';
+      document.getElementById('quiz-main').style.display = 'block';
+      renderQuestion();
+    }
+
+    document.querySelector('.mobile-menu-toggle').addEventListener('click', function() {
+      const nav = document.querySelector('.mobile-nav');
+      const isOpen = nav.classList.toggle('is-open');
+      this.setAttribute('aria-expanded', isOpen);
+      this.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+    });
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', function() {
+        const item = this.closest('.faq-item');
+        const isOpen = item.classList.toggle('is-open');
+        this.setAttribute('aria-expanded', isOpen);
+      });
+    });
+  </script>
+</body>
+</html>

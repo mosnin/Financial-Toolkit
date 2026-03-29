@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tax Bracket Calculator 2026 | CalcWise</title>
+  <meta name="description" content="Calculate how your income is taxed across each 2026 federal tax bracket. See exactly how much goes into each bracket, your effective rate, and marginal rate.">
+  <link rel="canonical" href="https://calcwise.io/tax-calculators/tax-bracket-calculator/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://calcwise.io/"},{"@type":"ListItem","position":2,"name":"Tax Calculators","item":"https://calcwise.io/tax-calculators/"},{"@type":"ListItem","position":3,"name":"Tax Bracket Calculator"}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What are the 2026 federal tax brackets?","acceptedAnswer":{"@type":"Answer","text":"The 2026 federal income tax brackets for single filers are: 10% up to $11,925; 12% $11,925–$48,475; 22% $48,475–$103,350; 24% $103,350–$197,300; 32% $197,300–$250,525; 35% $250,525–$626,350; 37% above $626,350."}},{"@type":"Question","name":"What is the difference between marginal and effective tax rate?","acceptedAnswer":{"@type":"Answer","text":"Your marginal rate is the rate on the last dollar you earn — the highest bracket your income reaches. Your effective rate is the total tax divided by total income — always lower than the marginal rate due to progressive taxation."}},{"@type":"Question","name":"Does a raise push all my income into a higher bracket?","acceptedAnswer":{"@type":"Answer","text":"No. Only the income above the threshold moves into the higher bracket. Income below it remains taxed at the lower rates. This is a common misconception about progressive taxation."}},{"@type":"Question","name":"How does the standard deduction affect my tax bracket?","acceptedAnswer":{"@type":"Answer","text":"The standard deduction reduces your taxable income before brackets are applied. For example, if you earn $80,000 and take the $14,600 standard deduction (single, 2026), only $65,400 is subject to the bracket calculation."}}]}</script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="logo"><svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>CalcWise</a>
+      <nav class="main-nav"><a href="/">Home</a><a href="/pages/business-calculators/">Business</a><a href="/pages/financial-calculators/">Financial</a><a href="/pages/tax-calculators/" aria-current="page">Tax</a><a href="/pages/investment-calculators/">Investment</a></nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+    </div>
+    <nav class="mobile-nav"><a href="/">Home</a><a href="/pages/business-calculators/">Business Calculators</a><a href="/pages/financial-calculators/">Financial Calculators</a><a href="/pages/tax-calculators/">Tax Calculators</a><a href="/pages/investment-calculators/">Investment Calculators</a></nav>
+  </header>
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/pages/tax-calculators/">Tax Calculators</a></li><li><span aria-current="page">Tax Bracket Calculator</span></li></ol></nav>
+      <div class="page-content">
+        <div class="calc-page-layout">
+          <div class="calc-page-main">
+            <h1>Tax Bracket Calculator 2026</h1>
+            <p class="subtitle" style="font-size:var(--text-lg);color:var(--color-gray-600);margin-bottom:var(--space-8);line-height:var(--leading-relaxed);">See exactly how your income is distributed across each 2026 federal tax bracket. This calculator shows a full bracket breakdown so you understand precisely how much of your income is taxed at each rate, plus your effective vs marginal rates.</p>
+            <div class="calc-container">
+              <div class="calc-header"><h2>Tax Bracket Calculator</h2><p>2026 federal income tax bracket breakdown</p></div>
+              <div class="calc-body">
+                <form id="calc-form" onsubmit="return false;">
+                  <div class="form-group"><label class="form-label" for="gross-income">Annual Gross Income</label><div class="input-prefix"><span class="prefix">$</span><input type="number" id="gross-income" class="form-input" placeholder="90000" min="0" step="1000"></div></div>
+                  <div class="form-group"><label class="form-label" for="filing-status">Filing Status</label><select id="filing-status" class="form-select"><option value="single">Single</option><option value="married">Married Filing Jointly</option><option value="hoh">Head of Household</option><option value="mfs">Married Filing Separately</option></select></div>
+                  <div class="form-group"><label class="form-label" for="extra-ded">Pre-Tax Deductions (401k, HSA, etc.)</label><div class="input-prefix"><span class="prefix">$</span><input type="number" id="extra-ded" class="form-input" placeholder="0" min="0" step="100"></div></div>
+                  <div class="calc-actions">
+                    <button type="button" class="btn btn-calculate btn-full" onclick="calculateBrackets()">Calculate Brackets</button>
+                    <button type="button" class="btn btn-reset" onclick="resetForm()">Reset</button>
+                  </div>
+                </form>
+                <div id="results" class="calc-results hidden">
+                  <div class="result-primary"><div class="result-label">Total Federal Income Tax</div><div class="result-value" id="result-total-tax">$0</div></div>
+                  <div class="result-grid">
+                    <div class="result-item"><div class="result-label">Effective Tax Rate</div><div class="result-value" id="result-eff-rate">0%</div></div>
+                    <div class="result-item"><div class="result-label">Marginal Tax Rate</div><div class="result-value" id="result-marginal">0%</div></div>
+                    <div class="result-item"><div class="result-label">Taxable Income</div><div class="result-value" id="result-taxable">$0</div></div>
+                    <div class="result-item"><div class="result-label">Standard Deduction Used</div><div class="result-value" id="result-std-ded">$0</div></div>
+                  </div>
+                  <div id="bracket-breakdown" style="margin-top:var(--space-6);"></div>
+                </div>
+              </div>
+            </div>
+            <div class="ad-slot ad-slot-leaderboard"></div>
+            <section class="content-section"><h2>2026 Federal Tax Brackets</h2>
+              <h3 style="font-size:var(--text-base);font-weight:var(--font-semibold);margin:var(--space-4) 0 var(--space-2);">Single Filers</h3>
+              <table style="width:100%;border-collapse:collapse;font-size:var(--text-sm);">
+                <thead><tr style="background:var(--color-primary-50);"><th style="padding:var(--space-2) var(--space-3);text-align:left;">Rate</th><th style="padding:var(--space-2) var(--space-3);text-align:right;">Income Range</th></tr></thead>
+                <tbody>
+                  <tr style="background:var(--color-white)"><td style="padding:var(--space-2) var(--space-3);">10%</td><td style="padding:var(--space-2) var(--space-3);text-align:right;">$0 – $11,925</td></tr>
+                  <tr style="background:var(--color-gray-50)"><td style="padding:var(--space-2) var(--space-3);">12%</td><td style="padding:var(--space-2) var(--space-3);text-align:right;">$11,926 – $48,475</td></tr>
+                  <tr style="background:var(--color-white)"><td style="padding:var(--space-2) var(--space-3);">22%</td><td style="padding:var(--space-2) var(--space-3);text-align:right;">$48,476 – $103,350</td></tr>
+                  <tr style="background:var(--color-gray-50)"><td style="padding:var(--space-2) var(--space-3);">24%</td><td style="padding:var(--space-2) var(--space-3);text-align:right;">$103,351 – $197,300</td></tr>
+                  <tr style="background:var(--color-white)"><td style="padding:var(--space-2) var(--space-3);">32%</td><td style="padding:var(--space-2) var(--space-3);text-align:right;">$197,301 – $250,525</td></tr>
+                  <tr style="background:var(--color-gray-50)"><td style="padding:var(--space-2) var(--space-3);">35%</td><td style="padding:var(--space-2) var(--space-3);text-align:right;">$250,526 – $626,350</td></tr>
+                  <tr style="background:var(--color-white)"><td style="padding:var(--space-2) var(--space-3);">37%</td><td style="padding:var(--space-2) var(--space-3);text-align:right;">Over $626,350</td></tr>
+                </tbody>
+              </table>
+            </section>
+            <section class="content-section"><h2>How to Use This Calculator</h2><ol><li>Enter your <strong>annual gross income</strong>.</li><li>Select your <strong>filing status</strong>.</li><li>Enter any <strong>pre-tax deductions</strong> (401k, HSA, etc.).</li><li>Click <strong>Calculate Brackets</strong> to see the full breakdown.</li></ol></section>
+            <section class="content-section"><h2>Example Scenario</h2><p>Single filer with $90,000 income and $5,000 in 401k contributions:</p><ul><li>Pre-tax deductions: −$5,000 → AGI: $85,000</li><li>Standard deduction: −$14,600 → Taxable: $70,400</li><li>10% on first $11,925 = $1,192.50</li><li>12% on $11,925–$48,475 = $4,386.00</li><li>22% on $48,475–$70,400 = $4,823.50</li><li>Total: <strong>$10,402</strong> | Effective Rate: <strong>11.56%</strong> | Marginal Rate: <strong>22%</strong></li></ul></section>
+            <section class="faq-section"><h2>Frequently Asked Questions</h2>
+              <div class="faq-item"><button class="faq-question" aria-expanded="false">What are the 2026 federal tax brackets?<svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg></button><div class="faq-answer"><p>The 2026 federal brackets for single filers are: 10% up to $11,925; 12% $11,925–$48,475; 22% $48,475–$103,350; 24% $103,350–$197,300; 32% $197,300–$250,525; 35% $250,525–$626,350; 37% above $626,350.</p></div></div>
+              <div class="faq-item"><button class="faq-question" aria-expanded="false">What is the difference between marginal and effective tax rate?<svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg></button><div class="faq-answer"><p>Your marginal rate is the rate on the last dollar you earn — the highest bracket your income reaches. Your effective rate is total tax divided by total income — always lower than the marginal rate due to progressive taxation.</p></div></div>
+              <div class="faq-item"><button class="faq-question" aria-expanded="false">Does a raise push all my income into a higher bracket?<svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg></button><div class="faq-answer"><p>No. Only the income above the threshold moves into the higher bracket. All income below the threshold remains taxed at the lower rates. This is a common misconception about progressive taxation.</p></div></div>
+              <div class="faq-item"><button class="faq-question" aria-expanded="false">How does the standard deduction affect my tax bracket?<svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg></button><div class="faq-answer"><p>The standard deduction reduces your taxable income before brackets are applied. If you earn $80,000 and take the $14,600 standard deduction (single, 2026), only $65,400 is subject to the bracket calculation.</p></div></div>
+            </section>
+            <section class="related-calculators"><h2>Related Calculators</h2><div class="grid grid-3">
+              <a href="/pages/tax-calculators/after-tax-income-calculator/" class="card card-link"><h3>After-Tax Income Calculator</h3><p>Calculate full net take-home after all taxes.</p></a>
+              <a href="/pages/tax-calculators/tax-refund-estimator/" class="card card-link"><h3>Tax Refund Estimator</h3><p>Estimate your refund or balance due at tax time.</p></a>
+              <a href="/pages/tax-calculators/standard-vs-itemized-deduction-calculator/" class="card card-link"><h3>Deduction Calculator</h3><p>Compare standard vs itemized deductions.</p></a>
+              <a href="/pages/tax-calculators/payroll-tax-calculator/" class="card card-link"><h3>Payroll Tax Calculator</h3><p>Calculate per-paycheck net pay.</p></a>
+            </div></section>
+            <div class="disclaimer"><strong>Tax Disclaimer:</strong> This calculator provides estimates for educational purposes only and does not constitute tax advice. The 2026 tax brackets shown are estimated based on inflation adjustments and may differ from official IRS guidance when published. Consult a qualified tax professional for advice specific to your situation.</div>
+          </div>
+          <aside class="calc-page-sidebar">
+            <div class="ad-slot ad-slot-rectangle"></div>
+            <div class="sidebar-card"><h3>Tax Calculators</h3><a href="/pages/tax-calculators/after-tax-income-calculator/">After-Tax Income</a><a href="/pages/tax-calculators/tax-refund-estimator/">Tax Refund Estimator</a><a href="/pages/tax-calculators/payroll-tax-calculator/">Payroll Tax Calculator</a><a href="/pages/tax-calculators/standard-vs-itemized-deduction-calculator/">Deduction Calculator</a><a href="/pages/tax-calculators/state-income-tax-calculator/">State Income Tax</a></div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><a href="/" class="logo"><svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>CalcWise</a><p>Free online calculators for business, finance, tax, and investment decisions.</p></div>
+        <div class="footer-col"><h4>Calculators</h4><a href="/pages/business-calculators/">Business</a><a href="/pages/financial-calculators/">Financial</a><a href="/pages/tax-calculators/">Tax</a><a href="/pages/investment-calculators/">Investment</a></div>
+        <div class="footer-col"><h4>Resources</h4><a href="/about/">About</a><a href="/blog/">Blog</a><a href="/contact/">Contact</a></div>
+        <div class="footer-col"><h4>Legal</h4><a href="/privacy/">Privacy Policy</a><a href="/terms/">Terms of Service</a></div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2026 CalcWise. All rights reserved.</p><div class="footer-links"><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="/contact/">Contact</a></div></div>
+    </div>
+  </footer>
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    const BRACKETS = {
+      single:[{rate:0.10,min:0,max:11925},{rate:0.12,min:11925,max:48475},{rate:0.22,min:48475,max:103350},{rate:0.24,min:103350,max:197300},{rate:0.32,min:197300,max:250525},{rate:0.35,min:250525,max:626350},{rate:0.37,min:626350,max:Infinity}],
+      married:[{rate:0.10,min:0,max:23850},{rate:0.12,min:23850,max:96950},{rate:0.22,min:96950,max:206700},{rate:0.24,min:206700,max:394600},{rate:0.32,min:394600,max:501050},{rate:0.35,min:501050,max:751600},{rate:0.37,min:751600,max:Infinity}],
+      hoh:[{rate:0.10,min:0,max:17000},{rate:0.12,min:17000,max:64850},{rate:0.22,min:64850,max:103350},{rate:0.24,min:103350,max:197300},{rate:0.32,min:197300,max:250500},{rate:0.35,min:250500,max:626350},{rate:0.37,min:626350,max:Infinity}],
+      mfs:[{rate:0.10,min:0,max:11925},{rate:0.12,min:11925,max:48475},{rate:0.22,min:48475,max:103350},{rate:0.24,min:103350,max:197300},{rate:0.32,min:197300,max:250525},{rate:0.35,min:250525,max:313175},{rate:0.37,min:313175,max:Infinity}]
+    };
+    const STD_DED = {single:14600,married:29200,hoh:21900,mfs:14600};
+
+    function calculateBrackets() {
+      const gross = CalcWise.parseNumber(document.getElementById('gross-income').value);
+      const status = document.getElementById('filing-status').value;
+      const extraDed = CalcWise.parseNumber(document.getElementById('extra-ded').value);
+      if (gross <= 0) { alert('Please enter gross income.'); return; }
+      const stdDed = STD_DED[status] || 14600;
+      const agi = Math.max(0, gross - extraDed);
+      const taxable = Math.max(0, agi - stdDed);
+      const brackets = BRACKETS[status] || BRACKETS.single;
+      let totalTax = 0, marginalRate = 0;
+      const rows = [];
+      for (const b of brackets) {
+        if (taxable <= b.min) break;
+        const inBracket = Math.min(taxable, b.max) - b.min;
+        const taxInBracket = inBracket * b.rate;
+        totalTax += taxInBracket;
+        marginalRate = b.rate;
+        rows.push({rate:b.rate, from:b.min, to:Math.min(taxable, b.max), amount:inBracket, tax:taxInBracket});
+      }
+      const effRate = gross > 0 ? (totalTax / gross) * 100 : 0;
+
+      CalcWise.setText('result-total-tax', CalcWise.formatCurrency(totalTax));
+      CalcWise.setText('result-eff-rate', effRate.toFixed(2) + '%');
+      CalcWise.setText('result-marginal', (marginalRate * 100).toFixed(0) + '%');
+      CalcWise.setText('result-taxable', CalcWise.formatCurrency(taxable));
+      CalcWise.setText('result-std-ded', CalcWise.formatCurrency(stdDed));
+
+      let html = '<h3 style="font-size:var(--text-base);font-weight:var(--font-semibold);margin-bottom:var(--space-3);">Bracket Breakdown</h3>';
+      html += '<div style="overflow-x:auto;"><table style="width:100%;border-collapse:collapse;font-size:var(--text-sm);">';
+      html += '<thead><tr style="background:var(--color-primary-50);"><th style="padding:var(--space-2) var(--space-3);text-align:left;">Rate</th><th style="padding:var(--space-2) var(--space-3);text-align:right;">Income in Bracket</th><th style="padding:var(--space-2) var(--space-3);text-align:right;">Tax</th></tr></thead><tbody>';
+      rows.forEach((r, i) => {
+        html += `<tr style="background:${i%2===0?'var(--color-white)':'var(--color-gray-50)'}"><td style="padding:var(--space-2) var(--space-3);font-weight:var(--font-semibold);color:var(--color-primary);">${(r.rate*100).toFixed(0)}%</td><td style="padding:var(--space-2) var(--space-3);text-align:right;">${CalcWise.formatCurrency(r.amount)}</td><td style="padding:var(--space-2) var(--space-3);text-align:right;">${CalcWise.formatCurrency(r.tax)}</td></tr>`;
+      });
+      html += `<tr style="background:var(--color-primary-50);font-weight:var(--font-semibold);"><td style="padding:var(--space-2) var(--space-3);">Total</td><td style="padding:var(--space-2) var(--space-3);text-align:right;">${CalcWise.formatCurrency(taxable)}</td><td style="padding:var(--space-2) var(--space-3);text-align:right;">${CalcWise.formatCurrency(totalTax)}</td></tr>`;
+      html += '</tbody></table></div>';
+      document.getElementById('bracket-breakdown').innerHTML = html;
+      CalcWise.showResults('results');
+    }
+    function resetForm() { document.getElementById('calc-form').reset(); document.getElementById('bracket-breakdown').innerHTML = ''; CalcWise.hideResults('results'); }
+    document.querySelectorAll('.faq-question').forEach(btn => { btn.addEventListener('click', () => { const e = btn.getAttribute('aria-expanded') === 'true'; btn.setAttribute('aria-expanded', !e); btn.nextElementSibling.style.display = e ? 'none' : 'block'; }); });
+    document.querySelectorAll('.faq-answer').forEach(a => a.style.display = 'none');
+    const toggle = document.querySelector('.mobile-menu-toggle'); const mobileNav = document.querySelector('.mobile-nav');
+    if (toggle && mobileNav) { toggle.addEventListener('click', () => { const open = toggle.getAttribute('aria-expanded') === 'true'; toggle.setAttribute('aria-expanded', !open); mobileNav.style.display = open ? 'none' : 'block'; }); }
+  </script>
+</body>
+</html>

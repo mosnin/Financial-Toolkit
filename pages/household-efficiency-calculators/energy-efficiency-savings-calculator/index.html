@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Energy Efficiency Savings Calculator - LED, Thermostat, Insulation, HVAC ROI | CalcWise</title>
+    <meta name="description" content="Calculate savings and payback period for home energy upgrades including LED lighting, smart thermostat, insulation, and new HVAC systems. See your 10-year ROI.">
+    <link rel="canonical" href="https://calcwise.io/household-efficiency-calculators/energy-efficiency-savings-calculator/">
+    <meta property="og:title" content="Energy Efficiency Savings Calculator | CalcWise">
+    <meta property="og:description" content="Find out how quickly your home energy upgrade pays back and what your 10-year return on investment will be.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://calcwise.io/household-efficiency-calculators/energy-efficiency-savings-calculator/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Energy Efficiency Savings Calculator | CalcWise">
+    <meta name="twitter:description" content="Calculate payback period and 10-year ROI for home energy upgrades.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/design-system.css">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/"},
+            {"@type": "ListItem", "position": 2, "name": "Household Efficiency Calculators", "item": "https://calcwise.io/household-efficiency-calculators/"},
+            {"@type": "ListItem", "position": 3, "name": "Energy Efficiency Savings Calculator"}
+        ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {"@type": "Question", "name": "How much can LED lighting save on my energy bill?", "acceptedAnswer": {"@type": "Answer", "text": "LED bulbs use 75% less energy than incandescent bulbs and last 25 times longer. For a typical home that spends $150/month on electricity, switching entirely to LEDs can save $15-30 per month, depending on how many lights you have and how long they run each day."}},
+            {"@type": "Question", "name": "Is a smart thermostat worth it?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Smart thermostats typically save 10-12% on heating bills and 15% on cooling bills according to the EPA. At an average cost of $150-250 installed, most homeowners recoup the investment within 1-2 years. They continue saving money for their entire lifespan of 10+ years."}},
+            {"@type": "Question", "name": "What is the payback period for new insulation?", "acceptedAnswer": {"@type": "Answer", "text": "Attic insulation typically has a payback period of 3-7 years depending on your climate and current insulation level. In very cold or very hot climates the payback can be faster. Insulation also adds home value and improves comfort year-round."}},
+            {"@type": "Question", "name": "When should I replace my HVAC system?", "acceptedAnswer": {"@type": "Answer", "text": "HVAC systems typically last 15-20 years. If your system is over 10 years old and needs major repairs, replacement often makes more financial sense. A new high-efficiency system (SEER 18+) can use 20-40% less energy than a system from the early 2000s, and federal tax credits may offset part of the cost."}}
+        ]
+    }
+    </script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="/" class="logo">
+                <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+                CalcWise
+            </a>
+            <nav class="main-nav">
+                <a href="/real-estate-calculators/">Real Estate</a>
+                <a href="/advanced-real-estate-calculators/">Advanced RE</a>
+                <a href="/energy-utility-calculators/">Energy</a>
+                <a href="/household-efficiency-calculators/">Household</a>
+                <a href="/finance-calculators/">Finance</a>
+            </nav>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+            </button>
+        </div>
+        <nav class="mobile-nav">
+            <a href="/real-estate-calculators/">Real Estate Calculators</a>
+            <a href="/advanced-real-estate-calculators/">Advanced Real Estate</a>
+            <a href="/energy-utility-calculators/">Energy &amp; Utility</a>
+            <a href="/household-efficiency-calculators/">Household Efficiency</a>
+            <a href="/finance-calculators/">Finance Calculators</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <nav class="breadcrumbs" aria-label="Breadcrumb">
+                <ol>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/household-efficiency-calculators/">Household Efficiency Calculators</a></li>
+                    <li><span aria-current="page">Energy Efficiency Savings Calculator</span></li>
+                </ol>
+            </nav>
+
+            <div class="page-content">
+                <div class="calc-page-layout">
+                    <div class="calc-page-main">
+                        <h1>Energy Efficiency Savings Calculator</h1>
+                        <p class="subtitle" style="color: var(--color-gray-600); font-size: var(--text-lg); line-height: var(--leading-relaxed); margin-bottom: var(--space-8);">
+                            Find out how much you will save -- and how quickly -- from home energy upgrades like LED lighting, a smart thermostat, insulation, or a new HVAC system. Enter your current bill and upgrade details to see annual savings, payback period, and 10-year ROI.
+                        </p>
+
+                        <div class="calc-container">
+                            <div class="calc-header">
+                                <h2>Energy Upgrade ROI</h2>
+                                <p>Payback period and 10-year return on investment</p>
+                            </div>
+                            <div class="calc-body">
+                                <form id="ee-form">
+                                    <div class="form-group">
+                                        <label class="form-label" for="current-bill">Current Monthly Energy Bill</label>
+                                        <div class="input-prefix">
+                                            <span class="prefix">$</span>
+                                            <input type="number" id="current-bill" name="currentBill" class="form-input" placeholder="200" min="1" step="1" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label" for="home-size">Home Size (sq ft)</label>
+                                        <input type="number" id="home-size" name="homeSize" class="form-input" placeholder="2000" min="100" step="50" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label" for="upgrade-type">Upgrade Type</label>
+                                        <select id="upgrade-type" name="upgradeType" class="form-input" onchange="updateUpgradeCostHint()">
+                                            <option value="led">LED Lighting (replaces incandescent)</option>
+                                            <option value="thermostat">Smart Thermostat</option>
+                                            <option value="insulation">Insulation Upgrade</option>
+                                            <option value="hvac">New High-Efficiency HVAC</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label" for="upgrade-cost">Upgrade Cost</label>
+                                        <div class="input-prefix">
+                                            <span class="prefix">$</span>
+                                            <input type="number" id="upgrade-cost" name="upgradeCost" class="form-input" placeholder="500" min="0" step="50" required>
+                                        </div>
+                                        <div id="cost-hint" class="form-hint" style="font-size:var(--text-sm);color:var(--color-gray-500);margin-top:var(--space-1);">Typical cost for LED upgrade: $200 - $800</div>
+                                    </div>
+                                    <div class="calc-actions">
+                                        <button type="button" class="btn btn-calculate btn-full" onclick="calculateEESavings()">Calculate ROI</button>
+                                        <button type="reset" class="btn btn-reset">Reset</button>
+                                    </div>
+                                </form>
+
+                                <div id="results" class="calc-results hidden">
+                                    <div class="result-primary">
+                                        <div class="result-label">Annual Energy Savings</div>
+                                        <div class="result-value" id="result-annual-savings">$0</div>
+                                    </div>
+                                    <div class="result-grid result-grid-3">
+                                        <div class="result-item">
+                                            <div class="result-label">Estimated % Savings</div>
+                                            <div class="result-value" id="result-pct-savings">0%</div>
+                                        </div>
+                                        <div class="result-item">
+                                            <div class="result-label">Payback Period</div>
+                                            <div class="result-value" id="result-payback">0 yrs</div>
+                                        </div>
+                                        <div class="result-item">
+                                            <div class="result-label">10-Year ROI</div>
+                                            <div class="result-value" id="result-10yr-roi">0%</div>
+                                        </div>
+                                        <div class="result-item">
+                                            <div class="result-label">Monthly Savings</div>
+                                            <div class="result-value" id="result-monthly-savings">$0</div>
+                                        </div>
+                                        <div class="result-item">
+                                            <div class="result-label">10-Year Net Savings</div>
+                                            <div class="result-value" id="result-10yr-net">$0</div>
+                                        </div>
+                                        <div class="result-item">
+                                            <div class="result-label">New Monthly Bill</div>
+                                            <div class="result-value" id="result-new-bill">$0</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="ad-slot ad-slot-leaderboard"></div>
+
+                        <section class="content-section">
+                            <h2>Energy Efficiency Savings Formula</h2>
+                            <div class="formula-box">
+                                <div class="formula-label">ROI Calculation</div>
+                                Annual Savings = Monthly Bill &times; Savings % &times; 12
+Payback Period (years) = Upgrade Cost / Annual Savings
+10-Year Net Savings = (Annual Savings &times; 10) - Upgrade Cost
+10-Year ROI % = (10-Year Net Savings / Upgrade Cost) &times; 100
+
+Savings % by upgrade type:
+  LED Lighting: 10-15% of total bill
+  Smart Thermostat: 10-12% of total bill
+  Insulation: 15-20% of total bill
+  New HVAC: 20-30% of total bill (adjusted by home size)
+                            </div>
+                            <p>Savings percentages are based on EPA Energy Star and DOE research. Your actual savings may be higher or lower depending on your climate zone, current system age, and usage habits.</p>
+                        </section>
+
+                        <section class="content-section">
+                            <h2>How to Use This Calculator</h2>
+                            <ol>
+                                <li><strong>Enter your current monthly energy bill</strong> -- use an average of your last 12 months if possible.</li>
+                                <li><strong>Enter your home size</strong> -- used to refine savings estimates for insulation and HVAC upgrades.</li>
+                                <li><strong>Select your upgrade type</strong> -- each type has a different typical savings percentage based on research data.</li>
+                                <li><strong>Enter the upgrade cost</strong> -- include installation labor. Use the hint below the field for typical cost ranges.</li>
+                                <li><strong>Click "Calculate ROI"</strong> to see your payback period and 10-year return.</li>
+                            </ol>
+                        </section>
+
+                        <section class="content-section">
+                            <h2>Example Scenario</h2>
+                            <h3>Smart Thermostat Installation -- $250 Cost</h3>
+                            <p>Current monthly bill: $200 | Home size: 2,000 sq ft | Upgrade: Smart Thermostat | Cost: $250</p>
+                            <p>Estimated savings: 11% of $200 = <strong>$22/month</strong></p>
+                            <p>Annual savings: $22 &times; 12 = <strong>$264/year</strong></p>
+                            <p>Payback period: $250 / $264 = <strong>0.95 years (~11.4 months)</strong></p>
+                            <p>10-Year net savings: ($264 &times; 10) - $250 = <strong>$2,390</strong></p>
+                            <p>10-Year ROI: $2,390 / $250 = <strong>956%</strong></p>
+                        </section>
+
+                        <section class="faq-section">
+                            <h2>Frequently Asked Questions</h2>
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">
+                                    How much can LED lighting save on my energy bill?
+                                    <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>LED bulbs use 75% less energy than incandescent bulbs and last 25 times longer. For a typical home spending $150/month on electricity, switching entirely to LEDs can save $15-30 per month, or roughly 10-15% of the lighting-related portion of your bill.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">
+                                    Is a smart thermostat worth it?
+                                    <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>Yes. Smart thermostats typically save 10-12% on heating and 15% on cooling per the EPA. At a cost of $150-250 installed, most homeowners recoup the investment within 1-2 years and continue saving for the device's 10+ year lifespan.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">
+                                    What is the payback period for new insulation?
+                                    <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>Attic insulation typically pays back in 3-7 years depending on climate and current insulation level. In extreme climates the payback can be faster. Insulation also adds home value and improves year-round comfort.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">
+                                    When should I replace my HVAC system?
+                                    <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>HVAC systems typically last 15-20 years. If your system is over 10 years old and needs major repairs, replacement often makes more financial sense. A new high-efficiency system (SEER 18+) can use 20-40% less energy than early-2000s systems, and federal tax credits may offset part of the cost.</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="related-calculators">
+                            <h2>Related Calculators</h2>
+                            <div class="grid grid-3">
+                                <a href="/household-efficiency-calculators/utility-savings-calculator/" class="card card-link">
+                                    <div class="card-icon">U</div>
+                                    <h3>Utility Savings Calculator</h3>
+                                    <p>Set reduction targets for electric, gas, and water bills.</p>
+                                </a>
+                                <a href="/household-efficiency-calculators/heating-cost-efficiency-calculator/" class="card card-link">
+                                    <div class="card-icon">H</div>
+                                    <h3>Heating Cost Efficiency</h3>
+                                    <p>Grade your heating system and find savings opportunities.</p>
+                                </a>
+                                <a href="/household-efficiency-calculators/appliance-cost-comparison-calculator/" class="card card-link">
+                                    <div class="card-icon">A</div>
+                                    <h3>Appliance Cost Comparison</h3>
+                                    <p>Compare old vs. new appliance energy costs and payback.</p>
+                                </a>
+                                <a href="/energy-utility-calculators/home-energy-efficiency-calculator/" class="card card-link">
+                                    <div class="card-icon">E</div>
+                                    <h3>Home Energy Efficiency</h3>
+                                    <p>Full home energy audit and efficiency scoring.</p>
+                                </a>
+                            </div>
+                        </section>
+
+                        <div class="disclaimer">
+                            <strong>Disclaimer:</strong> Savings percentages are estimates based on EPA and DOE research averages. Actual savings depend on your climate zone, current equipment condition, usage patterns, and installation quality. Consult a certified energy auditor for a personalized assessment.
+                        </div>
+
+                        <div class="ad-slot ad-slot-leaderboard"></div>
+                    </div>
+
+                    <aside class="calc-page-sidebar">
+                        <div class="sidebar-card">
+                            <h3>Household Efficiency Tools</h3>
+                            <a href="/household-efficiency-calculators/utility-savings-calculator/">Utility Savings</a>
+                            <a href="/household-efficiency-calculators/energy-efficiency-savings-calculator/">Energy Efficiency Savings</a>
+                            <a href="/household-efficiency-calculators/water-usage-savings-calculator/">Water Usage Savings</a>
+                            <a href="/household-efficiency-calculators/grocery-waste-savings-calculator/">Grocery Waste Savings</a>
+                            <a href="/household-efficiency-calculators/home-efficiency-savings-calculator/">Home Efficiency Savings</a>
+                            <a href="/household-efficiency-calculators/appliance-cost-comparison-calculator/">Appliance Cost Comparison</a>
+                            <a href="/household-efficiency-calculators/heating-cost-efficiency-calculator/">Heating Cost Efficiency</a>
+                            <a href="/household-efficiency-calculators/cooling-cost-efficiency-calculator/">Cooling Cost Efficiency</a>
+                            <a href="/household-efficiency-calculators/household-maintenance-savings-calculator/">Maintenance Savings</a>
+                            <a href="/household-efficiency-calculators/home-operating-cost-calculator/">Home Operating Cost</a>
+                        </div>
+                        <div class="ad-slot ad-slot-rectangle"></div>
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="/" class="logo">
+                        <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+                        CalcWise
+                    </a>
+                    <p>Free, accurate financial calculators for everyone. Make smarter money decisions with CalcWise.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Household Efficiency</h4>
+                    <a href="/household-efficiency-calculators/utility-savings-calculator/">Utility Savings</a>
+                    <a href="/household-efficiency-calculators/energy-efficiency-savings-calculator/">Energy Efficiency</a>
+                    <a href="/household-efficiency-calculators/appliance-cost-comparison-calculator/">Appliance Comparison</a>
+                    <a href="/household-efficiency-calculators/home-operating-cost-calculator/">Home Operating Cost</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Energy &amp; Utility</h4>
+                    <a href="/energy-utility-calculators/electricity-cost-calculator/">Electricity Cost</a>
+                    <a href="/energy-utility-calculators/solar-savings-calculator/">Solar Savings</a>
+                    <a href="/energy-utility-calculators/gas-bill-calculator/">Gas Bill</a>
+                    <a href="/energy-utility-calculators/home-energy-efficiency-calculator/">Home Energy Efficiency</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <a href="/about/">About</a>
+                    <a href="/contact/">Contact</a>
+                    <a href="/privacy/">Privacy Policy</a>
+                    <a href="/terms/">Terms of Use</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; 2026 CalcWise. All rights reserved.</span>
+                <div class="footer-links">
+                    <a href="/privacy/">Privacy</a>
+                    <a href="/terms/">Terms</a>
+                    <a href="/sitemap.xml">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/calculator-engine.js"></script>
+    <script src="/js/search-index.js"></script>
+    <script>
+    const upgradeData = {
+        led:        { savingsPct: 0.12, hint: 'Typical cost for LED upgrade: $200 - $800' },
+        thermostat: { savingsPct: 0.11, hint: 'Typical cost for smart thermostat (installed): $150 - $350' },
+        insulation: { savingsPct: 0.17, hint: 'Typical cost for attic insulation: $1,500 - $4,000' },
+        hvac:       { savingsPct: 0.25, hint: 'Typical cost for new HVAC system (installed): $5,000 - $12,000' }
+    };
+
+    function updateUpgradeCostHint() {
+        const type = document.getElementById('upgrade-type').value;
+        document.getElementById('cost-hint').textContent = upgradeData[type].hint;
+    }
+
+    function calculateEESavings() {
+        if (!CalcWise.validateForm('ee-form')) return;
+
+        const values = CalcWise.getFormValues('ee-form');
+        const currentBill = values.currentBill;
+        const upgradeType = document.getElementById('upgrade-type').value;
+        const upgradeCost = values.upgradeCost;
+
+        const savingsPct = upgradeData[upgradeType].savingsPct;
+        const monthlySavings = currentBill * savingsPct;
+        const annualSavings = monthlySavings * 12;
+        const paybackYears = upgradeCost > 0 ? upgradeCost / annualSavings : 0;
+        const tenYearNet = (annualSavings * 10) - upgradeCost;
+        const tenYearROI = upgradeCost > 0 ? (tenYearNet / upgradeCost) * 100 : 0;
+        const newMonthlyBill = currentBill - monthlySavings;
+
+        CalcWise.setText('result-annual-savings', CalcWise.formatCurrency(annualSavings, 0));
+        CalcWise.setText('result-pct-savings', (savingsPct * 100).toFixed(0) + '%');
+        CalcWise.setText('result-payback', paybackYears < 1 ? (paybackYears * 12).toFixed(1) + ' mo' : paybackYears.toFixed(1) + ' yrs');
+        CalcWise.setText('result-10yr-roi', CalcWise.formatNumber(tenYearROI, 0) + '%');
+        CalcWise.setText('result-monthly-savings', CalcWise.formatCurrency(monthlySavings));
+        CalcWise.setText('result-10yr-net', CalcWise.formatCurrency(tenYearNet, 0));
+        CalcWise.setText('result-new-bill', CalcWise.formatCurrency(newMonthlyBill));
+
+        CalcWise.showResults('results');
+    }
+
+    document.getElementById('ee-form').addEventListener('reset', function() {
+        setTimeout(() => CalcWise.hideResults('results'), 0);
+    });
+    </script>
+</body>
+</html>

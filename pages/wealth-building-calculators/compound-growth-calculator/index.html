@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Compound Growth Calculator - Growth Multiple & Year-by-Year Table | CalcWise</title>
+  <meta name="description" content="Calculate compound growth with flexible compounding frequency and optional monthly additions. See your growth multiple, total dollar gain, and a year-by-year breakdown table.">
+  <meta name="keywords" content="compound growth calculator, growth multiple, compounding frequency, investment growth table, year by year growth">
+  <link rel="canonical" href="https://calcwise.io/wealth-building-calculators/compound-growth-calculator/">
+
+  <meta property="og:title" content="Compound Growth Calculator - Growth Multiple & Year-by-Year Table">
+  <meta property="og:description" content="Calculate compound growth with any compounding frequency and see a detailed year-by-year table.">
+  <meta property="og:url" content="https://calcwise.io/wealth-building-calculators/compound-growth-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Compound Growth Calculator - Growth Multiple & Year-by-Year Table">
+  <meta name="twitter:description" content="Calculate compound growth with any compounding frequency and see a detailed year-by-year table.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Wealth Building Calculators", "item": "https://calcwise.io/wealth-building-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "Compound Growth Calculator", "item": "https://calcwise.io/wealth-building-calculators/compound-growth-calculator/" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What does the growth multiple mean?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The growth multiple (e.g., 4.2x) shows how many times larger your investment is compared to the original amount. A 4.2x multiple means your initial $10,000 has grown to $42,000. It is a simple way to communicate investment performance across different time horizons and rates." }
+      },
+      {
+        "@type": "Question",
+        "name": "How does compounding frequency affect growth?",
+        "acceptedAnswer": { "@type": "Answer", "text": "More frequent compounding produces slightly higher returns because interest is added to principal more often. Daily compounding on $10,000 at 7% for 20 years yields about $400 more than annual compounding — a small but real difference that grows with larger balances and longer horizons." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I add monthly contributions to this calculator?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. The optional monthly additions field lets you model regular contributions on top of the initial investment. Monthly additions dramatically increase the final value and growth multiple, especially over longer periods." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is CAGR?",
+        "acceptedAnswer": { "@type": "Answer", "text": "CAGR stands for Compound Annual Growth Rate. It is the steady annual rate at which an investment would have grown from its beginning value to its ending value. CAGR is useful for comparing the performance of different investments over different time periods." }
+      }
+    ]
+  }
+  </script>
+  <style>
+    .growth-table { width: 100%; border-collapse: collapse; font-size: 0.875rem; margin-top: 1rem; }
+    .growth-table th, .growth-table td { padding: 0.5rem 0.75rem; text-align: right; border-bottom: 1px solid var(--color-gray-200); }
+    .growth-table th { background: var(--color-primary-50); color: var(--color-primary); font-weight: 600; text-align: right; }
+    .growth-table th:first-child, .growth-table td:first-child { text-align: left; }
+    .growth-table tbody tr:hover { background: var(--color-gray-50); }
+    .table-wrapper { overflow-x: auto; margin-top: 1rem; }
+  </style>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/wealth-building-calculators/" aria-current="page">Wealth Building</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/wealth-building-calculators/">Wealth Building Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/wealth-building-calculators/">Wealth Building Calculators</a></li>
+          <li><span aria-current="page">Compound Growth Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="article-content">
+          <h1>Compound Growth Calculator</h1>
+          <p>Compound growth is the engine of long-term wealth. This calculator shows not just your final value but how fast that value is multiplying — expressed as a growth multiple like 3.5x or 8.2x — along with a complete year-by-year table so you can see compounding in action. Choose your compounding frequency and add optional monthly contributions to model real-world investing scenarios.</p>
+
+          <div class="calc-container mt-8">
+            <div class="calc-header">
+              <h2>Calculate Compound Growth</h2>
+              <p>See your growth multiple and year-by-year table</p>
+            </div>
+            <div class="calc-body">
+              <form id="cg-form" onsubmit="return false;">
+                <div class="form-group">
+                  <label class="form-label" for="cg-initial">Initial Amount</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="cg-initial" name="initialAmount" class="form-input" placeholder="10000" min="1" step="500" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="cg-rate">Annual Growth Rate</label>
+                  <div class="input-suffix">
+                    <input type="number" id="cg-rate" name="growthRate" class="form-input" placeholder="7" min="0" max="100" step="0.1" required>
+                    <span class="suffix">%</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="cg-freq">Compounding Frequency</label>
+                  <select id="cg-freq" name="compoundFreq" class="form-select">
+                    <option value="365">Daily</option>
+                    <option value="12" selected>Monthly</option>
+                    <option value="4">Quarterly</option>
+                    <option value="2">Semi-Annually</option>
+                    <option value="1">Annually</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="cg-years">Years</label>
+                  <input type="number" id="cg-years" name="years" class="form-input" placeholder="20" min="1" max="60" step="1" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="cg-monthly">Monthly Additions (Optional)</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="cg-monthly" name="monthlyAdditions" class="form-input" placeholder="0" min="0" step="50">
+                  </div>
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calculateCompoundGrowth()">Calculate Growth</button>
+                  <button type="button" class="btn btn-reset" onclick="resetCompoundGrowth()">Reset</button>
+                </div>
+              </form>
+
+              <div id="cg-results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">Final Value</div>
+                  <div class="result-value" id="cg-final"></div>
+                </div>
+                <div class="result-grid">
+                  <div class="result-item">
+                    <div class="result-label">Total Growth ($)</div>
+                    <div class="result-value" id="cg-total-growth"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Growth Multiple</div>
+                    <div class="result-value" id="cg-multiple"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Total Contributions</div>
+                    <div class="result-value" id="cg-contributions"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Effective Annual Rate</div>
+                    <div class="result-value" id="cg-ear"></div>
+                  </div>
+                </div>
+                <div class="table-wrapper">
+                  <table class="growth-table" id="cg-table">
+                    <thead>
+                      <tr>
+                        <th>Year</th>
+                        <th>Balance</th>
+                        <th>Growth ($)</th>
+                        <th>Growth (%)</th>
+                        <th>Multiple</th>
+                      </tr>
+                    </thead>
+                    <tbody id="cg-table-body"></tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <section class="content-section">
+            <h2>Compound Growth Formula</h2>
+            <p>The compound growth formula calculates future value based on initial principal, growth rate, and compounding frequency:</p>
+            <div class="formula-box">
+              <div class="formula-label">Compound Growth (Lump Sum)</div>
+              FV = P &times; (1 + r/n)<sup>n&times;t</sup>
+            </div>
+            <div class="formula-box">
+              <div class="formula-label">With Monthly Additions</div>
+              FV = P &times; (1 + r/n)<sup>n&times;t</sup> + PMT &times; [((1 + r/n)<sup>n&times;t</sup> &minus; 1) / (r/n)]
+            </div>
+            <div class="formula-box">
+              <div class="formula-label">Effective Annual Rate (EAR)</div>
+              EAR = (1 + r/n)<sup>n</sup> &minus; 1
+            </div>
+            <p>Where <strong>P</strong> is the initial amount, <strong>r</strong> is the annual growth rate (decimal), <strong>n</strong> is compounding periods per year, <strong>t</strong> is years, and <strong>PMT</strong> is the monthly addition.</p>
+          </section>
+
+          <section class="content-section">
+            <h2>How to Use This Calculator</h2>
+            <ol>
+              <li><strong>Enter your initial amount</strong> — the starting investment or lump sum.</li>
+              <li><strong>Enter the annual growth rate</strong> — expected annual return percentage.</li>
+              <li><strong>Choose compounding frequency</strong> — how often growth is compounded.</li>
+              <li><strong>Enter the number of years</strong> — your investment time horizon.</li>
+              <li><strong>Optionally enter monthly additions</strong> — regular contributions added each month.</li>
+              <li><strong>Click "Calculate Growth"</strong> to see the final value, growth multiple, and full year-by-year table.</li>
+            </ol>
+          </section>
+
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>Investing $10,000 at a 7% annual growth rate compounded monthly for 20 years grows to approximately $40,387 — a 4.04x multiple and $30,387 in total growth. Adding $200 per month increases the final value to roughly $106,753, a growth multiple of 5.1x on total contributions, demonstrating how even modest regular additions dramatically amplify the compounding effect.</p>
+          </section>
+
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What does the growth multiple mean?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>The growth multiple (e.g., 4.2x) shows how many times larger your investment is compared to the original amount. A 4.2x multiple means your initial $10,000 has grown to $42,000. It is a simple way to communicate investment performance across different time horizons and rates.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                How does compounding frequency affect growth?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>More frequent compounding produces slightly higher returns because interest is added to principal more often. Daily compounding on $10,000 at 7% for 20 years yields about $400 more than annual compounding — a small but real difference that grows with larger balances and longer horizons.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Can I add monthly contributions to this calculator?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Yes. The optional monthly additions field lets you model regular contributions on top of the initial investment. Monthly additions dramatically increase the final value and growth multiple, especially over longer periods.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What is CAGR?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>CAGR stands for Compound Annual Growth Rate. It is the steady annual rate at which an investment would have grown from its beginning value to its ending value. CAGR is useful for comparing the performance of different investments over different time periods.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/finance-calculators/compound-interest-calculator/" class="card card-link">
+                <h3>Compound Interest Calculator</h3>
+                <p>Calculate compound interest with daily, monthly, or annual compounding.</p>
+              </a>
+              <a href="/wealth-building-calculators/wealth-accumulation-calculator/" class="card card-link">
+                <h3>Wealth Accumulation Calculator</h3>
+                <p>See nominal and real inflation-adjusted wealth growth.</p>
+              </a>
+              <a href="/wealth-building-calculators/investment-consistency-calculator/" class="card card-link">
+                <h3>Investment Consistency Calculator</h3>
+                <p>Quantify the cost of inconsistent investing.</p>
+              </a>
+              <a href="/wealth-building-calculators/millionaire-timeline-calculator/" class="card card-link">
+                <h3>Millionaire Timeline Calculator</h3>
+                <p>Find out when you will reach $1M, $2M, and $5M.</p>
+              </a>
+            </div>
+          </section>
+
+          <div class="ad-slot ad-slot-leaderboard"></div>
+
+          <div class="disclaimer">
+            <strong>Disclaimer:</strong> This calculator provides estimates for informational and educational purposes only. Actual investment returns vary and are not guaranteed. Past performance does not indicate future results. This is not financial advice. Consult a qualified financial professional before making investment decisions.
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Wealth Building</h4>
+          <a href="/wealth-building-calculators/">All Wealth Building Calculators</a>
+          <a href="/wealth-building-calculators/millionaire-timeline-calculator/">Millionaire Timeline</a>
+          <a href="/wealth-building-calculators/wealth-milestone-calculator/">Wealth Milestones</a>
+        </div>
+        <div class="footer-col">
+          <h4>Finance</h4>
+          <a href="/finance-calculators/">All Finance Calculators</a>
+          <a href="/finance-calculators/compound-interest-calculator/">Compound Interest</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateCompoundGrowth() {
+      if (!CalcWise.validateForm('cg-form')) return;
+
+      const P = CalcWise.parseNumber(document.getElementById('cg-initial').value);
+      const rate = parseFloat(document.getElementById('cg-rate').value) || 0;
+      const n = parseInt(document.getElementById('cg-freq').value);
+      const years = parseInt(document.getElementById('cg-years').value) || 1;
+      const pmt = CalcWise.parseNumber(document.getElementById('cg-monthly').value) || 0;
+      const r = rate / 100;
+
+      function calcFV(t) {
+        const principalFV = P * Math.pow(1 + r / n, n * t);
+        let pmtFV = 0;
+        if (pmt > 0 && r > 0) {
+          // Monthly additions, compounded using monthly rate
+          const rMonthly = r / 12;
+          const months = t * 12;
+          pmtFV = pmt * ((Math.pow(1 + rMonthly, months) - 1) / rMonthly);
+        } else if (pmt > 0) {
+          pmtFV = pmt * t * 12;
+        }
+        return principalFV + pmtFV;
+      }
+
+      const finalValue = calcFV(years);
+      const totalContributions = P + pmt * years * 12;
+      const totalGrowth = finalValue - totalContributions;
+      const multiple = finalValue / P;
+      const ear = (Math.pow(1 + r / n, n) - 1) * 100;
+
+      CalcWise.setText('cg-final', CalcWise.formatCurrency(finalValue));
+      CalcWise.setText('cg-total-growth', CalcWise.formatCurrency(totalGrowth));
+      CalcWise.setText('cg-multiple', multiple.toFixed(2) + 'x');
+      CalcWise.setText('cg-contributions', CalcWise.formatCurrency(totalContributions));
+      CalcWise.setText('cg-ear', ear.toFixed(3) + '%');
+
+      // Build year-by-year table
+      let tbody = '';
+      let prevFV = P;
+      for (let t = 1; t <= years; t++) {
+        const fv = calcFV(t);
+        const yearGrowth = fv - prevFV;
+        const yearGrowthPct = (yearGrowth / prevFV) * 100;
+        const yearMultiple = fv / P;
+        tbody += `<tr>
+          <td>${t}</td>
+          <td>${CalcWise.formatCurrency(fv)}</td>
+          <td>${CalcWise.formatCurrency(yearGrowth)}</td>
+          <td>${yearGrowthPct.toFixed(1)}%</td>
+          <td>${yearMultiple.toFixed(2)}x</td>
+        </tr>`;
+        prevFV = fv;
+      }
+      CalcWise.setHtml('cg-table-body', tbody);
+
+      CalcWise.showResults('cg-results');
+    }
+
+    function resetCompoundGrowth() {
+      document.getElementById('cg-form').reset();
+      CalcWise.hideResults('cg-results');
+    }
+  </script>
+</body>
+</html>

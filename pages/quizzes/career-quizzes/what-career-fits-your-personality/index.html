@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What Career Fits Your Personality? – Quiz | CalcWise</title>
+  <meta name="description" content="Align your work style, risk tolerance, and income goals with the right career path. 10-question personality quiz with instant career type results.">
+  <link rel="canonical" href="https://calcwise.io/quizzes/career-quizzes/what-career-fits-your-personality/">
+  <meta property="og:title" content="What Career Fits Your Personality? – Quiz | CalcWise">
+  <meta property="og:description" content="Find which career path matches your personality and income goals. 10 questions.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcwise.io/quizzes/career-quizzes/what-career-fits-your-personality/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="What Career Fits Your Personality? – Quiz | CalcWise">
+  <meta name="twitter:description" content="Find which career path matches your personality and income goals. 10 questions.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+  <link rel="stylesheet" href="/css/quiz.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://calcwise.io/"},
+    {"@type":"ListItem","position":2,"name":"Quizzes","item":"https://calcwise.io/quizzes/"},
+    {"@type":"ListItem","position":3,"name":"Career Quizzes","item":"https://calcwise.io/quizzes/career-quizzes/"},
+    {"@type":"ListItem","position":4,"name":"What Career Fits Your Personality?","item":"https://calcwise.io/quizzes/career-quizzes/what-career-fits-your-personality/"}
+  ]}
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/business-calculators/">Business</a>
+        <a href="/quizzes/" aria-current="page">Quizzes</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/business-calculators/">Business Calculators</a>
+      <a href="/quizzes/">Quizzes</a>
+      <a href="/about.html">About</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/quizzes/">Quizzes</a></li>
+          <li><a href="/quizzes/career-quizzes/">Career Quizzes</a></li>
+          <li><span aria-current="page">What Career Fits Your Personality?</span></li>
+        </ol>
+      </nav>
+
+      <div class="quiz-container">
+        <h1>What Career Fits Your Personality?</h1>
+        <p>The best career isn't always the highest-paying one — it's the one that aligns with how you naturally work, what risks you can tolerate, and what income level you need to live well. This quiz maps your work style, risk appetite, and values to one of five career archetypes, each with distinct financial paths. Answer 10 questions to find your match.</p>
+
+        <div style="margin:1.5rem 0;text-align:center;min-height:90px;background:var(--color-gray-100);border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--color-gray-400);font-size:0.85rem;">Advertisement</div>
+
+        <div id="quiz-area">
+          <div id="quiz-start">
+            <div class="quiz-question" style="text-align:center;">
+              <p style="font-size:1.1rem;color:var(--color-text-muted);margin-bottom:1.5rem;">10 questions &bull; About 5 minutes &bull; Instant results</p>
+              <button class="btn btn-primary btn-lg" onclick="startQuiz()">Start Quiz</button>
+            </div>
+          </div>
+          <div id="quiz-main" style="display:none;"></div>
+          <div id="quiz-results" style="display:none;"></div>
+        </div>
+
+        <section class="faq-section" aria-labelledby="faq-heading" style="margin-top:3rem;">
+          <h2 id="faq-heading">Frequently Asked Questions</h2>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false"><span>Can personality genuinely predict career success?</span><svg class="faq-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M10 4v12M4 10h12"/></svg></button>
+            <div class="faq-answer"><p>Personality traits like risk tolerance, preference for independence, and people orientation are meaningful predictors of career fit and satisfaction. However, skills, education, and market demand ultimately determine income. This quiz identifies alignment, not destiny — the same skills can be applied in many career paths.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false"><span>Which career type earns the most money?</span><svg class="faq-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M10 4v12M4 10h12"/></svg></button>
+            <div class="faq-answer"><p>Income potential varies widely within each type. Entrepreneurs have the highest ceiling but the highest variance. Corporate professionals in finance, law, or technology can earn $150k–$500k+. Technical specialists in high-demand fields command strong premiums. The key is aligning your type with the highest-value application of that style.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false"><span>How do I calculate a fair freelance rate vs. a salary?</span><svg class="faq-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M10 4v12M4 10h12"/></svg></button>
+            <div class="faq-answer"><p>A freelancer earning the equivalent of a $100k salary needs to charge significantly more — typically $130k–$150k gross — to account for self-employment taxes (15.3%), health insurance, retirement savings, and unpaid time (vacations, sick days, downtime between clients). Use the freelance rate calculator to find your minimum viable rate.</p></div>
+          </div>
+        </section>
+
+        <section style="margin-top:3rem;" aria-labelledby="related-heading">
+          <h2 id="related-heading">Related Career Quizzes</h2>
+          <div class="quiz-grid">
+            <a href="/quizzes/career-quizzes/should-you-freelance-or-stay-employed/" class="quiz-card">
+              <div class="quiz-card__badge">Career</div>
+              <h3>Should You Freelance or Stay Employed?</h3>
+              <p>Compare the financial realities of freelancing vs. a salaried career.</p>
+              <span class="quiz-card__cta">Take quiz <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </a>
+            <a href="/quizzes/career-quizzes/what-remote-job-suits-you/" class="quiz-card">
+              <div class="quiz-card__badge">Career</div>
+              <h3>What Remote Job Suits You?</h3>
+              <p>Match your skills and work style to the best remote career paths.</p>
+              <span class="quiz-card__cta">Take quiz <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </a>
+            <a href="/quizzes/career-quizzes/how-financially-secure-is-your-career/" class="quiz-card">
+              <div class="quiz-card__badge">Career</div>
+              <h3>How Financially Secure Is Your Career?</h3>
+              <p>Assess your income resilience and long-term financial security.</p>
+              <span class="quiz-card__cta">Take quiz <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </a>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="#1B4D3E" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators and quizzes built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Career Quizzes</h4>
+          <a href="/quizzes/career-quizzes/is-your-salary-competitive/">Salary Check</a>
+          <a href="/quizzes/career-quizzes/should-you-change-jobs/">Change Jobs?</a>
+          <a href="/quizzes/career-quizzes/should-you-freelance-or-stay-employed/">Freelance or Employed?</a>
+          <a href="/quizzes/career-quizzes/">View All</a>
+        </div>
+        <div class="footer-col">
+          <h4>Other Quizzes</h4>
+          <a href="/quizzes/business-quizzes/">Business Quizzes</a>
+          <a href="/quizzes/lifestyle-cost-quizzes/">Lifestyle Quizzes</a>
+          <a href="/quizzes/retirement-quizzes/">Retirement Quizzes</a>
+          <a href="/quizzes/">All Quizzes</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about.html">About</a>
+          <a href="/contact.html">Contact</a>
+          <a href="/privacy.html">Privacy Policy</a>
+          <a href="/terms.html">Terms of Use</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/privacy.html">Privacy</a>
+          <a href="/terms.html">Terms</a>
+          <a href="/disclaimer.html">Disclaimer</a>
+          <a href="/sitemap.xml">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    // Scoring: track scores for each archetype
+    // E=Entrepreneur, C=Corporate, CR=Creative, T=Technical, S=Service
+    const questions = [
+      {
+        question: "When given a project, how do you prefer to work?",
+        options: ["Independently — I drive my own work and timeline", "On a structured team with clear roles", "Collaboratively and creatively with others", "Deep focus on a specific technical problem"],
+        scores: [['E',2],['C',2],['CR',2],['T',2]],
+        explanation: "Work style is a fundamental predictor of career fit and long-term satisfaction.",
+        weight: 1
+      },
+      {
+        question: "What work environment do you thrive in?",
+        options: ["I create my own environment — office, home, café, anywhere", "A professional corporate setting with clear hierarchy", "A creative studio, agency, or flexible collaborative space", "A focused technical environment — lab, office, or remote desk"],
+        scores: [['E',2],['C',2],['CR',2],['T',2]],
+        explanation: "Environment preference reflects both productivity style and career culture alignment.",
+        weight: 1
+      },
+      {
+        question: "How do you feel about financial risk?",
+        options: ["I embrace risk — big upside justifies potential losses", "I prefer stability — predictable salary and career progression", "Some risk is okay if it lets me do creative work I love", "I want predictability — I'm motivated by mastery, not risk"],
+        scores: [['E',2],['C',2],['CR',2],['T',2]],
+        explanation: "Risk tolerance is strongly predictive of entrepreneurial vs. employed career success.",
+        weight: 1
+      },
+      {
+        question: "Which matters more to you — income level or meaningful work?",
+        options: ["Income — I want maximum earning potential even if work is hard", "Balance — good salary with some meaning", "Meaning — I'll accept lower pay to do work that matters to me", "Both equally — I want to be the best at something that pays well"],
+        scores: [['E',2],['C',2],['CR',2],['T',2]],
+        explanation: "This value alignment affects long-term satisfaction and which trade-offs you can sustain.",
+        weight: 1
+      },
+      {
+        question: "Do you prefer structured processes or flexible approaches?",
+        options: ["Totally flexible — I build my own systems", "Structured — I appreciate defined processes and clear expectations", "Flexible — creativity requires freedom from rigid rules", "Structured but deep — I like process within my specialized domain"],
+        scores: [['E',2],['C',2],['CR',2],['T',2]],
+        explanation: "Structure preference predicts fit with organizational cultures from startups to enterprises.",
+        weight: 1
+      },
+      {
+        question: "How comfortable are you in customer-facing or client-facing roles?",
+        options: ["Very comfortable — I love selling, pitching, and building relationships", "Comfortable in professional client settings", "Prefer limited client contact — let my work speak for itself", "Not comfortable — I prefer technical depth over people work"],
+        scores: [['E',2],['S',2],['CR',2],['T',2]],
+        explanation: "Client-facing comfort is essential for entrepreneurship and service roles; less critical in technical and creative solo work.",
+        weight: 1
+      },
+      {
+        question: "Are you more creative or analytical in how you solve problems?",
+        options: ["Entrepreneurial — I use both as needed to find opportunities", "Analytical — I prefer data, process, and logical frameworks", "Creative — I prefer novel ideas and visual or narrative approaches", "Deeply analytical — I love technical depth and precision"],
+        scores: [['E',2],['C',2],['CR',2],['T',2]],
+        explanation: "Problem-solving orientation drives career satisfaction and performance in roles that match your natural style.",
+        weight: 1
+      },
+      {
+        question: "Do you prefer physical, hands-on work or mental/desk-based work?",
+        options: ["Either — what matters is ownership and results", "Mental and desk-based — I prefer knowledge work", "Either, as long as it has creative output", "Mental — I prefer technical cognitive work"],
+        scores: [['E',1],['C',2],['CR',2],['T',2]],
+        explanation: "Physical vs. mental work preference narrows career paths significantly and affects day-to-day satisfaction.",
+        weight: 1
+      },
+      {
+        question: "Do you aspire to lead or manage others?",
+        options: ["Yes — I want to build a team and organization", "Yes — management track is my career goal", "Sometimes — I'd lead creative projects but not large organizations", "Not particularly — I prefer deep individual contribution"],
+        scores: [['E',2],['C',2],['CR',1],['T',1]],
+        explanation: "Leadership aspiration affects career path — management vs. individual contributor tracks have very different financial trajectories.",
+        weight: 1
+      },
+      {
+        question: "How do you feel about business travel or working across locations?",
+        options: ["Love it — travel and flexibility are assets, not burdens", "Fine with moderate travel for work", "Prefer local or flexible — heavy travel disrupts creative flow", "Prefer stable location — I do my best work in a focused environment"],
+        scores: [['E',2],['C',2],['CR',1],['T',1]],
+        explanation: "Travel tolerance affects both career options and compensation — high-travel roles often command significant premiums.",
+        weight: 1
+      }
+    ];
+
+    // Track votes for each archetype
+    let archetypeScores = {E:0, C:0, CR:0, T:0, S:0};
+    let currentQ = 0, answers = [];
+
+    const archetypeMap = {
+      'E': 0, 'C': 1, 'CR': 2, 'T': 3, 'S': 4
+    };
+
+    function startQuiz() {
+      document.getElementById('quiz-start').style.display = 'none';
+      document.getElementById('quiz-main').style.display = 'block';
+      renderQuestion();
+    }
+
+    function renderQuestion() {
+      const q = questions[currentQ];
+      const pct = Math.round((currentQ / questions.length) * 100);
+      document.getElementById('quiz-main').innerHTML = `
+        <div class="quiz-progress">
+          <div class="quiz-progress__label">
+            <span>Question ${currentQ + 1} of ${questions.length}</span>
+            <span>${pct}% complete</span>
+          </div>
+          <div class="quiz-progress__bar"><div class="quiz-progress__fill" style="width:${pct}%"></div></div>
+        </div>
+        <div class="quiz-question">
+          <div class="quiz-question__number">Question ${currentQ + 1}</div>
+          <div class="quiz-question__text">${q.question}</div>
+          <ul class="quiz-options">
+            ${q.options.map((opt, i) => `
+              <li><button class="quiz-option" onclick="selectAnswer(${i})" aria-label="${opt}">
+                <span class="quiz-option__indicator"></span>
+                <span>${opt}</span>
+              </button></li>`).join('')}
+          </ul>
+          <div id="explanation" style="display:none;" class="quiz-explanation quiz-explanation--correct"></div>
+        </div>
+        <div class="quiz-nav">
+          <span style="color:var(--color-text-muted);font-size:0.875rem;">${currentQ + 1} / ${questions.length}</span>
+          <button class="btn btn-primary" id="next-btn" style="display:none;" onclick="nextQuestion()">
+            ${currentQ + 1 === questions.length ? 'See Results' : 'Next Question'}
+          </button>
+        </div>`;
+    }
+
+    function selectAnswer(idx) {
+      if (document.querySelector('.quiz-option.selected')) return;
+      const q = questions[currentQ];
+      answers.push(idx);
+      // Award points to archetype for this answer
+      if (q.scores[idx]) {
+        archetypeScores[q.scores[idx][0]] += q.scores[idx][1];
+      }
+      const opts = document.querySelectorAll('.quiz-option');
+      opts.forEach((btn, i) => {
+        btn.disabled = true;
+        if (i === idx) btn.classList.add('selected', 'correct');
+      });
+      const expEl = document.getElementById('explanation');
+      expEl.style.display = 'block';
+      expEl.textContent = q.explanation;
+      document.getElementById('next-btn').style.display = 'inline-flex';
+    }
+
+    function nextQuestion() {
+      currentQ++;
+      if (currentQ < questions.length) renderQuestion();
+      else showResults();
+    }
+
+    function showResults() {
+      document.getElementById('quiz-main').style.display = 'none';
+      const resultsEl = document.getElementById('quiz-results');
+      resultsEl.style.display = 'block';
+
+      const top = Object.entries(archetypeScores).sort((a,b) => b[1]-a[1])[0][0];
+
+      const profiles = {
+        E: {
+          label: 'Entrepreneur',
+          tierClass: 'result-score--high',
+          desc: 'You thrive on ownership, risk, and building something from scratch. Your comfort with uncertainty, drive to lead, and focus on high upside put you in the entrepreneurial archetype. The income ceiling is high — but so is the variance.',
+          recs: ['Model your first-year income realistically using a profit margin calculator', 'Calculate the minimum salary replacement you need as an owner', 'Build 12+ months of personal savings before going full-time on your venture', 'Study business financials before launch — cash flow kills more startups than bad ideas']
+        },
+        C: {
+          label: 'Corporate Professional',
+          tierClass: '',
+          desc: 'You value structure, clear progression, and organizational resources. Your analytical mindset, professional communication skills, and stability preference align well with corporate career paths — where high performers earn very well.',
+          recs: ['Benchmark your current salary against corporate pay bands in your industry', 'Use the raise percentage calculator to negotiate strategically at your next review', 'Maximize your 401k match — it\'s free compensation you should never leave on the table', 'Build your network internally — visibility is as important as performance in corporate advancement']
+        },
+        CR: {
+          label: 'Creative Professional',
+          tierClass: '',
+          desc: 'You are motivated by creative expression, novel ideas, and meaningful work. Creative professionals range from high-earning marketing directors to independent artists — your financial outcome depends heavily on how you monetize your skills.',
+          recs: ['Calculate your freelance rate to ensure creative work pays your full cost of living', 'Build a financial buffer for income variability — creative work is often feast or famine', 'Develop business skills alongside creative skills — most successful creatives run a business', 'Use a profit margin calculator if you sell creative products or services']
+        },
+        T: {
+          label: 'Technical Specialist',
+          tierClass: 'result-score--high',
+          desc: 'Deep expertise, precision, and technical mastery are your strengths. Technical specialists in high-demand fields — software engineering, data science, medicine, engineering — command some of the highest and most stable salaries in the market.',
+          recs: ['Identify the highest-value specialization within your technical domain', 'Calculate your hourly rate vs. consulting equivalents to understand your market value', 'Consider whether contract or consulting work could increase your earnings', 'Build a T-shaped skill profile — depth in one area with breadth in adjacent skills']
+        },
+        S: {
+          label: 'Service Professional',
+          tierClass: '',
+          desc: 'You are energized by helping, teaching, or serving others. Service professionals include healthcare workers, educators, coaches, counselors, and skilled tradespeople. Income varies widely by specialization — invest in credentials that command premium rates.',
+          recs: ['Research pay premiums for specialized certifications in your service field', 'Calculate your salary to hourly rate to understand the real value of your time', 'Explore private practice or consulting as a path to higher earnings in service roles', 'Build an emergency fund — service sector income can be variable and client-dependent']
+        }
+      };
+
+      const p = profiles[top];
+      resultsEl.innerHTML = `
+        <div class="quiz-result">
+          <div class="result-score ${p.tierClass}">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </div>
+          <div class="result-category">${p.label}</div>
+          <h2>Your Career Type: ${p.label}</h2>
+          <p>${p.desc}</p>
+          <div class="result-recommendations">
+            <h3>Recommended Next Steps</h3>
+            <ul>${p.recs.map(r => `<li>${r}</li>`).join('')}</ul>
+          </div>
+          <div class="result-actions">
+            <a href="/finance-calculators/salary-to-hourly-calculator/" class="btn btn-primary">Salary to Hourly Calculator</a>
+            <a href="/business-calculators/freelance-rate-calculator/" class="btn btn-secondary">Freelance Rate Calculator</a>
+            <a href="/business-calculators/profit-margin-calculator/" class="btn btn-secondary">Profit Margin Calculator</a>
+          </div>
+          <div style="margin-top:1.5rem;">
+            <button class="btn btn-ghost" onclick="restartQuiz()">Retake Quiz</button>
+          </div>
+        </div>`;
+    }
+
+    function restartQuiz() {
+      currentQ = 0; archetypeScores = {E:0,C:0,CR:0,T:0,S:0}; answers = [];
+      document.getElementById('quiz-results').style.display = 'none';
+      document.getElementById('quiz-main').style.display = 'block';
+      renderQuestion();
+    }
+
+    document.querySelector('.mobile-menu-toggle').addEventListener('click', function() {
+      const nav = document.querySelector('.mobile-nav');
+      const isOpen = nav.classList.toggle('is-open');
+      this.setAttribute('aria-expanded', isOpen);
+      this.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+    });
+    document.querySelectorAll('.faq-question').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        const item = this.closest('.faq-item');
+        const isOpen = item.classList.toggle('is-open');
+        this.setAttribute('aria-expanded', isOpen);
+      });
+    });
+  </script>
+</body>
+</html>

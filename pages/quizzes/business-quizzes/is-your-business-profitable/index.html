@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Is Your Business Profitable? Quiz | CalcWise</title>
+  <meta name="description" content="Take this 7-question quiz to find out if your business is truly profitable. Assess gross margin, net margin trend, owner draws, and more. Get your profitability verdict.">
+  <link rel="canonical" href="https://calcwise.io/quizzes/business-quizzes/is-your-business-profitable/">
+  <meta property="og:title" content="Is Your Business Profitable? Quiz | CalcWise">
+  <meta property="og:description" content="7 questions covering revenue vs expenses, gross margin, COGS awareness, and net margin trend. Find out if your business is healthy, marginal, or losing money.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcwise.io/quizzes/business-quizzes/is-your-business-profitable/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Is Your Business Profitable? Quiz | CalcWise">
+  <meta name="twitter:description" content="7-question quiz to assess your business profitability and get actionable recommendations.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+  <link rel="stylesheet" href="/css/quiz.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/"},
+      {"@type": "ListItem", "position": 2, "name": "Quizzes", "item": "https://calcwise.io/quizzes/"},
+      {"@type": "ListItem", "position": 3, "name": "Business Quizzes", "item": "https://calcwise.io/quizzes/business-quizzes/"},
+      {"@type": "ListItem", "position": 4, "name": "Is Your Business Profitable?", "item": "https://calcwise.io/quizzes/business-quizzes/is-your-business-profitable/"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Is Your Business Profitable? Quiz",
+    "description": "7-question quiz covering revenue vs expenses, gross margin %, owner draws vs profit, accounting tracking, COGS awareness, last profitable month, and net margin trend.",
+    "url": "https://calcwise.io/quizzes/business-quizzes/is-your-business-profitable/",
+    "isPartOf": {"@type": "WebSite", "name": "CalcWise", "url": "https://calcwise.io/"}
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="32" height="32" rx="8" fill="currentColor"/>
+          <path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+        </svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/business-calculators/">Business</a>
+        <a href="/quizzes/" aria-current="page">Quizzes</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/business-calculators/">Business Calculators</a>
+      <a href="/quizzes/">Quizzes</a>
+      <a href="/about.html">About</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/quizzes/">Quizzes</a></li>
+          <li><a href="/quizzes/business-quizzes/">Business Quizzes</a></li>
+          <li><span aria-current="page">Is Your Business Profitable?</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <h1>Is Your Business Profitable?</h1>
+        <p class="intro">Profitability is more than just having revenue — it means your business keeps more than it spends. This 7-question quiz examines your gross margin, net margin trend, cost of goods awareness, and owner compensation habits to give you an honest picture of your business's financial health.</p>
+
+        <!-- Ad Slot -->
+        <div class="ad-slot ad-slot--top" aria-hidden="true"></div>
+
+        <div class="quiz-container" id="quiz">
+          <div class="quiz-progress">
+            <div class="quiz-progress__label">
+              <span id="progress-text">Question 1 of 7</span>
+              <span id="progress-pct">0%</span>
+            </div>
+            <div class="quiz-progress__bar">
+              <div class="quiz-progress__fill" id="progress-bar" style="width:0%"></div>
+            </div>
+          </div>
+          <div id="question-container"></div>
+          <div id="result-container" class="quiz-result hidden"></div>
+        </div>
+
+        <!-- FAQ -->
+        <section class="faq-section" aria-labelledby="faq-heading" style="margin-top:3rem">
+          <h2 id="faq-heading">Frequently Asked Questions</h2>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false"><span>What is a good net profit margin for a small business?</span><svg class="faq-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M10 4v12M4 10h12"/></svg></button>
+            <div class="faq-answer"><p>A net profit margin of 10% or higher is generally considered healthy for most small businesses. Margins vary widely by industry — retail averages 2–5%, while service businesses can achieve 15–30%. The key is tracking whether your margin is improving over time.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false"><span>What is the difference between gross profit and net profit?</span><svg class="faq-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M10 4v12M4 10h12"/></svg></button>
+            <div class="faq-answer"><p>Gross profit is revenue minus the direct cost of goods sold (COGS) — what it costs to produce your product or deliver your service. Net profit subtracts all operating expenses, taxes, and interest from gross profit. A business can have strong gross margins but poor net margins if overhead is too high.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false"><span>Should owner draws be counted as a business expense?</span><svg class="faq-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M10 4v12M4 10h12"/></svg></button>
+            <div class="faq-answer"><p>For sole proprietors and partnerships, owner draws are not technically expenses — they come from profit. However, to assess true profitability, you should assign yourself a market-rate salary as an expense. If the business only "profits" because you're not paying yourself, it's not genuinely profitable.</p></div>
+          </div>
+        </section>
+
+        <!-- Related Quizzes -->
+        <section aria-labelledby="related-heading" style="margin-top:3rem">
+          <h2 id="related-heading">Related Business Quizzes</h2>
+          <div class="quiz-grid" style="grid-template-columns:repeat(auto-fill,minmax(260px,1fr))">
+            <a href="/quizzes/business-quizzes/is-your-pricing-too-low/" class="quiz-card">
+              <div class="quiz-card__badge">Business</div>
+              <h3>Is Your Pricing Too Low?</h3>
+              <p>Discover whether your pricing strategy is leaving money on the table or driving away clients.</p>
+              <span class="quiz-card__cta">Take quiz <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </a>
+            <a href="/quizzes/business-quizzes/how-healthy-is-your-cash-flow/" class="quiz-card">
+              <div class="quiz-card__badge">Business</div>
+              <h3>How Healthy Is Your Cash Flow?</h3>
+              <p>Cash flow and profitability are different things. Find out how well your business manages liquidity.</p>
+              <span class="quiz-card__cta">Take quiz <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </a>
+            <a href="/quizzes/business-quizzes/can-your-business-survive-a-downturn/" class="quiz-card">
+              <div class="quiz-card__badge">Business</div>
+              <h3>Can Your Business Survive a Downturn?</h3>
+              <p>Assess your business's resilience against economic headwinds and revenue shocks.</p>
+              <span class="quiz-card__cta">Take quiz <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </a>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect width="32" height="32" rx="8" fill="currentColor"/>
+              <path d="M8 10h16M8 16h16M8 22h10" stroke="#1B4D3E" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators and quizzes built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Business Quizzes</h4>
+          <a href="/quizzes/business-quizzes/is-your-business-profitable/">Is It Profitable?</a>
+          <a href="/quizzes/business-quizzes/how-healthy-is-your-cash-flow/">Cash Flow Health</a>
+          <a href="/quizzes/business-quizzes/should-you-start-a-business/">Start a Business?</a>
+          <a href="/quizzes/business-quizzes/">View All</a>
+        </div>
+        <div class="footer-col">
+          <h4>Business Calculators</h4>
+          <a href="/business-calculators/profit-margin-calculator/">Profit Margin</a>
+          <a href="/business-calculators/gross-profit-calculator/">Gross Profit</a>
+          <a href="/business-calculators/net-profit-calculator/">Net Profit</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about.html">About</a>
+          <a href="/contact.html">Contact</a>
+          <a href="/privacy.html">Privacy Policy</a>
+          <a href="/terms.html">Terms of Use</a>
+          <a href="/disclaimer.html">Disclaimer</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/privacy.html">Privacy</a>
+          <a href="/terms.html">Terms</a>
+          <a href="/disclaimer.html">Disclaimer</a>
+          <a href="/sitemap.xml">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    document.querySelector('.mobile-menu-toggle').addEventListener('click', function() {
+      const nav = document.querySelector('.mobile-nav');
+      const isOpen = nav.classList.toggle('is-open');
+      this.setAttribute('aria-expanded', isOpen);
+      this.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+    });
+    document.querySelectorAll('.faq-question').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        const item = this.closest('.faq-item');
+        const isOpen = item.classList.toggle('is-open');
+        this.setAttribute('aria-expanded', isOpen);
+      });
+    });
+
+    const questions = [
+      {
+        question: "How does your monthly revenue compare to your total expenses?",
+        options: ["Expenses exceed revenue most months", "Revenue and expenses are roughly equal", "Revenue exceeds expenses by a small amount", "Revenue clearly and consistently exceeds expenses"],
+        scores: [0, 1, 2, 3],
+        explanation: "Consistent revenue above expenses is the foundation of profitability. If you're breaking even or losing money regularly, cost structure or pricing needs immediate attention."
+      },
+      {
+        question: "What is your approximate gross profit margin (revenue minus COGS, divided by revenue)?",
+        options: ["I don't know my gross margin", "Below 20%", "20%–40%", "Above 40%"],
+        scores: [0, 1, 2, 3],
+        explanation: "Gross margin reveals how efficiently you produce your product or service. Below 20% leaves very little room to cover operating expenses. Most healthy businesses target 40%+ gross margins."
+      },
+      {
+        question: "How do you handle owner compensation?",
+        options: ["I take whatever is left after bills", "I take irregular draws with no set amount", "I pay myself a set salary that's below market rate", "I pay myself a market-rate salary and the business still profits"],
+        scores: [0, 1, 2, 3],
+        explanation: "A business that only 'profits' because the owner isn't paying themselves fairly isn't truly profitable. Setting a market-rate salary as an expense gives you an honest profit picture."
+      },
+      {
+        question: "How do you track your business finances?",
+        options: ["I don't track them systematically", "I review bank statements occasionally", "I use a spreadsheet or basic system", "I use accounting software with regular P&L reviews"],
+        scores: [0, 1, 2, 3],
+        explanation: "You can't manage what you don't measure. Accounting software with regular profit & loss reviews is essential for making informed profitability decisions."
+      },
+      {
+        question: "Do you know your Cost of Goods Sold (COGS) or direct service delivery costs?",
+        options: ["No, I have no idea", "I have a rough estimate", "I know it approximately", "Yes, I track it precisely per product/service"],
+        scores: [0, 1, 2, 3],
+        explanation: "COGS awareness is critical for pricing correctly. Without knowing your true cost to deliver, you may be selling at a loss without realising it."
+      },
+      {
+        question: "When was your business last clearly profitable (revenue meaningfully exceeds all expenses including your pay)?",
+        options: ["It has never been profitable", "More than a year ago", "Within the last 6–12 months", "It is profitable right now"],
+        scores: [0, 1, 2, 3],
+        explanation: "Recent, consistent profitability is a strong indicator of a healthy business model. Extended periods without profit signal a structural issue that needs to be addressed."
+      },
+      {
+        question: "What is the trend in your net profit margin over the past 12 months?",
+        options: ["Declining significantly", "Declining slightly", "Stable or flat", "Improving month over month"],
+        scores: [0, 1, 2, 3],
+        explanation: "A rising margin trend indicates your business is scaling efficiently. Declining margins — even if you're technically profitable — signal a problem that will worsen without intervention."
+      }
+    ];
+
+    const results = [
+      {
+        min: 18,
+        label: "Healthy Profit",
+        colorClass: "result-score--high",
+        title: "Your Business Is Healthily Profitable",
+        desc: "Your business shows strong profitability fundamentals — consistent revenue surplus, good margin awareness, and fair owner compensation. Keep optimising and look for opportunities to expand your margins further.",
+        recs: [
+          "Continue reviewing your P&L monthly to catch any margin compression early.",
+          "Explore ways to increase your gross margin through supplier negotiation or product mix optimisation.",
+          "Consider reinvesting a portion of profit into growth initiatives with clear ROI."
+        ]
+      },
+      {
+        min: 12,
+        label: "Marginal",
+        colorClass: "",
+        title: "Your Profitability Is Marginal",
+        desc: "Your business is generating some profit but the margins are thin and the trend may not be moving in the right direction. A few targeted improvements could meaningfully improve your bottom line.",
+        recs: [
+          "Calculate your exact gross and net margins if you haven't already.",
+          "Audit your top 3 expense categories for reduction opportunities.",
+          "Review your pricing — even a 5–10% price increase on your best-selling products can dramatically improve margins."
+        ]
+      },
+      {
+        min: 6,
+        label: "Breaking Even",
+        colorClass: "result-score--mid",
+        title: "Your Business Is Essentially Breaking Even",
+        desc: "Your business is covering its costs but not generating meaningful profit. This is a warning sign — breaking even leaves no buffer for downturns, growth investment, or unexpected expenses.",
+        recs: [
+          "Identify your highest-cost, lowest-margin products or services and consider cutting them.",
+          "Implement accounting software immediately so you have real-time visibility.",
+          "Set a 90-day goal: improve net margin by at least 5 percentage points."
+        ]
+      },
+      {
+        min: 0,
+        label: "Losing Money",
+        colorClass: "result-score--low",
+        title: "Your Business Is Currently Losing Money",
+        desc: "Your business is spending more than it earns, which is unsustainable long-term. Immediate action is required to restructure costs, improve pricing, or evaluate the business model.",
+        recs: [
+          "Conduct an emergency cost audit — identify and cut every non-essential expense this week.",
+          "Revisit your pricing strategy; your prices may be too low to sustain the business.",
+          "Consider bringing in an accountant or business advisor to help you create a recovery plan.",
+          "Use our profit margin and COGS calculators to model the impact of pricing changes."
+        ]
+      }
+    ];
+
+    const calculatorLinks = [
+      { href: "/business-calculators/profit-margin-calculator/", label: "Profit Margin Calculator" },
+      { href: "/business-calculators/gross-profit-calculator/", label: "Gross Profit Calculator" },
+      { href: "/business-calculators/net-profit-calculator/", label: "Net Profit Calculator" }
+    ];
+
+    let current = 0;
+    let totalScore = 0;
+    let answered = false;
+
+    function renderQuestion() {
+      answered = false;
+      const q = questions[current];
+      const pct = Math.round((current / questions.length) * 100);
+      document.getElementById('progress-bar').style.width = pct + '%';
+      document.getElementById('progress-text').textContent = 'Question ' + (current + 1) + ' of ' + questions.length;
+      document.getElementById('progress-pct').textContent = pct + '%';
+      document.getElementById('question-container').innerHTML = `
+        <div class="quiz-question">
+          <div class="quiz-question__number">Question ${current + 1}</div>
+          <p class="quiz-question__text">${q.question}</p>
+          <ul class="quiz-options" role="list">
+            ${q.options.map((opt, i) => `
+              <li>
+                <button class="quiz-option" data-index="${i}" onclick="selectAnswer(${i})">
+                  <span class="quiz-option__indicator"></span>
+                  <span>${opt}</span>
+                </button>
+              </li>`).join('')}
+          </ul>
+          <div id="explanation" class="quiz-explanation" style="display:none"></div>
+          <div class="quiz-nav">
+            <span></span>
+            <button class="btn btn-primary" id="next-btn" onclick="nextQuestion()" disabled>
+              ${current < questions.length - 1 ? 'Next Question' : 'See Results'}
+            </button>
+          </div>
+        </div>`;
+    }
+
+    function selectAnswer(idx) {
+      if (answered) return;
+      answered = true;
+      const q = questions[current];
+      const btns = document.querySelectorAll('.quiz-option');
+      const bestIdx = q.scores.indexOf(Math.max(...q.scores));
+      btns.forEach(function(btn, i) {
+        if (i === bestIdx) btn.classList.add('correct');
+        else if (i === idx && idx !== bestIdx) btn.classList.add('incorrect');
+      });
+      btns[idx].classList.add('selected');
+      totalScore += q.scores[idx];
+      const expEl = document.getElementById('explanation');
+      expEl.style.display = 'block';
+      expEl.className = 'quiz-explanation ' + (idx === bestIdx ? 'quiz-explanation--correct' : 'quiz-explanation--incorrect');
+      expEl.textContent = q.explanation;
+      document.getElementById('next-btn').disabled = false;
+    }
+
+    function nextQuestion() {
+      current++;
+      if (current < questions.length) {
+        renderQuestion();
+      } else {
+        showResult();
+      }
+    }
+
+    function showResult() {
+      document.getElementById('progress-bar').style.width = '100%';
+      document.getElementById('progress-text').textContent = 'Complete!';
+      document.getElementById('progress-pct').textContent = '100%';
+      document.getElementById('question-container').innerHTML = '';
+      const maxScore = questions.length * 3;
+      const result = results.find(r => totalScore >= r.min);
+      const rc = document.getElementById('result-container');
+      rc.classList.remove('hidden');
+      rc.innerHTML = `
+        <div class="result-score ${result.colorClass}">
+          <span class="result-score__number">${totalScore}/${maxScore}</span>
+          <span class="result-score__label">Score</span>
+        </div>
+        <div class="result-category">${result.label}</div>
+        <h2>${result.title}</h2>
+        <p>${result.desc}</p>
+        <div class="result-recommendations">
+          <h3>Recommended Next Steps</h3>
+          <ul>${result.recs.map(r => `<li>${r}</li>`).join('')}</ul>
+        </div>
+        <div class="result-actions">
+          ${calculatorLinks.map(l => `<a href="${l.href}" class="btn btn-secondary">${l.label}</a>`).join('')}
+        </div>
+        <div class="result-actions" style="margin-top:1rem">
+          <button class="btn btn-outline" onclick="restartQuiz()">Retake Quiz</button>
+        </div>`;
+    }
+
+    function restartQuiz() {
+      current = 0; totalScore = 0;
+      document.getElementById('result-container').classList.add('hidden');
+      renderQuestion();
+    }
+
+    renderQuestion();
+  </script>
+</body>
+</html>

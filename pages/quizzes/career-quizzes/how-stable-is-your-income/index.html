@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How Stable Is Your Income? – Career Quiz | CalcWise</title>
+  <meta name="description" content="Assess the security of your job, the financial health of your employer, and your income resilience against layoffs and economic shifts. 7-question quiz.">
+  <link rel="canonical" href="https://calcwise.io/quizzes/career-quizzes/how-stable-is-your-income/">
+  <meta property="og:title" content="How Stable Is Your Income? – Career Quiz | CalcWise">
+  <meta property="og:description" content="7 questions to assess your income stability and career resilience.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcwise.io/quizzes/career-quizzes/how-stable-is-your-income/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="How Stable Is Your Income? – Career Quiz | CalcWise">
+  <meta name="twitter:description" content="7 questions to assess your income stability and career resilience.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+  <link rel="stylesheet" href="/css/quiz.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://calcwise.io/"},
+    {"@type":"ListItem","position":2,"name":"Quizzes","item":"https://calcwise.io/quizzes/"},
+    {"@type":"ListItem","position":3,"name":"Career Quizzes","item":"https://calcwise.io/quizzes/career-quizzes/"},
+    {"@type":"ListItem","position":4,"name":"How Stable Is Your Income?","item":"https://calcwise.io/quizzes/career-quizzes/how-stable-is-your-income/"}
+  ]}
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/business-calculators/">Business</a>
+        <a href="/quizzes/" aria-current="page">Quizzes</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/business-calculators/">Business Calculators</a>
+      <a href="/quizzes/">Quizzes</a>
+      <a href="/about.html">About</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+  </header>
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/quizzes/">Quizzes</a></li>
+          <li><a href="/quizzes/career-quizzes/">Career Quizzes</a></li>
+          <li><span aria-current="page">How Stable Is Your Income?</span></li>
+        </ol>
+      </nav>
+      <div class="quiz-container">
+        <h1>How Stable Is Your Income?</h1>
+        <p>Income stability is one of the most overlooked dimensions of financial health. It's not just about how much you earn — it's about how predictable and secure that income is. This quiz assesses your employment type, industry resilience, company health, skills replaceability, and financial buffers to give you a clear stability score.</p>
+        <div style="margin:1.5rem 0;text-align:center;min-height:90px;background:var(--color-gray-100);border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--color-gray-400);font-size:0.85rem;">Advertisement</div>
+        <div id="quiz-area">
+          <div id="quiz-start">
+            <div class="quiz-question" style="text-align:center;">
+              <p style="font-size:1.1rem;color:var(--color-text-muted);margin-bottom:1.5rem;">7 questions &bull; About 3 minutes &bull; Instant results</p>
+              <button class="btn btn-primary btn-lg" onclick="startQuiz()">Start Quiz</button>
+            </div>
+          </div>
+          <div id="quiz-main" style="display:none;"></div>
+          <div id="quiz-results" style="display:none;"></div>
+        </div>
+        <section class="faq-section" aria-labelledby="faq-heading" style="margin-top:3rem;">
+          <h2 id="faq-heading">Frequently Asked Questions</h2>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false"><span>Which industries are most recession-proof?</span><svg class="faq-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M10 4v12M4 10h12"/></svg></button>
+            <div class="faq-answer"><p>Healthcare, utilities, government, essential retail (grocery), and education tend to hold up best in recessions. Technology and finance can be volatile. Hospitality, travel, luxury goods, and construction are historically most vulnerable. Being in a recession-resistant industry doesn't guarantee individual job security, but it significantly reduces systemic risk.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false"><span>How much emergency fund do I need for income instability?</span><svg class="faq-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M10 4v12M4 10h12"/></svg></button>
+            <div class="faq-answer"><p>The standard 3-month fund is designed for stable employment situations. If your income is volatile or your industry is risky, target 6–12 months. Freelancers and self-employed professionals often need 6+ months due to payment delays and income variability. Use the emergency fund calculator to find your exact target.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false"><span>How can I diversify my income to reduce risk?</span><svg class="faq-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M10 4v12M4 10h12"/></svg></button>
+            <div class="faq-answer"><p>Income diversification can include freelancing or consulting on the side, dividend-paying investments, rental income, digital products, or a part-time business. The key is building income streams that don't all depend on the same single employer. Even $500–$1,000/month in side income materially reduces your financial vulnerability.</p></div>
+          </div>
+        </section>
+        <section style="margin-top:3rem;" aria-labelledby="related-heading">
+          <h2 id="related-heading">Related Career Quizzes</h2>
+          <div class="quiz-grid">
+            <a href="/quizzes/career-quizzes/how-financially-secure-is-your-career/" class="quiz-card">
+              <div class="quiz-card__badge">Career</div>
+              <h3>How Financially Secure Is Your Career?</h3>
+              <p>A broader look at your long-term career financial security.</p>
+              <span class="quiz-card__cta">Take quiz <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </a>
+            <a href="/quizzes/career-quizzes/should-you-freelance-or-stay-employed/" class="quiz-card">
+              <div class="quiz-card__badge">Career</div>
+              <h3>Should You Freelance or Stay Employed?</h3>
+              <p>Compare the income stability of freelancing vs. employment.</p>
+              <span class="quiz-card__cta">Take quiz <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </a>
+            <a href="/quizzes/career-quizzes/can-you-afford-to-quit-your-job/" class="quiz-card">
+              <div class="quiz-card__badge">Career</div>
+              <h3>Can You Afford to Quit?</h3>
+              <p>Assess your financial readiness for a career change or gap.</p>
+              <span class="quiz-card__cta">Take quiz <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </a>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="#1B4D3E" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators and quizzes built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Career Quizzes</h4>
+          <a href="/quizzes/career-quizzes/is-your-salary-competitive/">Salary Check</a>
+          <a href="/quizzes/career-quizzes/should-you-change-jobs/">Change Jobs?</a>
+          <a href="/quizzes/career-quizzes/">View All</a>
+        </div>
+        <div class="footer-col">
+          <h4>Calculators</h4>
+          <a href="/finance-calculators/emergency-fund-calculator/">Emergency Fund</a>
+          <a href="/finance-calculators/budget-calculator/">Budget Calculator</a>
+          <a href="/business-calculators/freelance-income-calculator/">Freelance Income</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about.html">About</a>
+          <a href="/privacy.html">Privacy Policy</a>
+          <a href="/terms.html">Terms of Use</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/privacy.html">Privacy</a>
+          <a href="/terms.html">Terms</a>
+          <a href="/disclaimer.html">Disclaimer</a>
+          <a href="/sitemap.xml">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    const questions = [
+      {
+        question: "What is your employment type?",
+        options: ["Full-time permanent employee with a large or established company", "Full-time employee at a small company or startup", "Part-time or contract employee", "Self-employed, freelance, or gig worker"],
+        correct: 0,
+        explanation: "Permanent employment at established companies offers the highest baseline stability. Self-employment and gig work involve the highest income variability.",
+        weight: 2
+      },
+      {
+        question: "How recession-proof is your industry?",
+        options: ["Very resilient — healthcare, utilities, essential government services", "Mostly stable — education, law, essential retail", "Moderately exposed — tech, finance, professional services", "Highly cyclical — hospitality, travel, construction, luxury goods"],
+        correct: 0,
+        explanation: "Industry cyclicality is a major systemic risk factor. In recessions, cyclical industries see 2–5x more layoffs than recession-resistant sectors.",
+        weight: 2
+      },
+      {
+        question: "How financially healthy is your current employer?",
+        options: ["Strong — growing revenue, profitable, no layoff signs", "Stable — no obvious financial distress", "Uncertain — budget cuts, hiring freezes, or unclear financials", "Struggling — recent layoffs, declining revenue, or financial instability"],
+        correct: 0,
+        explanation: "Employer financial health is the most direct predictor of short-term job security. Warning signs deserve serious attention.",
+        weight: 2
+      },
+      {
+        question: "How easily could your specific role be replaced — by another person or automation?",
+        options: ["Hard to replace — highly specialized or relationship-based role", "Somewhat specialized but replaceable with 3–6 months training", "Routine tasks — moderately replaceable", "Easily automated or outsourced — high replacement risk"],
+        correct: 0,
+        explanation: "Role replaceability determines your negotiating power and security. Unique, high-skill roles carry inherently lower layoff risk.",
+        weight: 2
+      },
+      {
+        question: "How marketable are your skills if you lost your job tomorrow?",
+        options: ["Highly marketable — I could find comparable work within 1–2 months", "Marketable — I'd likely find work within 3–6 months", "Limited — it would take 6–12 months to find equivalent work", "Very limited — my skills are narrow or declining in demand"],
+        correct: 0,
+        explanation: "Marketability acts as an insurance policy against job loss. High marketability means any income disruption would be temporary.",
+        weight: 2
+      },
+      {
+        question: "Do you have income sources beyond your primary job?",
+        options: ["Yes — side income, investments, or rental income covers 20%+ of my needs", "Some diversification — modest side income or investment dividends", "Minimal — small side income with limited impact", "None — I rely entirely on one employer for all income"],
+        correct: 0,
+        explanation: "Income diversification dramatically reduces financial vulnerability. Even modest side income cushions against job loss.",
+        weight: 1
+      },
+      {
+        question: "How many months of expenses do you have saved in an emergency fund?",
+        options: ["6 or more months", "3–6 months", "1–3 months", "Less than 1 month"],
+        correct: 0,
+        explanation: "Emergency savings are your buffer against income disruption. Anything under 3 months creates serious financial vulnerability.",
+        weight: 2
+      }
+    ];
+
+    let currentQ = 0, score = 0, answers = [];
+
+    function startQuiz() {
+      document.getElementById('quiz-start').style.display = 'none';
+      document.getElementById('quiz-main').style.display = 'block';
+      renderQuestion();
+    }
+
+    function renderQuestion() {
+      const q = questions[currentQ];
+      const pct = Math.round((currentQ / questions.length) * 100);
+      document.getElementById('quiz-main').innerHTML = `
+        <div class="quiz-progress">
+          <div class="quiz-progress__label"><span>Question ${currentQ + 1} of ${questions.length}</span><span>${pct}% complete</span></div>
+          <div class="quiz-progress__bar"><div class="quiz-progress__fill" style="width:${pct}%"></div></div>
+        </div>
+        <div class="quiz-question">
+          <div class="quiz-question__number">Question ${currentQ + 1}</div>
+          <div class="quiz-question__text">${q.question}</div>
+          <ul class="quiz-options">
+            ${q.options.map((opt, i) => `<li><button class="quiz-option" onclick="selectAnswer(${i})"><span class="quiz-option__indicator"></span><span>${opt}</span></button></li>`).join('')}
+          </ul>
+          <div id="explanation" style="display:none;" class="quiz-explanation"></div>
+        </div>
+        <div class="quiz-nav">
+          <span style="color:var(--color-text-muted);font-size:0.875rem;">${currentQ + 1} / ${questions.length}</span>
+          <button class="btn btn-primary" id="next-btn" style="display:none;" onclick="nextQuestion()">${currentQ + 1 === questions.length ? 'See Results' : 'Next Question'}</button>
+        </div>`;
+    }
+
+    function selectAnswer(idx) {
+      if (document.querySelector('.quiz-option.selected')) return;
+      const q = questions[currentQ];
+      answers.push(idx);
+      score += (q.options.length - 1 - idx) * q.weight;
+      document.querySelectorAll('.quiz-option').forEach((btn, i) => {
+        btn.disabled = true;
+        if (i === idx) btn.classList.add('selected');
+        if (i === 0) btn.classList.add('correct');
+        if (i === idx && i !== 0) btn.classList.add('incorrect');
+      });
+      const expEl = document.getElementById('explanation');
+      expEl.style.display = 'block';
+      expEl.className = 'quiz-explanation ' + (idx === 0 ? 'quiz-explanation--correct' : 'quiz-explanation--incorrect');
+      expEl.textContent = q.explanation;
+      document.getElementById('next-btn').style.display = 'inline-flex';
+    }
+
+    function nextQuestion() {
+      currentQ++;
+      if (currentQ < questions.length) renderQuestion(); else showResults();
+    }
+
+    function showResults() {
+      document.getElementById('quiz-main').style.display = 'none';
+      const resultsEl = document.getElementById('quiz-results');
+      resultsEl.style.display = 'block';
+      const maxScore = questions.reduce((s, q) => s + (q.options.length - 1) * q.weight, 0);
+      const pct = score / maxScore;
+      let tier, tierClass, desc, recs;
+      if (pct >= 0.75) {
+        tier = 'Very Stable'; tierClass = 'result-score--high';
+        desc = 'Your income is well-protected across multiple dimensions — employer health, industry resilience, skill marketability, and financial buffers. You are in an excellent position to weather economic disruption.';
+        recs = ['Maintain your emergency fund and continue building it toward 6 months', 'Invest in skills that keep you ahead of market shifts', 'Consider additional income diversification to further reduce risk'];
+      } else if (pct >= 0.5) {
+        tier = 'Stable'; tierClass = '';
+        desc = 'Your income situation is generally solid, though one or two areas — employer health, skills marketability, or emergency savings — warrant attention.';
+        recs = ['Shore up your weakest stability dimension this year', 'Build emergency savings to at least 3–6 months of expenses', 'Explore modest income diversification to reduce single-employer dependence'];
+      } else if (pct >= 0.25) {
+        tier = 'Somewhat Volatile'; tierClass = 'result-score--mid';
+        desc = 'Several risk factors are present in your income situation. A layoff or company instability event could create real financial stress. It\'s worth taking protective steps now.';
+        recs = ['Prioritize building a 3-month emergency fund as your first protection layer', 'Update your resume and reconnect with your professional network now', 'Start developing a side income stream while your primary income is intact', 'Use the budget calculator to identify cost reductions you could make if needed'];
+      } else {
+        tier = 'High Risk'; tierClass = 'result-score--low';
+        desc = 'Your income situation carries significant vulnerability. You are exposed across multiple risk factors — company health, industry cyclicality, skills replaceability, and/or insufficient savings. Take action now while you still have income.';
+        recs = ['Build an emergency fund immediately — even $1,000 in a dedicated account is a start', 'Begin a quiet job search to understand your external market value and alternatives', 'Develop transferable skills that apply to more stable industries or roles', 'Use the budget calculator to find 20%+ of your income to redirect toward financial security'];
+      }
+      resultsEl.innerHTML = `
+        <div class="quiz-result">
+          <div class="result-score ${tierClass}"><span class="result-score__number">${Math.round(pct*100)}%</span><span class="result-score__label">Stable</span></div>
+          <div class="result-category">${tier}</div>
+          <h2>Your result: ${tier}</h2>
+          <p>${desc}</p>
+          <div class="result-recommendations"><h3>Recommended Next Steps</h3><ul>${recs.map(r=>`<li>${r}</li>`).join('')}</ul></div>
+          <div class="result-actions">
+            <a href="/finance-calculators/emergency-fund-calculator/" class="btn btn-primary">Emergency Fund Calculator</a>
+            <a href="/finance-calculators/budget-calculator/" class="btn btn-secondary">Budget Calculator</a>
+            <a href="/business-calculators/freelance-income-calculator/" class="btn btn-secondary">Freelance Income Calculator</a>
+          </div>
+          <div style="margin-top:1.5rem;"><button class="btn btn-ghost" onclick="restartQuiz()">Retake Quiz</button></div>
+        </div>`;
+    }
+
+    function restartQuiz() {
+      currentQ = 0; score = 0; answers = [];
+      document.getElementById('quiz-results').style.display = 'none';
+      document.getElementById('quiz-main').style.display = 'block';
+      renderQuestion();
+    }
+
+    document.querySelector('.mobile-menu-toggle').addEventListener('click', function() {
+      const nav = document.querySelector('.mobile-nav');
+      const isOpen = nav.classList.toggle('is-open');
+      this.setAttribute('aria-expanded', isOpen);
+      this.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+    });
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', function() {
+        const item = this.closest('.faq-item');
+        const isOpen = item.classList.toggle('is-open');
+        this.setAttribute('aria-expanded', isOpen);
+      });
+    });
+  </script>
+</body>
+</html>

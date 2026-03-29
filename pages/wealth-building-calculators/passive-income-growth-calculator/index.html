@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Passive Income Growth Calculator - Snowball Your Passive Income | CalcWise</title>
+  <meta name="description" content="Calculate how passive income grows over time when you reinvest earnings. See passive income in year 1, 5, 10, and 20, total income generated, and the snowball effect of reinvestment.">
+  <meta name="keywords" content="passive income calculator, passive income growth, reinvestment calculator, income snowball, dividend reinvestment">
+  <link rel="canonical" href="https://calcwise.io/wealth-building-calculators/passive-income-growth-calculator/">
+
+  <meta property="og:title" content="Passive Income Growth Calculator - Snowball Your Passive Income">
+  <meta property="og:description" content="See how reinvesting passive income creates a powerful snowball effect over 20 years.">
+  <meta property="og:url" content="https://calcwise.io/wealth-building-calculators/passive-income-growth-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Passive Income Growth Calculator - Snowball Your Passive Income">
+  <meta name="twitter:description" content="See how reinvesting passive income creates a powerful snowball effect over 20 years.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Wealth Building Calculators", "item": "https://calcwise.io/wealth-building-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "Passive Income Growth Calculator", "item": "https://calcwise.io/wealth-building-calculators/passive-income-growth-calculator/" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the passive income snowball effect?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The snowball effect occurs when you reinvest your passive income to buy more income-generating assets. The new assets produce more income, which buys even more assets — creating exponential growth over time. A $100,000 investment yielding 5% with full reinvestment can grow to generate $265,000 per year in passive income by year 20." }
+      },
+      {
+        "@type": "Question",
+        "name": "What counts as passive income for this calculator?",
+        "acceptedAnswer": { "@type": "Answer", "text": "This calculator applies to any yield-generating investment: dividend stocks, REITs, bonds, rental property cash flow, peer-to-peer lending, or high-yield savings. The key inputs are the initial investment, the annual yield percentage, and the reinvestment rate." }
+      },
+      {
+        "@type": "Question",
+        "name": "What reinvestment rate should I use?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Use 100% if you plan to reinvest all passive income (e.g., a DRIP program). Use a lower rate (50–75%) if you plan to spend part of the income while reinvesting the rest. The higher the reinvestment rate, the more powerful the snowball effect." }
+      },
+      {
+        "@type": "Question",
+        "name": "How does this differ from compound interest?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Passive income growth and compound interest are related concepts. In compound interest, returns are automatically added to principal. In passive income reinvestment, your periodic income distribution is used to acquire additional assets, which then generate their own income — the mechanism is the same but framed as a real-world income-building strategy." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/wealth-building-calculators/" aria-current="page">Wealth Building</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/wealth-building-calculators/">Wealth Building Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/wealth-building-calculators/">Wealth Building Calculators</a></li>
+          <li><span aria-current="page">Passive Income Growth Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="article-content">
+          <h1>Passive Income Growth Calculator</h1>
+          <p>Passive income that is reinvested back into income-generating assets creates one of the most powerful wealth-building forces available to individual investors. This calculator shows how your annual passive income grows in year 1, year 5, year 10, and year 20 — along with total cumulative passive income and the dramatic difference between reinvesting all income vs. spending it. See the snowball effect in action.</p>
+
+          <div class="calc-container mt-8">
+            <div class="calc-header">
+              <h2>Calculate Passive Income Growth</h2>
+              <p>Model the passive income snowball effect over time</p>
+            </div>
+            <div class="calc-body">
+              <form id="pi-form" onsubmit="return false;">
+                <div class="form-group">
+                  <label class="form-label" for="pi-investment">Initial Investment</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="pi-investment" name="initialInvestment" class="form-input" placeholder="100000" min="1" step="1000" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="pi-yield">Annual Passive Income Yield</label>
+                  <div class="input-suffix">
+                    <input type="number" id="pi-yield" name="annualYield" class="form-input" placeholder="5" min="0.1" max="50" step="0.1" required>
+                    <span class="suffix">%</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="pi-reinvest">Reinvestment Rate</label>
+                  <div class="input-suffix">
+                    <input type="number" id="pi-reinvest" name="reinvestRate" class="form-input" placeholder="100" min="0" max="100" step="1" required>
+                    <span class="suffix">%</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="pi-years">Years</label>
+                  <input type="number" id="pi-years" name="years" class="form-input" placeholder="20" min="1" max="60" step="1" required>
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calculatePassiveIncome()">Calculate Passive Income</button>
+                  <button type="button" class="btn btn-reset" onclick="resetPassiveIncome()">Reset</button>
+                </div>
+              </form>
+
+              <div id="pi-results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">Annual Passive Income (Final Year)</div>
+                  <div class="result-value" id="pi-final-income"></div>
+                </div>
+                <div class="result-grid">
+                  <div class="result-item">
+                    <div class="result-label">Passive Income — Year 1</div>
+                    <div class="result-value" id="pi-yr1"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Passive Income — Year 5</div>
+                    <div class="result-value" id="pi-yr5"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Passive Income — Year 10</div>
+                    <div class="result-value" id="pi-yr10"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Passive Income — Year 20</div>
+                    <div class="result-value" id="pi-yr20"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Total Passive Income Generated</div>
+                    <div class="result-value" id="pi-total"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Final Portfolio Value</div>
+                    <div class="result-value" id="pi-portfolio"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Snowball Growth (Year 1 vs Final)</div>
+                    <div class="result-value" id="pi-snowball"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Monthly Passive Income (Final)</div>
+                    <div class="result-value" id="pi-monthly"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <section class="content-section">
+            <h2>Passive Income Growth Formula</h2>
+            <p>Each year, the portfolio grows by the reinvested portion of passive income, and the following year's income is based on the larger portfolio:</p>
+            <div class="formula-box">
+              <div class="formula-label">Year-over-Year Portfolio Growth</div>
+              Portfolio(t) = Portfolio(t&minus;1) &times; (1 + yield &times; reinvestRate)
+            </div>
+            <div class="formula-box">
+              <div class="formula-label">Annual Passive Income at Year t</div>
+              Income(t) = Portfolio(t) &times; yield
+            </div>
+            <div class="formula-box">
+              <div class="formula-label">Effective Growth Rate</div>
+              r<sub>eff</sub> = yield &times; reinvestmentRate
+            </div>
+            <p>Where <strong>yield</strong> is the annual passive income yield (as a decimal) and <strong>reinvestmentRate</strong> is the fraction of income that is reinvested. The portfolio compounds at the effective rate each year.</p>
+          </section>
+
+          <section class="content-section">
+            <h2>How to Use This Calculator</h2>
+            <ol>
+              <li><strong>Enter your initial investment</strong> — the amount invested in income-generating assets.</li>
+              <li><strong>Enter the annual passive income yield</strong> — the percentage of your portfolio paid out as income each year (e.g., 5% for a 5% dividend yield).</li>
+              <li><strong>Enter the reinvestment rate</strong> — the percentage of income you reinvest (100% for full reinvestment, 0% if you spend all income).</li>
+              <li><strong>Enter the number of years</strong> — your investment horizon.</li>
+              <li><strong>Click "Calculate Passive Income"</strong> to see income at key milestones, total income generated, and the snowball multiplier.</li>
+            </ol>
+          </section>
+
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>A $100,000 investment in dividend stocks with a 5% annual yield and 100% reinvestment grows the portfolio to $265,330 after 20 years and generates $13,266 in annual passive income — versus just $5,000 in year one. Total cumulative passive income over those 20 years exceeds $165,000, and the snowball effect produces a 2.65x increase in annual income. Reducing reinvestment to 50% cuts the final passive income to about $7,700 per year — demonstrating the compounding power of reinvestment.</p>
+          </section>
+
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What is the passive income snowball effect?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>The snowball effect occurs when you reinvest your passive income to buy more income-generating assets. The new assets produce more income, which buys even more assets — creating exponential growth over time. A $100,000 investment yielding 5% with full reinvestment can grow to generate $13,000+ per year in passive income by year 20.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What counts as passive income for this calculator?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>This calculator applies to any yield-generating investment: dividend stocks, REITs, bonds, rental property cash flow, peer-to-peer lending, or high-yield savings. The key inputs are the initial investment, the annual yield percentage, and the reinvestment rate.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What reinvestment rate should I use?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Use 100% if you plan to reinvest all passive income (e.g., a DRIP program). Use a lower rate (50–75%) if you plan to spend part of the income while reinvesting the rest. The higher the reinvestment rate, the more powerful the snowball effect.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                How does this differ from compound interest?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Passive income growth and compound interest are related concepts. In compound interest, returns are automatically added to principal. In passive income reinvestment, your periodic income distribution is used to acquire additional assets, which then generate their own income — the mechanism is the same but framed as a real-world income-building strategy.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/wealth-building-calculators/wealth-accumulation-calculator/" class="card card-link">
+                <h3>Wealth Accumulation Calculator</h3>
+                <p>Track total wealth growth including inflation adjustment.</p>
+              </a>
+              <a href="/wealth-building-calculators/compound-growth-calculator/" class="card card-link">
+                <h3>Compound Growth Calculator</h3>
+                <p>See how any investment grows with compounding over time.</p>
+              </a>
+              <a href="/wealth-building-calculators/asset-allocation-growth-calculator/" class="card card-link">
+                <h3>Asset Allocation Growth Calculator</h3>
+                <p>Compare growth across different portfolio allocations.</p>
+              </a>
+              <a href="/wealth-building-calculators/millionaire-timeline-calculator/" class="card card-link">
+                <h3>Millionaire Timeline Calculator</h3>
+                <p>Find out when you'll reach $1M, $2M, and $5M.</p>
+              </a>
+            </div>
+          </section>
+
+          <div class="ad-slot ad-slot-leaderboard"></div>
+
+          <div class="disclaimer">
+            <strong>Disclaimer:</strong> This calculator provides estimates for informational and educational purposes only. Actual yields, reinvestment rates, and portfolio values are subject to market conditions, taxes, and fees. This is not financial advice. Consult a qualified financial professional before making investment decisions.
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Wealth Building</h4>
+          <a href="/wealth-building-calculators/">All Wealth Building Calculators</a>
+          <a href="/wealth-building-calculators/millionaire-timeline-calculator/">Millionaire Timeline</a>
+          <a href="/wealth-building-calculators/wealth-milestone-calculator/">Wealth Milestones</a>
+        </div>
+        <div class="footer-col">
+          <h4>Finance</h4>
+          <a href="/finance-calculators/">All Finance Calculators</a>
+          <a href="/finance-calculators/compound-interest-calculator/">Compound Interest</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculatePassiveIncome() {
+      if (!CalcWise.validateForm('pi-form')) return;
+
+      const investment = CalcWise.parseNumber(document.getElementById('pi-investment').value);
+      const yieldRate = parseFloat(document.getElementById('pi-yield').value) / 100 || 0;
+      const reinvestRate = parseFloat(document.getElementById('pi-reinvest').value) / 100 || 0;
+      const years = parseInt(document.getElementById('pi-years').value) || 20;
+
+      const effectiveGrowthRate = yieldRate * reinvestRate;
+
+      function portfolioAt(t) {
+        return investment * Math.pow(1 + effectiveGrowthRate, t);
+      }
+      function incomeAt(t) {
+        return portfolioAt(t) * yieldRate;
+      }
+
+      let totalIncome = 0;
+      for (let t = 1; t <= years; t++) {
+        totalIncome += incomeAt(t - 1) * (1 - reinvestRate) + portfolioAt(t - 1) * yieldRate * (1 - reinvestRate);
+      }
+      // Simpler: total income = sum of annual income payout (non-reinvested portion) each year
+      totalIncome = 0;
+      for (let t = 1; t <= years; t++) {
+        const portfolio = portfolioAt(t - 1);
+        const annualIncome = portfolio * yieldRate;
+        totalIncome += annualIncome; // total income generated before reinvestment
+      }
+
+      const yr1Income = incomeAt(0);
+      const yr5Income = years >= 5  ? incomeAt(4)  : incomeAt(years - 1);
+      const yr10Income = years >= 10 ? incomeAt(9)  : incomeAt(years - 1);
+      const yr20Income = years >= 20 ? incomeAt(19) : incomeAt(years - 1);
+      const finalIncome = incomeAt(years - 1);
+      const finalPortfolio = portfolioAt(years);
+      const snowball = yr1Income > 0 ? finalIncome / yr1Income : 1;
+
+      CalcWise.setText('pi-final-income', CalcWise.formatCurrency(finalIncome) + '/yr');
+      CalcWise.setText('pi-yr1', CalcWise.formatCurrency(yr1Income) + '/yr');
+      CalcWise.setText('pi-yr5', CalcWise.formatCurrency(yr5Income) + '/yr');
+      CalcWise.setText('pi-yr10', CalcWise.formatCurrency(yr10Income) + '/yr');
+      CalcWise.setText('pi-yr20', CalcWise.formatCurrency(yr20Income) + '/yr');
+      CalcWise.setText('pi-total', CalcWise.formatCurrency(totalIncome));
+      CalcWise.setText('pi-portfolio', CalcWise.formatCurrency(finalPortfolio));
+      CalcWise.setText('pi-snowball', snowball.toFixed(2) + 'x growth');
+      CalcWise.setText('pi-monthly', CalcWise.formatCurrency(finalIncome / 12) + '/mo');
+
+      CalcWise.showResults('pi-results');
+    }
+
+    function resetPassiveIncome() {
+      document.getElementById('pi-form').reset();
+      CalcWise.hideResults('pi-results');
+    }
+  </script>
+</body>
+</html>

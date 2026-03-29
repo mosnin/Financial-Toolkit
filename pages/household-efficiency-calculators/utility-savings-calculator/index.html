@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Utility Savings Calculator - Electric, Gas & Water Bill Reduction | CalcWise</title>
+    <meta name="description" content="Calculate monthly and annual savings on your electric, gas, and water bills. Enter current bills and target reduction percentages to see your 5-year savings and CO2 impact.">
+    <link rel="canonical" href="https://calcwise.io/household-efficiency-calculators/utility-savings-calculator/">
+    <meta property="og:title" content="Utility Savings Calculator | CalcWise">
+    <meta property="og:description" content="Find out how much you can save on electricity, gas, and water by setting reduction targets. See monthly, annual, and 5-year cumulative savings.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://calcwise.io/household-efficiency-calculators/utility-savings-calculator/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Utility Savings Calculator | CalcWise">
+    <meta name="twitter:description" content="Calculate your utility bill savings across electricity, gas, and water with reduction targets.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/design-system.css">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/"},
+            {"@type": "ListItem", "position": 2, "name": "Household Efficiency Calculators", "item": "https://calcwise.io/household-efficiency-calculators/"},
+            {"@type": "ListItem", "position": 3, "name": "Utility Savings Calculator"}
+        ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {"@type": "Question", "name": "What is a realistic utility reduction target?", "acceptedAnswer": {"@type": "Answer", "text": "Most households can achieve 10-20% reductions on electricity and gas through behavioral changes alone (adjusting thermostat, unplugging devices, shorter showers). Upgrades like LED lighting, efficient appliances, and improved insulation can push savings to 25-40%."}},
+            {"@type": "Question", "name": "How is CO2 reduction calculated?", "acceptedAnswer": {"@type": "Answer", "text": "The EPA estimates that 1 kWh of electricity produces about 0.386 kg of CO2. For gas, each therm produces roughly 5.3 kg of CO2. Water treatment and delivery uses energy too -- approximately 0.002 kg CO2 per gallon. This calculator uses average US emissions factors."}},
+            {"@type": "Question", "name": "How long does it take to see utility savings?", "acceptedAnswer": {"@type": "Answer", "text": "Behavioral changes (thermostat adjustments, shorter showers) produce savings immediately starting on your next bill. Equipment upgrades like LED bulbs start saving the moment they are installed. More involved upgrades like insulation or new appliances take months to years to pay back their upfront costs."}},
+            {"@type": "Question", "name": "Which utility offers the most savings potential?", "acceptedAnswer": {"@type": "Answer", "text": "Electricity typically offers the greatest dollar savings because it is used for heating, cooling, lighting, and appliances. Heating fuels (gas/oil) can be very high in cold climates. Water savings, while smaller in dollar terms, are important for environmental reasons and become significant in drought-prone areas with tiered pricing."}}
+        ]
+    }
+    </script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="/" class="logo">
+                <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+                CalcWise
+            </a>
+            <nav class="main-nav">
+                <a href="/real-estate-calculators/">Real Estate</a>
+                <a href="/advanced-real-estate-calculators/">Advanced RE</a>
+                <a href="/energy-utility-calculators/">Energy</a>
+                <a href="/household-efficiency-calculators/">Household</a>
+                <a href="/finance-calculators/">Finance</a>
+            </nav>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+            </button>
+        </div>
+        <nav class="mobile-nav">
+            <a href="/real-estate-calculators/">Real Estate Calculators</a>
+            <a href="/advanced-real-estate-calculators/">Advanced Real Estate</a>
+            <a href="/energy-utility-calculators/">Energy &amp; Utility</a>
+            <a href="/household-efficiency-calculators/">Household Efficiency</a>
+            <a href="/finance-calculators/">Finance Calculators</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <nav class="breadcrumbs" aria-label="Breadcrumb">
+                <ol>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/household-efficiency-calculators/">Household Efficiency Calculators</a></li>
+                    <li><span aria-current="page">Utility Savings Calculator</span></li>
+                </ol>
+            </nav>
+
+            <div class="page-content">
+                <div class="calc-page-layout">
+                    <div class="calc-page-main">
+                        <h1>Utility Savings Calculator</h1>
+                        <p class="subtitle" style="color: var(--color-gray-600); font-size: var(--text-lg); line-height: var(--leading-relaxed); margin-bottom: var(--space-8);">
+                            Enter your current monthly electric, gas, and water bills along with a target reduction percentage for each. See your monthly savings, annual impact, 5-year cumulative total, and estimated CO2 reduction.
+                        </p>
+
+                        <div class="calc-container">
+                            <div class="calc-header">
+                                <h2>Utility Savings</h2>
+                                <p>Calculate savings across all three utilities</p>
+                            </div>
+                            <div class="calc-body">
+                                <form id="utility-form">
+                                    <div class="form-group">
+                                        <label class="form-label" for="electric-bill">Current Monthly Electric Bill</label>
+                                        <div class="input-prefix">
+                                            <span class="prefix">$</span>
+                                            <input type="number" id="electric-bill" name="electricBill" class="form-input" placeholder="150" min="0" step="1" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label" for="electric-reduction">Electric Reduction Target (%)</label>
+                                        <input type="number" id="electric-reduction" name="electricReduction" class="form-input" placeholder="15" min="0" max="100" step="1" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label" for="gas-bill">Current Monthly Gas Bill</label>
+                                        <div class="input-prefix">
+                                            <span class="prefix">$</span>
+                                            <input type="number" id="gas-bill" name="gasBill" class="form-input" placeholder="80" min="0" step="1">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label" for="gas-reduction">Gas Reduction Target (%)</label>
+                                        <input type="number" id="gas-reduction" name="gasReduction" class="form-input" placeholder="10" min="0" max="100" step="1">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label" for="water-bill">Current Monthly Water Bill</label>
+                                        <div class="input-prefix">
+                                            <span class="prefix">$</span>
+                                            <input type="number" id="water-bill" name="waterBill" class="form-input" placeholder="60" min="0" step="1">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label" for="water-reduction">Water Reduction Target (%)</label>
+                                        <input type="number" id="water-reduction" name="waterReduction" class="form-input" placeholder="10" min="0" max="100" step="1">
+                                    </div>
+                                    <div class="calc-actions">
+                                        <button type="button" class="btn btn-calculate btn-full" onclick="calculateUtilitySavings()">Calculate Savings</button>
+                                        <button type="reset" class="btn btn-reset">Reset</button>
+                                    </div>
+                                </form>
+
+                                <div id="results" class="calc-results hidden">
+                                    <div class="result-primary">
+                                        <div class="result-label">Total Monthly Savings</div>
+                                        <div class="result-value" id="result-monthly-savings">$0</div>
+                                    </div>
+                                    <div class="result-grid result-grid-3">
+                                        <div class="result-item">
+                                            <div class="result-label">Annual Savings</div>
+                                            <div class="result-value" id="result-annual-savings">$0</div>
+                                        </div>
+                                        <div class="result-item">
+                                            <div class="result-label">5-Year Cumulative</div>
+                                            <div class="result-value" id="result-5year-savings">$0</div>
+                                        </div>
+                                        <div class="result-item">
+                                            <div class="result-label">CO2 Reduction (lbs/yr)</div>
+                                            <div class="result-value" id="result-co2">0</div>
+                                        </div>
+                                        <div class="result-item">
+                                            <div class="result-label">Electric Savings/Mo</div>
+                                            <div class="result-value" id="result-electric-savings">$0</div>
+                                        </div>
+                                        <div class="result-item">
+                                            <div class="result-label">Gas Savings/Mo</div>
+                                            <div class="result-value" id="result-gas-savings">$0</div>
+                                        </div>
+                                        <div class="result-item">
+                                            <div class="result-label">Water Savings/Mo</div>
+                                            <div class="result-value" id="result-water-savings">$0</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="ad-slot ad-slot-leaderboard"></div>
+
+                        <section class="content-section">
+                            <h2>Utility Savings Formula</h2>
+                            <div class="formula-box">
+                                <div class="formula-label">Savings Calculations</div>
+                                Monthly Savings per Utility = Current Bill &times; (Reduction % / 100)
+Total Monthly Savings = Electric Savings + Gas Savings + Water Savings
+Annual Savings = Total Monthly Savings &times; 12
+5-Year Cumulative = Annual Savings &times; 5
+CO2 Reduction = (Electric Savings / Avg Rate &times; 0.852 lbs/kWh) + (Gas Savings / Avg Therm Cost &times; 11.7 lbs/therm)
+                            </div>
+                            <p>CO2 estimates use EPA average emissions factors: 0.386 kg (0.852 lbs) per kWh for electricity and 5.3 kg (11.7 lbs) per therm for natural gas. Actual figures vary by your utility's energy mix.</p>
+                        </section>
+
+                        <section class="content-section">
+                            <h2>How to Use This Calculator</h2>
+                            <ol>
+                                <li><strong>Gather your bills</strong> -- find your last three months of electric, gas, and water bills and average them.</li>
+                                <li><strong>Set reduction targets</strong> -- be realistic. A 10% reduction is achievable through behavior changes alone; 20-25% typically requires some equipment upgrades.</li>
+                                <li><strong>Click "Calculate Savings"</strong> to see your monthly, annual, and 5-year projected savings.</li>
+                                <li><strong>Review the CO2 figure</strong> to understand the environmental impact of your efficiency improvements.</li>
+                            </ol>
+                        </section>
+
+                        <section class="content-section">
+                            <h2>Example Scenario</h2>
+                            <h3>Average US Household with 15% Reductions</h3>
+                            <p>Electric: $150/mo &times; 15% = <strong>$22.50/mo saved</strong></p>
+                            <p>Gas: $80/mo &times; 10% = <strong>$8.00/mo saved</strong></p>
+                            <p>Water: $60/mo &times; 10% = <strong>$6.00/mo saved</strong></p>
+                            <p>Total Monthly Savings: <strong>$36.50/month</strong></p>
+                            <p>Annual Savings: <strong>$438/year</strong></p>
+                            <p>5-Year Cumulative: <strong>$2,190</strong></p>
+                            <p>Estimated CO2 Reduction: approximately <strong>720 lbs/year</strong> -- equivalent to planting about 6 trees.</p>
+                        </section>
+
+                        <section class="faq-section">
+                            <h2>Frequently Asked Questions</h2>
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">
+                                    What is a realistic utility reduction target?
+                                    <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>Most households can achieve 10-20% reductions through behavioral changes alone. Upgrades like LED lighting, efficient appliances, and improved insulation can push savings to 25-40%.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">
+                                    How is CO2 reduction calculated?
+                                    <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>The EPA estimates 0.852 lbs of CO2 per kWh of electricity and 11.7 lbs per therm of natural gas. This calculator converts dollar savings back to approximate energy units using average national rates to estimate CO2 reduction.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">
+                                    How long does it take to see utility savings?
+                                    <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>Behavioral changes produce savings immediately. Equipment upgrades like LED bulbs start saving the moment they are installed. Larger investments like insulation or new appliances take months to years to pay back their upfront costs.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">
+                                    Which utility offers the most savings potential?
+                                    <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>Electricity typically offers the greatest dollar savings because it powers heating, cooling, lighting, and appliances. Gas savings are significant in cold climates. Water savings are smaller in dollar terms but matter greatly in drought-prone areas with tiered pricing.</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="related-calculators">
+                            <h2>Related Calculators</h2>
+                            <div class="grid grid-3">
+                                <a href="/household-efficiency-calculators/energy-efficiency-savings-calculator/" class="card card-link">
+                                    <div class="card-icon">E</div>
+                                    <h3>Energy Efficiency Savings</h3>
+                                    <p>See ROI on LED, smart thermostat, insulation, and HVAC upgrades.</p>
+                                </a>
+                                <a href="/household-efficiency-calculators/water-usage-savings-calculator/" class="card card-link">
+                                    <div class="card-icon">W</div>
+                                    <h3>Water Usage Savings</h3>
+                                    <p>Calculate gallons saved and bill reduction from water upgrades.</p>
+                                </a>
+                                <a href="/household-efficiency-calculators/home-operating-cost-calculator/" class="card card-link">
+                                    <div class="card-icon">H</div>
+                                    <h3>Home Operating Cost</h3>
+                                    <p>Get your full monthly home operating cost picture.</p>
+                                </a>
+                                <a href="/energy-utility-calculators/electricity-cost-calculator/" class="card card-link">
+                                    <div class="card-icon">$</div>
+                                    <h3>Electricity Cost Calculator</h3>
+                                    <p>Calculate your exact electricity costs by kWh usage and rate.</p>
+                                </a>
+                            </div>
+                        </section>
+
+                        <div class="disclaimer">
+                            <strong>Disclaimer:</strong> Savings estimates are projections based on your inputs and average national utility rates. Actual savings will vary based on local rates, usage patterns, equipment efficiency, and seasonal factors. CO2 figures use EPA average US grid emissions factors and may not reflect your local utility's energy mix.
+                        </div>
+
+                        <div class="ad-slot ad-slot-leaderboard"></div>
+                    </div>
+
+                    <aside class="calc-page-sidebar">
+                        <div class="sidebar-card">
+                            <h3>Household Efficiency Tools</h3>
+                            <a href="/household-efficiency-calculators/utility-savings-calculator/">Utility Savings</a>
+                            <a href="/household-efficiency-calculators/energy-efficiency-savings-calculator/">Energy Efficiency Savings</a>
+                            <a href="/household-efficiency-calculators/water-usage-savings-calculator/">Water Usage Savings</a>
+                            <a href="/household-efficiency-calculators/grocery-waste-savings-calculator/">Grocery Waste Savings</a>
+                            <a href="/household-efficiency-calculators/home-efficiency-savings-calculator/">Home Efficiency Savings</a>
+                            <a href="/household-efficiency-calculators/appliance-cost-comparison-calculator/">Appliance Cost Comparison</a>
+                            <a href="/household-efficiency-calculators/heating-cost-efficiency-calculator/">Heating Cost Efficiency</a>
+                            <a href="/household-efficiency-calculators/cooling-cost-efficiency-calculator/">Cooling Cost Efficiency</a>
+                            <a href="/household-efficiency-calculators/household-maintenance-savings-calculator/">Maintenance Savings</a>
+                            <a href="/household-efficiency-calculators/home-operating-cost-calculator/">Home Operating Cost</a>
+                        </div>
+                        <div class="ad-slot ad-slot-rectangle"></div>
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="/" class="logo">
+                        <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+                        CalcWise
+                    </a>
+                    <p>Free, accurate financial calculators for everyone. Make smarter money decisions with CalcWise.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Household Efficiency</h4>
+                    <a href="/household-efficiency-calculators/utility-savings-calculator/">Utility Savings</a>
+                    <a href="/household-efficiency-calculators/energy-efficiency-savings-calculator/">Energy Efficiency</a>
+                    <a href="/household-efficiency-calculators/water-usage-savings-calculator/">Water Savings</a>
+                    <a href="/household-efficiency-calculators/home-operating-cost-calculator/">Home Operating Cost</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Energy &amp; Utility</h4>
+                    <a href="/energy-utility-calculators/electricity-cost-calculator/">Electricity Cost</a>
+                    <a href="/energy-utility-calculators/solar-savings-calculator/">Solar Savings</a>
+                    <a href="/energy-utility-calculators/gas-bill-calculator/">Gas Bill</a>
+                    <a href="/energy-utility-calculators/water-usage-cost-calculator/">Water Usage Cost</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <a href="/about/">About</a>
+                    <a href="/contact/">Contact</a>
+                    <a href="/privacy/">Privacy Policy</a>
+                    <a href="/terms/">Terms of Use</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; 2026 CalcWise. All rights reserved.</span>
+                <div class="footer-links">
+                    <a href="/privacy/">Privacy</a>
+                    <a href="/terms/">Terms</a>
+                    <a href="/sitemap.xml">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/calculator-engine.js"></script>
+    <script src="/js/search-index.js"></script>
+    <script>
+    function calculateUtilitySavings() {
+        if (!CalcWise.validateForm('utility-form')) return;
+
+        const values = CalcWise.getFormValues('utility-form');
+        const electricBill = values.electricBill || 0;
+        const electricReduction = values.electricReduction || 0;
+        const gasBill = values.gasBill || 0;
+        const gasReduction = values.gasReduction || 0;
+        const waterBill = values.waterBill || 0;
+        const waterReduction = values.waterReduction || 0;
+
+        const electricSavings = electricBill * (electricReduction / 100);
+        const gasSavings = gasBill * (gasReduction / 100);
+        const waterSavings = waterBill * (waterReduction / 100);
+        const totalMonthly = electricSavings + gasSavings + waterSavings;
+        const annualSavings = totalMonthly * 12;
+        const fiveYearSavings = annualSavings * 5;
+
+        // CO2 estimates: electric ~0.852 lbs/kWh at avg $0.16/kWh => 5.325 lbs per $
+        // gas ~11.7 lbs/therm at avg $1.30/therm => 9.0 lbs per $
+        const co2Electric = electricSavings * (0.852 / 0.16); // lbs/year approximate
+        const co2Gas = gasSavings * (11.7 / 1.30);
+        const totalCO2Annual = (co2Electric + co2Gas) * 12;
+
+        CalcWise.setText('result-monthly-savings', CalcWise.formatCurrency(totalMonthly));
+        CalcWise.setText('result-annual-savings', CalcWise.formatCurrency(annualSavings, 0));
+        CalcWise.setText('result-5year-savings', CalcWise.formatCurrency(fiveYearSavings, 0));
+        CalcWise.setText('result-co2', CalcWise.formatNumber(Math.round(totalCO2Annual)) + ' lbs');
+        CalcWise.setText('result-electric-savings', CalcWise.formatCurrency(electricSavings));
+        CalcWise.setText('result-gas-savings', CalcWise.formatCurrency(gasSavings));
+        CalcWise.setText('result-water-savings', CalcWise.formatCurrency(waterSavings));
+
+        CalcWise.showResults('results');
+    }
+
+    document.getElementById('utility-form').addEventListener('reset', function() {
+        setTimeout(() => CalcWise.hideResults('results'), 0);
+    });
+    </script>
+</body>
+</html>

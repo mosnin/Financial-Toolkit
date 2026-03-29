@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Client Profitability Calculator for Freelancers | CalcWise</title>
+  <meta name="description" content="Calculate each client's true effective hourly rate, profit margin, and annual value. Find out which clients are worth keeping and which are costing you money.">
+  <link rel="canonical" href="https://calcwise.io/freelancer-calculators/client-profitability-calculator/">
+  <meta property="og:title" content="Client Profitability Calculator for Freelancers | CalcWise">
+  <meta property="og:description" content="Calculate each client's true effective hourly rate, profit margin, and annual value. Find out which clients are worth keeping.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcwise.io/freelancer-calculators/client-profitability-calculator/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Client Profitability Calculator for Freelancers | CalcWise">
+  <meta name="twitter:description" content="Calculate each client's true effective hourly rate, profit margin, and annual value.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/"},
+      {"@type": "ListItem", "position": 2, "name": "Freelancer Calculators", "item": "https://calcwise.io/freelancer-calculators/"},
+      {"@type": "ListItem", "position": 3, "name": "Client Profitability Calculator"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do I calculate a client's effective hourly rate?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Divide the client's monthly revenue by the total hours you actually spend on them — including billable hours, project management, revisions, and client communication. This gives the true hourly value of that relationship."}
+      },
+      {
+        "@type": "Question",
+        "name": "What impact do late payments have on client profitability?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Late payments create cash flow stress and require collection effort. You can quantify this as a monthly dollar cost for follow-up time and interest cost of delayed cash. A client who pays 60 days late is materially less profitable than one who pays on NET-15."}
+      },
+      {
+        "@type": "Question",
+        "name": "When should I fire a freelance client?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Consider ending a client relationship when their effective hourly rate is well below your target rate, they frequently request revisions outside scope, they pay late consistently, or the stress and overhead time required outweighs the revenue they provide."}
+      },
+      {
+        "@type": "Question",
+        "name": "How do I calculate annual client value?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Multiply the client's net monthly profit contribution by 12 to get annual value. This helps prioritize retention efforts and compare clients against each other on a common basis."}
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="logo">
+        <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav">
+        <a href="/">Home</a>
+        <a href="/pages/business-calculators/">Business</a>
+        <a href="/pages/financial-calculators/">Financial</a>
+        <a href="/pages/tax-calculators/">Tax</a>
+        <a href="/pages/freelancer-calculators/" aria-current="page">Freelancer</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav">
+      <a href="/">Home</a>
+      <a href="/pages/business-calculators/">Business Calculators</a>
+      <a href="/pages/financial-calculators/">Financial Calculators</a>
+      <a href="/pages/tax-calculators/">Tax Calculators</a>
+      <a href="/pages/freelancer-calculators/">Freelancer Calculators</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/pages/freelancer-calculators/">Freelancer Calculators</a></li>
+          <li><span aria-current="page">Client Profitability Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="calc-page-layout">
+          <div class="calc-page-main">
+            <h1>Client Profitability Calculator</h1>
+            <p class="subtitle" style="font-size:var(--text-lg);color:var(--color-gray-600);margin-bottom:var(--space-8);line-height:var(--leading-relaxed);">Not all clients are created equal. This calculator reveals each client's true effective hourly rate, actual profit margin, and annual value by factoring in project management overhead, revision time, and late payment impact. Use it regularly to identify which client relationships to invest in — and which to exit.</p>
+
+            <div class="calc-container">
+              <div class="calc-header">
+                <h2>Client Profitability Calculator</h2>
+                <p>Uncover the true value of each client relationship</p>
+              </div>
+              <div class="calc-body">
+                <form id="client-form" onsubmit="return false;">
+                  <div class="calc-grid calc-grid-2col">
+                    <div class="form-group">
+                      <label class="form-label" for="client-revenue">Client Monthly Revenue</label>
+                      <div class="input-prefix">
+                        <span class="prefix">$</span>
+                        <input type="number" id="client-revenue" class="form-input" placeholder="5000" min="0" step="1" required>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label" for="target-rate">Your Target Hourly Rate</label>
+                      <div class="input-prefix">
+                        <span class="prefix">$</span>
+                        <input type="number" id="target-rate" class="form-input" placeholder="100" min="0" step="1" required>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="calc-grid calc-grid-2col">
+                    <div class="form-group">
+                      <label class="form-label" for="billable-hours">Billable Hours Spent / Month</label>
+                      <input type="number" id="billable-hours" class="form-input" placeholder="30" min="0" step="0.5" required>
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label" for="pm-hours">Project Management / Admin Hours</label>
+                      <input type="number" id="pm-hours" class="form-input" placeholder="5" min="0" step="0.5">
+                    </div>
+                  </div>
+
+                  <div class="calc-grid calc-grid-2col">
+                    <div class="form-group">
+                      <label class="form-label" for="revision-hours">Revision Hours / Month</label>
+                      <input type="number" id="revision-hours" class="form-input" placeholder="3" min="0" step="0.5">
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label" for="late-payment">Late Payment Impact / Month</label>
+                      <div class="input-prefix">
+                        <span class="prefix">$</span>
+                        <input type="number" id="late-payment" class="form-input" placeholder="0" min="0" step="10">
+                      </div>
+                      <span class="form-hint" style="display:block;margin-top:var(--space-1);">Cost of follow-up, cash flow stress (est.)</span>
+                    </div>
+                  </div>
+
+                  <div class="calc-actions">
+                    <button type="button" class="btn btn-calculate btn-full" onclick="calculateClientProfit()">Analyze Client</button>
+                    <button type="button" class="btn btn-reset" onclick="resetClientForm()">Reset</button>
+                  </div>
+                </form>
+
+                <div id="results" class="calc-results hidden">
+                  <div class="result-primary">
+                    <div class="result-label">Verdict</div>
+                    <div class="result-value" id="result-verdict" style="font-size:var(--text-xl);">--</div>
+                  </div>
+                  <div class="result-grid result-grid-3">
+                    <div class="result-item">
+                      <div class="result-label">Effective Hourly Rate</div>
+                      <div class="result-value" id="result-eff-rate">$0/hr</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Profit Margin</div>
+                      <div class="result-value" id="result-margin">0%</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Annual Client Value</div>
+                      <div class="result-value" id="result-annual">$0</div>
+                    </div>
+                  </div>
+                  <div class="result-grid result-grid-3">
+                    <div class="result-item">
+                      <div class="result-label">Total Hours / Month</div>
+                      <div class="result-value" id="result-total-hours">0 hrs</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Net Monthly Profit</div>
+                      <div class="result-value" id="result-net-profit">$0</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Opportunity Cost</div>
+                      <div class="result-value" id="result-opp-cost">$0</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="ad-slot ad-slot-leaderboard"></div>
+
+            <section class="content-section">
+              <h2>Client Profitability Formula</h2>
+              <div class="formula-box">
+                <div class="formula-label">Total Hours</div>
+                Total = Billable Hours + PM/Admin Hours + Revision Hours
+              </div>
+              <div class="formula-box">
+                <div class="formula-label">Effective Hourly Rate</div>
+                Effective Rate = (Monthly Revenue - Late Payment Impact) / Total Hours
+              </div>
+              <div class="formula-box">
+                <div class="formula-label">Net Monthly Profit</div>
+                Net Profit = Revenue - (Total Hours × Target Rate) - Late Payment Impact
+              </div>
+              <div class="formula-box">
+                <div class="formula-label">Profit Margin</div>
+                Margin = Net Monthly Profit / Monthly Revenue × 100
+              </div>
+              <div class="formula-box">
+                <div class="formula-label">Opportunity Cost</div>
+                Opportunity Cost = (Target Rate - Effective Rate) × Total Hours
+              </div>
+            </section>
+
+            <section class="content-section">
+              <h2>How to Use This Calculator</h2>
+              <ol>
+                <li>Enter the client's <strong>monthly revenue</strong> (what they pay you each month on average).</li>
+                <li>Set your <strong>target hourly rate</strong> — the rate you want to earn in a perfect scenario.</li>
+                <li>Enter actual <strong>billable hours</strong>, plus <strong>project management/admin hours</strong> and <strong>revision hours</strong> for that client.</li>
+                <li>Estimate the monthly <strong>late payment impact</strong> in dollars (time spent chasing invoices, interest cost).</li>
+                <li>Click <strong>Analyze Client</strong> to see the verdict and complete profitability breakdown.</li>
+              </ol>
+            </section>
+
+            <section class="content-section">
+              <h2>Example Scenario</h2>
+              <p>A client pays $5,000/month. The freelancer spends 30 billable hours, 5 PM hours, and 3 revision hours, with $100 in late payment costs. Target rate is $100/hr.</p>
+              <ul>
+                <li>Total Hours: 30 + 5 + 3 = <strong>38 hours</strong></li>
+                <li>Effective Rate: ($5,000 - $100) / 38 = <strong>$128.95/hr</strong></li>
+                <li>Net Monthly Profit: $5,000 - (38 × $100) - $100 = <strong>$1,100</strong></li>
+                <li>Profit Margin: $1,100 / $5,000 = <strong>22%</strong></li>
+                <li>Annual Value: $1,100 × 12 = <strong>$13,200</strong></li>
+                <li>Verdict: <strong>Worth Keeping</strong> — effective rate exceeds target rate</li>
+              </ul>
+            </section>
+
+            <section class="faq-section">
+              <h2>Frequently Asked Questions</h2>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  How do I calculate a client's effective hourly rate?
+                  <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                </button>
+                <div class="faq-answer">
+                  <p>Divide the client's monthly revenue by total hours including billable, PM, revisions, and communication. This reveals the true hourly value of the relationship versus what you think you're charging.</p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  What impact do late payments have on client profitability?
+                  <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                </button>
+                <div class="faq-answer">
+                  <p>Late payments create cash flow stress and require collection effort. A client paying 60 days late is materially less profitable than one on NET-15. Quantify this as collection time plus opportunity cost of delayed cash.</p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  When should I fire a freelance client?
+                  <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                </button>
+                <div class="faq-answer">
+                  <p>Consider ending a client relationship when their effective hourly rate is well below your target, they request frequent out-of-scope revisions, pay late consistently, or the overhead time outweighs their revenue contribution.</p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  How do I calculate annual client value?
+                  <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                </button>
+                <div class="faq-answer">
+                  <p>Multiply the client's net monthly profit contribution by 12. This helps prioritize retention and compare clients against each other to allocate your time and marketing energy effectively.</p>
+                </div>
+              </div>
+            </section>
+
+            <section class="related-calculators">
+              <h2>Related Calculators</h2>
+              <div class="grid grid-3">
+                <a href="/pages/freelancer-calculators/project-pricing-calculator/" class="card card-link">
+                  <h3>Project Pricing Calculator</h3>
+                  <p>Build fully-loaded project quotes from hours, complexity, and margin.</p>
+                </a>
+                <a href="/pages/freelancer-calculators/retainer-pricing-calculator/" class="card card-link">
+                  <h3>Retainer Pricing Calculator</h3>
+                  <p>Structure profitable monthly retainer agreements for your best clients.</p>
+                </a>
+                <a href="/pages/freelancer-calculators/freelance-utilization-rate-calculator/" class="card card-link">
+                  <h3>Utilization Rate Calculator</h3>
+                  <p>See how client mix impacts your overall billable utilization.</p>
+                </a>
+                <a href="/pages/freelancer-calculators/freelance-revenue-forecast-calculator/" class="card card-link">
+                  <h3>Revenue Forecast Calculator</h3>
+                  <p>Project future revenue from your current client base and pipeline.</p>
+                </a>
+              </div>
+            </section>
+
+            <div class="disclaimer">
+              <strong>Disclaimer:</strong> This calculator provides estimates for informational purposes only. Client relationship decisions involve qualitative factors such as referral potential, creative satisfaction, and strategic fit that are not captured in financial metrics alone.
+            </div>
+          </div>
+
+          <aside class="calc-page-sidebar">
+            <div class="ad-slot ad-slot-rectangle"></div>
+            <div class="sidebar-card">
+              <h3>Freelancer Calculators</h3>
+              <a href="/pages/freelancer-calculators/freelance-tax-estimator/">Tax Estimator</a>
+              <a href="/pages/freelancer-calculators/freelance-income-stability-calculator/">Income Stability</a>
+              <a href="/pages/freelancer-calculators/project-pricing-calculator/">Project Pricing</a>
+              <a href="/pages/freelancer-calculators/client-profitability-calculator/">Client Profitability</a>
+              <a href="/pages/freelancer-calculators/freelance-break-even-calculator/">Break-Even Calculator</a>
+              <a href="/pages/freelancer-calculators/retainer-pricing-calculator/">Retainer Pricing</a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free online calculators for business, finance, tax, and investment decisions.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Calculators</h4>
+          <a href="/pages/business-calculators/">Business</a>
+          <a href="/pages/financial-calculators/">Financial</a>
+          <a href="/pages/tax-calculators/">Tax</a>
+          <a href="/pages/investment-calculators/">Investment</a>
+          <a href="/pages/freelancer-calculators/">Freelancer</a>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <a href="/about/">About</a>
+          <a href="/blog/">Blog</a>
+          <a href="/contact/">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="/privacy/">Privacy Policy</a>
+          <a href="/terms/">Terms of Service</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/privacy/">Privacy</a>
+          <a href="/terms/">Terms</a>
+          <a href="/contact/">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateClientProfit() {
+      const revenue = CalcWise.parseNumber(document.getElementById('client-revenue').value);
+      const targetRate = CalcWise.parseNumber(document.getElementById('target-rate').value);
+      const billable = CalcWise.parseNumber(document.getElementById('billable-hours').value);
+      const pm = CalcWise.parseNumber(document.getElementById('pm-hours').value) || 0;
+      const revisions = CalcWise.parseNumber(document.getElementById('revision-hours').value) || 0;
+      const lateImpact = CalcWise.parseNumber(document.getElementById('late-payment').value) || 0;
+
+      if (revenue <= 0 || targetRate <= 0 || billable <= 0) {
+        alert('Please fill in monthly revenue, target rate, and billable hours.');
+        return;
+      }
+
+      const totalHours = billable + pm + revisions;
+      const adjustedRevenue = revenue - lateImpact;
+      const effRate = adjustedRevenue / totalHours;
+      const costOfTime = totalHours * targetRate;
+      const netProfit = revenue - costOfTime - lateImpact;
+      const margin = (netProfit / revenue) * 100;
+      const annualValue = netProfit * 12;
+      const oppCost = Math.max(0, (targetRate - effRate) * totalHours);
+
+      let verdict = '';
+      if (effRate >= targetRate * 1.2) verdict = 'Highly Profitable — Prioritize & Invest';
+      else if (effRate >= targetRate) verdict = 'Worth Keeping — Meeting Rate Goals';
+      else if (effRate >= targetRate * 0.8) verdict = 'Borderline — Consider Rate Increase';
+      else verdict = 'Below Target — Reprice or Exit';
+
+      const verdictEl = document.getElementById('result-verdict');
+      verdictEl.textContent = verdict;
+      verdictEl.style.color = effRate >= targetRate ? 'var(--color-success)' : effRate >= targetRate * 0.8 ? 'var(--color-warning)' : 'var(--color-error)';
+
+      CalcWise.setText('result-eff-rate', CalcWise.formatCurrency(effRate) + '/hr');
+      CalcWise.setText('result-margin', margin.toFixed(1) + '%');
+      CalcWise.setText('result-annual', CalcWise.formatCurrency(annualValue));
+      CalcWise.setText('result-total-hours', totalHours.toFixed(1) + ' hrs');
+      CalcWise.setText('result-net-profit', CalcWise.formatCurrency(netProfit));
+      CalcWise.setText('result-opp-cost', CalcWise.formatCurrency(oppCost));
+      CalcWise.showResults('results');
+    }
+
+    function resetClientForm() {
+      document.getElementById('client-form').reset();
+      CalcWise.hideResults('results');
+    }
+
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', !expanded);
+        btn.nextElementSibling.style.display = expanded ? 'none' : 'block';
+      });
+    });
+
+    const toggle = document.querySelector('.mobile-menu-toggle');
+    const mobileNav = document.querySelector('.mobile-nav');
+    if (toggle && mobileNav) {
+      toggle.addEventListener('click', () => {
+        const open = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', !open);
+        mobileNav.classList.toggle('open', !open);
+      });
+    }
+  </script>
+</body>
+</html>

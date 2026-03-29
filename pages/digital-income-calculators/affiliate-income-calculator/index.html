@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Affiliate Income Calculator | CalcWise</title>
+  <meta name="description" content="Calculate your potential affiliate marketing income based on traffic, click-through rate, conversion rate, and commission values. Get monthly and annual projections.">
+  <link rel="canonical" href="https://calcwise.io/digital-income-calculators/affiliate-income-calculator/">
+  <meta property="og:title" content="Affiliate Income Calculator | CalcWise">
+  <meta property="og:description" content="Estimate your affiliate marketing earnings with our free calculator. Enter your traffic, CTR, conversion rate, and commissions to see your income potential.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcwise.io/digital-income-calculators/affiliate-income-calculator/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Affiliate Income Calculator | CalcWise">
+  <meta name="twitter:description" content="Estimate your affiliate marketing earnings based on traffic and conversion metrics.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/"},
+      {"@type": "ListItem", "position": 2, "name": "Digital Income Calculators", "item": "https://calcwise.io/digital-income-calculators/"},
+      {"@type": "ListItem", "position": 3, "name": "Affiliate Income Calculator"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is a good click-through rate for affiliate marketing?",
+        "acceptedAnswer": {"@type": "Answer", "text": "A good affiliate CTR depends heavily on your niche and content type. In-content links typically see 1-5% CTR, while dedicated review pages or comparison articles can achieve 10-20%. Banner ads tend to average 0.1-0.5%."}
+      },
+      {
+        "@type": "Question",
+        "name": "What is a typical affiliate conversion rate?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Average affiliate conversion rates range from 0.5% to 2% for most programs. High-intent audiences reviewing specific products can see 3-7% or higher. The conversion rate depends on the merchant's landing page, product price, and audience fit."}
+      },
+      {
+        "@type": "Question",
+        "name": "How do I increase my affiliate income without more traffic?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Focus on improving your click-through rate with better placement and calls-to-action, choose higher-commission programs, target higher-intent keywords, optimize merchant selection for conversion, and promote higher-priced products with recurring commissions."}
+      },
+      {
+        "@type": "Question",
+        "name": "How does the number of affiliate programs affect income?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Promoting multiple programs allows you to match the best products to your content, reduce dependency on any one merchant, and test which offers convert best with your audience. However, too many programs can dilute focus — 3 to 8 well-chosen programs is usually optimal."}
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="logo">
+        <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav">
+        <a href="/">Home</a>
+        <a href="/pages/business-calculators/">Business</a>
+        <a href="/pages/financial-calculators/">Financial</a>
+        <a href="/pages/tax-calculators/">Tax</a>
+        <a href="/pages/digital-income-calculators/" aria-current="page">Digital Income</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav">
+      <a href="/">Home</a>
+      <a href="/pages/business-calculators/">Business Calculators</a>
+      <a href="/pages/financial-calculators/">Financial Calculators</a>
+      <a href="/pages/tax-calculators/">Tax Calculators</a>
+      <a href="/pages/digital-income-calculators/">Digital Income Calculators</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/pages/digital-income-calculators/">Digital Income Calculators</a></li>
+          <li><span aria-current="page">Affiliate Income Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="calc-page-layout">
+          <div class="calc-page-main">
+            <h1>Affiliate Income Calculator</h1>
+            <p class="subtitle" style="font-size:var(--text-lg);color:var(--color-gray-600);margin-bottom:var(--space-8);line-height:var(--leading-relaxed);">Estimate your affiliate marketing earnings by entering your monthly traffic, click-through rate, conversion rate, and average commission. See monthly income, annual projections, and revenue per visitor.</p>
+
+            <div class="calc-container">
+              <div class="calc-header">
+                <h2>Affiliate Income Calculator</h2>
+                <p>Project your affiliate revenue from traffic and conversion metrics</p>
+              </div>
+              <div class="calc-body">
+                <form id="affiliate-form" onsubmit="return false;">
+                  <div class="form-group">
+                    <label class="form-label" for="monthly-traffic">Monthly Visitors / Traffic</label>
+                    <input type="number" id="monthly-traffic" name="monthlyTraffic" class="form-input" placeholder="10000" min="1" step="1" required>
+                    <span class="form-hint">Total unique visitors per month to your site or content</span>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="ctr">Click-Through Rate (%)</label>
+                    <div class="input-suffix">
+                      <input type="number" id="ctr" name="ctr" class="form-input" placeholder="3" min="0.01" max="100" step="0.01" required>
+                      <span class="suffix">%</span>
+                    </div>
+                    <span class="form-hint">Percentage of visitors who click an affiliate link</span>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="conversion-rate">Conversion Rate (%)</label>
+                    <div class="input-suffix">
+                      <input type="number" id="conversion-rate" name="conversionRate" class="form-input" placeholder="2" min="0.01" max="100" step="0.01" required>
+                      <span class="suffix">%</span>
+                    </div>
+                    <span class="form-hint">Percentage of clicks that result in a purchase or sign-up</span>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="avg-commission">Average Commission per Conversion ($)</label>
+                    <div class="input-prefix">
+                      <span class="prefix">$</span>
+                      <input type="number" id="avg-commission" name="avgCommission" class="form-input" placeholder="35" min="0.01" step="0.01" required>
+                    </div>
+                    <span class="form-hint">Average dollar amount earned per successful conversion</span>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="num-programs">Number of Affiliate Programs</label>
+                    <input type="number" id="num-programs" name="numPrograms" class="form-input" placeholder="3" min="1" max="50" step="1" required>
+                    <span class="form-hint">How many different affiliate programs you are promoting</span>
+                  </div>
+
+                  <div class="calc-actions">
+                    <button type="button" class="btn btn-calculate btn-full" onclick="calculateAffiliate()">Calculate Income</button>
+                    <button type="button" class="btn btn-reset" onclick="resetAffiliateForm()">Reset</button>
+                  </div>
+                </form>
+
+                <div id="affiliate-results" class="calc-results hidden">
+                  <div class="result-primary">
+                    <div class="result-label">Estimated Monthly Affiliate Income</div>
+                    <div class="result-value" id="result-monthly-income">$0</div>
+                  </div>
+                  <div class="result-grid result-grid-2">
+                    <div class="result-item">
+                      <div class="result-label">Monthly Clicks</div>
+                      <div class="result-value" id="result-monthly-clicks">0</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Monthly Conversions</div>
+                      <div class="result-value" id="result-monthly-conversions">0</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Annual Income</div>
+                      <div class="result-value" id="result-annual-income">$0</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Income per Visitor</div>
+                      <div class="result-value" id="result-income-per-visitor">$0.00</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="ad-slot ad-slot-leaderboard"></div>
+
+            <section class="content-section">
+              <h2>Affiliate Income Formulas</h2>
+              <div class="formula-box">
+                <div class="formula-label">Monthly Clicks</div>
+                Monthly Clicks = Monthly Traffic x (CTR / 100)
+              </div>
+              <div class="formula-box">
+                <div class="formula-label">Monthly Conversions</div>
+                Monthly Conversions = Monthly Clicks x (Conversion Rate / 100)
+              </div>
+              <div class="formula-box">
+                <div class="formula-label">Monthly Affiliate Income</div>
+                Monthly Income = Monthly Conversions x Average Commission x Number of Programs
+              </div>
+              <div class="formula-box">
+                <div class="formula-label">Income per Visitor (EPV)</div>
+                EPV = Monthly Income / Monthly Traffic
+              </div>
+            </section>
+
+            <section class="content-section">
+              <h2>How to Use This Calculator</h2>
+              <ol>
+                <li>Enter your <strong>monthly visitors</strong> — the total traffic reaching your site or content each month.</li>
+                <li>Set your <strong>click-through rate</strong> — what percentage of visitors click an affiliate link. Check your analytics for this figure, or use 2-5% as a starting estimate.</li>
+                <li>Enter your <strong>conversion rate</strong> — the percentage of clicks that become purchases. Most programs average 1-3%.</li>
+                <li>Input your <strong>average commission</strong> — the dollar amount earned per conversion across all programs.</li>
+                <li>Enter the <strong>number of programs</strong> you actively promote to scale the output accordingly.</li>
+                <li>Click <strong>Calculate Income</strong> to see projected monthly income, clicks, conversions, annual total, and earnings per visitor.</li>
+              </ol>
+            </section>
+
+            <section class="content-section">
+              <h2>Example Scenario</h2>
+              <p>A personal finance blogger receives 25,000 visitors per month and promotes 4 affiliate programs including a credit card, budgeting software, and two investment platforms.</p>
+              <ul>
+                <li>Monthly Clicks: 25,000 x 4% CTR = <strong>1,000 clicks</strong></li>
+                <li>Monthly Conversions: 1,000 x 2.5% = <strong>25 conversions</strong></li>
+                <li>Monthly Income: 25 x $45 avg commission x 4 programs = <strong>$4,500/month</strong></li>
+                <li>Annual Income: $4,500 x 12 = <strong>$54,000/year</strong></li>
+                <li>Income per Visitor: $4,500 / 25,000 = <strong>$0.18 per visitor</strong></li>
+              </ul>
+            </section>
+
+            <section class="faq-section">
+              <h2>Frequently Asked Questions</h2>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  What is a good click-through rate for affiliate marketing?
+                  <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                </button>
+                <div class="faq-answer">
+                  <p>A good affiliate CTR depends heavily on your niche and content type. In-content links typically see 1-5% CTR, while dedicated review pages or comparison articles can achieve 10-20%. Banner ads tend to average 0.1-0.5%.</p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  What is a typical affiliate conversion rate?
+                  <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                </button>
+                <div class="faq-answer">
+                  <p>Average affiliate conversion rates range from 0.5% to 2% for most programs. High-intent audiences reviewing specific products can see 3-7% or higher. The conversion rate depends on the merchant's landing page, product price, and audience fit.</p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  How do I increase my affiliate income without more traffic?
+                  <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                </button>
+                <div class="faq-answer">
+                  <p>Focus on improving your click-through rate with better placement and calls-to-action, choose higher-commission programs, target higher-intent keywords, optimize merchant selection for conversion, and promote higher-priced products with recurring commissions.</p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  How does the number of affiliate programs affect income?
+                  <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                </button>
+                <div class="faq-answer">
+                  <p>Promoting multiple programs allows you to match the best products to your content, reduce dependency on any one merchant, and test which offers convert best with your audience. However, too many programs can dilute focus — 3 to 8 well-chosen programs is usually optimal.</p>
+                </div>
+              </div>
+            </section>
+
+            <section class="related-calculators">
+              <h2>Related Calculators</h2>
+              <div class="grid grid-3">
+                <a href="/pages/digital-income-calculators/newsletter-revenue-calculator/" class="card card-link">
+                  <h3>Newsletter Revenue Calculator</h3>
+                  <p>Estimate earnings from sponsorships, paid tiers, and affiliate links in your newsletter.</p>
+                </a>
+                <a href="/pages/digital-income-calculators/digital-product-revenue-calculator/" class="card card-link">
+                  <h3>Digital Product Revenue Calculator</h3>
+                  <p>Project income from selling ebooks, courses, and downloads.</p>
+                </a>
+                <a href="/pages/digital-income-calculators/creator-revenue-calculator/" class="card card-link">
+                  <h3>Creator Revenue Calculator</h3>
+                  <p>Estimate total creator income across multiple monetization streams.</p>
+                </a>
+                <a href="/pages/side-hustle-calculators/blog-income-calculator/" class="card card-link">
+                  <h3>Blog Income Calculator</h3>
+                  <p>Calculate your blog's total earning potential from all revenue sources.</p>
+                </a>
+                <a href="/pages/digital-income-calculators/ad-revenue-calculator/" class="card card-link">
+                  <h3>Ad Revenue Calculator</h3>
+                  <p>Estimate display ad earnings based on page views and RPM.</p>
+                </a>
+              </div>
+            </section>
+
+            <div class="disclaimer">
+              <strong>Disclaimer:</strong> This calculator provides estimates for educational and planning purposes only. Actual affiliate income depends on many variables including traffic quality, audience intent, seasonal trends, merchant conversion rates, and program terms. Results are not guaranteed.
+            </div>
+          </div>
+
+          <aside class="calc-page-sidebar">
+            <div class="ad-slot ad-slot-rectangle"></div>
+            <div class="sidebar-card">
+              <h3>Digital Income Calculators</h3>
+              <a href="/pages/digital-income-calculators/subscription-revenue-calculator/">Subscription Revenue</a>
+              <a href="/pages/digital-income-calculators/saas-revenue-calculator/">SaaS Revenue</a>
+              <a href="/pages/digital-income-calculators/newsletter-revenue-calculator/">Newsletter Revenue</a>
+              <a href="/pages/digital-income-calculators/digital-product-revenue-calculator/">Digital Product Revenue</a>
+              <a href="/pages/digital-income-calculators/online-store-revenue-calculator/">Online Store Revenue</a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free online calculators for business, finance, tax, and investment decisions.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Calculators</h4>
+          <a href="/pages/business-calculators/">Business</a>
+          <a href="/pages/financial-calculators/">Financial</a>
+          <a href="/pages/tax-calculators/">Tax</a>
+          <a href="/pages/digital-income-calculators/">Digital Income</a>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <a href="/about/">About</a>
+          <a href="/blog/">Blog</a>
+          <a href="/contact/">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="/privacy/">Privacy Policy</a>
+          <a href="/terms/">Terms of Service</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/privacy/">Privacy</a>
+          <a href="/terms/">Terms</a>
+          <a href="/contact/">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateAffiliate() {
+      const traffic = CalcWise.parseNumber(document.getElementById('monthly-traffic').value);
+      const ctr = CalcWise.parseNumber(document.getElementById('ctr').value);
+      const convRate = CalcWise.parseNumber(document.getElementById('conversion-rate').value);
+      const avgCommission = CalcWise.parseNumber(document.getElementById('avg-commission').value);
+      const numPrograms = CalcWise.parseNumber(document.getElementById('num-programs').value);
+
+      if (traffic <= 0) { alert('Please enter monthly traffic greater than zero.'); return; }
+      if (ctr <= 0 || ctr > 100) { alert('Click-through rate must be between 0.01% and 100%.'); return; }
+      if (convRate <= 0 || convRate > 100) { alert('Conversion rate must be between 0.01% and 100%.'); return; }
+      if (avgCommission <= 0) { alert('Average commission must be greater than zero.'); return; }
+      if (numPrograms < 1) { alert('Number of programs must be at least 1.'); return; }
+
+      const monthlyClicks = traffic * (ctr / 100);
+      const monthlyConversions = monthlyClicks * (convRate / 100);
+      const monthlyIncome = monthlyConversions * avgCommission * numPrograms;
+      const annualIncome = monthlyIncome * 12;
+      const incomePerVisitor = traffic > 0 ? monthlyIncome / traffic : 0;
+
+      CalcWise.setText('result-monthly-income', CalcWise.formatCurrency(monthlyIncome, 0));
+      CalcWise.setText('result-monthly-clicks', CalcWise.formatNumber(monthlyClicks, 0));
+      CalcWise.setText('result-monthly-conversions', CalcWise.formatNumber(monthlyConversions, 1));
+      CalcWise.setText('result-annual-income', CalcWise.formatCurrency(annualIncome, 0));
+      CalcWise.setText('result-income-per-visitor', CalcWise.formatCurrency(incomePerVisitor, 4));
+      CalcWise.showResults('affiliate-results');
+    }
+
+    function resetAffiliateForm() {
+      document.getElementById('affiliate-form').reset();
+      CalcWise.hideResults('affiliate-results');
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Membership Revenue Calculator | CalcWise</title>
+  <meta name="description" content="Calculate paying members, MRR, ARR, and retention impact for your membership site or community. Model annual vs monthly revenue mix with free-to-paid conversion.">
+  <link rel="canonical" href="https://calcwise.io/digital-income-calculators/membership-revenue-calculator/">
+  <meta property="og:title" content="Membership Revenue Calculator | CalcWise">
+  <meta property="og:description" content="Model membership revenue from free-to-paid conversion, monthly fees, annual discounts, and churn impact.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcwise.io/digital-income-calculators/membership-revenue-calculator/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Membership Revenue Calculator | CalcWise">
+  <meta name="twitter:description" content="Calculate membership MRR, ARR, and the impact of annual plans and churn on your community revenue.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/"},
+      {"@type": "ListItem", "position": 2, "name": "Digital Income Calculators", "item": "https://calcwise.io/digital-income-calculators/"},
+      {"@type": "ListItem", "position": 3, "name": "Membership Revenue Calculator"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is a good free-to-paid conversion rate for memberships?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Typical free-to-paid conversion rates for online communities and membership sites range from 2% to 10%. High-value, niche communities with strong free content can achieve 5-15%. Consumer apps and tools often see 2-5% conversion to paid tiers."}
+      },
+      {
+        "@type": "Question",
+        "name": "Should I offer annual membership plans?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Annual plans provide upfront cash flow, reduce monthly churn, and improve customer retention. Members who pay annually churn at much lower rates than monthly members. Even with a 20-30% discount, annual plans are usually more profitable long-term due to better retention."}
+      },
+      {
+        "@type": "Question",
+        "name": "How does churn affect membership revenue over time?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Churn compounds over time — a 5% monthly churn rate means losing roughly 46% of members per year. Retention is critical: improving churn from 5% to 3% can double the lifetime value of each member, making it one of the highest-leverage improvements for membership businesses."}
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between MRR and ARR for memberships?",
+        "acceptedAnswer": {"@type": "Answer", "text": "MRR (Monthly Recurring Revenue) is the normalized monthly income from all paying members. ARR (Annual Recurring Revenue) is MRR multiplied by 12. For annual plan members, their payment is divided by 12 to calculate their MRR contribution for these metrics."}
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="logo">
+        <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav">
+        <a href="/">Home</a>
+        <a href="/pages/business-calculators/">Business</a>
+        <a href="/pages/financial-calculators/">Financial</a>
+        <a href="/pages/tax-calculators/">Tax</a>
+        <a href="/pages/digital-income-calculators/" aria-current="page">Digital Income</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav">
+      <a href="/">Home</a>
+      <a href="/pages/business-calculators/">Business Calculators</a>
+      <a href="/pages/financial-calculators/">Financial Calculators</a>
+      <a href="/pages/tax-calculators/">Tax Calculators</a>
+      <a href="/pages/digital-income-calculators/">Digital Income Calculators</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/pages/digital-income-calculators/">Digital Income Calculators</a></li>
+          <li><span aria-current="page">Membership Revenue Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="calc-page-layout">
+          <div class="calc-page-main">
+            <h1>Membership Revenue Calculator</h1>
+            <p class="subtitle" style="font-size:var(--text-lg);color:var(--color-gray-600);margin-bottom:var(--space-8);line-height:var(--leading-relaxed);">Calculate paying members, MRR, ARR, and the revenue impact of annual plans and churn for your membership site, online community, or creator membership program.</p>
+
+            <div class="calc-container">
+              <div class="calc-header">
+                <h2>Membership Revenue Calculator</h2>
+                <p>Model revenue from free-to-paid conversion with annual plan mix</p>
+              </div>
+              <div class="calc-body">
+                <form id="membership-form" onsubmit="return false;">
+                  <div class="form-group">
+                    <label class="form-label" for="free-members">Total Free Members</label>
+                    <input type="number" id="free-members" name="freeMembers" class="form-input" placeholder="2000" min="1" step="1" required>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="conversion-to-paid">Conversion Rate to Paid (%)</label>
+                    <div class="input-suffix">
+                      <input type="number" id="conversion-to-paid" name="conversionToPaid" class="form-input" placeholder="5" min="0.01" max="100" step="0.01" required>
+                      <span class="suffix">%</span>
+                    </div>
+                    <span class="form-hint">Percentage of free members who upgrade to a paid plan</span>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="monthly-fee">Monthly Membership Fee ($)</label>
+                    <div class="input-prefix">
+                      <span class="prefix">$</span>
+                      <input type="number" id="monthly-fee" name="monthlyFee" class="form-input" placeholder="29" min="0.01" step="0.01" required>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="annual-discount">Annual Plan Discount (%)</label>
+                    <div class="input-suffix">
+                      <input type="number" id="annual-discount" name="annualDiscount" class="form-input" placeholder="20" min="0" max="80" step="1" required>
+                      <span class="suffix">%</span>
+                    </div>
+                    <span class="form-hint">Discount offered for paying annually upfront (e.g., 20% off = 2 months free)</span>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="annual-plan-mix">Annual Plan Adoption (%)</label>
+                    <div class="input-suffix">
+                      <input type="number" id="annual-plan-mix" name="annualPlanMix" class="form-input" placeholder="30" min="0" max="100" step="1" required>
+                      <span class="suffix">%</span>
+                    </div>
+                    <span class="form-hint">Percentage of paying members on annual plans vs monthly</span>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="membership-churn">Monthly Churn Rate (%)</label>
+                    <div class="input-suffix">
+                      <input type="number" id="membership-churn" name="membershipChurn" class="form-input" placeholder="4" min="0" max="100" step="0.01" required>
+                      <span class="suffix">%</span>
+                    </div>
+                  </div>
+
+                  <div class="calc-actions">
+                    <button type="button" class="btn btn-calculate btn-full" onclick="calculateMembership()">Calculate Revenue</button>
+                    <button type="button" class="btn btn-reset" onclick="resetMembershipForm()">Reset</button>
+                  </div>
+                </form>
+
+                <div id="membership-results" class="calc-results hidden">
+                  <div class="result-primary">
+                    <div class="result-label">Total Paying Members</div>
+                    <div class="result-value" id="mem-result-paying">0</div>
+                  </div>
+                  <div class="result-grid result-grid-2">
+                    <div class="result-item">
+                      <div class="result-label">Monthly MRR</div>
+                      <div class="result-value" id="mem-result-mrr">$0</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">ARR</div>
+                      <div class="result-value" id="mem-result-arr">$0</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Annual Revenue (Cash)</div>
+                      <div class="result-value" id="mem-result-annual-cash">$0</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Monthly Churn Impact</div>
+                      <div class="result-value" id="mem-result-churn">$0</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Monthly Members Revenue</div>
+                      <div class="result-value" id="mem-result-monthly-rev">$0</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Annual Members Revenue</div>
+                      <div class="result-value" id="mem-result-annual-rev">$0</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="ad-slot ad-slot-leaderboard"></div>
+
+            <section class="content-section">
+              <h2>Membership Revenue Formulas</h2>
+              <div class="formula-box">
+                <div class="formula-label">Paying Members</div>
+                Paying Members = Free Members x (Conversion Rate / 100)
+              </div>
+              <div class="formula-box">
+                <div class="formula-label">MRR (blended)</div>
+                MRR = (Monthly Members x Monthly Fee) + (Annual Members x Annual Price / 12)
+              </div>
+              <div class="formula-box">
+                <div class="formula-label">Annual Plan Price</div>
+                Annual Price = Monthly Fee x 12 x (1 - Annual Discount / 100)
+              </div>
+              <div class="formula-box">
+                <div class="formula-label">Churn Impact</div>
+                Monthly Churn Loss = MRR x (Churn Rate / 100)
+              </div>
+            </section>
+
+            <section class="content-section">
+              <h2>How to Use This Calculator</h2>
+              <ol>
+                <li>Enter your <strong>total free members</strong> — the full size of your free community or subscriber list.</li>
+                <li>Set your <strong>conversion rate to paid</strong> — the percentage who upgrade. Start with historical data or use 3-5% as an estimate.</li>
+                <li>Enter your <strong>monthly membership fee</strong> for your standard monthly plan.</li>
+                <li>Set the <strong>annual plan discount</strong> you offer for upfront annual payments (0% if no annual plan).</li>
+                <li>Enter the <strong>annual plan adoption rate</strong> — what percentage of paying members choose the annual option.</li>
+                <li>Set your <strong>monthly churn rate</strong> to see the monthly revenue loss from cancellations.</li>
+              </ol>
+            </section>
+
+            <section class="content-section">
+              <h2>Example Scenario</h2>
+              <p>An online community platform has 5,000 free members, 6% conversion to paid at $25/month, with a 20% annual discount and 35% of members on annual plans. Monthly churn is 3.5%.</p>
+              <ul>
+                <li>Paying Members: 5,000 x 6% = <strong>300 paying members</strong></li>
+                <li>Monthly Members (65%): 195 x $25 = <strong>$4,875/month</strong></li>
+                <li>Annual Price: $25 x 12 x (1 - 20%) = <strong>$240/year</strong></li>
+                <li>Annual Members (35%): 105 x $240 / 12 = <strong>$2,100 MRR</strong></li>
+                <li>Total MRR: $4,875 + $2,100 = <strong>$6,975</strong></li>
+                <li>ARR: $6,975 x 12 = <strong>$83,700</strong></li>
+                <li>Monthly Churn Cost: $6,975 x 3.5% = <strong>$244</strong></li>
+              </ul>
+            </section>
+
+            <section class="faq-section">
+              <h2>Frequently Asked Questions</h2>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  What is a good free-to-paid conversion rate for memberships?
+                  <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                </button>
+                <div class="faq-answer">
+                  <p>Typical free-to-paid conversion rates for online communities range from 2% to 10%. High-value niche communities with strong free content can achieve 5-15%. Consumer apps often see 2-5% conversion to paid tiers.</p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  Should I offer annual membership plans?
+                  <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 011-1z"/></svg>
+                </button>
+                <div class="faq-answer">
+                  <p>Annual plans provide upfront cash flow, reduce monthly churn, and improve retention. Members who pay annually churn at much lower rates than monthly members. Even with a 20-30% discount, annual plans are typically more profitable long-term due to better retention.</p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  How does churn affect membership revenue over time?
+                  <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 011-1z"/></svg>
+                </button>
+                <div class="faq-answer">
+                  <p>Churn compounds over time — a 5% monthly churn rate means losing roughly 46% of members per year. Improving churn from 5% to 3% can double the lifetime value of each member, making retention one of the highest-leverage improvements for membership businesses.</p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  What is the difference between MRR and ARR for memberships?
+                  <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 011-1z"/></svg>
+                </button>
+                <div class="faq-answer">
+                  <p>MRR is the normalized monthly income from all paying members. For annual plan members, their annual payment is divided by 12 to calculate their MRR contribution. ARR is MRR multiplied by 12. These are accounting metrics — actual cash received may differ from annual plans.</p>
+                </div>
+              </div>
+            </section>
+
+            <section class="related-calculators">
+              <h2>Related Calculators</h2>
+              <div class="grid grid-3">
+                <a href="/pages/digital-income-calculators/subscription-revenue-calculator/" class="card card-link">
+                  <h3>Subscription Revenue Calculator</h3>
+                  <p>Model MRR, ARR, and 12-month projections for any subscription business.</p>
+                </a>
+                <a href="/pages/digital-income-calculators/saas-revenue-calculator/" class="card card-link">
+                  <h3>SaaS Revenue Calculator</h3>
+                  <p>Calculate SaaS MRR, LTV, churn cost, and 6-month forecasts.</p>
+                </a>
+                <a href="/pages/digital-income-calculators/creator-revenue-calculator/" class="card card-link">
+                  <h3>Creator Revenue Calculator</h3>
+                  <p>Estimate total creator income across ads, sponsors, memberships, and merch.</p>
+                </a>
+                <a href="/pages/digital-income-calculators/newsletter-revenue-calculator/" class="card card-link">
+                  <h3>Newsletter Revenue Calculator</h3>
+                  <p>Estimate newsletter income from sponsorships and paid subscriptions.</p>
+                </a>
+              </div>
+            </section>
+
+            <div class="disclaimer">
+              <strong>Disclaimer:</strong> This calculator provides estimates for planning purposes only. Actual membership revenue depends on content quality, community engagement, pricing strategy, and market conditions. Conversion rates and churn vary widely across different niches and platforms.
+            </div>
+          </div>
+
+          <aside class="calc-page-sidebar">
+            <div class="ad-slot ad-slot-rectangle"></div>
+            <div class="sidebar-card">
+              <h3>Digital Income Calculators</h3>
+              <a href="/pages/digital-income-calculators/subscription-revenue-calculator/">Subscription Revenue</a>
+              <a href="/pages/digital-income-calculators/saas-revenue-calculator/">SaaS Revenue</a>
+              <a href="/pages/digital-income-calculators/newsletter-revenue-calculator/">Newsletter Revenue</a>
+              <a href="/pages/digital-income-calculators/digital-product-revenue-calculator/">Digital Product Revenue</a>
+              <a href="/pages/digital-income-calculators/affiliate-income-calculator/">Affiliate Income</a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free online calculators for business, finance, tax, and investment decisions.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Calculators</h4>
+          <a href="/pages/business-calculators/">Business</a>
+          <a href="/pages/financial-calculators/">Financial</a>
+          <a href="/pages/tax-calculators/">Tax</a>
+          <a href="/pages/digital-income-calculators/">Digital Income</a>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <a href="/about/">About</a>
+          <a href="/blog/">Blog</a>
+          <a href="/contact/">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="/privacy/">Privacy Policy</a>
+          <a href="/terms/">Terms of Service</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/privacy/">Privacy</a>
+          <a href="/terms/">Terms</a>
+          <a href="/contact/">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateMembership() {
+      const freeMembers = CalcWise.parseNumber(document.getElementById('free-members').value);
+      const convRate = CalcWise.parseNumber(document.getElementById('conversion-to-paid').value);
+      const monthlyFee = CalcWise.parseNumber(document.getElementById('monthly-fee').value);
+      const annualDiscount = CalcWise.parseNumber(document.getElementById('annual-discount').value);
+      const annualMix = CalcWise.parseNumber(document.getElementById('annual-plan-mix').value);
+      const churnRate = CalcWise.parseNumber(document.getElementById('membership-churn').value);
+
+      if (freeMembers <= 0) { alert('Free members must be greater than zero.'); return; }
+      if (convRate <= 0 || convRate > 100) { alert('Conversion rate must be between 0.01% and 100%.'); return; }
+      if (monthlyFee <= 0) { alert('Monthly fee must be greater than zero.'); return; }
+
+      const payingMembers = Math.round(freeMembers * (convRate / 100));
+      const annualMembers = Math.round(payingMembers * (annualMix / 100));
+      const monthlyMembers = payingMembers - annualMembers;
+      const annualPrice = monthlyFee * 12 * (1 - annualDiscount / 100);
+
+      const monthlyRevenue = monthlyMembers * monthlyFee;
+      const annualRevenueMRR = annualMembers * (annualPrice / 12);
+      const mrr = monthlyRevenue + annualRevenueMRR;
+      const arr = mrr * 12;
+      const annualCash = monthlyRevenue * 12 + annualMembers * annualPrice;
+      const churnImpact = mrr * (churnRate / 100);
+
+      CalcWise.setText('mem-result-paying', CalcWise.formatNumber(payingMembers));
+      CalcWise.setText('mem-result-mrr', CalcWise.formatCurrency(mrr, 0));
+      CalcWise.setText('mem-result-arr', CalcWise.formatCurrency(arr, 0));
+      CalcWise.setText('mem-result-annual-cash', CalcWise.formatCurrency(annualCash, 0));
+      CalcWise.setText('mem-result-churn', '-' + CalcWise.formatCurrency(churnImpact, 0));
+      CalcWise.setText('mem-result-monthly-rev', CalcWise.formatCurrency(monthlyRevenue, 0) + '/mo');
+      CalcWise.setText('mem-result-annual-rev', CalcWise.formatCurrency(annualRevenueMRR, 0) + '/mo (MRR)');
+      CalcWise.showResults('membership-results');
+    }
+
+    function resetMembershipForm() {
+      document.getElementById('membership-form').reset();
+      CalcWise.hideResults('membership-results');
+    }
+  </script>
+</body>
+</html>

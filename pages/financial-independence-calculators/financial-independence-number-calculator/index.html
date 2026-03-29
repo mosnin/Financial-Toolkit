@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Financial Independence Number Calculator - CalcWise</title>
+  <meta name="description" content="Calculate your exact FI number using annual retirement expenses and safe withdrawal rate. See your FI number at 3%, 3.5%, and 4% SWR plus monthly passive income needed.">
+  <link rel="canonical" href="https://calcwise.io/financial-independence-calculators/financial-independence-number-calculator/">
+  <meta property="og:title" content="Financial Independence Number Calculator - CalcWise">
+  <meta property="og:description" content="Find your precise FI number. Calculate how much you need to retire using annual expenses, safe withdrawal rate, and inflation buffer.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcwise.io/financial-independence-calculators/financial-independence-number-calculator/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Financial Independence Number Calculator - CalcWise">
+  <meta name="twitter:description" content="Calculate your FI number at multiple safe withdrawal rates. See monthly passive income needed and inflation-adjusted targets.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/"},
+      {"@type": "ListItem", "position": 2, "name": "Financial Independence Calculators", "item": "https://calcwise.io/financial-independence-calculators/"},
+      {"@type": "ListItem", "position": 3, "name": "Financial Independence Number Calculator"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How is the FI number calculated?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Your FI number is calculated by dividing your annual retirement expenses by your chosen safe withdrawal rate. At a 4% SWR, divide by 0.04 — this equals multiplying by 25. At 3.5%, divide by 0.035 (multiply by about 28.6). At 3%, divide by 0.03 (multiply by about 33.3)."}
+      },
+      {
+        "@type": "Question",
+        "name": "Should I use a 3% or 4% safe withdrawal rate?",
+        "acceptedAnswer": {"@type": "Answer", "text": "The 4% rule is based on a 30-year retirement horizon. If you plan to retire early (40s or 50s) and need the portfolio to last 40–50+ years, many FIRE advocates recommend using 3% to 3.5% as a more conservative target. A lower SWR means a larger FI number but a more durable portfolio."}
+      },
+      {
+        "@type": "Question",
+        "name": "What is an inflation buffer and how much should I add?",
+        "acceptedAnswer": {"@type": "Answer", "text": "An inflation buffer adds a cushion to your FI number to account for future price increases. A 10–20% buffer is common, meaning you target 110–120% of the baseline FI number. This extra margin helps absorb unexpected expense growth and sequence-of-returns risk in early retirement."}
+      },
+      {
+        "@type": "Question",
+        "name": "What does 'beyond the 25x rule' mean?",
+        "acceptedAnswer": {"@type": "Answer", "text": "The 25x rule (equivalent to 4% SWR) is the standard FI benchmark. 'Beyond 25x' refers to the extra amount needed if you choose a more conservative withdrawal rate like 3% or 3.5%. For example, at 3.5% SWR you need 28.6x your expenses — 3.6x beyond the basic 25x target."}
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="logo">
+        <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav">
+        <a href="/">Home</a>
+        <a href="/pages/finance-calculators/">Finance</a>
+        <a href="/pages/financial-independence-calculators/" aria-current="page">FI Calculators</a>
+        <a href="/pages/investment-calculators/">Investment</a>
+        <a href="/pages/tax-calculators/">Tax</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav">
+      <a href="/">Home</a>
+      <a href="/pages/finance-calculators/">Finance Calculators</a>
+      <a href="/pages/financial-independence-calculators/">FI Calculators</a>
+      <a href="/pages/investment-calculators/">Investment Calculators</a>
+      <a href="/pages/tax-calculators/">Tax Calculators</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li><a href="/pages/financial-independence-calculators/">Financial Independence Calculators</a></li>
+        <li><span aria-current="page">Financial Independence Number Calculator</span></li>
+      </ol>
+    </nav>
+
+    <div class="page-content">
+      <div class="article-content">
+        <h1>Financial Independence Number Calculator</h1>
+        <p>Your FI number is the specific dollar amount of invested assets that, once reached, lets your portfolio fund your lifestyle indefinitely — making work truly optional. This calculator derives your personal FI number from your annual retirement expenses and preferred safe withdrawal rate, with an optional inflation buffer. It also shows your required monthly passive income at FI and compares results across the most common SWR benchmarks.</p>
+
+        <div class="ad-slot ad-slot-leaderboard"></div>
+
+        <div class="calc-container">
+          <div class="calc-header">
+            <h2>Your FI Number</h2>
+            <p>Enter your retirement expenses and withdrawal preferences</p>
+          </div>
+          <div class="calc-body">
+            <form id="fin-form">
+              <div class="result-grid result-grid-2" style="gap: var(--space-4);">
+                <div class="form-group">
+                  <label class="form-label" for="annualExpenses">Annual Expenses in Retirement</label>
+                  <div class="input-prefix"><span class="prefix">$</span>
+                    <input type="number" id="annualExpenses" name="annualExpenses" class="form-input" placeholder="60000" min="1000" step="1000" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="swr">Safe Withdrawal Rate (%)</label>
+                  <div class="input-suffix">
+                    <input type="number" id="swr" name="swr" class="form-input" placeholder="4" min="1" max="10" step="0.1" value="4" required>
+                    <span class="suffix">%</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="inflationBuffer">Inflation Buffer (%)</label>
+                  <div class="input-suffix">
+                    <input type="number" id="inflationBuffer" name="inflationBuffer" class="form-input" placeholder="10" min="0" max="50" step="1" value="0">
+                    <span class="suffix">%</span>
+                  </div>
+                  <p class="form-hint">Optional extra cushion (e.g. 10–20% for safety margin)</p>
+                </div>
+              </div>
+              <div class="calc-actions">
+                <button type="button" class="btn btn-calculate" onclick="calcFIN()">Calculate FI Number</button>
+                <button type="button" class="btn btn-reset" onclick="resetFIN()">Reset</button>
+              </div>
+            </form>
+
+            <div id="fin-results" class="calc-results hidden">
+              <div class="result-primary">
+                <div class="result-label">Your FI Number</div>
+                <div class="result-value" id="fiNum">$0</div>
+              </div>
+              <div class="result-grid result-grid-3" style="margin-top: var(--space-4);">
+                <div class="result-item">
+                  <div class="result-label">Monthly Passive Income at FI</div>
+                  <div class="result-value" id="monthlyPassive" style="color: var(--color-success);">$0</div>
+                </div>
+                <div class="result-item">
+                  <div class="result-label">Beyond 25x You Need</div>
+                  <div class="result-value" id="beyond25x" style="color: var(--color-accent);">$0</div>
+                </div>
+                <div class="result-item">
+                  <div class="result-label">With Inflation Buffer</div>
+                  <div class="result-value" id="withBuffer" style="color: var(--color-info);">$0</div>
+                </div>
+              </div>
+              <div id="swrComparison" style="margin-top: var(--space-5);"></div>
+            </div>
+          </div>
+        </div>
+
+        <section class="content-section">
+          <h2>How the FI Number Is Calculated</h2>
+          <div class="formula-box">
+            <div class="formula-label">Core Formula</div>
+            FI Number = Annual Expenses &divide; Safe Withdrawal Rate<br>
+            Example: $60,000 &divide; 0.04 = <strong>$1,500,000</strong><br><br>
+            With Inflation Buffer: FI Number &times; (1 + Buffer%)<br>
+            Example: $1,500,000 &times; 1.10 = <strong>$1,650,000</strong><br><br>
+            Monthly Passive Income = FI Number &times; SWR &divide; 12
+          </div>
+          <p>The safe withdrawal rate determines the multiple of annual expenses you must accumulate. A 4% SWR corresponds to the classic "25x rule." A 3.5% SWR implies ~28.6x your expenses, and a 3% SWR implies ~33.3x. Early retirees with a 40–50 year horizon often prefer the more conservative 3–3.5% targets to reduce sequence-of-returns risk.</p>
+        </section>
+
+        <section class="content-section">
+          <h2>How to Use This Calculator</h2>
+          <ol>
+            <li><strong>Enter annual retirement expenses:</strong> Sum all expected yearly costs — housing, food, healthcare, travel, and leisure. Use today's dollars.</li>
+            <li><strong>Set your safe withdrawal rate:</strong> The default 4% is the classic benchmark. Consider 3–3.5% if retiring before 50.</li>
+            <li><strong>Add an inflation buffer (optional):</strong> A 10–20% buffer adds a safety margin for expense growth and market uncertainty.</li>
+            <li><strong>Review the SWR comparison table:</strong> See exactly how your FI number changes at each withdrawal rate scenario.</li>
+          </ol>
+        </section>
+
+        <section class="content-section">
+          <h2>Example Scenario</h2>
+          <p>Alex plans to spend $72,000 per year in retirement. Using the standard 4% SWR, Alex's FI number is $1,800,000 (25x expenses). At a more conservative 3.5% SWR, the target rises to $2,057,143 — about $257,143 beyond the basic 25x. With a 10% inflation buffer applied to the 4% SWR baseline, Alex's buffered FI target becomes $1,980,000. Monthly passive income at FI would be $6,000/month at the 4% rate.</p>
+        </section>
+
+        <section class="faq-section">
+          <h2>Frequently Asked Questions</h2>
+          <div class="faq-item">
+            <button class="faq-question">How is the FI number calculated?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>Your FI number equals your annual expenses divided by your safe withdrawal rate. At 4% SWR this is 25x your annual expenses. At 3.5% it's about 28.6x, and at 3% it's about 33.3x.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">Should I use 3% or 4% safe withdrawal rate?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>The 4% rule targets a 30-year retirement. If you're retiring early (before 55), a 3–3.5% SWR is safer for a 40–50+ year horizon. A lower SWR gives a larger portfolio buffer against prolonged market downturns.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">What is an inflation buffer?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>An inflation buffer adds a percentage on top of your base FI number as a safety margin. A 10% buffer means targeting 110% of your baseline FI number, providing cushion for rising healthcare costs, unexpected expenses, or a changing lifestyle in retirement.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">What does "beyond the 25x rule" mean?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>The 25x rule is the 4% SWR baseline. "Beyond 25x" shows the additional amount you'd need at lower, more conservative withdrawal rates. For example, targeting 3% SWR means saving 33.3x expenses — 8.3x more than the basic 25x benchmark.</p></div>
+          </div>
+        </section>
+
+        <section class="related-calculators">
+          <h2>Related Calculators</h2>
+          <div class="grid grid-3">
+            <a href="/pages/financial-independence-calculators/fire-timeline-calculator/" class="card card-link">
+              <h3>FIRE Timeline Calculator</h3>
+              <p>Find out exactly when you'll hit your FI number based on current savings rate.</p>
+            </a>
+            <a href="/pages/financial-independence-calculators/safe-withdrawal-rate-calculator/" class="card card-link">
+              <h3>Safe Withdrawal Rate Calculator</h3>
+              <p>Assess whether your planned withdrawal rate is sustainable for your horizon.</p>
+            </a>
+            <a href="/pages/financial-independence-calculators/lean-fire-calculator/" class="card card-link">
+              <h3>Lean FIRE Calculator</h3>
+              <p>Calculate your FI number for a frugal, minimalist retirement lifestyle.</p>
+            </a>
+            <a href="/pages/financial-independence-calculators/coast-fire-calculator/" class="card card-link">
+              <h3>Coast FIRE Calculator</h3>
+              <p>Find how much to invest today so compounding does the rest.</p>
+            </a>
+            <a href="/pages/personal-finance-calculators/financial-independence-calculator/" class="card card-link">
+              <h3>FI Timeline Calculator</h3>
+              <p>Full financial independence planner with years-to-FI projection.</p>
+            </a>
+          </div>
+        </section>
+
+        <div class="disclaimer">
+          <strong>Disclaimer:</strong> This calculator is for informational and educational purposes only. FI number projections are based on your inputs and historical research (Trinity Study). Actual investment returns, expenses, and inflation vary. The safe withdrawal rate is a guideline, not a guarantee. This is not financial advice. Consult a qualified financial advisor before making major financial decisions.
+        </div>
+
+        <div class="ad-slot ad-slot-rectangle"></div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free online financial calculators to help you make smarter money decisions.</p>
+        </div>
+        <div class="footer-col">
+          <h4>FI Calculators</h4>
+          <a href="/pages/financial-independence-calculators/fire-timeline-calculator/">FIRE Timeline</a>
+          <a href="/pages/financial-independence-calculators/coast-fire-calculator/">Coast FIRE</a>
+          <a href="/pages/financial-independence-calculators/lean-fire-calculator/">Lean FIRE</a>
+          <a href="/pages/financial-independence-calculators/barista-fire-calculator/">Barista FIRE</a>
+        </div>
+        <div class="footer-col">
+          <h4>Tools</h4>
+          <a href="/pages/finance-calculators/retirement-savings-calculator/">Retirement Savings</a>
+          <a href="/pages/investment-calculators/">Investment Calculators</a>
+          <a href="/pages/tax-calculators/">Tax Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about/">About</a>
+          <a href="/contact/">Contact</a>
+          <a href="/privacy/">Privacy Policy</a>
+          <a href="/terms/">Terms of Service</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 CalcWise. All rights reserved.</span>
+        <div class="footer-links">
+          <a href="/privacy/">Privacy</a>
+          <a href="/terms/">Terms</a>
+          <a href="/contact/">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calcFIN() {
+      if (!CalcWise.validateForm('fin-form')) return;
+      const v = CalcWise.getFormValues('fin-form');
+
+      const annualExpenses = v.annualExpenses;
+      const swr = v.swr / 100;
+      const inflationBuffer = (v.inflationBuffer || 0) / 100;
+
+      const fiNumber = annualExpenses / swr;
+      const standard25x = annualExpenses * 25;
+      const beyond25x = Math.max(0, fiNumber - standard25x);
+      const withBuffer = fiNumber * (1 + inflationBuffer);
+      const monthlyPassive = fiNumber * swr / 12;
+
+      CalcWise.setText('fiNum', CalcWise.formatCurrency(fiNumber, 0));
+      CalcWise.setText('monthlyPassive', CalcWise.formatCurrency(monthlyPassive, 0) + '/mo');
+      CalcWise.setText('beyond25x', CalcWise.formatCurrency(beyond25x, 0));
+      CalcWise.setText('withBuffer', inflationBuffer > 0 ? CalcWise.formatCurrency(withBuffer, 0) : 'N/A');
+
+      const swrRates = [
+        { rate: 0.04, label: '4% SWR (25x)' },
+        { rate: 0.035, label: '3.5% SWR (28.6x)' },
+        { rate: 0.03, label: '3% SWR (33.3x)' }
+      ];
+
+      let tableHtml = '<div class="table-container"><table class="data-table"><thead><tr><th>SWR Scenario</th><th>FI Number</th><th>Monthly Passive Income</th><th>Extra vs 4% SWR</th></tr></thead><tbody>';
+      swrRates.forEach(s => {
+        const fi = annualExpenses / s.rate;
+        const mp = fi * s.rate / 12;
+        const fi4 = annualExpenses / 0.04;
+        const extra = fi - fi4;
+        tableHtml += `<tr><td>${s.label}</td><td><strong>${CalcWise.formatCurrency(fi, 0)}</strong></td><td>${CalcWise.formatCurrency(mp, 0)}/mo</td><td>${extra > 0 ? '+' : ''}${CalcWise.formatCurrency(extra, 0)}</td></tr>`;
+      });
+      tableHtml += '</tbody></table></div>';
+      if (inflationBuffer > 0) {
+        tableHtml += `<p style="font-size:var(--text-sm);color:var(--color-text-secondary);margin-top:var(--space-3);">With your ${v.inflationBuffer}% inflation buffer applied to your chosen SWR: <strong>${CalcWise.formatCurrency(withBuffer, 0)}</strong></p>`;
+      }
+      CalcWise.setHtml('swrComparison', tableHtml);
+      CalcWise.showResults('fin-results');
+    }
+
+    function resetFIN() {
+      document.getElementById('fin-form').reset();
+      CalcWise.hideResults('fin-results');
+    }
+  </script>
+</body>
+</html>

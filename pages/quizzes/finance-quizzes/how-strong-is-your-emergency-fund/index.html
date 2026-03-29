@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How Strong Is Your Emergency Fund? Quiz | CalcWise</title>
+  <meta name="description" content="6-question quiz to assess whether your emergency fund is well-prepared, adequate, building, or vulnerable — and how to close any gap quickly.">
+  <link rel="canonical" href="https://calcwise.io/quizzes/finance-quizzes/how-strong-is-your-emergency-fund/">
+  <meta property="og:title" content="How Strong Is Your Emergency Fund? Quiz | CalcWise">
+  <meta property="og:description" content="Is your emergency fund strong enough to handle a job loss, medical bill, or major expense? Find out in 6 questions.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcwise.io/quizzes/finance-quizzes/how-strong-is-your-emergency-fund/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="How Strong Is Your Emergency Fund? Quiz | CalcWise">
+  <meta name="twitter:description" content="Assess your emergency fund readiness in 6 questions. Get a Well-Prepared, Adequate, Building, or Vulnerable result.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+  <link rel="stylesheet" href="/css/quiz.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/"},
+      {"@type": "ListItem", "position": 2, "name": "Quizzes", "item": "https://calcwise.io/quizzes/"},
+      {"@type": "ListItem", "position": 3, "name": "Finance Quizzes", "item": "https://calcwise.io/quizzes/finance-quizzes/"},
+      {"@type": "ListItem", "position": 4, "name": "How Strong Is Your Emergency Fund?", "item": "https://calcwise.io/quizzes/finance-quizzes/how-strong-is-your-emergency-fund/"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "How Strong Is Your Emergency Fund? Quiz",
+    "description": "6-question quiz covering months of expenses covered, fund location, contribution frequency, last use, job stability, and number of dependents.",
+    "url": "https://calcwise.io/quizzes/finance-quizzes/how-strong-is-your-emergency-fund/",
+    "isPartOf": {"@type": "WebSite", "name": "CalcWise", "url": "https://calcwise.io/"}
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="32" height="32" rx="8" fill="currentColor"/>
+          <path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+        </svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/business-calculators/">Business</a>
+        <a href="/quizzes/" aria-current="page">Quizzes</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/business-calculators/">Business Calculators</a>
+      <a href="/quizzes/">Quizzes</a>
+      <a href="/about.html">About</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/quizzes/">Quizzes</a></li>
+          <li><a href="/quizzes/finance-quizzes/">Finance Quizzes</a></li>
+          <li><span aria-current="page">How Strong Is Your Emergency Fund?</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <h1>How Strong Is Your Emergency Fund?</h1>
+        <p class="intro">An emergency fund is your financial immune system — without it, any unexpected event forces you into debt. This 6-question quiz evaluates not just the size of your fund, but where it's held, how consistently you contribute, and whether it's appropriately sized for your specific risk profile including job stability and dependents.</p>
+
+        <div class="quiz-container" id="quiz">
+          <div class="quiz-progress">
+            <div class="quiz-progress__label">
+              <span id="progress-text">Question 1 of 6</span>
+              <span id="progress-pct">0%</span>
+            </div>
+            <div class="quiz-progress__bar">
+              <div class="quiz-progress__fill" id="progress-bar" style="width:0%"></div>
+            </div>
+          </div>
+          <div id="question-container"></div>
+          <div id="result-container" class="quiz-result hidden"></div>
+        </div>
+
+        <section class="faq-section" aria-labelledby="faq-heading" style="margin-top:3rem">
+          <h2 id="faq-heading">Frequently Asked Questions</h2>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false"><span>How many months of expenses should be in an emergency fund?</span><svg class="faq-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M10 4v12M4 10h12"/></svg></button>
+            <div class="faq-answer"><p>The standard recommendation is 3–6 months of essential living expenses. If you are self-employed, have a single income household, work in a volatile industry, or have dependents, aim for 6–12 months. Two-income households with stable jobs can manage with 3 months.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false"><span>Where should I keep my emergency fund?</span><svg class="faq-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M10 4v12M4 10h12"/></svg></button>
+            <div class="faq-answer"><p>Your emergency fund should be in a high-yield savings account (HYSA) — separate from your checking account, FDIC-insured, and accessible within 1–3 business days. Avoid investing it in stocks or bonds where its value can drop exactly when you need it most.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false"><span>Should I pay off debt or build an emergency fund first?</span><svg class="faq-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M10 4v12M4 10h12"/></svg></button>
+            <div class="faq-answer"><p>Build a $1,000 starter emergency fund first, then aggressively pay off high-interest debt (above 7–8% APR). Once high-interest debt is cleared, fully fund your emergency fund before resuming investing. Without any buffer, one surprise forces you back into debt.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false"><span>What counts as an emergency?</span><svg class="faq-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M10 4v12M4 10h12"/></svg></button>
+            <div class="faq-answer"><p>True emergencies are unexpected, necessary, and urgent: job loss, medical expenses, essential car or home repairs, or a family crisis. Planned irregular expenses (car registration, holidays, annual subscriptions) should be budgeted for separately in a sinking fund — not taken from your emergency fund.</p></div>
+          </div>
+        </section>
+
+        <section aria-labelledby="related-heading" style="margin-top:3rem">
+          <h2 id="related-heading">Related Finance Quizzes</h2>
+          <div class="quiz-grid" style="grid-template-columns:repeat(auto-fill,minmax(260px,1fr))">
+            <a href="/quizzes/finance-quizzes/are-you-living-paycheck-to-paycheck/" class="quiz-card">
+              <div class="quiz-card__badge">Finance</div>
+              <h3>Are You Living Paycheck to Paycheck?</h3>
+              <p>Find out if your finances have the buffers to avoid a paycheck-to-paycheck cycle.</p>
+              <span class="quiz-card__cta">Take quiz <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </a>
+            <a href="/quizzes/finance-quizzes/how-prepared-are-you-for-a-recession/" class="quiz-card">
+              <div class="quiz-card__badge">Finance</div>
+              <h3>How Prepared Are You for a Recession?</h3>
+              <p>Test your financial resilience against an economic downturn.</p>
+              <span class="quiz-card__cta">Take quiz <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </a>
+            <a href="/quizzes/finance-quizzes/how-financially-healthy-are-you/" class="quiz-card">
+              <div class="quiz-card__badge">Finance</div>
+              <h3>How Financially Healthy Are You?</h3>
+              <p>Get a comprehensive financial health score across all key pillars.</p>
+              <span class="quiz-card__cta">Take quiz <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </a>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect width="32" height="32" rx="8" fill="currentColor"/>
+              <path d="M8 10h16M8 16h16M8 22h10" stroke="#1B4D3E" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators and quizzes built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Finance Quizzes</h4>
+          <a href="/quizzes/finance-quizzes/how-financially-healthy-are-you/">Financial Health</a>
+          <a href="/quizzes/finance-quizzes/how-much-should-you-be-saving/">Savings Rate</a>
+          <a href="/quizzes/finance-quizzes/how-strong-is-your-emergency-fund/">Emergency Fund</a>
+          <a href="/quizzes/finance-quizzes/">View All</a>
+        </div>
+        <div class="footer-col">
+          <h4>Real Estate Quizzes</h4>
+          <a href="/quizzes/real-estate-quizzes/are-you-ready-to-buy-a-house/">Ready to Buy?</a>
+          <a href="/quizzes/real-estate-quizzes/should-you-rent-or-buy/">Rent or Buy?</a>
+          <a href="/quizzes/real-estate-quizzes/">View All</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about.html">About</a>
+          <a href="/contact.html">Contact</a>
+          <a href="/privacy.html">Privacy Policy</a>
+          <a href="/terms.html">Terms of Use</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/privacy.html">Privacy</a>
+          <a href="/terms.html">Terms</a>
+          <a href="/disclaimer.html">Disclaimer</a>
+          <a href="/sitemap.xml">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    document.querySelector('.mobile-menu-toggle').addEventListener('click', function() {
+      const nav = document.querySelector('.mobile-nav');
+      const isOpen = nav.classList.toggle('is-open');
+      this.setAttribute('aria-expanded', isOpen);
+      this.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+    });
+    document.querySelectorAll('.faq-question').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        const item = this.closest('.faq-item');
+        const isOpen = item.classList.toggle('is-open');
+        this.setAttribute('aria-expanded', isOpen);
+      });
+    });
+
+    const questions = [
+      {
+        question: "How many months of essential living expenses does your emergency fund currently cover?",
+        options: ["None — I have no emergency fund", "Less than 1 month", "1–2 months", "3–6 months", "More than 6 months"],
+        correct: 4,
+        explanation: "3–6 months is the standard minimum. 6+ months is recommended for self-employed, single-income households, or those with dependents. Even 1 month is a meaningful start."
+      },
+      {
+        question: "Where is your emergency fund held?",
+        options: ["It's not saved anywhere specific", "Mixed into my regular checking account", "In a standard savings account", "In a high-yield savings account (HYSA) or money market account"],
+        correct: 3,
+        explanation: "A HYSA keeps your fund separate, earns interest (often 4–5%), and is accessible within 1–3 business days. Mixing it with checking means it often gets spent inadvertently."
+      },
+      {
+        question: "How frequently do you add money to your emergency fund?",
+        options: ["I never contribute to it", "Only when I remember or have leftover money", "Occasionally, but not consistently", "Every payday through automatic transfers"],
+        correct: 3,
+        explanation: "Automating emergency fund contributions ensures consistent growth. 'Saving the leftovers' is the least reliable method — there are rarely leftovers when spending is not structured."
+      },
+      {
+        question: "When did you last withdraw from your emergency fund?",
+        options: ["In the last month", "In the last 3–6 months", "In the last year", "Over a year ago or never"],
+        correct: 3,
+        explanation: "Frequent withdrawals suggest the fund is being used for non-emergencies (irregular but predictable expenses should go in a sinking fund). If you withdrew, have you replenished it?"
+      },
+      {
+        question: "How stable is your primary income source?",
+        options: ["Very unstable — freelance, gig work, or commission-only", "Somewhat unstable — contract or seasonal work", "Fairly stable — employed but in a volatile industry", "Very stable — long-term employment in a stable field"],
+        correct: 3,
+        explanation: "Income stability directly determines how large your fund needs to be. Unstable income = you need 6–12 months. Stable employment = 3–4 months may suffice."
+      },
+      {
+        question: "How many people depend on your income (yourself plus dependents)?",
+        options: ["Just me, and my expenses are minimal", "Just me, but I have significant fixed expenses", "Me plus one dependent (partner, child, parent)", "Me plus two or more dependents"],
+        correct: 0,
+        explanation: "Each additional dependent increases your emergency fund need significantly. More dependents = larger potential expenses = longer fund runway required to stay afloat."
+      }
+    ];
+
+    const results = [
+      {
+        min: 5, label: "Well-Prepared", colorClass: "result-score--high",
+        title: "Your Emergency Fund Is Well-Prepared",
+        desc: "Your emergency fund is robust, properly placed, and consistently maintained. You have strong financial protection against life's unexpected events. Focus now on optimising where you hold it and ensuring it stays properly sized as your expenses grow.",
+        recs: ["Review your fund size annually — it should grow as your expenses increase.", "Ensure it's in a high-yield savings account earning competitive interest.", "Consider a 12-month fund if you are self-employed or have multiple dependents.", "Once fully funded, redirect contributions to retirement or investment accounts."]
+      },
+      {
+        min: 3, label: "Adequate", colorClass: "",
+        title: "Your Emergency Fund Is Adequate",
+        desc: "You have a reasonable emergency fund but there are gaps — either in size, location, or contribution consistency — that leave you more vulnerable than you should be. A few improvements will significantly strengthen your position.",
+        recs: ["Move your fund to a high-yield savings account if not already there.", "Set up automatic monthly contributions to grow it to your target.", "Calculate your exact target: monthly essential expenses × 3–6 (or 6–12 if self-employed).", "Use the emergency fund calculator to set a specific funded date to work toward."]
+      },
+      {
+        min: 1, label: "Building", colorClass: "result-score--mid",
+        title: "Your Emergency Fund Is Still Building",
+        desc: "You have started building your emergency fund but it is not yet large enough to provide meaningful protection. You are on the right track — the key is consistency and speed.",
+        recs: ["Set a 6-month challenge: automate $X per month to reach a 1-month buffer first.", "Open a separate HYSA specifically labelled 'Emergency Fund' to prevent spending it.", "Temporarily reduce discretionary spending to accelerate your emergency fund build.", "Use a $1,000 target as your immediate milestone — it's achievable and makes a real difference."]
+      },
+      {
+        min: 0, label: "Vulnerable", colorClass: "result-score--low",
+        title: "You Are Financially Vulnerable",
+        desc: "Without an emergency fund, any unexpected expense will force you into debt. This is the most urgent financial priority you have — before investing, before extra debt payments, build a buffer.",
+        recs: ["Open a separate savings account today — even if you only put $10 in it to start.", "Set up an automatic $50–$100 transfer per payday to this account.", "Look for one expense to cut immediately and redirect that money to your fund.", "Your first goal: $1,000. Your next goal: 1 month of expenses. Build from there.", "Use the emergency fund calculator to calculate exactly how much you need."]
+      }
+    ];
+
+    const calculatorLinks = [
+      { href: "/finance-calculators/emergency-fund-calculator/", label: "Emergency Fund Calculator" },
+      { href: "/finance-calculators/savings-calculator/", label: "Savings Calculator" }
+    ];
+
+    let current = 0, score = 0, answered = false;
+
+    function renderQuestion() {
+      answered = false;
+      const q = questions[current];
+      const pct = Math.round((current / questions.length) * 100);
+      document.getElementById('progress-bar').style.width = pct + '%';
+      document.getElementById('progress-text').textContent = 'Question ' + (current + 1) + ' of ' + questions.length;
+      document.getElementById('progress-pct').textContent = pct + '%';
+      document.getElementById('question-container').innerHTML = `
+        <div class="quiz-question">
+          <div class="quiz-question__number">Question ${current + 1}</div>
+          <p class="quiz-question__text">${q.question}</p>
+          <ul class="quiz-options" role="list">
+            ${q.options.map((opt, i) => `
+              <li><button class="quiz-option" data-index="${i}" onclick="selectAnswer(${i})">
+                <span class="quiz-option__indicator"></span><span>${opt}</span>
+              </button></li>`).join('')}
+          </ul>
+          <div id="explanation" class="quiz-explanation" style="display:none"></div>
+          <div class="quiz-nav">
+            <span></span>
+            <button class="btn btn-primary" id="next-btn" onclick="nextQuestion()" disabled>
+              ${current < questions.length - 1 ? 'Next Question' : 'See Results'}
+            </button>
+          </div>
+        </div>`;
+    }
+
+    function selectAnswer(idx) {
+      if (answered) return;
+      answered = true;
+      const q = questions[current];
+      document.querySelectorAll('.quiz-option').forEach(function(btn, i) {
+        if (i === q.correct) btn.classList.add('correct');
+        else if (i === idx && idx !== q.correct) btn.classList.add('incorrect');
+      });
+      if (idx === q.correct) score++;
+      const expEl = document.getElementById('explanation');
+      expEl.style.display = 'block';
+      expEl.className = 'quiz-explanation ' + (idx === q.correct ? 'quiz-explanation--correct' : 'quiz-explanation--incorrect');
+      expEl.textContent = q.explanation;
+      document.getElementById('next-btn').disabled = false;
+    }
+
+    function nextQuestion() {
+      current++;
+      if (current < questions.length) renderQuestion();
+      else showResult();
+    }
+
+    function showResult() {
+      document.getElementById('progress-bar').style.width = '100%';
+      document.getElementById('progress-text').textContent = 'Complete!';
+      document.getElementById('progress-pct').textContent = '100%';
+      document.getElementById('question-container').innerHTML = '';
+      const result = results.find(r => score >= r.min);
+      const rc = document.getElementById('result-container');
+      rc.classList.remove('hidden');
+      rc.innerHTML = `
+        <div class="result-score ${result.colorClass}">
+          <span class="result-score__number">${score}/${questions.length}</span>
+          <span class="result-score__label">Score</span>
+        </div>
+        <div class="result-category">${result.label}</div>
+        <h2>${result.title}</h2>
+        <p>${result.desc}</p>
+        <div class="result-recommendations">
+          <h3>Recommended Next Steps</h3>
+          <ul>${result.recs.map(r => `<li>${r}</li>`).join('')}</ul>
+        </div>
+        <div class="result-actions">
+          ${calculatorLinks.map(l => `<a href="${l.href}" class="btn btn-secondary">${l.label}</a>`).join('')}
+        </div>
+        <div class="result-actions" style="margin-top:1rem">
+          <button class="btn btn-outline" onclick="restartQuiz()">Retake Quiz</button>
+        </div>`;
+    }
+
+    function restartQuiz() {
+      current = 0; score = 0;
+      document.getElementById('result-container').classList.add('hidden');
+      renderQuestion();
+    }
+
+    renderQuestion();
+  </script>
+</body>
+</html>

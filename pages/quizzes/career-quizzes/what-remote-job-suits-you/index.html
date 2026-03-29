@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What Remote Job Suits You? – Career Quiz | CalcWise</title>
+  <meta name="description" content="Match your communication style, discipline, tech comfort, and skills to the remote career path with the best earning potential for you. 8-question quiz.">
+  <link rel="canonical" href="https://calcwise.io/quizzes/career-quizzes/what-remote-job-suits-you/">
+  <meta property="og:title" content="What Remote Job Suits You? – Career Quiz | CalcWise">
+  <meta property="og:description" content="Find the remote work type that matches your skills and work style. 8 questions.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcwise.io/quizzes/career-quizzes/what-remote-job-suits-you/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="What Remote Job Suits You? – Career Quiz | CalcWise">
+  <meta name="twitter:description" content="Find the remote work type that matches your skills and work style. 8 questions.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+  <link rel="stylesheet" href="/css/quiz.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://calcwise.io/"},
+    {"@type":"ListItem","position":2,"name":"Quizzes","item":"https://calcwise.io/quizzes/"},
+    {"@type":"ListItem","position":3,"name":"Career Quizzes","item":"https://calcwise.io/quizzes/career-quizzes/"},
+    {"@type":"ListItem","position":4,"name":"What Remote Job Suits You?","item":"https://calcwise.io/quizzes/career-quizzes/what-remote-job-suits-you/"}
+  ]}
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/business-calculators/">Business</a>
+        <a href="/quizzes/" aria-current="page">Quizzes</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/business-calculators/">Business Calculators</a>
+      <a href="/quizzes/">Quizzes</a>
+      <a href="/about.html">About</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+  </header>
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/quizzes/">Quizzes</a></li>
+          <li><a href="/quizzes/career-quizzes/">Career Quizzes</a></li>
+          <li><span aria-current="page">What Remote Job Suits You?</span></li>
+        </ol>
+      </nav>
+      <div class="quiz-container">
+        <h1>What Remote Job Suits You?</h1>
+        <p>Not all remote work is the same — and not everyone thrives in every remote setup. Whether you want to freelance independently, join a remote team, work hybrid, or find a traditional role with flexibility, your work style, discipline level, and skills shape which setup will make you most productive and financially successful. Answer 8 questions to find your fit.</p>
+        <div style="margin:1.5rem 0;text-align:center;min-height:90px;background:var(--color-gray-100);border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--color-gray-400);font-size:0.85rem;">Advertisement</div>
+        <div id="quiz-area">
+          <div id="quiz-start">
+            <div class="quiz-question" style="text-align:center;">
+              <p style="font-size:1.1rem;color:var(--color-text-muted);margin-bottom:1.5rem;">8 questions &bull; About 4 minutes &bull; Instant results</p>
+              <button class="btn btn-primary btn-lg" onclick="startQuiz()">Start Quiz</button>
+            </div>
+          </div>
+          <div id="quiz-main" style="display:none;"></div>
+          <div id="quiz-results" style="display:none;"></div>
+        </div>
+        <section class="faq-section" aria-labelledby="faq-heading" style="margin-top:3rem;">
+          <h2 id="faq-heading">Frequently Asked Questions</h2>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false"><span>What remote jobs pay the most?</span><svg class="faq-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M10 4v12M4 10h12"/></svg></button>
+            <div class="faq-answer"><p>High-paying remote roles include software engineering ($120k–$200k+), data science, product management, UX design, digital marketing directors, remote sales (especially SaaS), and senior finance/accounting roles. Independent consultants and high-demand freelancers can also earn well above average. The salary-to-hourly calculator helps compare offers.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false"><span>Is remote freelance or remote employment more financially advantageous?</span><svg class="faq-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M10 4v12M4 10h12"/></svg></button>
+            <div class="faq-answer"><p>Remote employment provides stability, benefits, and predictable income. Remote freelancing offers higher potential earnings but requires managing taxes, benefits, and client acquisition. Freelancers typically need to charge 30–50% more than an equivalent salary to net the same income after accounting for self-employment taxes and benefit costs.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false"><span>How does remote work affect taxes?</span><svg class="faq-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M10 4v12M4 10h12"/></svg></button>
+            <div class="faq-answer"><p>For remote employees, taxes are generally withheld as normal, though you may owe taxes in multiple states if you work remotely from a state different from your employer's location. For remote freelancers and contractors, you pay self-employment tax (15.3%) plus income tax. The contractor vs. employee calculator helps quantify this difference.</p></div>
+          </div>
+        </section>
+        <section style="margin-top:3rem;" aria-labelledby="related-heading">
+          <h2 id="related-heading">Related Career Quizzes</h2>
+          <div class="quiz-grid">
+            <a href="/quizzes/career-quizzes/should-you-freelance-or-stay-employed/" class="quiz-card">
+              <div class="quiz-card__badge">Career</div>
+              <h3>Should You Freelance or Stay Employed?</h3>
+              <p>Compare freelance vs. employment finances in depth.</p>
+              <span class="quiz-card__cta">Take quiz <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </a>
+            <a href="/quizzes/career-quizzes/what-career-fits-your-personality/" class="quiz-card">
+              <div class="quiz-card__badge">Career</div>
+              <h3>What Career Fits Your Personality?</h3>
+              <p>Find your broader career archetype beyond just remote work.</p>
+              <span class="quiz-card__cta">Take quiz <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </a>
+            <a href="/quizzes/career-quizzes/how-stable-is-your-income/" class="quiz-card">
+              <div class="quiz-card__badge">Career</div>
+              <h3>How Stable Is Your Income?</h3>
+              <p>Evaluate income stability in your current or planned arrangement.</p>
+              <span class="quiz-card__cta">Take quiz <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </a>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="#1B4D3E" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators and quizzes built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Career Quizzes</h4>
+          <a href="/quizzes/career-quizzes/should-you-freelance-or-stay-employed/">Freelance vs Employed</a>
+          <a href="/quizzes/career-quizzes/is-your-salary-competitive/">Salary Check</a>
+          <a href="/quizzes/career-quizzes/">View All</a>
+        </div>
+        <div class="footer-col">
+          <h4>Calculators</h4>
+          <a href="/finance-calculators/salary-to-hourly-calculator/">Salary to Hourly</a>
+          <a href="/business-calculators/freelance-rate-calculator/">Freelance Rate</a>
+          <a href="/business-calculators/contractor-vs-employee-calculator/">Contractor vs Employee</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about.html">About</a>
+          <a href="/privacy.html">Privacy Policy</a>
+          <a href="/terms.html">Terms of Use</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/privacy.html">Privacy</a>
+          <a href="/terms.html">Terms</a>
+          <a href="/disclaimer.html">Disclaimer</a>
+          <a href="/sitemap.xml">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    // Remote type scores: FRI=Fully Remote Independent, RTP=Remote Team Player, HYB=Hybrid, RFT=Remote-Friendly Traditional
+    const questions = [
+      {
+        question: "How do you prefer to communicate at work?",
+        options: ["Async — I prefer email, documents, and well-structured messages", "Mix of async and sync — some meetings, mostly written", "Regular video calls and collaboration tools", "In-person or phone — I prefer real-time face-to-face communication"],
+        types: ['FRI','RTP','HYB','RFT'],
+        explanation: "Communication preference is the strongest predictor of remote work fit. Async communicators excel in fully remote environments; others need more structure.",
+        weight: 1
+      },
+      {
+        question: "How would you rate your self-discipline without a structured office environment?",
+        options: ["Excellent — I'm highly productive on my own schedule", "Good — I set routines and meet deadlines consistently", "Moderate — I need some structure to stay on track", "Low — I work best with supervision and office accountability"],
+        types: ['FRI','RTP','HYB','RFT'],
+        explanation: "Self-discipline is the single most important trait for successful fully remote work. Remote-friendly roles still benefit from moderate independence.",
+        weight: 2
+      },
+      {
+        question: "How comfortable are you with technology and digital tools?",
+        options: ["Very comfortable — I adopt new tools quickly and use them heavily", "Comfortable — I use standard digital tools without issue", "Moderate — I use what I need but prefer simpler workflows", "Not comfortable — tech friction is a real obstacle for me"],
+        types: ['FRI','RTP','HYB','RFT'],
+        explanation: "Remote work relies heavily on digital communication and collaboration tools. High tech comfort is essential for fully remote roles.",
+        weight: 1
+      },
+      {
+        question: "How much do you need real-time collaboration to do your best work?",
+        options: ["Minimal — I work best independently and on my own timeline", "Some collaboration, but mostly independent deep work", "Regular collaboration — I need frequent team interaction", "Constant collaboration — I'm least productive alone"],
+        types: ['FRI','RTP','HYB','RFT'],
+        explanation: "Collaboration needs determine whether fully remote, hybrid, or traditional arrangements suit your workflow.",
+        weight: 1
+      },
+      {
+        question: "How flexible are you with time zones and working hours?",
+        options: ["Very flexible — I can work across time zones without issue", "Somewhat flexible — a few overlap hours work for me", "Limited — I prefer a standard 9-to-5 schedule", "Not flexible — I need consistent local hours"],
+        types: ['FRI','RTP','HYB','RFT'],
+        explanation: "Time zone flexibility enables access to global clients and companies, significantly expanding opportunity and income potential.",
+        weight: 1
+      },
+      {
+        question: "How would you describe your home workspace?",
+        options: ["Excellent — dedicated quiet office with professional setup", "Good — comfortable area with minimal distractions", "Limited — shared space or occasional distractions", "Not suitable — I need an external workspace to be productive"],
+        types: ['FRI','RTP','HYB','RFT'],
+        explanation: "Workspace quality directly affects productivity in remote roles. Poor home setups make hybrid or traditional arrangements more practical.",
+        weight: 1
+      },
+      {
+        question: "What best describes your primary professional skills?",
+        options: ["Technical or specialized: software, data, design, writing, finance", "Project management, marketing, ops, or team coordination", "Customer-facing or client service roles", "Physical, hands-on, or location-dependent work"],
+        types: ['FRI','RTP','HYB','RFT'],
+        explanation: "Skill type determines remote viability. Technical and digital skills have the highest remote income potential.",
+        weight: 2
+      },
+      {
+        question: "Do you prefer client-facing work or backend/internal work?",
+        options: ["Backend — I prefer deep work without client management", "Mix — some client exposure but not my primary role", "Client-facing — I enjoy managing relationships and accounts", "Strongly client-facing — my work is almost entirely relationship-driven"],
+        types: ['FRI','RTP','HYB','RFT'],
+        explanation: "Client-facing preference affects which remote models work — independent freelancers often manage clients directly, while team roles abstract this.",
+        weight: 1
+      }
+    ];
+
+    let typeScores = {FRI:0, RTP:0, HYB:0, RFT:0};
+    let currentQ = 0, answers = [];
+
+    function startQuiz() {
+      document.getElementById('quiz-start').style.display = 'none';
+      document.getElementById('quiz-main').style.display = 'block';
+      renderQuestion();
+    }
+
+    function renderQuestion() {
+      const q = questions[currentQ];
+      const pct = Math.round((currentQ / questions.length) * 100);
+      document.getElementById('quiz-main').innerHTML = `
+        <div class="quiz-progress">
+          <div class="quiz-progress__label"><span>Question ${currentQ + 1} of ${questions.length}</span><span>${pct}% complete</span></div>
+          <div class="quiz-progress__bar"><div class="quiz-progress__fill" style="width:${pct}%"></div></div>
+        </div>
+        <div class="quiz-question">
+          <div class="quiz-question__number">Question ${currentQ + 1}</div>
+          <div class="quiz-question__text">${q.question}</div>
+          <ul class="quiz-options">
+            ${q.options.map((opt, i) => `<li><button class="quiz-option" onclick="selectAnswer(${i})"><span class="quiz-option__indicator"></span><span>${opt}</span></button></li>`).join('')}
+          </ul>
+          <div id="explanation" style="display:none;" class="quiz-explanation quiz-explanation--correct"></div>
+        </div>
+        <div class="quiz-nav">
+          <span style="color:var(--color-text-muted);font-size:0.875rem;">${currentQ + 1} / ${questions.length}</span>
+          <button class="btn btn-primary" id="next-btn" style="display:none;" onclick="nextQuestion()">${currentQ + 1 === questions.length ? 'See Results' : 'Next Question'}</button>
+        </div>`;
+    }
+
+    function selectAnswer(idx) {
+      if (document.querySelector('.quiz-option.selected')) return;
+      const q = questions[currentQ];
+      answers.push(idx);
+      typeScores[q.types[idx]] += q.weight;
+      document.querySelectorAll('.quiz-option').forEach((btn, i) => {
+        btn.disabled = true;
+        if (i === idx) btn.classList.add('selected', 'correct');
+      });
+      const expEl = document.getElementById('explanation');
+      expEl.style.display = 'block';
+      expEl.textContent = q.explanation;
+      document.getElementById('next-btn').style.display = 'inline-flex';
+    }
+
+    function nextQuestion() {
+      currentQ++;
+      if (currentQ < questions.length) renderQuestion(); else showResults();
+    }
+
+    function showResults() {
+      document.getElementById('quiz-main').style.display = 'none';
+      const resultsEl = document.getElementById('quiz-results');
+      resultsEl.style.display = 'block';
+      const top = Object.entries(typeScores).sort((a,b)=>b[1]-a[1])[0][0];
+      const profiles = {
+        FRI: {
+          label: 'Fully Remote Independent',
+          desc: 'You have the discipline, skills, and work preferences that suit fully independent remote work — whether as a freelancer, consultant, or remote solo contributor. You thrive on autonomy and async communication.',
+          recs: ['Calculate your freelance rate to ensure it covers taxes, benefits, and savings', 'Use a contractor vs. employee calculator to compare your net income', 'Build a 6-month emergency fund to handle income variability', 'Develop a client acquisition strategy before going fully independent']
+        },
+        RTP: {
+          label: 'Remote Team Player',
+          desc: 'You work best as part of a structured remote team — collaborative but flexible. Roles in remote-first companies with regular video check-ins, clear processes, and digital-first culture suit you well.',
+          recs: ['Target remote-first companies with established team culture and processes', 'Compare your salary to fully remote roles on Glassdoor and Remote.co', 'Use the salary to hourly calculator to evaluate hourly contract offers vs. salaried remote roles', 'Build strong async communication skills to advance faster in remote teams']
+        },
+        HYB: {
+          label: 'Hybrid Preferred',
+          desc: 'You benefit from some in-person time but also value flexibility. A 2–3 days per week hybrid arrangement gives you the collaboration you need with the autonomy that improves your focus and work-life balance.',
+          recs: ['Negotiate hybrid terms explicitly when accepting a new role', 'Calculate the cost savings of reduced commute days in your budget', 'Invest in a quality home workspace for your remote days', 'Compare total compensation across fully remote vs. hybrid offers']
+        },
+        RFT: {
+          label: 'Remote-Friendly Traditional',
+          desc: 'Your work preferences, skills, or setup align most naturally with a traditional or largely in-person role that offers occasional remote flexibility — not a fully remote arrangement.',
+          recs: ['Look for roles that offer 1–2 remote days per week as a benefit', 'Focus on improving your home workspace if you want to expand remote capability', 'Consider whether building more async communication skills would help', 'Calculate your commute costs to quantify the value of any remote flexibility offered']
+        }
+      };
+      const p = profiles[top];
+      resultsEl.innerHTML = `
+        <div class="quiz-result">
+          <div class="result-score"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+          <div class="result-category">${p.label}</div>
+          <h2>Your Remote Type: ${p.label}</h2>
+          <p>${p.desc}</p>
+          <div class="result-recommendations"><h3>Recommended Next Steps</h3><ul>${p.recs.map(r=>`<li>${r}</li>`).join('')}</ul></div>
+          <div class="result-actions">
+            <a href="/finance-calculators/salary-to-hourly-calculator/" class="btn btn-primary">Salary to Hourly Calculator</a>
+            <a href="/business-calculators/freelance-rate-calculator/" class="btn btn-secondary">Freelance Rate Calculator</a>
+            <a href="/business-calculators/contractor-vs-employee-calculator/" class="btn btn-secondary">Contractor vs Employee</a>
+          </div>
+          <div style="margin-top:1.5rem;"><button class="btn btn-ghost" onclick="restartQuiz()">Retake Quiz</button></div>
+        </div>`;
+    }
+
+    function restartQuiz() {
+      currentQ = 0; typeScores = {FRI:0,RTP:0,HYB:0,RFT:0}; answers = [];
+      document.getElementById('quiz-results').style.display = 'none';
+      document.getElementById('quiz-main').style.display = 'block';
+      renderQuestion();
+    }
+
+    document.querySelector('.mobile-menu-toggle').addEventListener('click', function() {
+      const nav = document.querySelector('.mobile-nav');
+      const isOpen = nav.classList.toggle('is-open');
+      this.setAttribute('aria-expanded', isOpen);
+      this.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+    });
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', function() {
+        const item = this.closest('.faq-item');
+        const isOpen = item.classList.toggle('is-open');
+        this.setAttribute('aria-expanded', isOpen);
+      });
+    });
+  </script>
+</body>
+</html>

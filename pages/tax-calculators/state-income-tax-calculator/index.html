@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>State Income Tax Calculator | CalcWise</title>
+  <meta name="description" content="Calculate state income tax for all 50 US states plus DC. Find state tax owed, effective rate, marginal rate, and after-state-tax income for 2026.">
+  <link rel="canonical" href="https://calcwise.io/tax-calculators/state-income-tax-calculator/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://calcwise.io/"},{"@type":"ListItem","position":2,"name":"Tax Calculators","item":"https://calcwise.io/tax-calculators/"},{"@type":"ListItem","position":3,"name":"State Income Tax Calculator"}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Which states have the highest income tax rates?","acceptedAnswer":{"@type":"Answer","text":"California tops the list at 13.3% for income over $1 million, followed by Hawaii (11%), New Jersey (10.75%), Oregon (9.9%), and Minnesota (9.85%)."}},{"@type":"Question","name":"Which states have no income tax?","acceptedAnswer":{"@type":"Answer","text":"Alaska, Florida, Nevada, New Hampshire, South Dakota, Tennessee, Texas, Washington, and Wyoming have no state income tax on wages."}},{"@type":"Question","name":"What is a flat state income tax?","acceptedAnswer":{"@type":"Answer","text":"A flat tax applies a single rate regardless of income level. Examples: Illinois 4.95%, Massachusetts 5%, Pennsylvania 3.07%, Utah 4.65%."}},{"@type":"Question","name":"Can I deduct state income taxes on my federal return?","acceptedAnswer":{"@type":"Answer","text":"Yes, if you itemize deductions, subject to the $10,000 SALT cap. Taking the standard deduction precludes this."}}]}</script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="logo"><svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>CalcWise</a>
+      <nav class="main-nav"><a href="/">Home</a><a href="/pages/business-calculators/">Business</a><a href="/pages/financial-calculators/">Financial</a><a href="/pages/tax-calculators/" aria-current="page">Tax</a><a href="/pages/investment-calculators/">Investment</a></nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+    </div>
+    <nav class="mobile-nav"><a href="/">Home</a><a href="/pages/business-calculators/">Business Calculators</a><a href="/pages/financial-calculators/">Financial Calculators</a><a href="/pages/tax-calculators/">Tax Calculators</a><a href="/pages/investment-calculators/">Investment Calculators</a></nav>
+  </header>
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/pages/tax-calculators/">Tax Calculators</a></li><li><span aria-current="page">State Income Tax Calculator</span></li></ol></nav>
+      <div class="page-content">
+        <div class="calc-page-layout">
+          <div class="calc-page-main">
+            <h1>State Income Tax Calculator</h1>
+            <p class="subtitle" style="font-size:var(--text-lg);color:var(--color-gray-600);margin-bottom:var(--space-8);line-height:var(--leading-relaxed);">Calculate your state income tax for all 50 US states plus Washington DC. Find your state tax owed, effective state rate, marginal rate, and after-state-tax income for any income level and filing status.</p>
+            <div class="calc-container">
+              <div class="calc-header"><h2>State Income Tax Calculator</h2><p>Calculate state income tax for any US state</p></div>
+              <div class="calc-body">
+                <form id="calc-form" onsubmit="return false;">
+                  <div class="form-group"><label class="form-label" for="annual-income">Annual Income</label><div class="input-prefix"><span class="prefix">$</span><input type="number" id="annual-income" class="form-input" placeholder="85000" min="0" step="1000"></div></div>
+                  <div class="form-group"><label class="form-label" for="state">State</label>
+                    <select id="state" class="form-select">
+                      <option value="AK">Alaska — No income tax</option><option value="AL">Alabama</option><option value="AZ">Arizona — 4.9% flat</option><option value="AR">Arkansas</option><option value="CA">California</option><option value="CO">Colorado — 4.55% flat</option><option value="CT">Connecticut</option><option value="DE">Delaware</option><option value="FL">Florida — No income tax</option><option value="GA">Georgia — 5.49% flat</option><option value="HI">Hawaii</option><option value="ID">Idaho — 5.8% flat</option><option value="IL">Illinois — 4.95% flat</option><option value="IN">Indiana — 3.15% flat</option><option value="IA">Iowa — 3.8% flat</option><option value="KS">Kansas</option><option value="KY">Kentucky — 4.5% flat</option><option value="LA">Louisiana</option><option value="ME">Maine</option><option value="MD">Maryland</option><option value="MA">Massachusetts — 5% flat</option><option value="MI">Michigan — 4.25% flat</option><option value="MN">Minnesota</option><option value="MS">Mississippi</option><option value="MO">Missouri</option><option value="MT">Montana</option><option value="NE">Nebraska</option><option value="NV">Nevada — No income tax</option><option value="NH">New Hampshire — 0% wages</option><option value="NJ">New Jersey</option><option value="NM">New Mexico</option><option value="NY">New York</option><option value="NC">North Carolina — 4.75% flat</option><option value="ND">North Dakota</option><option value="OH">Ohio</option><option value="OK">Oklahoma</option><option value="OR">Oregon</option><option value="PA">Pennsylvania — 3.07% flat</option><option value="RI">Rhode Island</option><option value="SC">South Carolina</option><option value="SD">South Dakota — No income tax</option><option value="TN">Tennessee — No income tax</option><option value="TX">Texas — No income tax</option><option value="UT">Utah — 4.65% flat</option><option value="VT">Vermont</option><option value="VA">Virginia</option><option value="WA">Washington — No income tax</option><option value="WV">West Virginia</option><option value="WI">Wisconsin</option><option value="WY">Wyoming — No income tax</option><option value="DC">Washington DC</option>
+                    </select>
+                  </div>
+                  <div class="form-group"><label class="form-label" for="filing-status">Filing Status</label><select id="filing-status" class="form-select"><option value="single">Single</option><option value="married">Married / Joint</option></select></div>
+                  <div class="calc-actions">
+                    <button type="button" class="btn btn-calculate btn-full" onclick="calculateStateTax()">Calculate State Tax</button>
+                    <button type="button" class="btn btn-reset" onclick="resetForm()">Reset</button>
+                  </div>
+                </form>
+                <div id="results" class="calc-results hidden">
+                  <div class="result-primary"><div class="result-label">State Tax Owed</div><div class="result-value" id="result-tax-owed">$0</div></div>
+                  <div class="result-grid">
+                    <div class="result-item"><div class="result-label">Effective State Rate</div><div class="result-value" id="result-eff-rate">0%</div></div>
+                    <div class="result-item"><div class="result-label">Marginal Rate</div><div class="result-value" id="result-marginal-rate">0%</div></div>
+                    <div class="result-item"><div class="result-label">After-State-Tax Income</div><div class="result-value" id="result-after-tax">$0</div></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="ad-slot ad-slot-leaderboard"></div>
+            <section class="content-section"><h2>How State Income Tax Works</h2>
+              <div class="formula-box"><div class="formula-label">Flat Rate States</div>Tax = Income × Flat Rate (e.g., IL 4.95%: $80,000 × 4.95% = $3,960)</div>
+              <div class="formula-box"><div class="formula-label">Progressive States</div>Tax computed using graduated state brackets. Lower income at lower rates, higher income at higher rates.</div>
+              <div class="formula-box"><div class="formula-label">No Income Tax States</div>AK, FL, NV, NH, SD, TN, TX, WA, WY — $0 state income tax on wages.</div>
+            </section>
+            <section class="content-section"><h2>How to Use This Calculator</h2><ol><li>Enter your <strong>annual income</strong>.</li><li>Select your <strong>state</strong> from the dropdown.</li><li>Select your <strong>filing status</strong>.</li><li>Click <strong>Calculate State Tax</strong>.</li></ol></section>
+            <section class="content-section"><h2>Example: California vs Texas</h2><p>Single filer earning $100,000:</p><ul><li><strong>California:</strong> Progressive rates → estimated state tax ~$6,500–$7,200</li><li><strong>Texas:</strong> No state income tax → <strong>$0</strong></li><li>Annual difference: <strong>~$6,500+</strong></li></ul></section>
+            <section class="faq-section"><h2>Frequently Asked Questions</h2>
+              <div class="faq-item"><button class="faq-question" aria-expanded="false">Which states have the highest income tax rates?<svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg></button><div class="faq-answer"><p>California tops the list at 13.3% for income over $1 million, followed by Hawaii (11%), New Jersey (10.75%), Oregon (9.9%), and Minnesota (9.85%).</p></div></div>
+              <div class="faq-item"><button class="faq-question" aria-expanded="false">Which states have no income tax?<svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg></button><div class="faq-answer"><p>Alaska, Florida, Nevada, New Hampshire, South Dakota, Tennessee, Texas, Washington, and Wyoming have no state income tax on wages.</p></div></div>
+              <div class="faq-item"><button class="faq-question" aria-expanded="false">What is a flat state income tax?<svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg></button><div class="faq-answer"><p>A flat income tax applies a single rate to all income regardless of level. Examples: Illinois 4.95%, Massachusetts 5%, Pennsylvania 3.07%, Utah 4.65%.</p></div></div>
+              <div class="faq-item"><button class="faq-question" aria-expanded="false">Can I deduct state income taxes on my federal return?<svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg></button><div class="faq-answer"><p>Yes, if you itemize deductions on your federal return, subject to the $10,000 SALT cap. Taking the standard deduction precludes this.</p></div></div>
+            </section>
+            <section class="related-calculators"><h2>Related Calculators</h2><div class="grid grid-3">
+              <a href="/pages/tax-calculators/after-tax-income-calculator/" class="card card-link"><h3>After-Tax Income Calculator</h3><p>Total net income including federal and state taxes.</p></a>
+              <a href="/pages/tax-calculators/tax-bracket-calculator/" class="card card-link"><h3>Tax Bracket Calculator</h3><p>See your federal income tax bracket breakdown.</p></a>
+              <a href="/pages/tax-calculators/payroll-tax-calculator/" class="card card-link"><h3>Payroll Tax Calculator</h3><p>Calculate per-paycheck net pay by state.</p></a>
+              <a href="/pages/tax-calculators/standard-vs-itemized-deduction-calculator/" class="card card-link"><h3>Deduction Calculator</h3><p>Decide whether to deduct state taxes by itemizing.</p></a>
+            </div></section>
+            <div class="disclaimer"><strong>Tax Disclaimer:</strong> This calculator provides estimates for educational purposes only and does not constitute tax advice. State tax calculations use simplified flat or average rates and do not account for all state-specific deductions, credits, local taxes, or filing status adjustments. Consult your state's department of revenue or a qualified tax professional for accurate calculations. Results are based on estimated 2026 state tax parameters.</div>
+          </div>
+          <aside class="calc-page-sidebar">
+            <div class="ad-slot ad-slot-rectangle"></div>
+            <div class="sidebar-card"><h3>Tax Calculators</h3><a href="/pages/tax-calculators/after-tax-income-calculator/">After-Tax Income</a><a href="/pages/tax-calculators/tax-bracket-calculator/">Tax Bracket Calculator</a><a href="/pages/tax-calculators/payroll-tax-calculator/">Payroll Tax Calculator</a><a href="/pages/tax-calculators/tax-refund-estimator/">Tax Refund Estimator</a><a href="/pages/tax-calculators/sales-tax-by-state-calculator/">Sales Tax by State</a></div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><a href="/" class="logo"><svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>CalcWise</a><p>Free online calculators for business, finance, tax, and investment decisions.</p></div>
+        <div class="footer-col"><h4>Calculators</h4><a href="/pages/business-calculators/">Business</a><a href="/pages/financial-calculators/">Financial</a><a href="/pages/tax-calculators/">Tax</a><a href="/pages/investment-calculators/">Investment</a></div>
+        <div class="footer-col"><h4>Resources</h4><a href="/about/">About</a><a href="/blog/">Blog</a><a href="/contact/">Contact</a></div>
+        <div class="footer-col"><h4>Legal</h4><a href="/privacy/">Privacy Policy</a><a href="/terms/">Terms of Service</a></div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2026 CalcWise. All rights reserved.</p><div class="footer-links"><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="/contact/">Contact</a></div></div>
+    </div>
+  </footer>
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    const STATE_TAX = {
+      AK:{type:'none'},AL:{type:'progressive',brackets:[{rate:0.02,min:0,max:500},{rate:0.04,min:500,max:3000},{rate:0.05,min:3000,max:Infinity}],s:2500,m:7500},
+      AZ:{type:'flat',rate:0.049},AR:{type:'progressive',brackets:[{rate:0.02,min:0,max:4999},{rate:0.04,min:4999,max:9999},{rate:0.059,min:9999,max:Infinity}],s:2200,m:4400},
+      CA:{type:'progressive',brackets:[{rate:0.01,min:0,max:10756},{rate:0.02,min:10756,max:25499},{rate:0.04,min:25499,max:40245},{rate:0.06,min:40245,max:55866},{rate:0.08,min:55866,max:70606},{rate:0.093,min:70606,max:360659},{rate:0.103,min:360659,max:432787},{rate:0.113,min:432787,max:721314},{rate:0.123,min:721314,max:1000000},{rate:0.133,min:1000000,max:Infinity}],s:5202,m:10404},
+      CO:{type:'flat',rate:0.0455},CT:{type:'progressive',brackets:[{rate:0.03,min:0,max:10000},{rate:0.05,min:10000,max:50000},{rate:0.055,min:50000,max:100000},{rate:0.06,min:100000,max:200000},{rate:0.065,min:200000,max:250000},{rate:0.069,min:250000,max:500000},{rate:0.0699,min:500000,max:Infinity}],s:0,m:0},
+      DE:{type:'progressive',brackets:[{rate:0.022,min:2000,max:5000},{rate:0.039,min:5000,max:10000},{rate:0.048,min:10000,max:20000},{rate:0.052,min:20000,max:25000},{rate:0.0555,min:25000,max:60000},{rate:0.066,min:60000,max:Infinity}],s:3250,m:6500},
+      FL:{type:'none'},GA:{type:'flat',rate:0.0549},
+      HI:{type:'progressive',brackets:[{rate:0.014,min:0,max:2400},{rate:0.032,min:2400,max:4800},{rate:0.055,min:4800,max:9600},{rate:0.064,min:9600,max:14400},{rate:0.068,min:14400,max:19200},{rate:0.072,min:19200,max:24000},{rate:0.076,min:24000,max:36000},{rate:0.079,min:36000,max:48000},{rate:0.0825,min:48000,max:150000},{rate:0.09,min:150000,max:175000},{rate:0.10,min:175000,max:200000},{rate:0.11,min:200000,max:Infinity}],s:2200,m:4400},
+      ID:{type:'flat',rate:0.058},IL:{type:'flat',rate:0.0495},IN:{type:'flat',rate:0.0315},IA:{type:'flat',rate:0.038},
+      KS:{type:'progressive',brackets:[{rate:0.031,min:0,max:15000},{rate:0.057,min:15000,max:Infinity}],s:3500,m:8000},
+      KY:{type:'flat',rate:0.045},LA:{type:'progressive',brackets:[{rate:0.0185,min:0,max:12500},{rate:0.035,min:12500,max:50000},{rate:0.0425,min:50000,max:Infinity}],s:4500,m:9000},
+      ME:{type:'progressive',brackets:[{rate:0.058,min:0,max:24500},{rate:0.0675,min:24500,max:58050},{rate:0.0715,min:58050,max:Infinity}],s:14600,m:29200},
+      MD:{type:'progressive',brackets:[{rate:0.02,min:0,max:1000},{rate:0.03,min:1000,max:2000},{rate:0.04,min:2000,max:3000},{rate:0.0475,min:3000,max:100000},{rate:0.05,min:100000,max:125000},{rate:0.0525,min:125000,max:150000},{rate:0.055,min:150000,max:250000},{rate:0.0575,min:250000,max:Infinity}],s:2400,m:4850},
+      MA:{type:'flat',rate:0.05},MI:{type:'flat',rate:0.0425},
+      MN:{type:'progressive',brackets:[{rate:0.0535,min:0,max:30070},{rate:0.068,min:30070,max:98760},{rate:0.0785,min:98760,max:183340},{rate:0.0985,min:183340,max:Infinity}],s:14600,m:29200},
+      MS:{type:'progressive',brackets:[{rate:0,min:0,max:10000},{rate:0.05,min:10000,max:Infinity}],s:2300,m:4600},
+      MO:{type:'progressive',brackets:[{rate:0.015,min:1207,max:2414},{rate:0.02,min:2414,max:3621},{rate:0.025,min:3621,max:4828},{rate:0.03,min:4828,max:6035},{rate:0.035,min:6035,max:7242},{rate:0.04,min:7242,max:8449},{rate:0.045,min:8449,max:9656},{rate:0.05,min:9656,max:Infinity}],s:14600,m:29200},
+      MT:{type:'progressive',brackets:[{rate:0.01,min:0,max:3100},{rate:0.02,min:3100,max:5500},{rate:0.03,min:5500,max:8400},{rate:0.04,min:8400,max:11300},{rate:0.05,min:11300,max:14600},{rate:0.06,min:14600,max:18900},{rate:0.069,min:18900,max:Infinity}],s:5540,m:11080},
+      NE:{type:'progressive',brackets:[{rate:0.0246,min:0,max:3700},{rate:0.0351,min:3700,max:22170},{rate:0.0501,min:22170,max:35730},{rate:0.0664,min:35730,max:Infinity}],s:7900,m:15800},
+      NV:{type:'none'},NH:{type:'none'},
+      NJ:{type:'progressive',brackets:[{rate:0.014,min:0,max:20000},{rate:0.0175,min:20000,max:35000},{rate:0.035,min:35000,max:40000},{rate:0.05525,min:40000,max:75000},{rate:0.0637,min:75000,max:500000},{rate:0.0897,min:500000,max:1000000},{rate:0.1075,min:1000000,max:Infinity}],s:0,m:0},
+      NM:{type:'progressive',brackets:[{rate:0.017,min:0,max:5500},{rate:0.032,min:5500,max:11000},{rate:0.047,min:11000,max:16000},{rate:0.049,min:16000,max:210000},{rate:0.059,min:210000,max:Infinity}],s:14600,m:29200},
+      NY:{type:'progressive',brackets:[{rate:0.04,min:0,max:17150},{rate:0.045,min:17150,max:23600},{rate:0.0525,min:23600,max:27900},{rate:0.0585,min:27900,max:161550},{rate:0.0625,min:161550,max:323200},{rate:0.0685,min:323200,max:2155350},{rate:0.0965,min:2155350,max:5000000},{rate:0.103,min:5000000,max:25000000},{rate:0.109,min:25000000,max:Infinity}],s:8000,m:16050},
+      NC:{type:'flat',rate:0.0475},ND:{type:'progressive',brackets:[{rate:0.011,min:0,max:44725},{rate:0.0204,min:44725,max:235600},{rate:0.0227,min:235600,max:Infinity}],s:14600,m:29200},
+      OH:{type:'progressive',brackets:[{rate:0,min:0,max:26050},{rate:0.02765,min:26050,max:100000},{rate:0.03226,min:100000,max:Infinity}],s:0,m:0},
+      OK:{type:'progressive',brackets:[{rate:0.005,min:0,max:1000},{rate:0.01,min:1000,max:2500},{rate:0.02,min:2500,max:3750},{rate:0.03,min:3750,max:4900},{rate:0.04,min:4900,max:7200},{rate:0.05,min:7200,max:Infinity}],s:6350,m:12700},
+      OR:{type:'progressive',brackets:[{rate:0.0475,min:0,max:18400},{rate:0.0675,min:18400,max:46200},{rate:0.0875,min:46200,max:250000},{rate:0.099,min:250000,max:Infinity}],s:2420,m:4840},
+      PA:{type:'flat',rate:0.0307},RI:{type:'progressive',brackets:[{rate:0.0375,min:0,max:68200},{rate:0.0475,min:68200,max:155050},{rate:0.0599,min:155050,max:Infinity}],s:9300,m:18600},
+      SC:{type:'progressive',brackets:[{rate:0,min:0,max:3460},{rate:0.03,min:3460,max:17330},{rate:0.06,min:17330,max:Infinity}],s:14600,m:29200},
+      SD:{type:'none'},TN:{type:'none'},TX:{type:'none'},UT:{type:'flat',rate:0.0465},
+      VT:{type:'progressive',brackets:[{rate:0.0335,min:0,max:45400},{rate:0.066,min:45400,max:110050},{rate:0.076,min:110050,max:229550},{rate:0.0875,min:229550,max:Infinity}],s:7000,m:14250},
+      VA:{type:'progressive',brackets:[{rate:0.02,min:0,max:3000},{rate:0.03,min:3000,max:5000},{rate:0.05,min:5000,max:17000},{rate:0.0575,min:17000,max:Infinity}],s:4500,m:9000},
+      WA:{type:'none'},WV:{type:'progressive',brackets:[{rate:0.03,min:0,max:10000},{rate:0.04,min:10000,max:25000},{rate:0.045,min:25000,max:40000},{rate:0.06,min:40000,max:60000},{rate:0.065,min:60000,max:Infinity}],s:0,m:0},
+      WI:{type:'progressive',brackets:[{rate:0.0354,min:0,max:13810},{rate:0.0465,min:13810,max:27630},{rate:0.053,min:27630,max:304170},{rate:0.0765,min:304170,max:Infinity}],s:11730,m:21820},
+      WY:{type:'none'},
+      DC:{type:'progressive',brackets:[{rate:0.04,min:0,max:10000},{rate:0.06,min:10000,max:40000},{rate:0.065,min:40000,max:60000},{rate:0.085,min:60000,max:250000},{rate:0.0925,min:250000,max:500000},{rate:0.0975,min:500000,max:1000000},{rate:0.1075,min:1000000,max:Infinity}],s:12950,m:25900}
+    };
+
+    function calcTax(income, d, status) {
+      if (d.type === 'none') return 0;
+      const ded = status === 'married' ? (d.m || 0) : (d.s || 0);
+      const taxable = Math.max(0, income - ded);
+      if (d.type === 'flat') return taxable * d.rate;
+      let tax = 0;
+      for (const b of d.brackets) { if (taxable <= b.min) break; tax += (Math.min(taxable, b.max) - b.min) * b.rate; }
+      return tax;
+    }
+    function getMarginal(income, d, status) {
+      if (d.type === 'none') return 0;
+      if (d.type === 'flat') return d.rate;
+      const ded = status === 'married' ? (d.m || 0) : (d.s || 0);
+      const taxable = Math.max(0, income - ded);
+      const b = d.brackets;
+      for (let i = b.length - 1; i >= 0; i--) { if (taxable > b[i].min) return b[i].rate; }
+      return 0;
+    }
+
+    function calculateStateTax() {
+      const income = CalcWise.parseNumber(document.getElementById('annual-income').value);
+      const stateCode = document.getElementById('state').value;
+      const status = document.getElementById('filing-status').value;
+      if (income <= 0) { alert('Please enter annual income.'); return; }
+      const d = STATE_TAX[stateCode] || {type:'none'};
+      const tax = calcTax(income, d, status);
+      const eff = income > 0 ? (tax / income) * 100 : 0;
+      const marg = getMarginal(income, d, status) * 100;
+      CalcWise.setText('result-tax-owed', CalcWise.formatCurrency(tax));
+      CalcWise.setText('result-eff-rate', eff.toFixed(2) + '%');
+      CalcWise.setText('result-marginal-rate', marg.toFixed(2) + '%');
+      CalcWise.setText('result-after-tax', CalcWise.formatCurrency(income - tax));
+      CalcWise.showResults('results');
+    }
+    function resetForm() { document.getElementById('calc-form').reset(); CalcWise.hideResults('results'); }
+    document.querySelectorAll('.faq-question').forEach(btn => { btn.addEventListener('click', () => { const e = btn.getAttribute('aria-expanded') === 'true'; btn.setAttribute('aria-expanded', !e); btn.nextElementSibling.style.display = e ? 'none' : 'block'; }); });
+    document.querySelectorAll('.faq-answer').forEach(a => a.style.display = 'none');
+    const toggle = document.querySelector('.mobile-menu-toggle'); const mobileNav = document.querySelector('.mobile-nav');
+    if (toggle && mobileNav) { toggle.addEventListener('click', () => { const open = toggle.getAttribute('aria-expanded') === 'true'; toggle.setAttribute('aria-expanded', !open); mobileNav.style.display = open ? 'none' : 'block'; }); }
+  </script>
+</body>
+</html>

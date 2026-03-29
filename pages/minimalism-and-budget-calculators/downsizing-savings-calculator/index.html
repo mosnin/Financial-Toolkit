@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Downsizing Savings Calculator - CalcWise</title>
+  <meta name="description" content="Calculate the true financial benefit of downsizing your home. See monthly savings, annual gains, net savings after moving costs, and 5-year cumulative benefit.">
+  <link rel="canonical" href="https://calcwise.io/minimalism-and-budget-calculators/downsizing-savings-calculator/">
+  <meta property="og:title" content="Downsizing Savings Calculator - CalcWise">
+  <meta property="og:description" content="Find out how much you save by downsizing your home, factoring in housing costs, utilities, maintenance, and moving expenses.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcwise.io/minimalism-and-budget-calculators/downsizing-savings-calculator/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Downsizing Savings Calculator - CalcWise">
+  <meta name="twitter:description" content="Calculate the net financial benefit of downsizing your home over time.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/"},
+      {"@type": "ListItem", "position": 2, "name": "Minimalism & Budget Calculators", "item": "https://calcwise.io/minimalism-and-budget-calculators/"},
+      {"@type": "ListItem", "position": 3, "name": "Downsizing Savings Calculator"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What costs should I consider when downsizing?",
+        "acceptedAnswer": {"@type": "Answer", "text": "When downsizing, consider the difference in monthly housing costs (mortgage or rent), utility savings (smaller space means lower heating and cooling), maintenance cost reductions, and one-time moving costs. This calculator accounts for all of these factors to give you a realistic net savings picture."}
+      },
+      {
+        "@type": "Question",
+        "name": "How long does it take to recoup moving costs when downsizing?",
+        "acceptedAnswer": {"@type": "Answer", "text": "The break-even point depends on your monthly savings and total moving costs. If your monthly savings are $500 and moving costs are $5,000, you break even in 10 months. After that, every month is pure savings. This calculator shows your net savings position at 5 years to help you see the full picture."}
+      },
+      {
+        "@type": "Question",
+        "name": "What is the biggest financial benefit of downsizing?",
+        "acceptedAnswer": {"@type": "Answer", "text": "For most people, the biggest benefit is the reduction in monthly housing costs — rent or mortgage payments. Smaller homes also typically have lower utilities, insurance, property taxes, and maintenance costs, creating compounding monthly savings that add up significantly over years."}
+      },
+      {
+        "@type": "Question",
+        "name": "Should I factor in opportunity cost when downsizing?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Yes. If you own your home and sell it to downsize, the proceeds can be invested, generating additional wealth. Even for renters, the monthly savings from downsizing can be invested to build significant long-term wealth. This calculator focuses on direct monthly savings; use our Minimalist Lifestyle Savings Calculator to model the investment growth."}
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="logo">
+        <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav">
+        <a href="/">Home</a>
+        <a href="/pages/finance-calculators/">Finance</a>
+        <a href="/pages/business-calculators/">Business</a>
+        <a href="/pages/investment-calculators/">Investment</a>
+        <a href="/pages/minimalism-and-budget-calculators/" aria-current="page">Minimalism</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav">
+      <a href="/">Home</a>
+      <a href="/pages/finance-calculators/">Finance Calculators</a>
+      <a href="/pages/business-calculators/">Business Calculators</a>
+      <a href="/pages/investment-calculators/">Investment Calculators</a>
+      <a href="/pages/minimalism-and-budget-calculators/">Minimalism &amp; Budget Calculators</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li><a href="/pages/minimalism-and-budget-calculators/">Minimalism &amp; Budget Calculators</a></li>
+        <li><span aria-current="page">Downsizing Savings Calculator</span></li>
+      </ol>
+    </nav>
+
+    <div class="page-content">
+      <div class="article-content">
+        <h1>Downsizing Savings Calculator</h1>
+        <p>Downsizing your home is one of the most impactful financial decisions you can make. This calculator compares your current housing costs to a downsized alternative, accounts for utility and maintenance savings, factors in one-time moving costs, and shows you the true monthly savings, annual gains, and 5-year cumulative benefit — so you can make an informed decision.</p>
+
+        <div class="ad-slot ad-slot-leaderboard"></div>
+
+        <div class="calc-container">
+          <div class="calc-header">
+            <h2>Calculate Your Downsizing Savings</h2>
+            <p>Enter current and downsized housing details to see your full financial picture</p>
+          </div>
+          <div class="calc-body">
+            <form id="downsizing-form">
+              <div style="display:grid; gap: var(--space-5);">
+                <div>
+                  <h3 style="font-size:var(--text-base); margin-bottom: var(--space-3); color: var(--color-gray-700);">Current Home</h3>
+                  <div class="form-group">
+                    <label class="form-label" for="currentHousing">Current Monthly Housing Cost (rent/mortgage)</label>
+                    <div class="input-prefix">
+                      <span class="prefix">$</span>
+                      <input type="number" id="currentHousing" name="currentHousing" class="form-input" placeholder="2500" min="0" step="50" required>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="currentUtilities">Current Monthly Utilities</label>
+                    <div class="input-prefix">
+                      <span class="prefix">$</span>
+                      <input type="number" id="currentUtilities" name="currentUtilities" class="form-input" placeholder="300" min="0" step="10">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="currentMaintenance">Current Monthly Maintenance/HOA</label>
+                    <div class="input-prefix">
+                      <span class="prefix">$</span>
+                      <input type="number" id="currentMaintenance" name="currentMaintenance" class="form-input" placeholder="200" min="0" step="10">
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <h3 style="font-size:var(--text-base); margin-bottom: var(--space-3); color: var(--color-gray-700);">Downsized Home</h3>
+                  <div class="form-group">
+                    <label class="form-label" for="newHousing">New Monthly Housing Cost (rent/mortgage)</label>
+                    <div class="input-prefix">
+                      <span class="prefix">$</span>
+                      <input type="number" id="newHousing" name="newHousing" class="form-input" placeholder="1500" min="0" step="50" required>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="newUtilities">New Monthly Utilities</label>
+                    <div class="input-prefix">
+                      <span class="prefix">$</span>
+                      <input type="number" id="newUtilities" name="newUtilities" class="form-input" placeholder="175" min="0" step="10">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="newMaintenance">New Monthly Maintenance/HOA</label>
+                    <div class="input-prefix">
+                      <span class="prefix">$</span>
+                      <input type="number" id="newMaintenance" name="newMaintenance" class="form-input" placeholder="100" min="0" step="10">
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <h3 style="font-size:var(--text-base); margin-bottom: var(--space-3); color: var(--color-gray-700);">Move Details</h3>
+                  <div class="form-group">
+                    <label class="form-label" for="movingCost">Total One-Time Moving Cost</label>
+                    <div class="input-prefix">
+                      <span class="prefix">$</span>
+                      <input type="number" id="movingCost" name="movingCost" class="form-input" placeholder="3000" min="0" step="100" required>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="stayYears">How Long You Plan to Stay (years)</label>
+                    <input type="number" id="stayYears" name="stayYears" class="form-input" placeholder="5" min="1" max="50" step="1" required>
+                  </div>
+                </div>
+              </div>
+
+              <div class="calc-actions">
+                <button type="button" class="btn btn-calculate" onclick="calculateDownsizing()">Calculate Savings</button>
+                <button type="button" class="btn btn-reset" onclick="resetDownsizing()">Reset</button>
+              </div>
+            </form>
+
+            <div id="results" class="calc-results hidden">
+              <div class="result-primary">
+                <div class="result-label">Monthly Savings</div>
+                <div class="result-value" id="monthlySavings" style="color: var(--color-success);">$0</div>
+              </div>
+              <div class="result-grid result-grid-3">
+                <div class="result-item">
+                  <div class="result-label">Annual Savings</div>
+                  <div class="result-value" id="annualSavings" style="color: var(--color-success);">$0</div>
+                </div>
+                <div class="result-item">
+                  <div class="result-label">Net Savings (after move cost)</div>
+                  <div class="result-value" id="netSavings">$0</div>
+                </div>
+                <div class="result-item">
+                  <div class="result-label">5-Year Cumulative Savings</div>
+                  <div class="result-value" id="fiveYearCumulative" style="color: var(--color-info);">$0</div>
+                </div>
+              </div>
+              <div style="margin-top: var(--space-6);">
+                <div id="downsizingSummary"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <section class="content-section">
+          <h2>How the Downsizing Savings Formula Works</h2>
+          <div class="formula-box">
+            <div class="formula-label">Formulas</div>
+            Monthly Savings = (Current Housing + Utilities + Maintenance) − (New Housing + Utilities + Maintenance)<br>
+            Annual Savings = Monthly Savings × 12<br>
+            Cumulative Savings (N years) = Monthly Savings × 12 × N<br>
+            Net Savings = Cumulative Savings − Moving Cost<br>
+            Break-even Months = Moving Cost / Monthly Savings
+          </div>
+          <p>The calculator compares total all-in monthly housing costs (housing payment, utilities, and maintenance) before and after downsizing. Moving costs are subtracted from cumulative savings to show the true net financial position. The break-even point tells you exactly when downsizing starts paying off.</p>
+        </section>
+
+        <section class="content-section">
+          <h2>How to Use This Calculator</h2>
+          <ol>
+            <li><strong>Enter current costs:</strong> Include your current mortgage or rent, average monthly utilities, and any maintenance costs or HOA fees.</li>
+            <li><strong>Enter new home costs:</strong> Research a realistic downsized home and estimate the new monthly costs across all three categories.</li>
+            <li><strong>Add moving expenses:</strong> Include hiring movers, storage, deposits, and any renovation costs at the new property.</li>
+            <li><strong>Set your time horizon:</strong> The longer you stay, the more the savings accumulate, making downsizing increasingly attractive.</li>
+          </ol>
+        </section>
+
+        <section class="content-section">
+          <h2>Example Scenario</h2>
+          <p>Chris and Sam own a 4-bedroom home and are considering downsizing to a 2-bedroom condo:</p>
+          <ul>
+            <li><strong>Current costs:</strong> Mortgage $2,200 + utilities $320 + maintenance $250 = $2,770/month</li>
+            <li><strong>Downsized costs:</strong> Mortgage $1,400 + utilities $180 + HOA $120 = $1,700/month</li>
+            <li><strong>Monthly savings:</strong> $1,070</li>
+            <li><strong>Moving costs:</strong> $6,000 (movers + deposits)</li>
+            <li><strong>Break-even:</strong> 5.6 months</li>
+            <li><strong>5-year net savings:</strong> $1,070 × 60 − $6,000 = <strong>$58,200</strong></li>
+          </ul>
+        </section>
+
+        <section class="faq-section">
+          <h2>Frequently Asked Questions</h2>
+          <div class="faq-item">
+            <button class="faq-question">What costs should I consider when downsizing?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>When downsizing, consider the difference in monthly housing costs (mortgage or rent), utility savings (smaller space means lower heating and cooling), maintenance cost reductions, and one-time moving costs. This calculator accounts for all of these factors to give you a realistic net savings picture.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">How long does it take to recoup moving costs when downsizing?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>The break-even point depends on your monthly savings and total moving costs. If your monthly savings are $500 and moving costs are $5,000, you break even in 10 months. After that, every month is pure savings.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">What is the biggest financial benefit of downsizing?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>For most people, the biggest benefit is the reduction in monthly housing costs — rent or mortgage payments. Smaller homes also typically have lower utilities, insurance, property taxes, and maintenance costs, creating compounding monthly savings that add up significantly over years.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">Should I factor in opportunity cost when downsizing?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>Yes. If you own your home and sell it to downsize, the proceeds can be invested, generating additional wealth. Even for renters, the monthly savings from downsizing can be invested to build significant long-term wealth. This calculator focuses on direct monthly savings; use our Minimalist Lifestyle Savings Calculator to model the investment growth.</p></div>
+          </div>
+        </section>
+
+        <section class="related-calculators">
+          <h2>Related Calculators</h2>
+          <div class="grid grid-3">
+            <a href="/pages/minimalism-and-budget-calculators/minimalist-lifestyle-savings-calculator/" class="card card-link">
+              <h3>Minimalist Lifestyle Savings Calculator</h3>
+              <p>Project the long-term wealth impact of spending less.</p>
+            </a>
+            <a href="/pages/minimalism-and-budget-calculators/expense-reduction-calculator/" class="card card-link">
+              <h3>Expense Reduction Calculator</h3>
+              <p>Reduce spending across all major budget categories.</p>
+            </a>
+            <a href="/pages/minimalism-and-budget-calculators/household-declutter-savings-calculator/" class="card card-link">
+              <h3>Household Declutter Savings Calculator</h3>
+              <p>Estimate proceeds from selling possessions when downsizing.</p>
+            </a>
+            <a href="/pages/minimalism-and-budget-calculators/spending-reduction-impact-calculator/" class="card card-link">
+              <h3>Spending Reduction Impact Calculator</h3>
+              <p>See how monthly savings grow into wealth over decades.</p>
+            </a>
+          </div>
+        </section>
+
+        <div class="disclaimer">
+          <strong>Disclaimer:</strong> This calculator is for informational and educational purposes only. Results are estimates based on inputs provided and do not account for taxes, real estate transaction costs, or changes in housing costs over time. This does not constitute financial or real estate advice. Consult qualified professionals before making housing decisions.
+        </div>
+
+        <div class="ad-slot ad-slot-rectangle"></div>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free online financial calculators to help you make smarter money decisions.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Minimalism &amp; Budget</h4>
+          <a href="/pages/minimalism-and-budget-calculators/downsizing-savings-calculator/">Downsizing Savings</a>
+          <a href="/pages/minimalism-and-budget-calculators/expense-reduction-calculator/">Expense Reduction</a>
+          <a href="/pages/minimalism-and-budget-calculators/household-declutter-savings-calculator/">Household Declutter</a>
+          <a href="/pages/minimalism-and-budget-calculators/minimalist-lifestyle-savings-calculator/">Minimalist Lifestyle</a>
+        </div>
+        <div class="footer-col">
+          <h4>Finance</h4>
+          <a href="/pages/finance-calculators/budget-calculator/">Budget (50/30/20)</a>
+          <a href="/pages/finance-calculators/net-worth-calculator/">Net Worth</a>
+          <a href="/pages/finance-calculators/retirement-savings-calculator/">Retirement Savings</a>
+          <a href="/pages/finance-calculators/emergency-fund-calculator/">Emergency Fund</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about/">About</a>
+          <a href="/contact/">Contact</a>
+          <a href="/privacy/">Privacy Policy</a>
+          <a href="/terms/">Terms of Service</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 CalcWise. All rights reserved.</span>
+        <div class="footer-links">
+          <a href="/privacy/">Privacy</a>
+          <a href="/terms/">Terms</a>
+          <a href="/contact/">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateDownsizing() {
+      if (!CalcWise.validateForm('downsizing-form')) return;
+      const v = CalcWise.getFormValues('downsizing-form');
+
+      const currentTotal = (v.currentHousing || 0) + (v.currentUtilities || 0) + (v.currentMaintenance || 0);
+      const newTotal = (v.newHousing || 0) + (v.newUtilities || 0) + (v.newMaintenance || 0);
+      const monthly = currentTotal - newTotal;
+      const annual = monthly * 12;
+      const movingCost = v.movingCost || 0;
+      const stayYears = v.stayYears || 5;
+      const fiveYearCumulative = monthly * 60;
+      const customCumulative = monthly * 12 * stayYears;
+      const netSavings = customCumulative - movingCost;
+      const breakEvenMonths = monthly > 0 ? movingCost / monthly : 0;
+
+      CalcWise.setText('monthlySavings', CalcWise.formatCurrency(monthly, 0));
+      CalcWise.setText('annualSavings', CalcWise.formatCurrency(annual, 0));
+      CalcWise.setText('netSavings', CalcWise.formatCurrency(netSavings, 0));
+      CalcWise.setText('fiveYearCumulative', CalcWise.formatCurrency(fiveYearCumulative, 0));
+
+      const netColor = netSavings >= 0 ? 'var(--color-success)' : 'var(--color-error)';
+      document.getElementById('netSavings').style.color = netColor;
+
+      let html = `
+        <div style="display:grid; grid-template-columns: 1fr 1fr; gap: var(--space-4);">
+          <div style="padding: var(--space-4); background: var(--color-gray-50); border-radius: var(--radius-lg);">
+            <div style="font-size:var(--text-sm); color:var(--color-gray-500); margin-bottom:var(--space-1);">Current Monthly Total</div>
+            <div style="font-size:var(--text-xl); font-weight:var(--font-bold); color:var(--color-error);">${CalcWise.formatCurrency(currentTotal, 0)}</div>
+          </div>
+          <div style="padding: var(--space-4); background: var(--color-gray-50); border-radius: var(--radius-lg);">
+            <div style="font-size:var(--text-sm); color:var(--color-gray-500); margin-bottom:var(--space-1);">New Monthly Total</div>
+            <div style="font-size:var(--text-xl); font-weight:var(--font-bold); color:var(--color-success);">${CalcWise.formatCurrency(newTotal, 0)}</div>
+          </div>
+        </div>`;
+
+      if (monthly > 0 && movingCost > 0) {
+        const beMos = Math.ceil(breakEvenMonths);
+        const beYrs = Math.floor(beMos / 12);
+        const beMosRem = beMos % 12;
+        const beStr = beYrs > 0 ? `${beYrs} year${beYrs > 1 ? 's' : ''} ${beMosRem > 0 ? beMosRem + ' months' : ''}` : `${beMos} months`;
+        html += `<div style="margin-top:var(--space-4); padding:var(--space-4); background:var(--color-primary-50); border-radius:var(--radius-lg);">
+          <strong>Break-even point:</strong> ${beStr} — after which you are in pure savings territory.<br>
+          <strong>${stayYears}-year net savings:</strong> ${CalcWise.formatCurrency(netSavings, 0)} after accounting for ${CalcWise.formatCurrency(movingCost, 0)} in moving costs.
+        </div>`;
+      }
+
+      CalcWise.setHtml('downsizingSummary', html);
+      CalcWise.showResults('results');
+    }
+
+    function resetDownsizing() {
+      document.getElementById('downsizing-form').reset();
+      CalcWise.hideResults('results');
+    }
+  </script>
+</body>
+</html>

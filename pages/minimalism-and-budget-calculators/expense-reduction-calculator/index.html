@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expense Reduction Calculator - CalcWise</title>
+  <meta name="description" content="Find out exactly how much you can save by reducing spending across 8 budget categories. Set reduction targets and see your monthly and annual savings instantly.">
+  <link rel="canonical" href="https://calcwise.io/minimalism-and-budget-calculators/expense-reduction-calculator/">
+  <meta property="og:title" content="Expense Reduction Calculator - CalcWise">
+  <meta property="og:description" content="Calculate monthly and annual savings by setting expense reduction targets across 8 spending categories.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcwise.io/minimalism-and-budget-calculators/expense-reduction-calculator/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Expense Reduction Calculator - CalcWise">
+  <meta name="twitter:description" content="Calculate monthly and annual savings by setting expense reduction targets across 8 spending categories.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/"},
+      {"@type": "ListItem", "position": 2, "name": "Minimalism & Budget Calculators", "item": "https://calcwise.io/minimalism-and-budget-calculators/"},
+      {"@type": "ListItem", "position": 3, "name": "Expense Reduction Calculator"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is an expense reduction calculator?",
+        "acceptedAnswer": {"@type": "Answer", "text": "An expense reduction calculator helps you quantify how much money you can save by reducing spending in specific budget categories. You enter your current spending and a target reduction percentage for each category, and the calculator shows your projected monthly and annual savings."}
+      },
+      {
+        "@type": "Question",
+        "name": "How do I decide which categories to cut?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Focus on discretionary categories first — entertainment, dining out, and subscriptions typically offer the most flexibility. Non-essential spending that delivers low satisfaction per dollar is usually the best candidate for cuts. Look for your largest expense categories combined with the categories where you feel least satisfied by the spending."}
+      },
+      {
+        "@type": "Question",
+        "name": "What reduction percentage is realistic?",
+        "acceptedAnswer": {"@type": "Answer", "text": "A 10–20% reduction across most categories is achievable for most households without dramatically affecting quality of life. Discretionary categories like dining out or entertainment can often be reduced by 25–40%. Essential categories like housing may only allow 5–10% reduction, or none at all in the short term."}
+      },
+      {
+        "@type": "Question",
+        "name": "How quickly can I see results from expense reduction?",
+        "acceptedAnswer": {"@type": "Answer", "text": "You can see results immediately in your next monthly budget. Cutting expenses is the fastest way to improve your financial position because the savings are guaranteed, unlike investment returns. Even a $200/month reduction amounts to $2,400 per year that can be redirected to savings or debt repayment."}
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="logo">
+        <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav">
+        <a href="/">Home</a>
+        <a href="/pages/finance-calculators/">Finance</a>
+        <a href="/pages/business-calculators/">Business</a>
+        <a href="/pages/investment-calculators/">Investment</a>
+        <a href="/pages/minimalism-and-budget-calculators/" aria-current="page">Minimalism</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav">
+      <a href="/">Home</a>
+      <a href="/pages/finance-calculators/">Finance Calculators</a>
+      <a href="/pages/business-calculators/">Business Calculators</a>
+      <a href="/pages/investment-calculators/">Investment Calculators</a>
+      <a href="/pages/minimalism-and-budget-calculators/">Minimalism &amp; Budget Calculators</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li><a href="/pages/minimalism-and-budget-calculators/">Minimalism &amp; Budget Calculators</a></li>
+        <li><span aria-current="page">Expense Reduction Calculator</span></li>
+      </ol>
+    </nav>
+
+    <div class="page-content">
+      <div class="article-content">
+        <h1>Expense Reduction Calculator</h1>
+        <p>Use this calculator to discover how much you can save by trimming spending across 8 key budget categories. Enter your current monthly expenses for each category, set a realistic reduction target percentage, and see the exact monthly savings, annual savings, and which categories offer the greatest opportunity to cut.</p>
+
+        <div class="ad-slot ad-slot-leaderboard"></div>
+
+        <div class="calc-container">
+          <div class="calc-header">
+            <h2>Calculate Your Expense Reductions</h2>
+            <p>Enter current monthly spending and your target reduction for each category</p>
+          </div>
+          <div class="calc-body">
+            <form id="expense-reduction-form">
+              <div style="display:grid; gap: var(--space-4);">
+                <div style="display:grid; grid-template-columns: 2fr 1fr 1fr; gap: var(--space-3); align-items: center; font-weight: var(--font-semibold); font-size: var(--text-sm); color: var(--color-gray-600); padding-bottom: var(--space-2); border-bottom: 2px solid var(--color-gray-200);">
+                  <span>Category</span>
+                  <span>Monthly ($)</span>
+                  <span>Cut (%)</span>
+                </div>
+
+                <div style="display:grid; grid-template-columns: 2fr 1fr 1fr; gap: var(--space-3); align-items: center;">
+                  <label class="form-label" style="margin:0;" for="housing">Housing</label>
+                  <input type="number" id="housing" name="housing" class="form-input" placeholder="1500" min="0" step="10">
+                  <input type="number" id="housingCut" name="housingCut" class="form-input" placeholder="5" min="0" max="100" step="1">
+                </div>
+                <div style="display:grid; grid-template-columns: 2fr 1fr 1fr; gap: var(--space-3); align-items: center;">
+                  <label class="form-label" style="margin:0;" for="food">Food &amp; Groceries</label>
+                  <input type="number" id="food" name="food" class="form-input" placeholder="600" min="0" step="10">
+                  <input type="number" id="foodCut" name="foodCut" class="form-input" placeholder="15" min="0" max="100" step="1">
+                </div>
+                <div style="display:grid; grid-template-columns: 2fr 1fr 1fr; gap: var(--space-3); align-items: center;">
+                  <label class="form-label" style="margin:0;" for="transport">Transportation</label>
+                  <input type="number" id="transport" name="transport" class="form-input" placeholder="400" min="0" step="10">
+                  <input type="number" id="transportCut" name="transportCut" class="form-input" placeholder="10" min="0" max="100" step="1">
+                </div>
+                <div style="display:grid; grid-template-columns: 2fr 1fr 1fr; gap: var(--space-3); align-items: center;">
+                  <label class="form-label" style="margin:0;" for="entertainment">Entertainment</label>
+                  <input type="number" id="entertainment" name="entertainment" class="form-input" placeholder="300" min="0" step="10">
+                  <input type="number" id="entertainmentCut" name="entertainmentCut" class="form-input" placeholder="30" min="0" max="100" step="1">
+                </div>
+                <div style="display:grid; grid-template-columns: 2fr 1fr 1fr; gap: var(--space-3); align-items: center;">
+                  <label class="form-label" style="margin:0;" for="dining">Dining Out</label>
+                  <input type="number" id="dining" name="dining" class="form-input" placeholder="250" min="0" step="10">
+                  <input type="number" id="diningCut" name="diningCut" class="form-input" placeholder="25" min="0" max="100" step="1">
+                </div>
+                <div style="display:grid; grid-template-columns: 2fr 1fr 1fr; gap: var(--space-3); align-items: center;">
+                  <label class="form-label" style="margin:0;" for="shopping">Shopping &amp; Clothing</label>
+                  <input type="number" id="shopping" name="shopping" class="form-input" placeholder="200" min="0" step="10">
+                  <input type="number" id="shoppingCut" name="shoppingCut" class="form-input" placeholder="20" min="0" max="100" step="1">
+                </div>
+                <div style="display:grid; grid-template-columns: 2fr 1fr 1fr; gap: var(--space-3); align-items: center;">
+                  <label class="form-label" style="margin:0;" for="subscriptions">Subscriptions</label>
+                  <input type="number" id="subscriptions" name="subscriptions" class="form-input" placeholder="150" min="0" step="5">
+                  <input type="number" id="subscriptionsCut" name="subscriptionsCut" class="form-input" placeholder="40" min="0" max="100" step="1">
+                </div>
+                <div style="display:grid; grid-template-columns: 2fr 1fr 1fr; gap: var(--space-3); align-items: center;">
+                  <label class="form-label" style="margin:0;" for="misc">Miscellaneous</label>
+                  <input type="number" id="misc" name="misc" class="form-input" placeholder="200" min="0" step="10">
+                  <input type="number" id="miscCut" name="miscCut" class="form-input" placeholder="20" min="0" max="100" step="1">
+                </div>
+              </div>
+
+              <div class="calc-actions" style="margin-top: var(--space-6);">
+                <button type="button" class="btn btn-calculate" onclick="calculateExpenseReduction()">Calculate Savings</button>
+                <button type="button" class="btn btn-reset" onclick="resetExpenseReduction()">Reset</button>
+              </div>
+            </form>
+
+            <div id="results" class="calc-results hidden">
+              <div class="result-primary">
+                <div class="result-label">Monthly Savings Achieved</div>
+                <div class="result-value" id="monthlySavings" style="color: var(--color-success);">$0</div>
+              </div>
+              <div class="result-grid result-grid-3">
+                <div class="result-item">
+                  <div class="result-label">Annual Savings</div>
+                  <div class="result-value" id="annualSavings" style="color: var(--color-success);">$0</div>
+                </div>
+                <div class="result-item">
+                  <div class="result-label">Total Expenses Reduced</div>
+                  <div class="result-value" id="percentReduced">0%</div>
+                </div>
+                <div class="result-item">
+                  <div class="result-label">New Monthly Total</div>
+                  <div class="result-value" id="newMonthlyTotal">$0</div>
+                </div>
+              </div>
+              <div style="margin-top: var(--space-6);">
+                <h3 style="font-size: var(--text-base); margin-bottom: var(--space-3);">Category Breakdown &amp; Best Cuts</h3>
+                <div id="categoryBreakdown"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <section class="content-section">
+          <h2>How the Expense Reduction Formula Works</h2>
+          <div class="formula-box">
+            <div class="formula-label">Formulas</div>
+            Savings per Category = Current Expense × (Reduction % / 100)<br>
+            Total Monthly Savings = Sum of all category savings<br>
+            Annual Savings = Total Monthly Savings × 12<br>
+            % Reduced = Total Monthly Savings / Total Original Expenses × 100
+          </div>
+          <p>By applying targeted reduction percentages to each spending category, you can identify where the largest dollar-value cuts are possible. Categories with high spending and high cut percentages deliver the biggest payoff. The calculator also flags your top three highest-savings categories so you know exactly where to focus first.</p>
+        </section>
+
+        <section class="content-section">
+          <h2>How to Use This Calculator</h2>
+          <ol>
+            <li><strong>Enter monthly expenses:</strong> Input your actual current monthly spending in each of the 8 categories. Use bank statements or a budgeting app to find real numbers.</li>
+            <li><strong>Set reduction targets:</strong> For each category, enter a realistic percentage you could cut. Start conservatively — even 10% per category adds up fast.</li>
+            <li><strong>Review the results:</strong> The calculator shows total monthly and annual savings, plus a per-category breakdown sorted by savings opportunity.</li>
+            <li><strong>Focus on the top cutters:</strong> The "where to cut most" section highlights the categories offering the biggest absolute dollar savings.</li>
+          </ol>
+        </section>
+
+        <section class="content-section">
+          <h2>Example Scenario</h2>
+          <p>Jordan spends $3,600/month across 8 categories. After analyzing each one:</p>
+          <ul>
+            <li><strong>Housing ($1,500, 5% cut = $75):</strong> Negotiated a lower internet plan and reduced utilities</li>
+            <li><strong>Food ($600, 15% cut = $90):</strong> Meal planning and reducing food waste</li>
+            <li><strong>Entertainment ($300, 30% cut = $90):</strong> Using free events and cutting one streaming service</li>
+            <li><strong>Dining out ($250, 25% cut = $62.50):</strong> Cooking at home three more nights per week</li>
+            <li><strong>Subscriptions ($150, 40% cut = $60):</strong> Auditing and canceling unused subscriptions</li>
+          </ul>
+          <p>Total monthly savings: <strong>$377.50</strong> — or <strong>$4,530 per year</strong>, a 10.5% overall reduction.</p>
+        </section>
+
+        <section class="faq-section">
+          <h2>Frequently Asked Questions</h2>
+          <div class="faq-item">
+            <button class="faq-question">What is an expense reduction calculator?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>An expense reduction calculator helps you quantify how much money you can save by reducing spending in specific budget categories. You enter your current spending and a target reduction percentage for each category, and the calculator shows your projected monthly and annual savings.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">How do I decide which categories to cut?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>Focus on discretionary categories first — entertainment, dining out, and subscriptions typically offer the most flexibility. Non-essential spending that delivers low satisfaction per dollar is usually the best candidate for cuts. Look for your largest expense categories combined with categories where you feel least satisfied by the spending.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">What reduction percentage is realistic?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>A 10–20% reduction across most categories is achievable for most households without dramatically affecting quality of life. Discretionary categories like dining out or entertainment can often be reduced by 25–40%. Essential categories like housing may only allow 5–10% reduction, or none at all in the short term.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">How quickly can I see results from expense reduction?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>You can see results immediately in your next monthly budget. Cutting expenses is the fastest way to improve your financial position because the savings are guaranteed, unlike investment returns. Even a $200/month reduction amounts to $2,400 per year that can be redirected to savings or debt repayment.</p></div>
+          </div>
+        </section>
+
+        <section class="related-calculators">
+          <h2>Related Calculators</h2>
+          <div class="grid grid-3">
+            <a href="/pages/minimalism-and-budget-calculators/budget-optimization-calculator/" class="card card-link">
+              <h3>Budget Optimization Calculator</h3>
+              <p>Compare your current allocations to optimal budget percentages.</p>
+            </a>
+            <a href="/pages/minimalism-and-budget-calculators/subscription-reduction-calculator/" class="card card-link">
+              <h3>Subscription Reduction Calculator</h3>
+              <p>Audit your subscriptions and find which ones to cut.</p>
+            </a>
+            <a href="/pages/minimalism-and-budget-calculators/spending-reduction-impact-calculator/" class="card card-link">
+              <h3>Spending Reduction Impact Calculator</h3>
+              <p>See the long-term wealth impact of spending cuts.</p>
+            </a>
+            <a href="/pages/minimalism-and-budget-calculators/monthly-spending-simplification-calculator/" class="card card-link">
+              <h3>Monthly Spending Simplification Calculator</h3>
+              <p>Simplify your budget to a lean monthly target.</p>
+            </a>
+            <a href="/pages/finance-calculators/budget-calculator/" class="card card-link">
+              <h3>50/30/20 Budget Calculator</h3>
+              <p>Allocate your income using the 50/30/20 budgeting rule.</p>
+            </a>
+          </div>
+        </section>
+
+        <div class="disclaimer">
+          <strong>Disclaimer:</strong> This calculator is for informational and educational purposes only. Results are estimates based on the inputs you provide. Actual savings will depend on your ability to sustain reduced spending over time. This does not constitute financial advice. Consult a qualified financial advisor for personalized guidance.
+        </div>
+
+        <div class="ad-slot ad-slot-rectangle"></div>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free online financial calculators to help you make smarter money decisions.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Minimalism &amp; Budget</h4>
+          <a href="/pages/minimalism-and-budget-calculators/expense-reduction-calculator/">Expense Reduction</a>
+          <a href="/pages/minimalism-and-budget-calculators/budget-optimization-calculator/">Budget Optimization</a>
+          <a href="/pages/minimalism-and-budget-calculators/subscription-reduction-calculator/">Subscription Reduction</a>
+          <a href="/pages/minimalism-and-budget-calculators/downsizing-savings-calculator/">Downsizing Savings</a>
+        </div>
+        <div class="footer-col">
+          <h4>Finance</h4>
+          <a href="/pages/finance-calculators/budget-calculator/">Budget (50/30/20)</a>
+          <a href="/pages/finance-calculators/net-worth-calculator/">Net Worth</a>
+          <a href="/pages/finance-calculators/emergency-fund-calculator/">Emergency Fund</a>
+          <a href="/pages/finance-calculators/retirement-savings-calculator/">Retirement Savings</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about/">About</a>
+          <a href="/contact/">Contact</a>
+          <a href="/privacy/">Privacy Policy</a>
+          <a href="/terms/">Terms of Service</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 CalcWise. All rights reserved.</span>
+        <div class="footer-links">
+          <a href="/privacy/">Privacy</a>
+          <a href="/terms/">Terms</a>
+          <a href="/contact/">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    const CATEGORIES = [
+      { label: 'Housing',            key: 'housing',       cutKey: 'housingCut' },
+      { label: 'Food & Groceries',   key: 'food',          cutKey: 'foodCut' },
+      { label: 'Transportation',     key: 'transport',     cutKey: 'transportCut' },
+      { label: 'Entertainment',      key: 'entertainment', cutKey: 'entertainmentCut' },
+      { label: 'Dining Out',         key: 'dining',        cutKey: 'diningCut' },
+      { label: 'Shopping & Clothing',key: 'shopping',      cutKey: 'shoppingCut' },
+      { label: 'Subscriptions',      key: 'subscriptions', cutKey: 'subscriptionsCut' },
+      { label: 'Miscellaneous',      key: 'misc',          cutKey: 'miscCut' }
+    ];
+
+    function calculateExpenseReduction() {
+      const v = CalcWise.getFormValues('expense-reduction-form');
+
+      let totalOriginal = 0;
+      let totalSavings = 0;
+      const rows = [];
+
+      CATEGORIES.forEach(cat => {
+        const current = v[cat.key] || 0;
+        const cutPct = Math.min(100, Math.max(0, v[cat.cutKey] || 0));
+        const saving = current * (cutPct / 100);
+        const newAmt = current - saving;
+        totalOriginal += current;
+        totalSavings += saving;
+        rows.push({ label: cat.label, current, cutPct, saving, newAmt });
+      });
+
+      const annualSavings = totalSavings * 12;
+      const pctReduced = totalOriginal > 0 ? (totalSavings / totalOriginal) * 100 : 0;
+      const newTotal = totalOriginal - totalSavings;
+
+      CalcWise.setText('monthlySavings', CalcWise.formatCurrency(totalSavings, 0));
+      CalcWise.setText('annualSavings', CalcWise.formatCurrency(annualSavings, 0));
+      CalcWise.setText('percentReduced', CalcWise.formatPercent(pctReduced, 1));
+      CalcWise.setText('newMonthlyTotal', CalcWise.formatCurrency(newTotal, 0));
+
+      // Sort by saving descending for "where to cut most"
+      const sorted = [...rows].sort((a, b) => b.saving - a.saving);
+
+      let html = '<div class="table-container"><table class="data-table"><thead><tr><th>Category</th><th>Current</th><th>Cut %</th><th>Monthly Saving</th><th>New Amount</th></tr></thead><tbody>';
+      rows.forEach(r => {
+        const badge = r.saving === sorted[0].saving ? ' <span style="background:var(--color-success-light);color:var(--color-success);padding:2px 6px;border-radius:4px;font-size:var(--text-xs);font-weight:600;">Top Cut</span>' : '';
+        html += `<tr>
+          <td>${r.label}${badge}</td>
+          <td>${CalcWise.formatCurrency(r.current, 0)}</td>
+          <td>${r.cutPct}%</td>
+          <td style="color:var(--color-success);font-weight:600;">${CalcWise.formatCurrency(r.saving, 0)}</td>
+          <td>${CalcWise.formatCurrency(r.newAmt, 0)}</td>
+        </tr>`;
+      });
+      html += '</tbody></table></div>';
+
+      html += '<div style="margin-top:var(--space-4);padding:var(--space-4);background:var(--color-primary-50);border-radius:var(--radius-lg);">';
+      html += '<strong>Top 3 Categories to Cut:</strong><ol style="list-style:decimal;margin-left:var(--space-5);margin-top:var(--space-2);">';
+      sorted.slice(0, 3).forEach(r => {
+        if (r.saving > 0) html += `<li><strong>${r.label}</strong> — save ${CalcWise.formatCurrency(r.saving, 0)}/month by reducing ${r.cutPct}%</li>`;
+      });
+      html += '</ol></div>';
+
+      CalcWise.setHtml('categoryBreakdown', html);
+      CalcWise.showResults('results');
+    }
+
+    function resetExpenseReduction() {
+      document.getElementById('expense-reduction-form').reset();
+      CalcWise.hideResults('results');
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How Risky Is Your Debt? Quiz | CalcWise</title>
+  <meta name="description" content="8-question quiz to assess whether your debt is low risk, moderate risk, high risk, or a debt crisis — covering DTI, credit utilisation, interest rates, and payoff timeline.">
+  <link rel="canonical" href="https://calcwise.io/quizzes/finance-quizzes/how-risky-is-your-debt/">
+  <meta property="og:title" content="How Risky Is Your Debt? Quiz | CalcWise">
+  <meta property="og:description" content="Not all debt is equal. Find out if your debt load, interest rates, and repayment timeline pose a real financial risk in 8 questions.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcwise.io/quizzes/finance-quizzes/how-risky-is-your-debt/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="How Risky Is Your Debt? Quiz | CalcWise">
+  <meta name="twitter:description" content="8 questions to determine if your debt is low risk, moderate, high risk, or in crisis — with a personalised action plan.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+  <link rel="stylesheet" href="/css/quiz.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://calcwise.io/"},{"@type":"ListItem","position":2,"name":"Quizzes","item":"https://calcwise.io/quizzes/"},{"@type":"ListItem","position":3,"name":"Finance Quizzes","item":"https://calcwise.io/quizzes/finance-quizzes/"},{"@type":"ListItem","position":4,"name":"How Risky Is Your Debt?","item":"https://calcwise.io/quizzes/finance-quizzes/how-risky-is-your-debt/"}]}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebPage","name":"How Risky Is Your Debt? Quiz","description":"8-question quiz covering total debt to income, credit card utilisation, student loans, auto loans, HELOC, interest rates, minimum payment percentage, and payoff timeline.","url":"https://calcwise.io/quizzes/finance-quizzes/how-risky-is-your-debt/","isPartOf":{"@type":"WebSite","name":"CalcWise","url":"https://calcwise.io/"}}
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a><a href="/real-estate-calculators/">Real Estate</a><a href="/finance-calculators/">Finance</a><a href="/business-calculators/">Business</a><a href="/quizzes/" aria-current="page">Quizzes</a><a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a><a href="/real-estate-calculators/">Real Estate Calculators</a><a href="/finance-calculators/">Finance Calculators</a><a href="/business-calculators/">Business Calculators</a><a href="/quizzes/">Quizzes</a><a href="/about.html">About</a><a href="/contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li><li><a href="/quizzes/">Quizzes</a></li><li><a href="/quizzes/finance-quizzes/">Finance Quizzes</a></li><li><span aria-current="page">How Risky Is Your Debt?</span></li>
+        </ol>
+      </nav>
+      <div class="page-content">
+        <h1>How Risky Is Your Debt?</h1>
+        <p class="intro">Not all debt is created equal — a low-interest mortgage is fundamentally different from a high-APR credit card balance. This 8-question quiz analyses the composition, scale, and trajectory of your debt to give you an honest risk rating and a specific plan to reduce it.</p>
+
+        <div class="quiz-container" id="quiz">
+          <div class="quiz-progress">
+            <div class="quiz-progress__label"><span id="progress-text">Question 1 of 8</span><span id="progress-pct">0%</span></div>
+            <div class="quiz-progress__bar"><div class="quiz-progress__fill" id="progress-bar" style="width:0%"></div></div>
+          </div>
+          <div id="question-container"></div>
+          <div id="result-container" class="quiz-result hidden"></div>
+        </div>
+
+        <section class="faq-section" aria-labelledby="faq-heading" style="margin-top:3rem">
+          <h2 id="faq-heading">Frequently Asked Questions</h2>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false"><span>What is a dangerous level of credit card utilisation?</span><svg class="faq-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M10 4v12M4 10h12"/></svg></button>
+            <div class="faq-answer"><p>Credit utilisation above 30% begins to hurt your credit score and signals overspending relative to available credit. Above 50% is a significant red flag. Above 90% indicates you are close to your credit limit and likely carrying unmanageable revolving debt.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false"><span>Which debt should I pay off first?</span><svg class="faq-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M10 4v12M4 10h12"/></svg></button>
+            <div class="faq-answer"><p>Mathematically, pay the highest interest rate first (debt avalanche). Psychologically, some people prefer paying the smallest balance first for quick wins (debt snowball). Both work — the one you stick to is the right one. Any debt above 7–8% APR should be prioritised over investing.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false"><span>Is all debt bad?</span><svg class="faq-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M10 4v12M4 10h12"/></svg></button>
+            <div class="faq-answer"><p>No. Mortgages and low-interest student loans used to increase earning power are often called "good debt." High-interest consumer debt (credit cards, payday loans) that funds depreciating purchases or consumption is "bad debt." The distinction matters for how aggressively you should pay it down.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false"><span>How long should it take to pay off debt?</span><svg class="faq-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M10 4v12M4 10h12"/></svg></button>
+            <div class="faq-answer"><p>Consumer debt (credit cards, personal loans) should be paid within 1–3 years. Auto loans within 3–5 years. Student loans within 5–10 years. Mortgages are typically 15–30 years. If you have no visible payoff date in sight, that's a risk signal worth addressing urgently.</p></div>
+          </div>
+        </section>
+
+        <section aria-labelledby="related-heading" style="margin-top:3rem">
+          <h2 id="related-heading">Related Finance Quizzes</h2>
+          <div class="quiz-grid" style="grid-template-columns:repeat(auto-fill,minmax(260px,1fr))">
+            <a href="/quizzes/finance-quizzes/how-financially-healthy-are-you/" class="quiz-card"><div class="quiz-card__badge">Finance</div><h3>How Financially Healthy Are You?</h3><p>A comprehensive financial health assessment covering all key pillars.</p><span class="quiz-card__cta">Take quiz <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></a>
+            <a href="/quizzes/finance-quizzes/can-you-afford-your-lifestyle/" class="quiz-card"><div class="quiz-card__badge">Finance</div><h3>Can You Afford Your Lifestyle?</h3><p>Find out if your spending patterns are sustainable or accumulating financial pressure.</p><span class="quiz-card__cta">Take quiz <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></a>
+            <a href="/quizzes/finance-quizzes/how-prepared-are-you-for-a-recession/" class="quiz-card"><div class="quiz-card__badge">Finance</div><h3>How Prepared Are You for a Recession?</h3><p>Debt is a major vulnerability in economic downturns — find out how exposed you are.</p><span class="quiz-card__cta">Take quiz <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></a>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home"><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="#1B4D3E" stroke-width="2.5" stroke-linecap="round"/></svg>CalcWise</a>
+          <p>Free financial calculators and quizzes built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col"><h4>Finance Quizzes</h4><a href="/quizzes/finance-quizzes/how-financially-healthy-are-you/">Financial Health</a><a href="/quizzes/finance-quizzes/how-risky-is-your-debt/">Debt Risk</a><a href="/quizzes/finance-quizzes/">View All</a></div>
+        <div class="footer-col"><h4>Real Estate Quizzes</h4><a href="/quizzes/real-estate-quizzes/are-you-ready-to-buy-a-house/">Ready to Buy?</a><a href="/quizzes/real-estate-quizzes/">View All</a></div>
+        <div class="footer-col"><h4>Company</h4><a href="/about.html">About</a><a href="/privacy.html">Privacy Policy</a><a href="/terms.html">Terms of Use</a></div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links"><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a><a href="/disclaimer.html">Disclaimer</a><a href="/sitemap.xml">Sitemap</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    document.querySelector('.mobile-menu-toggle').addEventListener('click', function() {
+      const nav = document.querySelector('.mobile-nav');
+      const isOpen = nav.classList.toggle('is-open');
+      this.setAttribute('aria-expanded', isOpen);
+      this.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+    });
+    document.querySelectorAll('.faq-question').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        const item = this.closest('.faq-item');
+        const isOpen = item.classList.toggle('is-open');
+        this.setAttribute('aria-expanded', isOpen);
+      });
+    });
+
+    const questions = [
+      { question: "What is your total debt-to-income ratio (all monthly debt payments ÷ gross monthly income)?", options: ["Over 50%", "36%–50%", "20%–35%", "Under 20%"], correct: 3, explanation: "A DTI under 20% is low risk. 36–43% is the upper acceptable range. Above 43% signals debt stress. Over 50% is a crisis indicator requiring immediate action." },
+      { question: "What is your credit card utilisation rate (balance ÷ total credit limit)?", options: ["Over 80%", "50%–79%", "10%–49%", "Under 10% or no credit card debt"], correct: 3, explanation: "Credit utilisation below 10% is ideal. Above 30% starts hurting your credit score. Above 80% indicates you are nearly maxed out and likely paying high interest on most of your available credit." },
+      { question: "Do you have student loan debt?", options: ["Yes, over $50,000", "Yes, $20,000–$50,000", "Yes, under $20,000", "No student loans"], correct: 3, explanation: "Student loans are often lower-risk due to income-driven repayment options, but large balances over $50k — especially with high interest rates — can significantly constrain wealth building for decades." },
+      { question: "Do you have an auto loan?", options: ["Yes, with more than 48 months remaining", "Yes, with 25–48 months remaining", "Yes, with under 24 months remaining", "No auto loan"], correct: 3, explanation: "Auto loans are secured, depreciating-asset debt. Long remaining terms on a depreciating vehicle (especially if you are underwater on it) are a risk signal." },
+      { question: "Do you have a HELOC (Home Equity Line of Credit) with a balance?", options: ["Yes, near or at my credit limit", "Yes, moderate balance (30%–70% utilised)", "Yes, small balance (under 30% utilised)", "No HELOC balance"], correct: 3, explanation: "HELOCs have variable rates and use your home as collateral. A large balance at a rising interest rate environment can quickly become unmanageable and put your home at risk." },
+      { question: "What is the average interest rate across all your debts?", options: ["Above 15% average APR", "10%–15% average APR", "5%–9% average APR", "Under 5% average APR (mostly mortgage)"], correct: 3, explanation: "Average APR above 10% means debt is actively destroying wealth. Below 5% (typical of mortgages and some student loans) is manageable. High APR debt should always be paid before investing." },
+      { question: "What percentage of your monthly income goes to minimum debt payments?", options: ["Over 30%", "20%–30%", "10%–19%", "Under 10%"], correct: 3, explanation: "Minimum payments above 20% of income leave little room for savings or emergencies. Above 30% is a critical warning — you are likely trapped in a minimum-payment cycle with little principal reduction." },
+      { question: "Do you have a clear payoff date for your non-mortgage debt?", options: ["No — I only make minimum payments", "No clear date but I pay a little extra", "Yes, I have a rough plan (2–5 years)", "Yes, a specific payoff plan with a target date under 2 years"], correct: 3, explanation: "Minimum-only payments can extend debt for 10–20+ years. A specific payoff plan dramatically reduces total interest paid and creates a clear end date for the debt burden." }
+    ];
+
+    const results = [
+      { min: 6, label: "Low Risk", colorClass: "result-score--high", title: "Your Debt Is Low Risk", desc: "Your debt is well-managed — low interest rates, low utilisation, and a clear payoff plan. You are using debt strategically rather than letting it control your finances. Keep monitoring and stay disciplined.", recs: ["Continue paying extra on remaining debt to pay it off ahead of schedule.", "Review interest rates annually — refinancing opportunities may reduce costs further.", "Redirect paid-off debt payments immediately to investing and saving.", "Consider whether any remaining debt qualifies for student loan forgiveness or refinancing."] },
+      { min: 4, label: "Moderate Risk", colorClass: "", title: "Your Debt Is Moderate Risk", desc: "Your debt situation has manageable risks but specific areas need attention. Left unaddressed, moderate risk can escalate to high risk — especially if interest rates rise or income drops.", recs: ["Identify your highest-APR debt and make it your sole focus until it is paid.", "Stop adding new consumer debt while paying down existing balances.", "Use the debt payoff calculator to model avalanche vs snowball repayment strategies.", "Consider balance transfer offers to reduce APR on credit card debt temporarily."] },
+      { min: 2, label: "High Risk", colorClass: "result-score--mid", title: "Your Debt Is High Risk", desc: "Multiple risk factors are present in your debt picture. High interest rates, heavy utilisation, or a missing payoff plan are signs that debt is actively eroding your financial future. Action is needed now.", recs: ["Stop all non-essential spending and funnel every spare dollar to debt repayment.", "Call your credit card issuers and request a rate reduction — it sometimes works.", "Use the debt payoff calculator to create an aggressive payoff timeline.", "If debt feels overwhelming, a non-profit credit counsellor offers free guidance on debt management plans."] },
+      { min: 0, label: "Debt Crisis", colorClass: "result-score--low", title: "You Are in a Debt Crisis", desc: "Your debt levels and costs are at a crisis point. Without significant intervention, this will worsen over time. The first step is to stop adding new debt and seek help — there are real options available.", recs: ["Call a non-profit credit counsellor (NFCC member agency) immediately — it is free.", "Consider a debt management plan (DMP) which can reduce APR to 6–8% on enrolled accounts.", "Do not use credit cards for new purchases — cash or debit only from here.", "Explore whether any debts qualify for income-driven repayment or forgiveness programs.", "Use the debt payoff calculator to build a realistic plan, however long it takes."] }
+    ];
+
+    const calculatorLinks = [
+      { href: "/finance-calculators/debt-payoff-calculator/", label: "Debt Payoff Calculator" },
+      { href: "/finance-calculators/credit-card-payoff-calculator/", label: "Credit Card Payoff Calculator" },
+      { href: "/finance-calculators/net-worth-calculator/", label: "Net Worth Calculator" }
+    ];
+
+    let current = 0, score = 0, answered = false;
+    function renderQuestion() {
+      answered = false;
+      const q = questions[current];
+      const pct = Math.round((current / questions.length) * 100);
+      document.getElementById('progress-bar').style.width = pct + '%';
+      document.getElementById('progress-text').textContent = 'Question ' + (current + 1) + ' of ' + questions.length;
+      document.getElementById('progress-pct').textContent = pct + '%';
+      document.getElementById('question-container').innerHTML = `<div class="quiz-question"><div class="quiz-question__number">Question ${current + 1}</div><p class="quiz-question__text">${q.question}</p><ul class="quiz-options" role="list">${q.options.map((opt, i) => `<li><button class="quiz-option" onclick="selectAnswer(${i})"><span class="quiz-option__indicator"></span><span>${opt}</span></button></li>`).join('')}</ul><div id="explanation" class="quiz-explanation" style="display:none"></div><div class="quiz-nav"><span></span><button class="btn btn-primary" id="next-btn" onclick="nextQuestion()" disabled>${current < questions.length - 1 ? 'Next Question' : 'See Results'}</button></div></div>`;
+    }
+    function selectAnswer(idx) {
+      if (answered) return; answered = true;
+      const q = questions[current];
+      document.querySelectorAll('.quiz-option').forEach(function(btn, i) { if (i === q.correct) btn.classList.add('correct'); else if (i === idx && idx !== q.correct) btn.classList.add('incorrect'); });
+      if (idx === q.correct) score++;
+      const expEl = document.getElementById('explanation');
+      expEl.style.display = 'block'; expEl.className = 'quiz-explanation ' + (idx === q.correct ? 'quiz-explanation--correct' : 'quiz-explanation--incorrect'); expEl.textContent = q.explanation;
+      document.getElementById('next-btn').disabled = false;
+    }
+    function nextQuestion() { current++; if (current < questions.length) renderQuestion(); else showResult(); }
+    function showResult() {
+      document.getElementById('progress-bar').style.width = '100%'; document.getElementById('progress-text').textContent = 'Complete!'; document.getElementById('progress-pct').textContent = '100%';
+      document.getElementById('question-container').innerHTML = '';
+      const result = results.find(r => score >= r.min);
+      const rc = document.getElementById('result-container'); rc.classList.remove('hidden');
+      rc.innerHTML = `<div class="result-score ${result.colorClass}"><span class="result-score__number">${score}/${questions.length}</span><span class="result-score__label">Score</span></div><div class="result-category">${result.label}</div><h2>${result.title}</h2><p>${result.desc}</p><div class="result-recommendations"><h3>Recommended Next Steps</h3><ul>${result.recs.map(r => `<li>${r}</li>`).join('')}</ul></div><div class="result-actions">${calculatorLinks.map(l => `<a href="${l.href}" class="btn btn-secondary">${l.label}</a>`).join('')}</div><div class="result-actions" style="margin-top:1rem"><button class="btn btn-outline" onclick="restartQuiz()">Retake Quiz</button></div>`;
+    }
+    function restartQuiz() { current = 0; score = 0; document.getElementById('result-container').classList.add('hidden'); renderQuestion(); }
+    renderQuestion();
+  </script>
+</body>
+</html>

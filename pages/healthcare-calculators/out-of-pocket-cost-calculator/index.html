@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Out-of-Pocket Cost Calculator - Deductible, Coinsurance & OOP Max | CalcWise</title>
+  <meta name="description" content="Free out-of-pocket cost calculator. See how your medical costs distribute across your deductible, coinsurance, and out-of-pocket maximum so you know exactly what you'll owe.">
+  <meta name="keywords" content="out-of-pocket cost calculator, deductible coinsurance calculator, OOP max calculator, health insurance cost calculator, medical cost breakdown">
+  <link rel="canonical" href="https://calcwise.io/healthcare-calculators/out-of-pocket-cost-calculator/">
+
+  <meta property="og:title" content="Out-of-Pocket Cost Calculator - Deductible, Coinsurance & OOP Max">
+  <meta property="og:description" content="See exactly how medical costs distribute across your deductible, coinsurance, and out-of-pocket maximum.">
+  <meta property="og:url" content="https://calcwise.io/healthcare-calculators/out-of-pocket-cost-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Out-of-Pocket Cost Calculator - Deductible, Coinsurance & OOP Max">
+  <meta name="twitter:description" content="See exactly how medical costs distribute across your deductible, coinsurance, and out-of-pocket maximum.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Healthcare Calculators", "item": "https://calcwise.io/healthcare-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "Out-of-Pocket Cost Calculator", "item": "https://calcwise.io/healthcare-calculators/out-of-pocket-cost-calculator/" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is an out-of-pocket maximum?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The out-of-pocket maximum (OOP max) is the most you will have to pay for covered healthcare services in a plan year. Once you reach this limit, your insurance covers 100% of covered in-network costs for the rest of the year. For 2026, the ACA caps self-only plans at approximately $9,450." }
+      },
+      {
+        "@type": "Question",
+        "name": "What counts toward the out-of-pocket maximum?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Generally, deductibles, coinsurance, and copays for covered in-network services count toward your OOP max. Monthly premiums do NOT count. Out-of-network costs may not count toward your in-network OOP max. Always check your specific plan documents." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between coinsurance and a copay?",
+        "acceptedAnswer": { "@type": "Answer", "text": "A copay is a flat dollar amount you pay for a specific service regardless of total cost (e.g., $30 for a doctor visit). Coinsurance is a percentage of the total cost you pay (e.g., 20% of a $500 procedure = $100). Coinsurance typically kicks in after your deductible is met." }
+      },
+      {
+        "@type": "Question",
+        "name": "How does the deductible and coinsurance structure work together?",
+        "acceptedAnswer": { "@type": "Answer", "text": "In a typical plan: you pay 100% of costs until you meet your deductible. Then you pay your coinsurance percentage (e.g., 20%) and insurance pays the rest (80%) until you hit your out-of-pocket maximum. After that, insurance pays 100% of covered costs." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/business-calculators/">Business</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/business-calculators/">Business Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/healthcare-calculators/">Healthcare Calculators</a></li>
+          <li><span aria-current="page">Out-of-Pocket Cost Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="article-content">
+          <h1>Out-of-Pocket Cost Calculator</h1>
+          <p>Health insurance can be confusing — but understanding exactly how your costs are split is essential for financial planning. This calculator shows how your annual medical expenses distribute across three buckets: your deductible, the coinsurance zone, and what's covered once you hit your out-of-pocket maximum. Know your exposure before you need care.</p>
+
+          <div class="calc-container mt-8">
+            <div class="calc-header">
+              <h2>Calculate Your Out-of-Pocket Cost Breakdown</h2>
+              <p>Enter your plan details and expected medical costs</p>
+            </div>
+            <div class="calc-body">
+              <form id="oop-form" onsubmit="return false;">
+                <div class="form-group">
+                  <label class="form-label" for="oop-deductible">Annual Deductible</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="oop-deductible" class="form-input" placeholder="1500" min="0" step="100" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="oop-coinsurance">Your Coinsurance %</label>
+                  <div class="input-suffix">
+                    <input type="number" id="oop-coinsurance" class="form-input" placeholder="20" min="0" max="100" step="1" required>
+                    <span class="suffix">%</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="oop-max">Out-of-Pocket Maximum</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="oop-max" class="form-input" placeholder="7000" min="0" step="100" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="expected-medical">Expected Annual Medical Costs</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="expected-medical" class="form-input" placeholder="4000" min="0" step="100" required>
+                  </div>
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calculateOOP()">Calculate</button>
+                  <button type="button" class="btn btn-reset" onclick="resetOOP()">Reset</button>
+                </div>
+              </form>
+
+              <div id="oop-results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">Total Out-of-Pocket</div>
+                  <div class="result-value" id="result-oop-total"></div>
+                </div>
+                <div class="result-grid result-grid-3">
+                  <div class="result-item">
+                    <div class="result-label">Paid via Deductible</div>
+                    <div class="result-value" id="result-oop-deductible"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Paid via Coinsurance</div>
+                    <div class="result-value" id="result-oop-coins"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Covered by OOP Max Cap</div>
+                    <div class="result-value" id="result-oop-capped"></div>
+                  </div>
+                </div>
+                <div class="result-grid result-grid-3" style="margin-top:1rem;">
+                  <div class="result-item">
+                    <div class="result-label">Insurance Pays</div>
+                    <div class="result-value" id="result-ins-pays"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">OOP Max Reached?</div>
+                    <div class="result-value" id="result-max-reached"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Remaining to OOP Max</div>
+                    <div class="result-value" id="result-remaining-to-max"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <section class="content-section">
+            <h2>How Cost Distribution Works</h2>
+            <p>Medical costs flow through three distinct phases under most health insurance plans:</p>
+            <div class="formula-box">
+              <div class="formula-label">Phase 1: Deductible Zone</div>
+              You pay 100% of covered costs up to your annual deductible.
+            </div>
+            <div class="formula-box">
+              <div class="formula-label">Phase 2: Coinsurance Zone</div>
+              You pay your coinsurance % on costs above the deductible, until your OOP max is reached.
+            </div>
+            <div class="formula-box">
+              <div class="formula-label">Phase 3: OOP Max Cap</div>
+              Once your total out-of-pocket hits the OOP max, insurance covers 100% of remaining covered costs.
+            </div>
+          </section>
+
+          <section class="content-section">
+            <h2>How to Use This Calculator</h2>
+            <ol>
+              <li><strong>Enter your annual deductible</strong> - find this on your insurance card or Summary of Benefits.</li>
+              <li><strong>Enter your coinsurance %</strong> - your share after the deductible (commonly 10-30%).</li>
+              <li><strong>Enter your out-of-pocket maximum</strong> - the most you can ever pay in a plan year.</li>
+              <li><strong>Enter expected annual medical costs</strong> - your estimate for the year including all services.</li>
+              <li><strong>Click Calculate</strong> to see exactly how costs distribute and your total out-of-pocket.</li>
+            </ol>
+          </section>
+
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>A plan has a $1,500 deductible, 20% coinsurance, and a $7,000 out-of-pocket maximum. The member expects $8,000 in medical costs this year. Phase 1: They pay $1,500 toward the deductible. Phase 2: On the remaining $6,500, they pay 20% = $1,300. Total so far: $2,800, well below the $7,000 OOP max. The insurance company covers the remaining 80% = $5,200. If costs were $40,000 instead, total out-of-pocket would be capped at $7,000 regardless.</p>
+          </section>
+
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What is an out-of-pocket maximum?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>The out-of-pocket maximum is the most you will pay for covered healthcare in a plan year. Once reached, insurance covers 100% of covered in-network costs for the rest of the year. For 2026, ACA self-only plans cap at approximately $9,450.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What counts toward the out-of-pocket maximum?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Generally, deductibles, coinsurance, and copays for covered in-network services count toward your OOP max. Monthly premiums do NOT count. Out-of-network costs may not count toward your in-network OOP max. Always check your specific plan documents.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What is the difference between coinsurance and a copay?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>A copay is a flat dollar amount you pay for a specific service (e.g., $30 per doctor visit). Coinsurance is a percentage of the total cost (e.g., 20% of a $500 procedure = $100). Coinsurance typically applies after your deductible is met.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                How does the deductible and coinsurance structure work together?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>In a typical plan: you pay 100% of costs until you meet your deductible, then you pay your coinsurance percentage until you hit your out-of-pocket maximum, and after that insurance pays 100% of covered costs for the rest of the year.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/healthcare-calculators/healthcare-deductible-calculator/" class="card card-link">
+                <h3>Healthcare Deductible Calculator</h3>
+                <p>Compare high vs low deductible plans for your situation.</p>
+              </a>
+              <a href="/healthcare-calculators/health-savings-account-calculator/" class="card card-link">
+                <h3>HSA Calculator</h3>
+                <p>Build a tax-advantaged fund to cover your out-of-pocket costs.</p>
+              </a>
+              <a href="/healthcare-calculators/hospital-stay-cost-calculator/" class="card card-link">
+                <h3>Hospital Stay Cost Calculator</h3>
+                <p>Estimate costs and insurance share for inpatient hospital stays.</p>
+              </a>
+            </div>
+          </section>
+
+          <div class="disclaimer">
+            <strong>Disclaimer:</strong> This calculator provides estimates based on a simplified three-phase cost model. Actual cost distribution depends on your specific plan's benefit design, copay structures, network status, and whether costs are for covered services. Always refer to your plan's Summary of Benefits and Coverage (SBC) for exact cost-sharing details. This is not medical or financial advice.
+          </div>
+
+          <div class="ad-slot ad-slot-leaderboard"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Healthcare</h4>
+          <a href="/healthcare-calculators/">All Healthcare Calculators</a>
+          <a href="/healthcare-calculators/healthcare-deductible-calculator/">Deductible Calculator</a>
+        </div>
+        <div class="footer-col">
+          <h4>Finance</h4>
+          <a href="/finance-calculators/">All Finance Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateOOP() {
+      if (!CalcWise.validateForm('oop-form')) return;
+
+      const deductible = CalcWise.parseNumber(document.getElementById('oop-deductible').value);
+      const coinsurancePct = parseFloat(document.getElementById('oop-coinsurance').value) / 100;
+      const oopMax = CalcWise.parseNumber(document.getElementById('oop-max').value);
+      const expectedCosts = CalcWise.parseNumber(document.getElementById('expected-medical').value);
+
+      // Phase 1: Deductible
+      const deductiblePaid = Math.min(expectedCosts, deductible);
+      const afterDeductible = Math.max(0, expectedCosts - deductible);
+
+      // Phase 2: Coinsurance
+      const maxCoinsurance = oopMax - deductible;
+      const coinsuranceCosts = afterDeductible;
+      const coinsurancePaid = Math.min(coinsuranceCosts * coinsurancePct, maxCoinsurance);
+      const insurancePaysCoins = coinsuranceCosts - coinsurancePaid;
+
+      // Phase 3: OOP Max
+      let totalOOP = deductiblePaid + coinsurancePaid;
+      let cappedAmount = 0;
+      if (totalOOP > oopMax) {
+        cappedAmount = totalOOP - oopMax;
+        totalOOP = oopMax;
+      }
+
+      const maxReached = totalOOP >= oopMax;
+      const remainingToMax = Math.max(0, oopMax - totalOOP);
+      const insurancePays = Math.max(0, expectedCosts - totalOOP);
+
+      CalcWise.setText('result-oop-total', CalcWise.formatCurrency(totalOOP));
+      CalcWise.setText('result-oop-deductible', CalcWise.formatCurrency(deductiblePaid));
+      CalcWise.setText('result-oop-coins', CalcWise.formatCurrency(coinsurancePaid));
+      CalcWise.setText('result-oop-capped', cappedAmount > 0 ? CalcWise.formatCurrency(cappedAmount) + ' saved' : 'Not reached');
+      CalcWise.setText('result-ins-pays', CalcWise.formatCurrency(insurancePays));
+      CalcWise.setText('result-max-reached', maxReached ? 'Yes' : 'No');
+      CalcWise.setText('result-remaining-to-max', remainingToMax === 0 ? 'Reached!' : CalcWise.formatCurrency(remainingToMax));
+      CalcWise.showResults('oop-results');
+    }
+
+    function resetOOP() {
+      document.getElementById('oop-form').reset();
+      CalcWise.hideResults('oop-results');
+    }
+  </script>
+</body>
+</html>

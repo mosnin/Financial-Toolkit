@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payroll Tax Calculator | CalcWise</title>
+  <meta name="description" content="Calculate per-paycheck federal withholding, state withholding, Social Security, Medicare, and net pay. Supports all pay frequencies and filing statuses.">
+  <link rel="canonical" href="https://calcwise.io/tax-calculators/payroll-tax-calculator/">
+  <meta property="og:title" content="Payroll Tax Calculator | CalcWise">
+  <meta property="og:description" content="Calculate net pay after federal withholding, state tax, Social Security, and Medicare by pay period.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcwise.io/tax-calculators/payroll-tax-calculator/">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/"},
+      {"@type": "ListItem", "position": 2, "name": "Tax Calculators", "item": "https://calcwise.io/tax-calculators/"},
+      {"@type": "ListItem", "position": 3, "name": "Payroll Tax Calculator"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How is federal income tax withholding calculated on a paycheck?",
+        "acceptedAnswer": {"@type": "Answer", "text": "The IRS percentage method annualizes each paycheck, subtracts the standard withholding allowance, applies the progressive tax brackets, then divides back by pay periods. The 2020+ W4 uses income amounts rather than allowances."}
+      },
+      {
+        "@type": "Question",
+        "name": "What is the Social Security wage base for 2026?",
+        "acceptedAnswer": {"@type": "Answer", "text": "For 2026, the Social Security taxable wage base is approximately $174,900. Wages above this limit are not subject to the 6.2% Social Security tax, though Medicare's 1.45% applies to all wages."}
+      },
+      {
+        "@type": "Question",
+        "name": "What are the pay frequency options?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Common pay frequencies are weekly (52 paychecks/year), bi-weekly (26/year), semi-monthly (24/year), and monthly (12/year). Bi-weekly and semi-monthly are most common in US employment."}
+      },
+      {
+        "@type": "Question",
+        "name": "Does a pre-tax 401(k) contribution reduce payroll taxes?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Traditional 401(k) contributions reduce federal and state income tax withholding because they lower your taxable wages. However, they do not reduce Social Security or Medicare (FICA) taxes, which apply to gross wages before the 401(k) deduction."}
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="logo">
+        <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav">
+        <a href="/">Home</a>
+        <a href="/pages/business-calculators/">Business</a>
+        <a href="/pages/financial-calculators/">Financial</a>
+        <a href="/pages/tax-calculators/" aria-current="page">Tax</a>
+        <a href="/pages/investment-calculators/">Investment</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav">
+      <a href="/">Home</a>
+      <a href="/pages/business-calculators/">Business Calculators</a>
+      <a href="/pages/financial-calculators/">Financial Calculators</a>
+      <a href="/pages/tax-calculators/">Tax Calculators</a>
+      <a href="/pages/investment-calculators/">Investment Calculators</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/pages/tax-calculators/">Tax Calculators</a></li>
+          <li><span aria-current="page">Payroll Tax Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="calc-page-layout">
+          <div class="calc-page-main">
+            <h1>Payroll Tax Calculator</h1>
+            <p class="subtitle" style="font-size:var(--text-lg);color:var(--color-gray-600);margin-bottom:var(--space-8);line-height:var(--leading-relaxed);">Calculate your net paycheck after federal withholding, state income tax, Social Security, and Medicare deductions. Supports weekly, bi-weekly, semi-monthly, and monthly pay frequencies for all filing statuses.</p>
+
+            <div class="calc-container">
+              <div class="calc-header">
+                <h2>Payroll Tax Calculator</h2>
+                <p>Calculate your per-paycheck net pay</p>
+              </div>
+              <div class="calc-body">
+                <form id="calc-form" onsubmit="return false;">
+                  <div class="form-group">
+                    <label class="form-label" for="gross-wages">Gross Wages Per Pay Period</label>
+                    <div class="input-prefix">
+                      <span class="prefix">$</span>
+                      <input type="number" id="gross-wages" class="form-input" placeholder="3000" min="0" step="50">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="pay-frequency">Pay Frequency</label>
+                    <select id="pay-frequency" class="form-select">
+                      <option value="52">Weekly (52 paychecks/year)</option>
+                      <option value="26" selected>Bi-Weekly (26 paychecks/year)</option>
+                      <option value="24">Semi-Monthly (24 paychecks/year)</option>
+                      <option value="12">Monthly (12 paychecks/year)</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="filing-status">W4 Filing Status</label>
+                    <select id="filing-status" class="form-select">
+                      <option value="single">Single / MFS</option>
+                      <option value="married">Married Filing Jointly</option>
+                      <option value="hoh">Head of Household</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="pretax-deductions">Pre-Tax Deductions per Period (401k, HSA, etc.)</label>
+                    <div class="input-prefix">
+                      <span class="prefix">$</span>
+                      <input type="number" id="pretax-deductions" class="form-input" placeholder="200" min="0" step="10">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="state-rate">State Tax Rate (%)</label>
+                    <div class="input-suffix">
+                      <input type="number" id="state-rate" class="form-input" placeholder="5" min="0" max="15" step="0.1">
+                      <span class="suffix">%</span>
+                    </div>
+                  </div>
+                  <div class="calc-actions">
+                    <button type="button" class="btn btn-calculate btn-full" onclick="calculatePayroll()">Calculate Net Pay</button>
+                    <button type="button" class="btn btn-reset" onclick="resetForm()">Reset</button>
+                  </div>
+                </form>
+
+                <div id="results" class="calc-results hidden">
+                  <div class="result-primary">
+                    <div class="result-label">Net Pay Per Paycheck</div>
+                    <div class="result-value" id="result-net">$0</div>
+                  </div>
+                  <div class="result-grid">
+                    <div class="result-item">
+                      <div class="result-label">Federal Withholding</div>
+                      <div class="result-value" id="result-fed">$0</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">State Withholding</div>
+                      <div class="result-value" id="result-state">$0</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Social Security (6.2%)</div>
+                      <div class="result-value" id="result-ss">$0</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Medicare (1.45%)</div>
+                      <div class="result-value" id="result-medicare">$0</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Annual Gross</div>
+                      <div class="result-value" id="result-annual-gross">$0</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Annual Net</div>
+                      <div class="result-value" id="result-annual-net">$0</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="ad-slot ad-slot-leaderboard"></div>
+
+            <section class="content-section">
+              <h2>How Payroll Taxes Are Calculated</h2>
+              <div class="formula-box">
+                <div class="formula-label">Step 1: Annualize wages</div>
+                Annual Wages = Gross Per Period × Pay Periods Per Year
+              </div>
+              <div class="formula-box">
+                <div class="formula-label">Step 2: Federal withholding (annualized method)</div>
+                Taxable Annual = Annual Wages − Pre-Tax Deductions − Standard Withholding Allowance<br>
+                Apply annual brackets, divide by pay periods
+              </div>
+              <div class="formula-box">
+                <div class="formula-label">Step 3: FICA taxes</div>
+                Social Security = min(Gross, SS Wage Base/Periods) × 6.2%<br>
+                Medicare = Gross × 1.45%
+              </div>
+              <div class="formula-box">
+                <div class="formula-label">Step 4: Net Pay</div>
+                Net = Gross − Federal Withholding − State Withholding − SS − Medicare − Pre-Tax Deductions
+              </div>
+            </section>
+
+            <section class="content-section">
+              <h2>How to Use This Calculator</h2>
+              <ol>
+                <li>Enter your <strong>gross wages per pay period</strong> (before any deductions).</li>
+                <li>Select your <strong>pay frequency</strong>.</li>
+                <li>Select your <strong>W4 filing status</strong>.</li>
+                <li>Enter any <strong>pre-tax deductions</strong> per period (401k, health insurance, HSA).</li>
+                <li>Enter your <strong>state tax rate</strong> as a percentage (use 0 for no state income tax).</li>
+                <li>Click <strong>Calculate Net Pay</strong>.</li>
+              </ol>
+            </section>
+
+            <section class="content-section">
+              <h2>Example Scenario</h2>
+              <p>A bi-weekly employee earns $3,500 per paycheck (single, no W4 adjustments), $200 pre-tax 401k, 5% state tax:</p>
+              <ul>
+                <li>Annual Gross: $3,500 × 26 = $91,000</li>
+                <li>Federal Withholding per check: ~$462 (based on annualized 22% bracket)</li>
+                <li>Social Security: $3,500 × 6.2% = <strong>$217</strong></li>
+                <li>Medicare: $3,500 × 1.45% = <strong>$50.75</strong></li>
+                <li>State: ($3,500 − $200) × 5% = <strong>$165</strong></li>
+                <li>Net Pay: $3,500 − $462 − $217 − $50.75 − $165 − $200 = <strong>~$2,405</strong></li>
+              </ul>
+            </section>
+
+            <section class="faq-section">
+              <h2>Frequently Asked Questions</h2>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">How is federal income tax withholding calculated on a paycheck?<svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg></button>
+                <div class="faq-answer"><p>The IRS percentage method annualizes each paycheck, subtracts the standard withholding allowance, applies the progressive tax brackets, then divides back by pay periods. The 2020+ W4 uses income amounts rather than allowances.</p></div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">What is the Social Security wage base for 2026?<svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg></button>
+                <div class="faq-answer"><p>For 2026, the Social Security taxable wage base is approximately $174,900. Wages above this limit are not subject to the 6.2% Social Security tax, though Medicare's 1.45% applies to all wages.</p></div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">What are the pay frequency options?<svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg></button>
+                <div class="faq-answer"><p>Common pay frequencies are weekly (52 paychecks/year), bi-weekly (26/year), semi-monthly (24/year), and monthly (12/year). Bi-weekly and semi-monthly are most common in US employment.</p></div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">Does a pre-tax 401(k) contribution reduce payroll taxes?<svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg></button>
+                <div class="faq-answer"><p>Traditional 401(k) contributions reduce federal and state income tax withholding because they lower your taxable wages. However, they do not reduce Social Security or Medicare (FICA) taxes, which apply to gross wages before the 401(k) deduction.</p></div>
+              </div>
+            </section>
+
+            <section class="related-calculators">
+              <h2>Related Calculators</h2>
+              <div class="grid grid-3">
+                <a href="/pages/tax-calculators/after-tax-income-calculator/" class="card card-link">
+                  <h3>After-Tax Income Calculator</h3>
+                  <p>Annual net income breakdown including all taxes.</p>
+                </a>
+                <a href="/pages/tax-calculators/tax-bracket-calculator/" class="card card-link">
+                  <h3>Tax Bracket Calculator</h3>
+                  <p>See your marginal rate and how income is taxed.</p>
+                </a>
+                <a href="/pages/tax-calculators/tax-refund-estimator/" class="card card-link">
+                  <h3>Tax Refund Estimator</h3>
+                  <p>Estimate your refund or amount owed at tax time.</p>
+                </a>
+              </div>
+            </section>
+
+            <div class="disclaimer">
+              <strong>Tax Disclaimer:</strong> This calculator provides estimates for educational purposes only and does not constitute tax advice. Actual paycheck withholding is determined by your W4 elections, employer payroll systems, and state-specific rules. This calculator uses a simplified annualized method. Consult your employer's payroll department or a tax professional for exact withholding amounts. Results are based on estimated 2026 federal tax parameters.
+            </div>
+          </div>
+
+          <aside class="calc-page-sidebar">
+            <div class="ad-slot ad-slot-rectangle"></div>
+            <div class="sidebar-card">
+              <h3>Tax Calculators</h3>
+              <a href="/pages/tax-calculators/after-tax-income-calculator/">After-Tax Income</a>
+              <a href="/pages/tax-calculators/tax-bracket-calculator/">Tax Bracket Calculator</a>
+              <a href="/pages/tax-calculators/tax-refund-estimator/">Tax Refund Estimator</a>
+              <a href="/pages/tax-calculators/state-income-tax-calculator/">State Income Tax</a>
+              <a href="/pages/tax-calculators/1099-vs-w2-calculator/">1099 vs W2</a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free online calculators for business, finance, tax, and investment decisions.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Calculators</h4>
+          <a href="/pages/business-calculators/">Business</a>
+          <a href="/pages/financial-calculators/">Financial</a>
+          <a href="/pages/tax-calculators/">Tax</a>
+          <a href="/pages/investment-calculators/">Investment</a>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <a href="/about/">About</a>
+          <a href="/blog/">Blog</a>
+          <a href="/contact/">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="/privacy/">Privacy Policy</a>
+          <a href="/terms/">Terms of Service</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/privacy/">Privacy</a>
+          <a href="/terms/">Terms</a>
+          <a href="/contact/">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    const ANNUAL_BRACKETS = {
+      single: [{rate:0.10,min:0,max:11925},{rate:0.12,min:11925,max:48475},{rate:0.22,min:48475,max:103350},{rate:0.24,min:103350,max:197300},{rate:0.32,min:197300,max:250525},{rate:0.35,min:250525,max:626350},{rate:0.37,min:626350,max:Infinity}],
+      married: [{rate:0.10,min:0,max:23850},{rate:0.12,min:23850,max:96950},{rate:0.22,min:96950,max:206700},{rate:0.24,min:206700,max:394600},{rate:0.32,min:394600,max:501050},{rate:0.35,min:501050,max:751600},{rate:0.37,min:751600,max:Infinity}],
+      hoh: [{rate:0.10,min:0,max:17000},{rate:0.12,min:17000,max:64850},{rate:0.22,min:64850,max:103350},{rate:0.24,min:103350,max:197300},{rate:0.32,min:197300,max:250500},{rate:0.35,min:250500,max:626350},{rate:0.37,min:626350,max:Infinity}]
+    };
+    const STD_ALLOW = {single:14600, married:29200, hoh:21900};
+    const SS_WAGE_BASE = 174900;
+
+    function calcAnnualTax(taxable, status) {
+      const b = ANNUAL_BRACKETS[status] || ANNUAL_BRACKETS.single;
+      let tax = 0;
+      for (const br of b) {
+        if (taxable <= br.min) break;
+        tax += (Math.min(taxable, br.max) - br.min) * br.rate;
+      }
+      return tax;
+    }
+
+    function calculatePayroll() {
+      const gross = CalcWise.parseNumber(document.getElementById('gross-wages').value);
+      const periods = parseInt(document.getElementById('pay-frequency').value);
+      const status = document.getElementById('filing-status').value;
+      const pretax = CalcWise.parseNumber(document.getElementById('pretax-deductions').value);
+      const stateRate = CalcWise.parseNumber(document.getElementById('state-rate').value) / 100;
+
+      if (gross <= 0) { alert('Please enter gross wages per pay period.'); return; }
+
+      const annualGross = gross * periods;
+      const annualPretax = pretax * periods;
+      const annualTaxable = Math.max(0, annualGross - annualPretax - (STD_ALLOW[status] || 14600));
+      const annualFed = calcAnnualTax(annualTaxable, status);
+      const fedPerPeriod = annualFed / periods;
+
+      // FICA (applies to gross, SS has wage base cap)
+      const annualSSWages = Math.min(annualGross, SS_WAGE_BASE);
+      const ssPerPeriod = (annualSSWages / periods) * 0.062;
+      const medicarePerPeriod = gross * 0.0145;
+
+      // State (applied to gross - pretax)
+      const statePer = (gross - pretax) * stateRate;
+
+      const netPay = gross - fedPerPeriod - ssPerPeriod - medicarePerPeriod - statePer - pretax;
+
+      CalcWise.setText('result-net', CalcWise.formatCurrency(netPay));
+      CalcWise.setText('result-fed', CalcWise.formatCurrency(fedPerPeriod));
+      CalcWise.setText('result-state', CalcWise.formatCurrency(statePer));
+      CalcWise.setText('result-ss', CalcWise.formatCurrency(ssPerPeriod));
+      CalcWise.setText('result-medicare', CalcWise.formatCurrency(medicarePerPeriod));
+      CalcWise.setText('result-annual-gross', CalcWise.formatCurrency(annualGross));
+      CalcWise.setText('result-annual-net', CalcWise.formatCurrency(netPay * periods));
+      CalcWise.showResults('results');
+    }
+
+    function resetForm() {
+      document.getElementById('calc-form').reset();
+      CalcWise.hideResults('results');
+    }
+
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', !expanded);
+        btn.nextElementSibling.style.display = expanded ? 'none' : 'block';
+      });
+    });
+    document.querySelectorAll('.faq-answer').forEach(a => a.style.display = 'none');
+
+    const toggle = document.querySelector('.mobile-menu-toggle');
+    const mobileNav = document.querySelector('.mobile-nav');
+    if (toggle && mobileNav) {
+      toggle.addEventListener('click', () => {
+        const open = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', !open);
+        mobileNav.style.display = open ? 'none' : 'block';
+      });
+    }
+  </script>
+</body>
+</html>

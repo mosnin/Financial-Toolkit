@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vendor Payment Schedule Calculator - CalcWise</title>
+  <meta name="description" content="Calculate early payment savings, late payment costs, and the optimal payment date for vendor invoices. Optimize cash flow with net 30/60/90 payment terms.">
+  <link rel="canonical" href="https://calcwise.io/business-operations-calculators/vendor-payment-schedule-calculator/">
+
+  <meta property="og:title" content="Vendor Payment Schedule Calculator - CalcWise">
+  <meta property="og:description" content="Calculate early payment savings, late payment costs, and the optimal vendor payment date based on invoice amount and payment terms.">
+  <meta property="og:url" content="https://calcwise.io/business-operations-calculators/vendor-payment-schedule-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Vendor Payment Schedule Calculator - CalcWise">
+  <meta name="twitter:description" content="Calculate early payment savings, late payment costs, and optimal vendor payment date based on invoice amount and payment terms.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Business Operations Calculators", "item": "https://calcwise.io/business-operations-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "Vendor Payment Schedule Calculator", "item": "https://calcwise.io/business-operations-calculators/vendor-payment-schedule-calculator/" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What does net 30 mean on an invoice?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Net 30 means the full invoice amount is due within 30 days of the invoice date. Net 60 and Net 90 work similarly with 60 and 90-day payment windows respectively." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is a 2/10 net 30 payment term?",
+        "acceptedAnswer": { "@type": "Answer", "text": "2/10 net 30 means you can take a 2% discount if you pay within 10 days, otherwise the full amount is due in 30 days. This is one of the most common early payment discount structures in B2B trade." }
+      },
+      {
+        "@type": "Question",
+        "name": "When should I take an early payment discount?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Take an early payment discount if the annualized return on the discount exceeds your cost of capital or what you could earn keeping that cash invested. A 2% discount for paying 20 days early annualizes to about 36% -- almost always worth taking." }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens if I pay a vendor late?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Late payments typically incur late fees, often 1-3% per month or a flat fee. Repeated late payments can damage supplier relationships, reduce credit terms offered, and impact your business reputation." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/business-operations-calculators/" aria-current="page">Business</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/business-operations-calculators/" aria-current="page">Business Operations Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container page-content">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/business-operations-calculators/">Business Operations Calculators</a></li>
+          <li><span aria-current="page">Vendor Payment Schedule Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="calc-page-layout">
+        <div class="calc-page-main">
+          <h1>Vendor Payment Schedule Calculator</h1>
+          <p class="mt-4 mb-8" style="font-size:var(--text-lg); color:var(--color-gray-600); max-width:700px; line-height:var(--leading-relaxed);">Optimize when to pay your vendors by calculating the true value of early payment discounts versus the cost of late fees. Understanding the economics of payment timing helps you maximize cash flow without damaging supplier relationships.</p>
+
+          <div class="calc-container">
+            <div class="calc-header">
+              <h2>Analyze Vendor Payment Schedule</h2>
+              <p>Enter invoice details and payment terms</p>
+            </div>
+            <div class="calc-body">
+              <form id="vendorPayForm" novalidate>
+                <div class="form-group">
+                  <label class="form-label" for="invoiceAmount">Invoice Amount <span class="form-hint">Total amount due on the invoice</span></label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="invoiceAmount" name="invoiceAmount" class="form-input" placeholder="10000" min="0.01" step="0.01" required>
+                  </div>
+                  <span class="form-error">Please enter a valid invoice amount greater than zero.</span>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="paymentTerms">Payment Terms <span class="form-hint">Standard due date</span></label>
+                  <select id="paymentTerms" name="paymentTerms" class="form-input">
+                    <option value="30">Net 30 (due in 30 days)</option>
+                    <option value="60">Net 60 (due in 60 days)</option>
+                    <option value="90">Net 90 (due in 90 days)</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="earlyDiscountPct">Early Payment Discount % <span class="form-hint">Discount for paying early (e.g. 2 for 2/10 net 30)</span></label>
+                  <div class="input-suffix">
+                    <input type="number" id="earlyDiscountPct" name="earlyDiscountPct" class="form-input" placeholder="2" min="0" max="20" step="0.1">
+                    <span class="suffix">%</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="earlyDays">Days Early to Qualify for Discount <span class="form-hint">e.g. 10 for 2/10 net 30</span></label>
+                  <div class="input-suffix">
+                    <input type="number" id="earlyDays" name="earlyDays" class="form-input" placeholder="10" min="1" max="89" step="1">
+                    <span class="suffix">days</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="lateFeePct">Late Payment Fee % <span class="form-hint">Fee charged if payment is overdue</span></label>
+                  <div class="input-suffix">
+                    <input type="number" id="lateFeePct" name="lateFeePct" class="form-input" placeholder="1.5" min="0" max="30" step="0.1">
+                    <span class="suffix">% per month</span>
+                  </div>
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calculateVendorPayment()">Analyze Payment Schedule</button>
+                  <button type="button" class="btn btn-reset" onclick="resetVendorPayForm()">Reset</button>
+                </div>
+              </form>
+
+              <div id="results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">Optimal Payment Strategy</div>
+                  <div class="result-value" id="resultOptimalStrategy" style="font-size:var(--text-xl);">--</div>
+                </div>
+                <div class="result-grid result-grid-3">
+                  <div class="result-item">
+                    <div class="result-label">Early Payment Amount</div>
+                    <div class="result-value" id="resultEarlyAmount">$0</div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Early Payment Savings</div>
+                    <div class="result-value" id="resultEarlySavings" style="color:var(--color-success);">$0</div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Annualized Discount Return</div>
+                    <div class="result-value" id="resultAnnualizedReturn">0%</div>
+                  </div>
+                </div>
+                <div class="result-grid result-grid-3 mt-4">
+                  <div class="result-item">
+                    <div class="result-label">On-Time Payment</div>
+                    <div class="result-value" id="resultOnTime">$0</div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Late (30 days over) Cost</div>
+                    <div class="result-value" id="resultLateCost" style="color:var(--color-error);">$0</div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Late Fee Amount</div>
+                    <div class="result-value" id="resultLateFee" style="color:var(--color-error);">$0</div>
+                  </div>
+                </div>
+                <div id="paymentRecommendation" class="result-note mt-4"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="disclaimer">
+            <strong>Disclaimer:</strong> This calculator provides estimates for informational purposes. Actual payment terms, discounts, and late fees are governed by your specific vendor contracts. Always review your agreements and consult a financial or legal professional when making payment decisions.
+          </div>
+
+          <div class="ad-slot ad-slot-leaderboard"></div>
+
+          <section class="content-section">
+            <h2>Vendor Payment Formulas</h2>
+            <p>These calculations help you weigh the cost-benefit of different payment timing choices.</p>
+            <div class="formula-box">
+              <div class="formula-label">Early Payment Amount</div>
+              Early Payment = Invoice Amount x (1 - Early Discount %)
+            </div>
+            <div class="formula-box">
+              <div class="formula-label">Early Payment Savings</div>
+              Savings = Invoice Amount x Early Discount %
+            </div>
+            <div class="formula-box">
+              <div class="formula-label">Annualized Discount Return</div>
+              Annualized Return = (Discount % / (1 - Discount %)) x (365 / Days Saved) x 100
+            </div>
+            <div class="formula-box">
+              <div class="formula-label">Late Payment Cost (1 month late)</div>
+              Late Cost = Invoice Amount x Monthly Late Fee % / 100
+            </div>
+          </section>
+
+          <section class="content-section">
+            <h2>How to Use This Calculator</h2>
+            <ol>
+              <li><strong>Enter the invoice amount</strong> -- the total amount owed to the vendor.</li>
+              <li><strong>Select payment terms</strong> -- the standard due date (net 30, 60, or 90).</li>
+              <li><strong>Enter early payment discount</strong> -- the percentage discount offered for paying early (leave blank or 0 if none).</li>
+              <li><strong>Enter days early to qualify</strong> -- how many days before the due date you must pay to receive the discount.</li>
+              <li><strong>Enter late fee percentage</strong> -- the monthly fee charged on overdue balances (leave blank or 0 if none).</li>
+              <li><strong>Click "Analyze Payment Schedule"</strong> to see your optimal payment strategy.</li>
+            </ol>
+          </section>
+
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>Your vendor sends a <strong>$10,000 invoice with net 30 terms</strong>. They offer a <strong>2% discount if you pay within 10 days</strong> and charge a <strong>1.5% monthly late fee</strong>.</p>
+            <ul>
+              <li><strong>Early Payment Amount:</strong> $10,000 x (1 - 2%) = $9,800</li>
+              <li><strong>Early Payment Savings:</strong> $200</li>
+              <li><strong>Annualized Return on Discount:</strong> (2%/98%) x (365/20 days saved) = ~37.2% annualized -- almost always worth taking</li>
+              <li><strong>Late Payment Cost (1 month late):</strong> $10,000 x 1.5% = $150 extra</li>
+            </ul>
+            <p>In this case, paying early saves $200 and delivers a 37% annualized return on the cash deployed. Unless you have a critical use for that $9,800, the early payment is the financially optimal choice.</p>
+          </section>
+
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What does net 30 mean on an invoice?
+                <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Net 30 means the full invoice amount is due within 30 days of the invoice date. Net 60 and Net 90 work similarly with 60 and 90-day payment windows respectively.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What is a 2/10 net 30 payment term?
+                <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>2/10 net 30 means you can take a 2% discount if you pay within 10 days, otherwise the full amount is due in 30 days. This is one of the most common early payment discount structures in B2B trade.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                When should I take an early payment discount?
+                <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 011-1z"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Take an early payment discount if the annualized return on the discount exceeds your cost of capital. A 2% discount for paying 20 days early annualizes to about 36% -- almost always worth taking if you have the cash.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What happens if I pay a vendor late?
+                <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 011-1z"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Late payments typically incur late fees, often 1-3% per month or a flat fee. Repeated late payments can damage supplier relationships, reduce credit terms offered, and impact your business reputation.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/business-operations-calculators/working-capital-calculator/" class="card card-link">
+                <h3>Working Capital Calculator</h3>
+                <p>Assess liquidity with working capital, current ratio, and quick ratio.</p>
+              </a>
+              <a href="/business-operations-calculators/cash-conversion-cycle-calculator/" class="card card-link">
+                <h3>Cash Conversion Cycle Calculator</h3>
+                <p>Calculate CCC to understand how quickly you convert resources to cash.</p>
+              </a>
+              <a href="/business-operations-calculators/gross-profit-calculator/" class="card card-link">
+                <h3>Gross Profit Calculator</h3>
+                <p>Calculate gross profit and gross margin from revenue and COGS.</p>
+              </a>
+              <a href="/business-operations-calculators/net-profit-calculator/" class="card card-link">
+                <h3>Net Profit Calculator</h3>
+                <p>Calculate net profit and net margin after all expenses and taxes.</p>
+              </a>
+              <a href="/business-operations-calculators/operating-margin-calculator/" class="card card-link">
+                <h3>Operating Margin Calculator</h3>
+                <p>Measure operational profitability with operating margin percentage.</p>
+              </a>
+            </div>
+          </section>
+        </div>
+
+        <aside class="calc-page-sidebar">
+          <div class="sidebar-card">
+            <h3>Business Operations</h3>
+            <a href="/business-operations-calculators/business-growth-rate-calculator/">Growth Rate</a>
+            <a href="/business-operations-calculators/cash-conversion-cycle-calculator/">Cash Conversion Cycle</a>
+            <a href="/business-operations-calculators/customer-churn-rate-calculator/">Customer Churn Rate</a>
+            <a href="/business-operations-calculators/gross-profit-calculator/">Gross Profit</a>
+            <a href="/business-operations-calculators/net-profit-calculator/">Net Profit</a>
+            <a href="/business-operations-calculators/operating-margin-calculator/">Operating Margin</a>
+            <a href="/business-operations-calculators/profit-forecast-calculator/">Profit Forecast</a>
+            <a href="/business-operations-calculators/revenue-forecasting-calculator/">Revenue Forecasting</a>
+            <a href="/business-operations-calculators/vendor-payment-schedule-calculator/">Vendor Payment Schedule</a>
+            <a href="/business-operations-calculators/working-capital-calculator/">Working Capital</a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Real Estate</h4>
+          <a href="/real-estate-calculators/">All Real Estate</a>
+        </div>
+        <div class="footer-col">
+          <h4>Finance</h4>
+          <a href="/finance-calculators/">All Finance</a>
+        </div>
+        <div class="footer-col">
+          <h4>Business</h4>
+          <a href="/business-operations-calculators/">All Business Operations</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/about.html">About</a>
+          <a href="/contact.html">Contact</a>
+          <a href="/privacy.html">Privacy</a>
+          <a href="/terms.html">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateVendorPayment() {
+      const invoiceAmount = CalcWise.parseNumber(document.getElementById('invoiceAmount').value);
+      const paymentTermsDays = parseInt(document.getElementById('paymentTerms').value);
+      const earlyDiscountPct = CalcWise.parseNumber(document.getElementById('earlyDiscountPct').value) || 0;
+      const earlyDays = parseInt(document.getElementById('earlyDays').value) || 10;
+      const lateFeePct = CalcWise.parseNumber(document.getElementById('lateFeePct').value) || 0;
+
+      if (invoiceAmount <= 0) { alert('Invoice amount must be greater than zero.'); return; }
+
+      const earlyPaymentAmount = invoiceAmount * (1 - earlyDiscountPct / 100);
+      const earlyPaymentSavings = invoiceAmount * (earlyDiscountPct / 100);
+      const daysSaved = paymentTermsDays - earlyDays;
+      let annualizedReturn = 0;
+      if (earlyDiscountPct > 0 && daysSaved > 0) {
+        annualizedReturn = ((earlyDiscountPct / 100) / (1 - earlyDiscountPct / 100)) * (365 / daysSaved) * 100;
+      }
+
+      const lateFeeAmount = invoiceAmount * (lateFeePct / 100);
+      const lateTotalCost = invoiceAmount + lateFeeAmount;
+
+      CalcWise.setText('resultEarlyAmount', CalcWise.formatCurrency(earlyPaymentAmount));
+      CalcWise.setText('resultEarlySavings', CalcWise.formatCurrency(earlyPaymentSavings));
+      CalcWise.setText('resultAnnualizedReturn', earlyDiscountPct > 0 ? CalcWise.formatPercent(annualizedReturn) : 'N/A');
+      CalcWise.setText('resultOnTime', CalcWise.formatCurrency(invoiceAmount));
+      CalcWise.setText('resultLateCost', CalcWise.formatCurrency(lateTotalCost));
+      CalcWise.setText('resultLateFee', CalcWise.formatCurrency(lateFeeAmount));
+
+      let strategy = '';
+      let recommendation = '';
+
+      if (earlyDiscountPct > 0 && annualizedReturn > 10) {
+        strategy = 'Pay Early -- Strong ROI';
+        recommendation = `Taking the ${earlyDiscountPct}% early payment discount delivers an annualized return of ${CalcWise.formatPercent(annualizedReturn)} -- significantly better than typical cash alternatives. Paying ${CalcWise.formatCurrency(earlyPaymentAmount)} by day ${earlyDays} saves ${CalcWise.formatCurrency(earlyPaymentSavings)}.`;
+      } else if (lateFeePct > 0) {
+        strategy = 'Pay On Time -- Avoid Late Fees';
+        recommendation = `With a ${lateFeePct}% monthly late fee, paying 30 days late would cost an additional ${CalcWise.formatCurrency(lateFeeAmount)}. Pay by the due date to avoid this cost.`;
+      } else {
+        strategy = 'Pay On Time';
+        recommendation = 'Pay the full amount by the due date to maintain your supplier relationship and credit standing.';
+      }
+
+      CalcWise.setText('resultOptimalStrategy', strategy);
+      document.getElementById('paymentRecommendation').textContent = recommendation;
+
+      CalcWise.showResults('results');
+    }
+
+    function resetVendorPayForm() {
+      document.getElementById('vendorPayForm').reset();
+      CalcWise.hideResults('results');
+    }
+  </script>
+</body>
+</html>

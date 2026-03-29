@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gas Bill Calculator - Monthly & Annual Natural Gas Cost | CalcWise</title>
+    <meta name="description" content="Calculate your monthly and annual natural gas bill by entering therms or CCF used and your rate per therm. Compare to electric equivalent costs.">
+    <link rel="canonical" href="https://calcwise.io/energy-utility-calculators/gas-bill-calculator/">
+    <meta property="og:title" content="Gas Bill Calculator | CalcWise">
+    <meta property="og:description" content="Estimate your natural gas bill monthly and annually. Enter usage in therms or CCF and your rate to calculate costs and compare to electricity.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://calcwise.io/energy-utility-calculators/gas-bill-calculator/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Gas Bill Calculator | CalcWise">
+    <meta name="twitter:description" content="Calculate your monthly and annual natural gas bill and compare to electric costs.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/design-system.css">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/"},
+            {"@type": "ListItem", "position": 2, "name": "Energy & Utility Calculators", "item": "https://calcwise.io/energy-utility-calculators/"},
+            {"@type": "ListItem", "position": 3, "name": "Gas Bill Calculator"}
+        ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {"@type": "Question", "name": "What is the difference between therms and CCF?", "acceptedAnswer": {"@type": "Answer", "text": "A therm is a unit of heat energy equal to 100,000 BTUs. A CCF (hundred cubic feet) is a volume measurement of natural gas. One CCF of natural gas contains approximately 1.02 therms of energy, so they are nearly interchangeable for billing purposes. Your gas bill will specify which unit your utility uses."}},
+            {"@type": "Question", "name": "What is the average US natural gas bill?", "acceptedAnswer": {"@type": "Answer", "text": "The average US household spends about $800-$1,000 per year on natural gas, roughly $65-$85 per month. This varies significantly by climate, home size, and heating system efficiency. Cold-weather states in the Midwest and Northeast tend to have higher gas bills."}},
+            {"@type": "Question", "name": "Is natural gas cheaper than electricity for heating?", "acceptedAnswer": {"@type": "Answer", "text": "In most US markets, natural gas is cheaper per BTU of heat produced than resistance electric heating. However, modern heat pumps (electric) can be 2-3x more efficient than gas furnaces in mild climates, making them cost-competitive or cheaper. In cold climates, gas heating often still has a cost advantage."}},
+            {"@type": "Question", "name": "How can I reduce my natural gas usage?", "acceptedAnswer": {"@type": "Answer", "text": "The biggest opportunities are improving home insulation and sealing air leaks, upgrading to a high-efficiency furnace (95% AFUE vs. older 60-70% AFUE), installing a programmable or smart thermostat, lowering water heater temperature to 120°F, and using low-flow showerheads to reduce hot water demand."}}
+        ]
+    }
+    </script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="/" class="logo">
+                <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+                CalcWise
+            </a>
+            <nav class="main-nav">
+                <a href="/real-estate-calculators/">Real Estate</a>
+                <a href="/advanced-real-estate-calculators/">Advanced RE</a>
+                <a href="/energy-utility-calculators/">Energy</a>
+                <a href="/finance-calculators/">Finance</a>
+            </nav>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+            </button>
+        </div>
+        <nav class="mobile-nav">
+            <a href="/real-estate-calculators/">Real Estate Calculators</a>
+            <a href="/advanced-real-estate-calculators/">Advanced Real Estate</a>
+            <a href="/energy-utility-calculators/">Energy &amp; Utility</a>
+            <a href="/finance-calculators/">Finance Calculators</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <nav class="breadcrumbs" aria-label="Breadcrumb">
+                <ol>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/energy-utility-calculators/">Energy &amp; Utility Calculators</a></li>
+                    <li><span aria-current="page">Gas Bill Calculator</span></li>
+                </ol>
+            </nav>
+
+            <div class="page-content">
+                <div class="calc-page-layout">
+                    <div class="calc-page-main">
+                        <h1>Gas Bill Calculator</h1>
+                        <p class="subtitle" style="color: var(--color-gray-600); font-size: var(--text-lg); line-height: var(--leading-relaxed); margin-bottom: var(--space-8);">
+                            Estimate your natural gas bill based on monthly usage and your utility's rate. See daily, monthly, and annual costs, and compare natural gas to its electric equivalent.
+                        </p>
+
+                        <div class="calc-container">
+                            <div class="calc-header">
+                                <h2>Natural Gas Bill Estimator</h2>
+                                <p>Calculate gas costs and compare to electric equivalent</p>
+                            </div>
+                            <div class="calc-body">
+                                <form id="gas-form">
+                                    <div class="form-group">
+                                        <label class="form-label" for="monthly-usage">Monthly Gas Usage</label>
+                                        <input type="number" id="monthly-usage" name="monthlyUsage" class="form-input" placeholder="60" min="1" step="1" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label" for="usage-unit">Usage Unit</label>
+                                        <select id="usage-unit" name="usageUnit" class="form-input">
+                                            <option value="therms" selected>Therms</option>
+                                            <option value="ccf">CCF (hundred cubic feet)</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label" for="gas-rate">Gas Rate (per therm)</label>
+                                        <div class="input-prefix">
+                                            <span class="prefix">$</span>
+                                            <input type="number" id="gas-rate" name="gasRate" class="form-input" placeholder="1.20" min="0.01" max="20" step="0.01" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label" for="billing-period">Billing Period</label>
+                                        <select id="billing-period" name="billingPeriod" class="form-input">
+                                            <option value="monthly" selected>Monthly</option>
+                                            <option value="bimonthly">Bi-Monthly</option>
+                                            <option value="quarterly">Quarterly</option>
+                                        </select>
+                                    </div>
+                                    <div class="calc-actions">
+                                        <button type="button" class="btn btn-calculate btn-full" onclick="calculateGasBill()">Calculate Gas Bill</button>
+                                        <button type="reset" class="btn btn-reset">Reset</button>
+                                    </div>
+                                </form>
+
+                                <div id="results" class="calc-results hidden">
+                                    <div class="result-primary">
+                                        <div class="result-label">Monthly Gas Bill</div>
+                                        <div class="result-value" id="result-monthly-bill">$0</div>
+                                    </div>
+                                    <div class="result-grid result-grid-3">
+                                        <div class="result-item">
+                                            <div class="result-label">Annual Gas Bill</div>
+                                            <div class="result-value" id="result-annual-bill">$0</div>
+                                        </div>
+                                        <div class="result-item">
+                                            <div class="result-label">Cost per Day</div>
+                                            <div class="result-value" id="result-daily-cost">$0</div>
+                                        </div>
+                                        <div class="result-item">
+                                            <div class="result-label">Per Billing Period</div>
+                                            <div class="result-value" id="result-billing-cost">$0</div>
+                                        </div>
+                                        <div class="result-item">
+                                            <div class="result-label">Monthly Therms Used</div>
+                                            <div class="result-value" id="result-therms">0</div>
+                                        </div>
+                                        <div class="result-item">
+                                            <div class="result-label">Electric Equivalent Cost</div>
+                                            <div class="result-value" id="result-elec-equiv">$0</div>
+                                        </div>
+                                        <div class="result-item">
+                                            <div class="result-label">Gas vs. Electric Savings</div>
+                                            <div class="result-value" id="result-savings">$0</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="ad-slot ad-slot-leaderboard"></div>
+
+                        <section class="content-section">
+                            <h2>Gas Bill Formula</h2>
+                            <div class="formula-box">
+                                <div class="formula-label">Cost Calculations</div>
+                                Monthly Therms = Monthly Usage (if CCF: &times; 1.02 to convert to therms)
+Monthly Bill = Monthly Therms &times; Rate per Therm
+Annual Bill = Monthly Bill &times; 12
+Daily Cost = Monthly Bill / 30.44
+
+Electric Equivalent (kWh) = Monthly Therms &times; 29.3 kWh/therm
+Electric Equivalent Cost = Electric kWh &times; $0.16/kWh (US avg rate)
+Gas Savings vs. Electric = Electric Equivalent Cost &minus; Monthly Gas Bill
+                            </div>
+                            <p>1 therm = 100,000 BTUs = approximately 29.3 kWh of equivalent electricity energy content. Note that electric resistance heaters convert electricity to heat at ~100% efficiency, while gas furnaces vary from 60% to 98% AFUE.</p>
+                        </section>
+
+                        <section class="content-section">
+                            <h2>How to Use This Calculator</h2>
+                            <ol>
+                                <li><strong>Enter monthly gas usage</strong> -- find therms or CCF on your gas bill.</li>
+                                <li><strong>Select usage unit</strong> -- choose therms or CCF based on what your utility bills.</li>
+                                <li><strong>Enter gas rate per therm</strong> -- found on your bill, typically $0.80 to $2.00/therm.</li>
+                                <li><strong>Select billing period</strong> -- how often you receive a bill.</li>
+                                <li><strong>Click "Calculate Gas Bill"</strong> to see your costs and comparison to electric equivalent.</li>
+                            </ol>
+                        </section>
+
+                        <section class="content-section">
+                            <h2>Example Scenario</h2>
+                            <h3>Midwestern Home: 60 Therms/Month at $1.20/Therm</h3>
+                            <p>Usage: 60 therms/month | Rate: $1.20/therm | Billing: Monthly</p>
+                            <p>Monthly Bill = 60 &times; $1.20 = <strong>$72.00</strong></p>
+                            <p>Annual Bill = $72 &times; 12 = <strong>$864/year</strong></p>
+                            <p>Electric Equivalent = 60 &times; 29.3 kWh = 1,758 kWh &times; $0.16 = <strong>$281.28/month</strong></p>
+                            <p>Gas Savings vs. Electric = $281.28 &minus; $72 = <strong>$209/month</strong> ($2,508/year)</p>
+                            <p>This shows natural gas heating is significantly cheaper than electric resistance heating in this scenario.</p>
+                        </section>
+
+                        <section class="faq-section">
+                            <h2>Frequently Asked Questions</h2>
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">
+                                    What is the difference between therms and CCF?
+                                    <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>A therm is a unit of heat energy equal to 100,000 BTUs. A CCF (hundred cubic feet) is a volume measurement of natural gas. One CCF contains approximately 1.02 therms of energy, so they are nearly interchangeable for billing purposes.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">
+                                    What is the average US natural gas bill?
+                                    <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>The average US household spends about $800-$1,000 per year on natural gas, roughly $65-$85 per month. This varies significantly by climate, home size, and heating system efficiency. Cold-weather states tend to have higher gas bills.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">
+                                    Is natural gas cheaper than electricity for heating?
+                                    <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>In most US markets, natural gas is cheaper per BTU of heat produced than resistance electric heating. However, modern heat pumps (electric) can be 2-3x more efficient than gas furnaces in mild climates, making them cost-competitive or cheaper.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">
+                                    How can I reduce my natural gas usage?
+                                    <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>The biggest opportunities are improving home insulation and sealing air leaks, upgrading to a high-efficiency furnace (95%+ AFUE), installing a programmable thermostat, lowering water heater temperature to 120°F, and using low-flow showerheads to reduce hot water demand.</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="related-calculators">
+                            <h2>Related Calculators</h2>
+                            <div class="grid grid-3">
+                                <a href="/energy-utility-calculators/electricity-cost-calculator/" class="card card-link">
+                                    <div class="card-icon">E</div>
+                                    <h3>Electricity Cost Calculator</h3>
+                                    <p>Calculate your electricity costs and compare to gas.</p>
+                                </a>
+                                <a href="/energy-utility-calculators/home-energy-efficiency-calculator/" class="card card-link">
+                                    <div class="card-icon">H</div>
+                                    <h3>Home Energy Efficiency</h3>
+                                    <p>Find the best upgrades to reduce your energy bills.</p>
+                                </a>
+                                <a href="/energy-utility-calculators/utility-bill-comparison-calculator/" class="card card-link">
+                                    <div class="card-icon">U</div>
+                                    <h3>Utility Bill Comparison</h3>
+                                    <p>Compare gas and utility providers to find better rates.</p>
+                                </a>
+                            </div>
+                        </section>
+
+                        <div class="disclaimer">
+                            <strong>Disclaimer:</strong> This calculator provides estimates based on entered values. Actual gas bills include fixed service charges, taxes, and delivery fees not reflected here. The electric equivalent comparison uses national average rates and does not account for heating system efficiency differences.
+                        </div>
+
+                        <div class="ad-slot ad-slot-leaderboard"></div>
+                    </div>
+
+                    <aside class="calc-page-sidebar">
+                        <div class="sidebar-card">
+                            <h3>Energy &amp; Utility Tools</h3>
+                            <a href="/energy-utility-calculators/carbon-footprint-calculator/">Carbon Footprint</a>
+                            <a href="/energy-utility-calculators/electricity-cost-calculator/">Electricity Cost</a>
+                            <a href="/energy-utility-calculators/solar-savings-calculator/">Solar Savings</a>
+                            <a href="/energy-utility-calculators/ev-range-calculator/">EV Range</a>
+                            <a href="/energy-utility-calculators/gas-bill-calculator/">Gas Bill</a>
+                            <a href="/energy-utility-calculators/home-energy-efficiency-calculator/">Home Energy Efficiency</a>
+                            <a href="/energy-utility-calculators/utility-bill-comparison-calculator/">Utility Bill Comparison</a>
+                            <a href="/energy-utility-calculators/water-usage-cost-calculator/">Water Usage Cost</a>
+                        </div>
+                        <div class="ad-slot ad-slot-rectangle"></div>
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="/" class="logo">
+                        <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+                        CalcWise
+                    </a>
+                    <p>Free, accurate financial calculators for everyone. Make smarter money decisions with CalcWise.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Energy &amp; Utility</h4>
+                    <a href="/energy-utility-calculators/carbon-footprint-calculator/">Carbon Footprint</a>
+                    <a href="/energy-utility-calculators/electricity-cost-calculator/">Electricity Cost</a>
+                    <a href="/energy-utility-calculators/solar-savings-calculator/">Solar Savings</a>
+                    <a href="/energy-utility-calculators/ev-range-calculator/">EV Range</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Advanced Real Estate</h4>
+                    <a href="/advanced-real-estate-calculators/property-appreciation-calculator/">Property Appreciation</a>
+                    <a href="/advanced-real-estate-calculators/real-estate-leverage-calculator/">Leverage Calculator</a>
+                    <a href="/advanced-real-estate-calculators/real-estate-yield-calculator/">Yield Calculator</a>
+                    <a href="/advanced-real-estate-calculators/rental-expense-ratio-calculator/">Expense Ratio</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <a href="/about/">About</a>
+                    <a href="/contact/">Contact</a>
+                    <a href="/privacy/">Privacy Policy</a>
+                    <a href="/terms/">Terms of Use</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; 2026 CalcWise. All rights reserved.</span>
+                <div class="footer-links">
+                    <a href="/privacy/">Privacy</a>
+                    <a href="/terms/">Terms</a>
+                    <a href="/sitemap.xml">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/calculator-engine.js"></script>
+    <script src="/js/search-index.js"></script>
+    <script>
+    function calculateGasBill() {
+        if (!CalcWise.validateForm('gas-form')) return;
+
+        const values = CalcWise.getFormValues('gas-form');
+        const monthlyUsage = values.monthlyUsage;
+        const gasRate = values.gasRate;
+        const usageUnit = document.getElementById('usage-unit').value;
+        const billingPeriod = document.getElementById('billing-period').value;
+
+        // Convert CCF to therms (1 CCF ≈ 1.02 therms)
+        const monthlyTherms = usageUnit === 'ccf' ? monthlyUsage * 1.02 : monthlyUsage;
+        const billingMonths = billingPeriod === 'monthly' ? 1 : billingPeriod === 'bimonthly' ? 2 : 3;
+
+        const monthlyBill = monthlyTherms * gasRate;
+        const annualBill = monthlyBill * 12;
+        const dailyCost = monthlyBill / 30.44;
+        const billingCost = monthlyBill * billingMonths;
+
+        // Electric equivalent: 1 therm ≈ 29.3 kWh, US avg rate $0.16/kWh
+        const electricEquivKwh = monthlyTherms * 29.3;
+        const electricEquivCost = electricEquivKwh * 0.16;
+        const gasSavings = electricEquivCost - monthlyBill;
+
+        CalcWise.setText('result-monthly-bill', CalcWise.formatCurrency(monthlyBill));
+        CalcWise.setText('result-annual-bill', CalcWise.formatCurrency(annualBill, 0));
+        CalcWise.setText('result-daily-cost', CalcWise.formatCurrency(dailyCost));
+        CalcWise.setText('result-billing-cost', CalcWise.formatCurrency(billingCost));
+        CalcWise.setText('result-therms', monthlyTherms.toFixed(1) + ' therms');
+        CalcWise.setText('result-elec-equiv', CalcWise.formatCurrency(electricEquivCost) + '/mo');
+        CalcWise.setText('result-savings', CalcWise.formatCurrency(gasSavings) + '/mo');
+
+        CalcWise.showResults('results');
+    }
+
+    document.getElementById('gas-form').addEventListener('reset', function() {
+        setTimeout(() => CalcWise.hideResults('results'), 0);
+    });
+    </script>
+</body>
+</html>

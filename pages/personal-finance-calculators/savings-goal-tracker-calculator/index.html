@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Savings Goal Tracker Calculator - CalcWise</title>
+  <meta name="description" content="Track progress toward any savings goal. Enter your goal amount, current savings, and target date to see months remaining, required monthly savings, daily savings rate, and progress percentage.">
+  <link rel="canonical" href="https://calcwise.io/personal-finance-calculators/savings-goal-tracker-calculator/">
+  <meta property="og:title" content="Savings Goal Tracker Calculator - CalcWise">
+  <meta property="og:description" content="Calculate required monthly savings, daily savings rate, and progress toward any financial goal with a target date.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcwise.io/personal-finance-calculators/savings-goal-tracker-calculator/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Savings Goal Tracker Calculator - CalcWise">
+  <meta name="twitter:description" content="See months remaining, required monthly savings, daily rate, and progress % toward your savings goal.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/"},
+      {"@type": "ListItem", "position": 2, "name": "Personal Finance Calculators", "item": "https://calcwise.io/personal-finance-calculators/"},
+      {"@type": "ListItem", "position": 3, "name": "Savings Goal Tracker Calculator"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do I set a realistic savings goal?",
+        "acceptedAnswer": {"@type": "Answer", "text": "A realistic savings goal has three components: a specific dollar amount, a clear purpose (emergency fund, vacation, down payment, etc.), and a deadline. Use this calculator to work backward from your target date to find the required monthly savings, then check if that amount fits your budget. If not, either extend the timeline or reduce the goal amount."}
+      },
+      {
+        "@type": "Question",
+        "name": "Should I use a dedicated savings account for each goal?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Yes — keeping separate high-yield savings accounts (or sub-accounts) for each goal makes tracking much easier and reduces the temptation to dip into savings. Many online banks allow you to create multiple labeled savings buckets within one account for free."}
+      },
+      {
+        "@type": "Question",
+        "name": "What should I do if I cannot save the required monthly amount?",
+        "acceptedAnswer": {"@type": "Answer", "text": "You have two levers: reduce the goal amount or extend the timeline. For non-negotiable goals (like an emergency fund), focus on finding extra income or reducing discretionary spending. For flexible goals (vacation, new gadget), a longer timeline is usually the easiest solution."}
+      },
+      {
+        "@type": "Question",
+        "name": "How does compound interest affect savings goals?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Even modest interest in a high-yield savings account helps. For example, a 4.5% APY HYSA on $10,000 earns about $450/year — reducing the monthly contribution needed to hit your goal. For longer timelines (5+ years), the compounding effect becomes more significant and should be factored into your planning."}
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="logo">
+        <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav">
+        <a href="/">Home</a>
+        <a href="/pages/finance-calculators/">Finance</a>
+        <a href="/pages/personal-finance-calculators/" aria-current="page">Personal Finance</a>
+        <a href="/pages/investment-calculators/">Investment</a>
+        <a href="/pages/tax-calculators/">Tax</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav">
+      <a href="/">Home</a>
+      <a href="/pages/finance-calculators/">Finance Calculators</a>
+      <a href="/pages/personal-finance-calculators/">Personal Finance Calculators</a>
+      <a href="/pages/investment-calculators/">Investment Calculators</a>
+      <a href="/pages/tax-calculators/">Tax Calculators</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li><a href="/pages/personal-finance-calculators/">Personal Finance Calculators</a></li>
+        <li><span aria-current="page">Savings Goal Tracker Calculator</span></li>
+      </ol>
+    </nav>
+
+    <div class="page-content">
+      <div class="article-content">
+        <h1>Savings Goal Tracker Calculator</h1>
+        <p>Whether you are saving for a vacation, a home down payment, an emergency fund, or a new car, having a clear roadmap makes reaching your goal far more likely. Enter your goal amount, what you have already saved, and your target date to instantly see how many months remain, how much you need to save monthly, your daily savings rate, and how far along you already are.</p>
+
+        <div class="ad-slot ad-slot-leaderboard"></div>
+
+        <div class="calc-container">
+          <div class="calc-header">
+            <h2>Track Your Savings Goal</h2>
+            <p>Enter your goal details to see your savings roadmap</p>
+          </div>
+          <div class="calc-body">
+            <form id="goal-form">
+              <div class="result-grid result-grid-2" style="gap:var(--space-4);">
+                <div class="form-group">
+                  <label class="form-label" for="goalName">Goal Name <span style="font-weight:400;color:var(--color-text-secondary);">(optional)</span></label>
+                  <input type="text" id="goalName" name="goalName" class="form-input" placeholder="e.g. Vacation Fund">
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="goalAmount">Savings Goal Amount</label>
+                  <div class="input-prefix"><span class="prefix">$</span>
+                    <input type="number" id="goalAmount" name="goalAmount" class="form-input" placeholder="10000" min="1" step="100" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="currentSavings">Current Savings Toward Goal</label>
+                  <div class="input-prefix"><span class="prefix">$</span>
+                    <input type="number" id="currentSavings" name="currentSavings" class="form-input" placeholder="2500" min="0" step="100">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="targetDate">Target Date</label>
+                  <input type="date" id="targetDate" name="targetDate" class="form-input" required>
+                </div>
+              </div>
+              <div class="calc-actions">
+                <button type="button" class="btn btn-calculate" onclick="calcGoal()">Calculate My Plan</button>
+                <button type="button" class="btn btn-reset" onclick="resetGoal()">Reset</button>
+              </div>
+            </form>
+
+            <div id="results" class="calc-results hidden">
+              <div class="result-primary">
+                <div class="result-label" id="goalLabel">Savings Goal</div>
+                <div class="result-value" id="goalDisplay">$0</div>
+              </div>
+              <div class="result-grid result-grid-2" style="margin-top:var(--space-4);">
+                <div class="result-item">
+                  <div class="result-label">Amount Still Needed</div>
+                  <div class="result-value" id="amountNeeded">$0</div>
+                </div>
+                <div class="result-item">
+                  <div class="result-label">Months Remaining</div>
+                  <div class="result-value" id="monthsRemaining" style="color:var(--color-info);">0</div>
+                </div>
+                <div class="result-item">
+                  <div class="result-label">Required Monthly Savings</div>
+                  <div class="result-value" id="monthlySavings" style="color:var(--color-success);">$0</div>
+                </div>
+                <div class="result-item">
+                  <div class="result-label">Daily Savings Rate</div>
+                  <div class="result-value" id="dailyRate">$0</div>
+                </div>
+              </div>
+              <div id="progressSection" style="margin-top:var(--space-5);"></div>
+            </div>
+          </div>
+        </div>
+
+        <section class="content-section">
+          <h2>How Savings Goals Are Calculated</h2>
+          <div class="formula-box">
+            <div class="formula-label">Formula</div>
+            Amount Needed = Goal Amount &minus; Current Savings<br>
+            Months Remaining = Months between today and target date<br>
+            Monthly Savings Required = Amount Needed &divide; Months Remaining<br>
+            Daily Savings Rate = Amount Needed &divide; Days Remaining<br>
+            Progress % = (Current Savings &divide; Goal Amount) &times; 100
+          </div>
+          <p>This calculator uses simple linear savings (no interest). For long-term goals where you plan to hold savings in a high-yield account, the actual required monthly contribution may be slightly lower due to interest earned. For aggressive long-term investment goals, see the Financial Independence Calculator.</p>
+        </section>
+
+        <section class="content-section">
+          <h2>How to Use This Calculator</h2>
+          <ol>
+            <li><strong>Name your goal:</strong> Giving a goal a name makes it feel real and concrete.</li>
+            <li><strong>Enter goal amount:</strong> The total dollar amount you need to save.</li>
+            <li><strong>Add current savings:</strong> What you have already set aside specifically for this goal.</li>
+            <li><strong>Set target date:</strong> Your deadline for reaching the goal.</li>
+            <li><strong>Review the plan:</strong> Check if the required monthly savings fits your budget. Adjust the date or goal if needed.</li>
+          </ol>
+        </section>
+
+        <section class="content-section">
+          <h2>Example Scenario</h2>
+          <p>Jamie wants to save $8,000 for a home down payment by December 2026 — 20 months away. Jamie already has $1,500 saved. Amount needed: $6,500. Monthly required: $6,500 &divide; 20 = $325/month. Daily rate: about $10.74/day. Progress: 18.75%. By automating a $325 transfer on the 1st of each month into a dedicated high-yield savings account, Jamie has a clear, achievable roadmap.</p>
+        </section>
+
+        <section class="faq-section">
+          <h2>Frequently Asked Questions</h2>
+          <div class="faq-item">
+            <button class="faq-question">How do I set a realistic savings goal?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>A realistic goal has a specific amount, a clear purpose, and a deadline. Use this calculator to work backward from your date to find required monthly savings, then check if that fits your budget. Adjust the timeline or amount as needed.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">Should I use a dedicated account for each goal?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>Yes — dedicated sub-accounts or labeled savings buckets make tracking easy and reduce the temptation to spend goal money. Many online banks offer multiple free savings buckets.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">What if I cannot save the required monthly amount?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>Extend the timeline or reduce the goal amount — two levers always available. For non-negotiable goals like emergency funds, focus on cutting discretionary spending or adding income. For flexible goals, a longer timeline is usually easiest.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">How does interest affect savings goals?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>Interest from a HYSA slightly reduces the required monthly contribution. For a $10,000 goal over 2 years at 4.5% APY, interest could reduce required monthly savings by $15–$20/month. For longer timelines, compounding makes a bigger difference.</p></div>
+          </div>
+        </section>
+
+        <section class="related-calculators">
+          <h2>Related Calculators</h2>
+          <div class="grid grid-3">
+            <a href="/pages/personal-finance-calculators/emergency-savings-timeline-calculator/" class="card card-link">
+              <h3>Emergency Savings Timeline</h3>
+              <p>Calculate how long to build your emergency fund.</p>
+            </a>
+            <a href="/pages/personal-finance-calculators/savings-rate-calculator/" class="card card-link">
+              <h3>Savings Rate Calculator</h3>
+              <p>Find out what percentage of income you are saving.</p>
+            </a>
+            <a href="/pages/personal-finance-calculators/financial-independence-calculator/" class="card card-link">
+              <h3>Financial Independence Calculator</h3>
+              <p>Plan your ultimate savings goal: financial freedom.</p>
+            </a>
+            <a href="/pages/personal-finance-calculators/budget-percentage-calculator/" class="card card-link">
+              <h3>Budget Percentage Calculator</h3>
+              <p>Find room in your budget for increased savings.</p>
+            </a>
+            <a href="/pages/personal-finance-calculators/debt-snowball-calculator/" class="card card-link">
+              <h3>Debt Snowball Calculator</h3>
+              <p>Pay off debt before redirecting funds to savings goals.</p>
+            </a>
+          </div>
+        </section>
+
+        <div class="disclaimer">
+          <strong>Disclaimer:</strong> This calculator provides estimates for informational purposes only. Calculations assume linear savings with no interest earned. Actual results may vary. This is not financial advice. Consult a qualified financial advisor for personalized savings planning.
+        </div>
+
+        <div class="ad-slot ad-slot-rectangle"></div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free online financial calculators to help you make smarter money decisions.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Personal Finance</h4>
+          <a href="/pages/personal-finance-calculators/savings-goal-tracker-calculator/">Savings Goal Tracker</a>
+          <a href="/pages/personal-finance-calculators/emergency-savings-timeline-calculator/">Emergency Savings</a>
+          <a href="/pages/personal-finance-calculators/savings-rate-calculator/">Savings Rate</a>
+          <a href="/pages/personal-finance-calculators/financial-independence-calculator/">Financial Independence</a>
+        </div>
+        <div class="footer-col">
+          <h4>Tools</h4>
+          <a href="/pages/finance-calculators/budget-calculator/">50/30/20 Budget</a>
+          <a href="/pages/investment-calculators/">Investment Calculators</a>
+          <a href="/pages/tax-calculators/">Tax Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about/">About</a>
+          <a href="/contact/">Contact</a>
+          <a href="/privacy/">Privacy Policy</a>
+          <a href="/terms/">Terms of Service</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 CalcWise. All rights reserved.</span>
+        <div class="footer-links">
+          <a href="/privacy/">Privacy</a>
+          <a href="/terms/">Terms</a>
+          <a href="/contact/">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    // Set default target date to 1 year from now
+    document.addEventListener('DOMContentLoaded', () => {
+      const d = new Date();
+      d.setFullYear(d.getFullYear() + 1);
+      document.getElementById('targetDate').value = d.toISOString().split('T')[0];
+    });
+
+    function calcGoal() {
+      if (!CalcWise.validateForm('goal-form')) return;
+      const v = CalcWise.getFormValues('goal-form');
+      const goalName = v.goalName || 'Savings Goal';
+      const goalAmount = v.goalAmount;
+      const currentSavings = v.currentSavings || 0;
+      const targetDateStr = document.getElementById('targetDate').value;
+
+      if (!targetDateStr) {
+        alert('Please enter a target date.');
+        return;
+      }
+
+      const today = new Date();
+      today.setHours(0, 0, 0, 0);
+      const targetDate = new Date(targetDateStr);
+      targetDate.setHours(0, 0, 0, 0);
+
+      if (targetDate <= today) {
+        alert('Target date must be in the future.');
+        return;
+      }
+
+      const daysRemaining = Math.ceil((targetDate - today) / (1000 * 60 * 60 * 24));
+      const monthsRemaining = Math.ceil(daysRemaining / 30.44);
+      const amountNeeded = Math.max(0, goalAmount - currentSavings);
+      const monthlySavings = monthsRemaining > 0 ? amountNeeded / monthsRemaining : amountNeeded;
+      const dailyRate = daysRemaining > 0 ? amountNeeded / daysRemaining : amountNeeded;
+      const progressPct = Math.min(100, goalAmount > 0 ? (currentSavings / goalAmount) * 100 : 0);
+
+      CalcWise.setText('goalLabel', goalName);
+      CalcWise.setText('goalDisplay', CalcWise.formatCurrency(goalAmount, 0));
+      CalcWise.setText('amountNeeded', CalcWise.formatCurrency(amountNeeded, 0));
+      CalcWise.setText('monthsRemaining', monthsRemaining + ' months');
+      CalcWise.setText('monthlySavings', CalcWise.formatCurrency(monthlySavings, 0) + '/mo');
+      CalcWise.setText('dailyRate', CalcWise.formatCurrency(dailyRate, 2) + '/day');
+
+      const progressHtml = `
+        <div style="background:var(--color-bg-subtle);border-radius:var(--radius-md);padding:var(--space-4);">
+          <div style="display:flex;justify-content:space-between;margin-bottom:var(--space-2);">
+            <span style="font-size:var(--text-sm);font-weight:600;">Progress: ${CalcWise.formatCurrency(currentSavings, 0)} saved of ${CalcWise.formatCurrency(goalAmount, 0)}</span>
+            <span style="font-size:var(--text-sm);font-weight:600;color:var(--color-success);">${CalcWise.formatPercent(progressPct, 1)}</span>
+          </div>
+          <div style="background:var(--color-border);border-radius:999px;height:14px;overflow:hidden;">
+            <div style="background:linear-gradient(90deg,var(--color-success),var(--color-accent));height:100%;width:${progressPct}%;border-radius:999px;transition:width 0.5s;"></div>
+          </div>
+          <div style="display:flex;justify-content:space-between;margin-top:var(--space-3);font-size:var(--text-sm);color:var(--color-text-secondary);">
+            <span>Target: ${targetDate.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</span>
+            <span>${daysRemaining} days remaining</span>
+          </div>
+        </div>`;
+      CalcWise.setHtml('progressSection', progressHtml);
+
+      CalcWise.showResults('results');
+    }
+
+    function resetGoal() {
+      document.getElementById('goal-form').reset();
+      const d = new Date();
+      d.setFullYear(d.getFullYear() + 1);
+      document.getElementById('targetDate').value = d.toISOString().split('T')[0];
+      CalcWise.hideResults('results');
+    }
+  </script>
+</body>
+</html>

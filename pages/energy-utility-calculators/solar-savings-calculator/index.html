@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar Savings Calculator - Solar Panel Payback & 25-Year Savings | CalcWise</title>
+    <meta name="description" content="Calculate solar panel savings, payback period, and 25-year net savings. Enter your electric bill, system size, installation cost, and incentives to see your ROI.">
+    <link rel="canonical" href="https://calcwise.io/energy-utility-calculators/solar-savings-calculator/">
+    <meta property="og:title" content="Solar Savings Calculator | CalcWise">
+    <meta property="og:description" content="Find out how much solar panels will save you. Calculate annual savings, payback period, 25-year net savings, and CO2 offset for your solar system.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://calcwise.io/energy-utility-calculators/solar-savings-calculator/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Solar Savings Calculator | CalcWise">
+    <meta name="twitter:description" content="Calculate solar panel savings, payback period, and 25-year ROI for your home.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/design-system.css">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/"},
+            {"@type": "ListItem", "position": 2, "name": "Energy & Utility Calculators", "item": "https://calcwise.io/energy-utility-calculators/"},
+            {"@type": "ListItem", "position": 3, "name": "Solar Savings Calculator"}
+        ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {"@type": "Question", "name": "How much does a solar panel system cost?", "acceptedAnswer": {"@type": "Answer", "text": "The average residential solar system costs $15,000 to $30,000 before incentives, depending on system size and location. A typical 6-8 kW system for an average home costs about $18,000-$24,000 before the 30% federal tax credit, bringing the net cost to $12,600-$16,800."}},
+            {"@type": "Question", "name": "What is the federal solar tax credit?", "acceptedAnswer": {"@type": "Answer", "text": "The federal Investment Tax Credit (ITC) for residential solar is 30% of the total system cost through 2032, then steps down to 26% in 2033 and 22% in 2034. There is no cap on system size for residential installations. You must have sufficient tax liability to use the full credit, though unused credits can carry forward."}},
+            {"@type": "Question", "name": "How long do solar panels last?", "acceptedAnswer": {"@type": "Answer", "text": "Most solar panels come with 25-year performance warranties and typically last 30+ years. Panel efficiency degrades slightly over time -- typically 0.5-0.7% per year. After 25 years, panels generally still produce 80-85% of their original rated output."}},
+            {"@type": "Question", "name": "Will solar panels work on a cloudy day?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, solar panels still generate electricity on cloudy days, though at reduced output -- typically 10-25% of full capacity. Overcast regions still benefit from solar, though systems in sunny states like Arizona or California produce significantly more power annually than those in New England."}}
+        ]
+    }
+    </script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="/" class="logo">
+                <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+                CalcWise
+            </a>
+            <nav class="main-nav">
+                <a href="/real-estate-calculators/">Real Estate</a>
+                <a href="/advanced-real-estate-calculators/">Advanced RE</a>
+                <a href="/energy-utility-calculators/">Energy</a>
+                <a href="/finance-calculators/">Finance</a>
+            </nav>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+            </button>
+        </div>
+        <nav class="mobile-nav">
+            <a href="/real-estate-calculators/">Real Estate Calculators</a>
+            <a href="/advanced-real-estate-calculators/">Advanced Real Estate</a>
+            <a href="/energy-utility-calculators/">Energy &amp; Utility</a>
+            <a href="/finance-calculators/">Finance Calculators</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <nav class="breadcrumbs" aria-label="Breadcrumb">
+                <ol>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/energy-utility-calculators/">Energy &amp; Utility Calculators</a></li>
+                    <li><span aria-current="page">Solar Savings Calculator</span></li>
+                </ol>
+            </nav>
+
+            <div class="page-content">
+                <div class="calc-page-layout">
+                    <div class="calc-page-main">
+                        <h1>Solar Savings Calculator</h1>
+                        <p class="subtitle" style="color: var(--color-gray-600); font-size: var(--text-lg); line-height: var(--leading-relaxed); margin-bottom: var(--space-8);">
+                            Find out if solar is worth it for your home. Calculate annual electricity savings, system payback period, 25-year net savings, and the CO2 you'll offset by going solar.
+                        </p>
+
+                        <div class="calc-container">
+                            <div class="calc-header">
+                                <h2>Solar Panel Savings Analysis</h2>
+                                <p>Calculate your solar ROI and payback period</p>
+                            </div>
+                            <div class="calc-body">
+                                <form id="solar-form">
+                                    <div class="form-group">
+                                        <label class="form-label" for="monthly-bill">Monthly Electric Bill</label>
+                                        <div class="input-prefix">
+                                            <span class="prefix">$</span>
+                                            <input type="number" id="monthly-bill" name="monthlyBill" class="form-input" placeholder="150" min="10" step="5" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label" for="system-size">Solar System Size (kW)</label>
+                                        <input type="number" id="system-size" name="systemSize" class="form-input" placeholder="8" min="1" max="100" step="0.5" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label" for="installation-cost">Total Installation Cost</label>
+                                        <div class="input-prefix">
+                                            <span class="prefix">$</span>
+                                            <input type="number" id="installation-cost" name="installationCost" class="form-input" placeholder="22,000" min="1000" step="500" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label" for="state-incentives">State/Local Incentives</label>
+                                        <div class="input-prefix">
+                                            <span class="prefix">$</span>
+                                            <input type="number" id="state-incentives" name="stateIncentives" class="form-input" placeholder="1,000" min="0" step="100" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label" for="elec-rate">Electricity Rate ($/kWh)</label>
+                                        <div class="input-prefix">
+                                            <span class="prefix">$</span>
+                                            <input type="number" id="elec-rate" name="elecRate" class="form-input" placeholder="0.16" min="0.01" max="2" step="0.001" required>
+                                        </div>
+                                    </div>
+                                    <div class="calc-actions">
+                                        <button type="button" class="btn btn-calculate btn-full" onclick="calculateSolar()">Calculate Solar Savings</button>
+                                        <button type="reset" class="btn btn-reset">Reset</button>
+                                    </div>
+                                </form>
+
+                                <div id="results" class="calc-results hidden">
+                                    <div class="result-primary">
+                                        <div class="result-label">Payback Period</div>
+                                        <div class="result-value" id="result-payback">0 yrs</div>
+                                    </div>
+                                    <div class="result-grid result-grid-3">
+                                        <div class="result-item">
+                                            <div class="result-label">Annual Savings</div>
+                                            <div class="result-value" id="result-annual-savings">$0</div>
+                                        </div>
+                                        <div class="result-item">
+                                            <div class="result-label">Net System Cost</div>
+                                            <div class="result-value" id="result-net-cost">$0</div>
+                                        </div>
+                                        <div class="result-item">
+                                            <div class="result-label">Federal Tax Credit (30%)</div>
+                                            <div class="result-value" id="result-tax-credit">$0</div>
+                                        </div>
+                                        <div class="result-item">
+                                            <div class="result-label">25-Year Net Savings</div>
+                                            <div class="result-value" id="result-25yr-savings">$0</div>
+                                        </div>
+                                        <div class="result-item">
+                                            <div class="result-label">Annual CO2 Offset</div>
+                                            <div class="result-value" id="result-co2-offset">0 tons</div>
+                                        </div>
+                                        <div class="result-item">
+                                            <div class="result-label">Est. Annual Production</div>
+                                            <div class="result-value" id="result-annual-kwh">0 kWh</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="ad-slot ad-slot-leaderboard"></div>
+
+                        <section class="content-section">
+                            <h2>Solar Savings Formula</h2>
+                            <div class="formula-box">
+                                <div class="formula-label">Solar ROI Calculations</div>
+                                Annual kWh Production = System Size (kW) &times; 1,400 kWh/kW/yr (US avg)
+Annual Savings = MIN(Annual kWh &times; Rate, Annual Electric Bill)
+Federal Tax Credit = Installation Cost &times; 30%
+Net System Cost = Installation Cost &minus; Tax Credit &minus; State Incentives
+Payback Period = Net System Cost / Annual Savings
+25-Year Net Savings = (Annual Savings &times; 25) &minus; Net System Cost
+CO2 Offset = Annual kWh &times; 0.386 kg CO2/kWh / 1,000 (tons)
+                            </div>
+                            <p>Annual production uses 1,400 kWh/kW as a national average. Actual production varies from ~1,000 kWh/kW in the Pacific Northwest to ~1,700+ kWh/kW in the Southwest. A solar installer can provide a site-specific production estimate using satellite data.</p>
+                        </section>
+
+                        <section class="content-section">
+                            <h2>How to Use This Calculator</h2>
+                            <ol>
+                                <li><strong>Enter your monthly electric bill</strong> -- your average monthly electricity cost.</li>
+                                <li><strong>Enter system size in kW</strong> -- a typical home system is 6-10 kW; your installer will size this for your usage.</li>
+                                <li><strong>Enter total installation cost</strong> -- get quotes from local installers for the most accurate figure.</li>
+                                <li><strong>Enter state/local incentives</strong> -- check dsireusa.org for incentives in your state.</li>
+                                <li><strong>Enter your electricity rate</strong> -- found on your utility bill in $/kWh.</li>
+                                <li><strong>Click "Calculate Solar Savings"</strong> to see payback period, annual savings, and 25-year ROI.</li>
+                            </ol>
+                        </section>
+
+                        <section class="content-section">
+                            <h2>Example Scenario</h2>
+                            <h3>8 kW System for $150/Month Electric Bill</h3>
+                            <p>Monthly bill: $150 | System: 8 kW | Install cost: $22,000 | State incentive: $1,000 | Rate: $0.16/kWh</p>
+                            <p>Annual Production = 8 kW &times; 1,400 = <strong>11,200 kWh</strong></p>
+                            <p>Annual Savings = MIN(11,200 &times; $0.16, $1,800) = <strong>$1,792/year</strong></p>
+                            <p>Federal Tax Credit = $22,000 &times; 30% = <strong>$6,600</strong></p>
+                            <p>Net Cost = $22,000 &minus; $6,600 &minus; $1,000 = <strong>$14,400</strong></p>
+                            <p>Payback = $14,400 / $1,792 = <strong>8.0 years</strong></p>
+                            <p>25-Year Net Savings = ($1,792 &times; 25) &minus; $14,400 = <strong>$30,400</strong></p>
+                        </section>
+
+                        <section class="faq-section">
+                            <h2>Frequently Asked Questions</h2>
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">
+                                    How much does a solar panel system cost?
+                                    <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>The average residential solar system costs $15,000 to $30,000 before incentives. A typical 6-8 kW system costs about $18,000-$24,000 before the 30% federal tax credit, bringing the net cost to $12,600-$16,800.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">
+                                    What is the federal solar tax credit?
+                                    <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>The federal Investment Tax Credit (ITC) for residential solar is 30% of the total system cost through 2032, then steps down to 26% in 2033 and 22% in 2034. There is no cap on system size for residential installations.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">
+                                    How long do solar panels last?
+                                    <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 011-1z"/></svg>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>Most solar panels come with 25-year performance warranties and typically last 30+ years. Panel efficiency degrades slightly over time -- typically 0.5-0.7% per year. After 25 years, panels generally still produce 80-85% of their original rated output.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">
+                                    Will solar panels work on a cloudy day?
+                                    <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 011-1z"/></svg>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>Yes, solar panels still generate electricity on cloudy days, though at reduced output -- typically 10-25% of full capacity. Overcast regions still benefit from solar, though systems in sunny states produce significantly more power annually than those in cloudy regions.</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="related-calculators">
+                            <h2>Related Calculators</h2>
+                            <div class="grid grid-3">
+                                <a href="/energy-utility-calculators/electricity-cost-calculator/" class="card card-link">
+                                    <div class="card-icon">E</div>
+                                    <h3>Electricity Cost Calculator</h3>
+                                    <p>Calculate what you currently pay for electricity.</p>
+                                </a>
+                                <a href="/energy-utility-calculators/home-energy-efficiency-calculator/" class="card card-link">
+                                    <div class="card-icon">H</div>
+                                    <h3>Home Energy Efficiency</h3>
+                                    <p>Find other ways to reduce your energy bills.</p>
+                                </a>
+                                <a href="/energy-utility-calculators/carbon-footprint-calculator/" class="card card-link">
+                                    <div class="card-icon">C</div>
+                                    <h3>Carbon Footprint Calculator</h3>
+                                    <p>See how solar reduces your carbon footprint.</p>
+                                </a>
+                            </div>
+                        </section>
+
+                        <div class="disclaimer">
+                            <strong>Disclaimer:</strong> This calculator provides estimates for educational purposes. Actual solar savings depend on local solar irradiance, utility net metering policies, system degradation, and future electricity rates. Consult a licensed solar installer for a site-specific assessment. Tax credit eligibility depends on your individual tax situation.
+                        </div>
+
+                        <div class="ad-slot ad-slot-leaderboard"></div>
+                    </div>
+
+                    <aside class="calc-page-sidebar">
+                        <div class="sidebar-card">
+                            <h3>Energy &amp; Utility Tools</h3>
+                            <a href="/energy-utility-calculators/carbon-footprint-calculator/">Carbon Footprint</a>
+                            <a href="/energy-utility-calculators/electricity-cost-calculator/">Electricity Cost</a>
+                            <a href="/energy-utility-calculators/solar-savings-calculator/">Solar Savings</a>
+                            <a href="/energy-utility-calculators/ev-range-calculator/">EV Range</a>
+                            <a href="/energy-utility-calculators/gas-bill-calculator/">Gas Bill</a>
+                            <a href="/energy-utility-calculators/home-energy-efficiency-calculator/">Home Energy Efficiency</a>
+                            <a href="/energy-utility-calculators/utility-bill-comparison-calculator/">Utility Bill Comparison</a>
+                            <a href="/energy-utility-calculators/water-usage-cost-calculator/">Water Usage Cost</a>
+                        </div>
+                        <div class="ad-slot ad-slot-rectangle"></div>
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="/" class="logo">
+                        <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+                        CalcWise
+                    </a>
+                    <p>Free, accurate financial calculators for everyone. Make smarter money decisions with CalcWise.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Energy &amp; Utility</h4>
+                    <a href="/energy-utility-calculators/carbon-footprint-calculator/">Carbon Footprint</a>
+                    <a href="/energy-utility-calculators/electricity-cost-calculator/">Electricity Cost</a>
+                    <a href="/energy-utility-calculators/solar-savings-calculator/">Solar Savings</a>
+                    <a href="/energy-utility-calculators/ev-range-calculator/">EV Range</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Advanced Real Estate</h4>
+                    <a href="/advanced-real-estate-calculators/property-appreciation-calculator/">Property Appreciation</a>
+                    <a href="/advanced-real-estate-calculators/real-estate-leverage-calculator/">Leverage Calculator</a>
+                    <a href="/advanced-real-estate-calculators/real-estate-yield-calculator/">Yield Calculator</a>
+                    <a href="/advanced-real-estate-calculators/rental-expense-ratio-calculator/">Expense Ratio</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <a href="/about/">About</a>
+                    <a href="/contact/">Contact</a>
+                    <a href="/privacy/">Privacy Policy</a>
+                    <a href="/terms/">Terms of Use</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; 2026 CalcWise. All rights reserved.</span>
+                <div class="footer-links">
+                    <a href="/privacy/">Privacy</a>
+                    <a href="/terms/">Terms</a>
+                    <a href="/sitemap.xml">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/calculator-engine.js"></script>
+    <script src="/js/search-index.js"></script>
+    <script>
+    function calculateSolar() {
+        if (!CalcWise.validateForm('solar-form')) return;
+
+        const values = CalcWise.getFormValues('solar-form');
+        const monthlyBill = values.monthlyBill;
+        const systemSize = values.systemSize;
+        const installCost = values.installationCost;
+        const stateIncentives = values.stateIncentives;
+        const elecRate = values.elecRate;
+
+        const annualBill = monthlyBill * 12;
+        // US average production factor: 1,400 kWh/kW/yr
+        const annualKwh = systemSize * 1400;
+        const annualSavings = Math.min(annualKwh * elecRate, annualBill);
+        const federalTaxCredit = installCost * 0.30;
+        const netCost = installCost - federalTaxCredit - stateIncentives;
+        const paybackYears = annualSavings > 0 ? netCost / annualSavings : 0;
+        const savings25yr = (annualSavings * 25) - netCost;
+        // CO2 offset: 0.386 kg CO2/kWh
+        const co2OffsetTons = (annualKwh * 0.386) / 1000;
+
+        CalcWise.setText('result-payback', paybackYears.toFixed(1) + ' yrs');
+        CalcWise.setText('result-annual-savings', CalcWise.formatCurrency(annualSavings, 0));
+        CalcWise.setText('result-net-cost', CalcWise.formatCurrency(netCost, 0));
+        CalcWise.setText('result-tax-credit', CalcWise.formatCurrency(federalTaxCredit, 0));
+        CalcWise.setText('result-25yr-savings', CalcWise.formatCurrency(savings25yr, 0));
+        CalcWise.setText('result-co2-offset', co2OffsetTons.toFixed(1) + ' tons/yr');
+        CalcWise.setText('result-annual-kwh', CalcWise.formatNumber(annualKwh) + ' kWh/yr');
+
+        CalcWise.showResults('results');
+    }
+
+    document.getElementById('solar-form').addEventListener('reset', function() {
+        setTimeout(() => CalcWise.hideResults('results'), 0);
+    });
+    </script>
+</body>
+</html>

@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Savings Rate Calculator - CalcWise</title>
+  <meta name="description" content="Calculate your personal savings rate from 401k, IRA, taxable, and other savings. Compare to recommended benchmarks and see projected savings in 10, 20, and 30 years.">
+  <link rel="canonical" href="https://calcwise.io/personal-finance-calculators/savings-rate-calculator/">
+  <meta property="og:title" content="Savings Rate Calculator - CalcWise">
+  <meta property="og:description" content="Find your total savings rate across all accounts. Compare to benchmarks and project savings in 10, 20, and 30 years.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcwise.io/personal-finance-calculators/savings-rate-calculator/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Savings Rate Calculator - CalcWise">
+  <meta name="twitter:description" content="Calculate your savings rate, compare to benchmarks, and see 10/20/30-year projections.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/"},
+      {"@type": "ListItem", "position": 2, "name": "Personal Finance Calculators", "item": "https://calcwise.io/personal-finance-calculators/"},
+      {"@type": "ListItem", "position": 3, "name": "Savings Rate Calculator"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is a good savings rate?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Most financial advisors recommend saving at least 15-20% of gross income including employer 401k matches. The 50/30/20 rule suggests 20% for savings and debt repayment. For early retirement goals (FIRE), many aim for 30-50% or higher. Even starting at 10% and gradually increasing is far better than saving nothing."}
+      },
+      {
+        "@type": "Question",
+        "name": "Should I include employer 401k match in my savings rate?",
+        "acceptedAnswer": {"@type": "Answer", "text": "It depends on your perspective. Many financial planners include the employer match since it is part of your total compensation being saved. Others track personal savings rate separately (excluding employer contributions) to measure their own saving discipline. This calculator lets you include or exclude it by entering the total matched amount or your contribution only."}
+      },
+      {
+        "@type": "Question",
+        "name": "What types of savings count toward the savings rate?",
+        "acceptedAnswer": {"@type": "Answer", "text": "All forms of intentional savings count: 401k contributions (including employer match), IRA contributions (traditional and Roth), taxable brokerage account investments, HSA contributions, savings account deposits, and extra debt principal payments. Regular debt minimum payments typically do not count as savings."}
+      },
+      {
+        "@type": "Question",
+        "name": "How does savings rate affect time to retirement?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Savings rate has a powerful effect on retirement timelines. At a 10% savings rate, you might work 40+ years. At 20%, roughly 35 years. At 30%, around 28 years. At 50%, as few as 17 years. This is because a higher savings rate both builds wealth faster and means you need less to retire (since you are spending less and need to replace less income)."}
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="logo">
+        <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav">
+        <a href="/">Home</a>
+        <a href="/pages/finance-calculators/">Finance</a>
+        <a href="/pages/personal-finance-calculators/" aria-current="page">Personal Finance</a>
+        <a href="/pages/investment-calculators/">Investment</a>
+        <a href="/pages/tax-calculators/">Tax</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav">
+      <a href="/">Home</a>
+      <a href="/pages/finance-calculators/">Finance Calculators</a>
+      <a href="/pages/personal-finance-calculators/">Personal Finance Calculators</a>
+      <a href="/pages/investment-calculators/">Investment Calculators</a>
+      <a href="/pages/tax-calculators/">Tax Calculators</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li><a href="/pages/personal-finance-calculators/">Personal Finance Calculators</a></li>
+        <li><span aria-current="page">Savings Rate Calculator</span></li>
+      </ol>
+    </nav>
+
+    <div class="page-content">
+      <div class="article-content">
+        <h1>Savings Rate Calculator</h1>
+        <p>Your savings rate — the percentage of income you save every month — is the single most powerful variable in your financial future. This calculator adds up savings across all account types (401k, IRA, taxable, and other), calculates your total savings rate, compares it to key benchmarks, and projects what your savings could grow to in 10, 20, and 30 years using compound interest.</p>
+
+        <div class="ad-slot ad-slot-leaderboard"></div>
+
+        <div class="calc-container">
+          <div class="calc-header">
+            <h2>Calculate Your Savings Rate</h2>
+            <p>Enter your monthly income and savings across all accounts</p>
+          </div>
+          <div class="calc-body">
+            <form id="savings-rate-form">
+              <div class="form-group">
+                <label class="form-label" for="grossIncome">Monthly Gross Income</label>
+                <div class="input-prefix"><span class="prefix">$</span>
+                  <input type="number" id="grossIncome" name="grossIncome" class="form-input" placeholder="6000" min="1" step="100" required>
+                </div>
+              </div>
+
+              <h3 style="font-size:var(--text-base);margin:var(--space-5) 0 var(--space-3);">Monthly Savings by Account Type</h3>
+              <div class="result-grid result-grid-2" style="gap:var(--space-4);">
+                <div class="form-group">
+                  <label class="form-label" for="k401">401k / 403b Contributions</label>
+                  <div class="input-prefix"><span class="prefix">$</span>
+                    <input type="number" id="k401" name="k401" class="form-input" placeholder="500" min="0" step="25">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="ira">IRA Contributions (Traditional + Roth)</label>
+                  <div class="input-prefix"><span class="prefix">$</span>
+                    <input type="number" id="ira" name="ira" class="form-input" placeholder="583" min="0" step="25">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="taxable">Taxable Brokerage / Investments</label>
+                  <div class="input-prefix"><span class="prefix">$</span>
+                    <input type="number" id="taxable" name="taxable" class="form-input" placeholder="200" min="0" step="25">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="otherSavings">Other Savings (HYSA, HSA, etc.)</label>
+                  <div class="input-prefix"><span class="prefix">$</span>
+                    <input type="number" id="otherSavings" name="otherSavings" class="form-input" placeholder="100" min="0" step="25">
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group" style="margin-top:var(--space-4);">
+                <label class="form-label" for="annualReturn">Expected Annual Return for Projections</label>
+                <div class="input-suffix">
+                  <input type="number" id="annualReturn" name="annualReturn" class="form-input" placeholder="7" min="0" max="20" step="0.1">
+                  <span class="suffix">%</span>
+                </div>
+              </div>
+
+              <div class="calc-actions">
+                <button type="button" class="btn btn-calculate" onclick="calcSavingsRate()">Calculate Savings Rate</button>
+                <button type="button" class="btn btn-reset" onclick="resetSavingsRate()">Reset</button>
+              </div>
+            </form>
+
+            <div id="results" class="calc-results hidden">
+              <div class="result-primary">
+                <div class="result-label">Your Total Savings Rate</div>
+                <div class="result-value" id="savingsRate">0%</div>
+              </div>
+              <div class="result-grid result-grid-3" style="margin-top:var(--space-4);">
+                <div class="result-item">
+                  <div class="result-label">Monthly Savings Total</div>
+                  <div class="result-value" id="monthlySavings">$0</div>
+                </div>
+                <div class="result-item">
+                  <div class="result-label">Annual Savings Total</div>
+                  <div class="result-value" id="annualSavings">$0</div>
+                </div>
+                <div class="result-item">
+                  <div class="result-label">Rate Assessment</div>
+                  <div class="result-value" id="rateAssessment">-</div>
+                </div>
+              </div>
+
+              <div style="margin-top:var(--space-6);">
+                <h3 style="font-size:var(--text-base);margin-bottom:var(--space-3);">Savings Rate Benchmarks</h3>
+                <div id="benchmarkTable"></div>
+              </div>
+
+              <div style="margin-top:var(--space-6);">
+                <h3 style="font-size:var(--text-base);margin-bottom:var(--space-3);">Projected Savings Growth</h3>
+                <div id="projectionTable"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <section class="content-section">
+          <h2>How Savings Rate Is Calculated</h2>
+          <div class="formula-box">
+            <div class="formula-label">Formula</div>
+            Total Monthly Savings = 401k + IRA + Taxable + Other<br>
+            Savings Rate = (Total Monthly Savings / Gross Monthly Income) &times; 100<br>
+            Projected Value = PMT &times; [((1 + r)^n &minus; 1) / r] &times; (1 + r)
+          </div>
+          <p>The projection uses future value of annuity formula with monthly compounding. It shows the potential value of your current savings rate assuming consistent contributions and a constant rate of return. In reality, returns vary year-to-year — the projection is a long-run estimate based on historical average returns.</p>
+        </section>
+
+        <section class="content-section">
+          <h2>How to Use This Calculator</h2>
+          <ol>
+            <li><strong>Enter monthly gross income:</strong> Your total earnings before taxes and deductions.</li>
+            <li><strong>Add monthly savings by account:</strong> Include all intentional savings — 401k, IRA, brokerage, and cash savings.</li>
+            <li><strong>Set expected annual return:</strong> 7% is a common assumption based on historical market averages; use 5-6% to be conservative.</li>
+            <li><strong>Calculate:</strong> See your savings rate, benchmark comparison, and 30-year projection.</li>
+            <li><strong>Identify gaps:</strong> If your rate is below 15%, look for ways to increase contributions by 1-2% at a time.</li>
+          </ol>
+        </section>
+
+        <section class="content-section">
+          <h2>Example Scenario</h2>
+          <p>Dana earns $7,000/month gross and saves: 401k $700, IRA $583, Taxable $300, HYSA $200. Total savings: $1,783/month. Savings rate: 25.5% — above the 20% recommendation. At 7% annual return, Dana's $1,783/month grows to approximately $296,000 in 10 years, $953,000 in 20 years, and $2.27 million in 30 years. Increasing to 30% ($2,100/month) would project to $2.67M in 30 years.</p>
+        </section>
+
+        <section class="faq-section">
+          <h2>Frequently Asked Questions</h2>
+          <div class="faq-item">
+            <button class="faq-question">What is a good savings rate?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>Financial advisors recommend 15-20% of gross income. The 50/30/20 rule targets 20%. FIRE adherents aim for 30-50%+. Starting at 10% and increasing gradually is far better than saving nothing.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">Should I include employer 401k match?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>Many planners include the employer match since it is part of total compensation being saved. Others track personal contributions only. Either approach works — be consistent so you can compare over time.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">What types of savings count toward savings rate?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>All intentional savings: 401k, IRA, brokerage investments, HSA, HYSA deposits, and extra debt principal payments. Minimum debt payments do not count since they are servicing existing debt, not building new wealth.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">How does savings rate affect retirement timeline?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>At 10% savings rate: ~40+ years to retirement. At 20%: ~35 years. At 30%: ~28 years. At 50%: ~17 years. Higher rates build wealth faster AND mean you need less to retire since you are used to living on less.</p></div>
+          </div>
+        </section>
+
+        <section class="related-calculators">
+          <h2>Related Calculators</h2>
+          <div class="grid grid-3">
+            <a href="/pages/personal-finance-calculators/financial-independence-calculator/" class="card card-link">
+              <h3>Financial Independence Calculator</h3>
+              <p>Use your savings rate to project your FI number and timeline.</p>
+            </a>
+            <a href="/pages/personal-finance-calculators/savings-goal-tracker-calculator/" class="card card-link">
+              <h3>Savings Goal Tracker</h3>
+              <p>Track specific savings goals with target dates.</p>
+            </a>
+            <a href="/pages/personal-finance-calculators/net-income-calculator/" class="card card-link">
+              <h3>Net Income Calculator</h3>
+              <p>Know your take-home pay to optimize savings allocation.</p>
+            </a>
+            <a href="/pages/personal-finance-calculators/budget-percentage-calculator/" class="card card-link">
+              <h3>Budget Percentage Calculator</h3>
+              <p>See all spending as a percentage of income.</p>
+            </a>
+            <a href="/pages/finance-calculators/retirement-savings-calculator/" class="card card-link">
+              <h3>Retirement Savings Calculator</h3>
+              <p>Project retirement savings with detailed contribution scenarios.</p>
+            </a>
+          </div>
+        </section>
+
+        <div class="disclaimer">
+          <strong>Disclaimer:</strong> This calculator is for informational and educational purposes only. Projections assume constant returns and contributions and do not account for inflation, taxes on gains, or market volatility. Past market performance does not guarantee future results. This is not financial advice. Consult a qualified financial advisor for personalized investment planning.
+        </div>
+
+        <div class="ad-slot ad-slot-rectangle"></div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free online financial calculators to help you make smarter money decisions.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Personal Finance</h4>
+          <a href="/pages/personal-finance-calculators/savings-rate-calculator/">Savings Rate</a>
+          <a href="/pages/personal-finance-calculators/financial-independence-calculator/">Financial Independence</a>
+          <a href="/pages/personal-finance-calculators/savings-goal-tracker-calculator/">Savings Goal Tracker</a>
+          <a href="/pages/personal-finance-calculators/net-income-calculator/">Net Income</a>
+        </div>
+        <div class="footer-col">
+          <h4>Tools</h4>
+          <a href="/pages/finance-calculators/retirement-savings-calculator/">Retirement Savings</a>
+          <a href="/pages/investment-calculators/">Investment Calculators</a>
+          <a href="/pages/tax-calculators/">Tax Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about/">About</a>
+          <a href="/contact/">Contact</a>
+          <a href="/privacy/">Privacy Policy</a>
+          <a href="/terms/">Terms of Service</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 CalcWise. All rights reserved.</span>
+        <div class="footer-links">
+          <a href="/privacy/">Privacy</a>
+          <a href="/terms/">Terms</a>
+          <a href="/contact/">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    const BENCHMARKS = [
+      { label: 'Minimum (building habit)', rate: 5,  description: 'Better than nothing — build from here' },
+      { label: 'Basic (starter goal)',      rate: 10, description: 'A starting point for most people' },
+      { label: 'Recommended',               rate: 15, description: 'Fidelity / Vanguard recommendation' },
+      { label: '50/30/20 Rule',             rate: 20, description: 'Elizabeth Warren\'s savings target' },
+      { label: 'FI-Accelerated',            rate: 30, description: 'Retire ~10 years earlier than average' },
+      { label: 'FIRE-Level',                rate: 50, description: 'Could retire in ~17 years from zero' }
+    ];
+
+    function calcSavingsRate() {
+      if (!CalcWise.validateForm('savings-rate-form')) return;
+      const v = CalcWise.getFormValues('savings-rate-form');
+
+      const income = v.grossIncome;
+      const k401 = v.k401 || 0;
+      const ira = v.ira || 0;
+      const taxable = v.taxable || 0;
+      const other = v.otherSavings || 0;
+      const annualReturn = v.annualReturn || 7;
+
+      const totalMonthly = k401 + ira + taxable + other;
+      if (totalMonthly === 0) {
+        alert('Please enter at least one savings amount.');
+        return;
+      }
+
+      const rate = (totalMonthly / income) * 100;
+
+      let assessment, assessColor;
+      if (rate >= 50)      { assessment = 'FIRE Level';    assessColor = 'var(--color-success)'; }
+      else if (rate >= 30) { assessment = 'Excellent';     assessColor = 'var(--color-success)'; }
+      else if (rate >= 20) { assessment = 'Great';         assessColor = 'var(--color-success)'; }
+      else if (rate >= 15) { assessment = 'Good';          assessColor = 'var(--color-info)'; }
+      else if (rate >= 10) { assessment = 'Fair — Improve';assessColor = 'var(--color-warning, #f59e0b)'; }
+      else                 { assessment = 'Below Target';  assessColor = 'var(--color-danger)'; }
+
+      CalcWise.setText('savingsRate', CalcWise.formatPercent(rate, 1));
+      document.getElementById('savingsRate').style.color = assessColor;
+      CalcWise.setText('monthlySavings', CalcWise.formatCurrency(totalMonthly, 0));
+      CalcWise.setText('annualSavings', CalcWise.formatCurrency(totalMonthly * 12, 0));
+      const aEl = document.getElementById('rateAssessment');
+      aEl.textContent = assessment;
+      aEl.style.color = assessColor;
+
+      // Benchmarks table
+      let benchHtml = '<div class="table-container"><table class="data-table"><thead><tr><th>Benchmark</th><th>Target Rate</th><th>Monthly at Your Income</th><th>Your Status</th></tr></thead><tbody>';
+      BENCHMARKS.forEach(b => {
+        const needed = income * (b.rate / 100);
+        const youHit = rate >= b.rate;
+        const statusColor = youHit ? 'var(--color-success)' : 'var(--color-text-secondary)';
+        const statusText = youHit ? '&#10003; Met' : `Need +${CalcWise.formatCurrency(needed - totalMonthly, 0)}/mo`;
+        benchHtml += `<tr><td>${b.label}<br><span style="font-size:var(--text-xs);color:var(--color-text-secondary);">${b.description}</span></td><td>${b.rate}%</td><td>${CalcWise.formatCurrency(needed, 0)}</td><td style="color:${statusColor};font-weight:600;">${statusText}</td></tr>`;
+      });
+      benchHtml += '</tbody></table></div>';
+      CalcWise.setHtml('benchmarkTable', benchHtml);
+
+      // Projections
+      const monthlyRate = annualReturn / 100 / 12;
+      const projections = [10, 20, 30].map(years => {
+        const n = years * 12;
+        let fv;
+        if (monthlyRate === 0) {
+          fv = totalMonthly * n;
+        } else {
+          fv = totalMonthly * ((Math.pow(1 + monthlyRate, n) - 1) / monthlyRate) * (1 + monthlyRate);
+        }
+        const contributed = totalMonthly * n;
+        return { years, fv, contributed, growth: fv - contributed };
+      });
+
+      let projHtml = '<div class="table-container"><table class="data-table"><thead><tr><th>Timeline</th><th>Total Contributions</th><th>Investment Growth</th><th>Projected Value</th></tr></thead><tbody>';
+      projections.forEach(p => {
+        projHtml += `<tr><td>${p.years} years</td><td>${CalcWise.formatCurrency(p.contributed, 0)}</td><td style="color:var(--color-success);">${CalcWise.formatCurrency(p.growth, 0)}</td><td style="font-weight:600;">${CalcWise.formatCurrency(p.fv, 0)}</td></tr>`;
+      });
+      projHtml += `</tbody></table></div><p style="font-size:var(--text-sm);color:var(--color-text-secondary);margin-top:var(--space-2);">Based on ${CalcWise.formatCurrency(totalMonthly, 0)}/month at ${annualReturn}% annual return, compounded monthly.</p>`;
+      CalcWise.setHtml('projectionTable', projHtml);
+
+      CalcWise.showResults('results');
+    }
+
+    function resetSavingsRate() {
+      document.getElementById('savings-rate-form').reset();
+      CalcWise.hideResults('results');
+    }
+  </script>
+</body>
+</html>

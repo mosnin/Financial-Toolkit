@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>College Affordability Calculator - Estimate Your Funding Gap | CalcWise</title>
+  <meta name="description" content="Free college affordability calculator. Find your annual funding gap, total 4-year cost, loan amount needed, and estimated monthly payment after graduation.">
+  <meta name="keywords" content="college affordability calculator, college funding gap, EFC calculator, student loan estimator, college cost calculator">
+  <link rel="canonical" href="https://calcwise.io/education-calculators/college-affordability-calculator/">
+
+  <meta property="og:title" content="College Affordability Calculator - Estimate Your Funding Gap">
+  <meta property="og:description" content="Find your annual funding gap, total 4-year cost, and estimated student loan payments after graduation.">
+  <meta property="og:url" content="https://calcwise.io/education-calculators/college-affordability-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="College Affordability Calculator - Estimate Your Funding Gap">
+  <meta name="twitter:description" content="Find your annual funding gap, total 4-year cost, and estimated student loan payments after graduation.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Education Calculators", "item": "https://calcwise.io/education-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "College Affordability Calculator", "item": "https://calcwise.io/education-calculators/college-affordability-calculator/" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the Expected Family Contribution (EFC)?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The EFC (now called the Student Aid Index or SAI) is a number calculated from your FAFSA that colleges use to determine your financial aid eligibility. It represents how much your family is expected to contribute toward education costs each year. A lower EFC means more aid eligibility." }
+      },
+      {
+        "@type": "Question",
+        "name": "What counts as a funding gap in college affordability?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The funding gap is the difference between total annual college costs (tuition, room, board, fees) and what your family can cover through income, savings, and financial aid (EFC + grants). This gap typically must be filled with student loans or additional scholarships." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is a typical student loan interest rate?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Federal undergraduate Direct Loans for 2024-25 carry a fixed rate of around 6.53%. Graduate loans are higher. Private loan rates vary widely based on credit. This calculator uses 6.5% as a reasonable baseline estimate for planning purposes." }
+      },
+      {
+        "@type": "Question",
+        "name": "How long is the standard student loan repayment period?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The standard federal repayment plan spans 10 years (120 monthly payments). Income-driven repayment plans can extend this to 20-25 years with lower monthly payments but more total interest paid." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/business-calculators/">Business</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/business-calculators/">Business Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/education-calculators/">Education Calculators</a></li>
+          <li><span aria-current="page">College Affordability Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="article-content">
+          <h1>College Affordability Calculator</h1>
+          <p>Understand what college will truly cost your family. Enter your tuition, room and board, income, Expected Family Contribution, and savings to instantly see your annual funding gap, total 4-year cost, the loan amount you may need, and your estimated monthly payment after graduation.</p>
+
+          <div class="calc-container mt-8">
+            <div class="calc-header">
+              <h2>Calculate Your College Affordability</h2>
+              <p>Enter your financial details to see your funding gap</p>
+            </div>
+            <div class="calc-body">
+              <form id="afford-form" onsubmit="return false;">
+                <div class="form-group">
+                  <label class="form-label" for="annual-tuition">Annual Tuition &amp; Fees</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="annual-tuition" class="form-input" placeholder="32000" min="0" step="100" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="room-board">Annual Room &amp; Board</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="room-board" class="form-input" placeholder="12000" min="0" step="100" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="annual-income">Annual Household Income</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="annual-income" class="form-input" placeholder="75000" min="0" step="500" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="efc">Expected Family Contribution (EFC / SAI)</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="efc" class="form-input" placeholder="8000" min="0" step="100" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="savings">College Savings (529 / total)</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="savings" class="form-input" placeholder="20000" min="0" step="500">
+                  </div>
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calculateAffordability()">Calculate</button>
+                  <button type="button" class="btn btn-reset" onclick="resetAffordability()">Reset</button>
+                </div>
+              </form>
+
+              <div id="afford-results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">Annual Funding Gap</div>
+                  <div class="result-value" id="result-gap"></div>
+                </div>
+                <div class="result-grid result-grid-3">
+                  <div class="result-item">
+                    <div class="result-label">Total 4-Year Cost</div>
+                    <div class="result-value" id="result-total-cost"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Loan Amount Needed</div>
+                    <div class="result-value" id="result-loan-amount"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Est. Monthly Payment</div>
+                    <div class="result-value" id="result-monthly-payment"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <section class="content-section">
+            <h2>How the College Affordability Formula Works</h2>
+            <p>This calculator determines the gap between what college costs and what your family can cover each year:</p>
+            <div class="formula-box">
+              <div class="formula-label">Annual Funding Gap</div>
+              Gap = (Tuition + Room &amp; Board) - EFC - (Savings / 4)
+            </div>
+            <p>The total 4-year cost is simply the annual total cost multiplied by four. The loan amount needed equals the annual gap multiplied by four minus any remaining savings. The estimated monthly payment is calculated using the standard 10-year loan amortization formula at a 6.5% federal loan rate:</p>
+            <div class="formula-box">
+              <div class="formula-label">Monthly Payment (Standard 10-Year Repayment)</div>
+              M = P * [r(1+r)^120] / [(1+r)^120 - 1]
+            </div>
+            <p>Where <strong>P</strong> is the total loan amount, <strong>r</strong> is the monthly interest rate (6.5% / 12), and 120 is the number of payments over 10 years.</p>
+          </section>
+
+          <section class="content-section">
+            <h2>How to Use This Calculator</h2>
+            <ol>
+              <li><strong>Enter annual tuition and fees</strong> - check the college's published Cost of Attendance (COA).</li>
+              <li><strong>Enter room and board</strong> - use on-campus costs or estimate off-campus housing + food.</li>
+              <li><strong>Enter annual household income</strong> - combined gross income before taxes.</li>
+              <li><strong>Enter your EFC/SAI</strong> - found on your FAFSA Student Aid Report or estimated via studentaid.gov.</li>
+              <li><strong>Enter college savings</strong> - total 529 or other savings earmarked for college.</li>
+              <li><strong>Click Calculate</strong> to see your funding gap and projected loan burden.</li>
+            </ol>
+          </section>
+
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>A family is considering a private university with $35,000 in annual tuition and $13,000 in room and board. Their EFC is $9,000 and they have $20,000 in a 529 account. The annual gap works out to $34,000. Over four years, total costs reach $192,000, and with savings applied, the loan amount is roughly $116,000. At 6.5% over 10 years, the estimated monthly payment after graduation is about $1,310 — a powerful figure for evaluating whether this school is affordable.</p>
+          </section>
+
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What is the Expected Family Contribution (EFC)?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>The EFC (now called the Student Aid Index or SAI) is a number calculated from your FAFSA that colleges use to determine your financial aid eligibility. It represents how much your family is expected to contribute toward education costs each year. A lower EFC means more aid eligibility.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What counts as a funding gap in college affordability?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>The funding gap is the difference between total annual college costs and what your family can cover through savings and your Expected Family Contribution. This gap typically must be filled with student loans or additional scholarships.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What is a typical student loan interest rate?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Federal undergraduate Direct Loans carry a fixed rate set annually by Congress, around 6.5% in recent years. Private loan rates vary widely based on credit. This calculator uses 6.5% as a reasonable baseline estimate for planning purposes.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                How long is the standard student loan repayment period?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>The standard federal repayment plan spans 10 years (120 monthly payments). Income-driven repayment plans can extend this to 20-25 years with lower monthly payments but more total interest paid over the life of the loan.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/education-calculators/education-roi-calculator/" class="card card-link">
+                <h3>Education ROI Calculator</h3>
+                <p>Measure the financial return on your college degree investment.</p>
+              </a>
+              <a href="/education-calculators/student-budget-calculator/" class="card card-link">
+                <h3>Student Budget Calculator</h3>
+                <p>Plan your monthly income and expenses as a college student.</p>
+              </a>
+              <a href="/education-calculators/student-housing-cost-calculator/" class="card card-link">
+                <h3>Student Housing Cost Calculator</h3>
+                <p>Compare on-campus vs off-campus living costs over 4 years.</p>
+              </a>
+              <a href="/education-calculators/graduation-timeline-calculator/" class="card card-link">
+                <h3>Graduation Timeline Calculator</h3>
+                <p>Estimate your graduation date based on credits and pace.</p>
+              </a>
+              <a href="/finance-calculators/loan-calculator/" class="card card-link">
+                <h3>Loan Calculator</h3>
+                <p>Calculate monthly payments for any fixed-rate loan.</p>
+              </a>
+            </div>
+          </section>
+
+          <div class="disclaimer">
+            <strong>Disclaimer:</strong> This calculator provides estimates for informational and planning purposes only. Actual college costs, financial aid awards, interest rates, and loan terms vary significantly. EFC/SAI calculations involve many factors not captured here. This is not financial or legal advice. Consult your college's financial aid office and a qualified financial advisor for personalized guidance.
+          </div>
+
+          <div class="ad-slot ad-slot-leaderboard"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Education</h4>
+          <a href="/education-calculators/">All Education Calculators</a>
+          <a href="/education-calculators/college-affordability-calculator/">College Affordability</a>
+          <a href="/education-calculators/education-roi-calculator/">Education ROI</a>
+        </div>
+        <div class="footer-col">
+          <h4>Finance</h4>
+          <a href="/finance-calculators/">All Finance Calculators</a>
+          <a href="/finance-calculators/loan-calculator/">Loan Calculator</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateAffordability() {
+      if (!CalcWise.validateForm('afford-form')) return;
+
+      const tuition = CalcWise.parseNumber(document.getElementById('annual-tuition').value);
+      const roomBoard = CalcWise.parseNumber(document.getElementById('room-board').value);
+      const efc = CalcWise.parseNumber(document.getElementById('efc').value);
+      const savings = CalcWise.parseNumber(document.getElementById('savings').value) || 0;
+
+      const annualCost = tuition + roomBoard;
+      const annualSavingsApplied = savings / 4;
+      const annualGap = Math.max(0, annualCost - efc - annualSavingsApplied);
+      const totalFourYearCost = annualCost * 4;
+      const loanAmount = Math.max(0, (annualGap * 4) - Math.max(0, savings - annualSavingsApplied * 4));
+      const loanAmountFinal = annualGap * 4;
+
+      // Standard 10-year repayment at 6.5%
+      const monthlyRate = 0.065 / 12;
+      const n = 120;
+      let monthlyPayment = 0;
+      if (loanAmountFinal > 0) {
+        monthlyPayment = loanAmountFinal * (monthlyRate * Math.pow(1 + monthlyRate, n)) / (Math.pow(1 + monthlyRate, n) - 1);
+      }
+
+      CalcWise.setText('result-gap', CalcWise.formatCurrency(annualGap));
+      CalcWise.setText('result-total-cost', CalcWise.formatCurrency(totalFourYearCost));
+      CalcWise.setText('result-loan-amount', CalcWise.formatCurrency(loanAmountFinal));
+      CalcWise.setText('result-monthly-payment', CalcWise.formatCurrency(monthlyPayment));
+      CalcWise.showResults('afford-results');
+    }
+
+    function resetAffordability() {
+      document.getElementById('afford-form').reset();
+      CalcWise.hideResults('afford-results');
+    }
+  </script>
+</body>
+</html>

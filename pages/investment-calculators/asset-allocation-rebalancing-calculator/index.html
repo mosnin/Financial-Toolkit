@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Asset Allocation Rebalancing Calculator | CalcWise</title>
+  <meta name="description" content="Calculate how to rebalance your investment portfolio. Enter your target allocations and current holdings to get buy/sell recommendations for stocks, bonds, and cash.">
+  <meta name="keywords" content="asset allocation calculator, portfolio rebalancing calculator, rebalance portfolio, stocks bonds cash allocation, buy sell recommendations">
+  <link rel="canonical" href="https://calcwise.io/investment-calculators/asset-allocation-rebalancing-calculator/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Asset Allocation Rebalancing Calculator | CalcWise">
+  <meta property="og:description" content="Calculate how to rebalance your investment portfolio with buy/sell recommendations for each asset class.">
+  <meta property="og:url" content="https://calcwise.io/investment-calculators/asset-allocation-rebalancing-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Asset Allocation Rebalancing Calculator | CalcWise">
+  <meta name="twitter:description" content="Calculate how to rebalance your investment portfolio with buy/sell recommendations for each asset class.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <!-- BreadcrumbList Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Investment Calculators", "item": "https://calcwise.io/investment-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "Asset Allocation Rebalancing Calculator", "item": "https://calcwise.io/investment-calculators/asset-allocation-rebalancing-calculator/" }
+    ]
+  }
+  </script>
+
+  <!-- FAQPage Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is portfolio rebalancing?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Portfolio rebalancing is the process of realigning the weights of assets in your portfolio to maintain your original desired level of asset allocation. Over time, gains in one asset class can cause your portfolio to drift from its target mix." }
+      },
+      {
+        "@type": "Question",
+        "name": "How often should I rebalance my portfolio?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Most financial advisors recommend rebalancing at least once a year or whenever an asset class drifts more than 5% from its target allocation. Annual or semi-annual rebalancing strikes a balance between staying on target and minimizing transaction costs." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is a typical asset allocation?",
+        "acceptedAnswer": { "@type": "Answer", "text": "A common rule of thumb is to hold a percentage of bonds equal to your age, with the remainder in stocks. For example, a 40-year-old might hold 60% stocks, 35% bonds, and 5% cash. Your ideal allocation depends on your risk tolerance and time horizon." }
+      },
+      {
+        "@type": "Question",
+        "name": "Are there tax implications when rebalancing?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Selling appreciated assets in a taxable account can trigger capital gains taxes. To minimize taxes, consider rebalancing within tax-advantaged accounts (IRA, 401k) first, or use new contributions to bring allocations back in line." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/investment-calculators/" aria-current="page">Investments</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/investment-calculators/">Investment Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/investment-calculators/">Investment Calculators</a></li>
+          <li><span aria-current="page">Asset Allocation Rebalancing Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="article-content">
+          <h1>Asset Allocation Rebalancing Calculator</h1>
+          <p>Find out exactly how much to buy or sell in each asset class to bring your portfolio back to its target allocation. Enter your total portfolio value, target percentages for stocks, bonds, and cash, along with your current holdings to receive instant rebalancing recommendations.</p>
+
+          <div class="calc-container mt-8">
+            <div class="calc-header">
+              <h2>Calculate Rebalancing Amounts</h2>
+              <p>Enter your portfolio details and target allocations below</p>
+            </div>
+            <div class="calc-body">
+              <form id="rebalancing-form" onsubmit="return false;">
+                <div class="form-group">
+                  <label class="form-label" for="portfolio-value">Total Portfolio Value</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="portfolio-value" class="form-input" placeholder="100000.00" min="0.01" step="0.01" required>
+                  </div>
+                </div>
+                <h3 style="font-size:1rem;font-weight:600;margin:1.5rem 0 0.75rem;">Target Allocations (must total 100%)</h3>
+                <div class="form-group">
+                  <label class="form-label" for="target-stocks">Target Stocks %</label>
+                  <div class="input-prefix">
+                    <input type="number" id="target-stocks" class="form-input" placeholder="60" min="0" max="100" step="0.1" required>
+                    <span class="prefix" style="left:auto;right:0.75rem;">%</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="target-bonds">Target Bonds %</label>
+                  <div class="input-prefix">
+                    <input type="number" id="target-bonds" class="form-input" placeholder="35" min="0" max="100" step="0.1" required>
+                    <span class="prefix" style="left:auto;right:0.75rem;">%</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="target-cash">Target Cash %</label>
+                  <div class="input-prefix">
+                    <input type="number" id="target-cash" class="form-input" placeholder="5" min="0" max="100" step="0.1" required>
+                    <span class="prefix" style="left:auto;right:0.75rem;">%</span>
+                  </div>
+                </div>
+                <h3 style="font-size:1rem;font-weight:600;margin:1.5rem 0 0.75rem;">Current Holdings</h3>
+                <div class="form-group">
+                  <label class="form-label" for="current-stocks">Current Stocks Value</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="current-stocks" class="form-input" placeholder="65000.00" min="0" step="0.01" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="current-bonds">Current Bonds Value</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="current-bonds" class="form-input" placeholder="30000.00" min="0" step="0.01" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="current-cash">Current Cash Value</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="current-cash" class="form-input" placeholder="5000.00" min="0" step="0.01" required>
+                  </div>
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calculateRebalancing()">Calculate Rebalancing</button>
+                  <button type="button" class="btn btn-reset" onclick="resetRebalancing()">Reset</button>
+                </div>
+              </form>
+
+              <div id="rebalancing-results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">Total Portfolio Value</div>
+                  <div class="result-value" id="result-total-value"></div>
+                </div>
+                <div class="result-grid">
+                  <div class="result-item">
+                    <div class="result-label">Stocks: Buy / (Sell)</div>
+                    <div class="result-value" id="result-stocks-action"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Bonds: Buy / (Sell)</div>
+                    <div class="result-value" id="result-bonds-action"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Cash: Add / (Remove)</div>
+                    <div class="result-value" id="result-cash-action"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Current Stocks %</div>
+                    <div class="result-value" id="result-current-stocks-pct"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Current Bonds %</div>
+                    <div class="result-value" id="result-current-bonds-pct"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Current Cash %</div>
+                    <div class="result-value" id="result-current-cash-pct"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Formula Section -->
+          <section class="content-section">
+            <h2>How Rebalancing Is Calculated</h2>
+            <p>For each asset class, the target dollar amount is computed from the total portfolio value, and the difference from the current holding gives the buy or sell amount:</p>
+            <div class="formula-box">
+              <div class="formula-label">Target Amount Formula</div>
+              Target Amount = Total Portfolio Value × (Target % / 100)
+            </div>
+            <div class="formula-box">
+              <div class="formula-label">Rebalance Amount Formula</div>
+              Rebalance Amount = Target Amount − Current Holding
+            </div>
+            <p>A positive value means you need to <strong>buy</strong> more of that asset class; a negative value means you need to <strong>sell</strong>.</p>
+          </section>
+
+          <!-- How to Use -->
+          <section class="content-section">
+            <h2>How to Use This Rebalancing Calculator</h2>
+            <ol>
+              <li><strong>Enter your total portfolio value</strong> — the combined value of all holdings.</li>
+              <li><strong>Set target allocations</strong> — the percentages you want for stocks, bonds, and cash (must total 100%).</li>
+              <li><strong>Enter current holdings</strong> — the current dollar value of each asset class.</li>
+              <li><strong>Click "Calculate Rebalancing"</strong> to see exactly how much to buy or sell in each category.</li>
+            </ol>
+          </section>
+
+          <!-- Example Scenario -->
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>Suppose your $100,000 portfolio currently holds $65,000 in stocks (65%), $30,000 in bonds (30%), and $5,000 in cash (5%), but your target is 60% stocks, 35% bonds, and 5% cash. To rebalance, you would sell $5,000 of stocks and buy $5,000 of bonds, leaving cash unchanged. This restores your intended risk profile.</p>
+          </section>
+
+          <!-- FAQ Section -->
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What is portfolio rebalancing?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Portfolio rebalancing is the process of realigning the weights of assets in your portfolio to maintain your original desired level of asset allocation. Over time, gains in one asset class can cause your portfolio to drift from its target mix.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                How often should I rebalance my portfolio?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Most financial advisors recommend rebalancing at least once a year or whenever an asset class drifts more than 5% from its target allocation. Annual or semi-annual rebalancing strikes a balance between staying on target and minimizing transaction costs.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What is a typical asset allocation?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>A common rule of thumb is to hold a percentage of bonds equal to your age, with the remainder in stocks. For example, a 40-year-old might hold 60% stocks, 35% bonds, and 5% cash. Your ideal allocation depends on your risk tolerance and time horizon.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Are there tax implications when rebalancing?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Yes. Selling appreciated assets in a taxable account can trigger capital gains taxes. To minimize taxes, consider rebalancing within tax-advantaged accounts (IRA, 401k) first, or use new contributions to bring allocations back in line.</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Related Calculators -->
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/investment-calculators/investment-diversification-calculator/" class="card card-link">
+                <h3>Investment Diversification Calculator</h3>
+                <p>Score your portfolio's diversification and identify concentration risk.</p>
+              </a>
+              <a href="/investment-calculators/portfolio-volatility-calculator/" class="card card-link">
+                <h3>Portfolio Volatility Calculator</h3>
+                <p>Estimate portfolio risk and standard deviation across your holdings.</p>
+              </a>
+              <a href="/investment-calculators/annualized-return-calculator/" class="card card-link">
+                <h3>Annualized Return Calculator</h3>
+                <p>Calculate the annualized return on any investment.</p>
+              </a>
+              <a href="/investment-calculators/investment-withdrawal-calculator/" class="card card-link">
+                <h3>Investment Withdrawal Calculator</h3>
+                <p>Project how long your portfolio will last under different withdrawal rates.</p>
+              </a>
+            </div>
+          </section>
+
+          <!-- Disclaimer -->
+          <div class="disclaimer">
+            <strong>Disclaimer:</strong> This calculator provides estimates for informational purposes only. Asset allocation recommendations may not be suitable for all investors. This is not financial advice. Consult a qualified financial professional before making investment decisions.
+          </div>
+
+          <!-- Ad Slot -->
+          <div class="ad-slot ad-slot-leaderboard"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Real Estate</h4>
+          <a href="/real-estate-calculators/">All Real Estate Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Investments</h4>
+          <a href="/investment-calculators/">All Investment Calculators</a>
+          <a href="/investment-calculators/dividend-yield-calculator/">Dividend Yield</a>
+          <a href="/investment-calculators/cagr-calculator/">CAGR Calculator</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateRebalancing() {
+      const totalValue = parseFloat(document.getElementById('portfolio-value').value);
+      const targetStocks = parseFloat(document.getElementById('target-stocks').value);
+      const targetBonds = parseFloat(document.getElementById('target-bonds').value);
+      const targetCash = parseFloat(document.getElementById('target-cash').value);
+      const currentStocks = parseFloat(document.getElementById('current-stocks').value);
+      const currentBonds = parseFloat(document.getElementById('current-bonds').value);
+      const currentCash = parseFloat(document.getElementById('current-cash').value);
+
+      if (isNaN(totalValue) || totalValue <= 0) {
+        alert('Please enter a valid total portfolio value.');
+        return;
+      }
+      const totalPct = (targetStocks || 0) + (targetBonds || 0) + (targetCash || 0);
+      if (Math.abs(totalPct - 100) > 0.5) {
+        alert('Target allocations must total 100%. Currently: ' + totalPct.toFixed(1) + '%');
+        return;
+      }
+
+      const targetStocksAmt = totalValue * (targetStocks / 100);
+      const targetBondsAmt = totalValue * (targetBonds / 100);
+      const targetCashAmt = totalValue * (targetCash / 100);
+
+      const stocksDiff = targetStocksAmt - (currentStocks || 0);
+      const bondsDiff = targetBondsAmt - (currentBonds || 0);
+      const cashDiff = targetCashAmt - (currentCash || 0);
+
+      const currentTotal = (currentStocks || 0) + (currentBonds || 0) + (currentCash || 0);
+      const currentStocksPct = currentTotal > 0 ? ((currentStocks || 0) / currentTotal) * 100 : 0;
+      const currentBondsPct = currentTotal > 0 ? ((currentBonds || 0) / currentTotal) * 100 : 0;
+      const currentCashPct = currentTotal > 0 ? ((currentCash || 0) / currentTotal) * 100 : 0;
+
+      const fmt = (v) => {
+        const abs = Math.abs(v);
+        return (v >= 0 ? 'Buy ' : 'Sell ') + CalcWise.formatCurrency(abs);
+      };
+
+      document.getElementById('result-total-value').textContent = CalcWise.formatCurrency(totalValue);
+      document.getElementById('result-stocks-action').textContent = fmt(stocksDiff);
+      document.getElementById('result-bonds-action').textContent = fmt(bondsDiff);
+      document.getElementById('result-cash-action').textContent = fmt(cashDiff);
+      document.getElementById('result-current-stocks-pct').textContent = CalcWise.formatPercent(currentStocksPct) + ' → ' + CalcWise.formatPercent(targetStocks);
+      document.getElementById('result-current-bonds-pct').textContent = CalcWise.formatPercent(currentBondsPct) + ' → ' + CalcWise.formatPercent(targetBonds);
+      document.getElementById('result-current-cash-pct').textContent = CalcWise.formatPercent(currentCashPct) + ' → ' + CalcWise.formatPercent(targetCash);
+      document.getElementById('rebalancing-results').classList.remove('hidden');
+    }
+
+    function resetRebalancing() {
+      document.getElementById('rebalancing-form').reset();
+      document.getElementById('rebalancing-results').classList.add('hidden');
+    }
+  </script>
+</body>
+</html>

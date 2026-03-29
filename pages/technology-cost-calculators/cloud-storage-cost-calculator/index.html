@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cloud Storage Cost Calculator | CalcWise</title>
+  <meta name="description" content="Compare cloud storage costs across AWS S3, Google Cloud Storage, Azure Blob, and Dropbox. Calculate monthly and annual storage costs with redundancy options.">
+  <link rel="canonical" href="https://calcwise.io/technology-cost-calculators/cloud-storage-cost-calculator/">
+  <meta property="og:title" content="Cloud Storage Cost Calculator | CalcWise">
+  <meta property="og:description" content="Compare cloud storage costs across AWS S3, Google Cloud Storage, Azure Blob, and Dropbox.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcwise.io/technology-cost-calculators/cloud-storage-cost-calculator/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Cloud Storage Cost Calculator | CalcWise">
+  <meta name="twitter:description" content="Compare cloud storage costs across AWS S3, Google Cloud Storage, Azure Blob, and Dropbox.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/"},
+      {"@type": "ListItem", "position": 2, "name": "Technology Cost Calculators", "item": "https://calcwise.io/technology-cost-calculators/"},
+      {"@type": "ListItem", "position": 3, "name": "Cloud Storage Cost Calculator"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How is cloud storage pricing calculated?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Cloud storage is typically billed per GB per month. Providers charge differently based on storage class (standard, infrequent access, archive), data egress fees, and the number of API requests made against stored objects."}
+      },
+      {
+        "@type": "Question",
+        "name": "What does redundancy level mean in cloud storage?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Redundancy refers to how many copies of your data are stored and where. Locally Redundant Storage (LRS) keeps 3 copies in one location. Zone Redundant Storage (ZRS) spreads copies across availability zones. Geo-Redundant Storage (GRS) replicates data to a secondary region for disaster recovery. Higher redundancy costs more but provides better durability and availability."}
+      },
+      {
+        "@type": "Question",
+        "name": "Which cloud storage provider is cheapest?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Pricing varies by region, storage class, and usage patterns. AWS S3 and Google Cloud Storage are competitive for standard storage at roughly $0.023/GB/month. Azure Blob Storage is similar. Backblaze B2 offers lower prices for some tiers. The cheapest provider depends on your egress volume, API usage, and geographic requirements."}
+      },
+      {
+        "@type": "Question",
+        "name": "Are there hidden costs in cloud storage?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Yes. Beyond per-GB storage fees, providers charge for data egress (downloading data), API operations (GET, PUT, LIST requests), data transfer between regions, and early deletion from archive tiers. These ancillary costs can equal or exceed storage costs for data-intensive workloads."}
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="logo">
+        <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav">
+        <a href="/">Home</a>
+        <a href="/pages/real-estate-calculators/">Real Estate</a>
+        <a href="/pages/financial-calculators/">Finance</a>
+        <a href="/pages/business-calculators/">Business</a>
+        <a href="/about/">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav">
+      <a href="/">Home</a>
+      <a href="/pages/real-estate-calculators/">Real Estate</a>
+      <a href="/pages/financial-calculators/">Finance</a>
+      <a href="/pages/business-calculators/">Business</a>
+      <a href="/about/">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/pages/technology-cost-calculators/">Technology Cost Calculators</a></li>
+          <li><span aria-current="page">Cloud Storage Cost Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="calc-page-layout">
+          <div class="calc-page-main">
+            <h1>Cloud Storage Cost Calculator</h1>
+            <p class="subtitle" style="font-size:var(--text-lg);color:var(--color-gray-600);margin-bottom:var(--space-8);line-height:var(--leading-relaxed);">Estimate and compare monthly cloud storage costs across AWS S3, Google Cloud Storage, Azure Blob Storage, and Dropbox Business. Enter your data volume and redundancy requirements to see a full cost breakdown and provider comparison.</p>
+
+            <div class="calc-container">
+              <div class="calc-header">
+                <h2>Cloud Storage Cost Calculator</h2>
+                <p>Compare storage costs across major providers</p>
+              </div>
+              <div class="calc-body">
+                <form id="cloud-storage-form" onsubmit="return false;">
+                  <div class="form-group">
+                    <label class="form-label" for="storage-amount">Amount of Data to Store</label>
+                    <div class="input-suffix">
+                      <input type="number" id="storage-amount" class="form-input" placeholder="500" min="1" step="any" required>
+                      <span class="suffix" id="storage-unit-display">GB</span>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="storage-unit">Unit</label>
+                    <select id="storage-unit" class="form-input">
+                      <option value="gb">GB (Gigabytes)</option>
+                      <option value="tb">TB (Terabytes)</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="provider">Primary Provider</label>
+                    <select id="provider" class="form-input">
+                      <option value="all">Compare All Providers</option>
+                      <option value="aws">AWS S3</option>
+                      <option value="gcs">Google Cloud Storage</option>
+                      <option value="azure">Azure Blob Storage</option>
+                      <option value="dropbox">Dropbox Business</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="redundancy">Redundancy Level</label>
+                    <select id="redundancy" class="form-input">
+                      <option value="standard">Standard (LRS – 3 copies, single region)</option>
+                      <option value="zone">Zone Redundant (ZRS – across availability zones)</option>
+                      <option value="geo">Geo-Redundant (GRS – two regions)</option>
+                    </select>
+                  </div>
+
+                  <div class="calc-actions">
+                    <button type="button" class="btn btn-calculate btn-full" onclick="calculateCloudStorage()">Calculate Cost</button>
+                    <button type="button" class="btn btn-reset" onclick="resetCloudStorage()">Reset</button>
+                  </div>
+                </form>
+
+                <div id="results" class="calc-results hidden">
+                  <div class="result-primary">
+                    <div class="result-label">Estimated Monthly Cost</div>
+                    <div class="result-value" id="result-monthly">$0.00</div>
+                  </div>
+                  <div class="result-grid result-grid-3">
+                    <div class="result-item">
+                      <div class="result-label">Annual Cost</div>
+                      <div class="result-value" id="result-annual">$0.00</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Storage (GB)</div>
+                      <div class="result-value" id="result-storage-gb">0 GB</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Rate per GB/mo</div>
+                      <div class="result-value" id="result-rate">$0.000</div>
+                    </div>
+                  </div>
+                  <div id="comparison-table-wrap" style="margin-top:var(--space-6);">
+                    <h3 style="font-size:var(--text-base);font-weight:var(--font-semibold);margin-bottom:var(--space-3);">Provider Comparison</h3>
+                    <div style="overflow-x:auto;">
+                      <table style="width:100%;border-collapse:collapse;font-size:var(--text-sm);">
+                        <thead>
+                          <tr style="background:var(--color-gray-100);">
+                            <th style="padding:var(--space-2) var(--space-3);text-align:left;border-bottom:2px solid var(--color-gray-200);">Provider</th>
+                            <th style="padding:var(--space-2) var(--space-3);text-align:right;border-bottom:2px solid var(--color-gray-200);">$/GB/mo</th>
+                            <th style="padding:var(--space-2) var(--space-3);text-align:right;border-bottom:2px solid var(--color-gray-200);">Monthly</th>
+                            <th style="padding:var(--space-2) var(--space-3);text-align:right;border-bottom:2px solid var(--color-gray-200);">Annual</th>
+                          </tr>
+                        </thead>
+                        <tbody id="comparison-tbody"></tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="ad-slot ad-slot-leaderboard"></div>
+
+            <section class="content-section">
+              <h2>Pricing Methodology</h2>
+              <div class="formula-box">
+                <div class="formula-label">Monthly Storage Cost</div>
+                Monthly Cost = Storage (GB) × Rate per GB per Month × Redundancy Multiplier
+              </div>
+              <div class="formula-box">
+                <div class="formula-label">Annual Cost</div>
+                Annual Cost = Monthly Cost × 12
+              </div>
+              <p style="margin-top:var(--space-4);">Provider rates used (standard tier, US East region, approximate as of 2026):</p>
+              <ul>
+                <li><strong>AWS S3 Standard:</strong> $0.023/GB/mo (LRS), $0.026/GB/mo (ZRS), $0.036/GB/mo (GRS equivalent)</li>
+                <li><strong>Google Cloud Storage:</strong> $0.020/GB/mo (LRS), $0.025/GB/mo (ZRS), $0.034/GB/mo (Multi-Region)</li>
+                <li><strong>Azure Blob Storage:</strong> $0.018/GB/mo (LRS), $0.023/GB/mo (ZRS), $0.035/GB/mo (GRS)</li>
+                <li><strong>Dropbox Business:</strong> Fixed plan pricing — Pro (2TB, $16.58/mo), Business (unlimited, $15/user/mo est.)</li>
+              </ul>
+              <p style="margin-top:var(--space-3);font-size:var(--text-sm);color:var(--color-gray-600);">Note: These are storage-only estimates. Egress fees, API request costs, and data transfer charges are not included and can significantly increase total costs for high-throughput workloads.</p>
+            </section>
+
+            <section class="content-section">
+              <h2>How to Use This Calculator</h2>
+              <ol>
+                <li>Enter the <strong>amount of data</strong> you need to store and select GB or TB.</li>
+                <li>Choose a <strong>provider</strong> or select "Compare All Providers" for a side-by-side table.</li>
+                <li>Select your required <strong>redundancy level</strong> — higher redundancy means better durability at higher cost.</li>
+                <li>Click <strong>Calculate Cost</strong> to see monthly and annual estimates with a full comparison table.</li>
+              </ol>
+            </section>
+
+            <section class="content-section">
+              <h2>Example Scenario</h2>
+              <p>A software startup needs to store <strong>10 TB</strong> of user-uploaded media files with zone redundancy:</p>
+              <ul>
+                <li>Storage: 10 TB = 10,240 GB</li>
+                <li>AWS S3 ZRS: 10,240 GB × $0.026 = <strong>$266.24/mo</strong> ($3,194.88/yr)</li>
+                <li>Google Cloud ZRS: 10,240 GB × $0.025 = <strong>$256.00/mo</strong> ($3,072.00/yr)</li>
+                <li>Azure ZRS: 10,240 GB × $0.023 = <strong>$235.52/mo</strong> ($2,826.24/yr)</li>
+              </ul>
+              <p>In this case, Azure Blob Storage offers the lowest price for zone-redundant storage, saving ~$370/year compared to AWS S3.</p>
+            </section>
+
+            <section class="faq-section">
+              <h2>Frequently Asked Questions</h2>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  How is cloud storage pricing calculated?
+                  <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                </button>
+                <div class="faq-answer">
+                  <p>Cloud storage is billed per GB per month. Providers charge differently based on storage class, data egress fees, and API request volume. This calculator covers storage costs only.</p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  What does redundancy level mean?
+                  <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                </button>
+                <div class="faq-answer">
+                  <p>Redundancy defines how many copies of your data are stored and where. LRS keeps 3 copies in one datacenter. ZRS spreads copies across availability zones. GRS replicates to a secondary region for disaster recovery. Higher redundancy costs more but provides better protection.</p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  Which cloud storage provider is cheapest?
+                  <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                </button>
+                <div class="faq-answer">
+                  <p>Azure Blob Storage tends to have the lowest per-GB storage rate for standard tiers. However, total cost depends on egress patterns, API call volume, and your region. Always calculate total cost of ownership rather than just storage rate.</p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  Are there hidden costs in cloud storage?
+                  <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                </button>
+                <div class="faq-answer">
+                  <p>Yes. Beyond per-GB storage fees, providers charge for data egress (downloads), API operations (GET, PUT, LIST), inter-region transfers, and early deletion from archive tiers. These can equal or exceed storage costs for data-heavy applications.</p>
+                </div>
+              </div>
+            </section>
+
+            <section class="related-calculators">
+              <h2>Related Calculators</h2>
+              <div class="grid grid-3">
+                <a href="/pages/technology-cost-calculators/saas-subscription-cost-calculator/" class="card card-link">
+                  <h3>SaaS Subscription Cost Calculator</h3>
+                  <p>Total your SaaS tool spending and find annual vs monthly savings.</p>
+                </a>
+                <a href="/pages/technology-cost-calculators/web-hosting-cost-calculator/" class="card card-link">
+                  <h3>Web Hosting Cost Calculator</h3>
+                  <p>Estimate hosting costs by tier: shared, VPS, dedicated, or cloud.</p>
+                </a>
+                <a href="/pages/technology-cost-calculators/software-licensing-cost-calculator/" class="card card-link">
+                  <h3>Software Licensing Cost Calculator</h3>
+                  <p>Compare perpetual vs subscription licensing costs over time.</p>
+                </a>
+                <a href="/pages/technology-cost-calculators/data-usage-calculator/" class="card card-link">
+                  <h3>Data Usage Calculator</h3>
+                  <p>Estimate your monthly internet data consumption.</p>
+                </a>
+                <a href="/pages/business-calculators/pricing-calculator/" class="card card-link">
+                  <h3>Pricing Calculator</h3>
+                  <p>Calculate optimal product pricing from cost and margin targets.</p>
+                </a>
+              </div>
+            </section>
+
+            <div class="disclaimer">
+              <strong>Disclaimer:</strong> Pricing estimates are based on publicly available rates as of early 2026 and are subject to change. This calculator covers storage costs only and does not include egress, API, or data transfer fees. Always verify current pricing directly with your cloud provider before making purchasing decisions.
+            </div>
+          </div>
+
+          <aside class="calc-page-sidebar">
+            <div class="ad-slot ad-slot-rectangle"></div>
+            <div class="sidebar-card">
+              <h3>Technology Cost Calculators</h3>
+              <a href="/pages/technology-cost-calculators/saas-subscription-cost-calculator/">SaaS Subscription Cost</a>
+              <a href="/pages/technology-cost-calculators/web-hosting-cost-calculator/">Web Hosting Cost</a>
+              <a href="/pages/technology-cost-calculators/software-licensing-cost-calculator/">Software Licensing Cost</a>
+              <a href="/pages/technology-cost-calculators/data-usage-calculator/">Data Usage</a>
+              <a href="/pages/technology-cost-calculators/internet-speed-requirement-calculator/">Internet Speed Requirement</a>
+              <a href="/pages/technology-cost-calculators/streaming-service-cost-calculator/">Streaming Service Cost</a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free online calculators for business, finance, tax, and investment decisions.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Calculators</h4>
+          <a href="/pages/business-calculators/">Business</a>
+          <a href="/pages/financial-calculators/">Financial</a>
+          <a href="/pages/tax-calculators/">Tax</a>
+          <a href="/pages/investment-calculators/">Investment</a>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <a href="/about/">About</a>
+          <a href="/blog/">Blog</a>
+          <a href="/contact/">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="/privacy/">Privacy Policy</a>
+          <a href="/terms/">Terms of Service</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/privacy/">Privacy</a>
+          <a href="/terms/">Terms</a>
+          <a href="/contact/">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    // Rates: [LRS, ZRS, GRS] per GB/month
+    const PROVIDER_RATES = {
+      aws:     { name: 'AWS S3',                 rates: [0.023, 0.026, 0.036] },
+      gcs:     { name: 'Google Cloud Storage',   rates: [0.020, 0.025, 0.034] },
+      azure:   { name: 'Azure Blob Storage',     rates: [0.018, 0.023, 0.035] },
+      dropbox: { name: 'Dropbox Business',       rates: [0.008, 0.008, 0.008] }
+    };
+    const REDUNDANCY_INDEX = { standard: 0, zone: 1, geo: 2 };
+
+    document.getElementById('storage-unit').addEventListener('change', function() {
+      document.getElementById('storage-unit-display').textContent = this.value.toUpperCase();
+    });
+
+    function calculateCloudStorage() {
+      const amount = CalcWise.parseNumber(document.getElementById('storage-amount').value);
+      const unit = document.getElementById('storage-unit').value;
+      const provider = document.getElementById('provider').value;
+      const redundancy = document.getElementById('redundancy').value;
+
+      if (amount <= 0) { alert('Please enter a valid storage amount.'); return; }
+
+      const storageGB = unit === 'tb' ? amount * 1024 : amount;
+      const rIdx = REDUNDANCY_INDEX[redundancy];
+
+      // Primary provider rate
+      const primaryKey = provider === 'all' ? 'aws' : provider;
+      const primaryRate = PROVIDER_RATES[primaryKey].rates[rIdx];
+      const monthly = storageGB * primaryRate;
+      const annual = monthly * 12;
+
+      CalcWise.setText('result-monthly', CalcWise.formatCurrency(monthly));
+      CalcWise.setText('result-annual', CalcWise.formatCurrency(annual));
+      CalcWise.setText('result-storage-gb', CalcWise.formatNumber(storageGB) + ' GB');
+      CalcWise.setText('result-rate', '$' + primaryRate.toFixed(4));
+
+      // Build comparison table
+      const tbody = document.getElementById('comparison-tbody');
+      const rows = Object.entries(PROVIDER_RATES).map(([key, p]) => {
+        const rate = p.rates[rIdx];
+        let adjustedRate = rate;
+        // Dropbox: flat plan, show note
+        let rateLabel = '$' + rate.toFixed(4);
+        if (key === 'dropbox') {
+          // Dropbox charges per plan; estimate $0.008/GB for comparison
+          rateLabel = '~$' + rate.toFixed(4);
+        }
+        const m = storageGB * adjustedRate;
+        const a = m * 12;
+        const isSelected = provider === key || provider === 'all';
+        return `<tr style="background:${isSelected && provider !== 'all' ? 'var(--color-primary-light, #eff6ff)' : 'transparent'}">
+          <td style="padding:var(--space-2) var(--space-3);border-bottom:1px solid var(--color-gray-100);">${p.name}</td>
+          <td style="padding:var(--space-2) var(--space-3);text-align:right;border-bottom:1px solid var(--color-gray-100);">${rateLabel}</td>
+          <td style="padding:var(--space-2) var(--space-3);text-align:right;border-bottom:1px solid var(--color-gray-100);font-weight:var(--font-semibold);">${CalcWise.formatCurrency(m)}</td>
+          <td style="padding:var(--space-2) var(--space-3);text-align:right;border-bottom:1px solid var(--color-gray-100);">${CalcWise.formatCurrency(a)}</td>
+        </tr>`;
+      });
+      tbody.innerHTML = rows.join('');
+
+      CalcWise.showResults('results');
+    }
+
+    function resetCloudStorage() {
+      document.getElementById('cloud-storage-form').reset();
+      document.getElementById('storage-unit-display').textContent = 'GB';
+      CalcWise.hideResults('results');
+    }
+  </script>
+</body>
+</html>

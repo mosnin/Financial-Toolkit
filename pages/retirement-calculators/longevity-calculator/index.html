@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Longevity Calculator - Estimate Your Life Expectancy | CalcWise</title>
+  <meta name="description" content="Free longevity calculator to estimate your life expectancy based on age, lifestyle, family history, and gender. Plan your retirement horizon with confidence.">
+  <meta name="keywords" content="longevity calculator, life expectancy calculator, retirement planning horizon, how long will I live, retirement years calculator">
+  <link rel="canonical" href="https://calcwise.io/retirement-calculators/longevity-calculator/">
+
+  <meta property="og:title" content="Longevity Calculator - Estimate Your Life Expectancy">
+  <meta property="og:description" content="Estimate your life expectancy based on lifestyle, family history, and health factors to plan your retirement horizon.">
+  <meta property="og:url" content="https://calcwise.io/retirement-calculators/longevity-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Longevity Calculator - Estimate Your Life Expectancy">
+  <meta name="twitter:description" content="Estimate your life expectancy based on lifestyle, family history, and health factors to plan your retirement horizon.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Retirement Calculators", "item": "https://calcwise.io/retirement-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "Longevity Calculator", "item": "https://calcwise.io/retirement-calculators/longevity-calculator/" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Why does longevity matter for retirement planning?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Running out of money is one of the biggest retirement risks. If you underestimate how long you will live, you may underfund your retirement. Planning to age 90 or 95 is a conservative and common approach — especially if you are healthy and have long-lived relatives." }
+      },
+      {
+        "@type": "Question",
+        "name": "How accurate are longevity calculators?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Longevity calculators provide statistical estimates based on population averages and known risk factors. They cannot predict individual outcomes. Use the result as a planning horizon, not a precise prediction. Building in a cushion of several extra years is prudent." }
+      },
+      {
+        "@type": "Question",
+        "name": "Does exercise really extend life expectancy?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Research consistently shows that regular moderate exercise is associated with 3–7 additional years of life expectancy compared to sedentary lifestyles. Even modest activity like 30 minutes of walking most days provides significant longevity benefits." }
+      },
+      {
+        "@type": "Question",
+        "name": "How does smoking affect retirement planning?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Smokers have on average 10 fewer years of life expectancy compared to non-smokers. This dramatically shortens the retirement planning horizon, though it also means potentially smaller required savings. Quitting smoking at any age provides meaningful longevity benefits." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/retirement-calculators/" aria-current="page">Retirement</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/retirement-calculators/">Retirement Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/retirement-calculators/">Retirement Calculators</a></li>
+          <li><span aria-current="page">Longevity Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="article-content">
+          <h1>Longevity Calculator</h1>
+          <p>Estimate your life expectancy based on key health and lifestyle factors to establish a realistic retirement planning horizon. Knowing how long you might live helps you avoid either underfunding (running out of money) or overly restricting your spending during retirement.</p>
+
+          <div class="calc-container mt-8">
+            <div class="calc-header">
+              <h2>Estimate Your Life Expectancy</h2>
+              <p>Answer the questions below for a personalized estimate</p>
+            </div>
+            <div class="calc-body">
+              <form id="longevity-form" onsubmit="return false;">
+                <div class="form-group">
+                  <label class="form-label" for="current-age">Current Age</label>
+                  <input type="number" id="current-age" class="form-input" placeholder="45" min="18" max="90" step="1" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="gender">Gender</label>
+                  <select id="gender" class="form-input" required>
+                    <option value="">Select gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="exercise">Exercise Level</label>
+                  <select id="exercise" class="form-input" required>
+                    <option value="">Select exercise level</option>
+                    <option value="none">Sedentary (little or no exercise)</option>
+                    <option value="light">Light (1-3 days/week)</option>
+                    <option value="moderate">Moderate (3-5 days/week)</option>
+                    <option value="active">Very Active (6-7 days/week)</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="diet">Diet Quality</label>
+                  <select id="diet" class="form-input" required>
+                    <option value="">Select diet quality</option>
+                    <option value="poor">Poor (processed foods, little vegetables)</option>
+                    <option value="average">Average (mixed diet)</option>
+                    <option value="good">Good (mostly whole foods)</option>
+                    <option value="excellent">Excellent (plant-rich, Mediterranean-style)</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="smoking">Smoking Status</label>
+                  <select id="smoking" class="form-input" required>
+                    <option value="">Select smoking status</option>
+                    <option value="never">Never smoked</option>
+                    <option value="former">Former smoker (quit 5+ years ago)</option>
+                    <option value="recent">Recent quitter (quit &lt; 5 years ago)</option>
+                    <option value="current">Current smoker</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="family-history">Family History of Major Disease</label>
+                  <select id="family-history" class="form-input" required>
+                    <option value="">Select family history</option>
+                    <option value="none">No significant history</option>
+                    <option value="some">Some history (1 parent with heart disease/cancer before 75)</option>
+                    <option value="significant">Significant history (both parents or early onset)</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="retirement-age-input">Expected Retirement Age</label>
+                  <input type="number" id="retirement-age-input" class="form-input" placeholder="65" min="40" max="80" step="1" required>
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calcLongevity()">Estimate Longevity</button>
+                  <button type="button" class="btn btn-reset" onclick="resetCalc()">Reset</button>
+                </div>
+              </form>
+
+              <div id="calc-results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">Estimated Longevity Age</div>
+                  <div class="result-value" id="result-longevity-age"></div>
+                </div>
+                <div class="result-grid">
+                  <div class="result-item">
+                    <div class="result-label">Years in Retirement</div>
+                    <div class="result-value" id="result-years-retired"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Planning Horizon</div>
+                    <div class="result-value" id="result-planning-horizon"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Conservative Estimate</div>
+                    <div class="result-value" id="result-conservative"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <section class="content-section">
+            <h2>Longevity Estimation Method</h2>
+            <p>The calculator starts from actuarial baselines and applies lifestyle adjustments based on published longevity research:</p>
+            <div class="formula-box">
+              <div class="formula-label">Base Life Expectancy (US Actuarial Average)</div>
+              Male base: 76 years | Female base: 81 years
+            </div>
+            <div class="formula-box">
+              <div class="formula-label">Lifestyle Adjustments</div>
+              Exercise: -3 (sedentary) to +4 (very active) years
+              Diet: -2 (poor) to +3 (excellent) years
+              Smoking: -10 (current) to 0 (never) years
+              Family history: -4 (significant) to 0 (none) years
+            </div>
+            <p>The planning horizon adds a 5-year safety buffer to the estimated longevity age to guard against outliving your savings.</p>
+          </section>
+
+          <section class="content-section">
+            <h2>How to Use This Longevity Calculator</h2>
+            <ol>
+              <li><strong>Enter your current age</strong> and select your gender for the actuarial baseline.</li>
+              <li><strong>Select your exercise level</strong> - be honest about your typical weekly activity.</li>
+              <li><strong>Select your diet quality</strong> - consider your average eating habits over the past year.</li>
+              <li><strong>Select your smoking status</strong> - this is one of the largest single factors.</li>
+              <li><strong>Select family history</strong> - major diseases in close relatives before age 75 matter most.</li>
+              <li><strong>Enter your expected retirement age</strong> to calculate your years in retirement.</li>
+              <li><strong>Click "Estimate Longevity"</strong> to see your estimated life expectancy and planning horizon.</li>
+            </ol>
+          </section>
+
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>A 45-year-old woman who exercises moderately, eats a good diet, never smoked, and has no significant family history starts with a base of 81 years. Adjustments for moderate exercise (+2) and good diet (+1) bring her estimate to 84. Her conservative planning horizon is 89. If she retires at 65, she should plan for 24 years of retirement expenses and build her savings accordingly.</p>
+          </section>
+
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Why does longevity matter for retirement planning?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Running out of money is one of the biggest retirement risks. If you underestimate how long you will live, you may underfund your retirement. Planning to age 90 or 95 is a conservative and common approach — especially if you are healthy and have long-lived relatives.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                How accurate are longevity calculators?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Longevity calculators provide statistical estimates based on population averages and known risk factors. They cannot predict individual outcomes. Use the result as a planning horizon, not a precise prediction, and build in a cushion of several extra years.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Does exercise really extend life expectancy?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Yes. Research consistently shows that regular moderate exercise is associated with 3–7 additional years of life expectancy compared to sedentary lifestyles. Even modest activity like 30 minutes of walking most days provides significant longevity benefits.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                How does smoking affect retirement planning?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Smokers have on average 10 fewer years of life expectancy compared to non-smokers. This dramatically shortens the retirement planning horizon. Quitting smoking at any age provides meaningful longevity benefits.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/retirement-calculators/early-retirement-calculator/" class="card card-link">
+                <h3>Early Retirement Calculator</h3>
+                <p>Check if your savings can support retiring before traditional age.</p>
+              </a>
+              <a href="/retirement-calculators/retirement-nest-egg-calculator/" class="card card-link">
+                <h3>Nest Egg Calculator</h3>
+                <p>Calculate the savings you need based on your retirement horizon.</p>
+              </a>
+              <a href="/retirement-calculators/retirement-withdrawal-rate-calculator/" class="card card-link">
+                <h3>Withdrawal Rate Calculator</h3>
+                <p>Find a sustainable spending rate for your retirement length.</p>
+              </a>
+              <a href="/retirement-calculators/retirement-healthcare-cost-estimator/" class="card card-link">
+                <h3>Healthcare Cost Estimator</h3>
+                <p>Estimate total healthcare costs over your retirement years.</p>
+              </a>
+            </div>
+          </section>
+
+          <div class="disclaimer">
+            <strong>Disclaimer:</strong> This calculator provides statistical estimates for planning purposes only. Life expectancy depends on many factors that cannot be fully captured in a simple model. This is not medical advice. Consult your physician for health guidance and a financial advisor for retirement planning.
+          </div>
+
+          <div class="ad-slot ad-slot-leaderboard"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Real Estate</h4>
+          <a href="/real-estate-calculators/">All Real Estate Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Retirement</h4>
+          <a href="/retirement-calculators/">All Retirement Calculators</a>
+          <a href="/retirement-calculators/retirement-age-calculator/">Retirement Age</a>
+          <a href="/retirement-calculators/401k-match-calculator/">401(k) Match</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calcLongevity() {
+      const age = parseInt(document.getElementById('current-age').value);
+      const gender = document.getElementById('gender').value;
+      const exercise = document.getElementById('exercise').value;
+      const diet = document.getElementById('diet').value;
+      const smoking = document.getElementById('smoking').value;
+      const familyHistory = document.getElementById('family-history').value;
+      const retirementAge = parseInt(document.getElementById('retirement-age-input').value);
+
+      if (!age || !gender || !exercise || !diet || !smoking || !familyHistory || !retirementAge) return;
+
+      // Actuarial base
+      let base = gender === 'female' ? 81 : 76;
+
+      // Exercise adjustments
+      const exerciseAdj = { none: -3, light: 0, moderate: 2, active: 4 };
+      // Diet adjustments
+      const dietAdj = { poor: -2, average: 0, good: 1, excellent: 3 };
+      // Smoking adjustments
+      const smokingAdj = { never: 0, former: -2, recent: -5, current: -10 };
+      // Family history adjustments
+      const familyAdj = { none: 0, some: -2, significant: -4 };
+
+      let estimate = base + exerciseAdj[exercise] + dietAdj[diet] + smokingAdj[smoking] + familyAdj[familyHistory];
+      // Can't go below current age
+      estimate = Math.max(estimate, age + 1);
+
+      const yearsRetired = Math.max(0, estimate - retirementAge);
+      const conservativeEstimate = estimate + 5;
+      const planningHorizon = conservativeEstimate - retirementAge;
+
+      CalcWise.setText('result-longevity-age', 'Age ' + estimate);
+      CalcWise.setText('result-years-retired', yearsRetired + ' years');
+      CalcWise.setText('result-conservative', 'Age ' + conservativeEstimate);
+      CalcWise.setText('result-planning-horizon', planningHorizon + ' years');
+
+      CalcWise.showResults('calc-results');
+    }
+
+    function resetCalc() {
+      document.getElementById('longevity-form').reset();
+      CalcWise.hideResults('calc-results');
+    }
+  </script>
+</body>
+</html>

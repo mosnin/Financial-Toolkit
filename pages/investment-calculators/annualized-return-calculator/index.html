@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Annualized Return Calculator | CalcWise</title>
+  <meta name="description" content="Calculate the annualized return on any investment. Enter beginning value, ending value, and years held to see total return, annualized return, and gain or loss.">
+  <meta name="keywords" content="annualized return calculator, investment return calculator, annual return, total return, gain loss calculator">
+  <link rel="canonical" href="https://calcwise.io/investment-calculators/annualized-return-calculator/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Annualized Return Calculator | CalcWise">
+  <meta property="og:description" content="Calculate the annualized return on any investment. Enter beginning value, ending value, and years held.">
+  <meta property="og:url" content="https://calcwise.io/investment-calculators/annualized-return-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Annualized Return Calculator | CalcWise">
+  <meta name="twitter:description" content="Calculate the annualized return on any investment. Enter beginning value, ending value, and years held.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <!-- BreadcrumbList Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Investment Calculators", "item": "https://calcwise.io/investment-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "Annualized Return Calculator", "item": "https://calcwise.io/investment-calculators/annualized-return-calculator/" }
+    ]
+  }
+  </script>
+
+  <!-- FAQPage Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is annualized return?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Annualized return is the geometric average rate of return per year that an investment earns over a given period. It accounts for compounding and normalizes returns to a one-year basis for easy comparison." }
+      },
+      {
+        "@type": "Question",
+        "name": "How is annualized return different from total return?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Total return is the overall percentage gain or loss over the entire holding period. Annualized return converts that total return into an equivalent yearly rate using the number of years held." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is a good annualized return?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The S&P 500 has historically averaged around 10% annualized return before inflation. A return consistently above 7–10% per year is generally considered strong for a diversified portfolio." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can annualized return be negative?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. If the ending value is less than the beginning value, the annualized return will be negative, indicating an average annual loss over the holding period." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/investment-calculators/" aria-current="page">Investments</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/investment-calculators/">Investment Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/investment-calculators/">Investment Calculators</a></li>
+          <li><span aria-current="page">Annualized Return Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="article-content">
+          <h1>Annualized Return Calculator</h1>
+          <p>Calculate the annualized return on any investment by entering the beginning value, ending value, and the number of years the investment was held. This calculator shows your total return percentage, yearly annualized return, and the dollar gain or loss.</p>
+
+          <div class="calc-container mt-8">
+            <div class="calc-header">
+              <h2>Calculate Annualized Return</h2>
+              <p>Enter your investment values and holding period below</p>
+            </div>
+            <div class="calc-body">
+              <form id="annualized-return-form" onsubmit="return false;">
+                <div class="form-group">
+                  <label class="form-label" for="beginning-value">Beginning Value</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="beginning-value" class="form-input" placeholder="10000.00" min="0.01" step="0.01" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="ending-value">Ending Value</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="ending-value" class="form-input" placeholder="18000.00" min="0.01" step="0.01" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="years-held">Years Held</label>
+                  <input type="number" id="years-held" class="form-input" placeholder="5" min="0.01" step="0.01" required>
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calculateAnnualizedReturn()">Calculate Return</button>
+                  <button type="button" class="btn btn-reset" onclick="resetAnnualizedReturn()">Reset</button>
+                </div>
+              </form>
+
+              <div id="annualized-return-results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">Annualized Return</div>
+                  <div class="result-value" id="result-annualized-return"></div>
+                </div>
+                <div class="result-grid">
+                  <div class="result-item">
+                    <div class="result-label">Total Return</div>
+                    <div class="result-value" id="result-total-return"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Gain / Loss</div>
+                    <div class="result-value" id="result-gain-loss"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Formula Section -->
+          <section class="content-section">
+            <h2>Annualized Return Formula</h2>
+            <p>The annualized return formula uses the geometric mean to express investment performance as a consistent yearly rate:</p>
+            <div class="formula-box">
+              <div class="formula-label">Annualized Return Formula</div>
+              Annualized Return = (Ending Value / Beginning Value)^(1 / Years) - 1
+            </div>
+            <p>The <strong>total return</strong> measures overall growth without adjusting for time:</p>
+            <div class="formula-box">
+              <div class="formula-label">Total Return Formula</div>
+              Total Return = (Ending Value - Beginning Value) / Beginning Value × 100
+            </div>
+          </section>
+
+          <!-- How to Use -->
+          <section class="content-section">
+            <h2>How to Use This Annualized Return Calculator</h2>
+            <ol>
+              <li><strong>Enter the beginning value</strong> — the amount invested or the starting portfolio value.</li>
+              <li><strong>Enter the ending value</strong> — the current or final value of the investment.</li>
+              <li><strong>Enter the years held</strong> — the number of years between the start and end dates (decimals are accepted).</li>
+              <li><strong>Click "Calculate Return"</strong> to see your annualized return, total return, and dollar gain or loss.</li>
+            </ol>
+          </section>
+
+          <!-- Example Scenario -->
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>Suppose you invested $10,000 and your portfolio grew to $18,000 over 5 years. The total return would be 80%, but the annualized return would be approximately 12.47% per year. This means your investment compounded at roughly 12.47% each year to reach that final value, and your dollar gain was $8,000.</p>
+          </section>
+
+          <!-- FAQ Section -->
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What is annualized return?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Annualized return is the geometric average rate of return per year that an investment earns over a given period. It accounts for compounding and normalizes returns to a one-year basis for easy comparison.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                How is annualized return different from total return?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Total return is the overall percentage gain or loss over the entire holding period. Annualized return converts that total return into an equivalent yearly rate using the number of years held.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What is a good annualized return?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>The S&P 500 has historically averaged around 10% annualized return before inflation. A return consistently above 7–10% per year is generally considered strong for a diversified portfolio.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Can annualized return be negative?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Yes. If the ending value is less than the beginning value, the annualized return will be negative, indicating an average annual loss over the holding period.</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Related Calculators -->
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/investment-calculators/cagr-calculator/" class="card card-link">
+                <h3>CAGR Calculator</h3>
+                <p>Compute compound annual growth rate for any investment period.</p>
+              </a>
+              <a href="/investment-calculators/dividend-yield-calculator/" class="card card-link">
+                <h3>Dividend Yield Calculator</h3>
+                <p>Calculate dividend yield and effective yield from stock data.</p>
+              </a>
+              <a href="/investment-calculators/etf-return-calculator/" class="card card-link">
+                <h3>ETF Return Calculator</h3>
+                <p>Project ETF returns net of expense ratios over time.</p>
+              </a>
+              <a href="/investment-calculators/mutual-fund-performance-calculator/" class="card card-link">
+                <h3>Mutual Fund Performance Calculator</h3>
+                <p>Measure total return and CAGR for mutual fund investments.</p>
+              </a>
+            </div>
+          </section>
+
+          <!-- Disclaimer -->
+          <div class="disclaimer">
+            <strong>Disclaimer:</strong> This calculator provides estimates for informational purposes only. Past investment returns do not guarantee future results. This is not financial advice. Consult a qualified financial professional before making investment decisions.
+          </div>
+
+          <!-- Ad Slot -->
+          <div class="ad-slot ad-slot-leaderboard"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Real Estate</h4>
+          <a href="/real-estate-calculators/">All Real Estate Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Investments</h4>
+          <a href="/investment-calculators/">All Investment Calculators</a>
+          <a href="/investment-calculators/cagr-calculator/">CAGR Calculator</a>
+          <a href="/investment-calculators/dividend-yield-calculator/">Dividend Yield</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateAnnualizedReturn() {
+      const beginVal = parseFloat(document.getElementById('beginning-value').value);
+      const endVal = parseFloat(document.getElementById('ending-value').value);
+      const years = parseFloat(document.getElementById('years-held').value);
+
+      if (!beginVal || !endVal || !years || beginVal <= 0 || endVal <= 0 || years <= 0) {
+        alert('Please enter valid positive values for all fields.');
+        return;
+      }
+
+      const annualizedReturn = (Math.pow(endVal / beginVal, 1 / years) - 1) * 100;
+      const totalReturn = ((endVal - beginVal) / beginVal) * 100;
+      const gainLoss = endVal - beginVal;
+
+      document.getElementById('result-annualized-return').textContent = CalcWise.formatPercent(annualizedReturn);
+      document.getElementById('result-total-return').textContent = CalcWise.formatPercent(totalReturn);
+      document.getElementById('result-gain-loss').textContent = CalcWise.formatCurrency(gainLoss);
+      document.getElementById('annualized-return-results').classList.remove('hidden');
+    }
+
+    function resetAnnualizedReturn() {
+      document.getElementById('annualized-return-form').reset();
+      document.getElementById('annualized-return-results').classList.add('hidden');
+    }
+  </script>
+</body>
+</html>

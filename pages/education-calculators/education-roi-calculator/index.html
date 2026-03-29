@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Education ROI Calculator - Is Your Degree Worth It? | CalcWise</title>
+  <meta name="description" content="Free education ROI calculator. Calculate the lifetime earnings gain, ROI percentage, breakeven years, and net financial benefit of your college degree.">
+  <meta name="keywords" content="education ROI calculator, is college worth it, degree ROI, lifetime earnings calculator, college return on investment">
+  <link rel="canonical" href="https://calcwise.io/education-calculators/education-roi-calculator/">
+
+  <meta property="og:title" content="Education ROI Calculator - Is Your Degree Worth It?">
+  <meta property="og:description" content="Calculate the lifetime earnings gain, ROI %, breakeven years, and net financial benefit of your college degree.">
+  <meta property="og:url" content="https://calcwise.io/education-calculators/education-roi-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Education ROI Calculator - Is Your Degree Worth It?">
+  <meta name="twitter:description" content="Calculate the lifetime earnings gain, ROI %, breakeven years, and net financial benefit of your college degree.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Education Calculators", "item": "https://calcwise.io/education-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "Education ROI Calculator", "item": "https://calcwise.io/education-calculators/education-roi-calculator/" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How is education ROI calculated?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Education ROI is calculated by dividing the net financial benefit (lifetime earnings gain minus degree cost) by the degree cost, expressed as a percentage. A positive ROI means the degree pays for itself and more over your career." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is a good ROI for a college degree?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Any positive ROI means the degree provides a financial benefit over your career. An ROI above 100% (meaning you earn back more than double your investment) is generally considered strong. STEM, business, and healthcare degrees typically show the highest ROIs." }
+      },
+      {
+        "@type": "Question",
+        "name": "How many years does it typically take to break even on a degree?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Breakeven typically ranges from 5 to 15 years depending on the salary gap and degree cost. High-earning fields with lower tuition costs break even fastest. The breakeven point is where cumulative salary gains equal the total cost of the degree." }
+      },
+      {
+        "@type": "Question",
+        "name": "Does this calculator account for inflation?",
+        "acceptedAnswer": { "@type": "Answer", "text": "This calculator uses nominal (non-inflation-adjusted) figures for simplicity. For a more conservative estimate, you may want to use real salary figures and account for the opportunity cost of time spent in school vs. working." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/business-calculators/">Business</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/business-calculators/">Business Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/education-calculators/">Education Calculators</a></li>
+          <li><span aria-current="page">Education ROI Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="article-content">
+          <h1>Education ROI Calculator</h1>
+          <p>Is your college degree worth the investment? This calculator measures the financial return on your education by comparing your degree cost against the lifetime earnings premium you gain. Enter your degree cost, salary before and after, and career length to see your ROI, breakeven point, and net financial benefit.</p>
+
+          <div class="calc-container mt-8">
+            <div class="calc-header">
+              <h2>Calculate Your Degree's Return on Investment</h2>
+              <p>See how your education investment pays off over your career</p>
+            </div>
+            <div class="calc-body">
+              <form id="roi-form" onsubmit="return false;">
+                <div class="form-group">
+                  <label class="form-label" for="degree-cost">Total Degree Cost</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="degree-cost" class="form-input" placeholder="80000" min="1" step="1000" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="salary-without">Current / Expected Salary Without Degree</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="salary-without" class="form-input" placeholder="38000" min="0" step="500" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="salary-with">Expected Salary With Degree</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="salary-with" class="form-input" placeholder="62000" min="0" step="500" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="career-years">Years in Career</label>
+                  <input type="number" id="career-years" class="form-input" placeholder="35" min="1" max="50" step="1" required>
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calculateROI()">Calculate</button>
+                  <button type="button" class="btn btn-reset" onclick="resetROI()">Reset</button>
+                </div>
+              </form>
+
+              <div id="roi-results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">Lifetime Earnings Gain</div>
+                  <div class="result-value" id="result-lifetime-gain"></div>
+                </div>
+                <div class="result-grid result-grid-3">
+                  <div class="result-item">
+                    <div class="result-label">Education ROI</div>
+                    <div class="result-value" id="result-roi-pct"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Breakeven (Years)</div>
+                    <div class="result-value" id="result-breakeven"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Net Financial Benefit</div>
+                    <div class="result-value" id="result-net-benefit"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <section class="content-section">
+            <h2>Education ROI Formula</h2>
+            <p>This calculator uses standard investment return logic applied to the earnings premium from a degree:</p>
+            <div class="formula-box">
+              <div class="formula-label">Lifetime Earnings Gain</div>
+              Gain = (Salary With Degree - Salary Without Degree) &times; Years in Career
+            </div>
+            <div class="formula-box">
+              <div class="formula-label">Net Financial Benefit</div>
+              Net Benefit = Lifetime Earnings Gain - Degree Cost
+            </div>
+            <div class="formula-box">
+              <div class="formula-label">ROI %</div>
+              ROI = (Net Financial Benefit / Degree Cost) &times; 100
+            </div>
+            <div class="formula-box">
+              <div class="formula-label">Breakeven Years</div>
+              Breakeven = Degree Cost / Annual Salary Premium
+            </div>
+          </section>
+
+          <section class="content-section">
+            <h2>How to Use This Calculator</h2>
+            <ol>
+              <li><strong>Enter total degree cost</strong> - include all tuition, fees, books, and net costs after aid.</li>
+              <li><strong>Enter salary without degree</strong> - your current or expected salary with only a high school diploma or associate degree.</li>
+              <li><strong>Enter expected salary with degree</strong> - use Bureau of Labor Statistics data or job postings for your field.</li>
+              <li><strong>Enter career length</strong> - typically 30-40 years for most careers.</li>
+              <li><strong>Click Calculate</strong> to see lifetime gain, ROI, and breakeven point.</li>
+            </ol>
+          </section>
+
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>A prospective nursing student is considering a 4-year BSN program costing $60,000 total. Without the degree, they could earn $38,000 per year as a medical assistant. With the BSN, they expect to earn $72,000. Over a 35-year nursing career, the lifetime earnings gain is $1,190,000. After subtracting the $60,000 degree cost, the net benefit is $1,130,000 — an ROI of 1,883%. The breakeven point is less than 2 years into the career.</p>
+          </section>
+
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                How is education ROI calculated?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Education ROI is calculated by dividing the net financial benefit (lifetime earnings gain minus degree cost) by the degree cost, expressed as a percentage. A positive ROI means the degree pays for itself and more over your career.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What is a good ROI for a college degree?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Any positive ROI means the degree provides a financial benefit over your career. An ROI above 100% is generally considered strong. STEM, business, and healthcare degrees typically show the highest ROIs due to large salary premiums relative to degree costs.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                How many years does it typically take to break even on a degree?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Breakeven typically ranges from 5 to 15 years depending on the salary gap and degree cost. High-earning fields with lower tuition costs break even fastest. The breakeven point is where cumulative salary gains equal the total cost of the degree.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Does this calculator account for inflation?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>This calculator uses nominal figures for simplicity. For a more conservative estimate, you may want to use real salary figures and account for the opportunity cost of time spent in school vs. working full-time.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/education-calculators/college-affordability-calculator/" class="card card-link">
+                <h3>College Affordability Calculator</h3>
+                <p>Estimate your annual funding gap and loan burden.</p>
+              </a>
+              <a href="/education-calculators/student-budget-calculator/" class="card card-link">
+                <h3>Student Budget Calculator</h3>
+                <p>Plan monthly income and expenses as a college student.</p>
+              </a>
+              <a href="/finance-calculators/loan-calculator/" class="card card-link">
+                <h3>Loan Calculator</h3>
+                <p>Calculate monthly payments for any fixed-rate loan.</p>
+              </a>
+              <a href="/finance-calculators/compound-interest-calculator/" class="card card-link">
+                <h3>Compound Interest Calculator</h3>
+                <p>See how money grows with compound interest over time.</p>
+              </a>
+            </div>
+          </section>
+
+          <div class="disclaimer">
+            <strong>Disclaimer:</strong> This calculator provides estimates for informational purposes only. Actual salary outcomes depend on field, employer, location, experience, and many other factors. Lifetime earnings projections do not account for inflation, unemployment, career breaks, or salary growth. This is not financial advice. Consult a qualified career counselor or financial advisor for personalized guidance.
+          </div>
+
+          <div class="ad-slot ad-slot-leaderboard"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Education</h4>
+          <a href="/education-calculators/">All Education Calculators</a>
+          <a href="/education-calculators/college-affordability-calculator/">College Affordability</a>
+        </div>
+        <div class="footer-col">
+          <h4>Finance</h4>
+          <a href="/finance-calculators/">All Finance Calculators</a>
+          <a href="/finance-calculators/loan-calculator/">Loan Calculator</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateROI() {
+      if (!CalcWise.validateForm('roi-form')) return;
+
+      const degreeCost = CalcWise.parseNumber(document.getElementById('degree-cost').value);
+      const salaryWithout = CalcWise.parseNumber(document.getElementById('salary-without').value);
+      const salaryWith = CalcWise.parseNumber(document.getElementById('salary-with').value);
+      const careerYears = CalcWise.parseNumber(document.getElementById('career-years').value);
+
+      const annualPremium = salaryWith - salaryWithout;
+      const lifetimeGain = annualPremium * careerYears;
+      const netBenefit = lifetimeGain - degreeCost;
+      const roiPct = degreeCost > 0 ? (netBenefit / degreeCost) * 100 : 0;
+      const breakevenYears = annualPremium > 0 ? degreeCost / annualPremium : Infinity;
+
+      CalcWise.setText('result-lifetime-gain', CalcWise.formatCurrency(lifetimeGain));
+      CalcWise.setText('result-roi-pct', CalcWise.formatNumber(roiPct, 1) + '%');
+      CalcWise.setText('result-breakeven', breakevenYears === Infinity ? 'N/A' : CalcWise.formatNumber(breakevenYears, 1) + ' yrs');
+      CalcWise.setText('result-net-benefit', CalcWise.formatCurrency(netBenefit));
+      CalcWise.showResults('roi-results');
+    }
+
+    function resetROI() {
+      document.getElementById('roi-form').reset();
+      CalcWise.hideResults('roi-results');
+    }
+  </script>
+</body>
+</html>

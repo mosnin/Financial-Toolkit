@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Budget Percentage Calculator - CalcWise</title>
+  <meta name="description" content="Calculate what percentage of your income goes to each spending category and compare your budget against the 50/30/20 rule. Find your surplus or deficit instantly.">
+  <link rel="canonical" href="https://calcwise.io/personal-finance-calculators/budget-percentage-calculator/">
+  <meta property="og:title" content="Budget Percentage Calculator - CalcWise">
+  <meta property="og:description" content="See exactly what percentage of your monthly income goes to housing, food, transport, healthcare, and more. Compare to the 50/30/20 rule.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcwise.io/personal-finance-calculators/budget-percentage-calculator/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Budget Percentage Calculator - CalcWise">
+  <meta name="twitter:description" content="See exactly what percentage of your monthly income goes to housing, food, transport, healthcare, and more.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/"},
+      {"@type": "ListItem", "position": 2, "name": "Personal Finance Calculators", "item": "https://calcwise.io/personal-finance-calculators/"},
+      {"@type": "ListItem", "position": 3, "name": "Budget Percentage Calculator"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What percentage of income should go to housing?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Most financial experts recommend spending no more than 28-30% of your gross monthly income on housing costs, including rent or mortgage, utilities, and insurance. Under the 50/30/20 rule, housing falls within the 50% needs bucket."}
+      },
+      {
+        "@type": "Question",
+        "name": "What is the 50/30/20 rule?",
+        "acceptedAnswer": {"@type": "Answer", "text": "The 50/30/20 rule is a budgeting guideline that allocates 50% of after-tax income to needs (housing, food, utilities), 30% to wants (entertainment, dining out), and 20% to savings and debt repayment. It was popularized by Senator Elizabeth Warren."}
+      },
+      {
+        "@type": "Question",
+        "name": "Should I use gross or net income for budgeting?",
+        "acceptedAnswer": {"@type": "Answer", "text": "For daily budgeting purposes, use your gross (pre-tax) monthly income when comparing to standard benchmarks, since most published guidelines reference gross income. However, when planning actual spending, your net take-home pay is the most practical figure."}
+      },
+      {
+        "@type": "Question",
+        "name": "What does a budget surplus or deficit mean?",
+        "acceptedAnswer": {"@type": "Answer", "text": "A budget surplus means your total spending is less than your income — the remaining amount can be directed toward savings or investments. A budget deficit means you are spending more than you earn, which will require reducing expenses or increasing income to achieve financial stability."}
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="logo">
+        <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav">
+        <a href="/">Home</a>
+        <a href="/pages/finance-calculators/">Finance</a>
+        <a href="/pages/personal-finance-calculators/" aria-current="page">Personal Finance</a>
+        <a href="/pages/investment-calculators/">Investment</a>
+        <a href="/pages/tax-calculators/">Tax</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav">
+      <a href="/">Home</a>
+      <a href="/pages/finance-calculators/">Finance Calculators</a>
+      <a href="/pages/personal-finance-calculators/">Personal Finance Calculators</a>
+      <a href="/pages/investment-calculators/">Investment Calculators</a>
+      <a href="/pages/tax-calculators/">Tax Calculators</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li><a href="/pages/personal-finance-calculators/">Personal Finance Calculators</a></li>
+        <li><span aria-current="page">Budget Percentage Calculator</span></li>
+      </ol>
+    </nav>
+
+    <div class="page-content">
+      <div class="article-content">
+        <h1>Budget Percentage Calculator</h1>
+        <p>Enter your monthly gross income and spending in each category to instantly see what percentage of your income each expense represents. Compare your actual spending percentages to the popular 50/30/20 rule and identify where you have a surplus or deficit.</p>
+
+        <div class="ad-slot ad-slot-leaderboard"></div>
+
+        <div class="calc-container">
+          <div class="calc-header">
+            <h2>Calculate Your Budget Percentages</h2>
+            <p>Enter your monthly gross income and expenses</p>
+          </div>
+          <div class="calc-body">
+            <form id="budget-pct-form">
+              <div class="form-group">
+                <label class="form-label" for="grossIncome">Monthly Gross Income</label>
+                <div class="input-prefix">
+                  <span class="prefix">$</span>
+                  <input type="number" id="grossIncome" name="grossIncome" class="form-input" placeholder="6000" min="1" step="100" required>
+                </div>
+              </div>
+
+              <h3 style="font-size: var(--text-base); margin: var(--space-5) 0 var(--space-3);">Monthly Expenses</h3>
+
+              <div class="result-grid result-grid-2" style="gap: var(--space-4);">
+                <div class="form-group">
+                  <label class="form-label" for="housing">Housing (rent/mortgage)</label>
+                  <div class="input-prefix"><span class="prefix">$</span>
+                    <input type="number" id="housing" name="housing" class="form-input" placeholder="1500" min="0" step="50">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="food">Food (groceries + dining)</label>
+                  <div class="input-prefix"><span class="prefix">$</span>
+                    <input type="number" id="food" name="food" class="form-input" placeholder="600" min="0" step="25">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="transport">Transportation</label>
+                  <div class="input-prefix"><span class="prefix">$</span>
+                    <input type="number" id="transport" name="transport" class="form-input" placeholder="400" min="0" step="25">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="healthcare">Healthcare</label>
+                  <div class="input-prefix"><span class="prefix">$</span>
+                    <input type="number" id="healthcare" name="healthcare" class="form-input" placeholder="200" min="0" step="25">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="entertainment">Entertainment</label>
+                  <div class="input-prefix"><span class="prefix">$</span>
+                    <input type="number" id="entertainment" name="entertainment" class="form-input" placeholder="300" min="0" step="25">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="savings">Savings / Investments</label>
+                  <div class="input-prefix"><span class="prefix">$</span>
+                    <input type="number" id="savings" name="savings" class="form-input" placeholder="500" min="0" step="25">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="other">Other Expenses</label>
+                  <div class="input-prefix"><span class="prefix">$</span>
+                    <input type="number" id="other" name="other" class="form-input" placeholder="200" min="0" step="25">
+                  </div>
+                </div>
+              </div>
+
+              <div class="calc-actions">
+                <button type="button" class="btn btn-calculate" onclick="calcBudgetPct()">Calculate Percentages</button>
+                <button type="button" class="btn btn-reset" onclick="resetBudgetPct()">Reset</button>
+              </div>
+            </form>
+
+            <div id="results" class="calc-results hidden">
+              <div class="result-primary">
+                <div class="result-label">Total Monthly Spending</div>
+                <div class="result-value" id="totalSpending">$0</div>
+              </div>
+              <div class="result-grid result-grid-2" style="margin-top: var(--space-4);">
+                <div class="result-item">
+                  <div class="result-label">Surplus / Deficit</div>
+                  <div class="result-value" id="surplusDeficit">$0</div>
+                </div>
+                <div class="result-item">
+                  <div class="result-label">Spent of Income</div>
+                  <div class="result-value" id="pctOfIncome">0%</div>
+                </div>
+              </div>
+
+              <div style="margin-top: var(--space-6);">
+                <h3 style="font-size: var(--text-base); margin-bottom: var(--space-3);">Category Breakdown</h3>
+                <div id="categoryTable"></div>
+              </div>
+
+              <div style="margin-top: var(--space-6);">
+                <h3 style="font-size: var(--text-base); margin-bottom: var(--space-3);">50/30/20 Rule Comparison</h3>
+                <div id="ruleComparison"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <section class="content-section">
+          <h2>How Budget Percentages Are Calculated</h2>
+          <div class="formula-box">
+            <div class="formula-label">Formula</div>
+            Category % = (Category Spending / Gross Income) &times; 100<br>
+            Surplus / Deficit = Gross Income &minus; Total Spending<br>
+            50/30/20 Needs Target = Gross Income &times; 0.50
+          </div>
+          <p>Each category percentage tells you exactly how much of every dollar you earn is consumed by that expense. Comparing your real percentages to the 50/30/20 benchmark reveals whether you are over-spending in needs, under-saving, or have room to increase wants.</p>
+        </section>
+
+        <section class="content-section">
+          <h2>How to Use This Calculator</h2>
+          <ol>
+            <li><strong>Enter your monthly gross income:</strong> Use your pre-tax income for standard benchmark comparisons.</li>
+            <li><strong>Fill in each spending category:</strong> Leave fields blank or at zero for categories that do not apply to you.</li>
+            <li><strong>Click "Calculate Percentages":</strong> Instantly see each category as a percent of income.</li>
+            <li><strong>Review the 50/30/20 comparison:</strong> The color-coded table shows whether each bucket is on target, over, or under the recommended guideline.</li>
+            <li><strong>Identify your surplus or deficit:</strong> Use this number to plan debt payoff, savings increases, or spending cuts.</li>
+          </ol>
+        </section>
+
+        <section class="content-section">
+          <h2>Example Scenario</h2>
+          <p>Jordan earns $6,000/month gross and spends: Housing $1,600, Food $550, Transport $350, Healthcare $150, Entertainment $400, Savings $700, Other $250. Total spending is $4,000 — a $2,000 surplus. Housing is 26.7%, well within the 30% guideline. Entertainment at 6.7% leaves room for discretionary spending. Savings at 11.7% is below the recommended 20%, suggesting Jordan could redirect some of that surplus to savings.</p>
+        </section>
+
+        <section class="faq-section">
+          <h2>Frequently Asked Questions</h2>
+          <div class="faq-item">
+            <button class="faq-question">What percentage of income should go to housing?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>Most financial experts recommend spending no more than 28-30% of your gross monthly income on housing costs. Under the 50/30/20 rule, housing falls within the 50% needs bucket, shared with utilities, groceries, and insurance.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">What is the 50/30/20 rule?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>The 50/30/20 rule allocates 50% of after-tax income to needs, 30% to wants, and 20% to savings and debt repayment. It is a simple guideline popularized by Senator Elizabeth Warren that works for most income levels.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">Should I use gross or net income for budgeting?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>For standard benchmark comparisons most guidelines reference gross income. For practical day-to-day spending decisions, your net take-home pay is the most relevant figure since that is the money actually available to spend.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">What does a budget surplus or deficit mean?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>A surplus means total spending is less than income — the remainder can go toward savings or investments. A deficit means you are spending more than you earn, which requires either reducing expenses or finding ways to increase income.</p></div>
+          </div>
+        </section>
+
+        <section class="related-calculators">
+          <h2>Related Calculators</h2>
+          <div class="grid grid-3">
+            <a href="/pages/personal-finance-calculators/monthly-expense-tracker-calculator/" class="card card-link">
+              <h3>Monthly Expense Tracker</h3>
+              <p>Track all monthly expenses and see your full spending breakdown.</p>
+            </a>
+            <a href="/pages/personal-finance-calculators/net-income-calculator/" class="card card-link">
+              <h3>Net Income Calculator</h3>
+              <p>Calculate your take-home pay after taxes and deductions.</p>
+            </a>
+            <a href="/pages/personal-finance-calculators/savings-rate-calculator/" class="card card-link">
+              <h3>Savings Rate Calculator</h3>
+              <p>Find out what percentage of your income you are saving.</p>
+            </a>
+            <a href="/pages/personal-finance-calculators/debt-avalanche-calculator/" class="card card-link">
+              <h3>Debt Avalanche Calculator</h3>
+              <p>Eliminate debt faster by targeting the highest interest rates first.</p>
+            </a>
+            <a href="/pages/finance-calculators/budget-calculator/" class="card card-link">
+              <h3>50/30/20 Budget Calculator</h3>
+              <p>Plan your monthly budget using the classic 50/30/20 framework.</p>
+            </a>
+          </div>
+        </section>
+
+        <div class="disclaimer">
+          <strong>Disclaimer:</strong> This calculator is for informational and educational purposes only and does not constitute financial advice. Budgeting guidelines are general recommendations and may not be appropriate for every financial situation. Consult a qualified financial advisor for personalized guidance.
+        </div>
+
+        <div class="ad-slot ad-slot-rectangle"></div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free online financial calculators to help you make smarter money decisions.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Personal Finance</h4>
+          <a href="/pages/personal-finance-calculators/budget-percentage-calculator/">Budget Percentages</a>
+          <a href="/pages/personal-finance-calculators/net-income-calculator/">Net Income</a>
+          <a href="/pages/personal-finance-calculators/savings-rate-calculator/">Savings Rate</a>
+          <a href="/pages/personal-finance-calculators/debt-avalanche-calculator/">Debt Avalanche</a>
+        </div>
+        <div class="footer-col">
+          <h4>Tools</h4>
+          <a href="/pages/finance-calculators/budget-calculator/">50/30/20 Budget</a>
+          <a href="/pages/finance-calculators/emergency-fund-calculator/">Emergency Fund</a>
+          <a href="/pages/investment-calculators/">Investment Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about/">About</a>
+          <a href="/contact/">Contact</a>
+          <a href="/privacy/">Privacy Policy</a>
+          <a href="/terms/">Terms of Service</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 CalcWise. All rights reserved.</span>
+        <div class="footer-links">
+          <a href="/privacy/">Privacy</a>
+          <a href="/terms/">Terms</a>
+          <a href="/contact/">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    const CATEGORIES = [
+      { key: 'housing',       label: 'Housing',       rule: 'needs' },
+      { key: 'food',          label: 'Food',           rule: 'needs' },
+      { key: 'transport',     label: 'Transportation', rule: 'needs' },
+      { key: 'healthcare',    label: 'Healthcare',     rule: 'needs' },
+      { key: 'entertainment', label: 'Entertainment',  rule: 'wants' },
+      { key: 'savings',       label: 'Savings',        rule: 'savings' },
+      { key: 'other',         label: 'Other',          rule: 'wants' }
+    ];
+
+    function calcBudgetPct() {
+      if (!CalcWise.validateForm('budget-pct-form')) return;
+      const v = CalcWise.getFormValues('budget-pct-form');
+      const income = v.grossIncome;
+      if (!income) return;
+
+      let total = 0;
+      const rows = CATEGORIES.map(cat => {
+        const amt = v[cat.key] || 0;
+        total += amt;
+        const pct = (amt / income) * 100;
+        return { ...cat, amt, pct };
+      });
+
+      const surplus = income - total;
+      const pctSpent = (total / income) * 100;
+
+      CalcWise.setText('totalSpending', CalcWise.formatCurrency(total, 0));
+      const surplusEl = document.getElementById('surplusDeficit');
+      surplusEl.textContent = CalcWise.formatCurrency(Math.abs(surplus), 0) + (surplus >= 0 ? ' surplus' : ' deficit');
+      surplusEl.style.color = surplus >= 0 ? 'var(--color-success)' : 'var(--color-danger)';
+      CalcWise.setText('pctOfIncome', CalcWise.formatPercent(pctSpent, 1));
+
+      // Category table
+      let tableHtml = '<div class="table-container"><table class="data-table"><thead><tr><th>Category</th><th>Amount</th><th>% of Income</th></tr></thead><tbody>';
+      rows.forEach(r => {
+        tableHtml += `<tr><td>${r.label}</td><td>${CalcWise.formatCurrency(r.amt, 0)}</td><td>${CalcWise.formatPercent(r.pct, 1)}</td></tr>`;
+      });
+      tableHtml += `<tr style="font-weight:600;"><td>Total</td><td>${CalcWise.formatCurrency(total, 0)}</td><td>${CalcWise.formatPercent(pctSpent, 1)}</td></tr>`;
+      tableHtml += '</tbody></table></div>';
+      CalcWise.setHtml('categoryTable', tableHtml);
+
+      // 50/30/20 comparison
+      const needsTotal = rows.filter(r => r.rule === 'needs').reduce((s, r) => s + r.amt, 0);
+      const wantsTotal = rows.filter(r => r.rule === 'wants').reduce((s, r) => s + r.amt, 0);
+      const savingsTotal = rows.filter(r => r.rule === 'savings').reduce((s, r) => s + r.amt, 0);
+
+      function ruleRow(label, actual, target, targetPct) {
+        const actualPct = (actual / income) * 100;
+        const diff = actualPct - targetPct;
+        const status = Math.abs(diff) <= 5 ? '&#10003; On Track' : (diff > 0 ? '&#9650; Over' : '&#9660; Under');
+        const color = Math.abs(diff) <= 5 ? 'var(--color-success)' : (diff > 0 ? 'var(--color-danger)' : 'var(--color-info)');
+        return `<tr><td>${label}</td><td>${CalcWise.formatCurrency(actual, 0)}</td><td>${CalcWise.formatPercent(actualPct, 1)}</td><td>${targetPct}%</td><td style="color:${color};font-weight:600;">${status}</td></tr>`;
+      }
+
+      let ruleHtml = '<div class="table-container"><table class="data-table"><thead><tr><th>Bucket</th><th>Your Amount</th><th>Your %</th><th>Target</th><th>Status</th></tr></thead><tbody>';
+      ruleHtml += ruleRow('Needs', needsTotal, income * 0.50, 50);
+      ruleHtml += ruleRow('Wants', wantsTotal, income * 0.30, 30);
+      ruleHtml += ruleRow('Savings', savingsTotal, income * 0.20, 20);
+      ruleHtml += '</tbody></table></div>';
+      CalcWise.setHtml('ruleComparison', ruleHtml);
+
+      CalcWise.showResults('results');
+    }
+
+    function resetBudgetPct() {
+      document.getElementById('budget-pct-form').reset();
+      CalcWise.hideResults('results');
+    }
+  </script>
+</body>
+</html>

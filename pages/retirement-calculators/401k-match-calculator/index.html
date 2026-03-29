@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>401(k) Match Calculator - Maximize Your Employer Match | CalcWise</title>
+  <meta name="description" content="Free 401(k) match calculator to see how much employer matching money you could be leaving on the table. Calculate your annual contribution, employer match, and free money available.">
+  <meta name="keywords" content="401k match calculator, employer match, 401k contribution, free money 401k, maximize employer match">
+  <link rel="canonical" href="https://calcwise.io/retirement-calculators/401k-match-calculator/">
+
+  <meta property="og:title" content="401(k) Match Calculator - Maximize Your Employer Match">
+  <meta property="og:description" content="See how much employer matching money you could be leaving on the table and maximize your 401(k) benefits.">
+  <meta property="og:url" content="https://calcwise.io/retirement-calculators/401k-match-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="401(k) Match Calculator - Maximize Your Employer Match">
+  <meta name="twitter:description" content="See how much employer matching money you could be leaving on the table and maximize your 401(k) benefits.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Retirement Calculators", "item": "https://calcwise.io/retirement-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "401(k) Match Calculator", "item": "https://calcwise.io/retirement-calculators/401k-match-calculator/" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is a 401(k) employer match?",
+        "acceptedAnswer": { "@type": "Answer", "text": "An employer match is when your employer contributes money to your 401(k) based on how much you contribute. For example, a 50% match up to 6% means if you contribute 6% of salary, your employer adds another 3%. This is essentially free money added to your retirement savings." }
+      },
+      {
+        "@type": "Question",
+        "name": "What does 'match cap %' mean?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The match cap is the maximum percentage of your salary that your employer will match against. For instance, if the employer matches 100% up to 4%, and you earn $60,000, the employer will contribute at most $2,400 (4% of $60,000) regardless of how much more you contribute." }
+      },
+      {
+        "@type": "Question",
+        "name": "How much should I contribute to get the full employer match?",
+        "acceptedAnswer": { "@type": "Answer", "text": "You should always contribute at least enough to capture the full employer match — it is an instant 50–100% return on your money. If your employer matches 100% up to 5% of your salary, contribute at least 5% to avoid leaving free money on the table." }
+      },
+      {
+        "@type": "Question",
+        "name": "Is employer match subject to vesting?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes, many employers apply a vesting schedule to matching contributions, meaning you only keep the matched funds after working for a certain number of years. Common schedules are cliff vesting (e.g., 100% after 3 years) or graded vesting (e.g., 20% per year over 5 years). Your own contributions are always 100% vested immediately." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/retirement-calculators/" aria-current="page">Retirement</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/retirement-calculators/">Retirement Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/retirement-calculators/">Retirement Calculators</a></li>
+          <li><span aria-current="page">401(k) Match Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="article-content">
+          <h1>401(k) Match Calculator</h1>
+          <p>Find out exactly how much free money your employer is offering and whether you are capturing all of it. This calculator breaks down your annual 401(k) contribution, your employer's matching contribution, and shows you precisely how much you are leaving on the table if you are not contributing enough to max the match.</p>
+
+          <div class="calc-container mt-8">
+            <div class="calc-header">
+              <h2>Calculate Your 401(k) Match</h2>
+              <p>Enter your salary and plan details below</p>
+            </div>
+            <div class="calc-body">
+              <form id="match-form" onsubmit="return false;">
+                <div class="form-group">
+                  <label class="form-label" for="annual-salary">Annual Salary</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="annual-salary" class="form-input" placeholder="75000" min="1000" step="1000" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="employee-contrib">Your Contribution Rate</label>
+                  <div class="input-suffix">
+                    <input type="number" id="employee-contrib" class="form-input" placeholder="6" min="0" max="100" step="0.5" required>
+                    <span class="suffix">%</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="employer-match-pct">Employer Match Rate</label>
+                  <div class="input-suffix">
+                    <input type="number" id="employer-match-pct" class="form-input" placeholder="50" min="0" max="300" step="5" required>
+                    <span class="suffix">%</span>
+                  </div>
+                  <small class="form-hint">e.g. 50 means employer matches 50 cents per dollar you contribute</small>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="match-cap">Employer Match Cap</label>
+                  <div class="input-suffix">
+                    <input type="number" id="match-cap" class="form-input" placeholder="6" min="0" max="100" step="0.5" required>
+                    <span class="suffix">% of salary</span>
+                  </div>
+                  <small class="form-hint">Maximum % of salary the employer will match against</small>
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calcMatch()">Calculate Match</button>
+                  <button type="button" class="btn btn-reset" onclick="resetCalc()">Reset</button>
+                </div>
+              </form>
+
+              <div id="calc-results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">Total Annual 401(k) Contribution</div>
+                  <div class="result-value" id="result-total-annual"></div>
+                </div>
+                <div class="result-grid">
+                  <div class="result-item">
+                    <div class="result-label">Your Annual Contribution</div>
+                    <div class="result-value" id="result-your-contrib"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Employer Match</div>
+                    <div class="result-value" id="result-employer-match"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Free Money Left on Table</div>
+                    <div class="result-value" id="result-left-on-table"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Max Possible Employer Match</div>
+                    <div class="result-value" id="result-max-match"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <section class="content-section">
+            <h2>401(k) Match Formula</h2>
+            <p>The calculator uses the following logic to determine your match and any uncaptured free money:</p>
+            <div class="formula-box">
+              <div class="formula-label">Your Annual Contribution</div>
+              Your Contribution = Annual Salary x (Employee Contribution % / 100)
+            </div>
+            <div class="formula-box">
+              <div class="formula-label">Employer Match</div>
+              Eligible Contribution = min(Your Contribution %, Match Cap %)
+              Employer Match = Annual Salary x (Eligible Contribution % / 100) x (Employer Match Rate / 100)
+            </div>
+            <div class="formula-box">
+              <div class="formula-label">Free Money Left on Table</div>
+              Max Match = Annual Salary x (Match Cap % / 100) x (Employer Match Rate / 100)
+              Left on Table = Max Match - Actual Employer Match
+            </div>
+            <p>If your contribution rate is at or above the match cap, you are capturing the full match and there is no money left on the table.</p>
+          </section>
+
+          <section class="content-section">
+            <h2>How to Use This 401(k) Match Calculator</h2>
+            <ol>
+              <li><strong>Enter your annual salary</strong> - your gross pre-tax salary before any deductions.</li>
+              <li><strong>Enter your contribution rate</strong> - the percentage of your salary you currently contribute to your 401(k).</li>
+              <li><strong>Enter the employer match rate</strong> - the percentage your employer contributes per dollar you put in (e.g., 50 for 50 cents per dollar).</li>
+              <li><strong>Enter the match cap</strong> - the maximum percentage of your salary that qualifies for the match (check your plan documents).</li>
+              <li><strong>Click "Calculate Match"</strong> to see your totals and whether you are maximizing free money.</li>
+            </ol>
+          </section>
+
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>Sarah earns $80,000 per year. Her employer offers a 100% match up to 4% of salary, meaning the employer matches dollar-for-dollar on the first 4% she contributes. Sarah currently contributes only 2% ($1,600/year). Her employer matches $1,600, but the maximum possible employer match is $3,200 (4% of $80,000). Sarah is leaving $1,600 in free money on the table each year — simply by raising her contribution from 2% to 4% she doubles her employer's annual gift to her retirement.</p>
+          </section>
+
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What is a 401(k) employer match?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>An employer match is when your employer contributes money to your 401(k) based on how much you contribute. For example, a 50% match up to 6% means if you contribute 6% of salary, your employer adds another 3%. This is essentially free money added to your retirement savings.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What does 'match cap %' mean?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>The match cap is the maximum percentage of your salary that your employer will match against. If the employer matches 100% up to 4%, and you earn $60,000, the employer will contribute at most $2,400 (4% of $60,000) regardless of how much more you contribute.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                How much should I contribute to get the full employer match?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>You should always contribute at least enough to capture the full employer match — it is an instant 50–100% return on your money. If your employer matches 100% up to 5% of your salary, contribute at least 5% to avoid leaving free money on the table.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Is employer match subject to vesting?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Yes, many employers apply a vesting schedule to matching contributions. Common schedules are cliff vesting (e.g., 100% after 3 years) or graded vesting (e.g., 20% per year over 5 years). Your own contributions are always 100% vested immediately.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/retirement-calculators/retirement-contribution-limit-calculator/" class="card card-link">
+                <h3>Contribution Limit Calculator</h3>
+                <p>Check 2026 IRS contribution limits for your retirement accounts.</p>
+              </a>
+              <a href="/retirement-calculators/retirement-savings-gap-calculator/" class="card card-link">
+                <h3>Retirement Savings Gap Calculator</h3>
+                <p>See if your current savings rate will fund your retirement goals.</p>
+              </a>
+              <a href="/retirement-calculators/retirement-nest-egg-calculator/" class="card card-link">
+                <h3>Nest Egg Calculator</h3>
+                <p>Calculate the retirement portfolio size you need to reach your goals.</p>
+              </a>
+              <a href="/retirement-calculators/retirement-tax-impact-calculator/" class="card card-link">
+                <h3>Tax Impact Calculator</h3>
+                <p>Compare pre-tax vs Roth 401(k) contributions after tax.</p>
+              </a>
+            </div>
+          </section>
+
+          <div class="disclaimer">
+            <strong>Disclaimer:</strong> This calculator provides estimates for informational purposes only. Employer match formulas vary widely — always consult your plan documents or HR department for your exact match formula and vesting schedule. This is not financial advice.
+          </div>
+
+          <div class="ad-slot ad-slot-leaderboard"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Real Estate</h4>
+          <a href="/real-estate-calculators/">All Real Estate Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Retirement</h4>
+          <a href="/retirement-calculators/">All Retirement Calculators</a>
+          <a href="/retirement-calculators/retirement-age-calculator/">Retirement Age</a>
+          <a href="/retirement-calculators/401k-match-calculator/">401(k) Match</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calcMatch() {
+      const salary = parseFloat(document.getElementById('annual-salary').value);
+      const empPct = parseFloat(document.getElementById('employee-contrib').value) / 100;
+      const matchRate = parseFloat(document.getElementById('employer-match-pct').value) / 100;
+      const capPct = parseFloat(document.getElementById('match-cap').value) / 100;
+
+      if (!salary || isNaN(empPct) || isNaN(matchRate) || isNaN(capPct)) return;
+
+      const yourContrib = salary * empPct;
+      const eligiblePct = Math.min(empPct, capPct);
+      const employerMatch = salary * eligiblePct * matchRate;
+      const maxMatch = salary * capPct * matchRate;
+      const leftOnTable = Math.max(0, maxMatch - employerMatch);
+      const totalAnnual = yourContrib + employerMatch;
+
+      const fmt = (v) => CalcWise.formatCurrency(v, 0);
+
+      CalcWise.setText('result-your-contrib', fmt(yourContrib));
+      CalcWise.setText('result-employer-match', fmt(employerMatch));
+      CalcWise.setText('result-total-annual', fmt(totalAnnual));
+      CalcWise.setText('result-max-match', fmt(maxMatch));
+
+      const leftEl = document.getElementById('result-left-on-table');
+      leftEl.textContent = fmt(leftOnTable);
+      leftEl.style.color = leftOnTable > 0 ? '#DC2626' : '#059669';
+
+      CalcWise.showResults('calc-results');
+    }
+
+    function resetCalc() {
+      document.getElementById('match-form').reset();
+      CalcWise.hideResults('calc-results');
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Net Income Calculator - CalcWise</title>
+  <meta name="description" content="Calculate your net take-home pay after federal tax, state tax, FICA, and pre-tax deductions like 401k and health insurance. See net monthly income, net annual income, and effective tax rate.">
+  <link rel="canonical" href="https://calcwise.io/personal-finance-calculators/net-income-calculator/">
+  <meta property="og:title" content="Net Income Calculator - CalcWise">
+  <meta property="og:description" content="Find your exact take-home pay after all taxes and pre-tax deductions. See net monthly income, annual income, and effective tax rate.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcwise.io/personal-finance-calculators/net-income-calculator/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Net Income Calculator - CalcWise">
+  <meta name="twitter:description" content="Calculate take-home pay after federal tax, state tax, FICA, 401k, and health insurance deductions.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/"},
+      {"@type": "ListItem", "position": 2, "name": "Personal Finance Calculators", "item": "https://calcwise.io/personal-finance-calculators/"},
+      {"@type": "ListItem", "position": 3, "name": "Net Income Calculator"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the difference between gross and net income?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Gross income is your total earnings before any deductions — the number on your offer letter or salary. Net income is what you actually take home after federal taxes, state taxes, FICA (Social Security and Medicare), and any pre-tax deductions like 401k contributions and health insurance premiums are subtracted."}
+      },
+      {
+        "@type": "Question",
+        "name": "What is FICA tax?",
+        "acceptedAnswer": {"@type": "Answer", "text": "FICA stands for the Federal Insurance Contributions Act. It consists of Social Security tax (6.2% up to the annual wage base) and Medicare tax (1.45%), totaling 7.65% for employees. Your employer pays a matching 7.65%. Self-employed individuals pay 15.3% as both the employee and employer portions."}
+      },
+      {
+        "@type": "Question",
+        "name": "How do pre-tax deductions reduce my taxes?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Pre-tax deductions like 401k contributions and employer-sponsored health insurance premiums are subtracted from your gross income before federal and state income taxes are calculated. This reduces your taxable income, lowering the taxes you owe. For example, contributing $500/month to a 401k reduces your taxable income by $6,000/year."}
+      },
+      {
+        "@type": "Question",
+        "name": "What is an effective tax rate?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Your effective tax rate is the actual percentage of your total income that goes to taxes — as opposed to your marginal rate, which applies only to the last dollar earned. For example, if you earn $70,000 and pay $11,000 in combined taxes, your effective rate is 15.7%. The effective rate is always lower than your marginal (bracket) rate."}
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="logo">
+        <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav">
+        <a href="/">Home</a>
+        <a href="/pages/finance-calculators/">Finance</a>
+        <a href="/pages/personal-finance-calculators/" aria-current="page">Personal Finance</a>
+        <a href="/pages/investment-calculators/">Investment</a>
+        <a href="/pages/tax-calculators/">Tax</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav">
+      <a href="/">Home</a>
+      <a href="/pages/finance-calculators/">Finance Calculators</a>
+      <a href="/pages/personal-finance-calculators/">Personal Finance Calculators</a>
+      <a href="/pages/investment-calculators/">Investment Calculators</a>
+      <a href="/pages/tax-calculators/">Tax Calculators</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li><a href="/pages/personal-finance-calculators/">Personal Finance Calculators</a></li>
+        <li><span aria-current="page">Net Income Calculator</span></li>
+      </ol>
+    </nav>
+
+    <div class="page-content">
+      <div class="article-content">
+        <h1>Net Income Calculator</h1>
+        <p>Your gross salary is only the starting point — what you actually take home after federal tax, state tax, FICA, 401k contributions, and health insurance is often significantly less. This calculator breaks down exactly where your money goes before it reaches your bank account, showing your net monthly and annual take-home pay and your true effective tax rate.</p>
+
+        <div class="ad-slot ad-slot-leaderboard"></div>
+
+        <div class="calc-container">
+          <div class="calc-header">
+            <h2>Calculate Your Take-Home Pay</h2>
+            <p>Enter your gross salary and all deductions</p>
+          </div>
+          <div class="calc-body">
+            <form id="net-income-form">
+              <div class="result-grid result-grid-2" style="gap:var(--space-4);">
+                <div class="form-group">
+                  <label class="form-label" for="grossSalary">Annual Gross Salary</label>
+                  <div class="input-prefix"><span class="prefix">$</span>
+                    <input type="number" id="grossSalary" name="grossSalary" class="form-input" placeholder="75000" min="0" step="1000" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="federalRate">Federal Income Tax Rate</label>
+                  <div class="input-suffix">
+                    <input type="number" id="federalRate" name="federalRate" class="form-input" placeholder="22" min="0" max="50" step="0.1" required>
+                    <span class="suffix">%</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="stateRate">State Income Tax Rate</label>
+                  <div class="input-suffix">
+                    <input type="number" id="stateRate" name="stateRate" class="form-input" placeholder="5" min="0" max="20" step="0.1">
+                    <span class="suffix">%</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="ficaRate">FICA Tax Rate (employee portion)</label>
+                  <div class="input-suffix">
+                    <input type="number" id="ficaRate" name="ficaRate" class="form-input" placeholder="7.65" min="0" max="20" step="0.01">
+                    <span class="suffix">%</span>
+                  </div>
+                </div>
+              </div>
+
+              <h3 style="font-size:var(--text-base);margin:var(--space-5) 0 var(--space-3);">Pre-Tax Deductions (annual)</h3>
+              <div class="result-grid result-grid-2" style="gap:var(--space-4);">
+                <div class="form-group">
+                  <label class="form-label" for="retirement401k">401k / Pre-Tax Retirement Contribution</label>
+                  <div class="input-prefix"><span class="prefix">$</span>
+                    <input type="number" id="retirement401k" name="retirement401k" class="form-input" placeholder="6000" min="0" step="500">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="healthInsurance">Health Insurance Premium</label>
+                  <div class="input-prefix"><span class="prefix">$</span>
+                    <input type="number" id="healthInsurance" name="healthInsurance" class="form-input" placeholder="2400" min="0" step="100">
+                  </div>
+                </div>
+              </div>
+
+              <div class="calc-actions">
+                <button type="button" class="btn btn-calculate" onclick="calcNetIncome()">Calculate Net Income</button>
+                <button type="button" class="btn btn-reset" onclick="resetNetIncome()">Reset</button>
+              </div>
+            </form>
+
+            <div id="results" class="calc-results hidden">
+              <div class="result-primary">
+                <div class="result-label">Net Monthly Take-Home</div>
+                <div class="result-value" id="netMonthly">$0</div>
+              </div>
+              <div class="result-grid result-grid-3" style="margin-top:var(--space-4);">
+                <div class="result-item">
+                  <div class="result-label">Net Annual Income</div>
+                  <div class="result-value" id="netAnnual">$0</div>
+                </div>
+                <div class="result-item">
+                  <div class="result-label">Effective Tax Rate</div>
+                  <div class="result-value" id="effectiveTaxRate" style="color: var(--color-danger);">0%</div>
+                </div>
+                <div class="result-item">
+                  <div class="result-label">Take-Home After Deductions</div>
+                  <div class="result-value" id="afterDeductions">$0</div>
+                </div>
+              </div>
+              <div style="margin-top:var(--space-6);">
+                <h3 style="font-size:var(--text-base);margin-bottom:var(--space-3);">Pay Breakdown</h3>
+                <div id="breakdownTable"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <section class="content-section">
+          <h2>How Net Income Is Calculated</h2>
+          <div class="formula-box">
+            <div class="formula-label">Formula</div>
+            Taxable Income = Gross Salary &minus; Pre-Tax Deductions<br>
+            Federal Tax = Taxable Income &times; Federal Rate<br>
+            State Tax = Taxable Income &times; State Rate<br>
+            FICA = Gross Salary &times; FICA Rate<br>
+            Net Annual = Gross &minus; Federal Tax &minus; State Tax &minus; FICA &minus; Pre-Tax Deductions<br>
+            Effective Tax Rate = (Total Taxes / Gross Salary) &times; 100
+          </div>
+          <p>Note that pre-tax deductions (401k, health insurance) reduce your taxable income for federal and state purposes, but FICA taxes are typically calculated on gross wages before most pre-tax deductions (though 401k contributions are generally exempt from income tax but still subject to FICA). This calculator applies a simplified model for estimation purposes.</p>
+        </section>
+
+        <section class="content-section">
+          <h2>How to Use This Calculator</h2>
+          <ol>
+            <li><strong>Enter gross annual salary:</strong> The total compensation before any deductions.</li>
+            <li><strong>Set tax rates:</strong> Use your marginal federal bracket rate, your state's rate, and 7.65% for FICA (standard employee rate).</li>
+            <li><strong>Add pre-tax deductions:</strong> Annual 401k contribution and health insurance premium reduce taxable income.</li>
+            <li><strong>Calculate:</strong> See your net monthly and annual take-home, plus a full breakdown of where your money goes.</li>
+            <li><strong>Use results for budgeting:</strong> Your net monthly income is the correct figure to use in expense planning.</li>
+          </ol>
+        </section>
+
+        <section class="content-section">
+          <h2>Example Scenario</h2>
+          <p>Jordan earns $80,000/year gross and contributes $8,000 to a 401k and pays $3,000/year for health insurance. Taxable income: $69,000. At 22% federal, 5% state, and 7.65% FICA on the full gross: Federal tax = $15,180, State tax = $3,450, FICA = $6,120. Total taxes: $24,750. Net annual: $80,000 - $24,750 - $11,000 (deductions) = $44,250. Net monthly take-home: $3,688. Effective tax rate: 30.9%.</p>
+        </section>
+
+        <section class="faq-section">
+          <h2>Frequently Asked Questions</h2>
+          <div class="faq-item">
+            <button class="faq-question">What is the difference between gross and net income?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>Gross income is total earnings before any deductions. Net income is what you take home after federal and state taxes, FICA, and pre-tax deductions like 401k and health insurance are subtracted.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">What is FICA tax?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>FICA = Social Security (6.2%) + Medicare (1.45%) = 7.65% for employees. Your employer matches this amount. Self-employed individuals pay the full 15.3% as self-employment tax.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">How do pre-tax deductions reduce my taxes?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>Pre-tax deductions reduce your taxable income before income taxes are calculated. Contributing $6,000 to a 401k lowers your taxable income by $6,000 — saving you the tax you would have paid on that amount based on your marginal rate.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">What is an effective tax rate?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>Your effective tax rate is total taxes paid divided by gross income — the true average percentage of your earnings that goes to taxes. It is always lower than your marginal (bracket) rate since lower income is taxed at lower rates.</p></div>
+          </div>
+        </section>
+
+        <section class="related-calculators">
+          <h2>Related Calculators</h2>
+          <div class="grid grid-3">
+            <a href="/pages/personal-finance-calculators/budget-percentage-calculator/" class="card card-link">
+              <h3>Budget Percentage Calculator</h3>
+              <p>Use your net income to analyze spending percentages.</p>
+            </a>
+            <a href="/pages/personal-finance-calculators/savings-rate-calculator/" class="card card-link">
+              <h3>Savings Rate Calculator</h3>
+              <p>Calculate your savings rate based on gross and net income.</p>
+            </a>
+            <a href="/pages/tax-calculators/" class="card card-link">
+              <h3>Tax Calculators</h3>
+              <p>Detailed tax calculation tools for various scenarios.</p>
+            </a>
+            <a href="/pages/personal-finance-calculators/monthly-expense-tracker-calculator/" class="card card-link">
+              <h3>Monthly Expense Tracker</h3>
+              <p>Track expenses against your calculated net income.</p>
+            </a>
+            <a href="/pages/personal-finance-calculators/financial-independence-calculator/" class="card card-link">
+              <h3>Financial Independence Calculator</h3>
+              <p>Use your net income to plan your path to FI.</p>
+            </a>
+          </div>
+        </section>
+
+        <div class="disclaimer">
+          <strong>Disclaimer:</strong> This calculator provides estimates for informational purposes only using a simplified tax model. Actual tax liability depends on filing status, deductions, credits, and other factors. This is not tax advice. Consult a qualified tax professional or CPA for accurate tax calculations.
+        </div>
+
+        <div class="ad-slot ad-slot-rectangle"></div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free online financial calculators to help you make smarter money decisions.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Personal Finance</h4>
+          <a href="/pages/personal-finance-calculators/net-income-calculator/">Net Income</a>
+          <a href="/pages/personal-finance-calculators/budget-percentage-calculator/">Budget Percentages</a>
+          <a href="/pages/personal-finance-calculators/savings-rate-calculator/">Savings Rate</a>
+          <a href="/pages/personal-finance-calculators/monthly-expense-tracker-calculator/">Expense Tracker</a>
+        </div>
+        <div class="footer-col">
+          <h4>Tools</h4>
+          <a href="/pages/tax-calculators/">Tax Calculators</a>
+          <a href="/pages/finance-calculators/budget-calculator/">50/30/20 Budget</a>
+          <a href="/pages/investment-calculators/">Investment Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about/">About</a>
+          <a href="/contact/">Contact</a>
+          <a href="/privacy/">Privacy Policy</a>
+          <a href="/terms/">Terms of Service</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 CalcWise. All rights reserved.</span>
+        <div class="footer-links">
+          <a href="/privacy/">Privacy</a>
+          <a href="/terms/">Terms</a>
+          <a href="/contact/">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calcNetIncome() {
+      if (!CalcWise.validateForm('net-income-form')) return;
+      const v = CalcWise.getFormValues('net-income-form');
+
+      const gross = v.grossSalary;
+      const federalRate = v.federalRate / 100;
+      const stateRate = (v.stateRate || 0) / 100;
+      const ficaRate = (v.ficaRate || 7.65) / 100;
+      const k401 = v.retirement401k || 0;
+      const health = v.healthInsurance || 0;
+
+      const preTaxDeductions = k401 + health;
+      const taxableIncome = Math.max(0, gross - preTaxDeductions);
+
+      const federalTax = taxableIncome * federalRate;
+      const stateTax = taxableIncome * stateRate;
+      const ficaTax = gross * ficaRate; // FICA on gross wages
+
+      const totalTax = federalTax + stateTax + ficaTax;
+      const netAnnual = gross - totalTax - preTaxDeductions;
+      const netMonthly = netAnnual / 12;
+      const effectiveTaxRate = (totalTax / gross) * 100;
+      const afterDeductions = (gross - preTaxDeductions - totalTax);
+
+      CalcWise.setText('netMonthly', CalcWise.formatCurrency(netMonthly, 0));
+      CalcWise.setText('netAnnual', CalcWise.formatCurrency(netAnnual, 0));
+      CalcWise.setText('effectiveTaxRate', CalcWise.formatPercent(effectiveTaxRate, 1));
+      CalcWise.setText('afterDeductions', CalcWise.formatCurrency(afterDeductions / 12, 0) + '/mo');
+
+      const rows = [
+        { label: 'Gross Annual Salary', amount: gross, note: '' },
+        { label: '401k Contribution', amount: -k401, note: 'Pre-tax' },
+        { label: 'Health Insurance', amount: -health, note: 'Pre-tax' },
+        { label: 'Taxable Income', amount: taxableIncome, note: '' },
+        { label: 'Federal Income Tax', amount: -federalTax, note: v.federalRate + '%' },
+        { label: 'State Income Tax', amount: -stateTax, note: (v.stateRate || 0) + '%' },
+        { label: 'FICA (Social Security + Medicare)', amount: -ficaTax, note: (v.ficaRate || 7.65) + '%' },
+        { label: 'Net Annual Take-Home', amount: netAnnual, note: 'Bottom line' },
+      ];
+
+      let tableHtml = '<div class="table-container"><table class="data-table"><thead><tr><th>Item</th><th>Annual</th><th>Monthly</th><th>Note</th></tr></thead><tbody>';
+      rows.forEach(r => {
+        const style = r.amount < 0 ? 'color:var(--color-danger);' : (r.label.includes('Net') ? 'font-weight:600;color:var(--color-success);' : '');
+        tableHtml += `<tr><td>${r.label}</td><td style="${style}">${CalcWise.formatCurrency(r.amount, 0)}</td><td style="${style}">${CalcWise.formatCurrency(r.amount / 12, 0)}</td><td style="font-size:var(--text-sm);color:var(--color-text-secondary);">${r.note}</td></tr>`;
+      });
+      tableHtml += '</tbody></table></div>';
+      CalcWise.setHtml('breakdownTable', tableHtml);
+
+      CalcWise.showResults('results');
+    }
+
+    function resetNetIncome() {
+      document.getElementById('net-income-form').reset();
+      CalcWise.hideResults('results');
+    }
+  </script>
+</body>
+</html>

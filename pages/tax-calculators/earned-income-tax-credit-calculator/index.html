@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Earned Income Tax Credit Calculator 2026 | CalcWise</title>
+  <meta name="description" content="Estimate your 2026 Earned Income Tax Credit (EITC). Calculate your EITC amount based on earned income, filing status, and number of qualifying children.">
+  <link rel="canonical" href="https://calcwise.io/tax-calculators/earned-income-tax-credit-calculator/">
+  <meta property="og:title" content="Earned Income Tax Credit Calculator 2026 | CalcWise">
+  <meta property="og:description" content="Calculate your EITC refundable tax credit for 2026 based on income and family size.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcwise.io/tax-calculators/earned-income-tax-credit-calculator/">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/"},
+      {"@type": "ListItem", "position": 2, "name": "Tax Calculators", "item": "https://calcwise.io/tax-calculators/"},
+      {"@type": "ListItem", "position": 3, "name": "Earned Income Tax Credit Calculator"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the maximum EITC for 2026?",
+        "acceptedAnswer": {"@type": "Answer", "text": "For 2026, the maximum EITC is approximately $7,830 for families with 3 or more qualifying children, $6,960 for 2 children, $4,213 for 1 child, and $632 for workers with no qualifying children."}
+      },
+      {
+        "@type": "Question",
+        "name": "Who qualifies for the Earned Income Tax Credit?",
+        "acceptedAnswer": {"@type": "Answer", "text": "To qualify, you must have earned income from employment or self-employment, meet income limits, not have investment income over $11,000, have a valid Social Security number, and be a US citizen or resident alien. Rules differ for those with and without qualifying children."}
+      },
+      {
+        "@type": "Question",
+        "name": "Is the EITC refundable?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Yes. The EITC is a fully refundable credit, meaning if the credit exceeds your tax liability, you receive the difference as a tax refund."}
+      },
+      {
+        "@type": "Question",
+        "name": "Does self-employment income count as earned income for the EITC?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Yes. Net earnings from self-employment count as earned income for the EITC, but you must subtract your self-employment tax deduction and may need to include SE income in your calculation carefully."}
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="logo">
+        <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav">
+        <a href="/">Home</a>
+        <a href="/pages/business-calculators/">Business</a>
+        <a href="/pages/financial-calculators/">Financial</a>
+        <a href="/pages/tax-calculators/" aria-current="page">Tax</a>
+        <a href="/pages/investment-calculators/">Investment</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav">
+      <a href="/">Home</a>
+      <a href="/pages/business-calculators/">Business Calculators</a>
+      <a href="/pages/financial-calculators/">Financial Calculators</a>
+      <a href="/pages/tax-calculators/">Tax Calculators</a>
+      <a href="/pages/investment-calculators/">Investment Calculators</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/pages/tax-calculators/">Tax Calculators</a></li>
+          <li><span aria-current="page">Earned Income Tax Credit Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="calc-page-layout">
+          <div class="calc-page-main">
+            <h1>Earned Income Tax Credit (EITC) Calculator</h1>
+            <p class="subtitle" style="font-size:var(--text-lg);color:var(--color-gray-600);margin-bottom:var(--space-8);line-height:var(--leading-relaxed);">Estimate your 2026 Earned Income Tax Credit — one of the most valuable refundable credits available to working individuals and families. Enter your earned income, filing status, and number of qualifying children to find your estimated EITC amount.</p>
+
+            <div class="calc-container">
+              <div class="calc-header">
+                <h2>EITC Calculator</h2>
+                <p>Estimate your Earned Income Tax Credit for 2026</p>
+              </div>
+              <div class="calc-body">
+                <form id="calc-form" onsubmit="return false;">
+                  <div class="form-group">
+                    <label class="form-label" for="earned-income">Earned Income (wages + net self-employment)</label>
+                    <div class="input-prefix">
+                      <span class="prefix">$</span>
+                      <input type="number" id="earned-income" class="form-input" placeholder="35000" min="0" step="500">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="filing-status">Filing Status</label>
+                    <select id="filing-status" class="form-select">
+                      <option value="single">Single / Head of Household / Widower</option>
+                      <option value="married">Married Filing Jointly</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="num-children">Number of Qualifying Children</label>
+                    <select id="num-children" class="form-select">
+                      <option value="0">No qualifying children</option>
+                      <option value="1">1 qualifying child</option>
+                      <option value="2">2 qualifying children</option>
+                      <option value="3">3 or more qualifying children</option>
+                    </select>
+                  </div>
+                  <div class="calc-actions">
+                    <button type="button" class="btn btn-calculate btn-full" onclick="calculateEITC()">Calculate EITC</button>
+                    <button type="button" class="btn btn-reset" onclick="resetForm()">Reset</button>
+                  </div>
+                </form>
+
+                <div id="results" class="calc-results hidden">
+                  <div class="result-primary">
+                    <div class="result-label">Estimated EITC</div>
+                    <div class="result-value" id="result-eitc">$0</div>
+                  </div>
+                  <div class="result-grid">
+                    <div class="result-item">
+                      <div class="result-label">Maximum EITC</div>
+                      <div class="result-value" id="result-max">$0</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Phase-In Range</div>
+                      <div class="result-value" id="result-phasein">—</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Phase-Out Range</div>
+                      <div class="result-value" id="result-phaseout">—</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Status</div>
+                      <div class="result-value" id="result-status">—</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="ad-slot ad-slot-leaderboard"></div>
+
+            <section class="content-section">
+              <h2>How the EITC Is Calculated</h2>
+              <div class="formula-box">
+                <div class="formula-label">Phase-In (building up to maximum)</div>
+                Credit = Earned Income × Phase-In Rate<br>
+                The credit increases with each dollar of earned income up to the maximum.
+              </div>
+              <div class="formula-box">
+                <div class="formula-label">Plateau (maximum credit range)</div>
+                Full credit between phase-in completion and phase-out start thresholds.
+              </div>
+              <div class="formula-box">
+                <div class="formula-label">Phase-Out (credit reduces at higher income)</div>
+                Credit = Maximum − (Income − Phase-Out Start) × Phase-Out Rate<br>
+                Credit reaches $0 at the phase-out limit.
+              </div>
+            </section>
+
+            <section class="content-section">
+              <h2>2026 EITC Parameters (Estimated)</h2>
+              <table style="width:100%;border-collapse:collapse;font-size:var(--text-sm);margin-top:var(--space-4);">
+                <thead><tr style="background:var(--color-primary-50);"><th style="padding:var(--space-2) var(--space-3);text-align:left;">Children</th><th style="padding:var(--space-2) var(--space-3);text-align:right;">Max Credit</th><th style="padding:var(--space-2) var(--space-3);text-align:right;">Phase-In Rate</th><th style="padding:var(--space-2) var(--space-3);text-align:right;">Income Limit (Single)</th></tr></thead>
+                <tbody>
+                  <tr style="background:var(--color-white)"><td style="padding:var(--space-2) var(--space-3);">0</td><td style="padding:var(--space-2) var(--space-3);text-align:right;">$632</td><td style="padding:var(--space-2) var(--space-3);text-align:right;">7.65%</td><td style="padding:var(--space-2) var(--space-3);text-align:right;">~$18,591</td></tr>
+                  <tr style="background:var(--color-gray-50)"><td style="padding:var(--space-2) var(--space-3);">1</td><td style="padding:var(--space-2) var(--space-3);text-align:right;">$4,213</td><td style="padding:var(--space-2) var(--space-3);text-align:right;">34%</td><td style="padding:var(--space-2) var(--space-3);text-align:right;">~$49,084</td></tr>
+                  <tr style="background:var(--color-white)"><td style="padding:var(--space-2) var(--space-3);">2</td><td style="padding:var(--space-2) var(--space-3);text-align:right;">$6,960</td><td style="padding:var(--space-2) var(--space-3);text-align:right;">40%</td><td style="padding:var(--space-2) var(--space-3);text-align:right;">~$55,768</td></tr>
+                  <tr style="background:var(--color-gray-50)"><td style="padding:var(--space-2) var(--space-3);">3+</td><td style="padding:var(--space-2) var(--space-3);text-align:right;">$7,830</td><td style="padding:var(--space-2) var(--space-3);text-align:right;">45%</td><td style="padding:var(--space-2) var(--space-3);text-align:right;">~$59,899</td></tr>
+                </tbody>
+              </table>
+            </section>
+
+            <section class="content-section">
+              <h2>How to Use This Calculator</h2>
+              <ol>
+                <li>Enter your <strong>earned income</strong> — wages from W2 jobs plus net self-employment income.</li>
+                <li>Select your <strong>filing status</strong>.</li>
+                <li>Select the <strong>number of qualifying children</strong>.</li>
+                <li>Click <strong>Calculate EITC</strong> to see your estimated credit.</li>
+              </ol>
+            </section>
+
+            <section class="faq-section">
+              <h2>Frequently Asked Questions</h2>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">What is the maximum EITC for 2026?<svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg></button>
+                <div class="faq-answer"><p>For 2026, the maximum EITC is approximately $7,830 for families with 3 or more qualifying children, $6,960 for 2 children, $4,213 for 1 child, and $632 for workers with no qualifying children.</p></div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">Who qualifies for the Earned Income Tax Credit?<svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg></button>
+                <div class="faq-answer"><p>To qualify, you must have earned income from employment or self-employment, meet income limits, not have investment income over $11,000, have a valid Social Security number, and be a US citizen or resident alien.</p></div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">Is the EITC refundable?<svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg></button>
+                <div class="faq-answer"><p>Yes. The EITC is a fully refundable credit, meaning if the credit exceeds your tax liability, you receive the difference as a tax refund.</p></div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">Does self-employment income count as earned income for the EITC?<svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg></button>
+                <div class="faq-answer"><p>Yes. Net earnings from self-employment count as earned income for the EITC, but you must subtract your self-employment tax deduction and may need to include SE income in your calculation carefully.</p></div>
+              </div>
+            </section>
+
+            <section class="related-calculators">
+              <h2>Related Calculators</h2>
+              <div class="grid grid-3">
+                <a href="/pages/tax-calculators/child-tax-credit-calculator/" class="card card-link">
+                  <h3>Child Tax Credit Calculator</h3>
+                  <p>Estimate the Child Tax Credit for qualifying dependents.</p>
+                </a>
+                <a href="/pages/tax-calculators/tax-refund-estimator/" class="card card-link">
+                  <h3>Tax Refund Estimator</h3>
+                  <p>See your total estimated refund including EITC and other credits.</p>
+                </a>
+                <a href="/pages/tax-calculators/after-tax-income-calculator/" class="card card-link">
+                  <h3>After-Tax Income Calculator</h3>
+                  <p>Calculate your true net take-home pay after all taxes.</p>
+                </a>
+                <a href="/pages/tax-calculators/self-employment-tax-calculator/" class="card card-link">
+                  <h3>Self-Employment Tax Calculator</h3>
+                  <p>Calculate SE tax if you have self-employment income.</p>
+                </a>
+              </div>
+            </section>
+
+            <div class="disclaimer">
+              <strong>Tax Disclaimer:</strong> This calculator provides estimates for educational purposes only and does not constitute tax advice. EITC eligibility involves additional rules not captured here, including investment income limits, age requirements for childless workers, and dependency qualification tests. Consult a qualified tax professional or use IRS EITC Assistant at irs.gov to verify eligibility. Results are based on estimated 2026 federal tax parameters.
+            </div>
+          </div>
+
+          <aside class="calc-page-sidebar">
+            <div class="ad-slot ad-slot-rectangle"></div>
+            <div class="sidebar-card">
+              <h3>Tax Calculators</h3>
+              <a href="/pages/tax-calculators/child-tax-credit-calculator/">Child Tax Credit</a>
+              <a href="/pages/tax-calculators/tax-refund-estimator/">Tax Refund Estimator</a>
+              <a href="/pages/tax-calculators/after-tax-income-calculator/">After-Tax Income</a>
+              <a href="/pages/tax-calculators/tax-bracket-calculator/">Tax Bracket Calculator</a>
+              <a href="/pages/tax-calculators/standard-vs-itemized-deduction-calculator/">Deduction Calculator</a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free online calculators for business, finance, tax, and investment decisions.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Calculators</h4>
+          <a href="/pages/business-calculators/">Business</a>
+          <a href="/pages/financial-calculators/">Financial</a>
+          <a href="/pages/tax-calculators/">Tax</a>
+          <a href="/pages/investment-calculators/">Investment</a>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <a href="/about/">About</a>
+          <a href="/blog/">Blog</a>
+          <a href="/contact/">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="/privacy/">Privacy Policy</a>
+          <a href="/terms/">Terms of Service</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/privacy/">Privacy</a>
+          <a href="/terms/">Terms</a>
+          <a href="/contact/">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    // 2026 EITC parameters (estimated)
+    const EITC_PARAMS = {
+      single: {
+        0: {maxCredit:632, phaseInRate:0.0765, phaseInEnd:8490, phaseOutStart:10980, phaseOutEnd:18591, phaseOutRate:0.0765},
+        1: {maxCredit:4213, phaseInRate:0.34, phaseInEnd:10520, phaseOutStart:21560, phaseOutEnd:49084, phaseOutRate:0.1598},
+        2: {maxCredit:6960, phaseInRate:0.40, phaseInEnd:14820, phaseOutStart:21560, phaseOutEnd:55768, phaseOutRate:0.2106},
+        3: {maxCredit:7830, phaseInRate:0.45, phaseInEnd:14820, phaseOutStart:21560, phaseOutEnd:59899, phaseOutRate:0.2106}
+      },
+      married: {
+        0: {maxCredit:632, phaseInRate:0.0765, phaseInEnd:8490, phaseOutStart:17220, phaseOutEnd:25511, phaseOutRate:0.0765},
+        1: {maxCredit:4213, phaseInRate:0.34, phaseInEnd:10520, phaseOutStart:27830, phaseOutEnd:56004, phaseOutRate:0.1598},
+        2: {maxCredit:6960, phaseInRate:0.40, phaseInEnd:14820, phaseOutStart:27830, phaseOutEnd:62688, phaseOutRate:0.2106},
+        3: {maxCredit:7830, phaseInRate:0.45, phaseInEnd:14820, phaseOutStart:27830, phaseOutEnd:66819, phaseOutRate:0.2106}
+      }
+    };
+
+    function calculateEITC() {
+      const income = CalcWise.parseNumber(document.getElementById('earned-income').value);
+      const status = document.getElementById('filing-status').value;
+      const children = document.getElementById('num-children').value;
+
+      if (income < 0) { alert('Please enter your earned income.'); return; }
+
+      const params = EITC_PARAMS[status][children];
+      let credit = 0, statusMsg = '';
+
+      if (income <= 0) {
+        credit = 0; statusMsg = 'No earned income — not eligible';
+      } else if (income >= params.phaseOutEnd) {
+        credit = 0; statusMsg = 'Income exceeds EITC limit — not eligible';
+      } else if (income <= params.phaseInEnd) {
+        credit = income * params.phaseInRate;
+        statusMsg = 'Phase-in range — credit increasing';
+      } else if (income <= params.phaseOutStart) {
+        credit = params.maxCredit;
+        statusMsg = 'Full credit range';
+      } else {
+        credit = Math.max(0, params.maxCredit - (income - params.phaseOutStart) * params.phaseOutRate);
+        statusMsg = 'Phase-out range — credit reducing';
+      }
+
+      CalcWise.setText('result-eitc', CalcWise.formatCurrency(credit));
+      CalcWise.setText('result-max', CalcWise.formatCurrency(params.maxCredit));
+      CalcWise.setText('result-phasein', '$0 – ' + CalcWise.formatCurrency(params.phaseInEnd));
+      CalcWise.setText('result-phaseout', CalcWise.formatCurrency(params.phaseOutStart) + ' – ' + CalcWise.formatCurrency(params.phaseOutEnd));
+      CalcWise.setText('result-status', statusMsg);
+      CalcWise.showResults('results');
+    }
+
+    function resetForm() {
+      document.getElementById('calc-form').reset();
+      CalcWise.hideResults('results');
+    }
+
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', !expanded);
+        btn.nextElementSibling.style.display = expanded ? 'none' : 'block';
+      });
+    });
+    document.querySelectorAll('.faq-answer').forEach(a => a.style.display = 'none');
+
+    const toggle = document.querySelector('.mobile-menu-toggle');
+    const mobileNav = document.querySelector('.mobile-nav');
+    if (toggle && mobileNav) {
+      toggle.addEventListener('click', () => {
+        const open = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', !open);
+        mobileNav.style.display = open ? 'none' : 'block';
+      });
+    }
+  </script>
+</body>
+</html>

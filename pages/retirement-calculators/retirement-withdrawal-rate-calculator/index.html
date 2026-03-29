@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Retirement Withdrawal Rate Calculator - 4% Rule Analysis | CalcWise</title>
+  <meta name="description" content="Free retirement withdrawal rate calculator. Analyze your withdrawal rate, safe withdrawal amount, and portfolio longevity. Compare against the 4% rule with your expected return and inflation inputs.">
+  <meta name="keywords" content="retirement withdrawal rate calculator, 4% rule calculator, safe withdrawal rate, portfolio longevity calculator, sustainable withdrawal retirement">
+  <link rel="canonical" href="https://calcwise.io/retirement-calculators/retirement-withdrawal-rate-calculator/">
+
+  <meta property="og:title" content="Retirement Withdrawal Rate Calculator - 4% Rule Analysis">
+  <meta property="og:description" content="Calculate your withdrawal rate, safe withdrawal amount, and how long your portfolio will last at different spending levels.">
+  <meta property="og:url" content="https://calcwise.io/retirement-calculators/retirement-withdrawal-rate-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Retirement Withdrawal Rate Calculator - 4% Rule Analysis">
+  <meta name="twitter:description" content="Calculate your withdrawal rate and how long your retirement portfolio will last at your planned spending level.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Retirement Calculators", "item": "https://calcwise.io/retirement-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "Retirement Withdrawal Rate Calculator", "item": "https://calcwise.io/retirement-calculators/retirement-withdrawal-rate-calculator/" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the 4% rule in retirement?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The 4% rule comes from the Trinity Study (1994) which found that a portfolio of 50% stocks and 50% bonds could sustain a 4% initial withdrawal rate (adjusted for inflation annually) for at least 30 years in nearly all historical market scenarios. It is a useful starting point but not a guarantee — actual outcomes depend on market returns and timing." }
+      },
+      {
+        "@type": "Question",
+        "name": "Is the 4% rule still valid?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The 4% rule remains a widely used benchmark. Some financial researchers suggest a more conservative 3-3.5% rule given current low bond yields and high valuations. For longer retirements (35-40 years), a 3.5% rate is considered more cautious. For shorter retirements, 4.5-5% may be sustainable. It is best used as a starting point, not a precise rule." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is a safe withdrawal rate for a 30-year retirement?",
+        "acceptedAnswer": { "@type": "Answer", "text": "For a 30-year retirement, research suggests 3.5–4% is historically safe for a diversified portfolio. For a 40-year retirement, 3–3.5% is more conservative and appropriate. Higher stock allocations historically support higher withdrawal rates but with more volatility. A variable withdrawal strategy (adjusting spending in down markets) can also extend portfolio longevity." }
+      },
+      {
+        "@type": "Question",
+        "name": "How does inflation affect withdrawal rates?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The 4% rule assumes annual inflation adjustments to maintain purchasing power. Without inflation adjustments, a fixed withdrawal is easier on the portfolio but erodes your real spending power over time. At 3% inflation, a $5,000/month withdrawal in year 1 would need to be $9,031 by year 20 to maintain the same purchasing power." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/retirement-calculators/" aria-current="page">Retirement</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/retirement-calculators/">Retirement Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/retirement-calculators/">Retirement Calculators</a></li>
+          <li><span aria-current="page">Retirement Withdrawal Rate Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="article-content">
+          <h1>Retirement Withdrawal Rate Calculator</h1>
+          <p>Understand how long your retirement portfolio will last at your planned spending level. This calculator computes your current withdrawal rate, compares it to the 4% rule benchmark, estimates portfolio longevity, and shows you the maximum safe annual withdrawal based on your return and inflation assumptions.</p>
+
+          <div class="calc-container mt-8">
+            <div class="calc-header">
+              <h2>Analyze Your Withdrawal Rate</h2>
+              <p>Enter your portfolio details and spending plan</p>
+            </div>
+            <div class="calc-body">
+              <form id="withdrawal-form" onsubmit="return false;">
+                <div class="form-group">
+                  <label class="form-label" for="portfolio-value">Current Portfolio Value</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="portfolio-value" class="form-input" placeholder="1000000" min="10000" step="10000" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="annual-spending">Planned Annual Spending from Portfolio</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="annual-spending" class="form-input" placeholder="50000" min="1000" step="1000" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="portfolio-return">Expected Annual Portfolio Return</label>
+                  <div class="input-suffix">
+                    <input type="number" id="portfolio-return" class="form-input" placeholder="7" min="0" max="20" step="0.5" required>
+                    <span class="suffix">%</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="inflation-rate">Expected Annual Inflation Rate</label>
+                  <div class="input-suffix">
+                    <input type="number" id="inflation-rate" class="form-input" placeholder="3" min="0" max="15" step="0.5" required>
+                    <span class="suffix">%</span>
+                  </div>
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calcWithdrawal()">Analyze Withdrawal Rate</button>
+                  <button type="button" class="btn btn-reset" onclick="resetCalc()">Reset</button>
+                </div>
+              </form>
+
+              <div id="calc-results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">Your Withdrawal Rate</div>
+                  <div class="result-value" id="result-withdrawal-rate"></div>
+                </div>
+                <div class="result-grid">
+                  <div class="result-item">
+                    <div class="result-label">Portfolio Longevity Estimate</div>
+                    <div class="result-value" id="result-longevity"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">4% Rule Safe Withdrawal</div>
+                    <div class="result-value" id="result-safe-4pct"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">3.5% Conservative Withdrawal</div>
+                    <div class="result-value" id="result-safe-35pct"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Rate Assessment</div>
+                    <div class="result-value" id="result-assessment"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <section class="content-section">
+            <h2>Withdrawal Rate Analysis Formula</h2>
+            <p>The calculator simulates year-by-year portfolio drawdown with inflation-adjusted spending:</p>
+            <div class="formula-box">
+              <div class="formula-label">Your Withdrawal Rate</div>
+              Withdrawal Rate = Annual Spending / Portfolio Value x 100%
+            </div>
+            <div class="formula-box">
+              <div class="formula-label">Annual Portfolio Simulation</div>
+              Balance(n+1) = Balance(n) x (1 + return) - Annual Spending x (1 + inflation)^n
+              Simulated until balance reaches zero or 50 years, whichever comes first
+            </div>
+            <div class="formula-box">
+              <div class="formula-label">Safe Withdrawal Benchmarks</div>
+              4% Rule: Portfolio x 0.04 = maximum annual withdrawal for ~30-year retirement
+              3.5% Rule: Portfolio x 0.035 = more conservative for 35-40 year retirements
+            </div>
+          </section>
+
+          <section class="content-section">
+            <h2>How to Use This Withdrawal Rate Calculator</h2>
+            <ol>
+              <li><strong>Enter your portfolio value</strong> - the total investable assets you are drawing from in retirement.</li>
+              <li><strong>Enter annual spending from portfolio</strong> - your planned yearly withdrawals (exclude Social Security or pension income).</li>
+              <li><strong>Enter expected portfolio return</strong> - a conservative 6-7% is typical for a balanced retirement portfolio.</li>
+              <li><strong>Enter expected inflation</strong> - 3% is a standard assumption; your spending will increase each year to keep pace.</li>
+              <li><strong>Click "Analyze Withdrawal Rate"</strong> to see your rate, longevity estimate, and benchmark comparisons.</li>
+            </ol>
+          </section>
+
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>A retiree with a $1.2 million portfolio plans to spend $54,000/year (4.5% withdrawal rate). With a 7% expected return and 3% inflation, the simulation shows the portfolio lasting approximately 34 years. The 4% rule recommends no more than $48,000/year for indefinite sustainability. At $54,000/year the withdrawal is slightly above the 4% benchmark, but the projection still shows strong longevity thanks to favorable return assumptions. Spending $6,000 less per year (or $500/month) would bring this within the safe threshold.</p>
+          </section>
+
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What is the 4% rule in retirement?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>The 4% rule comes from the Trinity Study (1994) which found that a balanced portfolio could sustain a 4% initial withdrawal rate (adjusted for inflation annually) for at least 30 years in nearly all historical market scenarios. It is a useful starting point but not a guarantee — actual outcomes depend on market returns and timing.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Is the 4% rule still valid?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>The 4% rule remains a widely used benchmark. Some researchers suggest a more conservative 3-3.5% given current conditions. For longer retirements (35-40 years), 3.5% is considered more cautious. It is best used as a starting point for planning, not a precise rule.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What is a safe withdrawal rate for a 30-year retirement?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>For a 30-year retirement, research suggests 3.5–4% is historically safe for a diversified portfolio. For a 40-year retirement, 3–3.5% is more appropriate. A variable withdrawal strategy (adjusting spending in down markets) can also extend portfolio longevity.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                How does inflation affect withdrawal rates?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>The 4% rule assumes annual inflation adjustments to maintain purchasing power. Without adjustments, a fixed withdrawal is easier on the portfolio but erodes real spending power. At 3% inflation, $5,000/month in year 1 needs to be $9,031/month by year 20 to maintain the same purchasing power.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/retirement-calculators/retirement-nest-egg-calculator/" class="card card-link">
+                <h3>Nest Egg Calculator</h3>
+                <p>Calculate the portfolio size needed to fund your desired retirement income.</p>
+              </a>
+              <a href="/retirement-calculators/early-retirement-calculator/" class="card card-link">
+                <h3>Early Retirement Calculator</h3>
+                <p>Test whether your savings can sustain a longer early retirement horizon.</p>
+              </a>
+              <a href="/retirement-calculators/retirement-savings-gap-calculator/" class="card card-link">
+                <h3>Savings Gap Calculator</h3>
+                <p>Find out if you need to save more to build a portfolio that supports your rate.</p>
+              </a>
+              <a href="/retirement-calculators/longevity-calculator/" class="card card-link">
+                <h3>Longevity Calculator</h3>
+                <p>Estimate your retirement length to match with the right withdrawal rate.</p>
+              </a>
+            </div>
+          </section>
+
+          <div class="disclaimer">
+            <strong>Disclaimer:</strong> Portfolio longevity estimates are based on assumed constant returns and are for illustration only. Real returns fluctuate year to year, and sequence of returns risk can dramatically affect outcomes. The 4% rule is a historical benchmark, not a guarantee. This is not financial advice — consult a qualified financial planner for a personalized withdrawal strategy.
+          </div>
+
+          <div class="ad-slot ad-slot-leaderboard"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Real Estate</h4>
+          <a href="/real-estate-calculators/">All Real Estate Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Retirement</h4>
+          <a href="/retirement-calculators/">All Retirement Calculators</a>
+          <a href="/retirement-calculators/retirement-age-calculator/">Retirement Age</a>
+          <a href="/retirement-calculators/401k-match-calculator/">401(k) Match</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calcWithdrawal() {
+      const portfolioValue = parseFloat(document.getElementById('portfolio-value').value);
+      const annualSpending = parseFloat(document.getElementById('annual-spending').value);
+      const annualReturn = parseFloat(document.getElementById('portfolio-return').value) / 100;
+      const inflation = parseFloat(document.getElementById('inflation-rate').value) / 100;
+
+      if (!portfolioValue || !annualSpending || isNaN(annualReturn) || isNaN(inflation)) return;
+
+      const withdrawalRate = (annualSpending / portfolioValue) * 100;
+
+      // Simulate portfolio year by year
+      let balance = portfolioValue;
+      let years = 0;
+      const maxYears = 50;
+
+      while (balance > 0 && years < maxYears) {
+        balance = balance * (1 + annualReturn) - annualSpending * Math.pow(1 + inflation, years);
+        years++;
+        if (balance <= 0) break;
+      }
+
+      const longevity = balance > 0 ? '50+ years' : years + ' years';
+      const safe4pct = portfolioValue * 0.04;
+      const safe35pct = portfolioValue * 0.035;
+
+      let assessment, assessmentColor;
+      if (withdrawalRate <= 3.5) {
+        assessment = 'Very Conservative';
+        assessmentColor = '#059669';
+      } else if (withdrawalRate <= 4.0) {
+        assessment = 'Safe (4% Rule)';
+        assessmentColor = '#059669';
+      } else if (withdrawalRate <= 5.0) {
+        assessment = 'Moderate Risk';
+        assessmentColor = '#D97706';
+      } else {
+        assessment = 'High Risk';
+        assessmentColor = '#DC2626';
+      }
+
+      const fmt = (v) => CalcWise.formatCurrency(v, 0);
+
+      const rateEl = document.getElementById('result-withdrawal-rate');
+      rateEl.textContent = withdrawalRate.toFixed(2) + '%';
+      rateEl.style.color = withdrawalRate <= 4 ? '#059669' : withdrawalRate <= 5 ? '#D97706' : '#DC2626';
+
+      CalcWise.setText('result-longevity', longevity);
+      CalcWise.setText('result-safe-4pct', fmt(safe4pct) + '/yr');
+      CalcWise.setText('result-safe-35pct', fmt(safe35pct) + '/yr');
+
+      const assessEl = document.getElementById('result-assessment');
+      assessEl.textContent = assessment;
+      assessEl.style.color = assessmentColor;
+
+      CalcWise.showResults('calc-results');
+    }
+
+    function resetCalc() {
+      document.getElementById('withdrawal-form').reset();
+      CalcWise.hideResults('calc-results');
+    }
+  </script>
+</body>
+</html>

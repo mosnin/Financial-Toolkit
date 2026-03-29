@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Real vs Nominal Return Calculator - CalcWise</title>
+  <meta name="description" content="Calculate your real investment return after adjusting for inflation. See how much of your nominal gain is actually lost to inflation using the Fisher Equation.">
+  <link rel="canonical" href="https://calcwise.io/inflation-calculators/real-vs-nominal-return-calculator/">
+  <meta property="og:title" content="Real vs Nominal Return Calculator - CalcWise">
+  <meta property="og:description" content="Find out how much of your investment return is real after inflation. Calculate real vs nominal returns instantly.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcwise.io/inflation-calculators/real-vs-nominal-return-calculator/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Real vs Nominal Return Calculator - CalcWise">
+  <meta name="twitter:description" content="Find out how much of your investment return is real after inflation. Calculate real vs nominal returns instantly.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/"},
+      {"@type": "ListItem", "position": 2, "name": "Inflation Calculators", "item": "https://calcwise.io/inflation-calculators/"},
+      {"@type": "ListItem", "position": 3, "name": "Real vs Nominal Return Calculator"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the difference between real and nominal return?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Nominal return is the stated percentage gain on an investment before accounting for inflation. Real return is the inflation-adjusted gain — what you actually earned in terms of purchasing power. If your investment returned 8% but inflation was 3%, your real return is approximately 4.85%, not 5%."}
+      },
+      {
+        "@type": "Question",
+        "name": "How do you calculate real return from nominal return?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Use the Fisher Equation: Real Return = ((1 + Nominal Rate) / (1 + Inflation Rate)) - 1. A simplified approximation is Real Return ≈ Nominal Rate − Inflation Rate, but the Fisher Equation is more accurate, especially at higher rates."}
+      },
+      {
+        "@type": "Question",
+        "name": "Why is real return more important than nominal return?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Real return tells you how much your purchasing power actually grew. A 6% nominal return during 6% inflation means you broke even in real terms — you can buy exactly the same amount of goods as before. Nominal returns can be misleading when inflation is high."}
+      },
+      {
+        "@type": "Question",
+        "name": "What is a good real return on investments?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Historically, the US stock market has delivered a real return of approximately 7% per year after inflation. Bonds typically provide a real return of 1–3%. Any positive real return means you are growing your purchasing power, while a negative real return means inflation is outpacing your investment gains."}
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="logo">
+        <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav">
+        <a href="/">Home</a>
+        <a href="/pages/finance-calculators/">Finance</a>
+        <a href="/pages/business-calculators/">Business</a>
+        <a href="/pages/investment-calculators/">Investment</a>
+        <a href="/inflation-calculators/" aria-current="page">Inflation</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav">
+      <a href="/">Home</a>
+      <a href="/pages/finance-calculators/">Finance Calculators</a>
+      <a href="/pages/business-calculators/">Business Calculators</a>
+      <a href="/pages/investment-calculators/">Investment Calculators</a>
+      <a href="/inflation-calculators/">Inflation Calculators</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <!-- Breadcrumbs -->
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li><a href="/inflation-calculators/">Inflation Calculators</a></li>
+        <li><span aria-current="page">Real vs Nominal Return Calculator</span></li>
+      </ol>
+    </nav>
+
+    <div class="page-content">
+      <div class="article-content">
+        <h1>Real vs Nominal Return Calculator</h1>
+        <p>Your investment statement shows a strong nominal return — but how much of that gain actually translates into real purchasing power after inflation? This calculator uses the Fisher Equation to strip away the effects of inflation and reveal your true real return, giving you a clear picture of whether your portfolio is truly growing your wealth.</p>
+
+        <!-- Ad Slot -->
+        <div class="ad-slot ad-slot-leaderboard"></div>
+
+        <!-- Calculator -->
+        <div class="calc-container">
+          <div class="calc-header">
+            <h2>Calculate Your Real Investment Return</h2>
+            <p>Enter your nominal return, inflation rate, and investment amount to see the full breakdown</p>
+          </div>
+          <div class="calc-body">
+            <form id="rvn-form">
+              <div class="form-group">
+                <label class="form-label" for="investmentAmount">Initial Investment Amount</label>
+                <div class="input-prefix">
+                  <span class="prefix">$</span>
+                  <input type="number" id="investmentAmount" name="investmentAmount" class="form-input" placeholder="10000" min="1" step="100" required>
+                </div>
+              </div>
+              <div class="calc-grid calc-grid-2col">
+                <div class="form-group">
+                  <label class="form-label" for="nominalReturn">Nominal Return Rate <span class="form-hint">(%/yr)</span></label>
+                  <div class="input-suffix">
+                    <input type="number" id="nominalReturn" name="nominalReturn" class="form-input" placeholder="8" min="-50" max="100" step="0.1" required>
+                    <span class="suffix">%</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="inflationRate">Inflation Rate <span class="form-hint">(%/yr)</span></label>
+                  <div class="input-suffix">
+                    <input type="number" id="inflationRate" name="inflationRate" class="form-input" placeholder="3" min="0" max="50" step="0.1" required>
+                    <span class="suffix">%</span>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="holdingYears">Holding Period</label>
+                <div class="input-suffix">
+                  <input type="number" id="holdingYears" name="holdingYears" class="form-input" placeholder="10" min="1" max="50" step="1" required>
+                  <span class="suffix">yrs</span>
+                </div>
+              </div>
+
+              <div class="calc-actions">
+                <button type="button" class="btn btn-calculate" onclick="calculateRealReturn()">Calculate Real Return</button>
+                <button type="button" class="btn btn-reset" onclick="resetRealReturn()">Reset</button>
+              </div>
+            </form>
+
+            <!-- Results -->
+            <div id="results" class="calc-results hidden">
+              <div class="result-primary">
+                <div class="result-label">Real Annual Return (After Inflation)</div>
+                <div class="result-value" id="realReturnResult">0%</div>
+              </div>
+              <div class="result-grid result-grid-3">
+                <div class="result-item">
+                  <div class="result-label">Nominal Future Value</div>
+                  <div class="result-value" id="nominalFVResult">$0</div>
+                </div>
+                <div class="result-item">
+                  <div class="result-label">Real Future Value</div>
+                  <div class="result-value" id="realFVResult">$0</div>
+                </div>
+                <div class="result-item">
+                  <div class="result-label">Lost to Inflation</div>
+                  <div class="result-value" id="inflationLossResult" style="color: var(--color-error);">$0</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Formula Section -->
+        <section class="content-section">
+          <h2>Real vs Nominal Return Formula</h2>
+          <div class="formula-box">
+            <div class="formula-label">Fisher Equation</div>
+            Real Return = ((1 + Nominal Rate) / (1 + Inflation Rate)) − 1<br><br>
+            Nominal Future Value = Investment × (1 + Nominal Rate)^Years<br><br>
+            Real Future Value = Investment × (1 + Real Rate)^Years<br><br>
+            Lost to Inflation = Nominal Future Value − Real Future Value
+          </div>
+          <p>The Fisher Equation, developed by economist Irving Fisher, gives the precise relationship between nominal returns, real returns, and inflation. Unlike the simple approximation (Nominal − Inflation), the Fisher Equation accounts for the compounding interaction between the return and inflation rate, which becomes significant at higher values.</p>
+        </section>
+
+        <!-- How to Use -->
+        <section class="content-section">
+          <h2>How to Use This Calculator</h2>
+          <ol>
+            <li><strong>Enter your initial investment:</strong> The dollar amount you invested or plan to invest.</li>
+            <li><strong>Input the nominal return rate:</strong> The annual percentage return your investment is expected to earn, as shown on your brokerage statement or fund prospectus.</li>
+            <li><strong>Set the inflation rate:</strong> Use 3% for the long-term US average, or a recent figure from the Bureau of Labor Statistics (BLS).</li>
+            <li><strong>Enter the holding period:</strong> How many years you plan to hold the investment.</li>
+            <li><strong>Review your results:</strong> Compare the nominal vs real future value to understand how much of your apparent gain is real wealth creation versus simply keeping up with rising prices.</li>
+          </ol>
+        </section>
+
+        <!-- Example Scenario -->
+        <section class="content-section">
+          <h2>Example Scenario</h2>
+          <p>Suppose you invest $10,000 in a fund earning 8% annually, with inflation running at 3%, held for 10 years:</p>
+          <ul>
+            <li><strong>Real return (Fisher Equation):</strong> ((1.08) / (1.03)) − 1 = 4.85% per year</li>
+            <li><strong>Nominal future value:</strong> $10,000 × (1.08)^10 = $21,589</li>
+            <li><strong>Real future value:</strong> $10,000 × (1.0485)^10 = $16,006</li>
+            <li><strong>Lost to inflation:</strong> $21,589 − $16,006 = $5,583</li>
+          </ul>
+          <p>While your account balance grows to $21,589, only $16,006 represents true purchasing power growth. More than $5,500 of your nominal gain is simply compensating for the rising cost of goods — it is not real wealth creation.</p>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+          <h2>Frequently Asked Questions</h2>
+          <div class="faq-item">
+            <button class="faq-question">
+              What is the difference between real and nominal return?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>Nominal return is the stated percentage gain on an investment before accounting for inflation. Real return is the inflation-adjusted gain — what you actually earned in terms of purchasing power. If your investment returned 8% but inflation was 3%, your real return is approximately 4.85%, not 5%.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              How do you calculate real return from nominal return?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>Use the Fisher Equation: Real Return = ((1 + Nominal Rate) / (1 + Inflation Rate)) - 1. A simplified approximation is Real Return ≈ Nominal Rate − Inflation Rate, but the Fisher Equation is more accurate, especially at higher rates.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              Why is real return more important than nominal return?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>Real return tells you how much your purchasing power actually grew. A 6% nominal return during 6% inflation means you broke even in real terms — you can buy exactly the same amount of goods as before. Nominal returns can be misleading when inflation is high.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              What is a good real return on investments?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>Historically, the US stock market has delivered a real return of approximately 7% per year after inflation. Bonds typically provide a real return of 1–3%. Any positive real return means you are growing your purchasing power, while a negative real return means inflation is outpacing your investment gains.</p></div>
+          </div>
+        </section>
+
+        <!-- Related Calculators -->
+        <section class="related-calculators">
+          <h2>Related Calculators</h2>
+          <div class="grid grid-3">
+            <a href="/inflation-calculators/inflation-impact-calculator/" class="card card-link">
+              <h3>Inflation Impact Calculator</h3>
+              <p>See the full impact of inflation on any dollar amount over time.</p>
+            </a>
+            <a href="/inflation-calculators/retirement-inflation-risk-calculator/" class="card card-link">
+              <h3>Retirement Inflation Risk Calculator</h3>
+              <p>Understand how inflation erodes retirement savings over decades.</p>
+            </a>
+            <a href="/inflation-calculators/future-purchasing-power-calculator/" class="card card-link">
+              <h3>Future Purchasing Power Calculator</h3>
+              <p>Find out what today's dollars will be worth in any future year.</p>
+            </a>
+            <a href="/inflation-calculators/inflation-adjusted-savings-calculator/" class="card card-link">
+              <h3>Inflation-Adjusted Savings Calculator</h3>
+              <p>See your real savings growth after accounting for inflation.</p>
+            </a>
+            <a href="/pages/investment-calculators/compound-interest-calculator/" class="card card-link">
+              <h3>Compound Interest Calculator</h3>
+              <p>Calculate how compound interest grows your investment over time.</p>
+            </a>
+          </div>
+        </section>
+
+        <!-- Disclaimer -->
+        <div class="disclaimer">
+          <strong>Disclaimer:</strong> This calculator is provided for informational and educational purposes only. It does not constitute financial advice. Investment returns are not guaranteed, and past performance does not predict future results. Consult a qualified financial advisor for personalized guidance.
+        </div>
+
+        <!-- Ad Slot -->
+        <div class="ad-slot ad-slot-rectangle"></div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free online financial calculators to help you make smarter money decisions.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Inflation Tools</h4>
+          <a href="/inflation-calculators/inflation-impact-calculator/">Inflation Impact</a>
+          <a href="/inflation-calculators/future-purchasing-power-calculator/">Purchasing Power</a>
+          <a href="/inflation-calculators/real-vs-nominal-return-calculator/">Real vs Nominal Return</a>
+          <a href="/inflation-calculators/retirement-inflation-risk-calculator/">Retirement Inflation Risk</a>
+        </div>
+        <div class="footer-col">
+          <h4>Finance</h4>
+          <a href="/pages/finance-calculators/net-worth-calculator/">Net Worth</a>
+          <a href="/pages/finance-calculators/budget-calculator/">Budget (50/30/20)</a>
+          <a href="/pages/finance-calculators/emergency-fund-calculator/">Emergency Fund</a>
+          <a href="/pages/finance-calculators/retirement-savings-calculator/">Retirement Savings</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about/">About</a>
+          <a href="/contact/">Contact</a>
+          <a href="/privacy/">Privacy Policy</a>
+          <a href="/terms/">Terms of Service</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 CalcWise. All rights reserved.</span>
+        <div class="footer-links">
+          <a href="/privacy/">Privacy</a>
+          <a href="/terms/">Terms</a>
+          <a href="/contact/">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateRealReturn() {
+      if (!CalcWise.validateForm('rvn-form')) return;
+      const v = CalcWise.getFormValues('rvn-form');
+
+      const nominalRate = v.nominalReturn / 100;
+      const inflationRate = v.inflationRate / 100;
+
+      // Fisher Equation
+      const realRate = ((1 + nominalRate) / (1 + inflationRate)) - 1;
+      const realRatePct = realRate * 100;
+
+      const nominalFV = v.investmentAmount * Math.pow(1 + nominalRate, v.holdingYears);
+      const realFV = v.investmentAmount * Math.pow(1 + realRate, v.holdingYears);
+      const lostToInflation = nominalFV - realFV;
+
+      const realReturnEl = document.getElementById('realReturnResult');
+      realReturnEl.textContent = (realRatePct >= 0 ? '+' : '') + CalcWise.formatPercent(realRatePct) + '/yr';
+      realReturnEl.style.color = realRatePct >= 0 ? 'var(--color-success)' : 'var(--color-error)';
+
+      CalcWise.setText('nominalFVResult', CalcWise.formatCurrency(nominalFV));
+      CalcWise.setText('realFVResult', CalcWise.formatCurrency(realFV));
+      CalcWise.setText('inflationLossResult', '-' + CalcWise.formatCurrency(lostToInflation));
+
+      CalcWise.showResults('results');
+    }
+
+    function resetRealReturn() {
+      document.getElementById('rvn-form').reset();
+      CalcWise.hideResults('results');
+    }
+  </script>
+</body>
+</html>

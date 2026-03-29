@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>After-Tax Income Calculator | CalcWise</title>
+  <meta name="description" content="Calculate your true net take-home income after federal tax, state tax, Social Security, and Medicare. Supports all 50 states and all filing statuses.">
+  <link rel="canonical" href="https://calcwise.io/tax-calculators/after-tax-income-calculator/">
+  <meta property="og:title" content="After-Tax Income Calculator | CalcWise">
+  <meta property="og:description" content="Calculate net take-home income after all federal and state taxes and FICA deductions.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcwise.io/tax-calculators/after-tax-income-calculator/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="After-Tax Income Calculator | CalcWise">
+  <meta name="twitter:description" content="Calculate your net take-home income after all taxes.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/"},
+      {"@type": "ListItem", "position": 2, "name": "Tax Calculators", "item": "https://calcwise.io/tax-calculators/"},
+      {"@type": "ListItem", "position": 3, "name": "After-Tax Income Calculator"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is FICA tax?",
+        "acceptedAnswer": {"@type": "Answer", "text": "FICA (Federal Insurance Contributions Act) tax consists of Social Security tax (6.2% on wages up to $168,600) and Medicare tax (1.45% on all wages), totaling 7.65% for employees."}
+      },
+      {
+        "@type": "Question",
+        "name": "How is after-tax income calculated?",
+        "acceptedAnswer": {"@type": "Answer", "text": "After-tax income = Gross Income - Federal Income Tax - State Income Tax - Social Security Tax - Medicare Tax. Deductions reduce your taxable income before calculating federal and state taxes."}
+      },
+      {
+        "@type": "Question",
+        "name": "What is the standard deduction for 2026?",
+        "acceptedAnswer": {"@type": "Answer", "text": "For 2026, the estimated standard deduction is approximately $14,600 for single filers, $29,200 for married filing jointly, and $21,900 for head of household."}
+      },
+      {
+        "@type": "Question",
+        "name": "Do all states have income tax?",
+        "acceptedAnswer": {"@type": "Answer", "text": "No. As of 2026, several states have no state income tax, including Texas, Florida, Nevada, Washington, Wyoming, South Dakota, Alaska, and Tennessee."}
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="logo">
+        <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav">
+        <a href="/">Home</a>
+        <a href="/pages/business-calculators/">Business</a>
+        <a href="/pages/financial-calculators/">Financial</a>
+        <a href="/pages/tax-calculators/" aria-current="page">Tax</a>
+        <a href="/pages/investment-calculators/">Investment</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav">
+      <a href="/">Home</a>
+      <a href="/pages/business-calculators/">Business Calculators</a>
+      <a href="/pages/financial-calculators/">Financial Calculators</a>
+      <a href="/pages/tax-calculators/">Tax Calculators</a>
+      <a href="/pages/investment-calculators/">Investment Calculators</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/pages/tax-calculators/">Tax Calculators</a></li>
+          <li><span aria-current="page">After-Tax Income Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="calc-page-layout">
+          <div class="calc-page-main">
+            <h1>After-Tax Income Calculator</h1>
+            <p class="subtitle" style="font-size:var(--text-lg);color:var(--color-gray-600);margin-bottom:var(--space-8);line-height:var(--leading-relaxed);">Find out exactly how much of your paycheck you actually keep after federal income tax, state income tax, Social Security, and Medicare are withheld. Supports all filing statuses and all 50 states.</p>
+
+            <div class="calc-container">
+              <div class="calc-header">
+                <h2>After-Tax Income Calculator</h2>
+                <p>Enter your income details to see your true net pay</p>
+              </div>
+              <div class="calc-body">
+                <form id="calc-form" onsubmit="return false;">
+                  <div class="form-group">
+                    <label class="form-label" for="gross-income">Annual Gross Income</label>
+                    <div class="input-prefix">
+                      <span class="prefix">$</span>
+                      <input type="number" id="gross-income" class="form-input" placeholder="75000" min="0" step="1000">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="filing-status">Filing Status</label>
+                    <select id="filing-status" class="form-select">
+                      <option value="single">Single</option>
+                      <option value="married">Married Filing Jointly</option>
+                      <option value="hoh">Head of Household</option>
+                      <option value="mfs">Married Filing Separately</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="extra-deductions">Additional Deductions (pre-tax 401k, HSA, etc.)</label>
+                    <div class="input-prefix">
+                      <span class="prefix">$</span>
+                      <input type="number" id="extra-deductions" class="form-input" placeholder="5000" min="0" step="100">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="state">State</label>
+                    <select id="state" class="form-select">
+                      <option value="0">No State Income Tax (TX, FL, NV, etc.)</option>
+                      <option value="0.02">Alaska / Wyoming / South Dakota (0%)</option>
+                      <option value="0.03">Alabama (~3% avg)</option>
+                      <option value="0.049">Arizona (4.9% flat)</option>
+                      <option value="0.059">Arkansas (5.9%)</option>
+                      <option value="0.093">California (9.3% avg)</option>
+                      <option value="0.0455">Colorado (4.55% flat)</option>
+                      <option value="0.0699">Connecticut (6.99% avg)</option>
+                      <option value="0.066">Delaware (6.6% avg)</option>
+                      <option value="0">Florida (0%)</option>
+                      <option value="0.055">Georgia (5.5%)</option>
+                      <option value="0.011">Hawaii (1.1–11%, avg ~7%)</option>
+                      <option value="0.058">Idaho (5.8%)</option>
+                      <option value="0.0495">Illinois (4.95% flat)</option>
+                      <option value="0.0323">Indiana (3.23% flat)</option>
+                      <option value="0.06">Iowa (6% avg)</option>
+                      <option value="0.057">Kansas (5.7%)</option>
+                      <option value="0.045">Kentucky (4.5% flat)</option>
+                      <option value="0.06">Louisiana (6% avg)</option>
+                      <option value="0.0715">Maine (7.15% avg)</option>
+                      <option value="0.0575">Maryland (5.75% avg)</option>
+                      <option value="0.05">Massachusetts (5% flat)</option>
+                      <option value="0.0425">Michigan (4.25% flat)</option>
+                      <option value="0.0985">Minnesota (9.85% avg)</option>
+                      <option value="0.05">Mississippi (5%)</option>
+                      <option value="0.054">Missouri (5.4%)</option>
+                      <option value="0.069">Montana (6.9%)</option>
+                      <option value="0.0684">Nebraska (6.84%)</option>
+                      <option value="0">Nevada (0%)</option>
+                      <option value="0.05">New Hampshire (5% on dividends only, 0% wages)</option>
+                      <option value="0.1075">New Jersey (10.75% avg)</option>
+                      <option value="0.059">New Mexico (5.9%)</option>
+                      <option value="0.109">New York (10.9% avg)</option>
+                      <option value="0.0525">North Carolina (5.25%)</option>
+                      <option value="0.029">North Dakota (2.9%)</option>
+                      <option value="0.04">Ohio (4% avg)</option>
+                      <option value="0.05">Oklahoma (5%)</option>
+                      <option value="0.099">Oregon (9.9%)</option>
+                      <option value="0.0307">Pennsylvania (3.07% flat)</option>
+                      <option value="0">Rhode Island (5.99% avg)</option>
+                      <option value="0.07">South Carolina (7%)</option>
+                      <option value="0">South Dakota (0%)</option>
+                      <option value="0">Tennessee (0%)</option>
+                      <option value="0">Texas (0%)</option>
+                      <option value="0.0485">Utah (4.85% flat)</option>
+                      <option value="0.0875">Vermont (8.75% avg)</option>
+                      <option value="0.0575">Virginia (5.75%)</option>
+                      <option value="0">Washington (0%)</option>
+                      <option value="0.065">West Virginia (6.5%)</option>
+                      <option value="0.0765">Wisconsin (7.65% avg)</option>
+                      <option value="0">Wyoming (0%)</option>
+                      <option value="0.085">Washington DC (8.5% avg)</option>
+                    </select>
+                  </div>
+                  <div class="calc-actions">
+                    <button type="button" class="btn btn-calculate btn-full" onclick="calculateAfterTax()">Calculate Net Income</button>
+                    <button type="button" class="btn btn-reset" onclick="resetForm()">Reset</button>
+                  </div>
+                </form>
+
+                <div id="results" class="calc-results hidden">
+                  <div class="result-primary">
+                    <div class="result-label">Annual Net Take-Home</div>
+                    <div class="result-value" id="result-net">$0</div>
+                  </div>
+                  <div class="result-grid">
+                    <div class="result-item">
+                      <div class="result-label">Federal Income Tax</div>
+                      <div class="result-value" id="result-fed">$0</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">State Income Tax</div>
+                      <div class="result-value" id="result-state">$0</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Social Security (6.2%)</div>
+                      <div class="result-value" id="result-ss">$0</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Medicare (1.45%)</div>
+                      <div class="result-value" id="result-medicare">$0</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Effective Total Rate</div>
+                      <div class="result-value" id="result-rate">0%</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Monthly Take-Home</div>
+                      <div class="result-value" id="result-monthly">$0</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="ad-slot ad-slot-leaderboard"></div>
+
+            <section class="content-section">
+              <h2>How After-Tax Income Is Calculated</h2>
+              <div class="formula-box">
+                <div class="formula-label">Step 1: Determine AGI</div>
+                AGI = Gross Income − Pre-Tax Deductions (401k, HSA, etc.)
+              </div>
+              <div class="formula-box">
+                <div class="formula-label">Step 2: Federal Income Tax</div>
+                Taxable Income = AGI − Standard Deduction<br>
+                Apply progressive brackets (10% to 37%)
+              </div>
+              <div class="formula-box">
+                <div class="formula-label">Step 3: FICA</div>
+                Social Security = min(Gross, $168,600) × 6.2%<br>
+                Medicare = Gross × 1.45%
+              </div>
+              <div class="formula-box">
+                <div class="formula-label">Step 4: State Income Tax</div>
+                State Tax = AGI × Effective State Rate (varies by state)
+              </div>
+              <div class="formula-box">
+                <div class="formula-label">Step 5: Net Income</div>
+                Net = Gross − Federal Tax − State Tax − Social Security − Medicare
+              </div>
+            </section>
+
+            <section class="content-section">
+              <h2>How to Use This Calculator</h2>
+              <ol>
+                <li>Enter your <strong>annual gross income</strong> (before any deductions).</li>
+                <li>Select your <strong>filing status</strong> for the correct standard deduction and brackets.</li>
+                <li>Add any <strong>pre-tax deductions</strong> like 401(k) contributions or HSA deposits.</li>
+                <li>Select your <strong>state</strong> to include state income tax in the estimate.</li>
+                <li>Click <strong>Calculate Net Income</strong> to see your breakdown.</li>
+              </ol>
+            </section>
+
+            <section class="content-section">
+              <h2>Example Scenario</h2>
+              <p>A single filer in California earning $85,000 per year with $5,000 in 401(k) contributions:</p>
+              <ul>
+                <li>AGI: $85,000 − $5,000 = <strong>$80,000</strong></li>
+                <li>Federal Taxable Income: $80,000 − $14,600 = $65,400 → Federal Tax: <strong>~$9,848</strong></li>
+                <li>Social Security: $85,000 × 6.2% = <strong>$5,270</strong></li>
+                <li>Medicare: $85,000 × 1.45% = <strong>$1,233</strong></li>
+                <li>California State Tax (~9.3%): $80,000 × 9.3% = <strong>~$7,440</strong></li>
+                <li>Net Take-Home: $85,000 − $9,848 − $5,270 − $1,233 − $7,440 = <strong>~$61,209/yr</strong> ($5,101/mo)</li>
+              </ul>
+            </section>
+
+            <section class="faq-section">
+              <h2>Frequently Asked Questions</h2>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">What is FICA tax?<svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg></button>
+                <div class="faq-answer"><p>FICA (Federal Insurance Contributions Act) tax consists of Social Security tax (6.2% on wages up to $168,600) and Medicare tax (1.45% on all wages), totaling 7.65% for employees.</p></div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">How is after-tax income calculated?<svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg></button>
+                <div class="faq-answer"><p>After-tax income = Gross Income - Federal Income Tax - State Income Tax - Social Security Tax - Medicare Tax. Deductions reduce your taxable income before calculating federal and state taxes.</p></div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">What is the standard deduction for 2026?<svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg></button>
+                <div class="faq-answer"><p>For 2026, the estimated standard deduction is approximately $14,600 for single filers, $29,200 for married filing jointly, and $21,900 for head of household.</p></div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">Do all states have income tax?<svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg></button>
+                <div class="faq-answer"><p>No. As of 2026, several states have no state income tax, including Texas, Florida, Nevada, Washington, Wyoming, South Dakota, Alaska, and Tennessee.</p></div>
+              </div>
+            </section>
+
+            <section class="related-calculators">
+              <h2>Related Calculators</h2>
+              <div class="grid grid-3">
+                <a href="/pages/tax-calculators/tax-bracket-calculator/" class="card card-link">
+                  <h3>Tax Bracket Calculator</h3>
+                  <p>See exactly how your income is taxed across each federal bracket.</p>
+                </a>
+                <a href="/pages/tax-calculators/payroll-tax-calculator/" class="card card-link">
+                  <h3>Payroll Tax Calculator</h3>
+                  <p>Calculate per-paycheck withholding and net pay by pay frequency.</p>
+                </a>
+                <a href="/pages/tax-calculators/state-income-tax-calculator/" class="card card-link">
+                  <h3>State Income Tax Calculator</h3>
+                  <p>Detailed state-by-state income tax calculation tool.</p>
+                </a>
+                <a href="/pages/tax-calculators/tax-refund-estimator/" class="card card-link">
+                  <h3>Tax Refund Estimator</h3>
+                  <p>Estimate your refund or balance due at tax time.</p>
+                </a>
+              </div>
+            </section>
+
+            <div class="disclaimer">
+              <strong>Tax Disclaimer:</strong> This calculator provides estimates for educational purposes only and does not constitute tax advice. State tax rates shown are approximations and may not reflect all brackets, local taxes, or deductions. Actual tax liability may differ. Consult a qualified tax professional for advice specific to your situation. Results are based on estimated 2026 tax parameters.
+            </div>
+          </div>
+
+          <aside class="calc-page-sidebar">
+            <div class="ad-slot ad-slot-rectangle"></div>
+            <div class="sidebar-card">
+              <h3>Tax Calculators</h3>
+              <a href="/pages/tax-calculators/tax-bracket-calculator/">Tax Bracket Calculator</a>
+              <a href="/pages/tax-calculators/payroll-tax-calculator/">Payroll Tax Calculator</a>
+              <a href="/pages/tax-calculators/state-income-tax-calculator/">State Income Tax</a>
+              <a href="/pages/tax-calculators/tax-refund-estimator/">Tax Refund Estimator</a>
+              <a href="/pages/tax-calculators/1099-vs-w2-calculator/">1099 vs W2 Calculator</a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free online calculators for business, finance, tax, and investment decisions.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Calculators</h4>
+          <a href="/pages/business-calculators/">Business</a>
+          <a href="/pages/financial-calculators/">Financial</a>
+          <a href="/pages/tax-calculators/">Tax</a>
+          <a href="/pages/investment-calculators/">Investment</a>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <a href="/about/">About</a>
+          <a href="/blog/">Blog</a>
+          <a href="/contact/">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="/privacy/">Privacy Policy</a>
+          <a href="/terms/">Terms of Service</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/privacy/">Privacy</a>
+          <a href="/terms/">Terms</a>
+          <a href="/contact/">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    const BRACKETS = {
+      single: [{rate:0.10,min:0,max:11925},{rate:0.12,min:11925,max:48475},{rate:0.22,min:48475,max:103350},{rate:0.24,min:103350,max:197300},{rate:0.32,min:197300,max:250525},{rate:0.35,min:250525,max:626350},{rate:0.37,min:626350,max:Infinity}],
+      married: [{rate:0.10,min:0,max:23850},{rate:0.12,min:23850,max:96950},{rate:0.22,min:96950,max:206700},{rate:0.24,min:206700,max:394600},{rate:0.32,min:394600,max:501050},{rate:0.35,min:501050,max:751600},{rate:0.37,min:751600,max:Infinity}],
+      hoh: [{rate:0.10,min:0,max:17000},{rate:0.12,min:17000,max:64850},{rate:0.22,min:64850,max:103350},{rate:0.24,min:103350,max:197300},{rate:0.32,min:197300,max:250500},{rate:0.35,min:250500,max:626350},{rate:0.37,min:626350,max:Infinity}],
+      mfs: [{rate:0.10,min:0,max:11925},{rate:0.12,min:11925,max:48475},{rate:0.22,min:48475,max:103350},{rate:0.24,min:103350,max:197300},{rate:0.32,min:197300,max:250525},{rate:0.35,min:250525,max:313175},{rate:0.37,min:313175,max:Infinity}]
+    };
+    const STD_DED = {single:14600, married:29200, hoh:21900, mfs:14600};
+
+    function calcFedTax(taxable, status) {
+      const b = BRACKETS[status] || BRACKETS.single;
+      let tax = 0;
+      for (const bracket of b) {
+        if (taxable <= bracket.min) break;
+        tax += (Math.min(taxable, bracket.max) - bracket.min) * bracket.rate;
+      }
+      return tax;
+    }
+
+    function calculateAfterTax() {
+      const gross = CalcWise.parseNumber(document.getElementById('gross-income').value);
+      const status = document.getElementById('filing-status').value;
+      const extraDed = CalcWise.parseNumber(document.getElementById('extra-deductions').value);
+      const stateRate = CalcWise.parseNumber(document.getElementById('state').value);
+
+      if (gross <= 0) { alert('Please enter your gross income.'); return; }
+
+      const agi = Math.max(0, gross - extraDed);
+      const taxableIncome = Math.max(0, agi - STD_DED[status]);
+      const fedTax = calcFedTax(taxableIncome, status);
+      const ssTax = Math.min(gross, 168600) * 0.062;
+      const medicareTax = gross * 0.0145;
+      const stateTax = agi * stateRate;
+      const netIncome = gross - fedTax - ssTax - medicareTax - stateTax;
+      const totalTaxRate = ((fedTax + ssTax + medicareTax + stateTax) / gross) * 100;
+
+      CalcWise.setText('result-net', CalcWise.formatCurrency(netIncome));
+      CalcWise.setText('result-fed', CalcWise.formatCurrency(fedTax));
+      CalcWise.setText('result-state', CalcWise.formatCurrency(stateTax));
+      CalcWise.setText('result-ss', CalcWise.formatCurrency(ssTax));
+      CalcWise.setText('result-medicare', CalcWise.formatCurrency(medicareTax));
+      CalcWise.setText('result-rate', totalTaxRate.toFixed(1) + '%');
+      CalcWise.setText('result-monthly', CalcWise.formatCurrency(netIncome / 12));
+      CalcWise.showResults('results');
+    }
+
+    function resetForm() {
+      document.getElementById('calc-form').reset();
+      CalcWise.hideResults('results');
+    }
+
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', !expanded);
+        btn.nextElementSibling.style.display = expanded ? 'none' : 'block';
+      });
+    });
+    document.querySelectorAll('.faq-answer').forEach(a => a.style.display = 'none');
+
+    const toggle = document.querySelector('.mobile-menu-toggle');
+    const mobileNav = document.querySelector('.mobile-nav');
+    if (toggle && mobileNav) {
+      toggle.addEventListener('click', () => {
+        const open = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', !open);
+        mobileNav.style.display = open ? 'none' : 'block';
+      });
+    }
+  </script>
+</body>
+</html>

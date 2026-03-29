@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SaaS Subscription Cost Calculator | CalcWise</title>
+  <meta name="description" content="Calculate your total SaaS tool spend across up to 8 subscriptions. Compare monthly vs annual billing, find savings, and see cost per user and per employee.">
+  <link rel="canonical" href="https://calcwise.io/technology-cost-calculators/saas-subscription-cost-calculator/">
+  <meta property="og:title" content="SaaS Subscription Cost Calculator | CalcWise">
+  <meta property="og:description" content="Total your SaaS spending, compare monthly vs annual billing, and find cost per user across all your tools.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcwise.io/technology-cost-calculators/saas-subscription-cost-calculator/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="SaaS Subscription Cost Calculator | CalcWise">
+  <meta name="twitter:description" content="Total your SaaS spending, compare monthly vs annual billing, and find cost per user across all your tools.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/"},
+      {"@type": "ListItem", "position": 2, "name": "Technology Cost Calculators", "item": "https://calcwise.io/technology-cost-calculators/"},
+      {"@type": "ListItem", "position": 3, "name": "SaaS Subscription Cost Calculator"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How much do businesses spend on SaaS tools on average?",
+        "acceptedAnswer": {"@type": "Answer", "text": "According to industry research, small businesses (under 50 employees) spend an average of $25,000-$100,000 per year on SaaS subscriptions. Mid-size companies (50-500 employees) average $100,000-$500,000 annually. Enterprise organizations often spend millions. The average company uses 80-100 different SaaS applications."}
+      },
+      {
+        "@type": "Question",
+        "name": "How much can I save by switching to annual billing?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Most SaaS vendors offer 15-25% discounts for annual prepayment compared to monthly billing. On a $500/month stack, switching to annual billing could save $900-$1,500 per year. The trade-off is reduced flexibility if your needs change or a tool underperforms."}
+      },
+      {
+        "@type": "Question",
+        "name": "What is SaaS sprawl and how do I control it?",
+        "acceptedAnswer": {"@type": "Answer", "text": "SaaS sprawl is the uncontrolled proliferation of software subscriptions across an organization, often with redundant tools serving the same purpose. Control it by auditing all subscriptions quarterly, consolidating overlapping tools, removing unused licenses, and negotiating enterprise agreements for tools used company-wide."}
+      },
+      {
+        "@type": "Question",
+        "name": "How do I calculate cost per employee for SaaS tools?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Divide your total monthly (or annual) SaaS spend by your total headcount. For example, $5,000/month in SaaS for 25 employees equals $200/employee/month. This metric helps benchmark against industry averages and justify or reduce the SaaS budget during planning cycles."}
+      }
+    ]
+  }
+  </script>
+  <style>
+    .saas-row { display:grid; grid-template-columns: 2fr 1fr 1fr auto; gap: var(--space-2); align-items: end; margin-bottom: var(--space-3); }
+    .saas-row .form-label { font-size: var(--text-xs); margin-bottom: var(--space-1); }
+    @media (max-width: 640px) {
+      .saas-row { grid-template-columns: 1fr 1fr; }
+      .saas-row .name-col { grid-column: 1 / -1; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="logo">
+        <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav">
+        <a href="/">Home</a>
+        <a href="/pages/real-estate-calculators/">Real Estate</a>
+        <a href="/pages/financial-calculators/">Finance</a>
+        <a href="/pages/business-calculators/">Business</a>
+        <a href="/about/">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav">
+      <a href="/">Home</a>
+      <a href="/pages/real-estate-calculators/">Real Estate</a>
+      <a href="/pages/financial-calculators/">Finance</a>
+      <a href="/pages/business-calculators/">Business</a>
+      <a href="/about/">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/pages/technology-cost-calculators/">Technology Cost Calculators</a></li>
+          <li><span aria-current="page">SaaS Subscription Cost Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="calc-page-layout">
+          <div class="calc-page-main">
+            <h1>SaaS Subscription Cost Calculator</h1>
+            <p class="subtitle" style="font-size:var(--text-lg);color:var(--color-gray-600);margin-bottom:var(--space-8);line-height:var(--leading-relaxed);">Track and total your SaaS tool spending across up to 8 subscriptions. Compare monthly versus annual billing costs, find potential savings, and calculate cost per user and per employee — all in one place.</p>
+
+            <div class="calc-container">
+              <div class="calc-header">
+                <h2>SaaS Subscription Cost Calculator</h2>
+                <p>Add your tools and see your total spend</p>
+              </div>
+              <div class="calc-body">
+                <form id="saas-form" onsubmit="return false;">
+
+                  <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-4);margin-bottom:var(--space-6);">
+                    <div class="form-group" style="margin-bottom:0;">
+                      <label class="form-label" for="total-employees">Total Employees / Team Size</label>
+                      <input type="number" id="total-employees" class="form-input" placeholder="25" min="1" step="1">
+                    </div>
+                    <div class="form-group" style="margin-bottom:0;">
+                      <label class="form-label" for="default-billing">Default Billing Cycle</label>
+                      <select id="default-billing" class="form-input">
+                        <option value="monthly">Monthly</option>
+                        <option value="annual">Annual (paid yearly)</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div style="margin-bottom:var(--space-4);">
+                    <div style="display:grid;grid-template-columns:2fr 1fr 1fr;gap:var(--space-2);margin-bottom:var(--space-2);">
+                      <span style="font-size:var(--text-xs);font-weight:var(--font-semibold);color:var(--color-gray-500);text-transform:uppercase;letter-spacing:0.05em;">Tool Name</span>
+                      <span style="font-size:var(--text-xs);font-weight:var(--font-semibold);color:var(--color-gray-500);text-transform:uppercase;letter-spacing:0.05em;">Monthly Cost</span>
+                      <span style="font-size:var(--text-xs);font-weight:var(--font-semibold);color:var(--color-gray-500);text-transform:uppercase;letter-spacing:0.05em;">Users/Seats</span>
+                    </div>
+                    <div id="saas-rows">
+                      <!-- Rows injected by JS -->
+                    </div>
+                  </div>
+
+                  <div class="calc-actions">
+                    <button type="button" class="btn btn-calculate btn-full" onclick="calculateSaaS()">Calculate Total Cost</button>
+                    <button type="button" class="btn btn-reset" onclick="resetSaaS()">Reset</button>
+                  </div>
+                </form>
+
+                <div id="results" class="calc-results hidden">
+                  <div class="result-primary">
+                    <div class="result-label">Total Monthly Cost</div>
+                    <div class="result-value" id="result-monthly">$0.00</div>
+                  </div>
+                  <div class="result-grid result-grid-3">
+                    <div class="result-item">
+                      <div class="result-label">Annual Cost</div>
+                      <div class="result-value" id="result-annual">$0.00</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Annual Savings (vs monthly)</div>
+                      <div class="result-value" id="result-savings">$0.00</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Cost per Employee/mo</div>
+                      <div class="result-value" id="result-per-employee">—</div>
+                    </div>
+                  </div>
+                  <div style="margin-top:var(--space-6);">
+                    <h3 style="font-size:var(--text-base);font-weight:var(--font-semibold);margin-bottom:var(--space-3);">Tool Breakdown</h3>
+                    <div style="overflow-x:auto;">
+                      <table style="width:100%;border-collapse:collapse;font-size:var(--text-sm);">
+                        <thead>
+                          <tr style="background:var(--color-gray-100);">
+                            <th style="padding:var(--space-2) var(--space-3);text-align:left;border-bottom:2px solid var(--color-gray-200);">Tool</th>
+                            <th style="padding:var(--space-2) var(--space-3);text-align:right;border-bottom:2px solid var(--color-gray-200);">Users</th>
+                            <th style="padding:var(--space-2) var(--space-3);text-align:right;border-bottom:2px solid var(--color-gray-200);">Monthly</th>
+                            <th style="padding:var(--space-2) var(--space-3);text-align:right;border-bottom:2px solid var(--color-gray-200);">Per User/mo</th>
+                            <th style="padding:var(--space-2) var(--space-3);text-align:right;border-bottom:2px solid var(--color-gray-200);">Annual</th>
+                          </tr>
+                        </thead>
+                        <tbody id="result-tbody"></tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="ad-slot ad-slot-leaderboard"></div>
+
+            <section class="content-section">
+              <h2>Calculation Methodology</h2>
+              <div class="formula-box">
+                <div class="formula-label">Total Monthly Cost</div>
+                Total Monthly = Sum of all active tool monthly costs
+              </div>
+              <div class="formula-box">
+                <div class="formula-label">Annual Cost (Monthly Billing)</div>
+                Annual (Monthly) = Total Monthly × 12
+              </div>
+              <div class="formula-box">
+                <div class="formula-label">Annual Savings (Annual vs Monthly Billing)</div>
+                Savings = Annual (Monthly Billing) − Annual (Annual Billing, ~20% discount avg.)
+              </div>
+              <div class="formula-box">
+                <div class="formula-label">Cost per User per Month</div>
+                Per User = Tool Monthly Cost / Tool User Count
+              </div>
+              <div class="formula-box">
+                <div class="formula-label">Cost per Employee per Month</div>
+                Per Employee = Total Monthly / Total Headcount
+              </div>
+            </section>
+
+            <section class="content-section">
+              <h2>How to Use This Calculator</h2>
+              <ol>
+                <li>Enter your <strong>total team size</strong> (headcount) and select your default billing cycle.</li>
+                <li>For each SaaS tool, enter the <strong>tool name</strong>, <strong>monthly cost</strong> (enter the annual price divided by 12 for annually-billed tools), and <strong>number of seats/users</strong>.</li>
+                <li>Leave tool name blank to skip that row.</li>
+                <li>Click <strong>Calculate Total Cost</strong> to see total monthly/annual spend, per-user cost, cost per employee, and potential annual billing savings.</li>
+              </ol>
+            </section>
+
+            <section class="content-section">
+              <h2>Example Scenario</h2>
+              <p>A 20-person startup with the following SaaS stack on monthly billing:</p>
+              <ul>
+                <li>Slack (20 users): <strong>$160/mo</strong> ($8/user)</li>
+                <li>Notion (20 users): <strong>$160/mo</strong> ($8/user)</li>
+                <li>HubSpot Starter (5 users): <strong>$90/mo</strong></li>
+                <li>GitHub Team (10 users): <strong>$40/mo</strong></li>
+                <li>Figma Professional (3 users): <strong>$45/mo</strong></li>
+                <li>Google Workspace (20 users): <strong>$240/mo</strong> ($12/user)</li>
+              </ul>
+              <p><strong>Total: $735/month ($8,820/year)</strong> — Switching all to annual billing at a 20% average discount would save approximately <strong>$1,764/year</strong>. Cost per employee: $36.75/month.</p>
+            </section>
+
+            <section class="faq-section">
+              <h2>Frequently Asked Questions</h2>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  How much do businesses spend on SaaS tools on average?
+                  <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                </button>
+                <div class="faq-answer">
+                  <p>Small businesses (under 50 employees) spend an average of $25,000–$100,000 per year on SaaS. Mid-size companies average $100,000–$500,000 annually. The typical company runs 80–100 different SaaS applications.</p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  How much can I save by switching to annual billing?
+                  <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                </button>
+                <div class="faq-answer">
+                  <p>Most SaaS vendors offer 15–25% discounts for annual prepayment. On a $1,000/month stack, switching to annual billing could save $1,800–$3,000 per year. The trade-off is reduced flexibility if your needs change during the year.</p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  What is SaaS sprawl and how do I control it?
+                  <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                </button>
+                <div class="faq-answer">
+                  <p>SaaS sprawl is the uncontrolled growth of software subscriptions, often with redundant tools. Control it by auditing subscriptions quarterly, consolidating overlapping tools, removing unused licenses, and requiring central approval for new software purchases.</p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  How do I calculate cost per employee for SaaS tools?
+                  <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                </button>
+                <div class="faq-answer">
+                  <p>Divide total monthly SaaS spend by your total headcount. For example, $5,000/month for 25 employees equals $200/employee/month. This metric helps benchmark against peers and justify or reduce the software budget during planning.</p>
+                </div>
+              </div>
+            </section>
+
+            <section class="related-calculators">
+              <h2>Related Calculators</h2>
+              <div class="grid grid-3">
+                <a href="/pages/technology-cost-calculators/software-licensing-cost-calculator/" class="card card-link">
+                  <h3>Software Licensing Cost Calculator</h3>
+                  <p>Compare perpetual vs subscription licensing costs and 3-year TCO.</p>
+                </a>
+                <a href="/pages/technology-cost-calculators/cloud-storage-cost-calculator/" class="card card-link">
+                  <h3>Cloud Storage Cost Calculator</h3>
+                  <p>Estimate and compare cloud storage costs across providers.</p>
+                </a>
+                <a href="/pages/technology-cost-calculators/web-hosting-cost-calculator/" class="card card-link">
+                  <h3>Web Hosting Cost Calculator</h3>
+                  <p>Find the right hosting tier and estimate monthly costs.</p>
+                </a>
+                <a href="/pages/business-calculators/cash-runway-calculator/" class="card card-link">
+                  <h3>Cash Runway Calculator</h3>
+                  <p>Find out how long your cash lasts at current burn rates.</p>
+                </a>
+                <a href="/pages/business-calculators/pricing-calculator/" class="card card-link">
+                  <h3>Pricing Calculator</h3>
+                  <p>Calculate optimal pricing from cost and margin targets.</p>
+                </a>
+              </div>
+            </section>
+
+            <div class="disclaimer">
+              <strong>Disclaimer:</strong> This calculator uses the monthly costs you enter and estimates annual billing savings at an average 20% discount. Actual discounts vary by vendor. Always verify pricing directly with each SaaS provider. This tool is for budgeting purposes only.
+            </div>
+          </div>
+
+          <aside class="calc-page-sidebar">
+            <div class="ad-slot ad-slot-rectangle"></div>
+            <div class="sidebar-card">
+              <h3>Technology Cost Calculators</h3>
+              <a href="/pages/technology-cost-calculators/cloud-storage-cost-calculator/">Cloud Storage Cost</a>
+              <a href="/pages/technology-cost-calculators/data-usage-calculator/">Data Usage</a>
+              <a href="/pages/technology-cost-calculators/internet-speed-requirement-calculator/">Internet Speed Requirement</a>
+              <a href="/pages/technology-cost-calculators/software-licensing-cost-calculator/">Software Licensing Cost</a>
+              <a href="/pages/technology-cost-calculators/streaming-service-cost-calculator/">Streaming Service Cost</a>
+              <a href="/pages/technology-cost-calculators/web-hosting-cost-calculator/">Web Hosting Cost</a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free online calculators for business, finance, tax, and investment decisions.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Calculators</h4>
+          <a href="/pages/business-calculators/">Business</a>
+          <a href="/pages/financial-calculators/">Financial</a>
+          <a href="/pages/tax-calculators/">Tax</a>
+          <a href="/pages/investment-calculators/">Investment</a>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <a href="/about/">About</a>
+          <a href="/blog/">Blog</a>
+          <a href="/contact/">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="/privacy/">Privacy Policy</a>
+          <a href="/terms/">Terms of Service</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/privacy/">Privacy</a>
+          <a href="/terms/">Terms</a>
+          <a href="/contact/">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    const NUM_ROWS = 8;
+    const DEFAULT_TOOLS = ['Slack', 'Notion', 'GitHub', 'Figma', 'Google Workspace', 'Zoom', '', ''];
+
+    function buildRows() {
+      const container = document.getElementById('saas-rows');
+      container.innerHTML = '';
+      for (let i = 0; i < NUM_ROWS; i++) {
+        const row = document.createElement('div');
+        row.style.cssText = 'display:grid;grid-template-columns:2fr 1fr 1fr;gap:var(--space-2);margin-bottom:var(--space-2);align-items:center;';
+        row.innerHTML = `
+          <input type="text" id="tool-name-${i}" class="form-input" placeholder="${DEFAULT_TOOLS[i] || 'Tool name'}" style="font-size:var(--text-sm);">
+          <div class="input-prefix" style="margin:0;">
+            <span class="prefix">$</span>
+            <input type="number" id="tool-cost-${i}" class="form-input" placeholder="0.00" min="0" step="0.01" style="font-size:var(--text-sm);">
+          </div>
+          <input type="number" id="tool-users-${i}" class="form-input" placeholder="users" min="1" step="1" style="font-size:var(--text-sm);">
+        `;
+        container.appendChild(row);
+      }
+    }
+
+    function calculateSaaS() {
+      const employees = CalcWise.parseNumber(document.getElementById('total-employees').value);
+
+      const tools = [];
+      for (let i = 0; i < NUM_ROWS; i++) {
+        const name  = document.getElementById('tool-name-' + i).value.trim();
+        const cost  = CalcWise.parseNumber(document.getElementById('tool-cost-' + i).value);
+        const users = CalcWise.parseNumber(document.getElementById('tool-users-' + i).value) || 1;
+        if (name && cost > 0) {
+          tools.push({ name, cost, users });
+        }
+      }
+
+      if (tools.length === 0) {
+        alert('Please enter at least one SaaS tool with a cost.');
+        return;
+      }
+
+      const totalMonthly = tools.reduce((s, t) => s + t.cost, 0);
+      const annualMonthly = totalMonthly * 12;
+      const annualBilledSavings = annualMonthly * 0.20; // avg 20% discount
+      const annualBilled = annualMonthly - annualBilledSavings;
+      const perEmployee = employees > 0 ? totalMonthly / employees : null;
+
+      CalcWise.setText('result-monthly', CalcWise.formatCurrency(totalMonthly));
+      CalcWise.setText('result-annual', CalcWise.formatCurrency(annualMonthly));
+      CalcWise.setText('result-savings', CalcWise.formatCurrency(annualBilledSavings) + '/yr');
+      CalcWise.setText('result-per-employee', perEmployee !== null ? CalcWise.formatCurrency(perEmployee) : '—');
+
+      const tbody = document.getElementById('result-tbody');
+      tbody.innerHTML = tools.map(t => {
+        const perUser = t.users > 0 ? t.cost / t.users : 0;
+        return `<tr>
+          <td style="padding:var(--space-2) var(--space-3);border-bottom:1px solid var(--color-gray-100);">${t.name}</td>
+          <td style="padding:var(--space-2) var(--space-3);text-align:right;border-bottom:1px solid var(--color-gray-100);">${t.users}</td>
+          <td style="padding:var(--space-2) var(--space-3);text-align:right;border-bottom:1px solid var(--color-gray-100);font-weight:var(--font-semibold);">${CalcWise.formatCurrency(t.cost)}</td>
+          <td style="padding:var(--space-2) var(--space-3);text-align:right;border-bottom:1px solid var(--color-gray-100);">${CalcWise.formatCurrency(perUser)}</td>
+          <td style="padding:var(--space-2) var(--space-3);text-align:right;border-bottom:1px solid var(--color-gray-100);">${CalcWise.formatCurrency(t.cost * 12)}</td>
+        </tr>`;
+      }).join('') + `<tr style="font-weight:var(--font-semibold);background:var(--color-gray-50,#f9fafb);">
+        <td style="padding:var(--space-2) var(--space-3);" colspan="2">Total</td>
+        <td style="padding:var(--space-2) var(--space-3);text-align:right;">${CalcWise.formatCurrency(totalMonthly)}</td>
+        <td style="padding:var(--space-2) var(--space-3);text-align:right;">—</td>
+        <td style="padding:var(--space-2) var(--space-3);text-align:right;">${CalcWise.formatCurrency(annualMonthly)}</td>
+      </tr>`;
+
+      CalcWise.showResults('results');
+    }
+
+    function resetSaaS() {
+      document.getElementById('saas-form').reset();
+      buildRows();
+      CalcWise.hideResults('results');
+    }
+
+    buildRows();
+  </script>
+</body>
+</html>

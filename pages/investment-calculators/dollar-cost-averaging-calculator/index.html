@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dollar-Cost Averaging Calculator | CalcWise</title>
+  <meta name="description" content="Calculate the power of dollar-cost averaging. Enter monthly investment, annual return, and years to see total invested, portfolio value, total gain, and effective average cost.">
+  <meta name="keywords" content="dollar cost averaging calculator, DCA calculator, monthly investment calculator, regular investment calculator, average cost investing">
+  <link rel="canonical" href="https://calcwise.io/investment-calculators/dollar-cost-averaging-calculator/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Dollar-Cost Averaging Calculator | CalcWise">
+  <meta property="og:description" content="Calculate the power of dollar-cost averaging with monthly investments over time.">
+  <meta property="og:url" content="https://calcwise.io/investment-calculators/dollar-cost-averaging-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Dollar-Cost Averaging Calculator | CalcWise">
+  <meta name="twitter:description" content="Calculate the power of dollar-cost averaging with monthly investments over time.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <!-- BreadcrumbList Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Investment Calculators", "item": "https://calcwise.io/investment-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "Dollar-Cost Averaging Calculator", "item": "https://calcwise.io/investment-calculators/dollar-cost-averaging-calculator/" }
+    ]
+  }
+  </script>
+
+  <!-- FAQPage Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is dollar-cost averaging?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Dollar-cost averaging (DCA) is an investment strategy where you invest a fixed amount of money at regular intervals regardless of market conditions. This reduces the impact of volatility by buying more shares when prices are low and fewer when prices are high." }
+      },
+      {
+        "@type": "Question",
+        "name": "Does dollar-cost averaging reduce risk?",
+        "acceptedAnswer": { "@type": "Answer", "text": "DCA reduces timing risk — the risk of investing a large lump sum at a market peak. However, it does not eliminate market risk. In a steadily rising market, a lump-sum investment often outperforms DCA, but DCA reduces emotional and psychological barriers to investing." }
+      },
+      {
+        "@type": "Question",
+        "name": "How much should I invest monthly?",
+        "acceptedAnswer": { "@type": "Answer", "text": "A common guideline is to invest 15–20% of your gross income. Start with whatever amount you can consistently commit to without straining your budget. Even small amounts invested regularly can grow significantly over long periods due to compounding." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the effective average cost in DCA?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The effective average cost is the total amount invested divided by the total portfolio value relative to the initial share price. In practice, it represents your average cost basis per unit purchased, which tends to be lower than the average price over the period." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/investment-calculators/" aria-current="page">Investments</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/investment-calculators/">Investment Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/investment-calculators/">Investment Calculators</a></li>
+          <li><span aria-current="page">Dollar-Cost Averaging Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="article-content">
+          <h1>Dollar-Cost Averaging Calculator</h1>
+          <p>See how investing a fixed amount every month can build significant wealth over time. Enter your monthly investment amount, expected annual return, investment period, and optional initial investment to project your total portfolio value, total amount invested, gain, and effective average cost.</p>
+
+          <div class="calc-container mt-8">
+            <div class="calc-header">
+              <h2>Calculate Dollar-Cost Averaging</h2>
+              <p>Enter your investment details below</p>
+            </div>
+            <div class="calc-body">
+              <form id="dca-form" onsubmit="return false;">
+                <div class="form-group">
+                  <label class="form-label" for="initial-investment">Initial Investment (optional)</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="initial-investment" class="form-input" placeholder="0.00" min="0" step="0.01">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="monthly-investment">Monthly Investment</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="monthly-investment" class="form-input" placeholder="500.00" min="0.01" step="0.01" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="annual-return">Annual Return %</label>
+                  <div class="input-prefix">
+                    <input type="number" id="annual-return" class="form-input" placeholder="8" min="0" max="100" step="0.01" required>
+                    <span class="prefix" style="left:auto;right:0.75rem;">%</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="investment-years">Years</label>
+                  <input type="number" id="investment-years" class="form-input" placeholder="20" min="1" max="50" step="1" required>
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calculateDCA()">Calculate DCA</button>
+                  <button type="button" class="btn btn-reset" onclick="resetDCA()">Reset</button>
+                </div>
+              </form>
+
+              <div id="dca-results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">Portfolio Value</div>
+                  <div class="result-value" id="result-portfolio-value"></div>
+                </div>
+                <div class="result-grid">
+                  <div class="result-item">
+                    <div class="result-label">Total Invested</div>
+                    <div class="result-value" id="result-total-invested"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Total Gain</div>
+                    <div class="result-value" id="result-total-gain"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Effective Average Cost</div>
+                    <div class="result-value" id="result-avg-cost"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Return on Investment</div>
+                    <div class="result-value" id="result-roi"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Formula Section -->
+          <section class="content-section">
+            <h2>Dollar-Cost Averaging Formula</h2>
+            <p>The future value of a series of equal monthly contributions with compound interest is calculated as:</p>
+            <div class="formula-box">
+              <div class="formula-label">Future Value of Contributions</div>
+              FV = PMT × [(1 + r)^n − 1] / r
+            </div>
+            <p>Where <strong>PMT</strong> is the monthly payment, <strong>r</strong> is the monthly interest rate (annual rate / 12), and <strong>n</strong> is the total number of months. The initial investment compounds separately:</p>
+            <div class="formula-box">
+              <div class="formula-label">Future Value of Initial Investment</div>
+              FV_initial = P × (1 + r)^n
+            </div>
+          </section>
+
+          <!-- How to Use -->
+          <section class="content-section">
+            <h2>How to Use This DCA Calculator</h2>
+            <ol>
+              <li><strong>Enter an initial investment</strong> (optional) — a lump sum you invest at the start.</li>
+              <li><strong>Enter your monthly investment</strong> — the fixed amount you invest each month.</li>
+              <li><strong>Enter the annual return %</strong> — your expected average annual rate of return.</li>
+              <li><strong>Enter the number of years</strong> — your total investment horizon.</li>
+              <li><strong>Click "Calculate DCA"</strong> to see your projected portfolio value and gains.</li>
+            </ol>
+          </section>
+
+          <!-- Example Scenario -->
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>Suppose you invest $500 per month for 20 years with an 8% annual return and no initial investment. You would invest a total of $120,000, but your portfolio would grow to approximately $294,510. The total gain of roughly $174,510 comes entirely from compounding returns. The effective average cost per dollar invested is significantly less than the final portfolio value per dollar invested, demonstrating the power of consistent investing over time.</p>
+          </section>
+
+          <!-- FAQ Section -->
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What is dollar-cost averaging?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Dollar-cost averaging (DCA) is an investment strategy where you invest a fixed amount of money at regular intervals regardless of market conditions. This reduces the impact of volatility by buying more shares when prices are low and fewer when prices are high.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Does dollar-cost averaging reduce risk?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>DCA reduces timing risk — the risk of investing a large lump sum at a market peak. However, it does not eliminate market risk. In a steadily rising market, a lump-sum investment often outperforms DCA, but DCA reduces emotional and psychological barriers to investing.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                How much should I invest monthly?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>A common guideline is to invest 15–20% of your gross income. Start with whatever amount you can consistently commit to without straining your budget. Even small amounts invested regularly can grow significantly over long periods due to compounding.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What is the effective average cost in DCA?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>The effective average cost is the total amount invested divided by the total portfolio value relative to the initial share price. In practice, it represents your average cost basis per unit purchased, which tends to be lower than the average price over the period.</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Related Calculators -->
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/investment-calculators/cagr-calculator/" class="card card-link">
+                <h3>CAGR Calculator</h3>
+                <p>Compute compound annual growth rate for any investment period.</p>
+              </a>
+              <a href="/investment-calculators/etf-return-calculator/" class="card card-link">
+                <h3>ETF Return Calculator</h3>
+                <p>Project ETF returns including expense ratios over time.</p>
+              </a>
+              <a href="/investment-calculators/annualized-return-calculator/" class="card card-link">
+                <h3>Annualized Return Calculator</h3>
+                <p>Calculate the annualized return on any investment.</p>
+              </a>
+              <a href="/investment-calculators/investment-withdrawal-calculator/" class="card card-link">
+                <h3>Investment Withdrawal Calculator</h3>
+                <p>See how long your portfolio will last under various withdrawal rates.</p>
+              </a>
+            </div>
+          </section>
+
+          <!-- Disclaimer -->
+          <div class="disclaimer">
+            <strong>Disclaimer:</strong> This calculator provides estimates for informational purposes only. Actual investment returns will vary. This is not financial advice. Consult a qualified financial professional before making investment decisions.
+          </div>
+
+          <!-- Ad Slot -->
+          <div class="ad-slot ad-slot-leaderboard"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Real Estate</h4>
+          <a href="/real-estate-calculators/">All Real Estate Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Investments</h4>
+          <a href="/investment-calculators/">All Investment Calculators</a>
+          <a href="/investment-calculators/cagr-calculator/">CAGR Calculator</a>
+          <a href="/investment-calculators/dividend-yield-calculator/">Dividend Yield</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateDCA() {
+      const initialInv = parseFloat(document.getElementById('initial-investment').value) || 0;
+      const monthly = parseFloat(document.getElementById('monthly-investment').value);
+      const annualReturn = parseFloat(document.getElementById('annual-return').value);
+      const years = parseFloat(document.getElementById('investment-years').value);
+
+      if (!monthly || monthly <= 0 || isNaN(annualReturn) || annualReturn < 0 || !years || years <= 0) {
+        alert('Please enter valid values for monthly investment, annual return, and years.');
+        return;
+      }
+
+      const r = annualReturn / 100 / 12;
+      const n = years * 12;
+
+      let fvContributions;
+      if (r === 0) {
+        fvContributions = monthly * n;
+      } else {
+        fvContributions = monthly * ((Math.pow(1 + r, n) - 1) / r);
+      }
+
+      const fvInitial = initialInv * Math.pow(1 + r, n);
+      const portfolioValue = fvInitial + fvContributions;
+      const totalInvested = initialInv + (monthly * n);
+      const totalGain = portfolioValue - totalInvested;
+      const roi = totalInvested > 0 ? (totalGain / totalInvested) * 100 : 0;
+      const effectiveAvgCost = portfolioValue > 0 ? (totalInvested / portfolioValue) * 100 : 0;
+
+      document.getElementById('result-portfolio-value').textContent = CalcWise.formatCurrency(portfolioValue);
+      document.getElementById('result-total-invested').textContent = CalcWise.formatCurrency(totalInvested);
+      document.getElementById('result-total-gain').textContent = CalcWise.formatCurrency(totalGain);
+      document.getElementById('result-avg-cost').textContent = CalcWise.formatPercent(effectiveAvgCost) + ' of final value';
+      document.getElementById('result-roi').textContent = CalcWise.formatPercent(roi);
+      document.getElementById('dca-results').classList.remove('hidden');
+    }
+
+    function resetDCA() {
+      document.getElementById('dca-form').reset();
+      document.getElementById('dca-results').classList.add('hidden');
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profit Forecast Calculator - CalcWise</title>
+  <meta name="description" content="Generate a month-by-month revenue and profit projection table based on current MRR, growth rate, COGS %, and operating expenses. Plan ahead with confidence.">
+  <link rel="canonical" href="https://calcwise.io/business-operations-calculators/profit-forecast-calculator/">
+
+  <meta property="og:title" content="Profit Forecast Calculator - CalcWise">
+  <meta property="og:description" content="Generate a month-by-month revenue and profit projection table based on current MRR, growth rate, COGS %, and operating expenses.">
+  <meta property="og:url" content="https://calcwise.io/business-operations-calculators/profit-forecast-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Profit Forecast Calculator - CalcWise">
+  <meta name="twitter:description" content="Generate a month-by-month revenue and profit projection table based on current MRR, growth rate, COGS %, and operating expenses.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Business Operations Calculators", "item": "https://calcwise.io/business-operations-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "Profit Forecast Calculator", "item": "https://calcwise.io/business-operations-calculators/profit-forecast-calculator/" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do I forecast profit for my business?",
+        "acceptedAnswer": { "@type": "Answer", "text": "To forecast profit, start with current monthly revenue, apply a monthly growth rate to project future revenue, then subtract estimated COGS (as a percentage of revenue) and fixed operating expenses to arrive at projected profit for each month." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is COGS percentage?",
+        "acceptedAnswer": { "@type": "Answer", "text": "COGS percentage is the ratio of cost of goods sold to revenue, expressed as a percentage. For example, a 40% COGS means that for every $100 in revenue, $40 goes toward direct production costs." }
+      },
+      {
+        "@type": "Question",
+        "name": "How accurate are profit forecasts?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Profit forecasts are estimates based on assumptions that may not hold. Market changes, unexpected costs, and fluctuating growth rates can cause actual results to differ significantly. Update forecasts regularly as new data becomes available." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between revenue forecasting and profit forecasting?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Revenue forecasting projects future sales. Profit forecasting goes further by subtracting estimated costs from projected revenue to show expected profitability. Profit forecasting requires assumptions about cost structure in addition to growth." }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    .forecast-table { width: 100%; border-collapse: collapse; margin-top: var(--space-4); font-size: var(--text-sm); }
+    .forecast-table th { background: var(--color-primary); color: white; padding: var(--space-2) var(--space-3); text-align: right; font-weight: var(--font-semibold); }
+    .forecast-table th:first-child { text-align: left; }
+    .forecast-table td { padding: var(--space-2) var(--space-3); border-bottom: 1px solid var(--color-gray-200); text-align: right; }
+    .forecast-table td:first-child { text-align: left; font-weight: var(--font-medium); }
+    .forecast-table tr:nth-child(even) { background: var(--color-gray-50); }
+    .forecast-table tr:last-child td { font-weight: var(--font-bold); background: var(--color-primary-50); }
+    .table-wrapper { overflow-x: auto; }
+  </style>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/business-operations-calculators/" aria-current="page">Business</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/business-operations-calculators/" aria-current="page">Business Operations Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container page-content">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/business-operations-calculators/">Business Operations Calculators</a></li>
+          <li><span aria-current="page">Profit Forecast Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="calc-page-layout">
+        <div class="calc-page-main">
+          <h1>Profit Forecast Calculator</h1>
+          <p class="mt-4 mb-8" style="font-size:var(--text-lg); color:var(--color-gray-600); max-width:700px; line-height:var(--leading-relaxed);">Build a month-by-month profit forecast to see where your business is headed financially. Enter your current revenue, expected growth rate, cost structure, and projection horizon to generate a detailed table of future revenue, gross profit, and net profit.</p>
+
+          <div class="calc-container">
+            <div class="calc-header">
+              <h2>Generate Profit Forecast</h2>
+              <p>Enter your current financials and growth assumptions</p>
+            </div>
+            <div class="calc-body">
+              <form id="forecastForm" novalidate>
+                <div class="form-group">
+                  <label class="form-label" for="currentRevenue">Current Monthly Revenue <span class="form-hint">Your MRR starting point</span></label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="currentRevenue" name="currentRevenue" class="form-input" placeholder="50000" min="0.01" step="0.01" required>
+                  </div>
+                  <span class="form-error">Please enter a valid monthly revenue amount.</span>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="growthRate">Monthly Growth Rate % <span class="form-hint">Expected month-over-month growth</span></label>
+                  <div class="input-suffix">
+                    <input type="number" id="growthRate" name="growthRate" class="form-input" placeholder="5" min="-50" max="100" step="0.1" required>
+                    <span class="suffix">%</span>
+                  </div>
+                  <span class="form-error">Please enter a valid growth rate.</span>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="cogsPct">COGS % of Revenue <span class="form-hint">Direct costs as % of revenue</span></label>
+                  <div class="input-suffix">
+                    <input type="number" id="cogsPct" name="cogsPct" class="form-input" placeholder="40" min="0" max="100" step="0.1" required>
+                    <span class="suffix">%</span>
+                  </div>
+                  <span class="form-error">Please enter a valid COGS percentage (0-100).</span>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="fixedOpex">Fixed Monthly Operating Expenses <span class="form-hint">Expenses that stay roughly constant</span></label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="fixedOpex" name="fixedOpex" class="form-input" placeholder="20000" min="0" step="0.01" required>
+                  </div>
+                  <span class="form-error">Please enter a valid operating expense amount.</span>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="monthsAhead">Months to Forecast <span class="form-hint">Project up to 24 months</span></label>
+                  <div class="input-suffix">
+                    <input type="number" id="monthsAhead" name="monthsAhead" class="form-input" placeholder="12" min="1" max="24" step="1" required>
+                    <span class="suffix">months</span>
+                  </div>
+                  <span class="form-error">Please enter a number of months between 1 and 24.</span>
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="generateForecast()">Generate Forecast</button>
+                  <button type="button" class="btn btn-reset" onclick="resetForecastForm()">Reset</button>
+                </div>
+              </form>
+
+              <div id="results" class="calc-results hidden">
+                <div class="result-grid result-grid-3 mb-4">
+                  <div class="result-item">
+                    <div class="result-label">Final Month Revenue</div>
+                    <div class="result-value" id="resultFinalRevenue">$0</div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Final Month Profit</div>
+                    <div class="result-value" id="resultFinalProfit">$0</div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Cumulative Profit</div>
+                    <div class="result-value" id="resultCumulativeProfit">$0</div>
+                  </div>
+                </div>
+                <div class="table-wrapper">
+                  <table class="forecast-table" id="forecastTable">
+                    <thead>
+                      <tr>
+                        <th>Month</th>
+                        <th>Revenue</th>
+                        <th>COGS</th>
+                        <th>Gross Profit</th>
+                        <th>Op. Expenses</th>
+                        <th>Net Profit</th>
+                      </tr>
+                    </thead>
+                    <tbody id="forecastBody"></tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="disclaimer">
+            <strong>Disclaimer:</strong> Profit forecasts are projections based on user-supplied assumptions and do not guarantee future results. Market conditions, competitive dynamics, and cost fluctuations may cause actual performance to differ significantly. This tool is for planning purposes only -- consult a financial advisor for formal business planning.
+          </div>
+
+          <div class="ad-slot ad-slot-leaderboard"></div>
+
+          <section class="content-section">
+            <h2>Profit Forecast Formulas</h2>
+            <p>Each month's projections are calculated using compound growth applied to a consistent cost structure.</p>
+            <div class="formula-box">
+              <div class="formula-label">Monthly Revenue (Month N)</div>
+              Revenue(N) = Starting Revenue x (1 + Monthly Growth Rate)^N
+            </div>
+            <div class="formula-box">
+              <div class="formula-label">Gross Profit</div>
+              Gross Profit = Revenue x (1 - COGS%)
+            </div>
+            <div class="formula-box">
+              <div class="formula-label">Net Profit</div>
+              Net Profit = Gross Profit - Fixed Operating Expenses
+            </div>
+          </section>
+
+          <section class="content-section">
+            <h2>How to Use This Calculator</h2>
+            <ol>
+              <li><strong>Enter current monthly revenue</strong> -- your most recent month's revenue as the starting point.</li>
+              <li><strong>Enter monthly growth rate</strong> -- your expected month-over-month revenue growth (e.g., 5 for 5%). Use negative values for declining revenue.</li>
+              <li><strong>Enter COGS %</strong> -- the percentage of revenue consumed by direct production costs (e.g., 40 means COGS is 40% of revenue each month).</li>
+              <li><strong>Enter fixed monthly operating expenses</strong> -- costs that remain relatively stable regardless of revenue.</li>
+              <li><strong>Enter months to forecast</strong> -- choose 1 to 24 months ahead.</li>
+              <li><strong>Click "Generate Forecast"</strong> to see a full month-by-month table.</li>
+            </ol>
+          </section>
+
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>A startup has <strong>$50,000 current MRR</strong>, a <strong>5% monthly growth rate</strong>, <strong>40% COGS</strong>, and <strong>$20,000 fixed monthly expenses</strong>. Looking ahead <strong>12 months</strong>:</p>
+            <ul>
+              <li><strong>Month 1 Revenue:</strong> $50,000 x 1.05 = $52,500</li>
+              <li><strong>Month 12 Revenue:</strong> $50,000 x (1.05)^12 = ~$89,542</li>
+              <li><strong>Month 12 Gross Profit:</strong> $89,542 x 60% = $53,725</li>
+              <li><strong>Month 12 Net Profit:</strong> $53,725 - $20,000 = <strong>$33,725</strong></li>
+            </ul>
+            <p>At 5% monthly growth, the business roughly doubles revenue in 12 months and generates increasingly strong profits as fixed costs become a smaller proportion of revenue.</p>
+          </section>
+
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                How do I forecast profit for my business?
+                <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>To forecast profit, start with current monthly revenue, apply a monthly growth rate to project future revenue, then subtract estimated COGS and fixed operating expenses to arrive at projected profit for each month.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What is COGS percentage?
+                <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 011-1z"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>COGS percentage is the ratio of cost of goods sold to revenue. For example, a 40% COGS means that for every $100 in revenue, $40 goes toward direct production costs, leaving 60% as gross margin.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                How accurate are profit forecasts?
+                <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 011-1z"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Profit forecasts are estimates based on assumptions. Market changes, unexpected costs, and fluctuating growth rates can cause actual results to differ. Update forecasts regularly as new data becomes available.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What is the difference between revenue forecasting and profit forecasting?
+                <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 011-1z"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Revenue forecasting projects future sales. Profit forecasting goes further by subtracting estimated costs from projected revenue to show expected profitability. Profit forecasting requires assumptions about cost structure in addition to growth.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/business-operations-calculators/revenue-forecasting-calculator/" class="card card-link">
+                <h3>Revenue Forecasting Calculator</h3>
+                <p>Build a 12-month revenue forecast with ARR and MRR projections.</p>
+              </a>
+              <a href="/business-operations-calculators/business-growth-rate-calculator/" class="card card-link">
+                <h3>Business Growth Rate Calculator</h3>
+                <p>Calculate and project your revenue growth rate over time.</p>
+              </a>
+              <a href="/business-operations-calculators/net-profit-calculator/" class="card card-link">
+                <h3>Net Profit Calculator</h3>
+                <p>Calculate net profit and net margin after all expenses and taxes.</p>
+              </a>
+              <a href="/business-operations-calculators/gross-profit-calculator/" class="card card-link">
+                <h3>Gross Profit Calculator</h3>
+                <p>Calculate gross profit and gross margin from revenue and COGS.</p>
+              </a>
+              <a href="/business-operations-calculators/operating-margin-calculator/" class="card card-link">
+                <h3>Operating Margin Calculator</h3>
+                <p>Measure operational profitability with operating margin percentage.</p>
+              </a>
+            </div>
+          </section>
+        </div>
+
+        <aside class="calc-page-sidebar">
+          <div class="sidebar-card">
+            <h3>Business Operations</h3>
+            <a href="/business-operations-calculators/business-growth-rate-calculator/">Growth Rate</a>
+            <a href="/business-operations-calculators/cash-conversion-cycle-calculator/">Cash Conversion Cycle</a>
+            <a href="/business-operations-calculators/customer-churn-rate-calculator/">Customer Churn Rate</a>
+            <a href="/business-operations-calculators/gross-profit-calculator/">Gross Profit</a>
+            <a href="/business-operations-calculators/net-profit-calculator/">Net Profit</a>
+            <a href="/business-operations-calculators/operating-margin-calculator/">Operating Margin</a>
+            <a href="/business-operations-calculators/profit-forecast-calculator/">Profit Forecast</a>
+            <a href="/business-operations-calculators/revenue-forecasting-calculator/">Revenue Forecasting</a>
+            <a href="/business-operations-calculators/vendor-payment-schedule-calculator/">Vendor Payment Schedule</a>
+            <a href="/business-operations-calculators/working-capital-calculator/">Working Capital</a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Real Estate</h4>
+          <a href="/real-estate-calculators/">All Real Estate</a>
+        </div>
+        <div class="footer-col">
+          <h4>Finance</h4>
+          <a href="/finance-calculators/">All Finance</a>
+        </div>
+        <div class="footer-col">
+          <h4>Business</h4>
+          <a href="/business-operations-calculators/">All Business Operations</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/about.html">About</a>
+          <a href="/contact.html">Contact</a>
+          <a href="/privacy.html">Privacy</a>
+          <a href="/terms.html">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function generateForecast() {
+      const startRevenue = CalcWise.parseNumber(document.getElementById('currentRevenue').value);
+      const growthRate = CalcWise.parseNumber(document.getElementById('growthRate').value) / 100;
+      const cogsPct = CalcWise.parseNumber(document.getElementById('cogsPct').value) / 100;
+      const fixedOpex = CalcWise.parseNumber(document.getElementById('fixedOpex').value);
+      const months = parseInt(document.getElementById('monthsAhead').value) || 0;
+
+      if (startRevenue <= 0) { alert('Current monthly revenue must be greater than zero.'); return; }
+      if (cogsPct < 0 || cogsPct > 1) { alert('COGS % must be between 0 and 100.'); return; }
+      if (months < 1 || months > 24) { alert('Months to forecast must be between 1 and 24.'); return; }
+
+      const monthNames = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+      const today = new Date();
+      const tbody = document.getElementById('forecastBody');
+      tbody.innerHTML = '';
+
+      let cumulativeProfit = 0;
+      let finalRevenue = 0;
+      let finalProfit = 0;
+
+      for (let i = 1; i <= months; i++) {
+        const revenue = startRevenue * Math.pow(1 + growthRate, i);
+        const cogs = revenue * cogsPct;
+        const grossProfit = revenue - cogs;
+        const netProfit = grossProfit - fixedOpex;
+        cumulativeProfit += netProfit;
+
+        const monthDate = new Date(today.getFullYear(), today.getMonth() + i, 1);
+        const monthLabel = monthNames[monthDate.getMonth()] + ' ' + monthDate.getFullYear();
+
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+          <td>${monthLabel}</td>
+          <td>${CalcWise.formatCurrency(revenue)}</td>
+          <td>${CalcWise.formatCurrency(cogs)}</td>
+          <td>${CalcWise.formatCurrency(grossProfit)}</td>
+          <td>${CalcWise.formatCurrency(fixedOpex)}</td>
+          <td style="color:${netProfit >= 0 ? 'var(--color-success)' : 'var(--color-error)'}">${CalcWise.formatCurrency(netProfit)}</td>
+        `;
+        tbody.appendChild(tr);
+
+        if (i === months) {
+          finalRevenue = revenue;
+          finalProfit = netProfit;
+        }
+      }
+
+      // Totals row
+      const totalRevenue = Array.from(tbody.querySelectorAll('tr')).reduce((sum, tr) => {
+        return sum + CalcWise.parseNumber(tr.cells[1].textContent);
+      }, 0);
+      const totalCogs = totalRevenue * cogsPct;
+      const totalGross = totalRevenue - totalCogs;
+      const totalOpex = fixedOpex * months;
+
+      const totalRow = document.createElement('tr');
+      totalRow.innerHTML = `
+        <td>Total (${months} mo.)</td>
+        <td>${CalcWise.formatCurrency(totalRevenue)}</td>
+        <td>${CalcWise.formatCurrency(totalCogs)}</td>
+        <td>${CalcWise.formatCurrency(totalGross)}</td>
+        <td>${CalcWise.formatCurrency(totalOpex)}</td>
+        <td style="color:${cumulativeProfit >= 0 ? 'var(--color-success)' : 'var(--color-error)'}">${CalcWise.formatCurrency(cumulativeProfit)}</td>
+      `;
+      tbody.appendChild(totalRow);
+
+      CalcWise.setText('resultFinalRevenue', CalcWise.formatCurrency(finalRevenue));
+      CalcWise.setText('resultFinalProfit', CalcWise.formatCurrency(finalProfit));
+      CalcWise.setText('resultCumulativeProfit', CalcWise.formatCurrency(cumulativeProfit));
+
+      CalcWise.showResults('results');
+    }
+
+    function resetForecastForm() {
+      document.getElementById('forecastForm').reset();
+      document.getElementById('forecastBody').innerHTML = '';
+      CalcWise.hideResults('results');
+    }
+  </script>
+</body>
+</html>

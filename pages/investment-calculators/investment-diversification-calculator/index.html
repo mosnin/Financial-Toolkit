@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Investment Diversification Calculator | CalcWise</title>
+  <meta name="description" content="Score your portfolio's diversification level. Enter your holdings, sector weights, and correlation estimate to get a diversification score, concentration risk rating, and recommendations.">
+  <meta name="keywords" content="investment diversification calculator, portfolio diversification score, concentration risk, sector weights, diversification analysis">
+  <link rel="canonical" href="https://calcwise.io/investment-calculators/investment-diversification-calculator/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Investment Diversification Calculator | CalcWise">
+  <meta property="og:description" content="Score your portfolio diversification and identify concentration risk across sectors and holdings.">
+  <meta property="og:url" content="https://calcwise.io/investment-calculators/investment-diversification-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Investment Diversification Calculator | CalcWise">
+  <meta name="twitter:description" content="Score your portfolio diversification and identify concentration risk across sectors and holdings.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <!-- BreadcrumbList Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Investment Calculators", "item": "https://calcwise.io/investment-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "Investment Diversification Calculator", "item": "https://calcwise.io/investment-calculators/investment-diversification-calculator/" }
+    ]
+  }
+  </script>
+
+  <!-- FAQPage Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is investment diversification?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Investment diversification is the practice of spreading investments across different assets, sectors, and geographies to reduce risk. The goal is to limit the impact of any single investment's poor performance on your overall portfolio." }
+      },
+      {
+        "@type": "Question",
+        "name": "How many holdings do I need to be diversified?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Research suggests that 20–30 uncorrelated stocks can eliminate most unsystematic (company-specific) risk. However, diversification also depends on sector spread and correlation. Holding 30 technology stocks is not as diversified as holding 15 stocks across different sectors." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is concentration risk?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Concentration risk is the potential for large losses resulting from having too much of your portfolio in a single stock, sector, or asset class. A common guideline is to keep no single position above 5–10% of your total portfolio." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is asset correlation and why does it matter?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Correlation measures how closely two assets move together. A correlation of +1 means they move in perfect lockstep; -1 means they move in opposite directions. True diversification requires holding assets with low or negative correlations so that losses in one area are offset by stability or gains in another." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/investment-calculators/" aria-current="page">Investments</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/investment-calculators/">Investment Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/investment-calculators/">Investment Calculators</a></li>
+          <li><span aria-current="page">Investment Diversification Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="article-content">
+          <h1>Investment Diversification Calculator</h1>
+          <p>Assess how well diversified your portfolio is. Enter the number of individual holdings, the percentage weight of your largest sector, and an estimate of how correlated your holdings are to receive a diversification score, a concentration risk rating, and actionable recommendations.</p>
+
+          <div class="calc-container mt-8">
+            <div class="calc-header">
+              <h2>Calculate Diversification Score</h2>
+              <p>Enter your portfolio details below</p>
+            </div>
+            <div class="calc-body">
+              <form id="diversification-form" onsubmit="return false;">
+                <div class="form-group">
+                  <label class="form-label" for="num-holdings">Number of Holdings</label>
+                  <input type="number" id="num-holdings" class="form-input" placeholder="15" min="1" max="500" step="1" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="largest-sector-weight">Largest Sector Weight %</label>
+                  <div class="input-prefix">
+                    <input type="number" id="largest-sector-weight" class="form-input" placeholder="40" min="0" max="100" step="0.1" required>
+                    <span class="prefix" style="left:auto;right:0.75rem;">%</span>
+                  </div>
+                  <small class="form-hint">What % of your portfolio is in your single largest sector (e.g. Technology)?</small>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="correlation-estimate">Average Correlation Estimate</label>
+                  <select id="correlation-estimate" class="form-input" required>
+                    <option value="">Select correlation level</option>
+                    <option value="low">Low (0.0–0.3) — Mixed asset classes, international stocks</option>
+                    <option value="medium">Medium (0.3–0.6) — Diversified equity sectors</option>
+                    <option value="high">High (0.6–1.0) — Same sector, similar industries</option>
+                  </select>
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calculateDiversification()">Calculate Diversification</button>
+                  <button type="button" class="btn btn-reset" onclick="resetDiversification()">Reset</button>
+                </div>
+              </form>
+
+              <div id="diversification-results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">Diversification Score</div>
+                  <div class="result-value" id="result-div-score"></div>
+                </div>
+                <div class="result-grid">
+                  <div class="result-item">
+                    <div class="result-label">Concentration Risk</div>
+                    <div class="result-value" id="result-concentration-risk"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Holdings Adequacy</div>
+                    <div class="result-value" id="result-holdings-adequacy"></div>
+                  </div>
+                </div>
+                <div class="result-item" style="margin-top:1rem;">
+                  <div class="result-label">Recommendation</div>
+                  <div id="result-recommendation" style="margin-top:0.5rem;padding:1rem;background:var(--surface-2,#f9fafb);border-radius:0.5rem;font-size:0.95rem;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Formula Section -->
+          <section class="content-section">
+            <h2>How the Diversification Score Is Calculated</h2>
+            <p>The diversification score (0–100) is computed from three factors: the number of holdings, sector concentration, and correlation level:</p>
+            <div class="formula-box">
+              <div class="formula-label">Holdings Score</div>
+              Holdings Score = min(number of holdings / 30, 1) × 40 points
+            </div>
+            <div class="formula-box">
+              <div class="formula-label">Sector Score</div>
+              Sector Score = max(1 − largest sector weight / 100, 0) × 40 points
+            </div>
+            <div class="formula-box">
+              <div class="formula-label">Correlation Score</div>
+              Low = 20 pts &nbsp;|&nbsp; Medium = 10 pts &nbsp;|&nbsp; High = 0 pts
+            </div>
+            <p>The total diversification score is the sum of all three components out of 100.</p>
+          </section>
+
+          <!-- How to Use -->
+          <section class="content-section">
+            <h2>How to Use This Diversification Calculator</h2>
+            <ol>
+              <li><strong>Enter number of holdings</strong> — the total number of individual stocks, funds, or assets in your portfolio.</li>
+              <li><strong>Enter largest sector weight %</strong> — the percentage of your portfolio in your most concentrated sector.</li>
+              <li><strong>Select correlation estimate</strong> — how similarly your holdings tend to move together.</li>
+              <li><strong>Click "Calculate Diversification"</strong> to get your score, concentration risk level, and a personalized recommendation.</li>
+            </ol>
+          </section>
+
+          <!-- Example Scenario -->
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>Suppose you hold 15 stocks with 40% of your portfolio in technology and medium correlation between holdings. The holdings score would be 20 points (15/30 × 40), the sector score would be 24 points (60% × 40), and the correlation score would be 10 points, giving a total diversification score of 54 out of 100 — a moderate level. The recommendation would be to reduce your technology concentration and consider adding uncorrelated assets like bonds or international equities.</p>
+          </section>
+
+          <!-- FAQ Section -->
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What is investment diversification?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Investment diversification is the practice of spreading investments across different assets, sectors, and geographies to reduce risk. The goal is to limit the impact of any single investment's poor performance on your overall portfolio.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                How many holdings do I need to be diversified?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Research suggests that 20–30 uncorrelated stocks can eliminate most unsystematic (company-specific) risk. However, diversification also depends on sector spread and correlation. Holding 30 technology stocks is not as diversified as holding 15 stocks across different sectors.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What is concentration risk?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Concentration risk is the potential for large losses resulting from having too much of your portfolio in a single stock, sector, or asset class. A common guideline is to keep no single position above 5–10% of your total portfolio.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What is asset correlation and why does it matter?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Correlation measures how closely two assets move together. A correlation of +1 means they move in perfect lockstep; -1 means they move in opposite directions. True diversification requires holding assets with low or negative correlations so that losses in one area are offset by stability or gains in another.</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Related Calculators -->
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/investment-calculators/asset-allocation-rebalancing-calculator/" class="card card-link">
+                <h3>Asset Allocation Rebalancing Calculator</h3>
+                <p>Get buy/sell recommendations to restore your target allocation.</p>
+              </a>
+              <a href="/investment-calculators/portfolio-volatility-calculator/" class="card card-link">
+                <h3>Portfolio Volatility Calculator</h3>
+                <p>Estimate portfolio risk and standard deviation across assets.</p>
+              </a>
+              <a href="/investment-calculators/annualized-return-calculator/" class="card card-link">
+                <h3>Annualized Return Calculator</h3>
+                <p>Calculate the annualized return on any investment.</p>
+              </a>
+              <a href="/investment-calculators/investment-withdrawal-calculator/" class="card card-link">
+                <h3>Investment Withdrawal Calculator</h3>
+                <p>Project how long your portfolio will last under different withdrawal rates.</p>
+              </a>
+            </div>
+          </section>
+
+          <!-- Disclaimer -->
+          <div class="disclaimer">
+            <strong>Disclaimer:</strong> This calculator provides a simplified diversification estimate for informational purposes only. Actual portfolio risk depends on many factors not captured here. This is not financial advice. Consult a qualified financial professional before making investment decisions.
+          </div>
+
+          <!-- Ad Slot -->
+          <div class="ad-slot ad-slot-leaderboard"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Real Estate</h4>
+          <a href="/real-estate-calculators/">All Real Estate Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Investments</h4>
+          <a href="/investment-calculators/">All Investment Calculators</a>
+          <a href="/investment-calculators/cagr-calculator/">CAGR Calculator</a>
+          <a href="/investment-calculators/dividend-yield-calculator/">Dividend Yield</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateDiversification() {
+      const numHoldings = parseInt(document.getElementById('num-holdings').value);
+      const largestSector = parseFloat(document.getElementById('largest-sector-weight').value);
+      const correlation = document.getElementById('correlation-estimate').value;
+
+      if (!numHoldings || numHoldings < 1 || isNaN(largestSector) || !correlation) {
+        alert('Please fill in all fields.');
+        return;
+      }
+
+      // Holdings score: max 40 pts, saturates at 30 holdings
+      const holdingsScore = Math.min(numHoldings / 30, 1) * 40;
+
+      // Sector score: max 40 pts, based on how unconcentrated the top sector is
+      const sectorScore = Math.max(1 - largestSector / 100, 0) * 40;
+
+      // Correlation score: max 20 pts
+      const correlationScoreMap = { low: 20, medium: 10, high: 0 };
+      const correlationScore = correlationScoreMap[correlation];
+
+      const totalScore = Math.round(holdingsScore + sectorScore + correlationScore);
+
+      let scoreLabel, concentrationRisk, holdingsAdequacy, recommendation;
+
+      // Diversification label
+      if (totalScore >= 75) scoreLabel = totalScore + ' / 100 — Well Diversified';
+      else if (totalScore >= 50) scoreLabel = totalScore + ' / 100 — Moderately Diversified';
+      else if (totalScore >= 25) scoreLabel = totalScore + ' / 100 — Poorly Diversified';
+      else scoreLabel = totalScore + ' / 100 — Highly Concentrated';
+
+      // Concentration risk
+      if (largestSector > 60) concentrationRisk = 'High';
+      else if (largestSector > 35) concentrationRisk = 'Moderate';
+      else concentrationRisk = 'Low';
+
+      // Holdings adequacy
+      if (numHoldings >= 25) holdingsAdequacy = 'Adequate (' + numHoldings + ' holdings)';
+      else if (numHoldings >= 10) holdingsAdequacy = 'Moderate (' + numHoldings + ' holdings)';
+      else holdingsAdequacy = 'Insufficient (' + numHoldings + ' holdings)';
+
+      // Recommendation
+      const tips = [];
+      if (numHoldings < 15) tips.push('Increase holdings to at least 15–25 uncorrelated assets to reduce idiosyncratic risk.');
+      if (largestSector > 40) tips.push('Reduce your largest sector weight below 30–35% to limit sector-specific downturns.');
+      if (correlation === 'high') tips.push('Add assets from different sectors or asset classes (e.g., bonds, real estate, international) to lower average correlation.');
+      if (tips.length === 0) tips.push('Your portfolio appears well diversified. Continue monitoring sector drift as markets shift, and rebalance annually.');
+
+      document.getElementById('result-div-score').textContent = scoreLabel;
+      document.getElementById('result-concentration-risk').textContent = concentrationRisk;
+      document.getElementById('result-holdings-adequacy').textContent = holdingsAdequacy;
+      document.getElementById('result-recommendation').innerHTML = tips.map(t => '<p style="margin:0 0 0.5rem;">' + t + '</p>').join('');
+      document.getElementById('diversification-results').classList.remove('hidden');
+    }
+
+    function resetDiversification() {
+      document.getElementById('diversification-form').reset();
+      document.getElementById('diversification-results').classList.add('hidden');
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>1099 vs W2 Calculator | CalcWise</title>
+  <meta name="description" content="Compare 1099 contractor income vs W2 employment after taxes. Find your true take-home pay, break-even 1099 rate, and get a data-driven recommendation.">
+  <link rel="canonical" href="https://calcwise.io/tax-calculators/1099-vs-w2-calculator/">
+  <meta property="og:title" content="1099 vs W2 Calculator | CalcWise">
+  <meta property="og:description" content="Compare 1099 contractor income vs W2 employment after taxes. Find your true take-home pay and break-even 1099 rate.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcwise.io/tax-calculators/1099-vs-w2-calculator/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="1099 vs W2 Calculator | CalcWise">
+  <meta name="twitter:description" content="Compare 1099 contractor income vs W2 employment after taxes.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/"},
+      {"@type": "ListItem", "position": 2, "name": "Tax Calculators", "item": "https://calcwise.io/tax-calculators/"},
+      {"@type": "ListItem", "position": 3, "name": "1099 vs W2 Calculator"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the self-employment tax rate for 1099 workers?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Self-employment tax is 15.3% on net earnings up to the Social Security wage base ($168,600 for 2024) and 2.9% above that. However, you can deduct half of SE tax from your gross income, reducing the effective rate."}
+      },
+      {
+        "@type": "Question",
+        "name": "How much more does a 1099 contractor need to earn to equal a W2 salary?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Generally a 1099 contractor needs to earn 20–30% more than a W2 salary to net the same after-tax income, once you account for self-employment taxes, health insurance, and retirement contributions."}
+      },
+      {
+        "@type": "Question",
+        "name": "Can 1099 contractors deduct business expenses?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Yes. 1099 contractors can deduct ordinary and necessary business expenses such as home office, equipment, travel, and professional development on Schedule C, reducing their taxable self-employment income."}
+      },
+      {
+        "@type": "Question",
+        "name": "Are W2 benefits taxable?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Employer-sponsored health insurance premiums are generally pre-tax and excluded from W2 wages. 401(k) employer matches are not immediately taxable but are subject to income tax upon withdrawal in retirement."}
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="logo">
+        <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav">
+        <a href="/">Home</a>
+        <a href="/pages/business-calculators/">Business</a>
+        <a href="/pages/financial-calculators/">Financial</a>
+        <a href="/pages/tax-calculators/" aria-current="page">Tax</a>
+        <a href="/pages/investment-calculators/">Investment</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav">
+      <a href="/">Home</a>
+      <a href="/pages/business-calculators/">Business Calculators</a>
+      <a href="/pages/financial-calculators/">Financial Calculators</a>
+      <a href="/pages/tax-calculators/">Tax Calculators</a>
+      <a href="/pages/investment-calculators/">Investment Calculators</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/pages/tax-calculators/">Tax Calculators</a></li>
+          <li><span aria-current="page">1099 vs W2 Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="calc-page-layout">
+          <div class="calc-page-main">
+            <h1>1099 vs W2 Calculator</h1>
+            <p class="subtitle" style="font-size:var(--text-lg);color:var(--color-gray-600);margin-bottom:var(--space-8);line-height:var(--leading-relaxed);">Compare your true after-tax income as a 1099 independent contractor vs a W2 employee. This calculator accounts for self-employment taxes, benefits, and retirement contributions so you can make an informed career decision.</p>
+
+            <div class="calc-container">
+              <div class="calc-header">
+                <h2>1099 vs W2 Income Comparison</h2>
+                <p>Enter both income scenarios to compare true take-home pay</p>
+              </div>
+              <div class="calc-body">
+                <form id="calc-form" onsubmit="return false;">
+                  <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-6);">
+                    <div>
+                      <h3 style="font-size:var(--text-base);font-weight:var(--font-semibold);color:var(--color-primary);margin-bottom:var(--space-4);padding-bottom:var(--space-2);border-bottom:2px solid var(--color-primary-100);">1099 Contractor</h3>
+                      <div class="form-group">
+                        <label class="form-label" for="contract-rate">Annual Contract Rate</label>
+                        <div class="input-prefix">
+                          <span class="prefix">$</span>
+                          <input type="number" id="contract-rate" class="form-input" placeholder="120000" min="0" step="1000">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="form-label" for="business-expenses">Annual Business Expenses</label>
+                        <div class="input-prefix">
+                          <span class="prefix">$</span>
+                          <input type="number" id="business-expenses" class="form-input" placeholder="5000" min="0" step="100">
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <h3 style="font-size:var(--text-base);font-weight:var(--font-semibold);color:var(--color-primary);margin-bottom:var(--space-4);padding-bottom:var(--space-2);border-bottom:2px solid var(--color-primary-100);">W2 Employee</h3>
+                      <div class="form-group">
+                        <label class="form-label" for="w2-salary">Annual W2 Salary</label>
+                        <div class="input-prefix">
+                          <span class="prefix">$</span>
+                          <input type="number" id="w2-salary" class="form-input" placeholder="90000" min="0" step="1000">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="form-label" for="benefits-value">Annual Benefits Value (health, 401k match, etc.)</label>
+                        <div class="input-prefix">
+                          <span class="prefix">$</span>
+                          <input type="number" id="benefits-value" class="form-input" placeholder="15000" min="0" step="500">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="filing-status">Filing Status</label>
+                    <select id="filing-status" class="form-select">
+                      <option value="single">Single</option>
+                      <option value="married">Married Filing Jointly</option>
+                      <option value="hoh">Head of Household</option>
+                    </select>
+                  </div>
+
+                  <div class="calc-actions">
+                    <button type="button" class="btn btn-calculate btn-full" onclick="calculate1099vsW2()">Compare Income</button>
+                    <button type="button" class="btn btn-reset" onclick="resetForm()">Reset</button>
+                  </div>
+                </form>
+
+                <div id="results" class="calc-results hidden">
+                  <div class="result-primary">
+                    <div class="result-label" id="winner-label">Recommendation</div>
+                    <div class="result-value" id="result-recommendation" style="font-size:var(--text-xl);">—</div>
+                  </div>
+                  <div class="result-grid">
+                    <div class="result-item">
+                      <div class="result-label">1099 Net Take-Home</div>
+                      <div class="result-value" id="result-1099-net">$0</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">W2 Total Compensation</div>
+                      <div class="result-value" id="result-w2-net">$0</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">1099 SE Tax</div>
+                      <div class="result-value" id="result-se-tax">$0</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Break-Even 1099 Rate</div>
+                      <div class="result-value" id="result-breakeven">$0</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="ad-slot ad-slot-leaderboard"></div>
+
+            <section class="content-section">
+              <h2>How the Comparison Works</h2>
+              <div class="formula-box">
+                <div class="formula-label">1099 Net Income</div>
+                Net SE Income = Contract Rate − Business Expenses<br>
+                SE Tax = Net SE Income × 0.9235 × 15.3%<br>
+                Deductible SE Tax = SE Tax ÷ 2<br>
+                AGI = Net SE Income − Deductible SE Tax<br>
+                Federal Income Tax = Based on AGI and filing status brackets<br>
+                1099 Net = Contract Rate − SE Tax − Federal Tax
+              </div>
+              <div class="formula-box">
+                <div class="formula-label">W2 Total Compensation Value</div>
+                W2 Total = Salary + Benefits Value<br>
+                FICA (employee share) = Salary × 7.65%<br>
+                W2 Net = Salary − FICA − Federal Income Tax + Benefits Value
+              </div>
+              <div class="formula-box">
+                <div class="formula-label">Break-Even 1099 Rate</div>
+                The minimum 1099 contract rate needed to equal W2 total compensation after all taxes.
+              </div>
+            </section>
+
+            <section class="content-section">
+              <h2>How to Use This Calculator</h2>
+              <ol>
+                <li>Enter your <strong>annual 1099 contract rate</strong> — the gross amount you'd earn as a contractor.</li>
+                <li>Enter any <strong>business expenses</strong> you could deduct (home office, equipment, subscriptions).</li>
+                <li>Enter the comparable <strong>W2 salary</strong> you're evaluating.</li>
+                <li>Enter the <strong>benefits value</strong> — health insurance, 401(k) match, paid time off, etc.</li>
+                <li>Select your <strong>filing status</strong> and click Compare Income.</li>
+              </ol>
+            </section>
+
+            <section class="content-section">
+              <h2>Example Scenario</h2>
+              <p>A software developer is weighing a $130,000 1099 contract against a $100,000 W2 offer with $18,000 in benefits (health, 401k match, PTO value).</p>
+              <ul>
+                <li>1099 SE Tax: $130,000 × 0.9235 × 15.3% ≈ <strong>$18,373</strong></li>
+                <li>1099 Net (approx. after all taxes): <strong>~$88,500</strong></li>
+                <li>W2 Total Comp: $100,000 + $18,000 = $118,000; Net after FICA + income tax: <strong>~$91,000</strong></li>
+                <li>Break-Even 1099 Rate: approximately <strong>$138,000</strong></li>
+                <li>Recommendation: The W2 offer is slightly better unless the contractor can exceed the break-even rate.</li>
+              </ul>
+            </section>
+
+            <section class="faq-section">
+              <h2>Frequently Asked Questions</h2>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">What is the self-employment tax rate for 1099 workers?<svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg></button>
+                <div class="faq-answer"><p>Self-employment tax is 15.3% on net earnings up to the Social Security wage base ($168,600 for 2024) and 2.9% above that. However, you can deduct half of SE tax from your gross income, reducing the effective rate.</p></div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">How much more does a 1099 contractor need to earn to equal a W2 salary?<svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg></button>
+                <div class="faq-answer"><p>Generally a 1099 contractor needs to earn 20–30% more than a W2 salary to net the same after-tax income, once you account for self-employment taxes, health insurance, and retirement contributions.</p></div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">Can 1099 contractors deduct business expenses?<svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg></button>
+                <div class="faq-answer"><p>Yes. 1099 contractors can deduct ordinary and necessary business expenses such as home office, equipment, travel, and professional development on Schedule C, reducing their taxable self-employment income.</p></div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">Are W2 benefits taxable?<svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg></button>
+                <div class="faq-answer"><p>Employer-sponsored health insurance premiums are generally pre-tax and excluded from W2 wages. 401(k) employer matches are not immediately taxable but are subject to income tax upon withdrawal in retirement.</p></div>
+              </div>
+            </section>
+
+            <section class="related-calculators">
+              <h2>Related Calculators</h2>
+              <div class="grid grid-3">
+                <a href="/pages/tax-calculators/self-employment-tax-calculator/" class="card card-link">
+                  <h3>Self-Employment Tax Calculator</h3>
+                  <p>Calculate your full SE tax obligation and deductible portion.</p>
+                </a>
+                <a href="/pages/tax-calculators/after-tax-income-calculator/" class="card card-link">
+                  <h3>After-Tax Income Calculator</h3>
+                  <p>Find your net take-home after federal, state, and FICA taxes.</p>
+                </a>
+                <a href="/pages/tax-calculators/quarterly-estimated-tax-calculator/" class="card card-link">
+                  <h3>Quarterly Estimated Tax Calculator</h3>
+                  <p>Calculate your quarterly tax payments as a self-employed worker.</p>
+                </a>
+                <a href="/pages/business-calculators/freelance-rate-calculator/" class="card card-link">
+                  <h3>Freelance Rate Calculator</h3>
+                  <p>Determine the right hourly or project rate for your freelance work.</p>
+                </a>
+              </div>
+            </section>
+
+            <div class="disclaimer">
+              <strong>Tax Disclaimer:</strong> This calculator provides estimates for educational purposes only and does not constitute tax advice. Tax calculations are simplified and may not reflect all deductions, credits, or state taxes applicable to your situation. Consult a qualified tax professional before making employment or financial decisions. Results are based on 2026 federal tax parameters.
+            </div>
+          </div>
+
+          <aside class="calc-page-sidebar">
+            <div class="ad-slot ad-slot-rectangle"></div>
+            <div class="sidebar-card">
+              <h3>Tax Calculators</h3>
+              <a href="/pages/tax-calculators/self-employment-tax-calculator/">Self-Employment Tax</a>
+              <a href="/pages/tax-calculators/after-tax-income-calculator/">After-Tax Income</a>
+              <a href="/pages/tax-calculators/tax-bracket-calculator/">Tax Bracket Calculator</a>
+              <a href="/pages/tax-calculators/quarterly-estimated-tax-calculator/">Quarterly Estimated Tax</a>
+              <a href="/pages/tax-calculators/tax-refund-estimator/">Tax Refund Estimator</a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free online calculators for business, finance, tax, and investment decisions.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Calculators</h4>
+          <a href="/pages/business-calculators/">Business</a>
+          <a href="/pages/financial-calculators/">Financial</a>
+          <a href="/pages/tax-calculators/">Tax</a>
+          <a href="/pages/investment-calculators/">Investment</a>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <a href="/about/">About</a>
+          <a href="/blog/">Blog</a>
+          <a href="/contact/">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="/privacy/">Privacy Policy</a>
+          <a href="/terms/">Terms of Service</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/privacy/">Privacy</a>
+          <a href="/terms/">Terms</a>
+          <a href="/contact/">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    // 2026 Federal Tax Brackets (estimated, based on 2024 + inflation adjustments)
+    const BRACKETS = {
+      single: [
+        {rate:0.10, min:0, max:11925},
+        {rate:0.12, min:11925, max:48475},
+        {rate:0.22, min:48475, max:103350},
+        {rate:0.24, min:103350, max:197300},
+        {rate:0.32, min:197300, max:250525},
+        {rate:0.35, min:250525, max:626350},
+        {rate:0.37, min:626350, max:Infinity}
+      ],
+      married: [
+        {rate:0.10, min:0, max:23850},
+        {rate:0.12, min:23850, max:96950},
+        {rate:0.22, min:96950, max:206700},
+        {rate:0.24, min:206700, max:394600},
+        {rate:0.32, min:394600, max:501050},
+        {rate:0.35, min:501050, max:751600},
+        {rate:0.37, min:751600, max:Infinity}
+      ],
+      hoh: [
+        {rate:0.10, min:0, max:17000},
+        {rate:0.12, min:17000, max:64850},
+        {rate:0.22, min:64850, max:103350},
+        {rate:0.24, min:103350, max:197300},
+        {rate:0.32, min:197300, max:250500},
+        {rate:0.35, min:250500, max:626350},
+        {rate:0.37, min:626350, max:Infinity}
+      ]
+    };
+    const STD_DEDUCTION = {single:14600, married:29200, hoh:21900};
+
+    function calcFederalTax(agi, status) {
+      const deduction = STD_DEDUCTION[status] || 14600;
+      const taxable = Math.max(0, agi - deduction);
+      const brackets = BRACKETS[status] || BRACKETS.single;
+      let tax = 0;
+      for (const b of brackets) {
+        if (taxable <= b.min) break;
+        tax += (Math.min(taxable, b.max) - b.min) * b.rate;
+      }
+      return tax;
+    }
+
+    function calculate1099vsW2() {
+      const contractRate = CalcWise.parseNumber(document.getElementById('contract-rate').value);
+      const expenses = CalcWise.parseNumber(document.getElementById('business-expenses').value);
+      const w2Salary = CalcWise.parseNumber(document.getElementById('w2-salary').value);
+      const benefitsValue = CalcWise.parseNumber(document.getElementById('benefits-value').value);
+      const status = document.getElementById('filing-status').value;
+
+      if (!contractRate && !w2Salary) {
+        alert('Please enter at least one income amount.');
+        return;
+      }
+
+      // 1099 calculations
+      const netSEIncome = Math.max(0, contractRate - expenses);
+      const seTax = netSEIncome * 0.9235 * 0.153;
+      const deductibleSE = seTax / 2;
+      const agi1099 = netSEIncome - deductibleSE;
+      const fedTax1099 = calcFederalTax(agi1099, status);
+      const net1099 = contractRate - expenses - seTax - fedTax1099;
+
+      // W2 calculations
+      const ficaEmployee = w2Salary * 0.0765;
+      const fedTaxW2 = calcFederalTax(Math.max(0, w2Salary - STD_DEDUCTION[status]), status);
+      const w2NetCash = w2Salary - ficaEmployee - fedTaxW2;
+      const w2TotalComp = w2NetCash + benefitsValue;
+
+      // Break-even: find 1099 rate where net1099 = w2TotalComp
+      // Approximate iteratively
+      let low = w2Salary, high = w2Salary * 3;
+      for (let i = 0; i < 60; i++) {
+        const mid = (low + high) / 2;
+        const ne = Math.max(0, mid - expenses);
+        const se = ne * 0.9235 * 0.153;
+        const dse = se / 2;
+        const testAgi = ne - dse;
+        const ft = calcFederalTax(testAgi, status);
+        const testNet = mid - expenses - se - ft;
+        if (testNet < w2TotalComp) low = mid; else high = mid;
+      }
+      const breakEven = (low + high) / 2;
+
+      const diff = net1099 - w2TotalComp;
+      const recommendation = diff > 500 ? '1099 is better by ' + CalcWise.formatCurrency(diff)
+        : diff < -500 ? 'W2 is better by ' + CalcWise.formatCurrency(Math.abs(diff))
+        : 'Roughly equivalent (within $500)';
+
+      CalcWise.setText('result-1099-net', CalcWise.formatCurrency(net1099));
+      CalcWise.setText('result-w2-net', CalcWise.formatCurrency(w2TotalComp));
+      CalcWise.setText('result-se-tax', CalcWise.formatCurrency(seTax));
+      CalcWise.setText('result-breakeven', CalcWise.formatCurrency(breakEven) + '/yr');
+      CalcWise.setText('result-recommendation', recommendation);
+      CalcWise.showResults('results');
+    }
+
+    function resetForm() {
+      document.getElementById('calc-form').reset();
+      CalcWise.hideResults('results');
+    }
+
+    // FAQ accordion
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', !expanded);
+        btn.nextElementSibling.style.display = expanded ? 'none' : 'block';
+      });
+    });
+    document.querySelectorAll('.faq-answer').forEach(a => a.style.display = 'none');
+
+    // Mobile menu
+    const toggle = document.querySelector('.mobile-menu-toggle');
+    const mobileNav = document.querySelector('.mobile-nav');
+    if (toggle && mobileNav) {
+      toggle.addEventListener('click', () => {
+        const open = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', !open);
+        mobileNav.style.display = open ? 'none' : 'block';
+      });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Investment Fee Impact Calculator | CalcWise</title>
+  <meta name="description" content="See how advisor fees reduce your long-term investment returns. Calculate total fees paid, drag on returns, and compare your portfolio value with and without advisory fees.">
+  <meta name="keywords" content="investment fee impact calculator, advisor fee calculator, AUM fee calculator, fee drag calculator, portfolio with without advisor fees">
+  <link rel="canonical" href="https://calcwise.io/investment-calculators/investment-fee-impact-calculator/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Investment Fee Impact Calculator | CalcWise">
+  <meta property="og:description" content="See how advisor fees reduce your long-term investment returns. Calculate fees paid, drag on returns, and portfolio comparison.">
+  <meta property="og:url" content="https://calcwise.io/investment-calculators/investment-fee-impact-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Investment Fee Impact Calculator | CalcWise">
+  <meta name="twitter:description" content="See how advisor fees reduce your long-term investment returns.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <!-- BreadcrumbList Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Investment Calculators", "item": "https://calcwise.io/investment-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "Investment Fee Impact Calculator", "item": "https://calcwise.io/investment-calculators/investment-fee-impact-calculator/" }
+    ]
+  }
+  </script>
+
+  <!-- FAQPage Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is an advisor fee or AUM fee?",
+        "acceptedAnswer": { "@type": "Answer", "text": "An assets under management (AUM) fee is an annual charge by a financial advisor or wealth management firm, typically expressed as a percentage of your total portfolio value. The industry standard ranges from 0.25% to 1.50%, though many robo-advisors charge 0.25% or less." }
+      },
+      {
+        "@type": "Question",
+        "name": "Is paying an advisor worth the cost?",
+        "acceptedAnswer": { "@type": "Answer", "text": "A good advisor may add value through tax planning, behavioral coaching, estate planning, and portfolio construction. Research by Vanguard suggests an advisor can potentially add about 3% in net returns annually through these services. The key is whether the value added exceeds the cost of the fee." }
+      },
+      {
+        "@type": "Question",
+        "name": "How does the advisor fee compound over time?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Because the fee is charged on the total portfolio value — which grows over time — the absolute dollar amount of the fee grows each year. This means you pay more in fees in year 20 than in year 1, and the fee's impact compounds alongside your returns." }
+      },
+      {
+        "@type": "Question",
+        "name": "What alternatives are there to paying a 1% advisor fee?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Alternatives include robo-advisors (typically 0.25%), fee-only financial planners who charge flat fees or hourly rates, and self-directed investing through low-cost index funds. A flat-fee planner can provide ongoing advice without the compounding cost of a percentage-based fee." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/investment-calculators/" aria-current="page">Investments</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/investment-calculators/">Investment Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/investment-calculators/">Investment Calculators</a></li>
+          <li><span aria-current="page">Investment Fee Impact Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="article-content">
+          <h1>Investment Fee Impact Calculator</h1>
+          <p>Discover how much an advisor's annual fee reduces your long-term wealth. Enter your portfolio value, expected annual return, the advisor fee percentage, and the number of years to see total fees paid, the drag on your returns, and a side-by-side portfolio comparison with and without the fee.</p>
+
+          <div class="calc-container mt-8">
+            <div class="calc-header">
+              <h2>Calculate Advisor Fee Impact</h2>
+              <p>Enter your portfolio and fee details below</p>
+            </div>
+            <div class="calc-body">
+              <form id="fee-impact-form" onsubmit="return false;">
+                <div class="form-group">
+                  <label class="form-label" for="fi-portfolio">Portfolio Value</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="fi-portfolio" class="form-input" placeholder="250000.00" min="0.01" step="0.01" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="fi-return">Annual Return %</label>
+                  <div class="input-prefix">
+                    <input type="number" id="fi-return" class="form-input" placeholder="7" min="0" max="100" step="0.01" required>
+                    <span class="prefix" style="left:auto;right:0.75rem;">%</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="fi-advisor-fee">Advisor Fee %</label>
+                  <div class="input-prefix">
+                    <input type="number" id="fi-advisor-fee" class="form-input" placeholder="1.00" min="0" max="10" step="0.01" required>
+                    <span class="prefix" style="left:auto;right:0.75rem;">%</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="fi-years">Years</label>
+                  <input type="number" id="fi-years" class="form-input" placeholder="20" min="1" max="50" step="1" required>
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calculateFeeImpact()">Calculate Fee Impact</button>
+                  <button type="button" class="btn btn-reset" onclick="resetFeeImpact()">Reset</button>
+                </div>
+              </form>
+
+              <div id="fee-impact-results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">Total Fees Paid Over Time</div>
+                  <div class="result-value" id="result-fi-fees-total"></div>
+                </div>
+                <div class="result-grid">
+                  <div class="result-item">
+                    <div class="result-label">Portfolio Without Fees</div>
+                    <div class="result-value" id="result-fi-without-fees"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Portfolio With Fees</div>
+                    <div class="result-value" id="result-fi-with-fees"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Drag on Returns</div>
+                    <div class="result-value" id="result-fi-drag"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Effective Net Return</div>
+                    <div class="result-value" id="result-fi-net-return"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Formula Section -->
+          <section class="content-section">
+            <h2>Fee Impact Formula</h2>
+            <p>The fee impact is modeled by comparing compound growth at the gross return rate versus the net return rate (gross minus advisor fee):</p>
+            <div class="formula-box">
+              <div class="formula-label">Portfolio Without Fees</div>
+              Value = Portfolio × (1 + Annual Return %)^Years
+            </div>
+            <div class="formula-box">
+              <div class="formula-label">Portfolio With Fees</div>
+              Value = Portfolio × (1 + Annual Return % − Advisor Fee %)^Years
+            </div>
+            <p>The total fees paid is the difference, representing the compounded opportunity cost of the advisor fee.</p>
+          </section>
+
+          <!-- How to Use -->
+          <section class="content-section">
+            <h2>How to Use This Fee Impact Calculator</h2>
+            <ol>
+              <li><strong>Enter your portfolio value</strong> — your current total investment balance.</li>
+              <li><strong>Enter the annual return %</strong> — the expected gross return before any fees.</li>
+              <li><strong>Enter the advisor fee %</strong> — the annual percentage fee charged by your advisor or platform.</li>
+              <li><strong>Enter the number of years</strong> — your investment horizon.</li>
+              <li><strong>Click "Calculate Fee Impact"</strong> to see the full cost of fees compounded over time.</li>
+            </ol>
+          </section>
+
+          <!-- Example Scenario -->
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>Suppose you have a $250,000 portfolio earning 7% per year and paying a 1% advisor fee for 20 years. Without fees, your portfolio would grow to approximately $966,850. With the 1% annual fee (net return 6%), it would grow to only $801,784 — a difference of $165,066. That $165,066 represents the compounded cost of the 1% fee over two decades, which is nearly two-thirds of your original investment.</p>
+          </section>
+
+          <!-- FAQ Section -->
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What is an advisor fee or AUM fee?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>An assets under management (AUM) fee is an annual charge by a financial advisor or wealth management firm, typically expressed as a percentage of your total portfolio value. The industry standard ranges from 0.25% to 1.50%, though many robo-advisors charge 0.25% or less.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Is paying an advisor worth the cost?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>A good advisor may add value through tax planning, behavioral coaching, estate planning, and portfolio construction. Research by Vanguard suggests an advisor can potentially add about 3% in net returns annually through these services. The key is whether the value added exceeds the cost of the fee.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                How does the advisor fee compound over time?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Because the fee is charged on the total portfolio value — which grows over time — the absolute dollar amount of the fee grows each year. This means you pay more in fees in year 20 than in year 1, and the fee's impact compounds alongside your returns.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What alternatives are there to paying a 1% advisor fee?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Alternatives include robo-advisors (typically 0.25%), fee-only financial planners who charge flat fees or hourly rates, and self-directed investing through low-cost index funds. A flat-fee planner can provide ongoing advice without the compounding cost of a percentage-based fee.</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Related Calculators -->
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/investment-calculators/expense-ratio-impact-calculator/" class="card card-link">
+                <h3>Expense Ratio Impact Calculator</h3>
+                <p>Compare portfolios with and without fund expense ratios.</p>
+              </a>
+              <a href="/investment-calculators/etf-return-calculator/" class="card card-link">
+                <h3>ETF Return Calculator</h3>
+                <p>Project ETF returns net of expense ratios over time.</p>
+              </a>
+              <a href="/investment-calculators/cagr-calculator/" class="card card-link">
+                <h3>CAGR Calculator</h3>
+                <p>Compute compound annual growth rate for any investment.</p>
+              </a>
+              <a href="/investment-calculators/investment-withdrawal-calculator/" class="card card-link">
+                <h3>Investment Withdrawal Calculator</h3>
+                <p>See how long your portfolio will last under various withdrawal rates.</p>
+              </a>
+            </div>
+          </section>
+
+          <!-- Disclaimer -->
+          <div class="disclaimer">
+            <strong>Disclaimer:</strong> This calculator provides estimates for informational purposes only. Actual returns and fees may differ. This is not financial advice. Consult a qualified financial professional before making investment decisions.
+          </div>
+
+          <!-- Ad Slot -->
+          <div class="ad-slot ad-slot-leaderboard"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Real Estate</h4>
+          <a href="/real-estate-calculators/">All Real Estate Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Investments</h4>
+          <a href="/investment-calculators/">All Investment Calculators</a>
+          <a href="/investment-calculators/cagr-calculator/">CAGR Calculator</a>
+          <a href="/investment-calculators/dividend-yield-calculator/">Dividend Yield</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateFeeImpact() {
+      const portfolio = parseFloat(document.getElementById('fi-portfolio').value);
+      const annualReturn = parseFloat(document.getElementById('fi-return').value);
+      const advisorFee = parseFloat(document.getElementById('fi-advisor-fee').value);
+      const years = parseFloat(document.getElementById('fi-years').value);
+
+      if (!portfolio || portfolio <= 0 || isNaN(annualReturn) || isNaN(advisorFee) || !years || years <= 0) {
+        alert('Please enter valid values for all fields.');
+        return;
+      }
+
+      const grossRate = annualReturn / 100;
+      const netRate = (annualReturn - advisorFee) / 100;
+
+      const withoutFees = portfolio * Math.pow(1 + grossRate, years);
+      const withFees = portfolio * Math.pow(1 + netRate, years);
+      const feesTotal = withoutFees - withFees;
+      const drag = ((withoutFees - withFees) / withoutFees) * 100;
+      const netReturn = ((withFees - portfolio) / portfolio) * 100;
+
+      document.getElementById('result-fi-fees-total').textContent = CalcWise.formatCurrency(feesTotal);
+      document.getElementById('result-fi-without-fees').textContent = CalcWise.formatCurrency(withoutFees);
+      document.getElementById('result-fi-with-fees').textContent = CalcWise.formatCurrency(withFees);
+      document.getElementById('result-fi-drag').textContent = CalcWise.formatPercent(drag) + ' of gross value';
+      document.getElementById('result-fi-net-return').textContent = CalcWise.formatPercent(netReturn);
+      document.getElementById('fee-impact-results').classList.remove('hidden');
+    }
+
+    function resetFeeImpact() {
+      document.getElementById('fee-impact-form').reset();
+      document.getElementById('fee-impact-results').classList.add('hidden');
+    }
+  </script>
+</body>
+</html>

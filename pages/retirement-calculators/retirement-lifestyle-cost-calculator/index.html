@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Retirement Lifestyle Cost Calculator - Budget Your Retirement | CalcWise</title>
+  <meta name="description" content="Free retirement lifestyle cost calculator. Budget your monthly retirement expenses across housing, food, travel, healthcare, and more. See annual cost and 20-year inflation-adjusted totals.">
+  <meta name="keywords" content="retirement lifestyle cost calculator, retirement budget, retirement expenses, monthly retirement spending, retirement cost of living calculator">
+  <link rel="canonical" href="https://calcwise.io/retirement-calculators/retirement-lifestyle-cost-calculator/">
+
+  <meta property="og:title" content="Retirement Lifestyle Cost Calculator - Budget Your Retirement">
+  <meta property="og:description" content="Build a detailed retirement budget and see annual costs and 20-year inflation-adjusted totals across all spending categories.">
+  <meta property="og:url" content="https://calcwise.io/retirement-calculators/retirement-lifestyle-cost-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Retirement Lifestyle Cost Calculator - Budget Your Retirement">
+  <meta name="twitter:description" content="Build a detailed retirement budget and see annual costs and 20-year inflation-adjusted totals across all spending categories.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Retirement Calculators", "item": "https://calcwise.io/retirement-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "Retirement Lifestyle Cost Calculator", "item": "https://calcwise.io/retirement-calculators/retirement-lifestyle-cost-calculator/" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the average monthly expense in retirement?",
+        "acceptedAnswer": { "@type": "Answer", "text": "According to the Bureau of Labor Statistics, households age 65 and older spend an average of about $4,800 per month ($57,600 annually). However, actual spending varies enormously — from under $2,500/month for frugal retirees in low-cost areas to $10,000+/month for active retirees in high-cost cities with frequent travel." }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the biggest expenses in retirement?",
+        "acceptedAnswer": { "@type": "Answer", "text": "For most retirees, the top five expenses are: housing (30-35% of spending), healthcare (15-20%), food (12-15%), transportation (10-12%), and entertainment/travel (8-12%). Housing and healthcare tend to be the most volatile and often-underestimated categories." }
+      },
+      {
+        "@type": "Question",
+        "name": "How does inflation affect my retirement budget?",
+        "acceptedAnswer": { "@type": "Answer", "text": "At 3% annual inflation, a $5,000/month budget in year one becomes $9,031/month by year 20. This means your retirement portfolio must grow over time to keep pace, or your spending must decline. Planning for inflation is one of the most important — and most commonly neglected — aspects of retirement budgeting." }
+      },
+      {
+        "@type": "Question",
+        "name": "Should I plan for spending to decrease in retirement?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Spending patterns in retirement often follow a 'smile' curve: higher spending in the early active years (travel, hobbies), lower in the middle years as activity slows, and higher again in later years due to healthcare. A flat budget assumption is simpler but may not reflect reality for your personal situation." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/retirement-calculators/" aria-current="page">Retirement</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/retirement-calculators/">Retirement Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/retirement-calculators/">Retirement Calculators</a></li>
+          <li><span aria-current="page">Retirement Lifestyle Cost Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="article-content">
+          <h1>Retirement Lifestyle Cost Calculator</h1>
+          <p>Build a realistic retirement budget by entering your expected monthly spending in each major category. This calculator totals your expenses, annualizes them, and shows you what those same expenses will cost in 20 years after inflation — so you can plan your portfolio withdrawal strategy with confidence.</p>
+
+          <div class="calc-container mt-8">
+            <div class="calc-header">
+              <h2>Build Your Monthly Retirement Budget</h2>
+              <p>Enter estimated monthly amounts in retirement</p>
+            </div>
+            <div class="calc-body">
+              <form id="lifestyle-form" onsubmit="return false;">
+                <div class="form-group">
+                  <label class="form-label" for="housing">Housing (mortgage/rent, taxes, insurance, HOA)</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="housing" class="form-input" placeholder="1800" min="0" step="50" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="food">Food &amp; Groceries</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="food" class="form-input" placeholder="600" min="0" step="50" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="healthcare">Healthcare (premiums, copays, medications)</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="healthcare" class="form-input" placeholder="500" min="0" step="50" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="transportation">Transportation (car, insurance, gas, public transit)</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="transportation" class="form-input" placeholder="400" min="0" step="50" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="travel">Travel &amp; Vacation</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="travel" class="form-input" placeholder="500" min="0" step="50" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="entertainment">Entertainment, Hobbies &amp; Dining Out</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="entertainment" class="form-input" placeholder="400" min="0" step="50" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="other">Other (gifts, subscriptions, personal care, misc.)</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="other" class="form-input" placeholder="300" min="0" step="50" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="inflation-rate">Expected Inflation Rate</label>
+                  <div class="input-suffix">
+                    <input type="number" id="inflation-rate" class="form-input" placeholder="3" min="0" max="10" step="0.5" required>
+                    <span class="suffix">%</span>
+                  </div>
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calcLifestyle()">Calculate Retirement Budget</button>
+                  <button type="button" class="btn btn-reset" onclick="resetCalc()">Reset</button>
+                </div>
+              </form>
+
+              <div id="calc-results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">Total Monthly Expenses</div>
+                  <div class="result-value" id="result-monthly-total"></div>
+                </div>
+                <div class="result-grid">
+                  <div class="result-item">
+                    <div class="result-label">Annual Cost (Year 1)</div>
+                    <div class="result-value" id="result-annual-year1"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Annual Cost at Year 10</div>
+                    <div class="result-value" id="result-annual-year10"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Annual Cost at Year 20</div>
+                    <div class="result-value" id="result-annual-year20"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Total Cost Over 20 Years</div>
+                    <div class="result-value" id="result-total-20yr"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <section class="content-section">
+            <h2>Retirement Budget Formula</h2>
+            <p>The calculator sums all monthly expense categories and applies inflation compounding to show future costs:</p>
+            <div class="formula-box">
+              <div class="formula-label">Annual Year 1 Cost</div>
+              Annual Cost = Sum of all monthly expenses x 12
+            </div>
+            <div class="formula-box">
+              <div class="formula-label">Inflation-Adjusted Future Cost</div>
+              Annual Cost at Year N = Annual Cost x (1 + inflation rate)^N
+            </div>
+            <div class="formula-box">
+              <div class="formula-label">Total 20-Year Cost</div>
+              Sum of annual costs for years 1 through 20, each inflation-adjusted
+            </div>
+          </section>
+
+          <section class="content-section">
+            <h2>How to Use This Lifestyle Cost Calculator</h2>
+            <ol>
+              <li><strong>Enter estimated monthly amounts</strong> for each spending category in retirement.</li>
+              <li><strong>Be honest about travel and healthcare</strong> — these are commonly underestimated categories.</li>
+              <li><strong>Set your inflation rate</strong> - 3% is a common assumption for general expenses; healthcare inflates faster at 5%+.</li>
+              <li><strong>Click "Calculate Retirement Budget"</strong> to see your total monthly budget, annual cost, and 20-year projections.</li>
+              <li>Use the results to feed into the <a href="/retirement-calculators/retirement-nest-egg-calculator/">Nest Egg Calculator</a> or <a href="/retirement-calculators/retirement-income-replacement-calculator/">Income Replacement Calculator</a>.</li>
+            </ol>
+          </section>
+
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>A couple retiring in an average-cost city budgets $1,800/month for housing, $700 for food, $600 for healthcare, $400 for transportation, $600 for travel, $400 for entertainment, and $300 for other — totaling $4,800/month or $57,600/year. At 3% inflation, that same lifestyle costs $77,700/year by year 10 and $103,800/year by year 20. Total 20-year inflation-adjusted spending exceeds $1.57 million, guiding their required nest egg calculation.</p>
+          </section>
+
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What is the average monthly expense in retirement?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>According to the Bureau of Labor Statistics, households age 65 and older spend an average of about $4,800 per month ($57,600 annually). Actual spending varies from under $2,500/month for frugal retirees in low-cost areas to $10,000+/month for active retirees in high-cost cities.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What are the biggest expenses in retirement?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>For most retirees: housing (30-35%), healthcare (15-20%), food (12-15%), transportation (10-12%), and entertainment/travel (8-12%). Housing and healthcare tend to be the most volatile and often-underestimated categories.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                How does inflation affect my retirement budget?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>At 3% annual inflation, a $5,000/month budget in year one becomes $9,031/month by year 20. Your retirement portfolio must grow over time to keep pace, making inflation planning one of the most important aspects of retirement budgeting.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Should I plan for spending to decrease in retirement?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Spending in retirement often follows a 'smile' curve: higher in early active years (travel, hobbies), lower in the middle years, and higher again later due to healthcare. A flat budget is simpler but may not reflect your personal spending trajectory.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/retirement-calculators/retirement-nest-egg-calculator/" class="card card-link">
+                <h3>Nest Egg Calculator</h3>
+                <p>Calculate the portfolio size needed to fund your retirement budget.</p>
+              </a>
+              <a href="/retirement-calculators/retirement-income-replacement-calculator/" class="card card-link">
+                <h3>Income Replacement Calculator</h3>
+                <p>See what percentage of your income you need to replace in retirement.</p>
+              </a>
+              <a href="/retirement-calculators/retirement-healthcare-cost-estimator/" class="card card-link">
+                <h3>Healthcare Cost Estimator</h3>
+                <p>Get a detailed estimate of healthcare costs to plug into your budget.</p>
+              </a>
+              <a href="/retirement-calculators/retirement-withdrawal-rate-calculator/" class="card card-link">
+                <h3>Withdrawal Rate Calculator</h3>
+                <p>Find a sustainable withdrawal rate to fund your retirement budget.</p>
+              </a>
+            </div>
+          </section>
+
+          <div class="disclaimer">
+            <strong>Disclaimer:</strong> This calculator provides budget estimates for planning purposes. Actual retirement expenses vary widely based on lifestyle, location, health, and economic conditions. These projections are not a guarantee of future costs. This is not financial advice — consult a financial planner for personalized retirement planning.
+          </div>
+
+          <div class="ad-slot ad-slot-leaderboard"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Real Estate</h4>
+          <a href="/real-estate-calculators/">All Real Estate Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Retirement</h4>
+          <a href="/retirement-calculators/">All Retirement Calculators</a>
+          <a href="/retirement-calculators/retirement-age-calculator/">Retirement Age</a>
+          <a href="/retirement-calculators/401k-match-calculator/">401(k) Match</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calcLifestyle() {
+      const housing = parseFloat(document.getElementById('housing').value) || 0;
+      const food = parseFloat(document.getElementById('food').value) || 0;
+      const healthcare = parseFloat(document.getElementById('healthcare').value) || 0;
+      const transportation = parseFloat(document.getElementById('transportation').value) || 0;
+      const travel = parseFloat(document.getElementById('travel').value) || 0;
+      const entertainment = parseFloat(document.getElementById('entertainment').value) || 0;
+      const other = parseFloat(document.getElementById('other').value) || 0;
+      const inflation = parseFloat(document.getElementById('inflation-rate').value) / 100;
+
+      const monthlyTotal = housing + food + healthcare + transportation + travel + entertainment + other;
+      if (monthlyTotal <= 0) return;
+
+      const annualYear1 = monthlyTotal * 12;
+      const annualYear10 = annualYear1 * Math.pow(1 + inflation, 10);
+      const annualYear20 = annualYear1 * Math.pow(1 + inflation, 20);
+
+      // Total 20-year cost (sum of each year)
+      let total20yr = 0;
+      for (let yr = 0; yr < 20; yr++) {
+        total20yr += annualYear1 * Math.pow(1 + inflation, yr);
+      }
+
+      const fmt = (v) => CalcWise.formatCurrency(v, 0);
+
+      CalcWise.setText('result-monthly-total', fmt(monthlyTotal) + '/mo');
+      CalcWise.setText('result-annual-year1', fmt(annualYear1));
+      CalcWise.setText('result-annual-year10', fmt(annualYear10));
+      CalcWise.setText('result-annual-year20', fmt(annualYear20));
+      CalcWise.setText('result-total-20yr', fmt(total20yr));
+
+      CalcWise.showResults('calc-results');
+    }
+
+    function resetCalc() {
+      document.getElementById('lifestyle-form').reset();
+      CalcWise.hideResults('calc-results');
+    }
+  </script>
+</body>
+</html>

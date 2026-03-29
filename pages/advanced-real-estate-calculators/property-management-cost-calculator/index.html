@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Management Cost Calculator - Rental Management Fees | CalcWise</title>
+    <meta name="description" content="Calculate total property management costs including management fees, leasing fees, vacancy loss, and maintenance reserves to find your true net rental income.">
+    <link rel="canonical" href="https://calcwise.io/advanced-real-estate-calculators/property-management-cost-calculator/">
+    <meta property="og:title" content="Property Management Cost Calculator | CalcWise">
+    <meta property="og:description" content="Break down all property management expenses and calculate net rental income after fees, vacancy, and maintenance reserves.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://calcwise.io/advanced-real-estate-calculators/property-management-cost-calculator/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Property Management Cost Calculator | CalcWise">
+    <meta name="twitter:description" content="Calculate total property management costs and net rental income.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/design-system.css">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/"},
+            {"@type": "ListItem", "position": 2, "name": "Advanced Real Estate Calculators", "item": "https://calcwise.io/advanced-real-estate-calculators/"},
+            {"@type": "ListItem", "position": 3, "name": "Property Management Cost Calculator"}
+        ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {"@type": "Question", "name": "What is a typical property management fee?", "acceptedAnswer": {"@type": "Answer", "text": "Property management fees typically range from 8% to 12% of monthly rent collected. Rates vary by market, property type, and level of service. Full-service managers handling everything including maintenance may charge toward the higher end."}},
+            {"@type": "Question", "name": "What is a leasing fee?", "acceptedAnswer": {"@type": "Answer", "text": "A leasing fee is a one-time charge for finding and placing a new tenant. It is typically equal to one month's rent or 50-100% of the first month's rent. This fee covers tenant screening, marketing, and lease execution."}},
+            {"@type": "Question", "name": "How much should I budget for maintenance reserves?", "acceptedAnswer": {"@type": "Answer", "text": "A common rule of thumb is to reserve 1% of the property value per year for maintenance, or 5-15% of monthly rent. Older properties, those with deferred maintenance, or properties with pools or large HVAC systems may require higher reserves."}},
+            {"@type": "Question", "name": "What vacancy rate should I use?", "acceptedAnswer": {"@type": "Answer", "text": "National average vacancy rates hover around 5-8%, but local market conditions matter most. A tight urban rental market may have 2-3% vacancy, while a slower suburban market may see 8-12%. Check local rental statistics for the most accurate estimate."}}
+        ]
+    }
+    </script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="/" class="logo">
+                <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+                CalcWise
+            </a>
+            <nav class="main-nav">
+                <a href="/real-estate-calculators/">Real Estate</a>
+                <a href="/advanced-real-estate-calculators/">Advanced RE</a>
+                <a href="/energy-utility-calculators/">Energy</a>
+                <a href="/finance-calculators/">Finance</a>
+            </nav>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+            </button>
+        </div>
+        <nav class="mobile-nav">
+            <a href="/real-estate-calculators/">Real Estate Calculators</a>
+            <a href="/advanced-real-estate-calculators/">Advanced Real Estate</a>
+            <a href="/energy-utility-calculators/">Energy &amp; Utility</a>
+            <a href="/finance-calculators/">Finance Calculators</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <nav class="breadcrumbs" aria-label="Breadcrumb">
+                <ol>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/advanced-real-estate-calculators/">Advanced Real Estate Calculators</a></li>
+                    <li><span aria-current="page">Property Management Cost Calculator</span></li>
+                </ol>
+            </nav>
+
+            <div class="page-content">
+                <div class="calc-page-layout">
+                    <div class="calc-page-main">
+                        <h1>Property Management Cost Calculator</h1>
+                        <p class="subtitle" style="color: var(--color-gray-600); font-size: var(--text-lg); line-height: var(--leading-relaxed); margin-bottom: var(--space-8);">
+                            Determine the true cost of professional property management. Calculate management fees, leasing fees, vacancy losses, and maintenance reserves to find your actual net rental income.
+                        </p>
+
+                        <div class="calc-container">
+                            <div class="calc-header">
+                                <h2>Property Management Costs</h2>
+                                <p>Break down all management expenses and find your net income</p>
+                            </div>
+                            <div class="calc-body">
+                                <form id="mgmt-form">
+                                    <div class="form-group">
+                                        <label class="form-label" for="monthly-rent">Monthly Rent</label>
+                                        <div class="input-prefix">
+                                            <span class="prefix">$</span>
+                                            <input type="number" id="monthly-rent" name="monthlyRent" class="form-input" placeholder="2,000" min="1" step="50" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label" for="mgmt-fee">Management Fee %</label>
+                                        <div class="input-prefix">
+                                            <input type="number" id="mgmt-fee" name="mgmtFee" class="form-input" placeholder="10" min="0" max="30" step="0.5" required>
+                                            <span class="prefix" style="right:0;left:auto;border-right:none;border-left:1px solid var(--color-gray-200);">%</span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label" for="leasing-fee">Leasing Fee <span class="form-hint">(months of rent per placement)</span></label>
+                                        <input type="number" id="leasing-fee" name="leasingFee" class="form-input" placeholder="1" min="0" max="3" step="0.5" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label" for="vacancy-rate">Vacancy Rate %</label>
+                                        <div class="input-prefix">
+                                            <input type="number" id="vacancy-rate" name="vacancyRate" class="form-input" placeholder="5" min="0" max="50" step="0.5" required>
+                                            <span class="prefix" style="right:0;left:auto;border-right:none;border-left:1px solid var(--color-gray-200);">%</span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label" for="maintenance-reserve">Maintenance Reserve %</label>
+                                        <div class="input-prefix">
+                                            <input type="number" id="maintenance-reserve" name="maintenanceReserve" class="form-input" placeholder="8" min="0" max="30" step="0.5" required>
+                                            <span class="prefix" style="right:0;left:auto;border-right:none;border-left:1px solid var(--color-gray-200);">%</span>
+                                        </div>
+                                    </div>
+                                    <div class="calc-actions">
+                                        <button type="button" class="btn btn-calculate btn-full" onclick="calculateMgmtCost()">Calculate Management Costs</button>
+                                        <button type="reset" class="btn btn-reset">Reset</button>
+                                    </div>
+                                </form>
+
+                                <div id="results" class="calc-results hidden">
+                                    <div class="result-primary">
+                                        <div class="result-label">Net Annual Rental Income</div>
+                                        <div class="result-value" id="result-net-income">$0</div>
+                                    </div>
+                                    <div class="result-grid result-grid-3">
+                                        <div class="result-item">
+                                            <div class="result-label">Annual Management Cost</div>
+                                            <div class="result-value" id="result-mgmt-cost">$0</div>
+                                        </div>
+                                        <div class="result-item">
+                                            <div class="result-label">Annual Leasing Cost</div>
+                                            <div class="result-value" id="result-leasing-cost">$0</div>
+                                        </div>
+                                        <div class="result-item">
+                                            <div class="result-label">Annual Maintenance Reserve</div>
+                                            <div class="result-value" id="result-maintenance-cost">$0</div>
+                                        </div>
+                                        <div class="result-item">
+                                            <div class="result-label">Vacancy Loss</div>
+                                            <div class="result-value" id="result-vacancy-loss">$0</div>
+                                        </div>
+                                        <div class="result-item">
+                                            <div class="result-label">Total Management Expenses</div>
+                                            <div class="result-value" id="result-total-expenses">$0</div>
+                                        </div>
+                                        <div class="result-item">
+                                            <div class="result-label">Gross Annual Income</div>
+                                            <div class="result-value" id="result-gross-income">$0</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="ad-slot ad-slot-leaderboard"></div>
+
+                        <section class="content-section">
+                            <h2>Property Management Cost Formula</h2>
+                            <div class="formula-box">
+                                <div class="formula-label">Annual Cost Breakdown</div>
+                                Gross Annual Income = Monthly Rent &times; 12
+Annual Management Cost = Gross Income &times; Management Fee %
+Annual Leasing Cost = Monthly Rent &times; Leasing Fee (amortized annually)
+Vacancy Loss = Gross Income &times; Vacancy Rate %
+Maintenance Reserve = Gross Income &times; Maintenance Reserve %
+
+Total Expenses = Management + Leasing + Vacancy Loss + Maintenance
+Net Rental Income = Gross Annual Income &minus; Total Expenses
+                            </div>
+                            <p>The <strong>leasing fee</strong> is amortized over 12 months to represent its average annual impact, assuming one tenant turnover per year at the specified fee.</p>
+                            <p><strong>Vacancy loss</strong> represents income lost while the unit sits empty between tenants, calculated as a percentage of potential gross income.</p>
+                        </section>
+
+                        <section class="content-section">
+                            <h2>How to Use This Calculator</h2>
+                            <ol>
+                                <li><strong>Enter monthly rent</strong> -- the market rent or current rent charged to tenants.</li>
+                                <li><strong>Enter management fee %</strong> -- the ongoing monthly fee charged by the property manager, typically 8-12%.</li>
+                                <li><strong>Enter leasing fee</strong> -- the number of months' rent charged per new tenant placement (usually 0.5-1 month).</li>
+                                <li><strong>Enter vacancy rate %</strong> -- the estimated percentage of time the unit will be vacant each year.</li>
+                                <li><strong>Enter maintenance reserve %</strong> -- the percentage of rent set aside for repairs and upkeep.</li>
+                                <li><strong>Click "Calculate Management Costs"</strong> to see a full expense breakdown and net income.</li>
+                            </ol>
+                        </section>
+
+                        <section class="content-section">
+                            <h2>Example Scenario</h2>
+                            <h3>$2,000/Month Rental with Full-Service Management</h3>
+                            <p>You rent a unit at $2,000/month and hire a property manager at 10% with a 1-month leasing fee, 5% vacancy, and 8% maintenance reserve.</p>
+                            <p>Gross Annual Income = $2,000 &times; 12 = <strong>$24,000</strong></p>
+                            <p>Management Cost = $24,000 &times; 10% = <strong>$2,400</strong></p>
+                            <p>Leasing Cost (annualized) = $2,000 &times; 1 / 1 = <strong>$2,000</strong></p>
+                            <p>Vacancy Loss = $24,000 &times; 5% = <strong>$1,200</strong></p>
+                            <p>Maintenance Reserve = $24,000 &times; 8% = <strong>$1,920</strong></p>
+                            <p>Net Rental Income = $24,000 &minus; $7,520 = <strong>$16,480/year</strong></p>
+                        </section>
+
+                        <section class="faq-section">
+                            <h2>Frequently Asked Questions</h2>
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">
+                                    What is a typical property management fee?
+                                    <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>Property management fees typically range from 8% to 12% of monthly rent collected. Rates vary by market, property type, and level of service. Full-service managers handling everything including maintenance may charge toward the higher end.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">
+                                    What is a leasing fee?
+                                    <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>A leasing fee is a one-time charge for finding and placing a new tenant. It is typically equal to one month's rent or 50-100% of the first month's rent. This fee covers tenant screening, marketing, and lease execution.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">
+                                    How much should I budget for maintenance reserves?
+                                    <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>A common rule of thumb is to reserve 1% of the property value per year for maintenance, or 5-15% of monthly rent. Older properties, those with deferred maintenance, or properties with pools or large HVAC systems may require higher reserves.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">
+                                    What vacancy rate should I use?
+                                    <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>National average vacancy rates hover around 5-8%, but local market conditions matter most. A tight urban rental market may have 2-3% vacancy, while a slower suburban market may see 8-12%. Check local rental statistics for the most accurate estimate.</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="related-calculators">
+                            <h2>Related Calculators</h2>
+                            <div class="grid grid-3">
+                                <a href="/advanced-real-estate-calculators/rental-expense-ratio-calculator/" class="card card-link">
+                                    <div class="card-icon">%</div>
+                                    <h3>Rental Expense Ratio Calculator</h3>
+                                    <p>Calculate your total expense ratio and NOI for rental properties.</p>
+                                </a>
+                                <a href="/real-estate-calculators/rental-cash-flow-calculator/" class="card card-link">
+                                    <div class="card-icon">$</div>
+                                    <h3>Rental Cash Flow Calculator</h3>
+                                    <p>Analyze monthly and annual cash flow from rental properties.</p>
+                                </a>
+                                <a href="/real-estate-calculators/cap-rate-calculator/" class="card card-link">
+                                    <div class="card-icon">C</div>
+                                    <h3>Cap Rate Calculator</h3>
+                                    <p>Calculate the capitalization rate for investment properties.</p>
+                                </a>
+                            </div>
+                        </section>
+
+                        <div class="disclaimer">
+                            <strong>Disclaimer:</strong> This calculator is for informational and educational purposes only. Actual management costs vary by location, property manager, and lease terms. Consult a qualified property management professional for specific advice.
+                        </div>
+
+                        <div class="ad-slot ad-slot-leaderboard"></div>
+                    </div>
+
+                    <aside class="calc-page-sidebar">
+                        <div class="sidebar-card">
+                            <h3>Advanced RE Tools</h3>
+                            <a href="/advanced-real-estate-calculators/property-appreciation-calculator/">Property Appreciation</a>
+                            <a href="/advanced-real-estate-calculators/property-management-cost-calculator/">Management Cost</a>
+                            <a href="/advanced-real-estate-calculators/real-estate-leverage-calculator/">Leverage Calculator</a>
+                            <a href="/advanced-real-estate-calculators/real-estate-yield-calculator/">Yield Calculator</a>
+                            <a href="/advanced-real-estate-calculators/rental-expense-ratio-calculator/">Expense Ratio</a>
+                        </div>
+                        <div class="ad-slot ad-slot-rectangle"></div>
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="/" class="logo">
+                        <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+                        CalcWise
+                    </a>
+                    <p>Free, accurate financial calculators for everyone. Make smarter money decisions with CalcWise.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Advanced Real Estate</h4>
+                    <a href="/advanced-real-estate-calculators/property-appreciation-calculator/">Property Appreciation</a>
+                    <a href="/advanced-real-estate-calculators/real-estate-leverage-calculator/">Leverage Calculator</a>
+                    <a href="/advanced-real-estate-calculators/real-estate-yield-calculator/">Yield Calculator</a>
+                    <a href="/advanced-real-estate-calculators/rental-expense-ratio-calculator/">Expense Ratio</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Energy &amp; Utility</h4>
+                    <a href="/energy-utility-calculators/solar-savings-calculator/">Solar Savings</a>
+                    <a href="/energy-utility-calculators/electricity-cost-calculator/">Electricity Cost</a>
+                    <a href="/energy-utility-calculators/carbon-footprint-calculator/">Carbon Footprint</a>
+                    <a href="/energy-utility-calculators/home-energy-efficiency-calculator/">Home Energy Efficiency</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <a href="/about/">About</a>
+                    <a href="/contact/">Contact</a>
+                    <a href="/privacy/">Privacy Policy</a>
+                    <a href="/terms/">Terms of Use</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; 2026 CalcWise. All rights reserved.</span>
+                <div class="footer-links">
+                    <a href="/privacy/">Privacy</a>
+                    <a href="/terms/">Terms</a>
+                    <a href="/sitemap.xml">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/calculator-engine.js"></script>
+    <script src="/js/search-index.js"></script>
+    <script>
+    function calculateMgmtCost() {
+        if (!CalcWise.validateForm('mgmt-form')) return;
+
+        const values = CalcWise.getFormValues('mgmt-form');
+        const monthlyRent = values.monthlyRent;
+        const mgmtFee = values.mgmtFee / 100;
+        const leasingFeeMonths = values.leasingFee;
+        const vacancyRate = values.vacancyRate / 100;
+        const maintenanceRate = values.maintenanceReserve / 100;
+
+        const grossAnnual = monthlyRent * 12;
+        const annualMgmtCost = grossAnnual * mgmtFee;
+        // Leasing fee annualized: one placement per year assumption
+        const annualLeasingCost = monthlyRent * leasingFeeMonths;
+        const vacancyLoss = grossAnnual * vacancyRate;
+        const maintenanceCost = grossAnnual * maintenanceRate;
+        const totalExpenses = annualMgmtCost + annualLeasingCost + vacancyLoss + maintenanceCost;
+        const netIncome = grossAnnual - totalExpenses;
+
+        CalcWise.setText('result-net-income', CalcWise.formatCurrency(netIncome, 0));
+        CalcWise.setText('result-mgmt-cost', CalcWise.formatCurrency(annualMgmtCost, 0));
+        CalcWise.setText('result-leasing-cost', CalcWise.formatCurrency(annualLeasingCost, 0));
+        CalcWise.setText('result-maintenance-cost', CalcWise.formatCurrency(maintenanceCost, 0));
+        CalcWise.setText('result-vacancy-loss', CalcWise.formatCurrency(vacancyLoss, 0));
+        CalcWise.setText('result-total-expenses', CalcWise.formatCurrency(totalExpenses, 0));
+        CalcWise.setText('result-gross-income', CalcWise.formatCurrency(grossAnnual, 0));
+
+        CalcWise.showResults('results');
+    }
+
+    document.getElementById('mgmt-form').addEventListener('reset', function() {
+        setTimeout(() => CalcWise.hideResults('results'), 0);
+    });
+    </script>
+</body>
+</html>

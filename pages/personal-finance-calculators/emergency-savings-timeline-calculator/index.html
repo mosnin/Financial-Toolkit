@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emergency Savings Timeline Calculator - CalcWise</title>
+  <meta name="description" content="Calculate how long it will take to build your emergency fund. Enter your monthly expenses, current savings, and monthly contribution to get your target amount and projected completion date.">
+  <link rel="canonical" href="https://calcwise.io/personal-finance-calculators/emergency-savings-timeline-calculator/">
+  <meta property="og:title" content="Emergency Savings Timeline Calculator - CalcWise">
+  <meta property="og:description" content="Find out exactly how long it takes to build your emergency fund. Get a target amount, months to goal, and projected completion date.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcwise.io/personal-finance-calculators/emergency-savings-timeline-calculator/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Emergency Savings Timeline Calculator - CalcWise">
+  <meta name="twitter:description" content="How long until your emergency fund is fully funded? Get a target amount and projected date.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/"},
+      {"@type": "ListItem", "position": 2, "name": "Personal Finance Calculators", "item": "https://calcwise.io/personal-finance-calculators/"},
+      {"@type": "ListItem", "position": 3, "name": "Emergency Savings Timeline Calculator"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How many months of expenses should an emergency fund cover?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Most financial experts recommend 3 to 6 months of essential living expenses. If you are self-employed, have variable income, or work in an unstable industry, aim for 6 to 12 months. Start with a $1,000 starter fund if you are paying off high-interest debt, then build to the full target."}
+      },
+      {
+        "@type": "Question",
+        "name": "Where should I keep my emergency fund?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Keep your emergency fund in a high-yield savings account (HYSA) or money market account that is separate from your checking account. It should be liquid (accessible within 1-2 business days), FDIC-insured, and earning competitive interest while you build it."}
+      },
+      {
+        "@type": "Question",
+        "name": "What counts as a monthly expense for emergency fund purposes?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Include essential living expenses only: housing (rent or mortgage), utilities, groceries, minimum debt payments, insurance premiums, and basic transportation. You do not need to include entertainment, dining out, or discretionary spending in the calculation."}
+      },
+      {
+        "@type": "Question",
+        "name": "Should I invest my emergency fund?",
+        "acceptedAnswer": {"@type": "Answer", "text": "No — emergency funds should not be invested in stocks or other volatile assets. The risk of market declines means your fund might not be available at full value when you need it most. Stick to high-yield savings accounts, money market funds, or short-term CDs for emergency savings."}
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="logo">
+        <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav">
+        <a href="/">Home</a>
+        <a href="/pages/finance-calculators/">Finance</a>
+        <a href="/pages/personal-finance-calculators/" aria-current="page">Personal Finance</a>
+        <a href="/pages/investment-calculators/">Investment</a>
+        <a href="/pages/tax-calculators/">Tax</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav">
+      <a href="/">Home</a>
+      <a href="/pages/finance-calculators/">Finance Calculators</a>
+      <a href="/pages/personal-finance-calculators/">Personal Finance Calculators</a>
+      <a href="/pages/investment-calculators/">Investment Calculators</a>
+      <a href="/pages/tax-calculators/">Tax Calculators</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li><a href="/pages/personal-finance-calculators/">Personal Finance Calculators</a></li>
+        <li><span aria-current="page">Emergency Savings Timeline Calculator</span></li>
+      </ol>
+    </nav>
+
+    <div class="page-content">
+      <div class="article-content">
+        <h1>Emergency Savings Timeline Calculator</h1>
+        <p>An emergency fund is your financial safety net — it protects you from debt when unexpected expenses like job loss, medical bills, or car repairs strike. Enter your monthly expenses, how many months of coverage you want, your current savings, and how much you can save monthly to see exactly how long it will take to reach your goal and when you will be fully funded.</p>
+
+        <div class="ad-slot ad-slot-leaderboard"></div>
+
+        <div class="calc-container">
+          <div class="calc-header">
+            <h2>Emergency Fund Timeline</h2>
+            <p>Find out when your emergency fund will be fully funded</p>
+          </div>
+          <div class="calc-body">
+            <form id="emergency-form">
+              <div class="result-grid result-grid-2" style="gap: var(--space-4);">
+                <div class="form-group">
+                  <label class="form-label" for="monthsTarget">Target Coverage (months of expenses)</label>
+                  <input type="number" id="monthsTarget" name="monthsTarget" class="form-input" placeholder="6" min="1" max="24" step="1" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="monthlyExpenses">Monthly Essential Expenses</label>
+                  <div class="input-prefix"><span class="prefix">$</span>
+                    <input type="number" id="monthlyExpenses" name="monthlyExpenses" class="form-input" placeholder="3500" min="0" step="100" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="currentSavings">Current Emergency Savings</label>
+                  <div class="input-prefix"><span class="prefix">$</span>
+                    <input type="number" id="currentSavings" name="currentSavings" class="form-input" placeholder="1000" min="0" step="100">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="monthlyContribution">Monthly Contribution to Fund</label>
+                  <div class="input-prefix"><span class="prefix">$</span>
+                    <input type="number" id="monthlyContribution" name="monthlyContribution" class="form-input" placeholder="400" min="1" step="25" required>
+                  </div>
+                </div>
+              </div>
+              <div class="calc-actions">
+                <button type="button" class="btn btn-calculate" onclick="calcEmergency()">Calculate Timeline</button>
+                <button type="button" class="btn btn-reset" onclick="resetEmergency()">Reset</button>
+              </div>
+            </form>
+
+            <div id="results" class="calc-results hidden">
+              <div class="result-primary">
+                <div class="result-label">Emergency Fund Target</div>
+                <div class="result-value" id="targetAmount">$0</div>
+              </div>
+              <div class="result-grid result-grid-3" style="margin-top: var(--space-4);">
+                <div class="result-item">
+                  <div class="result-label">Amount Still Needed</div>
+                  <div class="result-value" id="amountNeeded">$0</div>
+                </div>
+                <div class="result-item">
+                  <div class="result-label">Months to Goal</div>
+                  <div class="result-value" id="monthsToGoal" style="color: var(--color-success);">0</div>
+                </div>
+                <div class="result-item">
+                  <div class="result-label">Projected Completion</div>
+                  <div class="result-value" id="completionDate">-</div>
+                </div>
+              </div>
+              <div id="progressSection" style="margin-top: var(--space-5);"></div>
+            </div>
+          </div>
+        </div>
+
+        <section class="content-section">
+          <h2>How the Timeline Is Calculated</h2>
+          <div class="formula-box">
+            <div class="formula-label">Formula</div>
+            Target Amount = Monthly Expenses &times; Months of Coverage<br>
+            Amount Needed = Target Amount &minus; Current Savings<br>
+            Months to Goal = Amount Needed &divide; Monthly Contribution<br>
+            Progress % = (Current Savings &divide; Target Amount) &times; 100
+          </div>
+          <p>This calculation assumes a fixed monthly contribution and does not account for interest earned on savings. To be conservative and account for inflation in living costs, the formula treats the target as a fixed nominal amount. Adding even a small interest yield from a high-yield savings account would slightly shorten the actual timeline.</p>
+        </section>
+
+        <section class="content-section">
+          <h2>How to Use This Calculator</h2>
+          <ol>
+            <li><strong>Choose your coverage target:</strong> Select 3, 6, or more months based on your job stability and risk tolerance.</li>
+            <li><strong>Enter monthly essential expenses:</strong> Include rent, utilities, groceries, insurance, and minimum debt payments only.</li>
+            <li><strong>Add current savings:</strong> Enter what you have already saved in a dedicated emergency fund account.</li>
+            <li><strong>Set monthly contribution:</strong> How much can you consistently add to the fund each month?</li>
+            <li><strong>Review your timeline:</strong> See your target amount, months remaining, and projected completion date.</li>
+          </ol>
+        </section>
+
+        <section class="content-section">
+          <h2>Example Scenario</h2>
+          <p>Riley has monthly essential expenses of $3,200 and wants 6 months of coverage, for a target of $19,200. Riley currently has $4,000 saved and can contribute $500/month. Amount still needed: $15,200. At $500/month, Riley will reach the goal in 30.4 months (about 31 months), with a projected completion date around August 2028. Increasing the contribution to $700/month would shorten this to about 22 months.</p>
+        </section>
+
+        <section class="faq-section">
+          <h2>Frequently Asked Questions</h2>
+          <div class="faq-item">
+            <button class="faq-question">How many months should my emergency fund cover?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>Most experts recommend 3 to 6 months. If you are self-employed or have variable income, aim for 6 to 12 months. Start with a $1,000 starter fund if paying off high-interest debt, then build to the full amount.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">Where should I keep my emergency fund?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>Keep it in a high-yield savings account (HYSA) or money market account — separate from checking, liquid within 1-2 days, and FDIC-insured. This earns modest interest while keeping funds accessible.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">What expenses should I include in the monthly calculation?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>Include only essential living expenses: housing, utilities, groceries, minimum debt payments, insurance, and basic transportation. Exclude entertainment, dining out, and discretionary spending.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">Should I invest my emergency fund?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>No. Emergency funds should not be in stocks or volatile investments. A market drop could leave you without funds exactly when you need them. High-yield savings accounts are the right vehicle.</p></div>
+          </div>
+        </section>
+
+        <section class="related-calculators">
+          <h2>Related Calculators</h2>
+          <div class="grid grid-3">
+            <a href="/pages/personal-finance-calculators/savings-goal-tracker-calculator/" class="card card-link">
+              <h3>Savings Goal Tracker</h3>
+              <p>Track progress toward any savings goal with a projected date.</p>
+            </a>
+            <a href="/pages/personal-finance-calculators/monthly-expense-tracker-calculator/" class="card card-link">
+              <h3>Monthly Expense Tracker</h3>
+              <p>Identify essential expenses to set the right emergency fund target.</p>
+            </a>
+            <a href="/pages/personal-finance-calculators/savings-rate-calculator/" class="card card-link">
+              <h3>Savings Rate Calculator</h3>
+              <p>See what percentage of income you are currently saving.</p>
+            </a>
+            <a href="/pages/personal-finance-calculators/debt-snowball-calculator/" class="card card-link">
+              <h3>Debt Snowball Calculator</h3>
+              <p>Plan debt payoff alongside your emergency fund savings.</p>
+            </a>
+            <a href="/pages/finance-calculators/emergency-fund-calculator/" class="card card-link">
+              <h3>Emergency Fund Calculator</h3>
+              <p>Determine the right emergency fund size for your situation.</p>
+            </a>
+          </div>
+        </section>
+
+        <div class="disclaimer">
+          <strong>Disclaimer:</strong> This calculator is for informational and educational purposes only. Results are estimates assuming fixed contributions with no interest earned. Actual timelines may vary. This is not financial advice. Consult a qualified financial advisor for personalized guidance.
+        </div>
+
+        <div class="ad-slot ad-slot-rectangle"></div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free online financial calculators to help you make smarter money decisions.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Personal Finance</h4>
+          <a href="/pages/personal-finance-calculators/emergency-savings-timeline-calculator/">Emergency Savings</a>
+          <a href="/pages/personal-finance-calculators/savings-goal-tracker-calculator/">Savings Goal Tracker</a>
+          <a href="/pages/personal-finance-calculators/savings-rate-calculator/">Savings Rate</a>
+          <a href="/pages/personal-finance-calculators/budget-percentage-calculator/">Budget Percentages</a>
+        </div>
+        <div class="footer-col">
+          <h4>Tools</h4>
+          <a href="/pages/finance-calculators/budget-calculator/">50/30/20 Budget</a>
+          <a href="/pages/investment-calculators/">Investment Calculators</a>
+          <a href="/pages/tax-calculators/">Tax Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about/">About</a>
+          <a href="/contact/">Contact</a>
+          <a href="/privacy/">Privacy Policy</a>
+          <a href="/terms/">Terms of Service</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 CalcWise. All rights reserved.</span>
+        <div class="footer-links">
+          <a href="/privacy/">Privacy</a>
+          <a href="/terms/">Terms</a>
+          <a href="/contact/">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calcEmergency() {
+      if (!CalcWise.validateForm('emergency-form')) return;
+      const v = CalcWise.getFormValues('emergency-form');
+      const target = v.monthsTarget * v.monthlyExpenses;
+      const current = v.currentSavings || 0;
+      const contribution = v.monthlyContribution;
+
+      if (contribution <= 0) {
+        alert('Please enter a monthly contribution amount greater than zero.');
+        return;
+      }
+
+      const needed = Math.max(0, target - current);
+      const months = needed <= 0 ? 0 : Math.ceil(needed / contribution);
+      const progressPct = Math.min(100, (current / target) * 100);
+
+      CalcWise.setText('targetAmount', CalcWise.formatCurrency(target, 0));
+      CalcWise.setText('amountNeeded', CalcWise.formatCurrency(needed, 0));
+      CalcWise.setText('monthsToGoal', months === 0 ? 'Already funded!' : months + ' months');
+
+      const completionDate = new Date();
+      completionDate.setMonth(completionDate.getMonth() + months);
+      CalcWise.setText('completionDate', months === 0 ? 'Now' : completionDate.toLocaleDateString('en-US', { month: 'long', year: 'numeric' }));
+
+      const progressHtml = `
+        <div style="background:var(--color-bg-subtle);border-radius:var(--radius-md);padding:var(--space-4);">
+          <div style="display:flex;justify-content:space-between;margin-bottom:var(--space-2);">
+            <span style="font-size:var(--text-sm);font-weight:600;">Progress: ${CalcWise.formatCurrency(current, 0)} of ${CalcWise.formatCurrency(target, 0)}</span>
+            <span style="font-size:var(--text-sm);font-weight:600;color:var(--color-success);">${CalcWise.formatPercent(progressPct, 1)}</span>
+          </div>
+          <div style="background:var(--color-border);border-radius:999px;height:12px;overflow:hidden;">
+            <div style="background:var(--color-success);height:100%;width:${progressPct}%;border-radius:999px;transition:width 0.5s;"></div>
+          </div>
+          <p style="font-size:var(--text-sm);color:var(--color-text-secondary);margin-top:var(--space-2);">
+            ${progressPct < 100 ? `You are ${CalcWise.formatPercent(progressPct, 1)} of the way there. Keep going!` : 'Congratulations! Your emergency fund is fully funded.'}
+          </p>
+        </div>`;
+      CalcWise.setHtml('progressSection', progressHtml);
+
+      CalcWise.showResults('results');
+    }
+
+    function resetEmergency() {
+      document.getElementById('emergency-form').reset();
+      CalcWise.hideResults('results');
+    }
+  </script>
+</body>
+</html>

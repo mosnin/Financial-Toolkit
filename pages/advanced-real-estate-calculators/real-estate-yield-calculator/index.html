@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Estate Yield Calculator - Gross & Net Rental Yield | CalcWise</title>
+    <meta name="description" content="Calculate gross yield, net yield, and total return on rental properties. Compare your real estate yield to alternative investments.">
+    <link rel="canonical" href="https://calcwise.io/advanced-real-estate-calculators/real-estate-yield-calculator/">
+    <meta property="og:title" content="Real Estate Yield Calculator | CalcWise">
+    <meta property="og:description" content="Measure your rental property's gross yield, net yield, and total return including appreciation. Compare to stocks, bonds, and REITs.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://calcwise.io/advanced-real-estate-calculators/real-estate-yield-calculator/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Real Estate Yield Calculator | CalcWise">
+    <meta name="twitter:description" content="Calculate gross yield, net yield, and total return on rental properties.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/design-system.css">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/"},
+            {"@type": "ListItem", "position": 2, "name": "Advanced Real Estate Calculators", "item": "https://calcwise.io/advanced-real-estate-calculators/"},
+            {"@type": "ListItem", "position": 3, "name": "Real Estate Yield Calculator"}
+        ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {"@type": "Question", "name": "What is the difference between gross and net yield?", "acceptedAnswer": {"@type": "Answer", "text": "Gross yield is the annual rental income as a percentage of the property price, with no deductions. Net yield deducts all annual operating expenses (taxes, insurance, management, maintenance) from the rental income before calculating the percentage. Net yield is a more accurate measure of actual returns."}},
+            {"@type": "Question", "name": "What is a good rental yield?", "acceptedAnswer": {"@type": "Answer", "text": "A net yield of 4-6% is generally considered acceptable for residential rental properties in established markets. Yields above 7-8% may indicate higher risk, a less desirable area, or an undervalued property. Prime city center properties often yield 2-4% net."}},
+            {"@type": "Question", "name": "How does appreciation factor into total yield?", "acceptedAnswer": {"@type": "Answer", "text": "Total return combines both the income yield (net yield) and the capital appreciation yield. A property with a 4% net yield and 3% annual appreciation delivers a 7% total return, which is competitive with many equity investments."}},
+            {"@type": "Question", "name": "How does real estate yield compare to stock market returns?", "acceptedAnswer": {"@type": "Answer", "text": "The S&P 500 has historically returned approximately 10% annually (7% real, inflation-adjusted). Real estate total returns including appreciation typically range from 7-12%, though with more control, tax advantages, and the ability to use leverage. Direct comparison requires accounting for leverage, taxes, and liquidity differences."}}
+        ]
+    }
+    </script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="/" class="logo">
+                <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+                CalcWise
+            </a>
+            <nav class="main-nav">
+                <a href="/real-estate-calculators/">Real Estate</a>
+                <a href="/advanced-real-estate-calculators/">Advanced RE</a>
+                <a href="/energy-utility-calculators/">Energy</a>
+                <a href="/finance-calculators/">Finance</a>
+            </nav>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+            </button>
+        </div>
+        <nav class="mobile-nav">
+            <a href="/real-estate-calculators/">Real Estate Calculators</a>
+            <a href="/advanced-real-estate-calculators/">Advanced Real Estate</a>
+            <a href="/energy-utility-calculators/">Energy &amp; Utility</a>
+            <a href="/finance-calculators/">Finance Calculators</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <nav class="breadcrumbs" aria-label="Breadcrumb">
+                <ol>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/advanced-real-estate-calculators/">Advanced Real Estate Calculators</a></li>
+                    <li><span aria-current="page">Real Estate Yield Calculator</span></li>
+                </ol>
+            </nav>
+
+            <div class="page-content">
+                <div class="calc-page-layout">
+                    <div class="calc-page-main">
+                        <h1>Real Estate Yield Calculator</h1>
+                        <p class="subtitle" style="color: var(--color-gray-600); font-size: var(--text-lg); line-height: var(--leading-relaxed); margin-bottom: var(--space-8);">
+                            Measure your rental property's true income performance. Calculate gross yield, net yield after expenses, and total return combining income with appreciation.
+                        </p>
+
+                        <div class="calc-container">
+                            <div class="calc-header">
+                                <h2>Rental Property Yield Analysis</h2>
+                                <p>Calculate income yield and total return on your investment</p>
+                            </div>
+                            <div class="calc-body">
+                                <form id="yield-form">
+                                    <div class="form-group">
+                                        <label class="form-label" for="annual-rental">Annual Rental Income</label>
+                                        <div class="input-prefix">
+                                            <span class="prefix">$</span>
+                                            <input type="number" id="annual-rental" name="annualRental" class="form-input" placeholder="24,000" min="0" step="100" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label" for="property-price">Property Price</label>
+                                        <div class="input-prefix">
+                                            <span class="prefix">$</span>
+                                            <input type="number" id="property-price" name="propertyPrice" class="form-input" placeholder="400,000" min="1" step="1000" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label" for="annual-expenses">Annual Expenses <span class="form-hint">(taxes, insurance, maintenance, management)</span></label>
+                                        <div class="input-prefix">
+                                            <span class="prefix">$</span>
+                                            <input type="number" id="annual-expenses" name="annualExpenses" class="form-input" placeholder="8,000" min="0" step="100" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label" for="appreciation-pct">Annual Appreciation %</label>
+                                        <div class="input-prefix">
+                                            <input type="number" id="appreciation-pct" name="appreciationPct" class="form-input" placeholder="3.5" min="0" max="30" step="0.1" required>
+                                            <span class="prefix" style="right:0;left:auto;border-right:none;border-left:1px solid var(--color-gray-200);">%</span>
+                                        </div>
+                                    </div>
+                                    <div class="calc-actions">
+                                        <button type="button" class="btn btn-calculate btn-full" onclick="calculateYield()">Calculate Yield</button>
+                                        <button type="reset" class="btn btn-reset">Reset</button>
+                                    </div>
+                                </form>
+
+                                <div id="results" class="calc-results hidden">
+                                    <div class="result-primary">
+                                        <div class="result-label">Total Return %</div>
+                                        <div class="result-value" id="result-total-return">0%</div>
+                                    </div>
+                                    <div class="result-grid result-grid-3">
+                                        <div class="result-item">
+                                            <div class="result-label">Gross Yield</div>
+                                            <div class="result-value" id="result-gross-yield">0%</div>
+                                        </div>
+                                        <div class="result-item">
+                                            <div class="result-label">Net Yield</div>
+                                            <div class="result-value" id="result-net-yield">0%</div>
+                                        </div>
+                                        <div class="result-item">
+                                            <div class="result-label">Appreciation Yield</div>
+                                            <div class="result-value" id="result-appreciation-yield">0%</div>
+                                        </div>
+                                        <div class="result-item">
+                                            <div class="result-label">Net Operating Income</div>
+                                            <div class="result-value" id="result-noi">$0</div>
+                                        </div>
+                                        <div class="result-item">
+                                            <div class="result-label">vs. 10-Yr Treasury (~4.3%)</div>
+                                            <div class="result-value" id="result-vs-treasury">--</div>
+                                        </div>
+                                        <div class="result-item">
+                                            <div class="result-label">vs. S&amp;P 500 (~10% avg)</div>
+                                            <div class="result-value" id="result-vs-sp500">--</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="ad-slot ad-slot-leaderboard"></div>
+
+                        <section class="content-section">
+                            <h2>Real Estate Yield Formula</h2>
+                            <div class="formula-box">
+                                <div class="formula-label">Yield Calculations</div>
+                                Gross Yield = (Annual Rental Income / Property Price) &times; 100
+Net Operating Income (NOI) = Annual Rental Income &minus; Annual Expenses
+Net Yield = (NOI / Property Price) &times; 100
+Appreciation Yield = Annual Appreciation Rate %
+Total Return = Net Yield + Appreciation Yield
+                            </div>
+                            <p><strong>Gross yield</strong> gives a quick top-line view of income performance without deducting costs. It is useful for initial screening but overstates actual returns.</p>
+                            <p><strong>Net yield</strong> is a more honest measure, reflecting the income left after operating costs. It excludes financing costs (mortgage), making it comparable across properties regardless of how they are financed.</p>
+                        </section>
+
+                        <section class="content-section">
+                            <h2>How to Use This Calculator</h2>
+                            <ol>
+                                <li><strong>Enter annual rental income</strong> -- the total rent collected per year.</li>
+                                <li><strong>Enter property price</strong> -- the purchase price or current market value.</li>
+                                <li><strong>Enter annual expenses</strong> -- all operating costs excluding mortgage payments.</li>
+                                <li><strong>Enter annual appreciation %</strong> -- expected average annual property value growth.</li>
+                                <li><strong>Click "Calculate Yield"</strong> to see gross yield, net yield, and total return with benchmark comparisons.</li>
+                            </ol>
+                        </section>
+
+                        <section class="content-section">
+                            <h2>Example Scenario</h2>
+                            <h3>$400,000 Property Generating $24,000 Annual Rent</h3>
+                            <p>A $400,000 rental property generates $24,000/year in rent with $8,000 in annual expenses and 3.5% expected appreciation.</p>
+                            <p>Gross Yield = $24,000 / $400,000 = <strong>6.00%</strong></p>
+                            <p>NOI = $24,000 &minus; $8,000 = <strong>$16,000</strong></p>
+                            <p>Net Yield = $16,000 / $400,000 = <strong>4.00%</strong></p>
+                            <p>Total Return = 4.00% + 3.50% = <strong>7.50%</strong></p>
+                            <p>This total return of 7.5% compares favorably to 10-year Treasuries (~4.3%) and approaches historical S&amp;P 500 averages when leverage is applied.</p>
+                        </section>
+
+                        <section class="faq-section">
+                            <h2>Frequently Asked Questions</h2>
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">
+                                    What is the difference between gross and net yield?
+                                    <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>Gross yield is the annual rental income as a percentage of the property price, with no deductions. Net yield deducts all annual operating expenses from the rental income before calculating the percentage. Net yield is a more accurate measure of actual returns.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">
+                                    What is a good rental yield?
+                                    <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>A net yield of 4-6% is generally considered acceptable for residential rental properties in established markets. Yields above 7-8% may indicate higher risk, a less desirable area, or an undervalued property. Prime city center properties often yield 2-4% net.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">
+                                    How does appreciation factor into total yield?
+                                    <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 011-1z"/></svg>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>Total return combines both the income yield (net yield) and the capital appreciation yield. A property with a 4% net yield and 3% annual appreciation delivers a 7% total return, which is competitive with many equity investments.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">
+                                    How does real estate yield compare to stock market returns?
+                                    <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 011-1z"/></svg>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>The S&amp;P 500 has historically returned approximately 10% annually. Real estate total returns including appreciation typically range from 7-12%, though with more control, tax advantages, and the ability to use leverage. Direct comparison requires accounting for leverage, taxes, and liquidity differences.</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="related-calculators">
+                            <h2>Related Calculators</h2>
+                            <div class="grid grid-3">
+                                <a href="/real-estate-calculators/cap-rate-calculator/" class="card card-link">
+                                    <div class="card-icon">C</div>
+                                    <h3>Cap Rate Calculator</h3>
+                                    <p>Calculate the capitalization rate for investment properties.</p>
+                                </a>
+                                <a href="/advanced-real-estate-calculators/rental-expense-ratio-calculator/" class="card card-link">
+                                    <div class="card-icon">%</div>
+                                    <h3>Rental Expense Ratio Calculator</h3>
+                                    <p>Calculate your total expense ratio and net operating income.</p>
+                                </a>
+                                <a href="/advanced-real-estate-calculators/real-estate-leverage-calculator/" class="card card-link">
+                                    <div class="card-icon">L</div>
+                                    <h3>Real Estate Leverage Calculator</h3>
+                                    <p>Compare leveraged vs. cash returns on investment properties.</p>
+                                </a>
+                            </div>
+                        </section>
+
+                        <div class="disclaimer">
+                            <strong>Disclaimer:</strong> This calculator provides estimates for educational purposes only. Benchmark comparisons (Treasury rates, S&amp;P 500) use historical averages and are not guarantees of future performance. Consult a financial advisor before making investment decisions.
+                        </div>
+
+                        <div class="ad-slot ad-slot-leaderboard"></div>
+                    </div>
+
+                    <aside class="calc-page-sidebar">
+                        <div class="sidebar-card">
+                            <h3>Advanced RE Tools</h3>
+                            <a href="/advanced-real-estate-calculators/property-appreciation-calculator/">Property Appreciation</a>
+                            <a href="/advanced-real-estate-calculators/property-management-cost-calculator/">Management Cost</a>
+                            <a href="/advanced-real-estate-calculators/real-estate-leverage-calculator/">Leverage Calculator</a>
+                            <a href="/advanced-real-estate-calculators/real-estate-yield-calculator/">Yield Calculator</a>
+                            <a href="/advanced-real-estate-calculators/rental-expense-ratio-calculator/">Expense Ratio</a>
+                        </div>
+                        <div class="ad-slot ad-slot-rectangle"></div>
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="/" class="logo">
+                        <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+                        CalcWise
+                    </a>
+                    <p>Free, accurate financial calculators for everyone. Make smarter money decisions with CalcWise.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Advanced Real Estate</h4>
+                    <a href="/advanced-real-estate-calculators/property-appreciation-calculator/">Property Appreciation</a>
+                    <a href="/advanced-real-estate-calculators/real-estate-leverage-calculator/">Leverage Calculator</a>
+                    <a href="/advanced-real-estate-calculators/real-estate-yield-calculator/">Yield Calculator</a>
+                    <a href="/advanced-real-estate-calculators/rental-expense-ratio-calculator/">Expense Ratio</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Energy &amp; Utility</h4>
+                    <a href="/energy-utility-calculators/solar-savings-calculator/">Solar Savings</a>
+                    <a href="/energy-utility-calculators/electricity-cost-calculator/">Electricity Cost</a>
+                    <a href="/energy-utility-calculators/carbon-footprint-calculator/">Carbon Footprint</a>
+                    <a href="/energy-utility-calculators/home-energy-efficiency-calculator/">Home Energy Efficiency</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <a href="/about/">About</a>
+                    <a href="/contact/">Contact</a>
+                    <a href="/privacy/">Privacy Policy</a>
+                    <a href="/terms/">Terms of Use</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; 2026 CalcWise. All rights reserved.</span>
+                <div class="footer-links">
+                    <a href="/privacy/">Privacy</a>
+                    <a href="/terms/">Terms</a>
+                    <a href="/sitemap.xml">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/calculator-engine.js"></script>
+    <script src="/js/search-index.js"></script>
+    <script>
+    function calculateYield() {
+        if (!CalcWise.validateForm('yield-form')) return;
+
+        const values = CalcWise.getFormValues('yield-form');
+        const annualRental = values.annualRental;
+        const propertyPrice = values.propertyPrice;
+        const annualExpenses = values.annualExpenses;
+        const appreciationPct = values.appreciationPct;
+
+        const grossYield = (annualRental / propertyPrice) * 100;
+        const noi = annualRental - annualExpenses;
+        const netYield = (noi / propertyPrice) * 100;
+        const totalReturn = netYield + appreciationPct;
+
+        const treasuryRate = 4.3;
+        const sp500Rate = 10.0;
+        const vsTreasury = totalReturn - treasuryRate;
+        const vsSp500 = totalReturn - sp500Rate;
+
+        CalcWise.setText('result-total-return', CalcWise.formatPercent(totalReturn));
+        CalcWise.setText('result-gross-yield', CalcWise.formatPercent(grossYield));
+        CalcWise.setText('result-net-yield', CalcWise.formatPercent(netYield));
+        CalcWise.setText('result-appreciation-yield', CalcWise.formatPercent(appreciationPct));
+        CalcWise.setText('result-noi', CalcWise.formatCurrency(noi, 0));
+        CalcWise.setText('result-vs-treasury', (vsTreasury >= 0 ? '+' : '') + vsTreasury.toFixed(2) + '%');
+        CalcWise.setText('result-vs-sp500', (vsSp500 >= 0 ? '+' : '') + vsSp500.toFixed(2) + '%');
+
+        CalcWise.showResults('results');
+    }
+
+    document.getElementById('yield-form').addEventListener('reset', function() {
+        setTimeout(() => CalcWise.hideResults('results'), 0);
+    });
+    </script>
+</body>
+</html>

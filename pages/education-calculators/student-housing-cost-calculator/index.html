@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Housing Cost Calculator - On-Campus vs Off-Campus | CalcWise</title>
+  <meta name="description" content="Free student housing cost calculator. Compare on-campus and off-campus living costs including utilities, commuting, and meal plans to find your true annual and 4-year difference.">
+  <meta name="keywords" content="student housing cost calculator, on campus vs off campus cost, college housing comparison, dorm vs apartment calculator, student living expenses">
+  <link rel="canonical" href="https://calcwise.io/education-calculators/student-housing-cost-calculator/">
+
+  <meta property="og:title" content="Student Housing Cost Calculator - On-Campus vs Off-Campus">
+  <meta property="og:description" content="Compare the true cost of on-campus dorms vs off-campus apartments including utilities and commuting over 4 years.">
+  <meta property="og:url" content="https://calcwise.io/education-calculators/student-housing-cost-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Student Housing Cost Calculator - On-Campus vs Off-Campus">
+  <meta name="twitter:description" content="Compare the true cost of on-campus dorms vs off-campus apartments including utilities and commuting over 4 years.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Education Calculators", "item": "https://calcwise.io/education-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "Student Housing Cost Calculator", "item": "https://calcwise.io/education-calculators/student-housing-cost-calculator/" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is it cheaper to live on campus or off campus?",
+        "acceptedAnswer": { "@type": "Answer", "text": "It depends heavily on location and roommate situation. On-campus costs are all-inclusive but often non-negotiable. Off-campus can be cheaper when shared with roommates, but you must add utilities, commuting costs, and renter's insurance. This calculator helps you compare the true total cost." }
+      },
+      {
+        "@type": "Question",
+        "name": "What hidden costs should I include for off-campus housing?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Beyond base rent, include utilities (electric, gas, water, internet), renter's insurance, commuting costs (gas, bus pass, parking), laundry, and the cost difference between a meal plan and buying groceries. These extras can add $300-$700/month to off-campus living." }
+      },
+      {
+        "@type": "Question",
+        "name": "Does on-campus housing include a meal plan?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Most on-campus room and board packages include a required meal plan. If your on-campus cost includes meals, make sure you enter $0 for the off-campus meal plan and enter your estimated monthly grocery cost separately for a fair comparison." }
+      },
+      {
+        "@type": "Question",
+        "name": "How many months per year should I use for housing cost calculations?",
+        "acceptedAnswer": { "@type": "Answer", "text": "On-campus housing typically covers only the academic year (8-9 months). Off-campus leases usually run 12 months. This calculator uses an annual basis — enter your actual annual costs (e.g., 9-month on-campus price vs 12-month off-campus lease) for accurate comparison." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/business-calculators/">Business</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/business-calculators/">Business Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/education-calculators/">Education Calculators</a></li>
+          <li><span aria-current="page">Student Housing Cost Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="article-content">
+          <h1>Student Housing Cost Calculator</h1>
+          <p>Make the on-campus vs off-campus decision with real numbers. This calculator compares the true all-in annual cost of on-campus housing versus renting off-campus — factoring in utilities, commuting, and whether you use a meal plan or cook for yourself. See the annual difference and 4-year total impact.</p>
+
+          <div class="calc-container mt-8">
+            <div class="calc-header">
+              <h2>On-Campus vs Off-Campus Housing Comparison</h2>
+              <p>Enter costs for both options to find the true annual difference</p>
+            </div>
+            <div class="calc-body">
+              <form id="housing-form" onsubmit="return false;">
+                <h3 style="margin-bottom: 1rem; font-size: 1rem; color: var(--color-primary);">On-Campus Costs (Annual)</h3>
+                <div class="form-group">
+                  <label class="form-label" for="on-campus-cost">On-Campus Room &amp; Board (annual)</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="on-campus-cost" class="form-input" placeholder="12000" min="0" step="100" required>
+                  </div>
+                </div>
+
+                <h3 style="margin: 1.5rem 0 1rem; font-size: 1rem; color: var(--color-primary);">Off-Campus Costs (Annual)</h3>
+                <div class="form-group">
+                  <label class="form-label" for="off-campus-rent">Monthly Rent</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="off-campus-rent" class="form-input" placeholder="750" min="0" step="25" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="utilities">Monthly Utilities (electric, gas, internet)</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="utilities" class="form-input" placeholder="120" min="0" step="10">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="commute-costs">Monthly Commute Costs (gas/transit)</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="commute-costs" class="form-input" placeholder="80" min="0" step="10">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="groceries">Monthly Groceries (off-campus meals)</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="groceries" class="form-input" placeholder="300" min="0" step="25">
+                  </div>
+                </div>
+
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calculateHousing()">Calculate</button>
+                  <button type="button" class="btn btn-reset" onclick="resetHousing()">Reset</button>
+                </div>
+              </form>
+
+              <div id="housing-results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">Cheaper Option</div>
+                  <div class="result-value" id="result-cheaper"></div>
+                </div>
+                <div class="result-grid result-grid-3">
+                  <div class="result-item">
+                    <div class="result-label">Annual On-Campus</div>
+                    <div class="result-value" id="result-on-annual"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Annual Off-Campus</div>
+                    <div class="result-value" id="result-off-annual"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Annual Difference</div>
+                    <div class="result-value" id="result-annual-diff"></div>
+                  </div>
+                </div>
+                <div class="result-grid result-grid-3" style="margin-top:1rem;">
+                  <div class="result-item">
+                    <div class="result-label">4-Year On-Campus</div>
+                    <div class="result-value" id="result-on-4yr"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">4-Year Off-Campus</div>
+                    <div class="result-value" id="result-off-4yr"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">4-Year Difference</div>
+                    <div class="result-value" id="result-4yr-diff"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <section class="content-section">
+            <h2>How the Housing Comparison Works</h2>
+            <p>The true cost of off-campus housing goes beyond rent. This calculator builds the complete annual picture:</p>
+            <div class="formula-box">
+              <div class="formula-label">Annual On-Campus Cost</div>
+              On-Campus Annual = Room &amp; Board Package (as entered)
+            </div>
+            <div class="formula-box">
+              <div class="formula-label">Annual Off-Campus Cost</div>
+              Off-Campus Annual = (Rent + Utilities + Commute + Groceries) &times; 12
+            </div>
+            <div class="formula-box">
+              <div class="formula-label">Annual Difference</div>
+              Difference = |On-Campus Annual - Off-Campus Annual|
+            </div>
+          </section>
+
+          <section class="content-section">
+            <h2>How to Use This Calculator</h2>
+            <ol>
+              <li><strong>Enter on-campus room and board</strong> - use the annual cost from your school's published rates (this usually includes a meal plan).</li>
+              <li><strong>Enter monthly off-campus rent</strong> - your share if splitting with roommates.</li>
+              <li><strong>Enter utilities</strong> - electricity, gas, water, and internet split among roommates.</li>
+              <li><strong>Enter commute costs</strong> - monthly bus pass, gas, or parking.</li>
+              <li><strong>Enter monthly groceries</strong> - what you'd spend on food off campus instead of a meal plan.</li>
+              <li><strong>Click Calculate</strong> to see the true annual and 4-year comparison.</li>
+            </ol>
+          </section>
+
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>A university charges $13,500 per year for on-campus room and board. Off-campus, a student splits a 3-bedroom apartment paying $750/month in rent, $120/month in utilities, $80/month for a bus pass, and $300/month on groceries — totaling $1,250/month or $15,000 annually. In this case, on-campus is actually $1,500 cheaper per year and $6,000 cheaper over four years — and that includes meals. The calculation completely changes if the student splits with one more roommate and reduces rent to $550/month.</p>
+          </section>
+
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Is it cheaper to live on campus or off campus?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>It depends heavily on location and the roommate situation. On-campus costs are all-inclusive but often non-negotiable. Off-campus can be cheaper when shared with multiple roommates, but you must add utilities, commuting costs, and groceries. This calculator helps you compare the true total cost.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What hidden costs should I include for off-campus housing?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Beyond base rent, include utilities (electric, gas, water, internet), renter's insurance, commuting costs (gas, bus pass, parking), laundry, and groceries instead of a meal plan. These extras can add $300-$700/month to off-campus living costs.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Does on-campus housing include a meal plan?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Most on-campus room and board packages include a required meal plan. Make sure your on-campus cost reflects the full room-and-board total, and enter your estimated monthly grocery cost for the off-campus option to ensure a fair comparison.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                How many months per year should I use for housing cost calculations?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>On-campus housing typically covers only the academic year (8-9 months). Off-campus leases usually run 12 months. Enter your actual annual cost for each option — the actual invoice amount for on-campus, and monthly off-campus costs multiplied by 12 months.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/education-calculators/student-budget-calculator/" class="card card-link">
+                <h3>Student Budget Calculator</h3>
+                <p>Plan your full monthly income and expenses as a student.</p>
+              </a>
+              <a href="/education-calculators/college-affordability-calculator/" class="card card-link">
+                <h3>College Affordability Calculator</h3>
+                <p>Estimate your annual funding gap and loan burden.</p>
+              </a>
+              <a href="/real-estate-calculators/" class="card card-link">
+                <h3>Real Estate Calculators</h3>
+                <p>Explore mortgage, rent vs buy, and other housing calculators.</p>
+              </a>
+            </div>
+          </section>
+
+          <div class="disclaimer">
+            <strong>Disclaimer:</strong> This calculator provides estimates for informational and planning purposes only. Actual costs will vary by location, lease terms, utility usage, and lifestyle choices. This is not financial advice.
+          </div>
+
+          <div class="ad-slot ad-slot-leaderboard"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Education</h4>
+          <a href="/education-calculators/">All Education Calculators</a>
+          <a href="/education-calculators/student-budget-calculator/">Student Budget</a>
+        </div>
+        <div class="footer-col">
+          <h4>Finance</h4>
+          <a href="/finance-calculators/">All Finance Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateHousing() {
+      if (!CalcWise.validateForm('housing-form')) return;
+
+      const onCampus = CalcWise.parseNumber(document.getElementById('on-campus-cost').value);
+      const rent = CalcWise.parseNumber(document.getElementById('off-campus-rent').value);
+      const utilities = CalcWise.parseNumber(document.getElementById('utilities').value) || 0;
+      const commute = CalcWise.parseNumber(document.getElementById('commute-costs').value) || 0;
+      const groceries = CalcWise.parseNumber(document.getElementById('groceries').value) || 0;
+
+      const offCampusMonthly = rent + utilities + commute + groceries;
+      const offCampusAnnual = offCampusMonthly * 12;
+      const diff = Math.abs(onCampus - offCampusAnnual);
+      const cheaper = onCampus <= offCampusAnnual ? 'On-Campus saves ' + CalcWise.formatCurrency(diff) + '/yr' : 'Off-Campus saves ' + CalcWise.formatCurrency(diff) + '/yr';
+
+      CalcWise.setText('result-cheaper', cheaper);
+      CalcWise.setText('result-on-annual', CalcWise.formatCurrency(onCampus));
+      CalcWise.setText('result-off-annual', CalcWise.formatCurrency(offCampusAnnual));
+      CalcWise.setText('result-annual-diff', CalcWise.formatCurrency(diff));
+      CalcWise.setText('result-on-4yr', CalcWise.formatCurrency(onCampus * 4));
+      CalcWise.setText('result-off-4yr', CalcWise.formatCurrency(offCampusAnnual * 4));
+      CalcWise.setText('result-4yr-diff', CalcWise.formatCurrency(diff * 4));
+      CalcWise.showResults('housing-results');
+    }
+
+    function resetHousing() {
+      document.getElementById('housing-form').reset();
+      CalcWise.hideResults('housing-results');
+    }
+  </script>
+</body>
+</html>

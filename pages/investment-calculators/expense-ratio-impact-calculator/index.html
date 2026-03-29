@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expense Ratio Impact Calculator | CalcWise</title>
+  <meta name="description" content="See exactly how fund expense ratios erode your investment returns over time. Compare portfolio value with and without fees to understand the true cost of high expense ratios.">
+  <meta name="keywords" content="expense ratio impact calculator, fund fees calculator, cost of fees investing, portfolio with without fees, expense ratio comparison">
+  <link rel="canonical" href="https://calcwise.io/investment-calculators/expense-ratio-impact-calculator/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Expense Ratio Impact Calculator | CalcWise">
+  <meta property="og:description" content="See exactly how fund expense ratios erode your investment returns. Compare portfolio with and without fees.">
+  <meta property="og:url" content="https://calcwise.io/investment-calculators/expense-ratio-impact-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Expense Ratio Impact Calculator | CalcWise">
+  <meta name="twitter:description" content="See exactly how fund expense ratios erode your investment returns. Compare portfolio with and without fees.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <!-- BreadcrumbList Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Investment Calculators", "item": "https://calcwise.io/investment-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "Expense Ratio Impact Calculator", "item": "https://calcwise.io/investment-calculators/expense-ratio-impact-calculator/" }
+    ]
+  }
+  </script>
+
+  <!-- FAQPage Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do expense ratios affect long-term investment growth?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Expense ratios reduce your effective rate of return every year. Because investments compound, a seemingly small difference — say 0.05% vs 1.00% — becomes enormous over decades. Over 30 years, the difference in ending value between these two expense ratios on a $50,000 investment can easily exceed $100,000." }
+      },
+      {
+        "@type": "Question",
+        "name": "Are expense ratios charged upfront?",
+        "acceptedAnswer": { "@type": "Answer", "text": "No. Expense ratios are deducted from the fund's assets daily, proportionally, not charged directly from your account. The effect shows up as a slightly lower NAV (net asset value) than the fund would otherwise have." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the average expense ratio for index funds?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The average expense ratio for index mutual funds and ETFs has dropped dramatically in recent years. Many popular index ETFs now charge between 0.03% and 0.10%, while the industry average across all funds is around 0.44% as of recent data." }
+      },
+      {
+        "@type": "Question",
+        "name": "Is there any other cost besides the expense ratio?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Investors may also face brokerage commissions (less common now), bid-ask spreads on ETF trades, sales loads on some mutual funds, and account fees. The total cost of ownership goes beyond just the expense ratio." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/investment-calculators/" aria-current="page">Investments</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/investment-calculators/">Investment Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/investment-calculators/">Investment Calculators</a></li>
+          <li><span aria-current="page">Expense Ratio Impact Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="article-content">
+          <h1>Expense Ratio Impact Calculator</h1>
+          <p>Understand the true cost of fund fees over time. Enter your investment amount, annual return, expense ratio, and investment horizon to see a side-by-side comparison of your portfolio with and without fees — and how much those fees actually cost you in dollar terms.</p>
+
+          <div class="calc-container mt-8">
+            <div class="calc-header">
+              <h2>Calculate Expense Ratio Impact</h2>
+              <p>Enter your investment details below</p>
+            </div>
+            <div class="calc-body">
+              <form id="expense-ratio-form" onsubmit="return false;">
+                <div class="form-group">
+                  <label class="form-label" for="er-investment">Investment Amount</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="er-investment" class="form-input" placeholder="50000.00" min="0.01" step="0.01" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="er-annual-return">Annual Return %</label>
+                  <div class="input-prefix">
+                    <input type="number" id="er-annual-return" class="form-input" placeholder="8" min="0" max="100" step="0.01" required>
+                    <span class="prefix" style="left:auto;right:0.75rem;">%</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="er-ratio">Expense Ratio %</label>
+                  <div class="input-prefix">
+                    <input type="number" id="er-ratio" class="form-input" placeholder="1.00" min="0" max="10" step="0.01" required>
+                    <span class="prefix" style="left:auto;right:0.75rem;">%</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="er-years">Years</label>
+                  <input type="number" id="er-years" class="form-input" placeholder="25" min="1" max="50" step="1" required>
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calculateExpenseRatioImpact()">Calculate Impact</button>
+                  <button type="button" class="btn btn-reset" onclick="resetExpenseRatioImpact()">Reset</button>
+                </div>
+              </form>
+
+              <div id="expense-ratio-results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">Cost of Fees Over Time</div>
+                  <div class="result-value" id="result-er-fee-cost"></div>
+                </div>
+                <div class="result-grid">
+                  <div class="result-item">
+                    <div class="result-label">Portfolio Without Fees</div>
+                    <div class="result-value" id="result-er-without-fees"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Portfolio With Fees</div>
+                    <div class="result-value" id="result-er-with-fees"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Return Without Fees</div>
+                    <div class="result-value" id="result-er-return-gross"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Return With Fees</div>
+                    <div class="result-value" id="result-er-return-net"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Formula Section -->
+          <section class="content-section">
+            <h2>How Expense Ratio Impact Is Calculated</h2>
+            <p>The portfolio values are calculated using compound growth, with and without the expense ratio subtracted from the annual return:</p>
+            <div class="formula-box">
+              <div class="formula-label">Portfolio Without Fees</div>
+              Value = Investment × (1 + Annual Return %)^Years
+            </div>
+            <div class="formula-box">
+              <div class="formula-label">Portfolio With Fees</div>
+              Value = Investment × (1 + Annual Return % − Expense Ratio %)^Years
+            </div>
+            <p>The difference between these two values is the <strong>total cost of the expense ratio</strong> over the investment period.</p>
+          </section>
+
+          <!-- How to Use -->
+          <section class="content-section">
+            <h2>How to Use This Expense Ratio Impact Calculator</h2>
+            <ol>
+              <li><strong>Enter your investment amount</strong> — your initial lump-sum investment.</li>
+              <li><strong>Enter the annual return %</strong> — the expected annual return before fees.</li>
+              <li><strong>Enter the expense ratio %</strong> — the fund's annual fee (check the fund's prospectus or fact sheet).</li>
+              <li><strong>Enter the number of years</strong> — how long you plan to hold the investment.</li>
+              <li><strong>Click "Calculate Impact"</strong> to see the side-by-side comparison and the total fee cost.</li>
+            </ol>
+          </section>
+
+          <!-- Example Scenario -->
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>Suppose you invest $50,000 earning 8% annually. With no expense ratio, after 25 years your portfolio would be worth approximately $342,424. With a 1.00% expense ratio (net return 7%), the portfolio would be worth about $271,372 — a difference of over $71,000. That $71,000 is the compounded cost of the annual fee, representing more than the entire original investment.</p>
+          </section>
+
+          <!-- FAQ Section -->
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                How do expense ratios affect long-term investment growth?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Expense ratios reduce your effective rate of return every year. Because investments compound, a seemingly small difference — say 0.05% vs 1.00% — becomes enormous over decades. Over 30 years, the difference in ending value between these two expense ratios on a $50,000 investment can easily exceed $100,000.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Are expense ratios charged upfront?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>No. Expense ratios are deducted from the fund's assets daily, proportionally, not charged directly from your account. The effect shows up as a slightly lower NAV (net asset value) than the fund would otherwise have.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What is the average expense ratio for index funds?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>The average expense ratio for index mutual funds and ETFs has dropped dramatically in recent years. Many popular index ETFs now charge between 0.03% and 0.10%, while the industry average across all funds is around 0.44% as of recent data.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Is there any other cost besides the expense ratio?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Yes. Investors may also face brokerage commissions (less common now), bid-ask spreads on ETF trades, sales loads on some mutual funds, and account fees. The total cost of ownership goes beyond just the expense ratio.</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Related Calculators -->
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/investment-calculators/etf-return-calculator/" class="card card-link">
+                <h3>ETF Return Calculator</h3>
+                <p>Project ETF returns net of expense ratios over time.</p>
+              </a>
+              <a href="/investment-calculators/investment-fee-impact-calculator/" class="card card-link">
+                <h3>Investment Fee Impact Calculator</h3>
+                <p>See how advisor fees drag on long-term portfolio performance.</p>
+              </a>
+              <a href="/investment-calculators/mutual-fund-performance-calculator/" class="card card-link">
+                <h3>Mutual Fund Performance Calculator</h3>
+                <p>Measure total return and CAGR for mutual fund investments.</p>
+              </a>
+              <a href="/investment-calculators/cagr-calculator/" class="card card-link">
+                <h3>CAGR Calculator</h3>
+                <p>Compute compound annual growth rate for any investment.</p>
+              </a>
+            </div>
+          </section>
+
+          <!-- Disclaimer -->
+          <div class="disclaimer">
+            <strong>Disclaimer:</strong> This calculator provides estimates for informational purposes only. Actual investment returns and fees may differ. This is not financial advice. Consult a qualified financial professional before making investment decisions.
+          </div>
+
+          <!-- Ad Slot -->
+          <div class="ad-slot ad-slot-leaderboard"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Real Estate</h4>
+          <a href="/real-estate-calculators/">All Real Estate Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Investments</h4>
+          <a href="/investment-calculators/">All Investment Calculators</a>
+          <a href="/investment-calculators/cagr-calculator/">CAGR Calculator</a>
+          <a href="/investment-calculators/dividend-yield-calculator/">Dividend Yield</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateExpenseRatioImpact() {
+      const investment = parseFloat(document.getElementById('er-investment').value);
+      const annualReturn = parseFloat(document.getElementById('er-annual-return').value);
+      const expenseRatio = parseFloat(document.getElementById('er-ratio').value);
+      const years = parseFloat(document.getElementById('er-years').value);
+
+      if (!investment || investment <= 0 || isNaN(annualReturn) || isNaN(expenseRatio) || !years || years <= 0) {
+        alert('Please enter valid values for all fields.');
+        return;
+      }
+
+      const grossRate = annualReturn / 100;
+      const netRate = (annualReturn - expenseRatio) / 100;
+
+      const withoutFees = investment * Math.pow(1 + grossRate, years);
+      const withFees = investment * Math.pow(1 + netRate, years);
+      const feeCost = withoutFees - withFees;
+      const returnGross = ((withoutFees - investment) / investment) * 100;
+      const returnNet = ((withFees - investment) / investment) * 100;
+
+      document.getElementById('result-er-fee-cost').textContent = CalcWise.formatCurrency(feeCost);
+      document.getElementById('result-er-without-fees').textContent = CalcWise.formatCurrency(withoutFees);
+      document.getElementById('result-er-with-fees').textContent = CalcWise.formatCurrency(withFees);
+      document.getElementById('result-er-return-gross').textContent = CalcWise.formatPercent(returnGross);
+      document.getElementById('result-er-return-net').textContent = CalcWise.formatPercent(returnNet);
+      document.getElementById('expense-ratio-results').classList.remove('hidden');
+    }
+
+    function resetExpenseRatioImpact() {
+      document.getElementById('expense-ratio-form').reset();
+      document.getElementById('expense-ratio-results').classList.add('hidden');
+    }
+  </script>
+</body>
+</html>

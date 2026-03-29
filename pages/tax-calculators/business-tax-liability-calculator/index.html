@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Business Tax Liability Calculator | CalcWise</title>
+  <meta name="description" content="Estimate your business tax liability by entity type: LLC, S-Corp, C-Corp, or sole proprietorship. Calculate taxable income, tax owed, and effective tax rate.">
+  <link rel="canonical" href="https://calcwise.io/tax-calculators/business-tax-liability-calculator/">
+  <meta property="og:title" content="Business Tax Liability Calculator | CalcWise">
+  <meta property="og:description" content="Estimate business tax liability for LLC, S-Corp, C-Corp, and sole proprietorships.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcwise.io/tax-calculators/business-tax-liability-calculator/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Business Tax Liability Calculator | CalcWise">
+  <meta name="twitter:description" content="Calculate estimated business tax liability by entity structure.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/"},
+      {"@type": "ListItem", "position": 2, "name": "Tax Calculators", "item": "https://calcwise.io/tax-calculators/"},
+      {"@type": "ListItem", "position": 3, "name": "Business Tax Liability Calculator"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the C-Corp flat tax rate?",
+        "acceptedAnswer": {"@type": "Answer", "text": "C-Corporations are taxed at a flat 21% federal corporate income tax rate on all taxable income, regardless of income level, under the Tax Cuts and Jobs Act."}
+      },
+      {
+        "@type": "Question",
+        "name": "How are LLCs taxed by default?",
+        "acceptedAnswer": {"@type": "Answer", "text": "By default, a single-member LLC is taxed as a sole proprietorship (pass-through), and a multi-member LLC is taxed as a partnership. The owner pays income tax and self-employment tax on business profits on their personal return."}
+      },
+      {
+        "@type": "Question",
+        "name": "What is the QBI deduction for pass-through entities?",
+        "acceptedAnswer": {"@type": "Answer", "text": "The Qualified Business Income (QBI) deduction allows eligible self-employed and pass-through business owners to deduct up to 20% of qualified business income, subject to income limits and phase-outs."}
+      },
+      {
+        "@type": "Question",
+        "name": "When does an S-Corp election make sense?",
+        "acceptedAnswer": {"@type": "Answer", "text": "An S-Corp election can save on self-employment taxes once net income exceeds roughly $40,000–$50,000 per year, because only a 'reasonable salary' is subject to payroll taxes — remaining profit is distributed tax-free from SE tax."}
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="logo">
+        <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav">
+        <a href="/">Home</a>
+        <a href="/pages/business-calculators/">Business</a>
+        <a href="/pages/financial-calculators/">Financial</a>
+        <a href="/pages/tax-calculators/" aria-current="page">Tax</a>
+        <a href="/pages/investment-calculators/">Investment</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav">
+      <a href="/">Home</a>
+      <a href="/pages/business-calculators/">Business Calculators</a>
+      <a href="/pages/financial-calculators/">Financial Calculators</a>
+      <a href="/pages/tax-calculators/">Tax Calculators</a>
+      <a href="/pages/investment-calculators/">Investment Calculators</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/pages/tax-calculators/">Tax Calculators</a></li>
+          <li><span aria-current="page">Business Tax Liability Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="calc-page-layout">
+          <div class="calc-page-main">
+            <h1>Business Tax Liability Calculator</h1>
+            <p class="subtitle" style="font-size:var(--text-lg);color:var(--color-gray-600);margin-bottom:var(--space-8);line-height:var(--leading-relaxed);">Estimate your federal business tax liability based on your entity structure, gross revenue, and deductible expenses. Compare how different structures affect your tax bill to make an informed choice for your business.</p>
+
+            <div class="calc-container">
+              <div class="calc-header">
+                <h2>Business Tax Liability Calculator</h2>
+                <p>Estimate taxes by entity type</p>
+              </div>
+              <div class="calc-body">
+                <form id="calc-form" onsubmit="return false;">
+                  <div class="form-group">
+                    <label class="form-label" for="entity-type">Business Structure</label>
+                    <select id="entity-type" class="form-select" onchange="updateEntityHelp()">
+                      <option value="sole">Sole Proprietorship / Single-Member LLC</option>
+                      <option value="scorp">S-Corporation</option>
+                      <option value="ccorp">C-Corporation (21% flat)</option>
+                      <option value="partnership">Partnership / Multi-Member LLC</option>
+                    </select>
+                    <p id="entity-help" class="form-hint" style="margin-top:var(--space-2);">Pass-through entity — profits taxed on your personal return plus self-employment tax.</p>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="gross-revenue">Gross Annual Revenue</label>
+                    <div class="input-prefix">
+                      <span class="prefix">$</span>
+                      <input type="number" id="gross-revenue" class="form-input" placeholder="200000" min="0" step="1000">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="deductible-expenses">Total Deductible Business Expenses</label>
+                    <div class="input-prefix">
+                      <span class="prefix">$</span>
+                      <input type="number" id="deductible-expenses" class="form-input" placeholder="80000" min="0" step="1000">
+                    </div>
+                  </div>
+                  <div class="form-group" id="salary-group" style="display:none;">
+                    <label class="form-label" for="owner-salary">Owner Reasonable Salary (S-Corp)</label>
+                    <div class="input-prefix">
+                      <span class="prefix">$</span>
+                      <input type="number" id="owner-salary" class="form-input" placeholder="60000" min="0" step="1000">
+                    </div>
+                    <p class="form-hint">Only the salary portion is subject to payroll taxes. Distributions avoid SE tax.</p>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="owner-filing-status">Owner Filing Status (pass-through entities)</label>
+                    <select id="owner-filing-status" class="form-select">
+                      <option value="single">Single</option>
+                      <option value="married">Married Filing Jointly</option>
+                      <option value="hoh">Head of Household</option>
+                    </select>
+                  </div>
+                  <div class="calc-actions">
+                    <button type="button" class="btn btn-calculate btn-full" onclick="calculateBusinessTax()">Calculate Tax Liability</button>
+                    <button type="button" class="btn btn-reset" onclick="resetForm()">Reset</button>
+                  </div>
+                </form>
+
+                <div id="results" class="calc-results hidden">
+                  <div class="result-primary">
+                    <div class="result-label">Estimated Tax Liability</div>
+                    <div class="result-value" id="result-total-tax">$0</div>
+                  </div>
+                  <div class="result-grid">
+                    <div class="result-item">
+                      <div class="result-label">Taxable Income</div>
+                      <div class="result-value" id="result-taxable">$0</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Income Tax</div>
+                      <div class="result-value" id="result-income-tax">$0</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">SE / Payroll Tax</div>
+                      <div class="result-value" id="result-se-tax">$0</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Effective Tax Rate</div>
+                      <div class="result-value" id="result-eff-rate">0%</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="ad-slot ad-slot-leaderboard"></div>
+
+            <section class="content-section">
+              <h2>Business Tax Formulas by Entity Type</h2>
+              <div class="formula-box">
+                <div class="formula-label">Sole Proprietorship / Single-Member LLC</div>
+                Net Profit = Revenue − Expenses<br>
+                SE Tax = Net Profit × 0.9235 × 15.3%<br>
+                AGI = Net Profit − (SE Tax / 2) − QBI Deduction (up to 20%)<br>
+                Income Tax = Applied to AGI at personal brackets
+              </div>
+              <div class="formula-box">
+                <div class="formula-label">S-Corporation</div>
+                Net Profit = Revenue − Expenses<br>
+                Payroll Tax on Salary = Salary × 15.3% (employer + employee share)<br>
+                Remaining Distribution = Net Profit − Salary (no SE tax)<br>
+                Owner pays income tax on both salary and distribution
+              </div>
+              <div class="formula-box">
+                <div class="formula-label">C-Corporation</div>
+                Corporate Taxable Income = Revenue − Expenses<br>
+                Corporate Tax = Taxable Income × 21%<br>
+                (Dividends paid to owners taxed again at personal rate — double taxation)
+              </div>
+            </section>
+
+            <section class="content-section">
+              <h2>How to Use This Calculator</h2>
+              <ol>
+                <li>Select your <strong>business structure</strong> from the dropdown.</li>
+                <li>Enter your <strong>gross annual revenue</strong>.</li>
+                <li>Enter all <strong>deductible business expenses</strong> (COGS, rent, payroll, etc.).</li>
+                <li>For S-Corps, enter the <strong>owner's reasonable salary</strong>.</li>
+                <li>Select the owner's <strong>filing status</strong> for pass-through income tax calculation.</li>
+                <li>Click <strong>Calculate Tax Liability</strong>.</li>
+              </ol>
+            </section>
+
+            <section class="content-section">
+              <h2>Example Scenario</h2>
+              <p>A freelance consultant with $200,000 revenue and $50,000 in deductible expenses, filing as sole proprietor (single):</p>
+              <ul>
+                <li>Net Profit: $200,000 − $50,000 = <strong>$150,000</strong></li>
+                <li>SE Tax: $150,000 × 0.9235 × 15.3% ≈ <strong>$21,215</strong></li>
+                <li>Deductible SE: $21,215 / 2 = $10,608</li>
+                <li>QBI Deduction (20%): ~$27,878</li>
+                <li>AGI: $150,000 − $10,608 − $27,878 = $111,514</li>
+                <li>Federal Income Tax (after std deduction): <strong>~$17,400</strong></li>
+                <li>Total Tax: $21,215 + $17,400 = <strong>~$38,615</strong></li>
+                <li>Effective Rate: ~19.3% of net profit</li>
+              </ul>
+            </section>
+
+            <section class="faq-section">
+              <h2>Frequently Asked Questions</h2>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">What is the C-Corp flat tax rate?<svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg></button>
+                <div class="faq-answer"><p>C-Corporations are taxed at a flat 21% federal corporate income tax rate on all taxable income, regardless of income level, under the Tax Cuts and Jobs Act.</p></div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">How are LLCs taxed by default?<svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg></button>
+                <div class="faq-answer"><p>By default, a single-member LLC is taxed as a sole proprietorship (pass-through), and a multi-member LLC is taxed as a partnership. The owner pays income tax and self-employment tax on business profits on their personal return.</p></div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">What is the QBI deduction for pass-through entities?<svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg></button>
+                <div class="faq-answer"><p>The Qualified Business Income (QBI) deduction allows eligible self-employed and pass-through business owners to deduct up to 20% of qualified business income, subject to income limits and phase-outs.</p></div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">When does an S-Corp election make sense?<svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg></button>
+                <div class="faq-answer"><p>An S-Corp election can save on self-employment taxes once net income exceeds roughly $40,000–$50,000 per year, because only a 'reasonable salary' is subject to payroll taxes — remaining profit is distributed tax-free from SE tax.</p></div>
+              </div>
+            </section>
+
+            <section class="related-calculators">
+              <h2>Related Calculators</h2>
+              <div class="grid grid-3">
+                <a href="/pages/tax-calculators/self-employment-tax-calculator/" class="card card-link">
+                  <h3>Self-Employment Tax Calculator</h3>
+                  <p>Estimate SE tax and the deductible half for sole proprietors.</p>
+                </a>
+                <a href="/pages/tax-calculators/1099-vs-w2-calculator/" class="card card-link">
+                  <h3>1099 vs W2 Calculator</h3>
+                  <p>Compare contractor vs employee income after all taxes.</p>
+                </a>
+                <a href="/pages/tax-calculators/quarterly-estimated-tax-calculator/" class="card card-link">
+                  <h3>Quarterly Estimated Tax</h3>
+                  <p>Calculate quarterly tax payments for self-employed business owners.</p>
+                </a>
+                <a href="/pages/tax-calculators/depreciation-tax-calculator/" class="card card-link">
+                  <h3>Depreciation Tax Calculator</h3>
+                  <p>Calculate Section 179 and MACRS depreciation for business assets.</p>
+                </a>
+              </div>
+            </section>
+
+            <div class="disclaimer">
+              <strong>Tax Disclaimer:</strong> This calculator provides estimates for educational purposes only and does not constitute tax, legal, or financial advice. Business tax calculations involve many variables including state taxes, payroll taxes, depreciation, credits, and more. Consult a CPA or tax attorney for advice specific to your business. Results are based on estimated 2026 federal tax parameters.
+            </div>
+          </div>
+
+          <aside class="calc-page-sidebar">
+            <div class="ad-slot ad-slot-rectangle"></div>
+            <div class="sidebar-card">
+              <h3>Tax Calculators</h3>
+              <a href="/pages/tax-calculators/self-employment-tax-calculator/">Self-Employment Tax</a>
+              <a href="/pages/tax-calculators/1099-vs-w2-calculator/">1099 vs W2</a>
+              <a href="/pages/tax-calculators/quarterly-estimated-tax-calculator/">Quarterly Estimated Tax</a>
+              <a href="/pages/tax-calculators/depreciation-tax-calculator/">Depreciation Tax</a>
+              <a href="/pages/tax-calculators/tax-bracket-calculator/">Tax Bracket Calculator</a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free online calculators for business, finance, tax, and investment decisions.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Calculators</h4>
+          <a href="/pages/business-calculators/">Business</a>
+          <a href="/pages/financial-calculators/">Financial</a>
+          <a href="/pages/tax-calculators/">Tax</a>
+          <a href="/pages/investment-calculators/">Investment</a>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <a href="/about/">About</a>
+          <a href="/blog/">Blog</a>
+          <a href="/contact/">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="/privacy/">Privacy Policy</a>
+          <a href="/terms/">Terms of Service</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/privacy/">Privacy</a>
+          <a href="/terms/">Terms</a>
+          <a href="/contact/">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    const BRACKETS = {
+      single: [{rate:0.10,min:0,max:11925},{rate:0.12,min:11925,max:48475},{rate:0.22,min:48475,max:103350},{rate:0.24,min:103350,max:197300},{rate:0.32,min:197300,max:250525},{rate:0.35,min:250525,max:626350},{rate:0.37,min:626350,max:Infinity}],
+      married: [{rate:0.10,min:0,max:23850},{rate:0.12,min:23850,max:96950},{rate:0.22,min:96950,max:206700},{rate:0.24,min:206700,max:394600},{rate:0.32,min:394600,max:501050},{rate:0.35,min:501050,max:751600},{rate:0.37,min:751600,max:Infinity}],
+      hoh: [{rate:0.10,min:0,max:17000},{rate:0.12,min:17000,max:64850},{rate:0.22,min:64850,max:103350},{rate:0.24,min:103350,max:197300},{rate:0.32,min:197300,max:250500},{rate:0.35,min:250500,max:626350},{rate:0.37,min:626350,max:Infinity}]
+    };
+    const STD_DED = {single:14600, married:29200, hoh:21900};
+
+    function calcIncomeTax(agi, status) {
+      const b = BRACKETS[status] || BRACKETS.single;
+      const taxable = Math.max(0, agi - (STD_DED[status] || 14600));
+      let tax = 0;
+      for (const br of b) {
+        if (taxable <= br.min) break;
+        tax += (Math.min(taxable, br.max) - br.min) * br.rate;
+      }
+      return tax;
+    }
+
+    function updateEntityHelp() {
+      const type = document.getElementById('entity-type').value;
+      const help = document.getElementById('entity-help');
+      const salaryGroup = document.getElementById('salary-group');
+      const msgs = {
+        sole: 'Pass-through entity — profits taxed on your personal return plus self-employment tax.',
+        scorp: 'Pass-through entity — owner salary subject to payroll taxes; distributions are not.',
+        ccorp: 'Separate taxable entity — corporate profits taxed at flat 21%. Dividends taxed again.',
+        partnership: 'Pass-through entity — each partner pays income tax + SE tax on their share.'
+      };
+      help.textContent = msgs[type] || '';
+      salaryGroup.style.display = type === 'scorp' ? 'block' : 'none';
+    }
+
+    function calculateBusinessTax() {
+      const entity = document.getElementById('entity-type').value;
+      const revenue = CalcWise.parseNumber(document.getElementById('gross-revenue').value);
+      const expenses = CalcWise.parseNumber(document.getElementById('deductible-expenses').value);
+      const ownerSalary = CalcWise.parseNumber(document.getElementById('owner-salary').value);
+      const status = document.getElementById('owner-filing-status').value;
+
+      if (revenue <= 0) { alert('Please enter gross revenue.'); return; }
+
+      const netProfit = Math.max(0, revenue - expenses);
+      let incomeTax = 0, seTax = 0, totalTax = 0, taxableIncome = netProfit;
+
+      if (entity === 'ccorp') {
+        incomeTax = netProfit * 0.21;
+        seTax = 0;
+        totalTax = incomeTax;
+        taxableIncome = netProfit;
+      } else if (entity === 'sole' || entity === 'partnership') {
+        seTax = netProfit * 0.9235 * 0.153;
+        const deductSE = seTax / 2;
+        const qbi = netProfit * 0.20;
+        const agi = Math.max(0, netProfit - deductSE - qbi);
+        incomeTax = calcIncomeTax(agi, status);
+        totalTax = seTax + incomeTax;
+        taxableIncome = agi;
+      } else if (entity === 'scorp') {
+        const salaryForPayroll = Math.min(ownerSalary || netProfit * 0.5, netProfit);
+        seTax = salaryForPayroll * 0.153;
+        const distribution = Math.max(0, netProfit - salaryForPayroll);
+        const qbi = distribution * 0.20;
+        const agi = Math.max(0, netProfit - seTax / 2 - qbi);
+        incomeTax = calcIncomeTax(agi, status);
+        totalTax = seTax + incomeTax;
+        taxableIncome = agi;
+      }
+
+      const effRate = revenue > 0 ? (totalTax / revenue) * 100 : 0;
+
+      CalcWise.setText('result-total-tax', CalcWise.formatCurrency(totalTax));
+      CalcWise.setText('result-taxable', CalcWise.formatCurrency(taxableIncome));
+      CalcWise.setText('result-income-tax', CalcWise.formatCurrency(incomeTax));
+      CalcWise.setText('result-se-tax', CalcWise.formatCurrency(seTax));
+      CalcWise.setText('result-eff-rate', effRate.toFixed(1) + '%');
+      CalcWise.showResults('results');
+    }
+
+    function resetForm() {
+      document.getElementById('calc-form').reset();
+      updateEntityHelp();
+      CalcWise.hideResults('results');
+    }
+
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', !expanded);
+        btn.nextElementSibling.style.display = expanded ? 'none' : 'block';
+      });
+    });
+    document.querySelectorAll('.faq-answer').forEach(a => a.style.display = 'none');
+
+    const toggle = document.querySelector('.mobile-menu-toggle');
+    const mobileNav = document.querySelector('.mobile-nav');
+    if (toggle && mobileNav) {
+      toggle.addEventListener('click', () => {
+        const open = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', !open);
+        mobileNav.style.display = open ? 'none' : 'block';
+      });
+    }
+  </script>
+</body>
+</html>

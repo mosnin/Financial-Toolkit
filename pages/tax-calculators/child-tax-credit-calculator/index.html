@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Child Tax Credit Calculator 2026 | CalcWise</title>
+  <meta name="description" content="Estimate your 2026 Child Tax Credit based on number of qualifying children, ages, filing status, and AGI. Includes phase-out calculation and refundable portion.">
+  <link rel="canonical" href="https://calcwise.io/tax-calculators/child-tax-credit-calculator/">
+  <meta property="og:title" content="Child Tax Credit Calculator 2026 | CalcWise">
+  <meta property="og:description" content="Calculate your Child Tax Credit and refundable portion based on income and family size.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcwise.io/tax-calculators/child-tax-credit-calculator/">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/"},
+      {"@type": "ListItem", "position": 2, "name": "Tax Calculators", "item": "https://calcwise.io/tax-calculators/"},
+      {"@type": "ListItem", "position": 3, "name": "Child Tax Credit Calculator"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How much is the Child Tax Credit in 2026?",
+        "acceptedAnswer": {"@type": "Answer", "text": "The Child Tax Credit is $2,000 per qualifying child under age 17 in 2026, subject to income phase-outs beginning at $200,000 for single filers and $400,000 for married filing jointly."}
+      },
+      {
+        "@type": "Question",
+        "name": "What is the refundable portion of the Child Tax Credit?",
+        "acceptedAnswer": {"@type": "Answer", "text": "The Additional Child Tax Credit (ACTC) is the refundable portion — up to $1,700 per qualifying child in 2026. This means even if your tax liability is zero, you may receive up to $1,700 per child as a refund."}
+      },
+      {
+        "@type": "Question",
+        "name": "What are the income limits for the Child Tax Credit?",
+        "acceptedAnswer": {"@type": "Answer", "text": "The CTC phases out at $200,000 AGI for single filers and $400,000 for married filing jointly. The credit reduces by $50 for every $1,000 of income above the threshold."}
+      },
+      {
+        "@type": "Question",
+        "name": "What qualifies a child for the Child Tax Credit?",
+        "acceptedAnswer": {"@type": "Answer", "text": "A qualifying child must be under age 17 at year-end, a US citizen or resident, claimed as a dependent on your return, and have lived with you for more than half the year."}
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="logo">
+        <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav">
+        <a href="/">Home</a>
+        <a href="/pages/business-calculators/">Business</a>
+        <a href="/pages/financial-calculators/">Financial</a>
+        <a href="/pages/tax-calculators/" aria-current="page">Tax</a>
+        <a href="/pages/investment-calculators/">Investment</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav">
+      <a href="/">Home</a>
+      <a href="/pages/business-calculators/">Business Calculators</a>
+      <a href="/pages/financial-calculators/">Financial Calculators</a>
+      <a href="/pages/tax-calculators/">Tax Calculators</a>
+      <a href="/pages/investment-calculators/">Investment Calculators</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/pages/tax-calculators/">Tax Calculators</a></li>
+          <li><span aria-current="page">Child Tax Credit Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="calc-page-layout">
+          <div class="calc-page-main">
+            <h1>Child Tax Credit Calculator</h1>
+            <p class="subtitle" style="font-size:var(--text-lg);color:var(--color-gray-600);margin-bottom:var(--space-8);line-height:var(--leading-relaxed);">Estimate your 2026 Child Tax Credit based on the number of qualifying children, their ages, your filing status, and adjusted gross income. Includes phase-out calculation and the refundable Additional Child Tax Credit (ACTC).</p>
+
+            <div class="calc-container">
+              <div class="calc-header">
+                <h2>Child Tax Credit Calculator</h2>
+                <p>Estimate your 2026 CTC and refundable amount</p>
+              </div>
+              <div class="calc-body">
+                <form id="calc-form" onsubmit="return false;">
+                  <div class="form-group">
+                    <label class="form-label" for="num-children">Number of Qualifying Children (under 17)</label>
+                    <input type="number" id="num-children" class="form-input" placeholder="2" min="0" max="10" step="1">
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="filing-status">Filing Status</label>
+                    <select id="filing-status" class="form-select">
+                      <option value="single">Single</option>
+                      <option value="married">Married Filing Jointly</option>
+                      <option value="hoh">Head of Household</option>
+                      <option value="mfs">Married Filing Separately</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="agi">Adjusted Gross Income (AGI)</label>
+                    <div class="input-prefix">
+                      <span class="prefix">$</span>
+                      <input type="number" id="agi" class="form-input" placeholder="85000" min="0" step="1000">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="earned-income">Earned Income (wages, self-employment)</label>
+                    <div class="input-prefix">
+                      <span class="prefix">$</span>
+                      <input type="number" id="earned-income" class="form-input" placeholder="85000" min="0" step="1000">
+                    </div>
+                    <p class="form-hint">Used to calculate the refundable ACTC portion (15% of earned income over $2,500).</p>
+                  </div>
+                  <div class="calc-actions">
+                    <button type="button" class="btn btn-calculate btn-full" onclick="calculateCTC()">Calculate Credit</button>
+                    <button type="button" class="btn btn-reset" onclick="resetForm()">Reset</button>
+                  </div>
+                </form>
+
+                <div id="results" class="calc-results hidden">
+                  <div class="result-primary">
+                    <div class="result-label">Estimated Child Tax Credit</div>
+                    <div class="result-value" id="result-ctc">$0</div>
+                  </div>
+                  <div class="result-grid">
+                    <div class="result-item">
+                      <div class="result-label">Maximum Credit</div>
+                      <div class="result-value" id="result-max">$0</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Phase-Out Reduction</div>
+                      <div class="result-value" id="result-phaseout">$0</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Refundable ACTC Portion</div>
+                      <div class="result-value" id="result-refundable">$0</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Non-Refundable Portion</div>
+                      <div class="result-value" id="result-nonrefundable">$0</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="ad-slot ad-slot-leaderboard"></div>
+
+            <section class="content-section">
+              <h2>Child Tax Credit Formula (2026)</h2>
+              <div class="formula-box">
+                <div class="formula-label">Base Credit</div>
+                Maximum CTC = Number of Qualifying Children × $2,000
+              </div>
+              <div class="formula-box">
+                <div class="formula-label">Phase-Out Calculation</div>
+                Phase-Out Threshold: $200,000 (single/HOH) or $400,000 (MFJ)<br>
+                Excess AGI = max(0, AGI − Threshold)<br>
+                Reduction = ceil(Excess AGI / 1,000) × $50<br>
+                Adjusted CTC = max(0, Maximum CTC − Reduction)
+              </div>
+              <div class="formula-box">
+                <div class="formula-label">Refundable ACTC (Additional Child Tax Credit)</div>
+                Refundable = min(Adjusted CTC, 15% × max(0, Earned Income − $2,500))<br>
+                Max Refundable per child: $1,700
+              </div>
+            </section>
+
+            <section class="content-section">
+              <h2>How to Use This Calculator</h2>
+              <ol>
+                <li>Enter the <strong>number of qualifying children</strong> under age 17 at year-end.</li>
+                <li>Select your <strong>filing status</strong>.</li>
+                <li>Enter your <strong>Adjusted Gross Income (AGI)</strong>.</li>
+                <li>Enter your <strong>earned income</strong> from wages or self-employment for the ACTC calculation.</li>
+                <li>Click <strong>Calculate Credit</strong> to see your estimate.</li>
+              </ol>
+            </section>
+
+            <section class="content-section">
+              <h2>Example Scenario</h2>
+              <p>A married couple filing jointly with 3 children under 17, AGI of $150,000, and earned income of $150,000:</p>
+              <ul>
+                <li>Maximum CTC: 3 × $2,000 = <strong>$6,000</strong></li>
+                <li>Phase-Out: AGI $150,000 is below $400,000 threshold — <strong>no reduction</strong></li>
+                <li>Adjusted CTC: <strong>$6,000</strong></li>
+                <li>ACTC Refundable: 15% × ($150,000 − $2,500) = $22,125, limited to $6,000 → <strong>$6,000 refundable</strong></li>
+              </ul>
+            </section>
+
+            <section class="faq-section">
+              <h2>Frequently Asked Questions</h2>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">How much is the Child Tax Credit in 2026?<svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg></button>
+                <div class="faq-answer"><p>The Child Tax Credit is $2,000 per qualifying child under age 17 in 2026, subject to income phase-outs beginning at $200,000 for single filers and $400,000 for married filing jointly.</p></div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">What is the refundable portion of the Child Tax Credit?<svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg></button>
+                <div class="faq-answer"><p>The Additional Child Tax Credit (ACTC) is the refundable portion — up to $1,700 per qualifying child in 2026. This means even if your tax liability is zero, you may receive up to $1,700 per child as a refund.</p></div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">What are the income limits for the Child Tax Credit?<svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg></button>
+                <div class="faq-answer"><p>The CTC phases out at $200,000 AGI for single filers and $400,000 for married filing jointly. The credit reduces by $50 for every $1,000 of income above the threshold.</p></div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">What qualifies a child for the Child Tax Credit?<svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg></button>
+                <div class="faq-answer"><p>A qualifying child must be under age 17 at year-end, a US citizen or resident, claimed as a dependent on your return, and have lived with you for more than half the year.</p></div>
+              </div>
+            </section>
+
+            <section class="related-calculators">
+              <h2>Related Calculators</h2>
+              <div class="grid grid-3">
+                <a href="/pages/tax-calculators/earned-income-tax-credit-calculator/" class="card card-link">
+                  <h3>EITC Calculator</h3>
+                  <p>Estimate your Earned Income Tax Credit for working families.</p>
+                </a>
+                <a href="/pages/tax-calculators/tax-refund-estimator/" class="card card-link">
+                  <h3>Tax Refund Estimator</h3>
+                  <p>Estimate your total tax refund including all credits.</p>
+                </a>
+                <a href="/pages/tax-calculators/after-tax-income-calculator/" class="card card-link">
+                  <h3>After-Tax Income Calculator</h3>
+                  <p>Calculate your full net take-home income.</p>
+                </a>
+                <a href="/pages/tax-calculators/standard-vs-itemized-deduction-calculator/" class="card card-link">
+                  <h3>Standard vs Itemized Deductions</h3>
+                  <p>Find the best deduction strategy for your family.</p>
+                </a>
+              </div>
+            </section>
+
+            <div class="disclaimer">
+              <strong>Tax Disclaimer:</strong> This calculator provides estimates for educational purposes only and does not constitute tax advice. The Child Tax Credit rules may change, and eligibility depends on many factors including dependency tests, residency, and income verification. Consult a qualified tax professional for advice specific to your situation. Results are based on estimated 2026 federal tax parameters.
+            </div>
+          </div>
+
+          <aside class="calc-page-sidebar">
+            <div class="ad-slot ad-slot-rectangle"></div>
+            <div class="sidebar-card">
+              <h3>Tax Calculators</h3>
+              <a href="/pages/tax-calculators/earned-income-tax-credit-calculator/">EITC Calculator</a>
+              <a href="/pages/tax-calculators/tax-refund-estimator/">Tax Refund Estimator</a>
+              <a href="/pages/tax-calculators/after-tax-income-calculator/">After-Tax Income</a>
+              <a href="/pages/tax-calculators/tax-bracket-calculator/">Tax Bracket Calculator</a>
+              <a href="/pages/tax-calculators/standard-vs-itemized-deduction-calculator/">Deduction Calculator</a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free online calculators for business, finance, tax, and investment decisions.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Calculators</h4>
+          <a href="/pages/business-calculators/">Business</a>
+          <a href="/pages/financial-calculators/">Financial</a>
+          <a href="/pages/tax-calculators/">Tax</a>
+          <a href="/pages/investment-calculators/">Investment</a>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <a href="/about/">About</a>
+          <a href="/blog/">Blog</a>
+          <a href="/contact/">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="/privacy/">Privacy Policy</a>
+          <a href="/terms/">Terms of Service</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/privacy/">Privacy</a>
+          <a href="/terms/">Terms</a>
+          <a href="/contact/">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateCTC() {
+      const numChildren = parseInt(document.getElementById('num-children').value) || 0;
+      const status = document.getElementById('filing-status').value;
+      const agi = CalcWise.parseNumber(document.getElementById('agi').value);
+      const earnedIncome = CalcWise.parseNumber(document.getElementById('earned-income').value);
+
+      if (numChildren <= 0) { alert('Please enter the number of qualifying children.'); return; }
+      if (agi <= 0) { alert('Please enter your AGI.'); return; }
+
+      const maxCTC = numChildren * 2000;
+      const phaseoutThreshold = (status === 'married') ? 400000 : 200000;
+      const excessAGI = Math.max(0, agi - phaseoutThreshold);
+      const reduction = Math.ceil(excessAGI / 1000) * 50;
+      const adjustedCTC = Math.max(0, maxCTC - reduction);
+
+      // ACTC refundable portion
+      const maxRefundablePerChild = 1700;
+      const actcBase = Math.max(0, earnedIncome - 2500) * 0.15;
+      const maxTotalRefundable = numChildren * maxRefundablePerChild;
+      const refundable = Math.min(adjustedCTC, actcBase, maxTotalRefundable);
+      const nonRefundable = Math.max(0, adjustedCTC - refundable);
+
+      CalcWise.setText('result-ctc', CalcWise.formatCurrency(adjustedCTC));
+      CalcWise.setText('result-max', CalcWise.formatCurrency(maxCTC));
+      CalcWise.setText('result-phaseout', CalcWise.formatCurrency(reduction));
+      CalcWise.setText('result-refundable', CalcWise.formatCurrency(refundable));
+      CalcWise.setText('result-nonrefundable', CalcWise.formatCurrency(nonRefundable));
+      CalcWise.showResults('results');
+    }
+
+    function resetForm() {
+      document.getElementById('calc-form').reset();
+      CalcWise.hideResults('results');
+    }
+
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', !expanded);
+        btn.nextElementSibling.style.display = expanded ? 'none' : 'block';
+      });
+    });
+    document.querySelectorAll('.faq-answer').forEach(a => a.style.display = 'none');
+
+    const toggle = document.querySelector('.mobile-menu-toggle');
+    const mobileNav = document.querySelector('.mobile-nav');
+    if (toggle && mobileNav) {
+      toggle.addEventListener('click', () => {
+        const open = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', !open);
+        mobileNav.style.display = open ? 'none' : 'block';
+      });
+    }
+  </script>
+</body>
+</html>

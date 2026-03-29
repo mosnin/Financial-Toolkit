@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Retirement Nest Egg Calculator - How Much Do You Need to Retire? | CalcWise</title>
+  <meta name="description" content="Free retirement nest egg calculator. Enter your desired monthly income and years in retirement to calculate the exact portfolio size you need, monthly savings required, and how long it will take to get there.">
+  <meta name="keywords" content="retirement nest egg calculator, how much to retire, required retirement savings, retirement portfolio calculator, retirement savings goal">
+  <link rel="canonical" href="https://calcwise.io/retirement-calculators/retirement-nest-egg-calculator/">
+
+  <meta property="og:title" content="Retirement Nest Egg Calculator - How Much Do You Need to Retire?">
+  <meta property="og:description" content="Calculate the exact portfolio size you need for retirement, your required monthly savings, and years to reach your nest egg goal.">
+  <meta property="og:url" content="https://calcwise.io/retirement-calculators/retirement-nest-egg-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Retirement Nest Egg Calculator">
+  <meta name="twitter:description" content="Calculate the exact portfolio size you need for retirement, your required monthly savings, and years to reach your nest egg goal.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Retirement Calculators", "item": "https://calcwise.io/retirement-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "Retirement Nest Egg Calculator", "item": "https://calcwise.io/retirement-calculators/retirement-nest-egg-calculator/" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do I calculate how much I need to retire?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The most common method is the 4% rule: multiply your desired annual retirement income by 25. If you want $60,000/year, you need $1.5 million. This calculator uses a more precise present value of annuity formula based on your specific return and inflation assumptions, which may give a higher or lower figure depending on your inputs." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is a realistic investment return to assume?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The historical average annual return of a diversified stock portfolio (S&P 500) is about 10% before inflation and 7% after inflation. A conservative balanced portfolio (60% stocks / 40% bonds) has historically returned around 6–7% per year. Most retirement planners suggest using 5–7% as a conservative estimate to avoid over-optimism." }
+      },
+      {
+        "@type": "Question",
+        "name": "What inflation rate should I use?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The long-term average US inflation rate is about 3%. For retirement planning, 2.5–3% is a reasonable assumption for general expenses. Healthcare costs inflate faster at 5–6%/year. Using a slightly higher inflation assumption (3%) builds a conservative safety buffer into your plan." }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I account for Social Security in my nest egg calculation?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Subtract your expected annual Social Security benefit from your desired annual retirement income before calculating the required nest egg. For example, if you want $70,000/year and expect $24,000 from Social Security, your portfolio only needs to generate $46,000, requiring a nest egg of about $1.15 million (at 4% withdrawal)." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/retirement-calculators/" aria-current="page">Retirement</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/retirement-calculators/">Retirement Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/retirement-calculators/">Retirement Calculators</a></li>
+          <li><span aria-current="page">Retirement Nest Egg Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="article-content">
+          <h1>Retirement Nest Egg Calculator</h1>
+          <p>Find out exactly how large a retirement portfolio you need to fund your desired income for life. Enter your target monthly retirement income, years in retirement, expected investment returns, and inflation rate to get your required nest egg, the monthly savings to build it, and an estimated timeline to reach your goal.</p>
+
+          <div class="calc-container mt-8">
+            <div class="calc-header">
+              <h2>Calculate Your Required Nest Egg</h2>
+              <p>Enter your retirement income goals and assumptions</p>
+            </div>
+            <div class="calc-body">
+              <form id="nestegg-form" onsubmit="return false;">
+                <div class="form-group">
+                  <label class="form-label" for="monthly-income">Desired Monthly Retirement Income</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="monthly-income" class="form-input" placeholder="5000" min="500" step="100" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="years-retirement">Years in Retirement</label>
+                  <input type="number" id="years-retirement" class="form-input" placeholder="25" min="5" max="50" step="1" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="return-rate">Expected Annual Portfolio Return</label>
+                  <div class="input-suffix">
+                    <input type="number" id="return-rate" class="form-input" placeholder="7" min="1" max="15" step="0.5" required>
+                    <span class="suffix">%</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="inflation">Expected Inflation Rate</label>
+                  <div class="input-suffix">
+                    <input type="number" id="inflation" class="form-input" placeholder="3" min="0" max="10" step="0.5" required>
+                    <span class="suffix">%</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="current-savings">Current Savings</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="current-savings" class="form-input" placeholder="50000" min="0" step="1000" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="monthly-contribution">Current Monthly Contribution</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="monthly-contribution" class="form-input" placeholder="1000" min="0" step="50" required>
+                  </div>
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calcNestEgg()">Calculate Nest Egg</button>
+                  <button type="button" class="btn btn-reset" onclick="resetCalc()">Reset</button>
+                </div>
+              </form>
+
+              <div id="calc-results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">Required Nest Egg</div>
+                  <div class="result-value" id="result-nest-egg"></div>
+                </div>
+                <div class="result-grid">
+                  <div class="result-item">
+                    <div class="result-label">Annual Income This Supports</div>
+                    <div class="result-value" id="result-annual-income"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Monthly Savings Needed</div>
+                    <div class="result-value" id="result-monthly-savings"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Years to Reach Goal</div>
+                    <div class="result-value" id="result-years-to-goal"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Real Return (after inflation)</div>
+                    <div class="result-value" id="result-real-return"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <section class="content-section">
+            <h2>Nest Egg Calculation Formula</h2>
+            <p>The required nest egg is calculated using the present value of an inflation-adjusted annuity:</p>
+            <div class="formula-box">
+              <div class="formula-label">Real (Inflation-Adjusted) Return</div>
+              Real Rate = (1 + nominal return) / (1 + inflation) - 1
+            </div>
+            <div class="formula-box">
+              <div class="formula-label">Required Nest Egg (Present Value of Annuity)</div>
+              Nest Egg = Annual Income x [1 - (1 + real rate)^(-years)] / real rate
+            </div>
+            <div class="formula-box">
+              <div class="formula-label">Monthly Savings to Reach Goal</div>
+              PMT = (Nest Egg - Current Savings x FV factor) x (r/12) / ((1 + r/12)^n - 1)
+            </div>
+            <p>Years to reach goal is solved iteratively by projecting portfolio growth month by month until the target is reached.</p>
+          </section>
+
+          <section class="content-section">
+            <h2>How to Use This Nest Egg Calculator</h2>
+            <ol>
+              <li><strong>Enter your desired monthly retirement income</strong> - the amount you want to spend each month.</li>
+              <li><strong>Enter years in retirement</strong> - use your longevity estimate or a conservative 25-30 years.</li>
+              <li><strong>Enter expected portfolio return</strong> - 5-7% is a common conservative estimate.</li>
+              <li><strong>Enter expected inflation</strong> - 3% is a standard planning assumption.</li>
+              <li><strong>Enter your current savings</strong> and <strong>monthly contribution</strong> to see years to goal.</li>
+              <li><strong>Click "Calculate Nest Egg"</strong> to see your savings target and path.</li>
+            </ol>
+          </section>
+
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>A 40-year-old wants $5,000/month in retirement for 25 years, with a 7% expected return and 3% inflation. The real return is approximately 3.9%. The required nest egg is about $980,000. With $75,000 already saved and contributing $1,200/month at 7% return, they will reach their goal in approximately 22 years — right on schedule for a retirement at 62.</p>
+          </section>
+
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                How do I calculate how much I need to retire?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>The most common method is the 4% rule: multiply your desired annual retirement income by 25. If you want $60,000/year, you need $1.5 million. This calculator uses a more precise present value formula based on your specific return and inflation assumptions.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What is a realistic investment return to assume?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Historical average returns: S&P 500 ~10% before inflation, ~7% after. A conservative balanced portfolio (60/40) has returned around 6–7%/year. Most retirement planners suggest using 5–7% as a conservative estimate to avoid over-optimism.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What inflation rate should I use?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>The long-term average US inflation rate is about 3%. For retirement planning, 2.5–3% is a reasonable assumption for general expenses. Healthcare costs inflate faster at 5–6%/year. Using 3% builds a conservative safety buffer into your plan.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                How do I account for Social Security in my nest egg calculation?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Subtract your expected annual Social Security benefit from your desired annual income before entering the monthly income figure. Your portfolio only needs to generate income above and beyond Social Security. Check ssa.gov for your personalized benefit estimate.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/retirement-calculators/retirement-savings-gap-calculator/" class="card card-link">
+                <h3>Savings Gap Calculator</h3>
+                <p>Find out if you are on track or how much you need to close the gap.</p>
+              </a>
+              <a href="/retirement-calculators/retirement-withdrawal-rate-calculator/" class="card card-link">
+                <h3>Withdrawal Rate Calculator</h3>
+                <p>Determine a safe withdrawal strategy for your nest egg.</p>
+              </a>
+              <a href="/retirement-calculators/retirement-income-replacement-calculator/" class="card card-link">
+                <h3>Income Replacement Calculator</h3>
+                <p>Calculate the income needed to replace your pre-retirement earnings.</p>
+              </a>
+              <a href="/retirement-calculators/early-retirement-calculator/" class="card card-link">
+                <h3>Early Retirement Calculator</h3>
+                <p>Check if your nest egg can support an early retirement.</p>
+              </a>
+            </div>
+          </section>
+
+          <div class="disclaimer">
+            <strong>Disclaimer:</strong> This calculator provides estimates based on assumed constant returns and inflation. Actual investment returns fluctuate and are not guaranteed. Sequence of returns risk, market downturns, and unexpected expenses can significantly impact outcomes. This is not financial advice — consult a qualified financial planner for personalized retirement guidance.
+          </div>
+
+          <div class="ad-slot ad-slot-leaderboard"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Real Estate</h4>
+          <a href="/real-estate-calculators/">All Real Estate Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Retirement</h4>
+          <a href="/retirement-calculators/">All Retirement Calculators</a>
+          <a href="/retirement-calculators/retirement-age-calculator/">Retirement Age</a>
+          <a href="/retirement-calculators/401k-match-calculator/">401(k) Match</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calcNestEgg() {
+      const monthlyIncome = parseFloat(document.getElementById('monthly-income').value);
+      const yearsRetirement = parseInt(document.getElementById('years-retirement').value);
+      const returnRate = parseFloat(document.getElementById('return-rate').value) / 100;
+      const inflationRate = parseFloat(document.getElementById('inflation').value) / 100;
+      const currentSavings = parseFloat(document.getElementById('current-savings').value) || 0;
+      const monthlyContrib = parseFloat(document.getElementById('monthly-contribution').value) || 0;
+
+      if (!monthlyIncome || !yearsRetirement || !returnRate) return;
+
+      const annualIncome = monthlyIncome * 12;
+
+      // Real return (inflation-adjusted)
+      const realRate = (1 + returnRate) / (1 + inflationRate) - 1;
+
+      // Present value of inflation-adjusted annuity
+      let nestEgg;
+      if (Math.abs(realRate) < 0.0001) {
+        nestEgg = annualIncome * yearsRetirement;
+      } else {
+        nestEgg = annualIncome * (1 - Math.pow(1 + realRate, -yearsRetirement)) / realRate;
+      }
+
+      // Monthly savings needed
+      const monthlyRate = returnRate / 12;
+      const n = 40 * 12; // max accumulation years
+      let monthlyNeeded = 0;
+      if (monthlyRate > 0) {
+        const fvCurrentSavings = currentSavings * Math.pow(1 + monthlyRate, n);
+        const fvAnnuityFactor = (Math.pow(1 + monthlyRate, n) - 1) / monthlyRate;
+        monthlyNeeded = Math.max(0, (nestEgg - fvCurrentSavings) / fvAnnuityFactor);
+      }
+
+      // Years to reach goal with current contribution
+      let yearsToGoal = 'N/A';
+      if (monthlyContrib > 0 || currentSavings > 0) {
+        let balance = currentSavings;
+        let months = 0;
+        while (balance < nestEgg && months < 600) {
+          balance = balance * (1 + monthlyRate) + monthlyContrib;
+          months++;
+        }
+        yearsToGoal = balance >= nestEgg ? (months / 12).toFixed(1) + ' years' : '50+ years';
+      }
+
+      const fmt = (v) => CalcWise.formatCurrency(v, 0);
+
+      CalcWise.setText('result-nest-egg', fmt(nestEgg));
+      CalcWise.setText('result-annual-income', fmt(annualIncome) + '/yr');
+      CalcWise.setText('result-monthly-savings', fmt(monthlyNeeded) + '/mo');
+      CalcWise.setText('result-years-to-goal', yearsToGoal);
+      CalcWise.setText('result-real-return', (realRate * 100).toFixed(2) + '%');
+
+      CalcWise.showResults('calc-results');
+    }
+
+    function resetCalc() {
+      document.getElementById('nestegg-form').reset();
+      CalcWise.hideResults('calc-results');
+    }
+  </script>
+</body>
+</html>

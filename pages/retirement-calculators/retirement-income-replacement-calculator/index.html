@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Retirement Income Replacement Calculator - How Much Income Do You Need? | CalcWise</title>
+  <meta name="description" content="Free retirement income replacement calculator. Find your target retirement income, required savings, and monthly savings needed based on your current income and desired replacement rate.">
+  <meta name="keywords" content="retirement income replacement calculator, retirement income needs, how much income in retirement, retirement replacement rate, required retirement savings">
+  <link rel="canonical" href="https://calcwise.io/retirement-calculators/retirement-income-replacement-calculator/">
+
+  <meta property="og:title" content="Retirement Income Replacement Calculator">
+  <meta property="og:description" content="Calculate your target retirement income, required savings, and monthly savings needed to replace your pre-retirement income.">
+  <meta property="og:url" content="https://calcwise.io/retirement-calculators/retirement-income-replacement-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Retirement Income Replacement Calculator">
+  <meta name="twitter:description" content="Calculate your target retirement income, required savings, and monthly savings needed to replace your pre-retirement income.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Retirement Calculators", "item": "https://calcwise.io/retirement-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "Retirement Income Replacement Calculator", "item": "https://calcwise.io/retirement-calculators/retirement-income-replacement-calculator/" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the income replacement rate for retirement?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Financial planners typically recommend replacing 70–80% of pre-retirement income in retirement. This accounts for reduced work-related expenses (commuting, work clothes, lunches) and the end of retirement savings contributions. Higher earners may need a lower replacement rate; those with high healthcare costs or active travel plans may need more." }
+      },
+      {
+        "@type": "Question",
+        "name": "Does Social Security count toward income replacement?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Social Security benefits are a key component of retirement income replacement. The average Social Security benefit in 2026 is approximately $1,900/month. Your personal benefit depends on your earnings history and the age at which you claim. You can get your personalized estimate at ssa.gov." }
+      },
+      {
+        "@type": "Question",
+        "name": "How is required retirement savings calculated?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Required savings are typically calculated using the 4% rule: divide your target annual retirement income by 4% (or multiply by 25). If you need $60,000/year and Social Security provides $20,000, you need your portfolio to produce $40,000, requiring approximately $1,000,000 in savings ($40,000 / 0.04)." }
+      },
+      {
+        "@type": "Question",
+        "name": "Why should I use pre-retirement expenses instead of income?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Using your actual pre-retirement spending is often more accurate than using income, since your spending tells you what you truly need to maintain your lifestyle. Income includes savings contributions and taxes that disappear in retirement. If you are a high saver, your actual spending may be significantly lower than your income." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/retirement-calculators/" aria-current="page">Retirement</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/retirement-calculators/">Retirement Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/retirement-calculators/">Retirement Calculators</a></li>
+          <li><span aria-current="page">Retirement Income Replacement Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="article-content">
+          <h1>Retirement Income Replacement Calculator</h1>
+          <p>Determine exactly how much retirement income you need to maintain your pre-retirement lifestyle. This calculator works from your current income and spending, applies your desired replacement rate, and calculates the required savings and monthly contributions needed to hit that target.</p>
+
+          <div class="calc-container mt-8">
+            <div class="calc-header">
+              <h2>Calculate Your Retirement Income Needs</h2>
+              <p>Enter your current income and retirement details</p>
+            </div>
+            <div class="calc-body">
+              <form id="replacement-form" onsubmit="return false;">
+                <div class="form-group">
+                  <label class="form-label" for="current-income">Current Annual Income</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="current-income" class="form-input" placeholder="100000" min="10000" step="1000" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="preretirement-expenses">Current Annual Expenses (pre-retirement spending)</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="preretirement-expenses" class="form-input" placeholder="70000" min="5000" step="1000" required>
+                  </div>
+                  <small class="form-hint">Your actual annual spending — not your income</small>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="replacement-rate">Desired Income Replacement Rate</label>
+                  <div class="input-suffix">
+                    <input type="number" id="replacement-rate" class="form-input" placeholder="80" min="50" max="120" step="5" required>
+                    <span class="suffix">%</span>
+                  </div>
+                  <small class="form-hint">Typically 70–80%. Use higher if you plan significant travel or healthcare costs.</small>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="social-security">Expected Annual Social Security Income</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="social-security" class="form-input" placeholder="22800" min="0" step="100" required>
+                  </div>
+                  <small class="form-hint">Use $0 if uncertain; check ssa.gov for your estimate</small>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="years-to-retire">Years Until Retirement</label>
+                  <input type="number" id="years-to-retire" class="form-input" placeholder="20" min="1" max="50" step="1" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="expected-return">Expected Portfolio Return</label>
+                  <div class="input-suffix">
+                    <input type="number" id="expected-return" class="form-input" placeholder="7" min="1" max="15" step="0.5" required>
+                    <span class="suffix">%</span>
+                  </div>
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calcReplacement()">Calculate Income Needs</button>
+                  <button type="button" class="btn btn-reset" onclick="resetCalc()">Reset</button>
+                </div>
+              </form>
+
+              <div id="calc-results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">Required Retirement Savings</div>
+                  <div class="result-value" id="result-required-savings"></div>
+                </div>
+                <div class="result-grid">
+                  <div class="result-item">
+                    <div class="result-label">Target Annual Retirement Income</div>
+                    <div class="result-value" id="result-target-income"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Portfolio Must Generate</div>
+                    <div class="result-value" id="result-portfolio-income"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Monthly Savings Needed</div>
+                    <div class="result-value" id="result-monthly-needed"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Based on Expenses (80% rule)</div>
+                    <div class="result-value" id="result-expense-based"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <section class="content-section">
+            <h2>Income Replacement Formula</h2>
+            <p>The calculator uses two approaches and shows both: one based on your income with your chosen replacement rate, and one based on your actual pre-retirement spending.</p>
+            <div class="formula-box">
+              <div class="formula-label">Target Retirement Income</div>
+              Target Income = Current Income x (Replacement Rate / 100)
+            </div>
+            <div class="formula-box">
+              <div class="formula-label">Portfolio Required (4% Rule)</div>
+              Portfolio Income Needed = Target Income - Social Security
+              Required Savings = Portfolio Income Needed / 0.04
+            </div>
+            <div class="formula-box">
+              <div class="formula-label">Monthly Savings to Reach Goal</div>
+              Using FV formula: PMT = Required Savings x (r/12) / ((1 + r/12)^(n*12) - 1)
+              where r = annual return and n = years until retirement
+            </div>
+          </section>
+
+          <section class="content-section">
+            <h2>How to Use This Income Replacement Calculator</h2>
+            <ol>
+              <li><strong>Enter your current annual income</strong> - your gross pre-tax salary or total household income.</li>
+              <li><strong>Enter your pre-retirement annual expenses</strong> - your actual spending, not your income.</li>
+              <li><strong>Set your replacement rate</strong> - 70-80% is typical; adjust up for active retirements.</li>
+              <li><strong>Enter expected Social Security</strong> - check ssa.gov for your personalized benefit estimate.</li>
+              <li><strong>Enter years until retirement</strong> and your expected investment return.</li>
+              <li><strong>Click "Calculate Income Needs"</strong> to see your savings target and required monthly contributions.</li>
+            </ol>
+          </section>
+
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>A couple earning $120,000 per year with $85,000 in annual expenses, targeting 80% income replacement, and expecting $28,000/year from Social Security needs their portfolio to produce $68,000/year ($96,000 - $28,000). Applying the 4% rule, they need $1.7 million saved. With 25 years until retirement and a 7% return, they need to save approximately $2,400/month to reach this goal.</p>
+          </section>
+
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What is the income replacement rate for retirement?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Financial planners typically recommend replacing 70–80% of pre-retirement income. This accounts for reduced work-related expenses and the end of retirement savings contributions. Higher earners may need a lower replacement rate; those with high healthcare costs or active travel plans may need more.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Does Social Security count toward income replacement?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Yes. Social Security is a key component of retirement income replacement. The average benefit in 2026 is approximately $1,900/month. Your personal benefit depends on your earnings history and claiming age. Get your estimate at ssa.gov.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                How is required retirement savings calculated?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Required savings are calculated using the 4% rule: divide your target annual income (minus Social Security) by 4%, or multiply by 25. This produces a portfolio size that historically has supported 30 years of withdrawals.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Why use pre-retirement expenses instead of income?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Using actual spending is often more accurate than income, since spending tells you what you truly need. Income includes savings contributions and taxes that disappear in retirement. High savers may find their spending is much lower than their income.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/retirement-calculators/retirement-savings-gap-calculator/" class="card card-link">
+                <h3>Savings Gap Calculator</h3>
+                <p>See if your current savings rate will meet your retirement target.</p>
+              </a>
+              <a href="/retirement-calculators/retirement-nest-egg-calculator/" class="card card-link">
+                <h3>Nest Egg Calculator</h3>
+                <p>Calculate the portfolio size needed for your retirement income.</p>
+              </a>
+              <a href="/retirement-calculators/retirement-lifestyle-cost-calculator/" class="card card-link">
+                <h3>Lifestyle Cost Calculator</h3>
+                <p>Build a detailed retirement budget across all spending categories.</p>
+              </a>
+              <a href="/retirement-calculators/retirement-withdrawal-rate-calculator/" class="card card-link">
+                <h3>Withdrawal Rate Calculator</h3>
+                <p>Find a safe withdrawal rate for your portfolio size and timeline.</p>
+              </a>
+            </div>
+          </section>
+
+          <div class="disclaimer">
+            <strong>Disclaimer:</strong> This calculator provides estimates based on the 4% withdrawal rule and standard retirement planning assumptions. Actual results depend on investment returns, inflation, Social Security benefit changes, and individual circumstances. This is not financial advice. Consult a qualified financial planner for personalized retirement planning.
+          </div>
+
+          <div class="ad-slot ad-slot-leaderboard"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Real Estate</h4>
+          <a href="/real-estate-calculators/">All Real Estate Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Retirement</h4>
+          <a href="/retirement-calculators/">All Retirement Calculators</a>
+          <a href="/retirement-calculators/retirement-age-calculator/">Retirement Age</a>
+          <a href="/retirement-calculators/401k-match-calculator/">401(k) Match</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calcReplacement() {
+      const income = parseFloat(document.getElementById('current-income').value);
+      const expenses = parseFloat(document.getElementById('preretirement-expenses').value);
+      const replacementRate = parseFloat(document.getElementById('replacement-rate').value) / 100;
+      const socialSecurity = parseFloat(document.getElementById('social-security').value) || 0;
+      const yearsToRetire = parseInt(document.getElementById('years-to-retire').value);
+      const returnRate = parseFloat(document.getElementById('expected-return').value) / 100;
+
+      if (!income || !expenses || !replacementRate || !yearsToRetire || !returnRate) return;
+
+      const targetIncome = income * replacementRate;
+      const portfolioIncomeNeeded = Math.max(0, targetIncome - socialSecurity);
+      const requiredSavings = portfolioIncomeNeeded / 0.04;
+
+      // Expense-based required savings
+      const expenseBasedIncome = expenses * 0.80;
+      const expenseSavings = Math.max(0, expenseBasedIncome - socialSecurity) / 0.04;
+
+      // Monthly savings calculation
+      const monthlyRate = returnRate / 12;
+      const n = yearsToRetire * 12;
+      let monthlyNeeded;
+      if (monthlyRate > 0) {
+        monthlyNeeded = requiredSavings * monthlyRate / (Math.pow(1 + monthlyRate, n) - 1);
+      } else {
+        monthlyNeeded = requiredSavings / n;
+      }
+
+      const fmt = (v) => CalcWise.formatCurrency(v, 0);
+
+      CalcWise.setText('result-target-income', fmt(targetIncome) + '/yr');
+      CalcWise.setText('result-portfolio-income', fmt(portfolioIncomeNeeded) + '/yr');
+      CalcWise.setText('result-required-savings', fmt(requiredSavings));
+      CalcWise.setText('result-monthly-needed', fmt(monthlyNeeded) + '/mo');
+      CalcWise.setText('result-expense-based', fmt(expenseSavings));
+
+      CalcWise.showResults('calc-results');
+    }
+
+    function resetCalc() {
+      document.getElementById('replacement-form').reset();
+      CalcWise.hideResults('calc-results');
+    }
+  </script>
+</body>
+</html>

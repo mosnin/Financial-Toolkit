@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Usage Calculator | CalcWise</title>
+  <meta name="description" content="Calculate your monthly internet data usage from streaming, video calls, music, browsing, and downloads. Get a recommended data plan and estimate overage costs.">
+  <link rel="canonical" href="https://calcwise.io/technology-cost-calculators/data-usage-calculator/">
+  <meta property="og:title" content="Data Usage Calculator | CalcWise">
+  <meta property="og:description" content="Estimate your monthly internet data consumption from all your online activities.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcwise.io/technology-cost-calculators/data-usage-calculator/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Data Usage Calculator | CalcWise">
+  <meta name="twitter:description" content="Estimate your monthly internet data consumption from all your online activities.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/"},
+      {"@type": "ListItem", "position": 2, "name": "Technology Cost Calculators", "item": "https://calcwise.io/technology-cost-calculators/"},
+      {"@type": "ListItem", "position": 3, "name": "Data Usage Calculator"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How much data does Netflix use per hour?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Netflix uses approximately 3 GB per hour for HD (1080p) streaming and 7 GB per hour for 4K Ultra HD streaming. Standard definition uses about 1 GB per hour. Actual usage may vary based on content complexity and Netflix's adaptive bitrate settings."}
+      },
+      {
+        "@type": "Question",
+        "name": "How much data does a Zoom video call use?",
+        "acceptedAnswer": {"@type": "Answer", "text": "A Zoom video call uses approximately 0.9 GB per hour in HD quality for a one-on-one call. Group calls can use up to 1.5 GB per hour depending on resolution and the number of participants shown. Audio-only calls use far less at around 27 MB per hour."}
+      },
+      {
+        "@type": "Question",
+        "name": "What is a good monthly data cap for a household?",
+        "acceptedAnswer": {"@type": "Answer", "text": "A household with 2-4 people who stream HD video, video call, and browse regularly typically uses 300–600 GB per month. Heavy streamers using 4K, gamers downloading large updates, and remote workers may need 1 TB or more. Many ISPs offer unlimited plans for around $10-20 extra per month."}
+      },
+      {
+        "@type": "Question",
+        "name": "How can I reduce my data usage?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Switch video streaming from 4K to HD or SD, reduce streaming hours, lower video call quality settings, use Wi-Fi instead of mobile data, enable data saving modes in apps, and download music/podcasts for offline playback instead of streaming. These steps can cut usage by 50% or more."}
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="logo">
+        <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav">
+        <a href="/">Home</a>
+        <a href="/pages/real-estate-calculators/">Real Estate</a>
+        <a href="/pages/financial-calculators/">Finance</a>
+        <a href="/pages/business-calculators/">Business</a>
+        <a href="/about/">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav">
+      <a href="/">Home</a>
+      <a href="/pages/real-estate-calculators/">Real Estate</a>
+      <a href="/pages/financial-calculators/">Finance</a>
+      <a href="/pages/business-calculators/">Business</a>
+      <a href="/about/">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/pages/technology-cost-calculators/">Technology Cost Calculators</a></li>
+          <li><span aria-current="page">Data Usage Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="calc-page-layout">
+          <div class="calc-page-main">
+            <h1>Data Usage Calculator</h1>
+            <p class="subtitle" style="font-size:var(--text-lg);color:var(--color-gray-600);margin-bottom:var(--space-8);line-height:var(--leading-relaxed);">Estimate your total monthly internet data consumption based on streaming, video calls, music, web browsing, and downloads. Get a recommended data plan tier and see potential overage costs if your plan has a data cap.</p>
+
+            <div class="calc-container">
+              <div class="calc-header">
+                <h2>Data Usage Calculator</h2>
+                <p>Find out how much data you use each month</p>
+              </div>
+              <div class="calc-body">
+                <form id="data-usage-form" onsubmit="return false;">
+                  <div class="form-group">
+                    <label class="form-label" for="stream-hd">HD Video Streaming (hours/month)</label>
+                    <div class="input-suffix">
+                      <input type="number" id="stream-hd" class="form-input" placeholder="40" min="0" step="1">
+                      <span class="suffix">hrs</span>
+                    </div>
+                    <span class="form-hint" style="display:block;margin-top:var(--space-1);">Netflix HD, YouTube 1080p, etc. (~3 GB/hr)</span>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="stream-4k">4K Ultra HD Streaming (hours/month)</label>
+                    <div class="input-suffix">
+                      <input type="number" id="stream-4k" class="form-input" placeholder="10" min="0" step="1">
+                      <span class="suffix">hrs</span>
+                    </div>
+                    <span class="form-hint" style="display:block;margin-top:var(--space-1);">Netflix 4K, Disney+ 4K, etc. (~7 GB/hr)</span>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="video-calls">Video Calls (hours/month)</label>
+                    <div class="input-suffix">
+                      <input type="number" id="video-calls" class="form-input" placeholder="20" min="0" step="1">
+                      <span class="suffix">hrs</span>
+                    </div>
+                    <span class="form-hint" style="display:block;margin-top:var(--space-1);">Zoom, Teams, Google Meet (~0.9 GB/hr HD)</span>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="music-streaming">Music Streaming (hours/month)</label>
+                    <div class="input-suffix">
+                      <input type="number" id="music-streaming" class="form-input" placeholder="60" min="0" step="1">
+                      <span class="suffix">hrs</span>
+                    </div>
+                    <span class="form-hint" style="display:block;margin-top:var(--space-1);">Spotify, Apple Music (~0.072 GB/hr at 160kbps)</span>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="browsing">Web Browsing (hours/month)</label>
+                    <div class="input-suffix">
+                      <input type="number" id="browsing" class="form-input" placeholder="30" min="0" step="1">
+                      <span class="suffix">hrs</span>
+                    </div>
+                    <span class="form-hint" style="display:block;margin-top:var(--space-1);">General browsing, social media (~0.05 GB/hr)</span>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="downloads">Downloads &amp; Uploads (GB/month)</label>
+                    <div class="input-suffix">
+                      <input type="number" id="downloads" class="form-input" placeholder="10" min="0" step="0.1">
+                      <span class="suffix">GB</span>
+                    </div>
+                    <span class="form-hint" style="display:block;margin-top:var(--space-1);">Files, game updates, backups, etc.</span>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="data-cap">Current Data Cap (optional)</label>
+                    <div class="input-suffix">
+                      <input type="number" id="data-cap" class="form-input" placeholder="1000" min="0" step="1">
+                      <span class="suffix">GB</span>
+                    </div>
+                    <span class="form-hint" style="display:block;margin-top:var(--space-1);">Leave blank if you have unlimited data</span>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="overage-rate">Overage Rate (per GB over cap)</label>
+                    <div class="input-prefix">
+                      <span class="prefix">$</span>
+                      <input type="number" id="overage-rate" class="form-input" placeholder="10" min="0" step="0.01">
+                    </div>
+                    <span class="form-hint" style="display:block;margin-top:var(--space-1);">Typical overage fee from ISP (e.g. $10 per 50 GB block)</span>
+                  </div>
+
+                  <div class="calc-actions">
+                    <button type="button" class="btn btn-calculate btn-full" onclick="calculateDataUsage()">Calculate Data Usage</button>
+                    <button type="button" class="btn btn-reset" onclick="resetDataUsage()">Reset</button>
+                  </div>
+                </form>
+
+                <div id="results" class="calc-results hidden">
+                  <div class="result-primary">
+                    <div class="result-label">Total Monthly Data Usage</div>
+                    <div class="result-value" id="result-total">0 GB</div>
+                  </div>
+                  <div class="result-grid result-grid-3">
+                    <div class="result-item">
+                      <div class="result-label">Recommended Plan</div>
+                      <div class="result-value" id="result-plan">—</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Overage (GB)</div>
+                      <div class="result-value" id="result-overage-gb">0 GB</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Est. Overage Cost</div>
+                      <div class="result-value" id="result-overage-cost">$0.00</div>
+                    </div>
+                  </div>
+                  <div id="breakdown-wrap" style="margin-top:var(--space-6);">
+                    <h3 style="font-size:var(--text-base);font-weight:var(--font-semibold);margin-bottom:var(--space-3);">Usage Breakdown</h3>
+                    <div id="breakdown-bars"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="ad-slot ad-slot-leaderboard"></div>
+
+            <section class="content-section">
+              <h2>Data Usage Rates</h2>
+              <div class="formula-box">
+                <div class="formula-label">Total Monthly Usage</div>
+                Total GB = (HD hrs × 3) + (4K hrs × 7) + (Video call hrs × 0.9) + (Music hrs × 0.072) + (Browsing hrs × 0.05) + Downloads GB
+              </div>
+              <div class="formula-box">
+                <div class="formula-label">Overage Cost</div>
+                Overage GB = max(0, Total GB − Data Cap)<br>
+                Overage Cost = Overage GB × Overage Rate per GB
+              </div>
+              <p style="margin-top:var(--space-4);">Activity data rates used:</p>
+              <ul>
+                <li><strong>HD Streaming (1080p):</strong> ~3 GB/hour</li>
+                <li><strong>4K Streaming:</strong> ~7 GB/hour</li>
+                <li><strong>Video Calls (HD):</strong> ~0.9 GB/hour</li>
+                <li><strong>Music Streaming (160kbps):</strong> ~0.072 GB/hour</li>
+                <li><strong>Web Browsing/Social:</strong> ~0.05 GB/hour</li>
+              </ul>
+            </section>
+
+            <section class="content-section">
+              <h2>How to Use This Calculator</h2>
+              <ol>
+                <li>Enter your estimated monthly hours for each activity type.</li>
+                <li>Add any direct <strong>downloads or uploads</strong> in GB (game patches, cloud backups, etc.).</li>
+                <li>Optionally enter your ISP's <strong>data cap</strong> and <strong>overage rate</strong> to see potential extra charges.</li>
+                <li>Click <strong>Calculate Data Usage</strong> to get your total usage and recommended plan tier.</li>
+              </ol>
+            </section>
+
+            <section class="content-section">
+              <h2>Example Scenario</h2>
+              <p>A household of two working from home with the following monthly usage:</p>
+              <ul>
+                <li>HD Streaming: <strong>80 hours</strong> (80 × 3 = 240 GB)</li>
+                <li>4K Streaming: <strong>20 hours</strong> (20 × 7 = 140 GB)</li>
+                <li>Video Calls: <strong>40 hours</strong> (40 × 0.9 = 36 GB)</li>
+                <li>Music: <strong>120 hours</strong> (120 × 0.072 = 8.6 GB)</li>
+                <li>Browsing: <strong>60 hours</strong> (60 × 0.05 = 3 GB)</li>
+                <li>Downloads: <strong>20 GB</strong></li>
+              </ul>
+              <p><strong>Total: ~448 GB/month</strong> — A 500 GB plan is recommended. On a 300 GB cap plan with $10/50 GB overage, they would pay ~$30 in overage fees.</p>
+            </section>
+
+            <section class="faq-section">
+              <h2>Frequently Asked Questions</h2>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  How much data does Netflix use per hour?
+                  <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                </button>
+                <div class="faq-answer">
+                  <p>Netflix uses approximately 3 GB per hour for HD (1080p) streaming and 7 GB per hour for 4K Ultra HD. Standard definition uses about 1 GB per hour. Actual usage may vary based on content and adaptive bitrate settings.</p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  How much data does a Zoom video call use?
+                  <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                </button>
+                <div class="faq-answer">
+                  <p>A Zoom HD video call uses approximately 0.9 GB per hour for a one-on-one call. Group calls can use up to 1.5 GB per hour. Audio-only calls use around 27 MB per hour — significantly less.</p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  What is a good monthly data cap for a household?
+                  <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                </button>
+                <div class="faq-answer">
+                  <p>A 2-4 person household streaming HD video and working from home typically uses 300–600 GB per month. Households with 4K streaming, gaming, or heavy downloads may need 1 TB or more. Consider unlimited plans if you regularly exceed 600 GB.</p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  How can I reduce my data usage?
+                  <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                </button>
+                <div class="faq-answer">
+                  <p>Switch from 4K to HD streaming, lower video call quality in settings, download music for offline playback, use data-saving modes in apps, and schedule large downloads during off-peak hours. These changes can reduce usage by 40-60%.</p>
+                </div>
+              </div>
+            </section>
+
+            <section class="related-calculators">
+              <h2>Related Calculators</h2>
+              <div class="grid grid-3">
+                <a href="/pages/technology-cost-calculators/internet-speed-requirement-calculator/" class="card card-link">
+                  <h3>Internet Speed Requirement Calculator</h3>
+                  <p>Find the minimum Mbps your household needs for all activities.</p>
+                </a>
+                <a href="/pages/technology-cost-calculators/streaming-service-cost-calculator/" class="card card-link">
+                  <h3>Streaming Service Cost Calculator</h3>
+                  <p>Calculate your total monthly streaming subscription spend.</p>
+                </a>
+                <a href="/pages/technology-cost-calculators/cloud-storage-cost-calculator/" class="card card-link">
+                  <h3>Cloud Storage Cost Calculator</h3>
+                  <p>Compare cloud storage costs across AWS, Google Cloud, and Azure.</p>
+                </a>
+                <a href="/pages/technology-cost-calculators/saas-subscription-cost-calculator/" class="card card-link">
+                  <h3>SaaS Subscription Cost Calculator</h3>
+                  <p>Total your monthly SaaS tool spending and find savings.</p>
+                </a>
+                <a href="/pages/business-calculators/pricing-calculator/" class="card card-link">
+                  <h3>Pricing Calculator</h3>
+                  <p>Calculate optimal product pricing from cost and margin.</p>
+                </a>
+              </div>
+            </section>
+
+            <div class="disclaimer">
+              <strong>Disclaimer:</strong> Data usage estimates are based on typical industry benchmarks and may vary based on quality settings, compression, network conditions, and individual apps. Overage costs depend on your specific ISP plan terms. Always check your actual data usage through your ISP's usage tracker or router.
+            </div>
+          </div>
+
+          <aside class="calc-page-sidebar">
+            <div class="ad-slot ad-slot-rectangle"></div>
+            <div class="sidebar-card">
+              <h3>Technology Cost Calculators</h3>
+              <a href="/pages/technology-cost-calculators/cloud-storage-cost-calculator/">Cloud Storage Cost</a>
+              <a href="/pages/technology-cost-calculators/internet-speed-requirement-calculator/">Internet Speed Requirement</a>
+              <a href="/pages/technology-cost-calculators/saas-subscription-cost-calculator/">SaaS Subscription Cost</a>
+              <a href="/pages/technology-cost-calculators/software-licensing-cost-calculator/">Software Licensing Cost</a>
+              <a href="/pages/technology-cost-calculators/streaming-service-cost-calculator/">Streaming Service Cost</a>
+              <a href="/pages/technology-cost-calculators/web-hosting-cost-calculator/">Web Hosting Cost</a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free online calculators for business, finance, tax, and investment decisions.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Calculators</h4>
+          <a href="/pages/business-calculators/">Business</a>
+          <a href="/pages/financial-calculators/">Financial</a>
+          <a href="/pages/tax-calculators/">Tax</a>
+          <a href="/pages/investment-calculators/">Investment</a>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <a href="/about/">About</a>
+          <a href="/blog/">Blog</a>
+          <a href="/contact/">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="/privacy/">Privacy Policy</a>
+          <a href="/terms/">Terms of Service</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/privacy/">Privacy</a>
+          <a href="/terms/">Terms</a>
+          <a href="/contact/">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    const ACTIVITY_RATES = {
+      'HD Streaming':    { id: 'stream-hd',       rate: 3.0,   unit: 'GB/hr' },
+      '4K Streaming':    { id: 'stream-4k',        rate: 7.0,   unit: 'GB/hr' },
+      'Video Calls':     { id: 'video-calls',      rate: 0.9,   unit: 'GB/hr' },
+      'Music Streaming': { id: 'music-streaming',  rate: 0.072, unit: 'GB/hr' },
+      'Web Browsing':    { id: 'browsing',         rate: 0.05,  unit: 'GB/hr' },
+      'Downloads/UL':    { id: 'downloads',        rate: 1.0,   unit: 'GB' }
+    };
+
+    function recommendedPlan(gb) {
+      if (gb <= 50)   return '50 GB';
+      if (gb <= 100)  return '100 GB';
+      if (gb <= 200)  return '200 GB';
+      if (gb <= 300)  return '300 GB';
+      if (gb <= 500)  return '500 GB';
+      if (gb <= 1000) return '1 TB';
+      if (gb <= 2000) return '2 TB';
+      return 'Unlimited';
+    }
+
+    function calculateDataUsage() {
+      const hdHrs    = CalcWise.parseNumber(document.getElementById('stream-hd').value);
+      const k4Hrs    = CalcWise.parseNumber(document.getElementById('stream-4k').value);
+      const vcHrs    = CalcWise.parseNumber(document.getElementById('video-calls').value);
+      const musicHrs = CalcWise.parseNumber(document.getElementById('music-streaming').value);
+      const browseHrs= CalcWise.parseNumber(document.getElementById('browsing').value);
+      const dlGB     = CalcWise.parseNumber(document.getElementById('downloads').value);
+      const capGB    = CalcWise.parseNumber(document.getElementById('data-cap').value);
+      const ovRate   = CalcWise.parseNumber(document.getElementById('overage-rate').value);
+
+      const breakdown = {
+        'HD Streaming':    hdHrs * 3.0,
+        '4K Streaming':    k4Hrs * 7.0,
+        'Video Calls':     vcHrs * 0.9,
+        'Music Streaming': musicHrs * 0.072,
+        'Web Browsing':    browseHrs * 0.05,
+        'Downloads/UL':    dlGB
+      };
+
+      const totalGB = Object.values(breakdown).reduce((a, b) => a + b, 0);
+      if (totalGB <= 0) { alert('Please enter at least one activity.'); return; }
+
+      const overageGB   = capGB > 0 ? Math.max(0, totalGB - capGB) : 0;
+      const overageCost = overageGB * ovRate;
+
+      CalcWise.setText('result-total', CalcWise.formatNumber(totalGB, 1) + ' GB');
+      CalcWise.setText('result-plan', recommendedPlan(totalGB));
+      CalcWise.setText('result-overage-gb', capGB > 0 ? CalcWise.formatNumber(overageGB, 1) + ' GB' : 'N/A');
+      CalcWise.setText('result-overage-cost', capGB > 0 ? CalcWise.formatCurrency(overageCost) : 'N/A');
+
+      // Breakdown bars
+      const barsEl = document.getElementById('breakdown-bars');
+      const maxVal = Math.max(...Object.values(breakdown), 1);
+      barsEl.innerHTML = Object.entries(breakdown).map(([label, gb]) => {
+        if (gb <= 0) return '';
+        const pct = (gb / maxVal * 100).toFixed(1);
+        return `<div style="margin-bottom:var(--space-3);">
+          <div style="display:flex;justify-content:space-between;font-size:var(--text-sm);margin-bottom:var(--space-1);">
+            <span>${label}</span>
+            <span style="font-weight:var(--font-semibold);">${CalcWise.formatNumber(gb, 1)} GB</span>
+          </div>
+          <div style="background:var(--color-gray-100);border-radius:var(--radius-full);height:8px;">
+            <div style="background:var(--color-primary,#2563eb);border-radius:var(--radius-full);height:8px;width:${pct}%;"></div>
+          </div>
+        </div>`;
+      }).join('');
+
+      CalcWise.showResults('results');
+    }
+
+    function resetDataUsage() {
+      document.getElementById('data-usage-form').reset();
+      CalcWise.hideResults('results');
+    }
+  </script>
+</body>
+</html>

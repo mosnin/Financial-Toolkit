@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rental Expense Ratio Calculator - NOI & Expense Analysis | CalcWise</title>
+    <meta name="description" content="Calculate your rental property's expense ratio, net operating income (NOI), and net income margin. Identify how much of your rental income goes to expenses.">
+    <link rel="canonical" href="https://calcwise.io/advanced-real-estate-calculators/rental-expense-ratio-calculator/">
+    <meta property="og:title" content="Rental Expense Ratio Calculator | CalcWise">
+    <meta property="og:description" content="Break down rental property expenses to find your expense ratio, NOI, and net income margin. Full expense-by-expense analysis.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://calcwise.io/advanced-real-estate-calculators/rental-expense-ratio-calculator/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Rental Expense Ratio Calculator | CalcWise">
+    <meta name="twitter:description" content="Calculate your rental property expense ratio, NOI, and net income margin.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/design-system.css">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/"},
+            {"@type": "ListItem", "position": 2, "name": "Advanced Real Estate Calculators", "item": "https://calcwise.io/advanced-real-estate-calculators/"},
+            {"@type": "ListItem", "position": 3, "name": "Rental Expense Ratio Calculator"}
+        ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {"@type": "Question", "name": "What is a rental expense ratio?", "acceptedAnswer": {"@type": "Answer", "text": "The rental expense ratio is the percentage of gross rental income consumed by operating expenses. It is calculated by dividing total operating expenses by gross rental income. A lower ratio means more income flows through to the owner."}},
+            {"@type": "Question", "name": "What is a good expense ratio for rental property?", "acceptedAnswer": {"@type": "Answer", "text": "A well-managed residential rental typically has an expense ratio between 35% and 45%. Ratios above 50% suggest the property may be over-leveraged, poorly managed, or in need of significant maintenance. Commercial properties often have higher ratios due to triple-net vs. gross lease structures."}},
+            {"@type": "Question", "name": "Does mortgage principal count as an operating expense?", "acceptedAnswer": {"@type": "Answer", "text": "No. The mortgage principal portion of your payment is not an operating expense -- it is equity building. Only the interest portion may be deducted. NOI (Net Operating Income) excludes all debt service, both principal and interest, to measure the property's operating performance independently of financing."}},
+            {"@type": "Question", "name": "How is NOI different from net income?", "acceptedAnswer": {"@type": "Answer", "text": "NOI (Net Operating Income) excludes mortgage payments and income taxes. Net income, or cash flow after debt service, subtracts mortgage payments from NOI. NOI is used to value properties using the cap rate method; net income reflects what the owner actually takes home."}}
+        ]
+    }
+    </script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="/" class="logo">
+                <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+                CalcWise
+            </a>
+            <nav class="main-nav">
+                <a href="/real-estate-calculators/">Real Estate</a>
+                <a href="/advanced-real-estate-calculators/">Advanced RE</a>
+                <a href="/energy-utility-calculators/">Energy</a>
+                <a href="/finance-calculators/">Finance</a>
+            </nav>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+            </button>
+        </div>
+        <nav class="mobile-nav">
+            <a href="/real-estate-calculators/">Real Estate Calculators</a>
+            <a href="/advanced-real-estate-calculators/">Advanced Real Estate</a>
+            <a href="/energy-utility-calculators/">Energy &amp; Utility</a>
+            <a href="/finance-calculators/">Finance Calculators</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <nav class="breadcrumbs" aria-label="Breadcrumb">
+                <ol>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/advanced-real-estate-calculators/">Advanced Real Estate Calculators</a></li>
+                    <li><span aria-current="page">Rental Expense Ratio Calculator</span></li>
+                </ol>
+            </nav>
+
+            <div class="page-content">
+                <div class="calc-page-layout">
+                    <div class="calc-page-main">
+                        <h1>Rental Expense Ratio Calculator</h1>
+                        <p class="subtitle" style="color: var(--color-gray-600); font-size: var(--text-lg); line-height: var(--leading-relaxed); margin-bottom: var(--space-8);">
+                            Analyze every dollar of your rental income. Enter each expense category to calculate your total expense ratio, net operating income (NOI), and net income margin.
+                        </p>
+
+                        <div class="calc-container">
+                            <div class="calc-header">
+                                <h2>Rental Expense Analysis</h2>
+                                <p>Calculate expense ratio, NOI, and net income margin</p>
+                            </div>
+                            <div class="calc-body">
+                                <form id="expense-form">
+                                    <div class="form-group">
+                                        <label class="form-label" for="gross-income">Gross Annual Rental Income</label>
+                                        <div class="input-prefix">
+                                            <span class="prefix">$</span>
+                                            <input type="number" id="gross-income" name="grossIncome" class="form-input" placeholder="24,000" min="1" step="100" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label" for="mortgage">Annual Mortgage <span class="form-hint">(P&amp;I payments)</span></label>
+                                        <div class="input-prefix">
+                                            <span class="prefix">$</span>
+                                            <input type="number" id="mortgage" name="mortgage" class="form-input" placeholder="15,000" min="0" step="100" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label" for="property-tax">Annual Property Tax</label>
+                                        <div class="input-prefix">
+                                            <span class="prefix">$</span>
+                                            <input type="number" id="property-tax" name="propertyTax" class="form-input" placeholder="4,000" min="0" step="100" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label" for="insurance">Annual Insurance</label>
+                                        <div class="input-prefix">
+                                            <span class="prefix">$</span>
+                                            <input type="number" id="insurance" name="insurance" class="form-input" placeholder="1,200" min="0" step="100" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label" for="maintenance">Annual Maintenance</label>
+                                        <div class="input-prefix">
+                                            <span class="prefix">$</span>
+                                            <input type="number" id="maintenance" name="maintenance" class="form-input" placeholder="1,500" min="0" step="100" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label" for="management">Annual Management Fees</label>
+                                        <div class="input-prefix">
+                                            <span class="prefix">$</span>
+                                            <input type="number" id="management" name="management" class="form-input" placeholder="2,400" min="0" step="100" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label" for="vacancy-loss">Annual Vacancy Loss</label>
+                                        <div class="input-prefix">
+                                            <span class="prefix">$</span>
+                                            <input type="number" id="vacancy-loss" name="vacancyLoss" class="form-input" placeholder="1,200" min="0" step="100" required>
+                                        </div>
+                                    </div>
+                                    <div class="calc-actions">
+                                        <button type="button" class="btn btn-calculate btn-full" onclick="calculateExpenseRatio()">Calculate Expense Ratio</button>
+                                        <button type="reset" class="btn btn-reset">Reset</button>
+                                    </div>
+                                </form>
+
+                                <div id="results" class="calc-results hidden">
+                                    <div class="result-primary">
+                                        <div class="result-label">Expense Ratio</div>
+                                        <div class="result-value" id="result-expense-ratio">0%</div>
+                                    </div>
+                                    <div class="result-grid result-grid-3">
+                                        <div class="result-item">
+                                            <div class="result-label">Total Expenses</div>
+                                            <div class="result-value" id="result-total-expenses">$0</div>
+                                        </div>
+                                        <div class="result-item">
+                                            <div class="result-label">NOI</div>
+                                            <div class="result-value" id="result-noi">$0</div>
+                                        </div>
+                                        <div class="result-item">
+                                            <div class="result-label">Net Income Margin</div>
+                                            <div class="result-value" id="result-net-margin">0%</div>
+                                        </div>
+                                        <div class="result-item">
+                                            <div class="result-label">Net Income After Mortgage</div>
+                                            <div class="result-value" id="result-net-income">$0</div>
+                                        </div>
+                                        <div class="result-item">
+                                            <div class="result-label">Operating Expenses Only</div>
+                                            <div class="result-value" id="result-operating-expenses">$0</div>
+                                        </div>
+                                        <div class="result-item">
+                                            <div class="result-label">Operating Expense Ratio</div>
+                                            <div class="result-value" id="result-operating-ratio">0%</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="ad-slot ad-slot-leaderboard"></div>
+
+                        <section class="content-section">
+                            <h2>Expense Ratio Formula</h2>
+                            <div class="formula-box">
+                                <div class="formula-label">Expense Ratio Calculations</div>
+                                Total Expenses = Mortgage + Tax + Insurance + Maintenance + Management + Vacancy
+Operating Expenses = Total Expenses &minus; Mortgage (excludes debt service)
+Expense Ratio = Total Expenses / Gross Income &times; 100
+NOI = Gross Income &minus; Operating Expenses (excludes mortgage)
+Net Income = Gross Income &minus; Total Expenses
+Net Income Margin = Net Income / Gross Income &times; 100
+                            </div>
+                            <p><strong>NOI</strong> is a financing-neutral measure of property performance -- it excludes mortgage payments to show how the property performs regardless of how it is funded. This is the standard metric used for cap rate and property valuation.</p>
+                            <p><strong>Net income</strong> (after mortgage) represents the actual cash flow the investor takes home each year after all obligations are met.</p>
+                        </section>
+
+                        <section class="content-section">
+                            <h2>How to Use This Calculator</h2>
+                            <ol>
+                                <li><strong>Enter gross annual rental income</strong> -- all rent collected before deductions.</li>
+                                <li><strong>Enter annual mortgage</strong> -- total principal and interest payments for the year.</li>
+                                <li><strong>Enter each expense category</strong> -- property tax, insurance, maintenance, management fees, and vacancy loss.</li>
+                                <li><strong>Click "Calculate Expense Ratio"</strong> to see your complete expense breakdown, NOI, and income margin.</li>
+                            </ol>
+                        </section>
+
+                        <section class="content-section">
+                            <h2>Example Scenario</h2>
+                            <h3>$24,000 Gross Income Rental Property</h3>
+                            <p>A rental property generates $24,000/year. Annual expenses: mortgage $15,000, property tax $4,000, insurance $1,200, maintenance $1,500, management $2,400, vacancy $1,200.</p>
+                            <p>Total Expenses = $15,000 + $4,000 + $1,200 + $1,500 + $2,400 + $1,200 = <strong>$25,300</strong></p>
+                            <p>Operating Expenses (ex-mortgage) = $10,300</p>
+                            <p>NOI = $24,000 &minus; $10,300 = <strong>$13,700</strong></p>
+                            <p>Net Income = $24,000 &minus; $25,300 = <strong>&minus;$1,300</strong> (negative cash flow)</p>
+                            <p>This shows the property is slightly cash-flow negative, signaling potential need for rent increase or expense reduction.</p>
+                        </section>
+
+                        <section class="faq-section">
+                            <h2>Frequently Asked Questions</h2>
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">
+                                    What is a rental expense ratio?
+                                    <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>The rental expense ratio is the percentage of gross rental income consumed by operating expenses. It is calculated by dividing total operating expenses by gross rental income. A lower ratio means more income flows through to the owner.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">
+                                    What is a good expense ratio for rental property?
+                                    <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>A well-managed residential rental typically has an expense ratio between 35% and 45%. Ratios above 50% suggest the property may be over-leveraged, poorly managed, or in need of significant maintenance. Commercial properties often have different norms depending on lease structure.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">
+                                    Does mortgage principal count as an operating expense?
+                                    <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>No. The mortgage principal portion of your payment is not an operating expense -- it is equity building. Only the interest portion may be deducted as an expense for tax purposes. NOI excludes all debt service to measure the property's operating performance independently of financing.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">
+                                    How is NOI different from net income?
+                                    <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>NOI (Net Operating Income) excludes mortgage payments and income taxes. Net income, or cash flow after debt service, subtracts mortgage payments from NOI. NOI is used to value properties using the cap rate method; net income reflects what the owner actually takes home.</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="related-calculators">
+                            <h2>Related Calculators</h2>
+                            <div class="grid grid-3">
+                                <a href="/real-estate-calculators/cap-rate-calculator/" class="card card-link">
+                                    <div class="card-icon">C</div>
+                                    <h3>Cap Rate Calculator</h3>
+                                    <p>Calculate the capitalization rate using NOI and property value.</p>
+                                </a>
+                                <a href="/advanced-real-estate-calculators/property-management-cost-calculator/" class="card card-link">
+                                    <div class="card-icon">$</div>
+                                    <h3>Property Management Cost</h3>
+                                    <p>Calculate detailed property management expenses and net income.</p>
+                                </a>
+                                <a href="/advanced-real-estate-calculators/real-estate-yield-calculator/" class="card card-link">
+                                    <div class="card-icon">%</div>
+                                    <h3>Real Estate Yield Calculator</h3>
+                                    <p>Calculate gross yield, net yield, and total return.</p>
+                                </a>
+                            </div>
+                        </section>
+
+                        <div class="disclaimer">
+                            <strong>Disclaimer:</strong> This calculator is for informational and educational purposes only. Mortgage payments include both principal and interest; only the interest portion is deductible. Consult a tax advisor and real estate professional for advice specific to your situation.
+                        </div>
+
+                        <div class="ad-slot ad-slot-leaderboard"></div>
+                    </div>
+
+                    <aside class="calc-page-sidebar">
+                        <div class="sidebar-card">
+                            <h3>Advanced RE Tools</h3>
+                            <a href="/advanced-real-estate-calculators/property-appreciation-calculator/">Property Appreciation</a>
+                            <a href="/advanced-real-estate-calculators/property-management-cost-calculator/">Management Cost</a>
+                            <a href="/advanced-real-estate-calculators/real-estate-leverage-calculator/">Leverage Calculator</a>
+                            <a href="/advanced-real-estate-calculators/real-estate-yield-calculator/">Yield Calculator</a>
+                            <a href="/advanced-real-estate-calculators/rental-expense-ratio-calculator/">Expense Ratio</a>
+                        </div>
+                        <div class="ad-slot ad-slot-rectangle"></div>
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="/" class="logo">
+                        <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+                        CalcWise
+                    </a>
+                    <p>Free, accurate financial calculators for everyone. Make smarter money decisions with CalcWise.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Advanced Real Estate</h4>
+                    <a href="/advanced-real-estate-calculators/property-appreciation-calculator/">Property Appreciation</a>
+                    <a href="/advanced-real-estate-calculators/real-estate-leverage-calculator/">Leverage Calculator</a>
+                    <a href="/advanced-real-estate-calculators/real-estate-yield-calculator/">Yield Calculator</a>
+                    <a href="/advanced-real-estate-calculators/rental-expense-ratio-calculator/">Expense Ratio</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Energy &amp; Utility</h4>
+                    <a href="/energy-utility-calculators/solar-savings-calculator/">Solar Savings</a>
+                    <a href="/energy-utility-calculators/electricity-cost-calculator/">Electricity Cost</a>
+                    <a href="/energy-utility-calculators/carbon-footprint-calculator/">Carbon Footprint</a>
+                    <a href="/energy-utility-calculators/home-energy-efficiency-calculator/">Home Energy Efficiency</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <a href="/about/">About</a>
+                    <a href="/contact/">Contact</a>
+                    <a href="/privacy/">Privacy Policy</a>
+                    <a href="/terms/">Terms of Use</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; 2026 CalcWise. All rights reserved.</span>
+                <div class="footer-links">
+                    <a href="/privacy/">Privacy</a>
+                    <a href="/terms/">Terms</a>
+                    <a href="/sitemap.xml">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/calculator-engine.js"></script>
+    <script src="/js/search-index.js"></script>
+    <script>
+    function calculateExpenseRatio() {
+        if (!CalcWise.validateForm('expense-form')) return;
+
+        const values = CalcWise.getFormValues('expense-form');
+        const grossIncome = values.grossIncome;
+        const mortgage = values.mortgage;
+        const propertyTax = values.propertyTax;
+        const insurance = values.insurance;
+        const maintenance = values.maintenance;
+        const management = values.management;
+        const vacancyLoss = values.vacancyLoss;
+
+        const operatingExpenses = propertyTax + insurance + maintenance + management + vacancyLoss;
+        const totalExpenses = operatingExpenses + mortgage;
+        const expenseRatio = grossIncome > 0 ? (totalExpenses / grossIncome) * 100 : 0;
+        const operatingRatio = grossIncome > 0 ? (operatingExpenses / grossIncome) * 100 : 0;
+        const noi = grossIncome - operatingExpenses;
+        const netIncome = grossIncome - totalExpenses;
+        const netMargin = grossIncome > 0 ? (netIncome / grossIncome) * 100 : 0;
+
+        CalcWise.setText('result-expense-ratio', CalcWise.formatPercent(expenseRatio));
+        CalcWise.setText('result-total-expenses', CalcWise.formatCurrency(totalExpenses, 0));
+        CalcWise.setText('result-noi', CalcWise.formatCurrency(noi, 0));
+        CalcWise.setText('result-net-margin', CalcWise.formatPercent(netMargin));
+        CalcWise.setText('result-net-income', CalcWise.formatCurrency(netIncome, 0));
+        CalcWise.setText('result-operating-expenses', CalcWise.formatCurrency(operatingExpenses, 0));
+        CalcWise.setText('result-operating-ratio', CalcWise.formatPercent(operatingRatio));
+
+        CalcWise.showResults('results');
+    }
+
+    document.getElementById('expense-form').addEventListener('reset', function() {
+        setTimeout(() => CalcWise.hideResults('results'), 0);
+    });
+    </script>
+</body>
+</html>

@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Debt Avalanche Calculator - CalcWise</title>
+  <meta name="description" content="Use the debt avalanche method to pay off debt faster and save the most on interest. Enter up to 5 debts and see the optimal payoff order, interest saved, and payoff dates.">
+  <link rel="canonical" href="https://calcwise.io/personal-finance-calculators/debt-avalanche-calculator/">
+  <meta property="og:title" content="Debt Avalanche Calculator - CalcWise">
+  <meta property="og:description" content="Pay off debt faster with the avalanche method. See payoff order by interest rate, months saved, and total interest saved vs. minimum payments.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcwise.io/personal-finance-calculators/debt-avalanche-calculator/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Debt Avalanche Calculator - CalcWise">
+  <meta name="twitter:description" content="Pay off debt faster with the avalanche method. See payoff order, months saved, and interest saved.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/"},
+      {"@type": "ListItem", "position": 2, "name": "Personal Finance Calculators", "item": "https://calcwise.io/personal-finance-calculators/"},
+      {"@type": "ListItem", "position": 3, "name": "Debt Avalanche Calculator"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the debt avalanche method?",
+        "acceptedAnswer": {"@type": "Answer", "text": "The debt avalanche method prioritizes paying off debts in order from highest interest rate to lowest, while making minimum payments on all others. This approach minimizes the total interest paid over time and is mathematically the most efficient debt payoff strategy."}
+      },
+      {
+        "@type": "Question",
+        "name": "How does the debt avalanche compare to the debt snowball?",
+        "acceptedAnswer": {"@type": "Answer", "text": "The debt avalanche focuses on highest interest rate first and saves more money on interest. The debt snowball focuses on smallest balance first and provides quicker motivational wins. Both strategies work — the best one is the one you will stick to."}
+      },
+      {
+        "@type": "Question",
+        "name": "Should I include my mortgage in the debt avalanche?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Most financial experts recommend focusing the avalanche strategy on high-interest consumer debt such as credit cards and personal loans. Mortgages typically carry lower interest rates and may have tax deduction benefits, so they are often treated separately in a debt payoff plan."}
+      },
+      {
+        "@type": "Question",
+        "name": "What happens to freed-up payments when a debt is paid off?",
+        "acceptedAnswer": {"@type": "Answer", "text": "When a debt is fully paid off, you roll its entire payment (minimum + any extra) into the next highest-rate debt. This snowballing effect is what makes the avalanche method so powerful — your payment toward remaining debts grows larger with each debt eliminated."}
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="logo">
+        <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav">
+        <a href="/">Home</a>
+        <a href="/pages/finance-calculators/">Finance</a>
+        <a href="/pages/personal-finance-calculators/" aria-current="page">Personal Finance</a>
+        <a href="/pages/investment-calculators/">Investment</a>
+        <a href="/pages/tax-calculators/">Tax</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav">
+      <a href="/">Home</a>
+      <a href="/pages/finance-calculators/">Finance Calculators</a>
+      <a href="/pages/personal-finance-calculators/">Personal Finance Calculators</a>
+      <a href="/pages/investment-calculators/">Investment Calculators</a>
+      <a href="/pages/tax-calculators/">Tax Calculators</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li><a href="/pages/personal-finance-calculators/">Personal Finance Calculators</a></li>
+        <li><span aria-current="page">Debt Avalanche Calculator</span></li>
+      </ol>
+    </nav>
+
+    <div class="page-content">
+      <div class="article-content">
+        <h1>Debt Avalanche Calculator</h1>
+        <p>The debt avalanche method is the mathematically optimal way to pay off debt — you target the highest interest rate first, which minimizes total interest paid over time. Enter up to five debts plus any extra monthly payment you can spare, and this calculator will show your payoff order, how many months you save versus paying minimums only, and your total interest savings.</p>
+
+        <div class="ad-slot ad-slot-leaderboard"></div>
+
+        <div class="calc-container">
+          <div class="calc-header">
+            <h2>Debt Avalanche Payoff Plan</h2>
+            <p>Enter up to 5 debts and your extra monthly payment</p>
+          </div>
+          <div class="calc-body">
+            <form id="avalanche-form">
+              <div id="debt-entries">
+                <!-- Debt rows injected by JS -->
+              </div>
+              <div class="form-group" style="margin-top: var(--space-4);">
+                <label class="form-label" for="extraPayment">Extra Monthly Payment (beyond all minimums)</label>
+                <div class="input-prefix"><span class="prefix">$</span>
+                  <input type="number" id="extraPayment" name="extraPayment" class="form-input" placeholder="200" min="0" step="25">
+                </div>
+              </div>
+              <div class="calc-actions">
+                <button type="button" class="btn btn-calculate" onclick="calcAvalanche()">Calculate Payoff Plan</button>
+                <button type="button" class="btn btn-reset" onclick="resetAvalanche()">Reset</button>
+              </div>
+            </form>
+
+            <div id="results" class="calc-results hidden">
+              <div class="result-grid result-grid-3">
+                <div class="result-item">
+                  <div class="result-label">Total Debt</div>
+                  <div class="result-value" id="totalDebt">$0</div>
+                </div>
+                <div class="result-item">
+                  <div class="result-label">Total Interest Paid</div>
+                  <div class="result-value" id="totalInterest" style="color: var(--color-danger);">$0</div>
+                </div>
+                <div class="result-item">
+                  <div class="result-label">Interest Saved vs. Minimums</div>
+                  <div class="result-value" id="interestSaved" style="color: var(--color-success);">$0</div>
+                </div>
+              </div>
+              <div class="result-grid result-grid-2" style="margin-top: var(--space-4);">
+                <div class="result-item">
+                  <div class="result-label">Months to Debt-Free</div>
+                  <div class="result-value" id="monthsTotal">0</div>
+                </div>
+                <div class="result-item">
+                  <div class="result-label">Months Saved</div>
+                  <div class="result-value" id="monthsSaved" style="color: var(--color-success);">0</div>
+                </div>
+              </div>
+              <div style="margin-top: var(--space-6);">
+                <h3 style="font-size: var(--text-base); margin-bottom: var(--space-3);">Avalanche Payoff Order</h3>
+                <div id="payoffOrder"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <section class="content-section">
+          <h2>How the Debt Avalanche Works</h2>
+          <div class="formula-box">
+            <div class="formula-label">Strategy</div>
+            1. Make minimum payments on ALL debts every month.<br>
+            2. Apply all extra money to the debt with the HIGHEST interest rate.<br>
+            3. When that debt is paid off, roll its payment into the next highest-rate debt.<br>
+            4. Repeat until all debts are gone.
+          </div>
+          <p>This method is optimal because the highest-rate debt grows the fastest. By eliminating it first you stop the most expensive interest compounding as early as possible, reducing total interest paid across all debts.</p>
+        </section>
+
+        <section class="content-section">
+          <h2>How to Use This Calculator</h2>
+          <ol>
+            <li><strong>Enter each debt:</strong> Provide a name, current balance, annual interest rate, and minimum monthly payment for up to five debts.</li>
+            <li><strong>Add your extra payment:</strong> Enter any additional amount you can pay above the total of all minimum payments.</li>
+            <li><strong>Click "Calculate Payoff Plan":</strong> The calculator sorts debts by interest rate and simulates the month-by-month payoff.</li>
+            <li><strong>Review the payoff order:</strong> See each debt's payoff date and total interest paid under the avalanche strategy.</li>
+            <li><strong>Compare savings:</strong> The interest saved and months saved figures show the benefit over making minimums only.</li>
+          </ol>
+        </section>
+
+        <section class="content-section">
+          <h2>Example Scenario</h2>
+          <p>Taylor has three debts: a credit card ($4,500 at 22.99%), a personal loan ($8,000 at 11.5%), and a car loan ($12,000 at 6.9%). Total minimums are $460/month, and Taylor can add an extra $300/month. Under the avalanche method, the credit card is targeted first. By eliminating the 22.99% card first, Taylor saves approximately $1,800 in interest and becomes debt-free 14 months sooner compared to paying minimums only.</p>
+        </section>
+
+        <section class="faq-section">
+          <h2>Frequently Asked Questions</h2>
+          <div class="faq-item">
+            <button class="faq-question">What is the debt avalanche method?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>The debt avalanche method prioritizes paying off debts from highest to lowest interest rate while making minimum payments on all others. It is the mathematically optimal strategy to minimize total interest paid.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">How does debt avalanche compare to debt snowball?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>The avalanche saves the most money; the snowball (smallest balance first) gives faster wins. Research shows both work — the best method is whichever keeps you motivated to stay on track.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">Should I include my mortgage in the avalanche?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>Most experts focus the avalanche on high-interest consumer debt like credit cards and personal loans. Mortgages usually carry lower rates and may offer tax benefits, so they are often handled separately.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">What happens to freed-up payments when a debt is paid off?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>When a debt is eliminated, its full payment is rolled into the next target debt. This ever-growing payment accelerates the payoff timeline with each debt you clear.</p></div>
+          </div>
+        </section>
+
+        <section class="related-calculators">
+          <h2>Related Calculators</h2>
+          <div class="grid grid-3">
+            <a href="/pages/personal-finance-calculators/debt-snowball-calculator/" class="card card-link">
+              <h3>Debt Snowball Calculator</h3>
+              <p>Pay smallest balances first for quick motivational wins.</p>
+            </a>
+            <a href="/pages/personal-finance-calculators/budget-percentage-calculator/" class="card card-link">
+              <h3>Budget Percentage Calculator</h3>
+              <p>See where your money goes and find room for extra debt payments.</p>
+            </a>
+            <a href="/pages/personal-finance-calculators/net-income-calculator/" class="card card-link">
+              <h3>Net Income Calculator</h3>
+              <p>Calculate your actual take-home pay to plan extra payments.</p>
+            </a>
+            <a href="/pages/personal-finance-calculators/savings-goal-tracker-calculator/" class="card card-link">
+              <h3>Savings Goal Tracker</h3>
+              <p>Set and track savings goals once your debt is cleared.</p>
+            </a>
+            <a href="/pages/finance-calculators/budget-calculator/" class="card card-link">
+              <h3>50/30/20 Budget Calculator</h3>
+              <p>Allocate income across needs, wants, and savings.</p>
+            </a>
+          </div>
+        </section>
+
+        <div class="disclaimer">
+          <strong>Disclaimer:</strong> This calculator is for informational and educational purposes only. Results are estimates based on fixed interest rates and consistent payments. Actual payoff timelines may vary. This does not constitute financial advice. Consult a qualified financial advisor or credit counselor for personalized debt management guidance.
+        </div>
+
+        <div class="ad-slot ad-slot-rectangle"></div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free online financial calculators to help you make smarter money decisions.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Personal Finance</h4>
+          <a href="/pages/personal-finance-calculators/debt-avalanche-calculator/">Debt Avalanche</a>
+          <a href="/pages/personal-finance-calculators/debt-snowball-calculator/">Debt Snowball</a>
+          <a href="/pages/personal-finance-calculators/budget-percentage-calculator/">Budget Percentages</a>
+          <a href="/pages/personal-finance-calculators/net-income-calculator/">Net Income</a>
+        </div>
+        <div class="footer-col">
+          <h4>Tools</h4>
+          <a href="/pages/finance-calculators/budget-calculator/">50/30/20 Budget</a>
+          <a href="/pages/investment-calculators/">Investment Calculators</a>
+          <a href="/pages/tax-calculators/">Tax Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about/">About</a>
+          <a href="/contact/">Contact</a>
+          <a href="/privacy/">Privacy Policy</a>
+          <a href="/terms/">Terms of Service</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 CalcWise. All rights reserved.</span>
+        <div class="footer-links">
+          <a href="/privacy/">Privacy</a>
+          <a href="/terms/">Terms</a>
+          <a href="/contact/">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    const NUM_DEBTS = 5;
+
+    function buildDebtRows() {
+      const container = document.getElementById('debt-entries');
+      let html = '';
+      for (let i = 1; i <= NUM_DEBTS; i++) {
+        html += `
+        <div style="border:1px solid var(--color-border);border-radius:var(--radius-md);padding:var(--space-4);margin-bottom:var(--space-4);">
+          <h3 style="font-size:var(--text-sm);color:var(--color-text-secondary);margin-bottom:var(--space-3);">Debt ${i} <span style="font-weight:400;">(optional)</span></h3>
+          <div class="result-grid result-grid-2" style="gap:var(--space-3);">
+            <div class="form-group">
+              <label class="form-label" for="name${i}">Debt Name</label>
+              <input type="text" id="name${i}" name="name${i}" class="form-input" placeholder="Credit Card ${i}">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="balance${i}">Balance</label>
+              <div class="input-prefix"><span class="prefix">$</span>
+                <input type="number" id="balance${i}" name="balance${i}" class="form-input" placeholder="0" min="0" step="100">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="rate${i}">Interest Rate (APR)</label>
+              <div class="input-suffix">
+                <input type="number" id="rate${i}" name="rate${i}" class="form-input" placeholder="19.99" min="0" max="100" step="0.01">
+                <span class="suffix">%</span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="minPayment${i}">Minimum Payment</label>
+              <div class="input-prefix"><span class="prefix">$</span>
+                <input type="number" id="minPayment${i}" name="minPayment${i}" class="form-input" placeholder="25" min="0" step="5">
+              </div>
+            </div>
+          </div>
+        </div>`;
+      }
+      container.innerHTML = html;
+    }
+
+    function simulateAvalanche(debts, extraPayment) {
+      // Deep copy
+      let ds = debts.map(d => ({ ...d, paid: false, monthsPaid: 0, interestPaid: 0 }));
+      // Sort by rate descending (avalanche)
+      ds.sort((a, b) => b.rate - a.rate);
+
+      let month = 0;
+      const MAX_MONTHS = 600;
+      while (ds.some(d => !d.paid) && month < MAX_MONTHS) {
+        month++;
+        let availableExtra = extraPayment;
+        // Apply interest and min payments
+        for (let d of ds) {
+          if (d.paid) continue;
+          const interest = d.balance * (d.rate / 100 / 12);
+          d.interestPaid += interest;
+          d.balance += interest;
+          d.balance -= d.minPayment;
+          if (d.balance <= 0) {
+            d.paid = true;
+            d.monthsPaid = month;
+            availableExtra += d.minPayment + (-d.balance); // freed payment
+            d.balance = 0;
+          }
+        }
+        // Apply extra to first unpaid (highest rate)
+        for (let d of ds) {
+          if (d.paid) continue;
+          if (availableExtra >= d.balance) {
+            d.interestPaid; // already counted
+            d.paid = true;
+            d.monthsPaid = month;
+            availableExtra -= d.balance;
+            d.balance = 0;
+          } else {
+            d.balance -= availableExtra;
+            availableExtra = 0;
+          }
+          break;
+        }
+      }
+      return { debts: ds, totalMonths: month };
+    }
+
+    function simulateMinOnly(debts) {
+      let ds = debts.map(d => ({ ...d, paid: false, monthsPaid: 0, interestPaid: 0 }));
+      let month = 0;
+      const MAX_MONTHS = 600;
+      while (ds.some(d => !d.paid) && month < MAX_MONTHS) {
+        month++;
+        for (let d of ds) {
+          if (d.paid) continue;
+          const interest = d.balance * (d.rate / 100 / 12);
+          d.interestPaid += interest;
+          d.balance += interest;
+          d.balance -= d.minPayment;
+          if (d.balance <= 0) {
+            d.paid = true;
+            d.monthsPaid = month;
+            d.balance = 0;
+          }
+        }
+      }
+      return { debts: ds, totalMonths: month };
+    }
+
+    function calcAvalanche() {
+      const v = CalcWise.getFormValues('avalanche-form');
+      const debts = [];
+      for (let i = 1; i <= NUM_DEBTS; i++) {
+        const bal = v['balance' + i] || 0;
+        const rate = v['rate' + i] || 0;
+        const min = v['minPayment' + i] || 0;
+        if (bal > 0 && min > 0) {
+          debts.push({ name: v['name' + i] || `Debt ${i}`, balance: bal, rate, minPayment: min });
+        }
+      }
+      if (debts.length === 0) {
+        alert('Please enter at least one debt with a balance and minimum payment.');
+        return;
+      }
+      const extra = v.extraPayment || 0;
+      const totalBalance = debts.reduce((s, d) => s + d.balance, 0);
+
+      const avalanche = simulateAvalanche(debts, extra);
+      const minOnly = simulateMinOnly(debts);
+
+      const avInterest = avalanche.debts.reduce((s, d) => s + d.interestPaid, 0);
+      const minInterest = minOnly.debts.reduce((s, d) => s + d.interestPaid, 0);
+      const interestSaved = minInterest - avInterest;
+      const monthsSaved = minOnly.totalMonths - avalanche.totalMonths;
+
+      CalcWise.setText('totalDebt', CalcWise.formatCurrency(totalBalance, 0));
+      CalcWise.setText('totalInterest', CalcWise.formatCurrency(avInterest, 0));
+      CalcWise.setText('interestSaved', CalcWise.formatCurrency(Math.max(0, interestSaved), 0));
+      CalcWise.setText('monthsTotal', avalanche.totalMonths + ' months');
+      CalcWise.setText('monthsSaved', Math.max(0, monthsSaved) + ' months');
+
+      const now = new Date();
+      let orderHtml = '<div class="table-container"><table class="data-table"><thead><tr><th>#</th><th>Debt</th><th>Balance</th><th>Rate</th><th>Interest Paid</th><th>Payoff Date</th></tr></thead><tbody>';
+      avalanche.debts.forEach((d, idx) => {
+        const payoffDate = new Date(now);
+        payoffDate.setMonth(payoffDate.getMonth() + d.monthsPaid);
+        const dateStr = payoffDate.toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
+        orderHtml += `<tr><td>${idx + 1}</td><td>${d.name}</td><td>${CalcWise.formatCurrency(debts.find(x => x.name === d.name)?.balance || 0, 0)}</td><td>${d.rate}%</td><td>${CalcWise.formatCurrency(d.interestPaid, 0)}</td><td>${dateStr}</td></tr>`;
+      });
+      orderHtml += '</tbody></table></div>';
+      CalcWise.setHtml('payoffOrder', orderHtml);
+
+      CalcWise.showResults('results');
+    }
+
+    function resetAvalanche() {
+      buildDebtRows();
+      document.getElementById('extraPayment').value = '';
+      CalcWise.hideResults('results');
+    }
+
+    buildDebtRows();
+  </script>
+</body>
+</html>

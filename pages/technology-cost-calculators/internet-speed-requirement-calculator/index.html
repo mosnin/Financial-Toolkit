@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Internet Speed Requirement Calculator | CalcWise</title>
+  <meta name="description" content="Calculate the minimum internet speed your household needs based on users, streaming devices, video calls, gaming, and smart home devices. Get a recommended Mbps plan.">
+  <link rel="canonical" href="https://calcwise.io/technology-cost-calculators/internet-speed-requirement-calculator/">
+  <meta property="og:title" content="Internet Speed Requirement Calculator | CalcWise">
+  <meta property="og:description" content="Find the minimum Mbps your home or office needs for seamless streaming, video calls, gaming, and more.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcwise.io/technology-cost-calculators/internet-speed-requirement-calculator/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Internet Speed Requirement Calculator | CalcWise">
+  <meta name="twitter:description" content="Find the minimum Mbps your home or office needs for seamless streaming, video calls, gaming, and more.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/"},
+      {"@type": "ListItem", "position": 2, "name": "Technology Cost Calculators", "item": "https://calcwise.io/technology-cost-calculators/"},
+      {"@type": "ListItem", "position": 3, "name": "Internet Speed Requirement Calculator"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How much internet speed do I need for streaming?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Netflix recommends 5 Mbps for HD streaming and 25 Mbps per device for 4K. For a household with multiple simultaneous 4K streams, you need at least 25 Mbps per active streaming device, plus bandwidth for other activities."}
+      },
+      {
+        "@type": "Question",
+        "name": "What internet speed is needed for working from home?",
+        "acceptedAnswer": {"@type": "Answer", "text": "A remote worker doing video calls needs at least 10-25 Mbps per user for a reliable HD video conference. Zoom recommends 3 Mbps for 1080p HD calls. For multiple remote workers simultaneously, multiply per-user requirements and add headroom for background uploads."}
+      },
+      {
+        "@type": "Question",
+        "name": "Does internet speed affect gaming ping/latency?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Online gaming requires relatively little bandwidth (3-6 Mbps), but latency (ping) matters more than raw speed. Wired ethernet connections minimize latency. Avoid running large downloads while gaming. A connection with low latency (under 50ms) is more important than high throughput for most games."}
+      },
+      {
+        "@type": "Question",
+        "name": "What is the overkill threshold for internet speed?",
+        "acceptedAnswer": {"@type": "Answer", "text": "You have overkill when your subscribed speed is more than 2x your calculated need. For example, a household needing 100 Mbps paying for a 1 Gbps plan is likely over-spending unless they regularly download very large files, run servers, or have specific high-bandwidth use cases."}
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="logo">
+        <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav">
+        <a href="/">Home</a>
+        <a href="/pages/real-estate-calculators/">Real Estate</a>
+        <a href="/pages/financial-calculators/">Finance</a>
+        <a href="/pages/business-calculators/">Business</a>
+        <a href="/about/">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav">
+      <a href="/">Home</a>
+      <a href="/pages/real-estate-calculators/">Real Estate</a>
+      <a href="/pages/financial-calculators/">Finance</a>
+      <a href="/pages/business-calculators/">Business</a>
+      <a href="/about/">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/pages/technology-cost-calculators/">Technology Cost Calculators</a></li>
+          <li><span aria-current="page">Internet Speed Requirement Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="calc-page-layout">
+          <div class="calc-page-main">
+            <h1>Internet Speed Requirement Calculator</h1>
+            <p class="subtitle" style="font-size:var(--text-lg);color:var(--color-gray-600);margin-bottom:var(--space-8);line-height:var(--leading-relaxed);">Determine how much internet bandwidth your household or office really needs. Enter the number of simultaneous users, streaming devices, video calls, gaming consoles, and smart home devices to get a recommended minimum Mbps plan and see if your current subscription is overkill.</p>
+
+            <div class="calc-container">
+              <div class="calc-header">
+                <h2>Internet Speed Requirement Calculator</h2>
+                <p>Find out the Mbps you actually need</p>
+              </div>
+              <div class="calc-body">
+                <form id="speed-form" onsubmit="return false;">
+                  <div class="form-group">
+                    <label class="form-label" for="users">Number of Simultaneous Users</label>
+                    <input type="number" id="users" class="form-input" placeholder="3" min="1" max="50" step="1" required>
+                    <span class="form-hint" style="display:block;margin-top:var(--space-1);">People using the internet at the same time (5 Mbps/user baseline)</span>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="stream-hd-devices">HD Streaming Devices (simultaneous)</label>
+                    <input type="number" id="stream-hd-devices" class="form-input" placeholder="2" min="0" step="1">
+                    <span class="form-hint" style="display:block;margin-top:var(--space-1);">TVs, tablets streaming HD at the same time (5 Mbps each)</span>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="stream-4k-devices">4K Streaming Devices (simultaneous)</label>
+                    <input type="number" id="stream-4k-devices" class="form-input" placeholder="1" min="0" step="1">
+                    <span class="form-hint" style="display:block;margin-top:var(--space-1);">4K TVs or monitors streaming UHD (25 Mbps each)</span>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="video-call-users">Simultaneous Video Call Users</label>
+                    <input type="number" id="video-call-users" class="form-input" placeholder="1" min="0" step="1">
+                    <span class="form-hint" style="display:block;margin-top:var(--space-1);">Zoom, Teams, Meet in HD (10 Mbps each, upload + download)</span>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="gaming-devices">Online Gaming Devices (simultaneous)</label>
+                    <input type="number" id="gaming-devices" class="form-input" placeholder="1" min="0" step="1">
+                    <span class="form-hint" style="display:block;margin-top:var(--space-1);">Consoles or PCs gaming online (6 Mbps each)</span>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="smart-devices">Smart Home Devices</label>
+                    <input type="number" id="smart-devices" class="form-input" placeholder="10" min="0" step="1">
+                    <span class="form-hint" style="display:block;margin-top:var(--space-1);">Cameras, thermostats, speakers, lights (~0.5 Mbps each)</span>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="current-speed">Current Plan Speed (optional)</label>
+                    <div class="input-suffix">
+                      <input type="number" id="current-speed" class="form-input" placeholder="200" min="0" step="1">
+                      <span class="suffix">Mbps</span>
+                    </div>
+                    <span class="form-hint" style="display:block;margin-top:var(--space-1);">Enter to check if your current plan is overkill or insufficient</span>
+                  </div>
+
+                  <div class="calc-actions">
+                    <button type="button" class="btn btn-calculate btn-full" onclick="calculateSpeed()">Calculate Speed Needed</button>
+                    <button type="button" class="btn btn-reset" onclick="resetSpeed()">Reset</button>
+                  </div>
+                </form>
+
+                <div id="results" class="calc-results hidden">
+                  <div class="result-primary">
+                    <div class="result-label">Recommended Minimum Speed</div>
+                    <div class="result-value" id="result-min-speed">0 Mbps</div>
+                  </div>
+                  <div class="result-grid result-grid-3">
+                    <div class="result-item">
+                      <div class="result-label">Suggested Plan</div>
+                      <div class="result-value" id="result-plan">—</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Overkill Threshold</div>
+                      <div class="result-value" id="result-overkill">—</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Current Plan Status</div>
+                      <div class="result-value" id="result-current-status">—</div>
+                    </div>
+                  </div>
+                  <div id="speed-breakdown" style="margin-top:var(--space-4);padding:var(--space-4);background:var(--color-gray-50,#f9fafb);border-radius:var(--radius-md);">
+                    <h3 style="font-size:var(--text-sm);font-weight:var(--font-semibold);margin-bottom:var(--space-3);">Bandwidth Breakdown</h3>
+                    <div id="speed-breakdown-rows"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="ad-slot ad-slot-leaderboard"></div>
+
+            <section class="content-section">
+              <h2>Speed Requirement Formula</h2>
+              <div class="formula-box">
+                <div class="formula-label">Minimum Required Mbps</div>
+                Required = (Users × 5) + (HD Devices × 5) + (4K Devices × 25) + (Video Call Users × 10) + (Gaming Devices × 6) + (Smart Devices × 0.5)
+              </div>
+              <div class="formula-box">
+                <div class="formula-label">Suggested Plan (with 20% headroom)</div>
+                Suggested Plan = Required × 1.2, rounded up to nearest standard tier
+              </div>
+              <div class="formula-box">
+                <div class="formula-label">Overkill Threshold</div>
+                Overkill = Required × 2.0
+              </div>
+              <p style="margin-top:var(--space-4);">Per-device bandwidth benchmarks:</p>
+              <ul>
+                <li><strong>General browsing/user:</strong> 5 Mbps per simultaneous user</li>
+                <li><strong>HD streaming (1080p):</strong> 5 Mbps per device</li>
+                <li><strong>4K streaming:</strong> 25 Mbps per device</li>
+                <li><strong>HD video call:</strong> 10 Mbps per user (upload + download)</li>
+                <li><strong>Online gaming:</strong> 6 Mbps per device</li>
+                <li><strong>Smart home device:</strong> 0.5 Mbps per device</li>
+              </ul>
+            </section>
+
+            <section class="content-section">
+              <h2>How to Use This Calculator</h2>
+              <ol>
+                <li>Enter the <strong>number of people</strong> using the internet simultaneously (not total household members).</li>
+                <li>Add streaming, video call, gaming, and smart home devices that run <strong>at the same time</strong>.</li>
+                <li>Optionally enter your <strong>current plan speed</strong> to see if it is sufficient or oversized.</li>
+                <li>Click <strong>Calculate Speed Needed</strong> to get your minimum Mbps, suggested plan, and overkill threshold.</li>
+              </ol>
+            </section>
+
+            <section class="content-section">
+              <h2>Example Scenario</h2>
+              <p>A family of four in the evening peak hour:</p>
+              <ul>
+                <li>3 simultaneous users: 3 × 5 = <strong>15 Mbps</strong></li>
+                <li>2 HD streaming devices: 2 × 5 = <strong>10 Mbps</strong></li>
+                <li>1 4K TV: 1 × 25 = <strong>25 Mbps</strong></li>
+                <li>1 video call: 1 × 10 = <strong>10 Mbps</strong></li>
+                <li>1 gaming console: 1 × 6 = <strong>6 Mbps</strong></li>
+                <li>15 smart devices: 15 × 0.5 = <strong>7.5 Mbps</strong></li>
+              </ul>
+              <p><strong>Total: ~73.5 Mbps</strong> required. Suggested plan: 100 Mbps. Overkill threshold: 147 Mbps — so a 200 Mbps or 1 Gbps plan would be excess for this household.</p>
+            </section>
+
+            <section class="faq-section">
+              <h2>Frequently Asked Questions</h2>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  How much internet speed do I need for streaming?
+                  <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                </button>
+                <div class="faq-answer">
+                  <p>Netflix recommends 5 Mbps for HD and 25 Mbps per device for 4K streaming. Multiply by the number of simultaneous streams plus add bandwidth for all other devices active at the same time.</p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  What internet speed is needed for working from home?
+                  <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                </button>
+                <div class="faq-answer">
+                  <p>A remote worker doing HD video calls needs at least 10 Mbps dedicated bandwidth. With file uploads, screen sharing, and background syncing, plan for 15-25 Mbps per work-from-home user for a smooth experience.</p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  Does internet speed affect gaming ping/latency?
+                  <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                </button>
+                <div class="faq-answer">
+                  <p>Online gaming needs only 3-6 Mbps of bandwidth, but low latency (under 50ms ping) matters far more than raw speed. Use a wired ethernet connection and avoid running large downloads simultaneously to minimize lag.</p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  What is the overkill threshold for internet speed?
+                  <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                </button>
+                <div class="faq-answer">
+                  <p>The overkill threshold is 2x your calculated need. If your plan is above this, you are likely overpaying unless you regularly download very large files, run home servers, or have specific high-bandwidth professional needs.</p>
+                </div>
+              </div>
+            </section>
+
+            <section class="related-calculators">
+              <h2>Related Calculators</h2>
+              <div class="grid grid-3">
+                <a href="/pages/technology-cost-calculators/data-usage-calculator/" class="card card-link">
+                  <h3>Data Usage Calculator</h3>
+                  <p>Estimate total monthly GB consumed by all your activities.</p>
+                </a>
+                <a href="/pages/technology-cost-calculators/streaming-service-cost-calculator/" class="card card-link">
+                  <h3>Streaming Service Cost Calculator</h3>
+                  <p>Total your streaming subscriptions and find savings.</p>
+                </a>
+                <a href="/pages/technology-cost-calculators/saas-subscription-cost-calculator/" class="card card-link">
+                  <h3>SaaS Subscription Cost Calculator</h3>
+                  <p>See your total monthly SaaS spend across all tools.</p>
+                </a>
+                <a href="/pages/technology-cost-calculators/cloud-storage-cost-calculator/" class="card card-link">
+                  <h3>Cloud Storage Cost Calculator</h3>
+                  <p>Compare cloud storage pricing across major providers.</p>
+                </a>
+                <a href="/pages/technology-cost-calculators/web-hosting-cost-calculator/" class="card card-link">
+                  <h3>Web Hosting Cost Calculator</h3>
+                  <p>Estimate your hosting costs by traffic and storage needs.</p>
+                </a>
+              </div>
+            </section>
+
+            <div class="disclaimer">
+              <strong>Disclaimer:</strong> Speed requirements are estimates based on industry-standard benchmarks. Actual performance depends on router quality, network congestion, ISP throttling, distance from the exchange, and the number of background processes running on each device. Always test your actual speed at peak usage times with a speed test tool.
+            </div>
+          </div>
+
+          <aside class="calc-page-sidebar">
+            <div class="ad-slot ad-slot-rectangle"></div>
+            <div class="sidebar-card">
+              <h3>Technology Cost Calculators</h3>
+              <a href="/pages/technology-cost-calculators/cloud-storage-cost-calculator/">Cloud Storage Cost</a>
+              <a href="/pages/technology-cost-calculators/data-usage-calculator/">Data Usage</a>
+              <a href="/pages/technology-cost-calculators/saas-subscription-cost-calculator/">SaaS Subscription Cost</a>
+              <a href="/pages/technology-cost-calculators/software-licensing-cost-calculator/">Software Licensing Cost</a>
+              <a href="/pages/technology-cost-calculators/streaming-service-cost-calculator/">Streaming Service Cost</a>
+              <a href="/pages/technology-cost-calculators/web-hosting-cost-calculator/">Web Hosting Cost</a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free online calculators for business, finance, tax, and investment decisions.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Calculators</h4>
+          <a href="/pages/business-calculators/">Business</a>
+          <a href="/pages/financial-calculators/">Financial</a>
+          <a href="/pages/tax-calculators/">Tax</a>
+          <a href="/pages/investment-calculators/">Investment</a>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <a href="/about/">About</a>
+          <a href="/blog/">Blog</a>
+          <a href="/contact/">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="/privacy/">Privacy Policy</a>
+          <a href="/terms/">Terms of Service</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/privacy/">Privacy</a>
+          <a href="/terms/">Terms</a>
+          <a href="/contact/">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    const PLAN_TIERS = [25, 50, 100, 200, 300, 500, 940, 2000];
+
+    function suggestedPlan(mbps) {
+      const withHeadroom = mbps * 1.2;
+      for (const t of PLAN_TIERS) {
+        if (t >= withHeadroom) return t + ' Mbps';
+      }
+      return '2+ Gbps';
+    }
+
+    function calculateSpeed() {
+      const users       = CalcWise.parseNumber(document.getElementById('users').value) || 1;
+      const hdDevices   = CalcWise.parseNumber(document.getElementById('stream-hd-devices').value);
+      const k4Devices   = CalcWise.parseNumber(document.getElementById('stream-4k-devices').value);
+      const vcUsers     = CalcWise.parseNumber(document.getElementById('video-call-users').value);
+      const gamingDev   = CalcWise.parseNumber(document.getElementById('gaming-devices').value);
+      const smartDev    = CalcWise.parseNumber(document.getElementById('smart-devices').value);
+      const currentSpd  = CalcWise.parseNumber(document.getElementById('current-speed').value);
+
+      const breakdown = {
+        'General users':      users * 5,
+        'HD streaming':       hdDevices * 5,
+        '4K streaming':       k4Devices * 25,
+        'Video calls':        vcUsers * 10,
+        'Online gaming':      gamingDev * 6,
+        'Smart home devices': smartDev * 0.5
+      };
+
+      const totalMbps = Object.values(breakdown).reduce((a, b) => a + b, 0);
+      const overkill = totalMbps * 2;
+
+      let currentStatus = '—';
+      if (currentSpd > 0) {
+        if (currentSpd < totalMbps) {
+          currentStatus = 'Insufficient';
+        } else if (currentSpd > overkill) {
+          currentStatus = 'Overkill';
+        } else {
+          currentStatus = 'Adequate';
+        }
+      }
+
+      CalcWise.setText('result-min-speed', CalcWise.formatNumber(totalMbps, 0) + ' Mbps');
+      CalcWise.setText('result-plan', suggestedPlan(totalMbps));
+      CalcWise.setText('result-overkill', CalcWise.formatNumber(overkill, 0) + ' Mbps');
+      CalcWise.setText('result-current-status', currentStatus);
+
+      const rowsEl = document.getElementById('speed-breakdown-rows');
+      rowsEl.innerHTML = Object.entries(breakdown).map(([label, mbps]) => {
+        if (mbps <= 0) return '';
+        return `<div style="display:flex;justify-content:space-between;font-size:var(--text-sm);padding:var(--space-1) 0;border-bottom:1px solid var(--color-gray-100);">
+          <span>${label}</span>
+          <span style="font-weight:var(--font-semibold);">${CalcWise.formatNumber(mbps, 1)} Mbps</span>
+        </div>`;
+      }).join('') + `<div style="display:flex;justify-content:space-between;font-size:var(--text-sm);padding:var(--space-2) 0;font-weight:var(--font-semibold);">
+        <span>Total Required</span>
+        <span>${CalcWise.formatNumber(totalMbps, 0)} Mbps</span>
+      </div>`;
+
+      CalcWise.showResults('results');
+    }
+
+    function resetSpeed() {
+      document.getElementById('speed-form').reset();
+      CalcWise.hideResults('results');
+    }
+  </script>
+</body>
+</html>

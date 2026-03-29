@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Health Insurance Subsidy Calculator - ACA Premium Tax Credit | CalcWise</title>
+  <meta name="description" content="Free ACA health insurance subsidy calculator. Estimate your premium tax credit based on income, household size, and plan tier to find your net monthly premium after subsidy.">
+  <meta name="keywords" content="health insurance subsidy calculator, ACA subsidy calculator, premium tax credit calculator, marketplace insurance calculator, Obamacare subsidy">
+  <link rel="canonical" href="https://calcwise.io/healthcare-calculators/health-insurance-subsidy-calculator/">
+
+  <meta property="og:title" content="Health Insurance Subsidy Calculator - ACA Premium Tax Credit">
+  <meta property="og:description" content="Estimate your ACA premium tax credit and monthly premium after subsidy based on income and household size.">
+  <meta property="og:url" content="https://calcwise.io/healthcare-calculators/health-insurance-subsidy-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Health Insurance Subsidy Calculator - ACA Premium Tax Credit">
+  <meta name="twitter:description" content="Estimate your ACA premium tax credit and monthly premium after subsidy based on income and household size.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Healthcare Calculators", "item": "https://calcwise.io/healthcare-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "Health Insurance Subsidy Calculator", "item": "https://calcwise.io/healthcare-calculators/health-insurance-subsidy-calculator/" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Who qualifies for ACA health insurance subsidies?",
+        "acceptedAnswer": { "@type": "Answer", "text": "You may qualify for ACA premium tax credits if your household income is between 100% and 400% of the Federal Poverty Level (FPL), you purchase coverage through the Health Insurance Marketplace, and you are not eligible for affordable employer-sponsored coverage or government programs like Medicaid or Medicare." }
+      },
+      {
+        "@type": "Question",
+        "name": "How is the ACA premium tax credit calculated?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The ACA subsidy equals the benchmark plan premium (the second-lowest-cost Silver plan) minus your expected contribution, which is a sliding percentage of your income based on FPL. If the benchmark premium exceeds your expected contribution, you receive the difference as a tax credit." }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the ACA metal plan tiers?",
+        "acceptedAnswer": { "@type": "Answer", "text": "ACA plans are tiered as Bronze (covers ~60% of costs), Silver (70%), Gold (80%), and Platinum (90%). The subsidy benchmark is based on the Silver tier. Cost-sharing reductions are also available for Silver plans if your income is under 250% FPL." }
+      },
+      {
+        "@type": "Question",
+        "name": "Does Medicaid expansion affect subsidy eligibility?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. In states that expanded Medicaid, individuals with incomes up to 138% FPL qualify for Medicaid and are not eligible for marketplace subsidies. In non-expansion states, the coverage gap may leave some people without access to either Medicaid or subsidies." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/business-calculators/">Business</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/business-calculators/">Business Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/healthcare-calculators/">Healthcare Calculators</a></li>
+          <li><span aria-current="page">Health Insurance Subsidy Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="article-content">
+          <h1>Health Insurance Subsidy Calculator</h1>
+          <p>Find out how much financial help you can get with your health insurance premium. This ACA marketplace subsidy calculator estimates your premium tax credit based on your annual income, household size, and chosen plan tier — showing your estimated monthly premium after subsidy and total annual savings.</p>
+
+          <div class="calc-container mt-8">
+            <div class="calc-header">
+              <h2>Estimate Your ACA Premium Subsidy</h2>
+              <p>Enter your income and household details to see your estimated tax credit</p>
+            </div>
+            <div class="calc-body">
+              <form id="subsidy-form" onsubmit="return false;">
+                <div class="form-group">
+                  <label class="form-label" for="annual-income-sub">Annual Household Income</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="annual-income-sub" class="form-input" placeholder="45000" min="0" step="500" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="household-size">Household Size</label>
+                  <input type="number" id="household-size" class="form-input" placeholder="2" min="1" max="10" step="1" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="plan-tier">Plan Tier</label>
+                  <select id="plan-tier" class="form-input" required>
+                    <option value="">Select a plan tier...</option>
+                    <option value="bronze">Bronze (~$400/mo benchmark)</option>
+                    <option value="silver">Silver (~$500/mo benchmark)</option>
+                    <option value="gold">Gold (~$620/mo benchmark)</option>
+                    <option value="platinum">Platinum (~$750/mo benchmark)</option>
+                  </select>
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calculateSubsidy()">Calculate</button>
+                  <button type="button" class="btn btn-reset" onclick="resetSubsidy()">Reset</button>
+                </div>
+              </form>
+
+              <div id="subsidy-results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">Estimated Monthly Subsidy</div>
+                  <div class="result-value" id="result-monthly-subsidy"></div>
+                </div>
+                <div class="result-grid result-grid-3">
+                  <div class="result-item">
+                    <div class="result-label">Income as % of FPL</div>
+                    <div class="result-value" id="result-fpl-pct"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Est. Monthly Premium After Subsidy</div>
+                    <div class="result-value" id="result-net-premium"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Annual Premium Savings</div>
+                    <div class="result-value" id="result-annual-savings"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <section class="content-section">
+            <h2>How the ACA Subsidy Formula Works</h2>
+            <p>The ACA premium tax credit is based on the difference between the benchmark Silver plan premium and your expected contribution:</p>
+            <div class="formula-box">
+              <div class="formula-label">FPL % (2026 estimates)</div>
+              FPL % = Annual Income / FPL for Household Size &times; 100
+            </div>
+            <div class="formula-box">
+              <div class="formula-label">Expected Contribution (% of income)</div>
+              Ranges from 0% (under 150% FPL) to 8.5% (400%+ FPL)
+            </div>
+            <div class="formula-box">
+              <div class="formula-label">Subsidy Amount (monthly)</div>
+              Subsidy = Benchmark Silver Premium - (Income &times; Contribution % / 12)
+            </div>
+            <p>If this result is negative, no subsidy is available. The actual subsidy is capped at the benchmark plan premium.</p>
+          </section>
+
+          <section class="content-section">
+            <h2>How to Use This Calculator</h2>
+            <ol>
+              <li><strong>Enter your annual household income</strong> - use your Modified Adjusted Gross Income (MAGI).</li>
+              <li><strong>Enter household size</strong> - everyone claimed on your tax return including yourself.</li>
+              <li><strong>Select a plan tier</strong> - note the subsidy benchmark is always the Silver plan regardless of which tier you choose.</li>
+              <li><strong>Click Calculate</strong> to see your estimated subsidy and net monthly premium.</li>
+            </ol>
+          </section>
+
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>A single adult with an annual income of $35,000 (approximately 250% of the 2026 FPL for a 1-person household) is looking at a Silver plan with a $490/month benchmark premium. Their expected contribution is about 6% of income, or $175/month. The estimated subsidy is $315/month ($490 - $175), reducing their monthly premium to $175 and saving $3,780 per year compared to paying full price.</p>
+          </section>
+
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Who qualifies for ACA health insurance subsidies?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>You may qualify if your household income is between 100% and 400% of the Federal Poverty Level, you purchase coverage through the Marketplace, and you are not eligible for affordable employer-sponsored coverage or Medicaid/Medicare.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                How is the ACA premium tax credit calculated?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>The subsidy equals the benchmark Silver plan premium minus your expected contribution (a sliding percentage of income based on FPL). If the benchmark premium exceeds your expected contribution, you receive the difference as a tax credit.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What are the ACA metal plan tiers?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>ACA plans are tiered as Bronze (covers ~60% of costs), Silver (70%), Gold (80%), and Platinum (90%). The subsidy benchmark is always based on the Silver tier regardless of which plan you purchase.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Does Medicaid expansion affect subsidy eligibility?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Yes. In states that expanded Medicaid, individuals with incomes up to 138% FPL qualify for Medicaid and are not eligible for marketplace subsidies. In non-expansion states, a coverage gap may exist for some low-income individuals.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/healthcare-calculators/healthcare-deductible-calculator/" class="card card-link">
+                <h3>Healthcare Deductible Calculator</h3>
+                <p>Compare high vs low deductible plans to find your best option.</p>
+              </a>
+              <a href="/healthcare-calculators/out-of-pocket-cost-calculator/" class="card card-link">
+                <h3>Out-of-Pocket Cost Calculator</h3>
+                <p>Model how costs flow through your deductible and coinsurance.</p>
+              </a>
+              <a href="/healthcare-calculators/health-savings-account-calculator/" class="card card-link">
+                <h3>HSA Calculator</h3>
+                <p>Estimate tax savings and HSA balance growth.</p>
+              </a>
+            </div>
+          </section>
+
+          <div class="disclaimer">
+            <strong>Disclaimer:</strong> This calculator provides estimates based on simplified ACA subsidy formulas and approximated 2026 Federal Poverty Level figures. Actual premium tax credits depend on your specific state, local benchmark plan premiums, final MAGI, and current-year FPL tables published by HHS. Eligibility rules may change. Always verify your actual subsidy on Healthcare.gov or with a licensed health insurance navigator. This is not legal, tax, or medical advice.
+          </div>
+
+          <div class="ad-slot ad-slot-leaderboard"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Healthcare</h4>
+          <a href="/healthcare-calculators/">All Healthcare Calculators</a>
+          <a href="/healthcare-calculators/healthcare-deductible-calculator/">Deductible Calculator</a>
+        </div>
+        <div class="footer-col">
+          <h4>Finance</h4>
+          <a href="/finance-calculators/">All Finance Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    // Approximate 2026 FPL base figures (48 contiguous states)
+    const FPL_BASE = 15060; // 1 person
+    const FPL_ADDITIONAL = 5380; // each additional person
+
+    // ACA contribution percentages by FPL range (simplified 2026 schedule)
+    function getContributionPct(fplPct) {
+      if (fplPct < 150) return 0;
+      if (fplPct < 200) return 0 + (fplPct - 150) / 50 * 2; // 0% to 2%
+      if (fplPct < 250) return 2 + (fplPct - 200) / 50 * 2; // 2% to 4%
+      if (fplPct < 300) return 4 + (fplPct - 250) / 50 * 2; // 4% to 6%
+      if (fplPct < 400) return 6 + (fplPct - 300) / 100 * 2.5; // 6% to 8.5%
+      return 8.5;
+    }
+
+    // Benchmark premiums by tier
+    const BENCHMARK = { bronze: 400, silver: 500, gold: 620, platinum: 750 };
+
+    function calculateSubsidy() {
+      if (!CalcWise.validateForm('subsidy-form')) return;
+
+      const income = CalcWise.parseNumber(document.getElementById('annual-income-sub').value);
+      const householdSize = CalcWise.parseNumber(document.getElementById('household-size').value);
+      const tier = document.getElementById('plan-tier').value;
+
+      const fpl = FPL_BASE + (householdSize - 1) * FPL_ADDITIONAL;
+      const fplPct = (income / fpl) * 100;
+      const contributionPct = getContributionPct(fplPct);
+      const monthlyContribution = (income * contributionPct / 100) / 12;
+      const benchmarkPremium = BENCHMARK[tier] || BENCHMARK.silver;
+      const monthlySubsidy = Math.max(0, benchmarkPremium - monthlyContribution);
+      const netPremium = Math.max(0, benchmarkPremium - monthlySubsidy);
+
+      CalcWise.setText('result-monthly-subsidy', CalcWise.formatCurrency(monthlySubsidy));
+      CalcWise.setText('result-fpl-pct', CalcWise.formatNumber(fplPct, 0) + '%');
+      CalcWise.setText('result-net-premium', CalcWise.formatCurrency(netPremium));
+      CalcWise.setText('result-annual-savings', CalcWise.formatCurrency(monthlySubsidy * 12));
+      CalcWise.showResults('subsidy-results');
+    }
+
+    function resetSubsidy() {
+      document.getElementById('subsidy-form').reset();
+      CalcWise.hideResults('subsidy-results');
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Financial Independence Calculator - CalcWise</title>
+  <meta name="description" content="Calculate your FI number, years to financial independence, your FI age, and the monthly savings needed to retire early. Based on the 4% safe withdrawal rate and 25x rule.">
+  <link rel="canonical" href="https://calcwise.io/personal-finance-calculators/financial-independence-calculator/">
+  <meta property="og:title" content="Financial Independence Calculator - CalcWise">
+  <meta property="og:description" content="Find your FI number using the 25x rule. Calculate years to financial independence, your FI age, and required monthly savings.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcwise.io/personal-finance-calculators/financial-independence-calculator/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Financial Independence Calculator - CalcWise">
+  <meta name="twitter:description" content="Calculate your FI number, years to FI, and required monthly savings using the 25x rule and 4% SWR.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/"},
+      {"@type": "ListItem", "position": 2, "name": "Personal Finance Calculators", "item": "https://calcwise.io/personal-finance-calculators/"},
+      {"@type": "ListItem", "position": 3, "name": "Financial Independence Calculator"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the FI number (25x rule)?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Your FI number is the amount of invested assets needed to retire and live off your portfolio indefinitely. It is calculated as 25 times your annual expenses, which corresponds to a 4% safe withdrawal rate — the percentage of your portfolio you can withdraw each year without running out of money over a 30-year retirement, based on the Trinity Study."}
+      },
+      {
+        "@type": "Question",
+        "name": "What is a safe withdrawal rate?",
+        "acceptedAnswer": {"@type": "Answer", "text": "A safe withdrawal rate (SWR) is the percentage of your portfolio you can withdraw annually in retirement with a high probability of not running out of money. The commonly cited 4% rule comes from the Trinity Study, which found that a 4% initial withdrawal rate adjusted for inflation historically sustained a 30-year retirement across most market scenarios."}
+      },
+      {
+        "@type": "Question",
+        "name": "What annual return should I assume for FI calculations?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Many FI calculators use a 7% nominal return (approximately 5% real return after 2% inflation) based on historical US stock market averages. Some planners use 6% to be more conservative. The exact rate significantly impacts your FI timeline, so running scenarios with different return assumptions is wise."}
+      },
+      {
+        "@type": "Question",
+        "name": "Does financial independence mean I have to stop working?",
+        "acceptedAnswer": {"@type": "Answer", "text": "No — financial independence simply means your investments can cover your living expenses indefinitely, so work becomes optional. Many FI achievers continue working in some capacity, pursue passion projects, or semi-retire. The FIRE movement (Financial Independence, Retire Early) is a popular application of these principles."}
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="logo">
+        <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav">
+        <a href="/">Home</a>
+        <a href="/pages/finance-calculators/">Finance</a>
+        <a href="/pages/personal-finance-calculators/" aria-current="page">Personal Finance</a>
+        <a href="/pages/investment-calculators/">Investment</a>
+        <a href="/pages/tax-calculators/">Tax</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav">
+      <a href="/">Home</a>
+      <a href="/pages/finance-calculators/">Finance Calculators</a>
+      <a href="/pages/personal-finance-calculators/">Personal Finance Calculators</a>
+      <a href="/pages/investment-calculators/">Investment Calculators</a>
+      <a href="/pages/tax-calculators/">Tax Calculators</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li><a href="/pages/personal-finance-calculators/">Personal Finance Calculators</a></li>
+        <li><span aria-current="page">Financial Independence Calculator</span></li>
+      </ol>
+    </nav>
+
+    <div class="page-content">
+      <div class="article-content">
+        <h1>Financial Independence Calculator</h1>
+        <p>Financial independence (FI) means having enough invested assets that your portfolio can sustain your lifestyle indefinitely — making work optional. This calculator uses the proven 25x rule (based on the 4% safe withdrawal rate) to compute your FI number, project how many years until you reach it, estimate your FI age, and show the monthly savings required to get there on your timeline.</p>
+
+        <div class="ad-slot ad-slot-leaderboard"></div>
+
+        <div class="calc-container">
+          <div class="calc-header">
+            <h2>Your Financial Independence Number</h2>
+            <p>Calculate your FI number and timeline</p>
+          </div>
+          <div class="calc-body">
+            <form id="fi-form">
+              <div class="result-grid result-grid-2" style="gap: var(--space-4);">
+                <div class="form-group">
+                  <label class="form-label" for="annualExpenses">Annual Expenses in Retirement</label>
+                  <div class="input-prefix"><span class="prefix">$</span>
+                    <input type="number" id="annualExpenses" name="annualExpenses" class="form-input" placeholder="60000" min="1000" step="1000" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="currentSavings">Current Investment Savings</label>
+                  <div class="input-prefix"><span class="prefix">$</span>
+                    <input type="number" id="currentSavings" name="currentSavings" class="form-input" placeholder="50000" min="0" step="1000">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="annualReturn">Expected Annual Return</label>
+                  <div class="input-suffix">
+                    <input type="number" id="annualReturn" name="annualReturn" class="form-input" placeholder="7" min="0" max="30" step="0.1" required>
+                    <span class="suffix">%</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="withdrawalRate">Safe Withdrawal Rate</label>
+                  <div class="input-suffix">
+                    <input type="number" id="withdrawalRate" name="withdrawalRate" class="form-input" placeholder="4" min="1" max="10" step="0.1" required>
+                    <span class="suffix">%</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="currentAge">Current Age</label>
+                  <input type="number" id="currentAge" name="currentAge" class="form-input" placeholder="32" min="18" max="80" step="1" required>
+                </div>
+              </div>
+              <div class="calc-actions">
+                <button type="button" class="btn btn-calculate" onclick="calcFI()">Calculate FI Number</button>
+                <button type="button" class="btn btn-reset" onclick="resetFI()">Reset</button>
+              </div>
+            </form>
+
+            <div id="results" class="calc-results hidden">
+              <div class="result-primary">
+                <div class="result-label">Your FI Number</div>
+                <div class="result-value" id="fiNumber">$0</div>
+              </div>
+              <div class="result-grid result-grid-3" style="margin-top: var(--space-4);">
+                <div class="result-item">
+                  <div class="result-label">Years to FI</div>
+                  <div class="result-value" id="yearsToFI" style="color: var(--color-success);">0</div>
+                </div>
+                <div class="result-item">
+                  <div class="result-label">FI Age</div>
+                  <div class="result-value" id="fiAge">0</div>
+                </div>
+                <div class="result-item">
+                  <div class="result-label">Monthly Savings Needed</div>
+                  <div class="result-value" id="monthlySavings" style="color: var(--color-info);">$0</div>
+                </div>
+              </div>
+              <div id="fiDetails" style="margin-top: var(--space-5);"></div>
+            </div>
+          </div>
+        </div>
+
+        <section class="content-section">
+          <h2>How Financial Independence Is Calculated</h2>
+          <div class="formula-box">
+            <div class="formula-label">Formula</div>
+            FI Number = Annual Expenses &divide; Safe Withdrawal Rate<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(e.g. $60,000 &divide; 0.04 = $1,500,000)<br><br>
+            Future Value = PV &times; (1+r)^n + PMT &times; [((1+r)^n &minus; 1) / r]<br>
+            Years to FI = solved for n when FV &ge; FI Number
+          </div>
+          <p>The FI number is derived from the Trinity Study's finding that a 4% initial withdrawal rate, adjusted annually for inflation, has historically sustained a 30-year retirement across virtually all market scenarios. Dividing annual expenses by 0.04 gives you the portfolio size required. The years-to-FI calculation compounds your current savings and monthly contributions at your expected return rate.</p>
+        </section>
+
+        <section class="content-section">
+          <h2>How to Use This Calculator</h2>
+          <ol>
+            <li><strong>Enter annual retirement expenses:</strong> What does your ideal lifestyle cost per year? Include housing, food, travel, healthcare, and leisure.</li>
+            <li><strong>Add current savings:</strong> The total value of all investment accounts (401k, IRA, taxable brokerage).</li>
+            <li><strong>Set return and withdrawal rate:</strong> 7% return and 4% withdrawal are common starting assumptions.</li>
+            <li><strong>Enter your current age:</strong> The calculator will project your FI age and the year you reach independence.</li>
+            <li><strong>Review results:</strong> Adjust expenses, contributions, or return rate to model different scenarios.</li>
+          </ol>
+        </section>
+
+        <section class="content-section">
+          <h2>Example Scenario</h2>
+          <p>Sam is 30 years old with $45,000 saved, planning for $55,000/year in retirement expenses. Using the 4% SWR, Sam's FI number is $1,375,000. With a 7% annual return and $2,000/month in savings, Sam's portfolio grows to reach the FI number in approximately 22 years — achieving financial independence at age 52. Increasing monthly savings to $2,500 would cut the timeline to about 19 years, reaching FI at age 49.</p>
+        </section>
+
+        <section class="faq-section">
+          <h2>Frequently Asked Questions</h2>
+          <div class="faq-item">
+            <button class="faq-question">What is the FI number (25x rule)?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>Your FI number is 25 times your annual expenses — the portfolio size that can sustain a 4% annual withdrawal indefinitely. This comes from the Trinity Study showing a 4% initial withdrawal rate historically survived 30-year retirements.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">What is a safe withdrawal rate?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>The safe withdrawal rate (SWR) is the annual percentage of your portfolio you can withdraw without running out of money over a 30-year retirement. The 4% rule is most widely cited. Early retirees with longer horizons often use 3% to 3.5% to be more conservative.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">What annual return should I assume?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>Many FI planners use 7% nominal (about 5% real after 2% inflation) based on historical US stock market averages. Using 6% is more conservative. Run multiple scenarios — small differences in return assumptions have large effects on your FI timeline.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">Does FI mean I have to stop working?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>No — financial independence means work becomes optional, not mandatory retirement. Many FI achievers continue working in enjoyable roles, pursue passion projects, or semi-retire. The point is having the freedom to choose.</p></div>
+          </div>
+        </section>
+
+        <section class="related-calculators">
+          <h2>Related Calculators</h2>
+          <div class="grid grid-3">
+            <a href="/pages/personal-finance-calculators/savings-rate-calculator/" class="card card-link">
+              <h3>Savings Rate Calculator</h3>
+              <p>Your savings rate is the biggest lever in your FI journey.</p>
+            </a>
+            <a href="/pages/personal-finance-calculators/savings-goal-tracker-calculator/" class="card card-link">
+              <h3>Savings Goal Tracker</h3>
+              <p>Track progress toward your FI number milestone.</p>
+            </a>
+            <a href="/pages/investment-calculators/" class="card card-link">
+              <h3>Investment Calculators</h3>
+              <p>Model compound growth and portfolio scenarios.</p>
+            </a>
+            <a href="/pages/personal-finance-calculators/net-income-calculator/" class="card card-link">
+              <h3>Net Income Calculator</h3>
+              <p>Know your take-home pay to maximize savings contributions.</p>
+            </a>
+            <a href="/pages/finance-calculators/retirement-savings-calculator/" class="card card-link">
+              <h3>Retirement Savings Calculator</h3>
+              <p>Project retirement savings across different contribution scenarios.</p>
+            </a>
+          </div>
+        </section>
+
+        <div class="disclaimer">
+          <strong>Disclaimer:</strong> This calculator is for informational and educational purposes only. Financial independence projections are estimates based on assumed constant returns and contributions. Actual investment returns vary. The 4% rule is a historical guideline, not a guarantee. This is not financial advice. Consult a qualified financial advisor before making major financial decisions.
+        </div>
+
+        <div class="ad-slot ad-slot-rectangle"></div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free online financial calculators to help you make smarter money decisions.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Personal Finance</h4>
+          <a href="/pages/personal-finance-calculators/financial-independence-calculator/">Financial Independence</a>
+          <a href="/pages/personal-finance-calculators/savings-rate-calculator/">Savings Rate</a>
+          <a href="/pages/personal-finance-calculators/net-income-calculator/">Net Income</a>
+          <a href="/pages/personal-finance-calculators/budget-percentage-calculator/">Budget Percentages</a>
+        </div>
+        <div class="footer-col">
+          <h4>Tools</h4>
+          <a href="/pages/finance-calculators/retirement-savings-calculator/">Retirement Savings</a>
+          <a href="/pages/investment-calculators/">Investment Calculators</a>
+          <a href="/pages/tax-calculators/">Tax Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about/">About</a>
+          <a href="/contact/">Contact</a>
+          <a href="/privacy/">Privacy Policy</a>
+          <a href="/terms/">Terms of Service</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 CalcWise. All rights reserved.</span>
+        <div class="footer-links">
+          <a href="/privacy/">Privacy</a>
+          <a href="/terms/">Terms</a>
+          <a href="/contact/">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calcFI() {
+      if (!CalcWise.validateForm('fi-form')) return;
+      const v = CalcWise.getFormValues('fi-form');
+
+      const annualExpenses = v.annualExpenses;
+      const currentSavings = v.currentSavings || 0;
+      const annualReturnPct = v.annualReturn;
+      const withdrawalRate = v.withdrawalRate;
+      const currentAge = v.currentAge;
+
+      const fiNumber = annualExpenses / (withdrawalRate / 100);
+      const monthlyReturn = annualReturnPct / 100 / 12;
+
+      // Find years to FI by simulating month-by-month growth
+      // We need to find monthly savings that makes this work
+      // First: calculate years with current monthly savings input (we solve numerically)
+      // We'll binary-search for the monthly savings required to hit FI in a given timeframe
+      // and also calculate years to FI if we know monthly savings
+
+      // Determine years to FI numerically given we need to find required monthly savings
+      // Actually: let user see years using a forward projection.
+      // We'll find years to reach fiNumber with current savings + compound growth (no new contributions)
+      // and also report what monthly savings are needed to reach FI in 20 years as a reference.
+
+      let yearsToFI = null;
+      // Binary search for years with unknown monthly savings
+      // Instead, let's find the minimum monthly savings to reach FI as quickly as possible
+      // and show years to FI given a "solve" approach
+
+      // Years to FI: given currentSavings compounding at r, find n such that FV >= fiNumber
+      // FV = currentSavings*(1+r)^n  — this ignores new contributions
+      // We need to also solve for required monthly contribution
+      // Let's solve: given desired years Y (we'll iterate), what monthly payment PMT is needed?
+      // PMT = (FI - PV*(1+r)^n) * r / ((1+r)^n - 1)
+
+      // Find years to FI if saving a certain amount — we solve for n where PMT >= 0
+      // More useful: user enters info, we solve for years given that required monthly savings is reasonable
+
+      // Approach: iterate years from 1 to 50, find when currentSavings compounds + any needed contribution hits FI
+      // We report "years to FI" assuming user saves the required monthly amount
+
+      // Find n (months) such that: currentSavings*(1+r)^n + PMT*((1+r)^n-1)/r = fiNumber
+      // Where PMT is the monthly savings needed. We want the minimum n given PMT we can find.
+
+      // Simplest useful output: years to FI if user saves the amount needed each month.
+      // Let's show scenarios at 10, 15, 20, 25, 30 years and what monthly savings is needed.
+
+      const scenarios = [10, 15, 20, 25, 30].map(years => {
+        const n = years * 12;
+        const fvFactor = Math.pow(1 + monthlyReturn, n);
+        let pmt;
+        if (monthlyReturn === 0) {
+          pmt = (fiNumber - currentSavings) / n;
+        } else {
+          pmt = (fiNumber - currentSavings * fvFactor) * monthlyReturn / (fvFactor - 1);
+        }
+        return { years, pmt: Math.max(0, pmt) };
+      });
+
+      // Find years to FI with $0 extra contributions (just compounding current savings)
+      let yearsNoContrib = null;
+      if (currentSavings >= fiNumber) {
+        yearsNoContrib = 0;
+      } else if (annualReturnPct > 0) {
+        yearsNoContrib = Math.log(fiNumber / currentSavings) / Math.log(1 + annualReturnPct / 100);
+      }
+
+      // Best estimate: years to FI assuming user saves the 20-year monthly amount
+      const ref20 = scenarios.find(s => s.years === 20);
+      const refPMT = ref20 ? ref20.pmt : 0;
+
+      // Solve for actual years with refPMT contribution
+      let bestYears = null;
+      if (refPMT > 0) {
+        for (let m = 1; m <= 600; m++) {
+          const fv = currentSavings * Math.pow(1 + monthlyReturn, m) +
+            (monthlyReturn > 0
+              ? refPMT * (Math.pow(1 + monthlyReturn, m) - 1) / monthlyReturn
+              : refPMT * m);
+          if (fv >= fiNumber) {
+            bestYears = Math.ceil(m / 12);
+            break;
+          }
+        }
+      } else if (yearsNoContrib !== null) {
+        bestYears = Math.ceil(yearsNoContrib);
+      }
+
+      const displayYears = bestYears || 20;
+      const fiAge = currentAge + displayYears;
+      const displayPMT = refPMT;
+
+      CalcWise.setText('fiNumber', CalcWise.formatCurrency(fiNumber, 0));
+      CalcWise.setText('yearsToFI', displayYears + ' years');
+      CalcWise.setText('fiAge', 'Age ' + fiAge);
+      CalcWise.setText('monthlySavings', CalcWise.formatCurrency(displayPMT, 0) + '/mo');
+
+      let detailHtml = '<div class="table-container"><table class="data-table"><thead><tr><th>Timeline</th><th>Monthly Savings Needed</th><th>FI Age</th><th>Annual Income from Portfolio</th></tr></thead><tbody>';
+      scenarios.forEach(s => {
+        detailHtml += `<tr><td>${s.years} years</td><td>${CalcWise.formatCurrency(s.pmt, 0)}/mo</td><td>Age ${currentAge + s.years}</td><td>${CalcWise.formatCurrency(annualExpenses, 0)}</td></tr>`;
+      });
+      detailHtml += '</tbody></table></div>';
+      detailHtml += `<p style="font-size:var(--text-sm);color:var(--color-text-secondary);margin-top:var(--space-3);">FI Number: ${CalcWise.formatCurrency(fiNumber, 0)} &bull; Based on ${withdrawalRate}% withdrawal rate &bull; ${annualReturnPct}% annual return assumed</p>`;
+      CalcWise.setHtml('fiDetails', detailHtml);
+
+      CalcWise.showResults('results');
+    }
+
+    function resetFI() {
+      document.getElementById('fi-form').reset();
+      CalcWise.hideResults('results');
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ETF Return Calculator | CalcWise</title>
+  <meta name="description" content="Calculate ETF returns net of expense ratios. Enter your initial investment, ETF annual return, expense ratio, and years to see gross return, net return, fees paid, and final value.">
+  <meta name="keywords" content="ETF return calculator, expense ratio calculator, ETF investment calculator, net return after fees, exchange traded fund calculator">
+  <link rel="canonical" href="https://calcwise.io/investment-calculators/etf-return-calculator/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="ETF Return Calculator | CalcWise">
+  <meta property="og:description" content="Calculate ETF returns net of expense ratios. See gross return, net return, fees paid, and final value.">
+  <meta property="og:url" content="https://calcwise.io/investment-calculators/etf-return-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ETF Return Calculator | CalcWise">
+  <meta name="twitter:description" content="Calculate ETF returns net of expense ratios. See gross return, net return, fees paid, and final value.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <!-- BreadcrumbList Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Investment Calculators", "item": "https://calcwise.io/investment-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "ETF Return Calculator", "item": "https://calcwise.io/investment-calculators/etf-return-calculator/" }
+    ]
+  }
+  </script>
+
+  <!-- FAQPage Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is an expense ratio?",
+        "acceptedAnswer": { "@type": "Answer", "text": "An expense ratio is the annual fee charged by an ETF or mutual fund, expressed as a percentage of your investment. It covers management, administrative, and operational costs. A 0.10% expense ratio means you pay $1 per year for every $1,000 invested." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is a low expense ratio for an ETF?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Index ETFs typically have expense ratios between 0.03% and 0.20%. Actively managed ETFs often charge 0.50% to 1.00% or more. Broadly, an expense ratio below 0.20% is considered low for a passively managed fund." }
+      },
+      {
+        "@type": "Question",
+        "name": "How much does an expense ratio affect returns?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Over long periods, even small expense ratios can significantly reduce your ending balance. A 1% annual fee on a $10,000 investment earning 8% over 30 years costs over $57,000 compared to a 0.05% fee. This is because fees compound just like returns." }
+      },
+      {
+        "@type": "Question",
+        "name": "Should I always choose the lowest expense ratio ETF?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Expense ratio is one of the most important factors since it directly reduces your return. However, also consider tracking error, liquidity, and the index being tracked. For similar funds tracking the same index, the lower expense ratio is almost always better." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/investment-calculators/" aria-current="page">Investments</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/investment-calculators/">Investment Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/investment-calculators/">Investment Calculators</a></li>
+          <li><span aria-current="page">ETF Return Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="article-content">
+          <h1>ETF Return Calculator</h1>
+          <p>Project the real-world return of an ETF investment after accounting for the expense ratio. Enter your initial investment, the ETF's annual return, its expense ratio, and the number of years to see gross return, net return after fees, total fees paid, and your final portfolio value.</p>
+
+          <div class="calc-container mt-8">
+            <div class="calc-header">
+              <h2>Calculate ETF Returns</h2>
+              <p>Enter your ETF investment details below</p>
+            </div>
+            <div class="calc-body">
+              <form id="etf-form" onsubmit="return false;">
+                <div class="form-group">
+                  <label class="form-label" for="etf-initial">Initial Investment</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="etf-initial" class="form-input" placeholder="10000.00" min="0.01" step="0.01" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="etf-annual-return">ETF Annual Return %</label>
+                  <div class="input-prefix">
+                    <input type="number" id="etf-annual-return" class="form-input" placeholder="9" min="0" max="100" step="0.01" required>
+                    <span class="prefix" style="left:auto;right:0.75rem;">%</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="expense-ratio">Expense Ratio %</label>
+                  <div class="input-prefix">
+                    <input type="number" id="expense-ratio" class="form-input" placeholder="0.10" min="0" max="10" step="0.01" required>
+                    <span class="prefix" style="left:auto;right:0.75rem;">%</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="etf-years">Years</label>
+                  <input type="number" id="etf-years" class="form-input" placeholder="20" min="1" max="50" step="1" required>
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calculateETFReturn()">Calculate ETF Return</button>
+                  <button type="button" class="btn btn-reset" onclick="resetETFReturn()">Reset</button>
+                </div>
+              </form>
+
+              <div id="etf-results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">Final Value (Net of Fees)</div>
+                  <div class="result-value" id="result-etf-final"></div>
+                </div>
+                <div class="result-grid">
+                  <div class="result-item">
+                    <div class="result-label">Gross Return (No Fees)</div>
+                    <div class="result-value" id="result-gross-return"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Net Return (After Fees)</div>
+                    <div class="result-value" id="result-net-return"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Total Fees Paid</div>
+                    <div class="result-value" id="result-fees-paid"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Fee Drag on Returns</div>
+                    <div class="result-value" id="result-fee-drag"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Formula Section -->
+          <section class="content-section">
+            <h2>ETF Return Formula</h2>
+            <p>The gross value (before expense ratio) and the net value (after expense ratio) are calculated using compound interest:</p>
+            <div class="formula-box">
+              <div class="formula-label">Gross Value Formula</div>
+              Gross Value = Initial Investment × (1 + Annual Return %)^Years
+            </div>
+            <div class="formula-box">
+              <div class="formula-label">Net Value Formula</div>
+              Net Value = Initial Investment × (1 + Annual Return % − Expense Ratio %)^Years
+            </div>
+            <p>The total fees paid is the difference between the gross value and the net value.</p>
+          </section>
+
+          <!-- How to Use -->
+          <section class="content-section">
+            <h2>How to Use This ETF Return Calculator</h2>
+            <ol>
+              <li><strong>Enter your initial investment</strong> — the amount you plan to invest in the ETF.</li>
+              <li><strong>Enter the ETF annual return %</strong> — the expected average annual return before the expense ratio.</li>
+              <li><strong>Enter the expense ratio %</strong> — found in the ETF's prospectus or on financial data sites.</li>
+              <li><strong>Enter the number of years</strong> — your intended holding period.</li>
+              <li><strong>Click "Calculate ETF Return"</strong> to see the impact of fees on your final value.</li>
+            </ol>
+          </section>
+
+          <!-- Example Scenario -->
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>Suppose you invest $10,000 in an ETF with a 9% annual return and a 0.10% expense ratio for 20 years. Your gross value (ignoring fees) would be approximately $56,044. After the 0.10% expense ratio, your net value would be about $55,062 — a difference of $982 in fees. Choosing a fund with a 1.00% expense ratio instead would cost you roughly $8,400 in fees over the same period.</p>
+          </section>
+
+          <!-- FAQ Section -->
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What is an expense ratio?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>An expense ratio is the annual fee charged by an ETF or mutual fund, expressed as a percentage of your investment. It covers management, administrative, and operational costs. A 0.10% expense ratio means you pay $1 per year for every $1,000 invested.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What is a low expense ratio for an ETF?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Index ETFs typically have expense ratios between 0.03% and 0.20%. Actively managed ETFs often charge 0.50% to 1.00% or more. Broadly, an expense ratio below 0.20% is considered low for a passively managed fund.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                How much does an expense ratio affect returns?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Over long periods, even small expense ratios can significantly reduce your ending balance. A 1% annual fee on a $10,000 investment earning 8% over 30 years costs over $57,000 compared to a 0.05% fee. This is because fees compound just like returns.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Should I always choose the lowest expense ratio ETF?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Expense ratio is one of the most important factors since it directly reduces your return. However, also consider tracking error, liquidity, and the index being tracked. For similar funds tracking the same index, the lower expense ratio is almost always better.</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Related Calculators -->
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/investment-calculators/expense-ratio-impact-calculator/" class="card card-link">
+                <h3>Expense Ratio Impact Calculator</h3>
+                <p>Compare portfolios with and without fees side by side.</p>
+              </a>
+              <a href="/investment-calculators/investment-fee-impact-calculator/" class="card card-link">
+                <h3>Investment Fee Impact Calculator</h3>
+                <p>See how advisor fees drag on long-term portfolio performance.</p>
+              </a>
+              <a href="/investment-calculators/cagr-calculator/" class="card card-link">
+                <h3>CAGR Calculator</h3>
+                <p>Compute compound annual growth rate for any investment.</p>
+              </a>
+              <a href="/investment-calculators/mutual-fund-performance-calculator/" class="card card-link">
+                <h3>Mutual Fund Performance Calculator</h3>
+                <p>Measure total return and CAGR for mutual fund investments.</p>
+              </a>
+            </div>
+          </section>
+
+          <!-- Disclaimer -->
+          <div class="disclaimer">
+            <strong>Disclaimer:</strong> This calculator provides estimates for informational purposes only. Actual ETF returns and fees may differ. This is not financial advice. Consult a qualified financial professional before making investment decisions.
+          </div>
+
+          <!-- Ad Slot -->
+          <div class="ad-slot ad-slot-leaderboard"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Real Estate</h4>
+          <a href="/real-estate-calculators/">All Real Estate Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Investments</h4>
+          <a href="/investment-calculators/">All Investment Calculators</a>
+          <a href="/investment-calculators/cagr-calculator/">CAGR Calculator</a>
+          <a href="/investment-calculators/dividend-yield-calculator/">Dividend Yield</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateETFReturn() {
+      const initial = parseFloat(document.getElementById('etf-initial').value);
+      const annualReturn = parseFloat(document.getElementById('etf-annual-return').value);
+      const expenseRatio = parseFloat(document.getElementById('expense-ratio').value);
+      const years = parseFloat(document.getElementById('etf-years').value);
+
+      if (!initial || initial <= 0 || isNaN(annualReturn) || isNaN(expenseRatio) || !years || years <= 0) {
+        alert('Please enter valid values for all fields.');
+        return;
+      }
+
+      const grossRate = annualReturn / 100;
+      const netRate = (annualReturn - expenseRatio) / 100;
+
+      const grossValue = initial * Math.pow(1 + grossRate, years);
+      const netValue = initial * Math.pow(1 + netRate, years);
+      const feesPaid = grossValue - netValue;
+      const grossReturn = ((grossValue - initial) / initial) * 100;
+      const netReturn = ((netValue - initial) / initial) * 100;
+      const feeDrag = grossReturn - netReturn;
+
+      document.getElementById('result-etf-final').textContent = CalcWise.formatCurrency(netValue);
+      document.getElementById('result-gross-return').textContent = CalcWise.formatCurrency(grossValue) + ' (' + CalcWise.formatPercent(grossReturn) + ')';
+      document.getElementById('result-net-return').textContent = CalcWise.formatPercent(netReturn);
+      document.getElementById('result-fees-paid').textContent = CalcWise.formatCurrency(feesPaid);
+      document.getElementById('result-fee-drag').textContent = CalcWise.formatPercent(feeDrag);
+      document.getElementById('etf-results').classList.remove('hidden');
+    }
+
+    function resetETFReturn() {
+      document.getElementById('etf-form').reset();
+      document.getElementById('etf-results').classList.add('hidden');
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HSA Calculator - Health Savings Account Growth & Tax Savings | CalcWise</title>
+  <meta name="description" content="Free HSA calculator. Estimate your Health Savings Account balance at retirement, annual tax savings, and effective after-tax value based on contributions, returns, and your tax rate.">
+  <meta name="keywords" content="HSA calculator, health savings account calculator, HSA tax savings, HSA growth calculator, HDHP calculator">
+  <link rel="canonical" href="https://calcwise.io/healthcare-calculators/health-savings-account-calculator/">
+
+  <meta property="og:title" content="HSA Calculator - Health Savings Account Growth & Tax Savings">
+  <meta property="og:description" content="Estimate your HSA balance at retirement, annual tax savings, and effective after-tax value with compound growth.">
+  <meta property="og:url" content="https://calcwise.io/healthcare-calculators/health-savings-account-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="HSA Calculator - Health Savings Account Growth & Tax Savings">
+  <meta name="twitter:description" content="Estimate your HSA balance at retirement, annual tax savings, and effective after-tax value with compound growth.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Healthcare Calculators", "item": "https://calcwise.io/healthcare-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "Health Savings Account Calculator", "item": "https://calcwise.io/healthcare-calculators/health-savings-account-calculator/" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What are the HSA contribution limits?",
+        "acceptedAnswer": { "@type": "Answer", "text": "For 2026, the IRS HSA contribution limits are approximately $4,300 for self-only coverage and $8,550 for family coverage under a High Deductible Health Plan (HDHP). Individuals age 55 or older can contribute an additional $1,000 catch-up amount. Limits are adjusted annually for inflation." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the triple tax advantage of an HSA?",
+        "acceptedAnswer": { "@type": "Answer", "text": "HSAs offer three tax benefits: (1) contributions are tax-deductible or pre-tax, reducing your taxable income; (2) investment earnings grow tax-free; and (3) withdrawals for qualified medical expenses are tax-free. This makes the HSA the most tax-advantaged savings account available." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I invest my HSA funds?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Most HSA providers allow you to invest funds in mutual funds, ETFs, and other securities once your balance exceeds a threshold (often $1,000-$2,000). Investing your HSA for long-term growth rather than spending it annually is often called the HSA 'super savings' strategy." }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens to HSA funds at retirement?",
+        "acceptedAnswer": { "@type": "Answer", "text": "After age 65, you can withdraw HSA funds for any purpose without penalty (though non-medical withdrawals are subject to income tax, similar to a Traditional IRA). Withdrawals for qualified medical expenses remain tax-free at any age, making the HSA an excellent retirement medical expense fund." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/business-calculators/">Business</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/business-calculators/">Business Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/healthcare-calculators/">Healthcare Calculators</a></li>
+          <li><span aria-current="page">Health Savings Account Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="article-content">
+          <h1>Health Savings Account (HSA) Calculator</h1>
+          <p>An HSA is one of the most powerful tax-advantaged accounts available. This calculator shows how your annual HSA contributions grow through compound interest and investment returns, your annual tax savings from the deduction, your projected balance at retirement, and the effective after-tax value of every dollar you contribute.</p>
+
+          <div class="calc-container mt-8">
+            <div class="calc-header">
+              <h2>Project Your HSA Growth & Tax Savings</h2>
+              <p>Enter your contribution, return rate, and tax details</p>
+            </div>
+            <div class="calc-body">
+              <form id="hsa-form" onsubmit="return false;">
+                <div class="form-group">
+                  <label class="form-label" for="hsa-contribution">Annual HSA Contribution</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="hsa-contribution" class="form-input" placeholder="4300" min="1" max="10000" step="100" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="hsa-return">Annual Return Rate</label>
+                  <div class="input-suffix">
+                    <input type="number" id="hsa-return" class="form-input" placeholder="6" min="0" max="20" step="0.1" required>
+                    <span class="suffix">%</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="hsa-years">Years Until Retirement</label>
+                  <input type="number" id="hsa-years" class="form-input" placeholder="25" min="1" max="50" step="1" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="tax-rate">Marginal Tax Rate</label>
+                  <div class="input-suffix">
+                    <input type="number" id="tax-rate" class="form-input" placeholder="24" min="0" max="50" step="1" required>
+                    <span class="suffix">%</span>
+                  </div>
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calculateHSA()">Calculate</button>
+                  <button type="button" class="btn btn-reset" onclick="resetHSA()">Reset</button>
+                </div>
+              </form>
+
+              <div id="hsa-results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">HSA Balance at Retirement</div>
+                  <div class="result-value" id="result-hsa-balance"></div>
+                </div>
+                <div class="result-grid result-grid-3">
+                  <div class="result-item">
+                    <div class="result-label">Annual Tax Savings</div>
+                    <div class="result-value" id="result-tax-savings"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Total Contributed</div>
+                    <div class="result-value" id="result-total-contributed"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Investment Growth</div>
+                    <div class="result-value" id="result-growth"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <section class="content-section">
+            <h2>HSA Growth Formula</h2>
+            <p>The HSA balance is calculated using the future value of an annuity formula, exactly like a retirement account:</p>
+            <div class="formula-box">
+              <div class="formula-label">HSA Balance at Retirement (Future Value of Annuity)</div>
+              FV = PMT &times; [(1 + r)^n - 1] / r
+            </div>
+            <p>Where <strong>PMT</strong> is annual contribution, <strong>r</strong> is the annual return rate, and <strong>n</strong> is years until retirement. Annual tax savings equals your contribution multiplied by your marginal tax rate — the immediate benefit from the deduction.</p>
+            <div class="formula-box">
+              <div class="formula-label">Annual Tax Savings</div>
+              Tax Savings = Annual Contribution &times; (Marginal Tax Rate / 100)
+            </div>
+          </section>
+
+          <section class="content-section">
+            <h2>How to Use This Calculator</h2>
+            <ol>
+              <li><strong>Enter your annual HSA contribution</strong> - up to the IRS limit ($4,300 for self-only, $8,550 for family in 2026).</li>
+              <li><strong>Enter expected annual return</strong> - use 5-7% for a diversified investment portfolio; use 2-3% if keeping funds in cash.</li>
+              <li><strong>Enter years until retirement</strong> - years remaining in your career.</li>
+              <li><strong>Enter your marginal tax rate</strong> - your federal income tax bracket (22%, 24%, 32%, etc.).</li>
+              <li><strong>Click Calculate</strong> to see projected balance, tax savings, and growth.</li>
+            </ol>
+          </section>
+
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>A 40-year-old contributes the maximum self-only amount of $4,300/year to their HSA, invests it at 6% annually, and has 25 years until retirement. They are in the 24% tax bracket. At retirement, their HSA balance would grow to approximately $237,000. Their annual tax savings are $1,032. Over 25 years, they will have contributed $107,500 total, with the remaining $129,500 coming from investment returns — all of which can be withdrawn tax-free for medical expenses in retirement.</p>
+          </section>
+
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What are the HSA contribution limits?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>For 2026, the IRS HSA contribution limits are approximately $4,300 for self-only HDHP coverage and $8,550 for family coverage. Individuals age 55 or older can contribute an additional $1,000 catch-up amount. Limits are adjusted annually for inflation.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What is the triple tax advantage of an HSA?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>HSAs offer three tax benefits: contributions are tax-deductible or pre-tax; investment earnings grow tax-free; and withdrawals for qualified medical expenses are tax-free. This makes the HSA the most tax-advantaged savings account available.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Can I invest my HSA funds?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Yes. Most HSA providers allow you to invest funds in mutual funds, ETFs, and other securities once your balance exceeds a threshold (often $1,000-$2,000). Investing your HSA for long-term growth rather than spending it annually maximizes its retirement value.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What happens to HSA funds at retirement?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>After age 65, you can withdraw HSA funds for any purpose without penalty (though non-medical withdrawals are taxed like a Traditional IRA). Withdrawals for qualified medical expenses remain tax-free at any age, making the HSA an outstanding retirement medical expense fund.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/healthcare-calculators/healthcare-deductible-calculator/" class="card card-link">
+                <h3>Healthcare Deductible Calculator</h3>
+                <p>Compare high vs low deductible plan total costs.</p>
+              </a>
+              <a href="/healthcare-calculators/out-of-pocket-cost-calculator/" class="card card-link">
+                <h3>Out-of-Pocket Cost Calculator</h3>
+                <p>Model how annual medical costs flow through your plan.</p>
+              </a>
+              <a href="/finance-calculators/compound-interest-calculator/" class="card card-link">
+                <h3>Compound Interest Calculator</h3>
+                <p>See how compound interest grows any investment over time.</p>
+              </a>
+            </div>
+          </section>
+
+          <div class="disclaimer">
+            <strong>Disclaimer:</strong> This calculator provides estimates for informational purposes only. HSA contribution limits, tax rules, and investment returns are subject to change. Actual tax savings depend on your full tax situation including state taxes. Investment returns are not guaranteed. Consult a qualified tax advisor and financial planner for personalized guidance. This is not tax or financial advice.
+          </div>
+
+          <div class="ad-slot ad-slot-leaderboard"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Healthcare</h4>
+          <a href="/healthcare-calculators/">All Healthcare Calculators</a>
+          <a href="/healthcare-calculators/healthcare-deductible-calculator/">Deductible Calculator</a>
+        </div>
+        <div class="footer-col">
+          <h4>Finance</h4>
+          <a href="/finance-calculators/">All Finance Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateHSA() {
+      if (!CalcWise.validateForm('hsa-form')) return;
+
+      const contribution = CalcWise.parseNumber(document.getElementById('hsa-contribution').value);
+      const annualReturn = parseFloat(document.getElementById('hsa-return').value) / 100;
+      const years = CalcWise.parseNumber(document.getElementById('hsa-years').value);
+      const taxRate = parseFloat(document.getElementById('tax-rate').value) / 100;
+
+      // Future Value of Annuity
+      let balance;
+      if (annualReturn === 0) {
+        balance = contribution * years;
+      } else {
+        balance = contribution * (Math.pow(1 + annualReturn, years) - 1) / annualReturn;
+      }
+
+      const totalContributed = contribution * years;
+      const growth = balance - totalContributed;
+      const annualTaxSavings = contribution * taxRate;
+
+      CalcWise.setText('result-hsa-balance', CalcWise.formatCurrency(balance));
+      CalcWise.setText('result-tax-savings', CalcWise.formatCurrency(annualTaxSavings) + '/yr');
+      CalcWise.setText('result-total-contributed', CalcWise.formatCurrency(totalContributed));
+      CalcWise.setText('result-growth', CalcWise.formatCurrency(growth));
+      CalcWise.showResults('hsa-results');
+    }
+
+    function resetHSA() {
+      document.getElementById('hsa-form').reset();
+      CalcWise.hideResults('hsa-results');
+    }
+  </script>
+</body>
+</html>

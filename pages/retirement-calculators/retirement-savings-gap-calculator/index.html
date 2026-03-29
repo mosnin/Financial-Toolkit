@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Retirement Savings Gap Calculator - Are You on Track? | CalcWise</title>
+  <meta name="description" content="Free retirement savings gap calculator. Enter your current savings, age, and savings rate to see your projected balance, the income it can support, any shortfall, and what you need to close the gap.">
+  <meta name="keywords" content="retirement savings gap calculator, retirement shortfall calculator, am I on track for retirement, retirement gap analysis, how much more to save for retirement">
+  <link rel="canonical" href="https://calcwise.io/retirement-calculators/retirement-savings-gap-calculator/">
+
+  <meta property="og:title" content="Retirement Savings Gap Calculator - Are You on Track?">
+  <meta property="og:description" content="Find out if your current savings rate will fund your retirement or whether you have a savings gap to close.">
+  <meta property="og:url" content="https://calcwise.io/retirement-calculators/retirement-savings-gap-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Retirement Savings Gap Calculator - Are You on Track?">
+  <meta name="twitter:description" content="Find out if your current savings rate will fund your retirement or whether you have a savings gap to close.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Retirement Calculators", "item": "https://calcwise.io/retirement-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "Retirement Savings Gap Calculator", "item": "https://calcwise.io/retirement-calculators/retirement-savings-gap-calculator/" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do I know if I have a retirement savings gap?",
+        "acceptedAnswer": { "@type": "Answer", "text": "You have a retirement savings gap if your projected portfolio at retirement cannot support your desired income for your expected retirement years. Compare your projected balance against the required nest egg (desired annual income divided by 4%). This calculator does that comparison automatically and quantifies any shortfall." }
+      },
+      {
+        "@type": "Question",
+        "name": "How much should I have saved for retirement by age?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Fidelity's common benchmarks: 1x salary by 30, 3x by 40, 6x by 50, 8x by 60, and 10x by 67. For example, if you earn $80,000, you should aim for $480,000 saved by age 50. These are rough guides — your actual target depends on your planned retirement age, expenses, and Social Security income." }
+      },
+      {
+        "@type": "Question",
+        "name": "What if my retirement savings gap is very large?",
+        "acceptedAnswer": { "@type": "Answer", "text": "A large gap still has solutions: delay retirement (even 2-3 years dramatically improves outcomes), increase savings rate, reduce planned retirement spending, work part-time in early retirement, or plan to claim Social Security later for a higher benefit. This calculator helps quantify the monthly savings needed to close the gap." }
+      },
+      {
+        "@type": "Question",
+        "name": "Does Social Security reduce my savings gap?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Social Security reduces the income your portfolio must provide, which reduces the required nest egg and therefore the gap. If you enter a target income that already accounts for Social Security (i.e., income above and beyond what SS provides), the calculator will correctly size the remaining portfolio gap." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/retirement-calculators/" aria-current="page">Retirement</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/retirement-calculators/">Retirement Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/retirement-calculators/">Retirement Calculators</a></li>
+          <li><span aria-current="page">Retirement Savings Gap Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="article-content">
+          <h1>Retirement Savings Gap Calculator</h1>
+          <p>Find out whether you are on track for retirement or falling behind. This calculator projects your savings to retirement day, compares it to the nest egg you need, and calculates exactly how much you would need to save each month to close any gap — giving you a clear action plan.</p>
+
+          <div class="calc-container mt-8">
+            <div class="calc-header">
+              <h2>Find Your Retirement Savings Gap</h2>
+              <p>Enter your current situation and retirement goals</p>
+            </div>
+            <div class="calc-body">
+              <form id="gap-form" onsubmit="return false;">
+                <div class="form-group">
+                  <label class="form-label" for="current-savings">Current Retirement Savings</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="current-savings" class="form-input" placeholder="150000" min="0" step="1000" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="current-age">Current Age</label>
+                  <input type="number" id="current-age" class="form-input" placeholder="45" min="18" max="75" step="1" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="retirement-age">Target Retirement Age</label>
+                  <input type="number" id="retirement-age" class="form-input" placeholder="65" min="40" max="80" step="1" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="monthly-savings">Current Monthly Savings</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="monthly-savings" class="form-input" placeholder="800" min="0" step="50" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="expected-return">Expected Annual Return</label>
+                  <div class="input-suffix">
+                    <input type="number" id="expected-return" class="form-input" placeholder="7" min="1" max="15" step="0.5" required>
+                    <span class="suffix">%</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="target-income">Target Annual Retirement Income (from portfolio)</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="target-income" class="form-input" placeholder="60000" min="5000" step="1000" required>
+                  </div>
+                  <small class="form-hint">Income needed from your portfolio — subtract Social Security from your total income need</small>
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calcGap()">Calculate Savings Gap</button>
+                  <button type="button" class="btn btn-reset" onclick="resetCalc()">Reset</button>
+                </div>
+              </form>
+
+              <div id="calc-results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">Savings Gap / Surplus</div>
+                  <div class="result-value" id="result-gap"></div>
+                </div>
+                <div class="result-grid">
+                  <div class="result-item">
+                    <div class="result-label">Projected Savings at Retirement</div>
+                    <div class="result-value" id="result-projected"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Required Nest Egg (4% rule)</div>
+                    <div class="result-value" id="result-required"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Income Your Projection Can Support</div>
+                    <div class="result-value" id="result-supportable-income"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Monthly Savings to Close Gap</div>
+                    <div class="result-value" id="result-monthly-to-close"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <section class="content-section">
+            <h2>Savings Gap Calculation Formula</h2>
+            <p>The calculator projects your savings forward and compares it to the required nest egg using the 4% rule:</p>
+            <div class="formula-box">
+              <div class="formula-label">Projected Savings at Retirement</div>
+              FV = Current Savings x (1 + r)^n + Monthly Savings x ((1 + r)^n - 1) / (r/12)
+              where r = monthly return and n = months to retirement
+            </div>
+            <div class="formula-box">
+              <div class="formula-label">Required Nest Egg (4% Rule)</div>
+              Required = Target Annual Income / 0.04
+            </div>
+            <div class="formula-box">
+              <div class="formula-label">Monthly Savings to Close Gap</div>
+              Gap = Required - Projected
+              Monthly = Gap x (r/12) / ((1 + r/12)^n - 1)
+            </div>
+          </section>
+
+          <section class="content-section">
+            <h2>How to Use This Savings Gap Calculator</h2>
+            <ol>
+              <li><strong>Enter your current retirement savings</strong> - total of all retirement accounts (401k, IRA, etc.).</li>
+              <li><strong>Enter your current age and target retirement age</strong> to set the accumulation period.</li>
+              <li><strong>Enter your current monthly savings</strong> - what you actually contribute each month.</li>
+              <li><strong>Enter your expected return</strong> - 6-7% is a commonly used conservative estimate.</li>
+              <li><strong>Enter your target annual income from your portfolio</strong> - subtract Social Security from your total income need first.</li>
+              <li><strong>Click "Calculate Savings Gap"</strong> to see your gap or surplus and a clear monthly savings target.</li>
+            </ol>
+          </section>
+
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>A 45-year-old with $150,000 saved, contributing $800/month, targeting retirement at 65 with a 7% return will accumulate approximately $980,000. If the target annual portfolio income is $60,000, the required nest egg is $1.5 million (using 4% rule) — leaving a gap of about $520,000. To close this gap on the same 20-year timeline, they would need to increase monthly savings to approximately $1,800/month.</p>
+          </section>
+
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                How do I know if I have a retirement savings gap?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>You have a retirement savings gap if your projected portfolio at retirement cannot support your desired income for your expected retirement years. This calculator compares your projected balance against the required nest egg and quantifies any shortfall.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                How much should I have saved for retirement by age?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Fidelity's benchmarks: 1x salary by 30, 3x by 40, 6x by 50, 8x by 60, and 10x by 67. These are rough guides — your actual target depends on your planned retirement age, expenses, and Social Security income.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What if my retirement savings gap is very large?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Solutions include: delay retirement by 2-3 years, increase savings rate, reduce planned spending, work part-time in early retirement, or claim Social Security later for a higher benefit. This calculator helps quantify exactly how much more savings would close the gap.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Does Social Security reduce my savings gap?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Yes. Social Security reduces the income your portfolio must provide, which reduces the required nest egg and therefore the gap. Enter your target income as the amount needed above and beyond Social Security to get the accurate gap calculation.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/retirement-calculators/retirement-nest-egg-calculator/" class="card card-link">
+                <h3>Nest Egg Calculator</h3>
+                <p>Calculate the precise portfolio size needed for your retirement income goal.</p>
+              </a>
+              <a href="/retirement-calculators/retirement-income-replacement-calculator/" class="card card-link">
+                <h3>Income Replacement Calculator</h3>
+                <p>Determine your target retirement income based on pre-retirement earnings.</p>
+              </a>
+              <a href="/retirement-calculators/401k-match-calculator/" class="card card-link">
+                <h3>401(k) Match Calculator</h3>
+                <p>Capture employer match to accelerate closing your savings gap.</p>
+              </a>
+              <a href="/retirement-calculators/retirement-withdrawal-rate-calculator/" class="card card-link">
+                <h3>Withdrawal Rate Calculator</h3>
+                <p>Find a safe withdrawal rate for your projected portfolio balance.</p>
+              </a>
+            </div>
+          </section>
+
+          <div class="disclaimer">
+            <strong>Disclaimer:</strong> This calculator uses the 4% rule as a simplified benchmark for required savings. Actual safe withdrawal rates depend on asset allocation, sequence of returns, and retirement length. These projections assume constant returns and do not account for market volatility. This is not financial advice — consult a qualified financial planner.
+          </div>
+
+          <div class="ad-slot ad-slot-leaderboard"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Real Estate</h4>
+          <a href="/real-estate-calculators/">All Real Estate Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Retirement</h4>
+          <a href="/retirement-calculators/">All Retirement Calculators</a>
+          <a href="/retirement-calculators/retirement-age-calculator/">Retirement Age</a>
+          <a href="/retirement-calculators/401k-match-calculator/">401(k) Match</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calcGap() {
+      const currentSavings = parseFloat(document.getElementById('current-savings').value) || 0;
+      const currentAge = parseInt(document.getElementById('current-age').value);
+      const retirementAge = parseInt(document.getElementById('retirement-age').value);
+      const monthlySavings = parseFloat(document.getElementById('monthly-savings').value) || 0;
+      const annualReturn = parseFloat(document.getElementById('expected-return').value) / 100;
+      const targetIncome = parseFloat(document.getElementById('target-income').value);
+
+      if (!currentAge || !retirementAge || !annualReturn || !targetIncome) return;
+      if (retirementAge <= currentAge) return;
+
+      const monthlyRate = annualReturn / 12;
+      const months = (retirementAge - currentAge) * 12;
+
+      // Project savings forward
+      const fvSavings = currentSavings * Math.pow(1 + monthlyRate, months);
+      const fvContribs = monthlyRate > 0
+        ? monthlySavings * (Math.pow(1 + monthlyRate, months) - 1) / monthlyRate
+        : monthlySavings * months;
+      const projectedSavings = fvSavings + fvContribs;
+
+      // Required nest egg via 4% rule
+      const requiredNestEgg = targetIncome / 0.04;
+      const gap = requiredNestEgg - projectedSavings;
+      const supportableIncome = projectedSavings * 0.04;
+
+      // Monthly savings needed to close gap
+      let monthlyToClose = 0;
+      if (gap > 0 && monthlyRate > 0) {
+        monthlyToClose = gap * monthlyRate / (Math.pow(1 + monthlyRate, months) - 1);
+      } else if (gap > 0) {
+        monthlyToClose = gap / months;
+      }
+
+      const totalMonthlyNeeded = monthlySavings + monthlyToClose;
+      const fmt = (v) => CalcWise.formatCurrency(v, 0);
+
+      const gapEl = document.getElementById('result-gap');
+      if (gap > 0) {
+        gapEl.textContent = '-' + fmt(gap) + ' shortfall';
+        gapEl.style.color = '#DC2626';
+      } else {
+        gapEl.textContent = '+' + fmt(Math.abs(gap)) + ' surplus';
+        gapEl.style.color = '#059669';
+      }
+
+      CalcWise.setText('result-projected', fmt(projectedSavings));
+      CalcWise.setText('result-required', fmt(requiredNestEgg));
+      CalcWise.setText('result-supportable-income', fmt(supportableIncome) + '/yr');
+      CalcWise.setText('result-monthly-to-close', gap > 0 ? fmt(totalMonthlyNeeded) + '/mo total' : 'Already on track');
+
+      CalcWise.showResults('calc-results');
+    }
+
+    function resetCalc() {
+      document.getElementById('gap-form').reset();
+      CalcWise.hideResults('calc-results');
+    }
+  </script>
+</body>
+</html>

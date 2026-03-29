@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gross Profit Calculator - CalcWise</title>
+  <meta name="description" content="Calculate gross profit, gross margin percentage, and gross profit per unit from revenue, cost of goods sold, and optional unit count. Free instant results.">
+  <link rel="canonical" href="https://calcwise.io/business-operations-calculators/gross-profit-calculator/">
+
+  <meta property="og:title" content="Gross Profit Calculator - CalcWise">
+  <meta property="og:description" content="Calculate gross profit, gross margin %, and gross profit per unit from revenue and COGS.">
+  <meta property="og:url" content="https://calcwise.io/business-operations-calculators/gross-profit-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Gross Profit Calculator - CalcWise">
+  <meta name="twitter:description" content="Calculate gross profit, gross margin %, and gross profit per unit from revenue and COGS.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Business Operations Calculators", "item": "https://calcwise.io/business-operations-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "Gross Profit Calculator", "item": "https://calcwise.io/business-operations-calculators/gross-profit-calculator/" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is gross profit?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Gross profit is the revenue remaining after subtracting the cost of goods sold (COGS). It represents how much money is available to cover operating expenses and generate net profit." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is gross margin?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Gross margin (or gross profit margin) is gross profit expressed as a percentage of revenue. It is calculated as (Gross Profit / Revenue) x 100 and shows what proportion of each dollar of revenue is kept as gross profit." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is a good gross margin?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Good gross margins vary widely by industry. Software companies typically achieve 70-90%, retail 20-40%, manufacturing 25-50%, and grocery 20-25%. Compare your margin to industry peers for proper benchmarking." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between gross profit and net profit?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Gross profit is revenue minus COGS only. Net profit subtracts all additional expenses including operating costs, interest, and taxes. Gross profit is always higher than net profit." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/business-operations-calculators/" aria-current="page">Business</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/business-operations-calculators/" aria-current="page">Business Operations Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container page-content">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/business-operations-calculators/">Business Operations Calculators</a></li>
+          <li><span aria-current="page">Gross Profit Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="calc-page-layout">
+        <div class="calc-page-main">
+          <h1>Gross Profit Calculator</h1>
+          <p class="mt-4 mb-8" style="font-size:var(--text-lg); color:var(--color-gray-600); max-width:700px; line-height:var(--leading-relaxed);">Gross profit is the foundation of business financial health -- it tells you how much revenue remains after paying for the goods or services you sold. Enter your revenue and COGS below to instantly calculate your gross profit, gross margin, and per-unit profitability.</p>
+
+          <div class="calc-container">
+            <div class="calc-header">
+              <h2>Calculate Gross Profit</h2>
+              <p>Enter revenue, cost of goods sold, and optionally units sold</p>
+            </div>
+            <div class="calc-body">
+              <form id="grossProfitForm" novalidate>
+                <div class="form-group">
+                  <label class="form-label" for="revenue">Revenue <span class="form-hint">Total income from sales</span></label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="revenue" name="revenue" class="form-input" placeholder="250000" min="0.01" step="0.01" required>
+                  </div>
+                  <span class="form-error">Please enter a valid revenue amount greater than zero.</span>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="cogs">Cost of Goods Sold (COGS) <span class="form-hint">Direct production costs</span></label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="cogs" name="cogs" class="form-input" placeholder="150000" min="0" step="0.01" required>
+                  </div>
+                  <span class="form-error">Please enter a valid COGS amount.</span>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="units">Units Sold <span class="form-hint">Optional: for per-unit calculation</span></label>
+                  <input type="number" id="units" name="units" class="form-input" placeholder="1000" min="1" step="1">
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calculateGrossProfit()">Calculate Gross Profit</button>
+                  <button type="button" class="btn btn-reset" onclick="resetGrossProfitForm()">Reset</button>
+                </div>
+              </form>
+
+              <div id="results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">Gross Profit</div>
+                  <div class="result-value" id="resultGrossProfit">$0</div>
+                </div>
+                <div class="result-grid result-grid-3">
+                  <div class="result-item">
+                    <div class="result-label">Gross Margin</div>
+                    <div class="result-value" id="resultGrossMargin">0%</div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">COGS Ratio</div>
+                    <div class="result-value" id="resultCOGSRatio">0%</div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Gross Profit per Unit</div>
+                    <div class="result-value" id="resultPerUnit">--</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="disclaimer">
+            <strong>Disclaimer:</strong> This calculator provides estimates for educational purposes. Gross profit does not account for operating expenses, taxes, or interest. For a complete picture of profitability, use the Net Profit Calculator. Consult a financial professional for business decisions.
+          </div>
+
+          <div class="ad-slot ad-slot-leaderboard"></div>
+
+          <section class="content-section">
+            <h2>Gross Profit Formulas</h2>
+            <p>These core formulas form the basis of income statement analysis.</p>
+            <div class="formula-box">
+              <div class="formula-label">Gross Profit</div>
+              Gross Profit = Revenue - Cost of Goods Sold (COGS)
+            </div>
+            <div class="formula-box">
+              <div class="formula-label">Gross Margin %</div>
+              Gross Margin = (Gross Profit / Revenue) x 100
+            </div>
+            <div class="formula-box">
+              <div class="formula-label">Gross Profit per Unit</div>
+              Gross Profit per Unit = Gross Profit / Units Sold
+            </div>
+            <div class="formula-box">
+              <div class="formula-label">COGS Ratio</div>
+              COGS Ratio = (COGS / Revenue) x 100
+            </div>
+          </section>
+
+          <section class="content-section">
+            <h2>How to Use This Calculator</h2>
+            <ol>
+              <li><strong>Enter your revenue</strong> -- the total sales income for the period you are analyzing.</li>
+              <li><strong>Enter your COGS</strong> -- direct costs including raw materials, direct labor, and manufacturing overhead.</li>
+              <li><strong>Optionally enter units sold</strong> to see gross profit broken down per unit, useful for pricing analysis.</li>
+              <li><strong>Click "Calculate Gross Profit"</strong> to see your gross profit, gross margin, and per-unit profitability.</li>
+            </ol>
+          </section>
+
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>A consumer goods company generates <strong>$250,000 in revenue</strong>, has <strong>$150,000 in COGS</strong>, and sold <strong>1,000 units</strong>.</p>
+            <ul>
+              <li><strong>Gross Profit:</strong> $250,000 - $150,000 = <strong>$100,000</strong></li>
+              <li><strong>Gross Margin:</strong> ($100,000 / $250,000) x 100 = <strong>40%</strong></li>
+              <li><strong>COGS Ratio:</strong> ($150,000 / $250,000) x 100 = <strong>60%</strong></li>
+              <li><strong>Gross Profit per Unit:</strong> $100,000 / 1,000 = <strong>$100 per unit</strong></li>
+            </ul>
+            <p>A 40% gross margin leaves $100,000 to cover operating expenses and generate net profit. Improving COGS by 5% would add $12,500 directly to gross profit.</p>
+          </section>
+
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What is gross profit?
+                <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Gross profit is the revenue remaining after subtracting the cost of goods sold (COGS). It represents how much money is available to cover operating expenses and generate net profit.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What is gross margin?
+                <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 011-1z"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Gross margin is gross profit expressed as a percentage of revenue. It shows what proportion of each dollar of revenue is kept as gross profit after covering direct production costs.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What is a good gross margin?
+                <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 011-1z"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Good gross margins vary widely by industry. Software companies typically achieve 70-90%, retail 20-40%, manufacturing 25-50%, and grocery 20-25%. Compare your margin to industry peers for proper benchmarking.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What is the difference between gross profit and net profit?
+                <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 011-1z"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Gross profit is revenue minus COGS only. Net profit subtracts all additional expenses including operating costs, interest, and taxes. Gross profit is always higher than net profit.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/business-operations-calculators/net-profit-calculator/" class="card card-link">
+                <h3>Net Profit Calculator</h3>
+                <p>Calculate net profit and net margin after all expenses and taxes.</p>
+              </a>
+              <a href="/business-operations-calculators/operating-margin-calculator/" class="card card-link">
+                <h3>Operating Margin Calculator</h3>
+                <p>Measure operational profitability with operating margin percentage.</p>
+              </a>
+              <a href="/business-operations-calculators/profit-forecast-calculator/" class="card card-link">
+                <h3>Profit Forecast Calculator</h3>
+                <p>Project monthly revenue and profit for the period ahead.</p>
+              </a>
+              <a href="/business-operations-calculators/business-growth-rate-calculator/" class="card card-link">
+                <h3>Business Growth Rate Calculator</h3>
+                <p>Calculate and project your revenue growth rate.</p>
+              </a>
+              <a href="/business-operations-calculators/working-capital-calculator/" class="card card-link">
+                <h3>Working Capital Calculator</h3>
+                <p>Assess liquidity with working capital and current ratio.</p>
+              </a>
+            </div>
+          </section>
+        </div>
+
+        <aside class="calc-page-sidebar">
+          <div class="sidebar-card">
+            <h3>Business Operations</h3>
+            <a href="/business-operations-calculators/business-growth-rate-calculator/">Growth Rate</a>
+            <a href="/business-operations-calculators/cash-conversion-cycle-calculator/">Cash Conversion Cycle</a>
+            <a href="/business-operations-calculators/customer-churn-rate-calculator/">Customer Churn Rate</a>
+            <a href="/business-operations-calculators/gross-profit-calculator/">Gross Profit</a>
+            <a href="/business-operations-calculators/net-profit-calculator/">Net Profit</a>
+            <a href="/business-operations-calculators/operating-margin-calculator/">Operating Margin</a>
+            <a href="/business-operations-calculators/profit-forecast-calculator/">Profit Forecast</a>
+            <a href="/business-operations-calculators/revenue-forecasting-calculator/">Revenue Forecasting</a>
+            <a href="/business-operations-calculators/vendor-payment-schedule-calculator/">Vendor Payment Schedule</a>
+            <a href="/business-operations-calculators/working-capital-calculator/">Working Capital</a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Real Estate</h4>
+          <a href="/real-estate-calculators/">All Real Estate</a>
+        </div>
+        <div class="footer-col">
+          <h4>Finance</h4>
+          <a href="/finance-calculators/">All Finance</a>
+        </div>
+        <div class="footer-col">
+          <h4>Business</h4>
+          <a href="/business-operations-calculators/">All Business Operations</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/about.html">About</a>
+          <a href="/contact.html">Contact</a>
+          <a href="/privacy.html">Privacy</a>
+          <a href="/terms.html">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateGrossProfit() {
+      const revenue = CalcWise.parseNumber(document.getElementById('revenue').value);
+      const cogs = CalcWise.parseNumber(document.getElementById('cogs').value);
+      const units = parseInt(document.getElementById('units').value) || 0;
+
+      if (revenue <= 0) { alert('Revenue must be greater than zero.'); return; }
+      if (cogs < 0) { alert('COGS cannot be negative.'); return; }
+
+      const grossProfit = revenue - cogs;
+      const grossMargin = (grossProfit / revenue) * 100;
+      const cogsRatio = (cogs / revenue) * 100;
+
+      CalcWise.setText('resultGrossProfit', CalcWise.formatCurrency(grossProfit));
+      CalcWise.setText('resultGrossMargin', CalcWise.formatPercent(grossMargin));
+      CalcWise.setText('resultCOGSRatio', CalcWise.formatPercent(cogsRatio));
+
+      if (units > 0) {
+        CalcWise.setText('resultPerUnit', CalcWise.formatCurrency(grossProfit / units));
+      } else {
+        CalcWise.setText('resultPerUnit', '--');
+      }
+
+      CalcWise.showResults('results');
+    }
+
+    function resetGrossProfitForm() {
+      document.getElementById('grossProfitForm').reset();
+      CalcWise.hideResults('results');
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Budget Calculator - Plan Your College Monthly Budget | CalcWise</title>
+  <meta name="description" content="Free student budget calculator. Track your monthly income from jobs and financial aid against tuition, housing, food, transportation, and other college expenses to find your surplus or deficit.">
+  <meta name="keywords" content="student budget calculator, college budget planner, monthly student expenses, college financial planning, student spending tracker">
+  <link rel="canonical" href="https://calcwise.io/education-calculators/student-budget-calculator/">
+
+  <meta property="og:title" content="Student Budget Calculator - Plan Your College Monthly Budget">
+  <meta property="og:description" content="Track monthly income against college expenses and find your surplus or deficit each month.">
+  <meta property="og:url" content="https://calcwise.io/education-calculators/student-budget-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Student Budget Calculator - Plan Your College Monthly Budget">
+  <meta name="twitter:description" content="Track monthly income against college expenses and find your surplus or deficit each month.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Education Calculators", "item": "https://calcwise.io/education-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "Student Budget Calculator", "item": "https://calcwise.io/education-calculators/student-budget-calculator/" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How should I budget tuition in a monthly budget?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Divide your semester tuition by the number of months in that semester (typically 4-5) to get a monthly equivalent. Alternatively, if tuition is paid from financial aid before the semester, you may not need to include it in your monthly cash flow budget — focus instead on living expenses." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is a realistic monthly budget for a college student?",
+        "acceptedAnswer": { "@type": "Answer", "text": "According to the College Board, average student budgets for living expenses (excluding tuition) run from $1,500/month at community colleges to $2,500+ at four-year universities in high cost-of-living areas. Housing is typically the largest variable expense." }
+      },
+      {
+        "@type": "Question",
+        "name": "How can college students reduce their monthly expenses?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Key strategies include sharing housing with roommates, using a meal plan instead of eating out, buying used or renting textbooks, using campus transportation or biking instead of owning a car, and taking advantage of student discounts on software, streaming, and entertainment." }
+      },
+      {
+        "@type": "Question",
+        "name": "Should financial aid be counted as monthly income?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes, divide your total grants, scholarships, or loan disbursements by the months they cover (typically a semester = 4-5 months) to get a monthly income equivalent. Only count aid that covers living expenses — aid applied directly to tuition should not be included." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/business-calculators/">Business</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/business-calculators/">Business Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/education-calculators/">Education Calculators</a></li>
+          <li><span aria-current="page">Student Budget Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="article-content">
+          <h1>Student Budget Calculator</h1>
+          <p>Take control of your college finances. Enter your monthly income from jobs and financial aid alongside your key expenses — tuition, housing, food, transportation, books, and entertainment — to see your total monthly expenses, whether you have a surplus or deficit, and a clear breakdown of where your money goes.</p>
+
+          <div class="calc-container mt-8">
+            <div class="calc-header">
+              <h2>Build Your Monthly Student Budget</h2>
+              <p>Track income vs. expenses to find your monthly balance</p>
+            </div>
+            <div class="calc-body">
+              <form id="budget-form" onsubmit="return false;">
+                <h3 style="margin-bottom: 1rem; font-size: 1rem; color: var(--color-primary);">Monthly Income</h3>
+                <div class="form-group">
+                  <label class="form-label" for="income-job">Job / Work Income</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="income-job" class="form-input" placeholder="800" min="0" step="50">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="income-aid">Financial Aid / Scholarships (monthly)</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="income-aid" class="form-input" placeholder="600" min="0" step="50">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="income-family">Family Support</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="income-family" class="form-input" placeholder="200" min="0" step="50">
+                  </div>
+                </div>
+
+                <h3 style="margin: 1.5rem 0 1rem; font-size: 1rem; color: var(--color-primary);">Monthly Expenses</h3>
+                <div class="form-group">
+                  <label class="form-label" for="exp-tuition">Tuition (monthly equivalent)</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="exp-tuition" class="form-input" placeholder="700" min="0" step="50">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="exp-housing">Housing / Rent</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="exp-housing" class="form-input" placeholder="650" min="0" step="25">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="exp-food">Food / Groceries</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="exp-food" class="form-input" placeholder="300" min="0" step="25">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="exp-transport">Transportation</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="exp-transport" class="form-input" placeholder="150" min="0" step="25">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="exp-books">Books &amp; Supplies</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="exp-books" class="form-input" placeholder="100" min="0" step="10">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="exp-entertainment">Entertainment &amp; Personal</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="exp-entertainment" class="form-input" placeholder="150" min="0" step="10">
+                  </div>
+                </div>
+
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calculateBudget()">Calculate</button>
+                  <button type="button" class="btn btn-reset" onclick="resetBudget()">Reset</button>
+                </div>
+              </form>
+
+              <div id="budget-results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">Monthly Surplus / Deficit</div>
+                  <div class="result-value" id="result-balance"></div>
+                </div>
+                <div class="result-grid result-grid-3">
+                  <div class="result-item">
+                    <div class="result-label">Total Monthly Income</div>
+                    <div class="result-value" id="result-total-income"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Total Monthly Expenses</div>
+                    <div class="result-value" id="result-total-expenses"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Annual Projection</div>
+                    <div class="result-value" id="result-annual"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <section class="content-section">
+            <h2>How the Student Budget Formula Works</h2>
+            <p>This calculator uses straightforward income-versus-expense arithmetic:</p>
+            <div class="formula-box">
+              <div class="formula-label">Total Monthly Income</div>
+              Income = Job Income + Financial Aid + Family Support
+            </div>
+            <div class="formula-box">
+              <div class="formula-label">Total Monthly Expenses</div>
+              Expenses = Tuition + Housing + Food + Transportation + Books + Entertainment
+            </div>
+            <div class="formula-box">
+              <div class="formula-label">Monthly Surplus / Deficit</div>
+              Balance = Total Income - Total Expenses
+            </div>
+            <p>A positive balance is a surplus (you have money left over). A negative balance is a deficit (you are spending more than you earn and need to cut costs or find additional income).</p>
+          </section>
+
+          <section class="content-section">
+            <h2>How to Use This Calculator</h2>
+            <ol>
+              <li><strong>Enter your monthly income</strong> from all sources: part-time job, financial aid disbursements divided by months, and family contributions.</li>
+              <li><strong>Enter each expense category</strong> as a monthly amount. For tuition, divide your semester bill by the number of months covered.</li>
+              <li><strong>Click Calculate</strong> to see your monthly balance and annual projection.</li>
+              <li>If the result shows a deficit, identify which expense categories have the most room to cut.</li>
+            </ol>
+          </section>
+
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>A sophomore earns $800/month from a part-time job and receives $600/month from financial aid. Monthly expenses include $700 for tuition, $650 for off-campus housing, $300 for food, $150 for transportation, $100 for books, and $150 for entertainment — totaling $2,050. With $1,400 in income, they have a $650 monthly deficit. This exercise reveals they need to either increase income, reduce housing costs by finding a roommate, or apply for additional aid.</p>
+          </section>
+
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                How should I budget tuition in a monthly budget?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Divide your semester tuition by the number of months in that semester (typically 4-5) to get a monthly equivalent. If tuition is covered by aid applied directly to your account, you may not need to include it in your monthly cash flow — focus on living expenses.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What is a realistic monthly budget for a college student?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Average student living expenses (excluding tuition) run from $1,500/month at community colleges to $2,500+ at four-year universities in high cost-of-living areas. Housing is typically the largest variable expense.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                How can college students reduce their monthly expenses?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Key strategies include sharing housing with roommates, using a meal plan instead of eating out, buying used or renting textbooks, using campus transportation or biking instead of owning a car, and taking advantage of student discounts on software and entertainment.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Should financial aid be counted as monthly income?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Yes — divide your total grants, scholarships, or loan disbursements by the months they cover (typically a semester = 4-5 months) to get a monthly income equivalent. Only count aid that covers living expenses, not aid applied directly to tuition.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/education-calculators/college-affordability-calculator/" class="card card-link">
+                <h3>College Affordability Calculator</h3>
+                <p>Estimate your annual funding gap and loan burden.</p>
+              </a>
+              <a href="/education-calculators/student-housing-cost-calculator/" class="card card-link">
+                <h3>Student Housing Cost Calculator</h3>
+                <p>Compare on-campus vs off-campus living costs.</p>
+              </a>
+              <a href="/education-calculators/education-roi-calculator/" class="card card-link">
+                <h3>Education ROI Calculator</h3>
+                <p>Calculate the financial return on your degree investment.</p>
+              </a>
+              <a href="/finance-calculators/savings-calculator/" class="card card-link">
+                <h3>Savings Goal Calculator</h3>
+                <p>Plan how long it will take to reach a savings target.</p>
+              </a>
+            </div>
+          </section>
+
+          <div class="disclaimer">
+            <strong>Disclaimer:</strong> This calculator provides estimates for budgeting and planning purposes only. Actual costs and income will vary. This is not financial advice. Consult your school's financial aid office or a certified financial planner for personalized guidance.
+          </div>
+
+          <div class="ad-slot ad-slot-leaderboard"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Education</h4>
+          <a href="/education-calculators/">All Education Calculators</a>
+          <a href="/education-calculators/college-affordability-calculator/">College Affordability</a>
+        </div>
+        <div class="footer-col">
+          <h4>Finance</h4>
+          <a href="/finance-calculators/">All Finance Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateBudget() {
+      const incomeJob = CalcWise.parseNumber(document.getElementById('income-job').value) || 0;
+      const incomeAid = CalcWise.parseNumber(document.getElementById('income-aid').value) || 0;
+      const incomeFamily = CalcWise.parseNumber(document.getElementById('income-family').value) || 0;
+
+      const expTuition = CalcWise.parseNumber(document.getElementById('exp-tuition').value) || 0;
+      const expHousing = CalcWise.parseNumber(document.getElementById('exp-housing').value) || 0;
+      const expFood = CalcWise.parseNumber(document.getElementById('exp-food').value) || 0;
+      const expTransport = CalcWise.parseNumber(document.getElementById('exp-transport').value) || 0;
+      const expBooks = CalcWise.parseNumber(document.getElementById('exp-books').value) || 0;
+      const expEntertainment = CalcWise.parseNumber(document.getElementById('exp-entertainment').value) || 0;
+
+      const totalIncome = incomeJob + incomeAid + incomeFamily;
+      const totalExpenses = expTuition + expHousing + expFood + expTransport + expBooks + expEntertainment;
+      const balance = totalIncome - totalExpenses;
+
+      CalcWise.setText('result-balance', (balance >= 0 ? '+' : '') + CalcWise.formatCurrency(balance));
+      CalcWise.setText('result-total-income', CalcWise.formatCurrency(totalIncome));
+      CalcWise.setText('result-total-expenses', CalcWise.formatCurrency(totalExpenses));
+      CalcWise.setText('result-annual', (balance >= 0 ? '+' : '') + CalcWise.formatCurrency(balance * 12) + '/yr');
+      CalcWise.showResults('budget-results');
+    }
+
+    function resetBudget() {
+      document.getElementById('budget-form').reset();
+      CalcWise.hideResults('budget-results');
+    }
+  </script>
+</body>
+</html>

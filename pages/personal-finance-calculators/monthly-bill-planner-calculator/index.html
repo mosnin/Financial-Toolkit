@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Monthly Bill Planner Calculator - CalcWise</title>
+  <meta name="description" content="Plan and organize all your recurring monthly bills. Enter up to 10 bills with due dates, see total monthly obligations, bills as a percentage of income, discretionary income remaining, and a bill calendar.">
+  <link rel="canonical" href="https://calcwise.io/personal-finance-calculators/monthly-bill-planner-calculator/">
+  <meta property="og:title" content="Monthly Bill Planner Calculator - CalcWise">
+  <meta property="og:description" content="Organize all recurring bills, see totals as % of income, remaining discretionary income, and a visual bill calendar.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcwise.io/personal-finance-calculators/monthly-bill-planner-calculator/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Monthly Bill Planner Calculator - CalcWise">
+  <meta name="twitter:description" content="Plan all recurring monthly bills. See totals, % of income, discretionary income, and a bill calendar.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/"},
+      {"@type": "ListItem", "position": 2, "name": "Personal Finance Calculators", "item": "https://calcwise.io/personal-finance-calculators/"},
+      {"@type": "ListItem", "position": 3, "name": "Monthly Bill Planner Calculator"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What percentage of income should go to bills?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Under the 50/30/20 rule, essential bills (housing, utilities, insurance, subscriptions, minimum debt payments) should total no more than 50% of your after-tax income. If your fixed bills exceed this, look for bills you can reduce, negotiate, or eliminate."}
+      },
+      {
+        "@type": "Question",
+        "name": "How can I reduce my monthly bill total?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Common strategies include negotiating lower rates on cable, internet, and insurance; consolidating subscriptions; refinancing loans for lower payments; switching to a cheaper phone plan; and eliminating services you rarely use. Even small reductions add up significantly over a year."}
+      },
+      {
+        "@type": "Question",
+        "name": "What is discretionary income?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Discretionary income is the money left over after paying all fixed recurring bills and essential living expenses. It can be used for savings, investing, entertainment, dining out, and other variable spending. Maximizing discretionary income gives you more financial flexibility."}
+      },
+      {
+        "@type": "Question",
+        "name": "Why should I track bill due dates?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Tracking due dates helps you avoid late fees and negative credit report marks. It also lets you plan cash flow — knowing when large bills are due helps you ensure enough money is in your checking account on those dates, preventing overdrafts."}
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="logo">
+        <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav">
+        <a href="/">Home</a>
+        <a href="/pages/finance-calculators/">Finance</a>
+        <a href="/pages/personal-finance-calculators/" aria-current="page">Personal Finance</a>
+        <a href="/pages/investment-calculators/">Investment</a>
+        <a href="/pages/tax-calculators/">Tax</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav">
+      <a href="/">Home</a>
+      <a href="/pages/finance-calculators/">Finance Calculators</a>
+      <a href="/pages/personal-finance-calculators/">Personal Finance Calculators</a>
+      <a href="/pages/investment-calculators/">Investment Calculators</a>
+      <a href="/pages/tax-calculators/">Tax Calculators</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li><a href="/pages/personal-finance-calculators/">Personal Finance Calculators</a></li>
+        <li><span aria-current="page">Monthly Bill Planner Calculator</span></li>
+      </ol>
+    </nav>
+
+    <div class="page-content">
+      <div class="article-content">
+        <h1>Monthly Bill Planner Calculator</h1>
+        <p>Organizing your recurring monthly bills is the foundation of any solid budget. Enter up to 10 bills — including name, amount, and due date — to see your total monthly obligations, what percentage of your income they consume, how much discretionary income you have remaining, and a bill calendar sorted by due date so you never miss a payment.</p>
+
+        <div class="ad-slot ad-slot-leaderboard"></div>
+
+        <div class="calc-container">
+          <div class="calc-header">
+            <h2>Monthly Bill Planner</h2>
+            <p>Enter up to 10 recurring bills and your monthly income</p>
+          </div>
+          <div class="calc-body">
+            <form id="bill-form">
+              <div class="form-group">
+                <label class="form-label" for="monthlyIncome">Monthly Take-Home Income</label>
+                <div class="input-prefix"><span class="prefix">$</span>
+                  <input type="number" id="monthlyIncome" name="monthlyIncome" class="form-input" placeholder="4500" min="0" step="100" required>
+                </div>
+              </div>
+
+              <div id="bill-entries" style="margin-top: var(--space-4);"></div>
+
+              <div class="calc-actions">
+                <button type="button" class="btn btn-calculate" onclick="calcBills()">Plan My Bills</button>
+                <button type="button" class="btn btn-reset" onclick="resetBills()">Reset</button>
+              </div>
+            </form>
+
+            <div id="results" class="calc-results hidden">
+              <div class="result-primary">
+                <div class="result-label">Total Monthly Bills</div>
+                <div class="result-value" id="totalBills">$0</div>
+              </div>
+              <div class="result-grid result-grid-3" style="margin-top: var(--space-4);">
+                <div class="result-item">
+                  <div class="result-label">Bills as % of Income</div>
+                  <div class="result-value" id="billsPct">0%</div>
+                </div>
+                <div class="result-item">
+                  <div class="result-label">Discretionary Income</div>
+                  <div class="result-value" id="discretionary" style="color: var(--color-success);">$0</div>
+                </div>
+                <div class="result-item">
+                  <div class="result-label">Annual Bill Total</div>
+                  <div class="result-value" id="annualTotal">$0</div>
+                </div>
+              </div>
+              <div style="margin-top: var(--space-6);">
+                <h3 style="font-size: var(--text-base); margin-bottom: var(--space-3);">Bill Calendar (by Due Date)</h3>
+                <div id="billCalendar"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <section class="content-section">
+          <h2>How to Use This Calculator</h2>
+          <ol>
+            <li><strong>Enter your monthly take-home income:</strong> Use your net pay after taxes and deductions.</li>
+            <li><strong>Add each recurring bill:</strong> Include the name, monthly amount, and due date (day of month) for up to 10 bills.</li>
+            <li><strong>Click "Plan My Bills":</strong> See your total bill burden, percentage of income, remaining discretionary income, and a calendar view.</li>
+            <li><strong>Review the bill calendar:</strong> Bills are sorted by due date so you can plan cash flow throughout the month.</li>
+            <li><strong>Identify opportunities:</strong> If bills exceed 50% of income, look for subscriptions to cancel or bills to negotiate.</li>
+          </ol>
+        </section>
+
+        <section class="content-section">
+          <h2>How Bill Percentages Are Calculated</h2>
+          <div class="formula-box">
+            <div class="formula-label">Formula</div>
+            Total Monthly Bills = Sum of all bill amounts<br>
+            Bills % of Income = (Total Bills / Monthly Income) &times; 100<br>
+            Discretionary Income = Monthly Income &minus; Total Bills<br>
+            Annual Total = Total Monthly Bills &times; 12
+          </div>
+          <p>Discretionary income is the money remaining after all fixed recurring bills are paid. This amount is available for variable expenses (groceries, gas, dining, entertainment) and savings. The higher your discretionary income, the more financial flexibility you have.</p>
+        </section>
+
+        <section class="content-section">
+          <h2>Example Scenario</h2>
+          <p>Alex takes home $4,200/month and has these recurring bills: Rent $1,400 (1st), Car payment $350 (5th), Internet $70 (8th), Phone $85 (10th), Car insurance $120 (15th), Electric $95 (18th), Netflix $18 (20th), Gym $45 (22nd), Student loan $280 (25th). Total bills: $2,463 — 58.6% of income. Discretionary income: $1,737/month. The bill calendar shows a cluster of bills early and mid-month, helping Alex plan when to have funds available.</p>
+        </section>
+
+        <section class="faq-section">
+          <h2>Frequently Asked Questions</h2>
+          <div class="faq-item">
+            <button class="faq-question">What percentage of income should go to bills?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>Under the 50/30/20 rule, essential recurring bills should total no more than 50% of after-tax income. If your fixed bills exceed this, look for bills to reduce, negotiate, or eliminate.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">How can I reduce my monthly bill total?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>Negotiate rates on cable, internet, and insurance; eliminate rarely-used subscriptions; refinance loans; switch to cheaper phone plans. Even small reductions compound into significant annual savings.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">What is discretionary income?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>Discretionary income is money left after paying all fixed bills and essential expenses. It covers variable spending like groceries, gas, dining, entertainment, and savings contributions.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">Why should I track bill due dates?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>Due dates help you plan cash flow, avoid late fees, and prevent overdrafts. Knowing when large bills hit lets you ensure sufficient funds are in your checking account at the right times.</p></div>
+          </div>
+        </section>
+
+        <section class="related-calculators">
+          <h2>Related Calculators</h2>
+          <div class="grid grid-3">
+            <a href="/pages/personal-finance-calculators/monthly-expense-tracker-calculator/" class="card card-link">
+              <h3>Monthly Expense Tracker</h3>
+              <p>Track all monthly expenses beyond just recurring bills.</p>
+            </a>
+            <a href="/pages/personal-finance-calculators/budget-percentage-calculator/" class="card card-link">
+              <h3>Budget Percentage Calculator</h3>
+              <p>See every spending category as a percentage of income.</p>
+            </a>
+            <a href="/pages/personal-finance-calculators/net-income-calculator/" class="card card-link">
+              <h3>Net Income Calculator</h3>
+              <p>Calculate your exact take-home pay to use in bill planning.</p>
+            </a>
+            <a href="/pages/personal-finance-calculators/debt-avalanche-calculator/" class="card card-link">
+              <h3>Debt Avalanche Calculator</h3>
+              <p>Eliminate debt bills faster with the avalanche method.</p>
+            </a>
+            <a href="/pages/finance-calculators/budget-calculator/" class="card card-link">
+              <h3>50/30/20 Budget Calculator</h3>
+              <p>Allocate income using the 50/30/20 framework.</p>
+            </a>
+          </div>
+        </section>
+
+        <div class="disclaimer">
+          <strong>Disclaimer:</strong> This calculator is for informational and educational purposes only. Results are based on the figures you enter. This is not financial advice. Consult a qualified financial advisor for personalized budgeting guidance.
+        </div>
+
+        <div class="ad-slot ad-slot-rectangle"></div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free online financial calculators to help you make smarter money decisions.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Personal Finance</h4>
+          <a href="/pages/personal-finance-calculators/monthly-bill-planner-calculator/">Monthly Bill Planner</a>
+          <a href="/pages/personal-finance-calculators/monthly-expense-tracker-calculator/">Expense Tracker</a>
+          <a href="/pages/personal-finance-calculators/budget-percentage-calculator/">Budget Percentages</a>
+          <a href="/pages/personal-finance-calculators/net-income-calculator/">Net Income</a>
+        </div>
+        <div class="footer-col">
+          <h4>Tools</h4>
+          <a href="/pages/finance-calculators/budget-calculator/">50/30/20 Budget</a>
+          <a href="/pages/investment-calculators/">Investment Calculators</a>
+          <a href="/pages/tax-calculators/">Tax Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about/">About</a>
+          <a href="/contact/">Contact</a>
+          <a href="/privacy/">Privacy Policy</a>
+          <a href="/terms/">Terms of Service</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 CalcWise. All rights reserved.</span>
+        <div class="footer-links">
+          <a href="/privacy/">Privacy</a>
+          <a href="/terms/">Terms</a>
+          <a href="/contact/">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    const NUM_BILLS = 10;
+
+    function buildBillRows() {
+      const container = document.getElementById('bill-entries');
+      let html = `<div style="display:grid;grid-template-columns:2fr 1fr 1fr;gap:var(--space-2);margin-bottom:var(--space-2);">
+        <span style="font-size:var(--text-sm);font-weight:600;color:var(--color-text-secondary);">Bill Name</span>
+        <span style="font-size:var(--text-sm);font-weight:600;color:var(--color-text-secondary);">Amount</span>
+        <span style="font-size:var(--text-sm);font-weight:600;color:var(--color-text-secondary);">Due Day</span>
+      </div>`;
+      for (let i = 1; i <= NUM_BILLS; i++) {
+        html += `<div style="display:grid;grid-template-columns:2fr 1fr 1fr;gap:var(--space-2);margin-bottom:var(--space-2);">
+          <input type="text" name="billName${i}" class="form-input" placeholder="e.g. Rent" style="font-size:var(--text-sm);">
+          <div class="input-prefix" style="min-width:0;"><span class="prefix">$</span>
+            <input type="number" name="billAmt${i}" class="form-input" placeholder="0" min="0" step="1" style="font-size:var(--text-sm);">
+          </div>
+          <input type="number" name="billDay${i}" class="form-input" placeholder="1-31" min="1" max="31" step="1" style="font-size:var(--text-sm);">
+        </div>`;
+      }
+      container.innerHTML = html;
+    }
+
+    function calcBills() {
+      if (!CalcWise.validateForm('bill-form')) return;
+      const v = CalcWise.getFormValues('bill-form');
+      const income = v.monthlyIncome;
+
+      const bills = [];
+      for (let i = 1; i <= NUM_BILLS; i++) {
+        const name = v['billName' + i];
+        const amt = v['billAmt' + i] || 0;
+        const day = v['billDay' + i] || null;
+        if (name && amt > 0) {
+          bills.push({ name, amt, day: day || '—' });
+        }
+      }
+
+      if (bills.length === 0) {
+        alert('Please enter at least one bill with a name and amount.');
+        return;
+      }
+
+      const total = bills.reduce((s, b) => s + b.amt, 0);
+      const pct = income > 0 ? (total / income) * 100 : 0;
+      const discretionary = income - total;
+
+      CalcWise.setText('totalBills', CalcWise.formatCurrency(total, 0));
+      const pctEl = document.getElementById('billsPct');
+      pctEl.textContent = CalcWise.formatPercent(pct, 1);
+      pctEl.style.color = pct > 60 ? 'var(--color-danger)' : pct > 50 ? 'var(--color-warning, #f59e0b)' : 'var(--color-success)';
+      const discEl = document.getElementById('discretionary');
+      discEl.textContent = CalcWise.formatCurrency(discretionary, 0);
+      discEl.style.color = discretionary < 0 ? 'var(--color-danger)' : 'var(--color-success)';
+      CalcWise.setText('annualTotal', CalcWise.formatCurrency(total * 12, 0));
+
+      // Calendar sorted by due day
+      const sorted = [...bills].sort((a, b) => {
+        const da = parseInt(a.day) || 99;
+        const db = parseInt(b.day) || 99;
+        return da - db;
+      });
+
+      let calHtml = '<div class="table-container"><table class="data-table"><thead><tr><th>Due Day</th><th>Bill</th><th>Amount</th><th>% of Income</th></tr></thead><tbody>';
+      let runningTotal = 0;
+      sorted.forEach(b => {
+        runningTotal += b.amt;
+        const bPct = income > 0 ? (b.amt / income) * 100 : 0;
+        calHtml += `<tr><td><strong>${b.day}</strong></td><td>${b.name}</td><td>${CalcWise.formatCurrency(b.amt, 0)}</td><td>${CalcWise.formatPercent(bPct, 1)}</td></tr>`;
+      });
+      calHtml += `<tr style="font-weight:600;background:var(--color-bg-subtle);"><td colspan="2">Total</td><td>${CalcWise.formatCurrency(total, 0)}</td><td>${CalcWise.formatPercent(pct, 1)}</td></tr>`;
+      calHtml += '</tbody></table></div>';
+      CalcWise.setHtml('billCalendar', calHtml);
+
+      CalcWise.showResults('results');
+    }
+
+    function resetBills() {
+      buildBillRows();
+      document.getElementById('monthlyIncome').value = '';
+      CalcWise.hideResults('results');
+    }
+
+    buildBillRows();
+  </script>
+</body>
+</html>

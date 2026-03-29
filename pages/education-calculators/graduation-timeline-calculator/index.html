@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Graduation Timeline Calculator - Estimate Your Graduation Date | CalcWise</title>
+  <meta name="description" content="Free graduation timeline calculator. Find out how many semesters until you graduate and your estimated graduation date based on credits completed, required, and pace.">
+  <meta name="keywords" content="graduation timeline calculator, graduation date estimator, how long to graduate, credits to graduation, semester calculator">
+  <link rel="canonical" href="https://calcwise.io/education-calculators/graduation-timeline-calculator/">
+
+  <meta property="og:title" content="Graduation Timeline Calculator - Estimate Your Graduation Date">
+  <meta property="og:description" content="Find out how many semesters until graduation and your estimated graduation date based on your credit pace.">
+  <meta property="og:url" content="https://calcwise.io/education-calculators/graduation-timeline-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Graduation Timeline Calculator - Estimate Your Graduation Date">
+  <meta name="twitter:description" content="Find out how many semesters until graduation and your estimated graduation date based on your credit pace.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Education Calculators", "item": "https://calcwise.io/education-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "Graduation Timeline Calculator", "item": "https://calcwise.io/education-calculators/graduation-timeline-calculator/" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How many credits do I need to graduate?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Most bachelor's degrees require 120 credit hours, though some programs (engineering, architecture, pharmacy) require 128-136. Associate degrees typically require 60 credits. Always verify with your specific institution and program requirements." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is considered full-time vs part-time enrollment?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Full-time students typically take 12 or more credit hours per semester. Part-time is generally fewer than 12 credits. Taking 15 credits per semester aligns with finishing a 120-credit degree in exactly 4 years (8 semesters)." }
+      },
+      {
+        "@type": "Question",
+        "name": "How does taking summer classes affect my graduation date?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Summer sessions can significantly accelerate your timeline. If your school offers summer terms, increasing semesters per year from 2 to 3 (fall, spring, summer) can shave a full year off a typical 4-year degree if you take a full load each term." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I transfer credits to speed up graduation?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Accepted transfer credits, AP exam scores, CLEP exams, and dual enrollment courses count toward your completed credits total, reducing the credits remaining and accelerating your graduation date." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/business-calculators/">Business</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/business-calculators/">Business Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/education-calculators/">Education Calculators</a></li>
+          <li><span aria-current="page">Graduation Timeline Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="article-content">
+          <h1>Graduation Timeline Calculator</h1>
+          <p>Know exactly when you will walk across that stage. Enter your credits completed, credits required for graduation, credits per semester, and semesters per year to instantly see how many semesters remain, your estimated graduation date, and a full-time vs part-time comparison.</p>
+
+          <div class="calc-container mt-8">
+            <div class="calc-header">
+              <h2>Plan Your Path to Graduation</h2>
+              <p>Enter your credit details to estimate your graduation date</p>
+            </div>
+            <div class="calc-body">
+              <form id="grad-form" onsubmit="return false;">
+                <div class="form-group">
+                  <label class="form-label" for="credits-completed">Credits Completed</label>
+                  <input type="number" id="credits-completed" class="form-input" placeholder="45" min="0" max="200" step="1" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="credits-required">Total Credits Required for Degree</label>
+                  <input type="number" id="credits-required" class="form-input" placeholder="120" min="1" max="200" step="1" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="credits-per-semester">Credits Per Semester (current pace)</label>
+                  <input type="number" id="credits-per-semester" class="form-input" placeholder="15" min="1" max="30" step="1" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="semesters-per-year">Semesters Per Year</label>
+                  <input type="number" id="semesters-per-year" class="form-input" placeholder="2" min="1" max="4" step="1" required>
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calculateGraduation()">Calculate</button>
+                  <button type="button" class="btn btn-reset" onclick="resetGraduation()">Reset</button>
+                </div>
+              </form>
+
+              <div id="grad-results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">Semesters Remaining</div>
+                  <div class="result-value" id="result-semesters"></div>
+                </div>
+                <div class="result-grid result-grid-3">
+                  <div class="result-item">
+                    <div class="result-label">Estimated Graduation</div>
+                    <div class="result-value" id="result-grad-date"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Full-Time (15 cr/sem)</div>
+                    <div class="result-value" id="result-fulltime"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Part-Time (9 cr/sem)</div>
+                    <div class="result-value" id="result-parttime"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <section class="content-section">
+            <h2>Graduation Timeline Formula</h2>
+            <p>The calculation is straightforward: determine remaining credits and divide by your semester pace.</p>
+            <div class="formula-box">
+              <div class="formula-label">Credits Remaining</div>
+              Credits Remaining = Total Required - Credits Completed
+            </div>
+            <div class="formula-box">
+              <div class="formula-label">Semesters Remaining</div>
+              Semesters = &lceil;Credits Remaining / Credits Per Semester&rceil;
+            </div>
+            <div class="formula-box">
+              <div class="formula-label">Years Remaining</div>
+              Years = Semesters Remaining / Semesters Per Year
+            </div>
+            <p>The graduation date is calculated by adding the years remaining to today's date and rounding to the nearest typical graduation month (May or December).</p>
+          </section>
+
+          <section class="content-section">
+            <h2>How to Use This Calculator</h2>
+            <ol>
+              <li><strong>Enter credits completed</strong> - check your official transcript or student portal.</li>
+              <li><strong>Enter credits required</strong> - your degree's total credit requirement (commonly 120 for a bachelor's).</li>
+              <li><strong>Enter credits per semester</strong> - your current or planned load (15 is full-time; 9-11 is part-time).</li>
+              <li><strong>Enter semesters per year</strong> - 2 for fall/spring only; 3 if you include summer.</li>
+              <li><strong>Click Calculate</strong> to see your graduation timeline and full-time vs part-time comparison.</li>
+            </ol>
+          </section>
+
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>A student has completed 45 credits toward a 120-credit degree. Currently taking 12 credits per semester across 2 semesters per year, they have 75 credits remaining. At 12 credits/semester that is 7 semesters (ceiling of 75/12), or about 3.5 years. Switching to full-time at 15 credits reduces that to 5 semesters — a full year saved. Adding a summer session (3 semesters/year) at 15 credits per term could finish the degree in just under 2 years.</p>
+          </section>
+
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                How many credits do I need to graduate?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Most bachelor's degrees require 120 credit hours, though some programs require 128-136. Associate degrees typically require 60 credits. Always verify with your specific institution and program requirements.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What is considered full-time vs part-time enrollment?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Full-time students typically take 12 or more credit hours per semester. Part-time is generally fewer than 12 credits. Taking 15 credits per semester aligns with finishing a 120-credit degree in exactly 4 years across 8 semesters.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                How does taking summer classes affect my graduation date?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Summer sessions can significantly accelerate your timeline. Increasing semesters per year from 2 to 3 (fall, spring, summer) can shave a full year off a typical 4-year degree if you take a reasonable load each summer term.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Can I transfer credits to speed up graduation?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Yes. Accepted transfer credits, AP exam scores, CLEP exams, and dual enrollment courses count toward your completed credits total, reducing remaining credits and accelerating your graduation date.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/education-calculators/college-affordability-calculator/" class="card card-link">
+                <h3>College Affordability Calculator</h3>
+                <p>Estimate your annual funding gap and loan burden.</p>
+              </a>
+              <a href="/education-calculators/student-budget-calculator/" class="card card-link">
+                <h3>Student Budget Calculator</h3>
+                <p>Plan your monthly income and expenses as a college student.</p>
+              </a>
+              <a href="/education-calculators/education-roi-calculator/" class="card card-link">
+                <h3>Education ROI Calculator</h3>
+                <p>Measure the financial return on your college degree.</p>
+              </a>
+            </div>
+          </section>
+
+          <div class="disclaimer">
+            <strong>Disclaimer:</strong> This calculator provides estimates based on the inputs provided. Actual graduation timelines depend on course availability, academic requirements, prerequisite sequencing, and institutional policies. Consult your academic advisor for an official degree audit and graduation plan.
+          </div>
+
+          <div class="ad-slot ad-slot-leaderboard"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Education</h4>
+          <a href="/education-calculators/">All Education Calculators</a>
+          <a href="/education-calculators/college-affordability-calculator/">College Affordability</a>
+        </div>
+        <div class="footer-col">
+          <h4>Finance</h4>
+          <a href="/finance-calculators/">All Finance Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateGraduation() {
+      if (!CalcWise.validateForm('grad-form')) return;
+
+      const completed = CalcWise.parseNumber(document.getElementById('credits-completed').value);
+      const required = CalcWise.parseNumber(document.getElementById('credits-required').value);
+      const perSemester = CalcWise.parseNumber(document.getElementById('credits-per-semester').value);
+      const semestersPerYear = CalcWise.parseNumber(document.getElementById('semesters-per-year').value);
+
+      const remaining = Math.max(0, required - completed);
+      const semestersRemaining = remaining > 0 ? Math.ceil(remaining / perSemester) : 0;
+      const yearsRemaining = semestersRemaining / semestersPerYear;
+
+      // Estimate graduation date
+      const now = new Date();
+      const gradDate = new Date(now);
+      gradDate.setMonth(gradDate.getMonth() + Math.round(yearsRemaining * 12));
+      const month = gradDate.getMonth();
+      // Round to May or December
+      const gradYear = gradDate.getFullYear();
+      const gradStr = month < 9 ? 'May ' + gradYear : 'December ' + gradYear;
+
+      // Full-time comparison (15 cr/sem, same semesters/year)
+      const ftSemesters = remaining > 0 ? Math.ceil(remaining / 15) : 0;
+      const ftYears = ftSemesters / semestersPerYear;
+
+      // Part-time comparison (9 cr/sem, same semesters/year)
+      const ptSemesters = remaining > 0 ? Math.ceil(remaining / 9) : 0;
+      const ptYears = ptSemesters / semestersPerYear;
+
+      const formatTime = (sems, yrs) => {
+        if (sems === 0) return 'Done!';
+        return sems + ' sem (' + CalcWise.formatNumber(yrs, 1) + ' yrs)';
+      };
+
+      CalcWise.setText('result-semesters', semestersRemaining === 0 ? 'Done!' : semestersRemaining + ' semesters');
+      CalcWise.setText('result-grad-date', semestersRemaining === 0 ? 'Now!' : gradStr);
+      CalcWise.setText('result-fulltime', formatTime(ftSemesters, ftYears));
+      CalcWise.setText('result-parttime', formatTime(ptSemesters, ptYears));
+      CalcWise.showResults('grad-results');
+    }
+
+    function resetGraduation() {
+      document.getElementById('grad-form').reset();
+      CalcWise.hideResults('grad-results');
+    }
+  </script>
+</body>
+</html>

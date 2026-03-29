@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carbon Footprint Calculator - Annual CO2 Emissions Estimate | CalcWise</title>
+    <meta name="description" content="Calculate your annual carbon footprint from electricity, natural gas, driving, flights, and diet. See how you compare to the US average and find offset costs.">
+    <link rel="canonical" href="https://calcwise.io/energy-utility-calculators/carbon-footprint-calculator/">
+    <meta property="og:title" content="Carbon Footprint Calculator | CalcWise">
+    <meta property="og:description" content="Estimate your annual CO2 emissions by category and compare to the US average. Calculate carbon offset costs to go carbon neutral.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://calcwise.io/energy-utility-calculators/carbon-footprint-calculator/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Carbon Footprint Calculator | CalcWise">
+    <meta name="twitter:description" content="Calculate your annual carbon footprint and find how it compares to the US average.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/design-system.css">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/"},
+            {"@type": "ListItem", "position": 2, "name": "Energy & Utility Calculators", "item": "https://calcwise.io/energy-utility-calculators/"},
+            {"@type": "ListItem", "position": 3, "name": "Carbon Footprint Calculator"}
+        ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {"@type": "Question", "name": "What is the average American's carbon footprint?", "acceptedAnswer": {"@type": "Answer", "text": "The average American produces approximately 16 metric tons of CO2 equivalent per year, one of the highest per-capita rates in the world. The global average is about 4 metric tons. Scientists suggest we need to reach below 2 tons per person by 2050 to limit warming to 1.5°C."}},
+            {"@type": "Question", "name": "What is a carbon offset?", "acceptedAnswer": {"@type": "Answer", "text": "A carbon offset is a reduction in CO2 emissions made elsewhere to compensate for emissions you produce. Examples include investing in renewable energy projects, reforestation, or methane capture. Carbon offsets are typically priced at $10-$50 per metric ton of CO2."}},
+            {"@type": "Question", "name": "Which activities produce the most carbon emissions?", "acceptedAnswer": {"@type": "Answer", "text": "For most Americans, the biggest carbon contributors are transportation (especially driving and flying), home energy use (heating, cooling, electricity), and food production (especially beef and dairy). Reducing car miles, cutting one or two long-haul flights, and shifting toward a plant-based diet can significantly reduce your footprint."}},
+            {"@type": "Question", "name": "How accurate is this carbon footprint calculator?", "acceptedAnswer": {"@type": "Answer", "text": "This calculator uses EPA and IPCC emissions factors as a guide and provides a reasonable estimate for personal carbon accounting. Actual emissions vary by electricity grid mix, vehicle efficiency, flight class, and regional factors. It is designed for educational awareness rather than certified carbon accounting."}}
+        ]
+    }
+    </script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="/" class="logo">
+                <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+                CalcWise
+            </a>
+            <nav class="main-nav">
+                <a href="/real-estate-calculators/">Real Estate</a>
+                <a href="/advanced-real-estate-calculators/">Advanced RE</a>
+                <a href="/energy-utility-calculators/">Energy</a>
+                <a href="/finance-calculators/">Finance</a>
+            </nav>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+            </button>
+        </div>
+        <nav class="mobile-nav">
+            <a href="/real-estate-calculators/">Real Estate Calculators</a>
+            <a href="/advanced-real-estate-calculators/">Advanced Real Estate</a>
+            <a href="/energy-utility-calculators/">Energy &amp; Utility</a>
+            <a href="/finance-calculators/">Finance Calculators</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <nav class="breadcrumbs" aria-label="Breadcrumb">
+                <ol>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/energy-utility-calculators/">Energy &amp; Utility Calculators</a></li>
+                    <li><span aria-current="page">Carbon Footprint Calculator</span></li>
+                </ol>
+            </nav>
+
+            <div class="page-content">
+                <div class="calc-page-layout">
+                    <div class="calc-page-main">
+                        <h1>Carbon Footprint Calculator</h1>
+                        <p class="subtitle" style="color: var(--color-gray-600); font-size: var(--text-lg); line-height: var(--leading-relaxed); margin-bottom: var(--space-8);">
+                            Estimate your annual CO2 emissions from home energy use, driving, flying, and diet. See how your footprint compares to the US average and calculate the cost to offset it.
+                        </p>
+
+                        <div class="calc-container">
+                            <div class="calc-header">
+                                <h2>Annual Carbon Footprint</h2>
+                                <p>Estimate your CO2 emissions by category</p>
+                            </div>
+                            <div class="calc-body">
+                                <form id="carbon-form">
+                                    <div class="form-group">
+                                        <label class="form-label" for="electricity-kwh">Monthly Electricity Usage (kWh)</label>
+                                        <input type="number" id="electricity-kwh" name="electricityKwh" class="form-input" placeholder="900" min="0" step="10" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label" for="gas-therms">Monthly Natural Gas (therms)</label>
+                                        <input type="number" id="gas-therms" name="gasTherms" class="form-input" placeholder="50" min="0" step="1" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label" for="car-miles">Annual Car Miles Driven</label>
+                                        <input type="number" id="car-miles" name="carMiles" class="form-input" placeholder="12,000" min="0" step="100" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label" for="flights">Flights per Year <span class="form-hint">(round trips, avg. 4-hr flight)</span></label>
+                                        <input type="number" id="flights" name="flights" class="form-input" placeholder="2" min="0" max="100" step="1" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label" for="diet-type">Diet Type</label>
+                                        <select id="diet-type" name="dietType" class="form-input" required>
+                                            <option value="meat-heavy">Meat-Heavy (beef most days)</option>
+                                            <option value="average" selected>Average American</option>
+                                            <option value="low-meat">Low Meat (chicken/fish)</option>
+                                            <option value="vegetarian">Vegetarian</option>
+                                            <option value="vegan">Vegan</option>
+                                        </select>
+                                    </div>
+                                    <div class="calc-actions">
+                                        <button type="button" class="btn btn-calculate btn-full" onclick="calculateCarbon()">Calculate Footprint</button>
+                                        <button type="reset" class="btn btn-reset">Reset</button>
+                                    </div>
+                                </form>
+
+                                <div id="results" class="calc-results hidden">
+                                    <div class="result-primary">
+                                        <div class="result-label">Annual CO2 Footprint</div>
+                                        <div class="result-value" id="result-total-co2">0 tons</div>
+                                    </div>
+                                    <div class="result-grid result-grid-3">
+                                        <div class="result-item">
+                                            <div class="result-label">Electricity CO2</div>
+                                            <div class="result-value" id="result-elec-co2">0 tons</div>
+                                        </div>
+                                        <div class="result-item">
+                                            <div class="result-label">Natural Gas CO2</div>
+                                            <div class="result-value" id="result-gas-co2">0 tons</div>
+                                        </div>
+                                        <div class="result-item">
+                                            <div class="result-label">Driving CO2</div>
+                                            <div class="result-value" id="result-car-co2">0 tons</div>
+                                        </div>
+                                        <div class="result-item">
+                                            <div class="result-label">Flights CO2</div>
+                                            <div class="result-value" id="result-flight-co2">0 tons</div>
+                                        </div>
+                                        <div class="result-item">
+                                            <div class="result-label">Diet CO2</div>
+                                            <div class="result-value" id="result-diet-co2">0 tons</div>
+                                        </div>
+                                        <div class="result-item">
+                                            <div class="result-label">vs. US Average (16t)</div>
+                                            <div class="result-value" id="result-vs-avg">--</div>
+                                        </div>
+                                        <div class="result-item" style="grid-column: span 3;">
+                                            <div class="result-label">Estimated Offset Cost (~$20/ton)</div>
+                                            <div class="result-value" id="result-offset-cost">$0</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="ad-slot ad-slot-leaderboard"></div>
+
+                        <section class="content-section">
+                            <h2>Carbon Footprint Formula</h2>
+                            <div class="formula-box">
+                                <div class="formula-label">Emissions Factors Used</div>
+                                Electricity: 0.386 kg CO2/kWh (US average grid mix)
+Natural Gas: 5.3 kg CO2/therm
+Driving: 0.404 kg CO2/mile (avg US passenger vehicle)
+Flights: ~0.255 metric tons CO2 per round trip (avg 4-hr flight)
+Diet: Vegan 1.5t | Vegetarian 1.7t | Low-Meat 2.5t | Average 3.3t | Meat-Heavy 4.5t/year
+
+Annual CO2 (tons) = Sum of all category emissions / 1,000
+Offset Cost = Annual CO2 tons &times; $20
+                            </div>
+                            <p>Emissions factors are based on EPA and IPCC guidelines. The electricity factor reflects the US average grid; your actual factor may differ based on your state's energy mix.</p>
+                        </section>
+
+                        <section class="content-section">
+                            <h2>How to Use This Calculator</h2>
+                            <ol>
+                                <li><strong>Enter monthly electricity usage</strong> -- find this on your electric bill in kWh.</li>
+                                <li><strong>Enter monthly natural gas usage</strong> -- in therms, found on your gas bill.</li>
+                                <li><strong>Enter annual miles driven</strong> -- check your odometer or estimate from your commute.</li>
+                                <li><strong>Enter flights per year</strong> -- count round trips of average length.</li>
+                                <li><strong>Select your diet type</strong> -- choose the option that best matches your eating habits.</li>
+                                <li><strong>Click "Calculate Footprint"</strong> to see your total emissions and category breakdown.</li>
+                            </ol>
+                        </section>
+
+                        <section class="content-section">
+                            <h2>Example Scenario</h2>
+                            <h3>Average American Household</h3>
+                            <p>Monthly electricity: 900 kWh | Monthly gas: 50 therms | Annual miles: 12,000 | Flights: 2 per year | Average American diet</p>
+                            <p>Electricity = 900 kWh &times; 12 &times; 0.386 kg = <strong>4.17 tons</strong></p>
+                            <p>Natural Gas = 50 therms &times; 12 &times; 5.3 kg = <strong>3.18 tons</strong></p>
+                            <p>Driving = 12,000 miles &times; 0.404 kg = <strong>4.85 tons</strong></p>
+                            <p>Flights = 2 &times; 0.255 = <strong>0.51 tons</strong></p>
+                            <p>Diet = <strong>3.3 tons</strong></p>
+                            <p>Total = approximately <strong>16.0 tons CO2/year</strong> -- matching the US average.</p>
+                            <p>Offset Cost at $20/ton = <strong>$320/year</strong></p>
+                        </section>
+
+                        <section class="faq-section">
+                            <h2>Frequently Asked Questions</h2>
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">
+                                    What is the average American's carbon footprint?
+                                    <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>The average American produces approximately 16 metric tons of CO2 equivalent per year. The global average is about 4 metric tons. Scientists suggest we need to reach below 2 tons per person by 2050 to limit warming to 1.5°C.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">
+                                    What is a carbon offset?
+                                    <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>A carbon offset is a reduction in CO2 emissions made elsewhere to compensate for emissions you produce. Examples include investing in renewable energy projects, reforestation, or methane capture. Carbon offsets are typically priced at $10-$50 per metric ton of CO2.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">
+                                    Which activities produce the most carbon emissions?
+                                    <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>For most Americans, the biggest carbon contributors are transportation (especially driving and flying), home energy use (heating, cooling, electricity), and food production (especially beef and dairy). Reducing car miles, cutting flights, and shifting toward a plant-based diet can significantly reduce your footprint.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">
+                                    How accurate is this carbon footprint calculator?
+                                    <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>This calculator uses EPA and IPCC emissions factors and provides a reasonable estimate for personal carbon awareness. Actual emissions vary by electricity grid mix, vehicle efficiency, flight class, and regional factors. It is designed for educational awareness rather than certified carbon accounting.</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="related-calculators">
+                            <h2>Related Calculators</h2>
+                            <div class="grid grid-3">
+                                <a href="/energy-utility-calculators/electricity-cost-calculator/" class="card card-link">
+                                    <div class="card-icon">E</div>
+                                    <h3>Electricity Cost Calculator</h3>
+                                    <p>Calculate your daily, monthly, and annual electricity costs.</p>
+                                </a>
+                                <a href="/energy-utility-calculators/solar-savings-calculator/" class="card card-link">
+                                    <div class="card-icon">S</div>
+                                    <h3>Solar Savings Calculator</h3>
+                                    <p>See how much you could save by switching to solar energy.</p>
+                                </a>
+                                <a href="/energy-utility-calculators/home-energy-efficiency-calculator/" class="card card-link">
+                                    <div class="card-icon">H</div>
+                                    <h3>Home Energy Efficiency Calculator</h3>
+                                    <p>Find efficiency upgrades and estimate savings and payback periods.</p>
+                                </a>
+                            </div>
+                        </section>
+
+                        <div class="disclaimer">
+                            <strong>Disclaimer:</strong> This calculator provides estimates based on average emissions factors for educational purposes. Results should not be used for regulatory reporting or certified carbon accounting. Emissions factors vary by region, season, and individual circumstances.
+                        </div>
+
+                        <div class="ad-slot ad-slot-leaderboard"></div>
+                    </div>
+
+                    <aside class="calc-page-sidebar">
+                        <div class="sidebar-card">
+                            <h3>Energy &amp; Utility Tools</h3>
+                            <a href="/energy-utility-calculators/carbon-footprint-calculator/">Carbon Footprint</a>
+                            <a href="/energy-utility-calculators/electricity-cost-calculator/">Electricity Cost</a>
+                            <a href="/energy-utility-calculators/solar-savings-calculator/">Solar Savings</a>
+                            <a href="/energy-utility-calculators/ev-range-calculator/">EV Range</a>
+                            <a href="/energy-utility-calculators/gas-bill-calculator/">Gas Bill</a>
+                            <a href="/energy-utility-calculators/home-energy-efficiency-calculator/">Home Energy Efficiency</a>
+                            <a href="/energy-utility-calculators/utility-bill-comparison-calculator/">Utility Bill Comparison</a>
+                            <a href="/energy-utility-calculators/water-usage-cost-calculator/">Water Usage Cost</a>
+                        </div>
+                        <div class="ad-slot ad-slot-rectangle"></div>
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="/" class="logo">
+                        <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+                        CalcWise
+                    </a>
+                    <p>Free, accurate financial calculators for everyone. Make smarter money decisions with CalcWise.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Energy &amp; Utility</h4>
+                    <a href="/energy-utility-calculators/carbon-footprint-calculator/">Carbon Footprint</a>
+                    <a href="/energy-utility-calculators/electricity-cost-calculator/">Electricity Cost</a>
+                    <a href="/energy-utility-calculators/solar-savings-calculator/">Solar Savings</a>
+                    <a href="/energy-utility-calculators/ev-range-calculator/">EV Range</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Advanced Real Estate</h4>
+                    <a href="/advanced-real-estate-calculators/property-appreciation-calculator/">Property Appreciation</a>
+                    <a href="/advanced-real-estate-calculators/real-estate-leverage-calculator/">Leverage Calculator</a>
+                    <a href="/advanced-real-estate-calculators/real-estate-yield-calculator/">Yield Calculator</a>
+                    <a href="/advanced-real-estate-calculators/rental-expense-ratio-calculator/">Expense Ratio</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <a href="/about/">About</a>
+                    <a href="/contact/">Contact</a>
+                    <a href="/privacy/">Privacy Policy</a>
+                    <a href="/terms/">Terms of Use</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; 2026 CalcWise. All rights reserved.</span>
+                <div class="footer-links">
+                    <a href="/privacy/">Privacy</a>
+                    <a href="/terms/">Terms</a>
+                    <a href="/sitemap.xml">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/calculator-engine.js"></script>
+    <script src="/js/search-index.js"></script>
+    <script>
+    const DIET_EMISSIONS = {
+        'meat-heavy': 4.5,
+        'average': 3.3,
+        'low-meat': 2.5,
+        'vegetarian': 1.7,
+        'vegan': 1.5
+    };
+
+    function calculateCarbon() {
+        if (!CalcWise.validateForm('carbon-form')) return;
+
+        const values = CalcWise.getFormValues('carbon-form');
+        const electricityKwh = values.electricityKwh;
+        const gasTherms = values.gasTherms;
+        const carMiles = values.carMiles;
+        const flights = values.flights;
+        const dietType = document.getElementById('diet-type').value;
+
+        // Emissions factors
+        const elecKgCO2 = electricityKwh * 12 * 0.386;   // kg/year
+        const gasKgCO2 = gasTherms * 12 * 5.3;            // kg/year
+        const carKgCO2 = carMiles * 0.404;                 // kg/year
+        const flightTons = flights * 0.255;                // tons/year
+        const dietTons = DIET_EMISSIONS[dietType] || 3.3;  // tons/year
+
+        const elecTons = elecKgCO2 / 1000;
+        const gasTons = gasKgCO2 / 1000;
+        const carTons = carKgCO2 / 1000;
+
+        const totalTons = elecTons + gasTons + carTons + flightTons + dietTons;
+        const usAverage = 16.0;
+        const diff = totalTons - usAverage;
+        const offsetCost = totalTons * 20;
+
+        CalcWise.setText('result-total-co2', totalTons.toFixed(1) + ' tons');
+        CalcWise.setText('result-elec-co2', elecTons.toFixed(2) + ' tons');
+        CalcWise.setText('result-gas-co2', gasTons.toFixed(2) + ' tons');
+        CalcWise.setText('result-car-co2', carTons.toFixed(2) + ' tons');
+        CalcWise.setText('result-flight-co2', flightTons.toFixed(2) + ' tons');
+        CalcWise.setText('result-diet-co2', dietTons.toFixed(1) + ' tons');
+        CalcWise.setText('result-vs-avg', (diff >= 0 ? '+' : '') + diff.toFixed(1) + ' tons');
+        CalcWise.setText('result-offset-cost', CalcWise.formatCurrency(offsetCost, 0) + '/yr');
+
+        CalcWise.showResults('results');
+    }
+
+    document.getElementById('carbon-form').addEventListener('reset', function() {
+        setTimeout(() => CalcWise.hideResults('results'), 0);
+    });
+    </script>
+</body>
+</html>

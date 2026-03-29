@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cash Conversion Cycle Calculator - CalcWise</title>
+  <meta name="description" content="Calculate your cash conversion cycle (CCC) using days inventory outstanding, days sales outstanding, and days payable outstanding. Optimize working capital instantly.">
+  <link rel="canonical" href="https://calcwise.io/business-operations-calculators/cash-conversion-cycle-calculator/">
+
+  <meta property="og:title" content="Cash Conversion Cycle Calculator - CalcWise">
+  <meta property="og:description" content="Calculate CCC = DIO + DSO - DPO and understand how quickly your business converts investments into cash flow.">
+  <meta property="og:url" content="https://calcwise.io/business-operations-calculators/cash-conversion-cycle-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Cash Conversion Cycle Calculator - CalcWise">
+  <meta name="twitter:description" content="Calculate CCC = DIO + DSO - DPO and understand how quickly your business converts investments into cash flow.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Business Operations Calculators", "item": "https://calcwise.io/business-operations-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "Cash Conversion Cycle Calculator", "item": "https://calcwise.io/business-operations-calculators/cash-conversion-cycle-calculator/" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the cash conversion cycle?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The cash conversion cycle (CCC) measures how many days it takes a business to convert its investments in inventory and other resources into cash flows from sales. A lower CCC means faster cash conversion." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is a good cash conversion cycle?",
+        "acceptedAnswer": { "@type": "Answer", "text": "A negative or near-zero CCC is ideal, meaning you collect cash before paying suppliers. Amazon and many retailers achieve negative CCCs. For most businesses, a CCC under 30 days is considered efficient. Service businesses often have very low CCCs." }
+      },
+      {
+        "@type": "Question",
+        "name": "How can I reduce my cash conversion cycle?",
+        "acceptedAnswer": { "@type": "Answer", "text": "To reduce CCC: decrease DIO by improving inventory management, reduce DSO by tightening credit terms and collections, and increase DPO by negotiating longer payment terms with suppliers." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is days payable outstanding (DPO)?",
+        "acceptedAnswer": { "@type": "Answer", "text": "DPO measures how many days a company takes to pay its suppliers. A higher DPO can improve cash flow since you hold onto cash longer, but extremely high DPO may strain supplier relationships." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/business-operations-calculators/" aria-current="page">Business</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/business-operations-calculators/" aria-current="page">Business Operations Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container page-content">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/business-operations-calculators/">Business Operations Calculators</a></li>
+          <li><span aria-current="page">Cash Conversion Cycle Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="calc-page-layout">
+        <div class="calc-page-main">
+          <h1>Cash Conversion Cycle Calculator</h1>
+          <p class="mt-4 mb-8" style="font-size:var(--text-lg); color:var(--color-gray-600); max-width:700px; line-height:var(--leading-relaxed);">The cash conversion cycle (CCC) reveals how efficiently your business converts resources into cash. A shorter cycle means better liquidity and less need for external financing -- enter your DIO, DSO, and DPO to see where you stand.</p>
+
+          <div class="calc-container">
+            <div class="calc-header">
+              <h2>Calculate Cash Conversion Cycle</h2>
+              <p>Enter your days outstanding figures below</p>
+            </div>
+            <div class="calc-body">
+              <form id="cccForm" novalidate>
+                <div class="form-group">
+                  <label class="form-label" for="dio">Days Inventory Outstanding (DIO) <span class="form-hint">Average days to sell inventory</span></label>
+                  <div class="input-suffix">
+                    <input type="number" id="dio" name="dio" class="form-input" placeholder="45" min="0" step="0.1" required>
+                    <span class="suffix">days</span>
+                  </div>
+                  <span class="form-error">Please enter a valid number of days.</span>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="dso">Days Sales Outstanding (DSO) <span class="form-hint">Average days to collect payment</span></label>
+                  <div class="input-suffix">
+                    <input type="number" id="dso" name="dso" class="form-input" placeholder="30" min="0" step="0.1" required>
+                    <span class="suffix">days</span>
+                  </div>
+                  <span class="form-error">Please enter a valid number of days.</span>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="dpo">Days Payable Outstanding (DPO) <span class="form-hint">Average days to pay suppliers</span></label>
+                  <div class="input-suffix">
+                    <input type="number" id="dpo" name="dpo" class="form-input" placeholder="20" min="0" step="0.1" required>
+                    <span class="suffix">days</span>
+                  </div>
+                  <span class="form-error">Please enter a valid number of days.</span>
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calculateCCC()">Calculate CCC</button>
+                  <button type="button" class="btn btn-reset" onclick="resetCCCForm()">Reset</button>
+                </div>
+              </form>
+
+              <div id="results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">Cash Conversion Cycle</div>
+                  <div class="result-value" id="resultCCC">0 days</div>
+                </div>
+                <div class="result-grid result-grid-3">
+                  <div class="result-item">
+                    <div class="result-label">DIO</div>
+                    <div class="result-value" id="resultDIO">0 days</div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">DSO</div>
+                    <div class="result-value" id="resultDSO">0 days</div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">DPO</div>
+                    <div class="result-value" id="resultDPO">0 days</div>
+                  </div>
+                </div>
+                <div id="cccInterpretation" class="result-note mt-4"></div>
+                <div id="cccSuggestions" class="result-note mt-2" style="font-size:var(--text-sm); color:var(--color-gray-600);"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="disclaimer">
+            <strong>Disclaimer:</strong> This calculator provides estimates for educational purposes only. Cash conversion cycle benchmarks vary by industry. Consult a financial professional before making significant operational changes.
+          </div>
+
+          <div class="ad-slot ad-slot-leaderboard"></div>
+
+          <section class="content-section">
+            <h2>Cash Conversion Cycle Formula</h2>
+            <p>The CCC formula combines three key operational metrics to reveal the overall cash efficiency of your business.</p>
+            <div class="formula-box">
+              <div class="formula-label">Cash Conversion Cycle</div>
+              CCC = DIO + DSO - DPO
+            </div>
+            <div class="formula-box">
+              <div class="formula-label">Days Inventory Outstanding</div>
+              DIO = (Average Inventory / COGS) x 365
+            </div>
+            <div class="formula-box">
+              <div class="formula-label">Days Sales Outstanding</div>
+              DSO = (Accounts Receivable / Revenue) x 365
+            </div>
+            <div class="formula-box">
+              <div class="formula-label">Days Payable Outstanding</div>
+              DPO = (Accounts Payable / COGS) x 365
+            </div>
+          </section>
+
+          <section class="content-section">
+            <h2>How to Use This Calculator</h2>
+            <ol>
+              <li><strong>Find your DIO</strong> -- divide average inventory by COGS and multiply by 365, or use your accounting software's report.</li>
+              <li><strong>Find your DSO</strong> -- divide accounts receivable by total revenue and multiply by 365.</li>
+              <li><strong>Find your DPO</strong> -- divide accounts payable by COGS and multiply by 365.</li>
+              <li><strong>Click "Calculate CCC"</strong> to see your cycle length and get actionable improvement suggestions.</li>
+            </ol>
+          </section>
+
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>A manufacturing business has the following metrics: <strong>DIO of 45 days</strong>, <strong>DSO of 30 days</strong>, and <strong>DPO of 20 days</strong>.</p>
+            <ul>
+              <li><strong>CCC:</strong> 45 + 30 - 20 = <strong>55 days</strong></li>
+            </ul>
+            <p>This means the company ties up cash for 55 days between paying for inventory and collecting from customers. By reducing DSO to 20 days and increasing DPO to 40 days, the CCC would drop to 25 days -- freeing up significant working capital.</p>
+          </section>
+
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What is the cash conversion cycle?
+                <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>The cash conversion cycle (CCC) measures how many days it takes a business to convert its investments in inventory and other resources into cash flows from sales. A lower CCC means faster cash conversion.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What is a good cash conversion cycle?
+                <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>A negative or near-zero CCC is ideal, meaning you collect cash before paying suppliers. Amazon and many retailers achieve negative CCCs. For most businesses, a CCC under 30 days is considered efficient.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                How can I reduce my cash conversion cycle?
+                <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>To reduce CCC: decrease DIO by improving inventory management, reduce DSO by tightening credit terms and collections, and increase DPO by negotiating longer payment terms with suppliers.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What is days payable outstanding (DPO)?
+                <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>DPO measures how many days a company takes to pay its suppliers. A higher DPO can improve cash flow since you hold onto cash longer, but extremely high DPO may strain supplier relationships.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/business-operations-calculators/working-capital-calculator/" class="card card-link">
+                <h3>Working Capital Calculator</h3>
+                <p>Calculate working capital, current ratio, and quick ratio.</p>
+              </a>
+              <a href="/business-operations-calculators/vendor-payment-schedule-calculator/" class="card card-link">
+                <h3>Vendor Payment Schedule Calculator</h3>
+                <p>Optimize payment timing with early discount and late fee analysis.</p>
+              </a>
+              <a href="/business-operations-calculators/gross-profit-calculator/" class="card card-link">
+                <h3>Gross Profit Calculator</h3>
+                <p>Calculate gross profit and margin from revenue and COGS.</p>
+              </a>
+              <a href="/business-operations-calculators/operating-margin-calculator/" class="card card-link">
+                <h3>Operating Margin Calculator</h3>
+                <p>Measure operational efficiency with operating margin percentage.</p>
+              </a>
+              <a href="/business-operations-calculators/business-growth-rate-calculator/" class="card card-link">
+                <h3>Business Growth Rate Calculator</h3>
+                <p>Measure and project your revenue growth rate.</p>
+              </a>
+            </div>
+          </section>
+        </div>
+
+        <aside class="calc-page-sidebar">
+          <div class="sidebar-card">
+            <h3>Business Operations</h3>
+            <a href="/business-operations-calculators/business-growth-rate-calculator/">Growth Rate</a>
+            <a href="/business-operations-calculators/cash-conversion-cycle-calculator/">Cash Conversion Cycle</a>
+            <a href="/business-operations-calculators/customer-churn-rate-calculator/">Customer Churn Rate</a>
+            <a href="/business-operations-calculators/gross-profit-calculator/">Gross Profit</a>
+            <a href="/business-operations-calculators/net-profit-calculator/">Net Profit</a>
+            <a href="/business-operations-calculators/operating-margin-calculator/">Operating Margin</a>
+            <a href="/business-operations-calculators/profit-forecast-calculator/">Profit Forecast</a>
+            <a href="/business-operations-calculators/revenue-forecasting-calculator/">Revenue Forecasting</a>
+            <a href="/business-operations-calculators/vendor-payment-schedule-calculator/">Vendor Payment Schedule</a>
+            <a href="/business-operations-calculators/working-capital-calculator/">Working Capital</a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Real Estate</h4>
+          <a href="/real-estate-calculators/">All Real Estate</a>
+        </div>
+        <div class="footer-col">
+          <h4>Finance</h4>
+          <a href="/finance-calculators/">All Finance</a>
+        </div>
+        <div class="footer-col">
+          <h4>Business</h4>
+          <a href="/business-operations-calculators/">All Business Operations</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/about.html">About</a>
+          <a href="/contact.html">Contact</a>
+          <a href="/privacy.html">Privacy</a>
+          <a href="/terms.html">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateCCC() {
+      const dio = CalcWise.parseNumber(document.getElementById('dio').value);
+      const dso = CalcWise.parseNumber(document.getElementById('dso').value);
+      const dpo = CalcWise.parseNumber(document.getElementById('dpo').value);
+
+      if (isNaN(dio) || isNaN(dso) || isNaN(dpo)) {
+        alert('Please enter valid values for all three fields.');
+        return;
+      }
+
+      const ccc = dio + dso - dpo;
+
+      CalcWise.setText('resultCCC', CalcWise.formatNumber(ccc, 1) + ' days');
+      CalcWise.setText('resultDIO', CalcWise.formatNumber(dio, 1) + ' days');
+      CalcWise.setText('resultDSO', CalcWise.formatNumber(dso, 1) + ' days');
+      CalcWise.setText('resultDPO', CalcWise.formatNumber(dpo, 1) + ' days');
+
+      let interpretation = '';
+      let suggestions = '';
+      if (ccc < 0) {
+        interpretation = 'Excellent: Your CCC is negative -- you collect cash before paying suppliers. This is an ideal cash position.';
+        suggestions = 'Maintain your current supplier terms and collection policies.';
+      } else if (ccc <= 30) {
+        interpretation = 'Good: A CCC under 30 days indicates efficient cash management for most industries.';
+        suggestions = 'Consider slight improvements to DSO or DPO to move toward a neutral or negative cycle.';
+      } else if (ccc <= 60) {
+        interpretation = 'Average: A CCC between 30-60 days is common. There is room for improvement.';
+        suggestions = 'Focus on reducing DSO through faster invoicing and collections, and negotiate better supplier payment terms.';
+      } else {
+        interpretation = 'High: A CCC above 60 days suggests cash is tied up for an extended period. This may strain liquidity.';
+        suggestions = 'Prioritize inventory management (reduce DIO), tighten receivables collection (reduce DSO), and extend supplier payment terms (increase DPO).';
+      }
+
+      document.getElementById('cccInterpretation').textContent = interpretation;
+      document.getElementById('cccSuggestions').textContent = 'Suggestions: ' + suggestions;
+
+      CalcWise.showResults('results');
+    }
+
+    function resetCCCForm() {
+      document.getElementById('cccForm').reset();
+      CalcWise.hideResults('results');
+    }
+  </script>
+</body>
+</html>

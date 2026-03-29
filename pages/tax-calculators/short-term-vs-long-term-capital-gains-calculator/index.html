@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Short-Term vs Long-Term Capital Gains Calculator | CalcWise</title>
+  <meta name="description" content="Compare short-term vs long-term capital gains tax rates. Calculate tax savings from holding assets longer and find the break-even holding period.">
+  <link rel="canonical" href="https://calcwise.io/tax-calculators/short-term-vs-long-term-capital-gains-calculator/">
+  <meta property="og:title" content="Short vs Long-Term Capital Gains Calculator | CalcWise">
+  <meta property="og:description" content="Compare tax rates and savings between short-term and long-term capital gains for any income level.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcwise.io/tax-calculators/short-term-vs-long-term-capital-gains-calculator/">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/"},
+      {"@type": "ListItem", "position": 2, "name": "Tax Calculators", "item": "https://calcwise.io/tax-calculators/"},
+      {"@type": "ListItem", "position": 3, "name": "Short-Term vs Long-Term Capital Gains Calculator"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How long do I need to hold an asset for long-term capital gains treatment?",
+        "acceptedAnswer": {"@type": "Answer", "text": "You must hold the asset for more than one year (at least 366 days) before selling to qualify for long-term capital gains rates. Assets held one year or less are taxed as short-term at ordinary income rates."}
+      },
+      {
+        "@type": "Question",
+        "name": "What is the maximum tax savings from holding longer?",
+        "acceptedAnswer": {"@type": "Answer", "text": "For high-income taxpayers in the 37% bracket, switching from short-term to long-term capital gains can reduce the tax rate from 37% to 20% — a 17 percentage point difference. On a $100,000 gain, this saves $17,000 in federal taxes."}
+      },
+      {
+        "@type": "Question",
+        "name": "Are short-term capital gains taxed as ordinary income?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Yes. Short-term capital gains are treated as ordinary income and taxed at your marginal federal income tax rate, which can be as high as 37% in 2026."}
+      },
+      {
+        "@type": "Question",
+        "name": "Does holding longer always save taxes?",
+        "acceptedAnswer": {"@type": "Answer", "text": "For most investors, yes — holding for more than one year typically reduces the capital gains tax rate significantly. However, investors in the 0% LTCG bracket gain no tax benefit from holding longer, and investors should weigh potential investment risk against the tax savings."}
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="logo">
+        <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav">
+        <a href="/">Home</a>
+        <a href="/pages/business-calculators/">Business</a>
+        <a href="/pages/financial-calculators/">Financial</a>
+        <a href="/pages/tax-calculators/" aria-current="page">Tax</a>
+        <a href="/pages/investment-calculators/">Investment</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav">
+      <a href="/">Home</a>
+      <a href="/pages/business-calculators/">Business Calculators</a>
+      <a href="/pages/financial-calculators/">Financial Calculators</a>
+      <a href="/pages/tax-calculators/">Tax Calculators</a>
+      <a href="/pages/investment-calculators/">Investment Calculators</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/pages/tax-calculators/">Tax Calculators</a></li>
+          <li><span aria-current="page">Short-Term vs Long-Term Capital Gains Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="calc-page-layout">
+          <div class="calc-page-main">
+            <h1>Short-Term vs Long-Term Capital Gains Calculator</h1>
+            <p class="subtitle" style="font-size:var(--text-lg);color:var(--color-gray-600);margin-bottom:var(--space-8);line-height:var(--leading-relaxed);">Compare the tax impact of selling an asset now (short-term) versus holding it for more than one year (long-term). See your tax savings and whether waiting is worth it for your situation.</p>
+
+            <div class="calc-container">
+              <div class="calc-header">
+                <h2>Short vs Long-Term Capital Gains Comparison</h2>
+                <p>See your tax savings from holding an asset longer</p>
+              </div>
+              <div class="calc-body">
+                <form id="calc-form" onsubmit="return false;">
+                  <div class="form-group">
+                    <label class="form-label" for="asset-gain">Capital Gain Amount</label>
+                    <div class="input-prefix">
+                      <span class="prefix">$</span>
+                      <input type="number" id="asset-gain" class="form-input" placeholder="50000" min="0" step="1000">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="ordinary-income">Annual Ordinary Income (wages, etc. before this gain)</label>
+                    <div class="input-prefix">
+                      <span class="prefix">$</span>
+                      <input type="number" id="ordinary-income" class="form-input" placeholder="100000" min="0" step="1000">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="filing-status">Filing Status</label>
+                    <select id="filing-status" class="form-select">
+                      <option value="single">Single</option>
+                      <option value="married">Married Filing Jointly</option>
+                      <option value="hoh">Head of Household</option>
+                    </select>
+                  </div>
+                  <div class="calc-actions">
+                    <button type="button" class="btn btn-calculate btn-full" onclick="compareGains()">Compare Tax Rates</button>
+                    <button type="button" class="btn btn-reset" onclick="resetForm()">Reset</button>
+                  </div>
+                </form>
+
+                <div id="results" class="calc-results hidden">
+                  <div class="result-primary">
+                    <div class="result-label">Tax Savings from Long-Term</div>
+                    <div class="result-value" id="result-savings">$0</div>
+                  </div>
+                  <div class="result-grid">
+                    <div class="result-item">
+                      <div class="result-label">Short-Term Tax</div>
+                      <div class="result-value" id="result-st-tax">$0</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Short-Term Rate</div>
+                      <div class="result-value" id="result-st-rate">0%</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Long-Term Tax</div>
+                      <div class="result-value" id="result-lt-tax">$0</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Long-Term Rate</div>
+                      <div class="result-value" id="result-lt-rate">0%</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Net ST Proceeds</div>
+                      <div class="result-value" id="result-st-net">$0</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Net LT Proceeds</div>
+                      <div class="result-value" id="result-lt-net">$0</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="ad-slot ad-slot-leaderboard"></div>
+
+            <section class="content-section">
+              <h2>Short-Term vs Long-Term Rate Comparison</h2>
+              <div class="formula-box">
+                <div class="formula-label">Short-Term (held ≤ 1 year)</div>
+                Taxed at ordinary income rates: 10%, 12%, 22%, 24%, 32%, 35%, or 37%<br>
+                The gain is added on top of your ordinary income.
+              </div>
+              <div class="formula-box">
+                <div class="formula-label">Long-Term (held &gt; 1 year) — 2026 Rates</div>
+                0% — Total income ≤ ~$47,025 (single) / ~$94,050 (MFJ)<br>
+                15% — Total income ≤ ~$518,900 (single) / ~$583,750 (MFJ)<br>
+                20% — Total income above those thresholds<br>
+                +3.8% NIIT may apply at MAGI above $200,000 / $250,000
+              </div>
+            </section>
+
+            <section class="content-section">
+              <h2>How to Use This Calculator</h2>
+              <ol>
+                <li>Enter the <strong>capital gain amount</strong> (sale price minus cost basis).</li>
+                <li>Enter your <strong>annual ordinary income</strong> before the gain.</li>
+                <li>Select your <strong>filing status</strong>.</li>
+                <li>Click <strong>Compare Tax Rates</strong> to see side-by-side results.</li>
+              </ol>
+            </section>
+
+            <section class="content-section">
+              <h2>Example Scenario</h2>
+              <p>Single filer with $120,000 ordinary income and a $40,000 capital gain:</p>
+              <ul>
+                <li>Short-Term Rate: In 22% bracket → <strong>Tax: ~$8,800</strong></li>
+                <li>Long-Term Rate: Total income $160,000 → in 15% LTCG bracket → <strong>Tax: $6,000</strong></li>
+                <li>Tax Savings from Holding &gt;1 year: <strong>$2,800</strong></li>
+              </ul>
+            </section>
+
+            <section class="faq-section">
+              <h2>Frequently Asked Questions</h2>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">How long do I need to hold an asset for long-term treatment?<svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 011-1z"/></svg></button>
+                <div class="faq-answer"><p>You must hold the asset for more than one year (at least 366 days) before selling to qualify for long-term capital gains rates.</p></div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">What is the maximum tax savings from holding longer?<svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 011-1z"/></svg></button>
+                <div class="faq-answer"><p>For high-income taxpayers in the 37% bracket, switching from short-term to long-term can reduce the rate from 37% to 20% — saving $17,000 on a $100,000 gain.</p></div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">Are short-term capital gains taxed as ordinary income?<svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 011-1z"/></svg></button>
+                <div class="faq-answer"><p>Yes. Short-term capital gains are treated as ordinary income and taxed at your marginal federal income tax rate, up to 37% in 2026.</p></div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">Does holding longer always save taxes?<svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 011-1z"/></svg></button>
+                <div class="faq-answer"><p>For most investors, yes. However, investors in the 0% LTCG bracket gain no tax benefit. Investors should also weigh potential investment risk against the expected tax savings from holding longer.</p></div>
+              </div>
+            </section>
+
+            <section class="related-calculators">
+              <h2>Related Calculators</h2>
+              <div class="grid grid-3">
+                <a href="/pages/tax-calculators/capital-gains-tax-calculator/" class="card card-link">
+                  <h3>Capital Gains Tax Calculator</h3>
+                  <p>Calculate total capital gains tax on any asset sale.</p>
+                </a>
+                <a href="/pages/tax-calculators/tax-bracket-calculator/" class="card card-link">
+                  <h3>Tax Bracket Calculator</h3>
+                  <p>See your marginal income tax rate for context.</p>
+                </a>
+                <a href="/pages/tax-calculators/after-tax-income-calculator/" class="card card-link">
+                  <h3>After-Tax Income Calculator</h3>
+                  <p>Calculate total net income after all taxes.</p>
+                </a>
+              </div>
+            </section>
+
+            <div class="disclaimer">
+              <strong>Tax Disclaimer:</strong> This calculator provides estimates for educational purposes only and does not constitute tax or investment advice. Actual tax impact may differ due to carryover losses, AMT, state taxes, and other factors. The decision to hold or sell an investment involves many factors beyond taxes. Consult a qualified tax and financial professional before making investment decisions. Results are based on estimated 2026 federal tax parameters.
+            </div>
+          </div>
+
+          <aside class="calc-page-sidebar">
+            <div class="ad-slot ad-slot-rectangle"></div>
+            <div class="sidebar-card">
+              <h3>Tax Calculators</h3>
+              <a href="/pages/tax-calculators/capital-gains-tax-calculator/">Capital Gains Tax</a>
+              <a href="/pages/tax-calculators/tax-bracket-calculator/">Tax Bracket Calculator</a>
+              <a href="/pages/tax-calculators/after-tax-income-calculator/">After-Tax Income</a>
+              <a href="/pages/tax-calculators/tax-refund-estimator/">Tax Refund Estimator</a>
+              <a href="/pages/tax-calculators/standard-vs-itemized-deduction-calculator/">Deduction Calculator</a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free online calculators for business, finance, tax, and investment decisions.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Calculators</h4>
+          <a href="/pages/business-calculators/">Business</a>
+          <a href="/pages/financial-calculators/">Financial</a>
+          <a href="/pages/tax-calculators/">Tax</a>
+          <a href="/pages/investment-calculators/">Investment</a>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <a href="/about/">About</a>
+          <a href="/blog/">Blog</a>
+          <a href="/contact/">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="/privacy/">Privacy Policy</a>
+          <a href="/terms/">Terms of Service</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/privacy/">Privacy</a>
+          <a href="/terms/">Terms</a>
+          <a href="/contact/">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    const OI_BRACKETS = {
+      single: [{rate:0.10,min:0,max:11925},{rate:0.12,min:11925,max:48475},{rate:0.22,min:48475,max:103350},{rate:0.24,min:103350,max:197300},{rate:0.32,min:197300,max:250525},{rate:0.35,min:250525,max:626350},{rate:0.37,min:626350,max:Infinity}],
+      married: [{rate:0.10,min:0,max:23850},{rate:0.12,min:23850,max:96950},{rate:0.22,min:96950,max:206700},{rate:0.24,min:206700,max:394600},{rate:0.32,min:394600,max:501050},{rate:0.35,min:501050,max:751600},{rate:0.37,min:751600,max:Infinity}],
+      hoh: [{rate:0.10,min:0,max:17000},{rate:0.12,min:17000,max:64850},{rate:0.22,min:64850,max:103350},{rate:0.24,min:103350,max:197300},{rate:0.32,min:197300,max:250500},{rate:0.35,min:250500,max:626350},{rate:0.37,min:626350,max:Infinity}]
+    };
+    const STD_DED = {single:14600, married:29200, hoh:21900};
+    const LTCG_THRESH = {single:{p0:47025,p15:518900}, married:{p0:94050,p15:583750}, hoh:{p0:63000,p15:551350}};
+
+    function calcOITax(taxable, status) {
+      const b = OI_BRACKETS[status] || OI_BRACKETS.single;
+      let tax = 0;
+      for (const br of b) {
+        if (taxable <= br.min) break;
+        tax += (Math.min(taxable, br.max) - br.min) * br.rate;
+      }
+      return tax;
+    }
+
+    function compareGains() {
+      const gain = CalcWise.parseNumber(document.getElementById('asset-gain').value);
+      const income = CalcWise.parseNumber(document.getElementById('ordinary-income').value);
+      const status = document.getElementById('filing-status').value;
+
+      if (gain <= 0) { alert('Please enter a capital gain amount.'); return; }
+
+      const stdDed = STD_DED[status] || 14600;
+
+      // Short-term: gain taxed as ordinary income on top of income
+      const ordinTaxable = Math.max(0, income - stdDed);
+      const withGainTaxable = Math.max(0, income + gain - stdDed);
+      const stTaxOnGain = calcOITax(withGainTaxable, status) - calcOITax(ordinTaxable, status);
+      const stRate = gain > 0 ? (stTaxOnGain / gain) * 100 : 0;
+
+      // Long-term
+      const thresh = LTCG_THRESH[status] || LTCG_THRESH.single;
+      const baseInc = income;
+      const p0Remaining = Math.max(0, thresh.p0 - baseInc);
+      const p0Gain = Math.min(gain, p0Remaining);
+      const rem = gain - p0Gain;
+      const p15Remaining = Math.max(0, thresh.p15 - Math.max(baseInc, thresh.p0));
+      const p15Gain = Math.min(rem, p15Remaining);
+      const p20Gain = Math.max(0, rem - p15Gain);
+      const ltTax = p15Gain * 0.15 + p20Gain * 0.20;
+      const ltRate = gain > 0 ? (ltTax / gain) * 100 : 0;
+
+      const savings = stTaxOnGain - ltTax;
+
+      CalcWise.setText('result-savings', CalcWise.formatCurrency(savings));
+      CalcWise.setText('result-st-tax', CalcWise.formatCurrency(stTaxOnGain));
+      CalcWise.setText('result-st-rate', stRate.toFixed(1) + '%');
+      CalcWise.setText('result-lt-tax', CalcWise.formatCurrency(ltTax));
+      CalcWise.setText('result-lt-rate', ltRate.toFixed(1) + '%');
+      CalcWise.setText('result-st-net', CalcWise.formatCurrency(gain - stTaxOnGain));
+      CalcWise.setText('result-lt-net', CalcWise.formatCurrency(gain - ltTax));
+      CalcWise.showResults('results');
+    }
+
+    function resetForm() {
+      document.getElementById('calc-form').reset();
+      CalcWise.hideResults('results');
+    }
+
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', !expanded);
+        btn.nextElementSibling.style.display = expanded ? 'none' : 'block';
+      });
+    });
+    document.querySelectorAll('.faq-answer').forEach(a => a.style.display = 'none');
+
+    const toggle = document.querySelector('.mobile-menu-toggle');
+    const mobileNav = document.querySelector('.mobile-nav');
+    if (toggle && mobileNav) {
+      toggle.addEventListener('click', () => {
+        const open = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', !open);
+        mobileNav.style.display = open ? 'none' : 'block';
+      });
+    }
+  </script>
+</body>
+</html>

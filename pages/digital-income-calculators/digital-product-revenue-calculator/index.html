@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital Product Revenue Calculator | CalcWise</title>
+  <meta name="description" content="Calculate net revenue from digital products after platform fees, transaction fees, refunds, and ad spend. Get gross revenue, profit margin, and cost per acquisition.">
+  <link rel="canonical" href="https://calcwise.io/digital-income-calculators/digital-product-revenue-calculator/">
+  <meta property="og:title" content="Digital Product Revenue Calculator | CalcWise">
+  <meta property="og:description" content="Calculate net digital product revenue after Gumroad, Teachable, or other platform fees, refunds, and advertising costs.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcwise.io/digital-income-calculators/digital-product-revenue-calculator/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Digital Product Revenue Calculator | CalcWise">
+  <meta name="twitter:description" content="Estimate net revenue from ebooks, courses, and downloads after all fees and ad spend.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/"},
+      {"@type": "ListItem", "position": 2, "name": "Digital Income Calculators", "item": "https://calcwise.io/digital-income-calculators/"},
+      {"@type": "ListItem", "position": 3, "name": "Digital Product Revenue Calculator"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What are typical platform fees for digital products?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Platform fees vary widely: Gumroad charges 10% on the free plan or flat fees on paid plans. Teachable charges 5% on Basic plans and 0% on Pro/Business. Podia charges 0% on all plans. Payhip charges 5% on free plan. Stripe charges 2.9% + $0.30 per transaction. Always check current pricing as platforms update their fee structures."}
+      },
+      {
+        "@type": "Question",
+        "name": "What is a typical refund rate for digital products?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Refund rates for digital products typically range from 1% to 5%. Online courses often see 3-7% refund rates, especially with 30-day money-back guarantees. Ebooks and smaller digital downloads usually have lower refund rates of 1-3%."}
+      },
+      {
+        "@type": "Question",
+        "name": "How do I calculate cost per acquisition for digital products?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Cost per acquisition (CPA) is calculated as total advertising spend divided by the number of sales. For example, $1,000 in ad spend generating 50 sales = $20 CPA. To be profitable, your CPA must be significantly lower than your net revenue per sale."}
+      },
+      {
+        "@type": "Question",
+        "name": "What profit margin should I target for digital products?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Digital products have very high potential margins since there is no physical inventory or shipping. After platform fees and any advertising spend, healthy digital product businesses target 50-80% profit margins. Lower margins are acceptable when scaling with paid traffic as volume compensates."}
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="logo">
+        <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav">
+        <a href="/">Home</a>
+        <a href="/pages/business-calculators/">Business</a>
+        <a href="/pages/financial-calculators/">Financial</a>
+        <a href="/pages/tax-calculators/">Tax</a>
+        <a href="/pages/digital-income-calculators/" aria-current="page">Digital Income</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav">
+      <a href="/">Home</a>
+      <a href="/pages/business-calculators/">Business Calculators</a>
+      <a href="/pages/financial-calculators/">Financial Calculators</a>
+      <a href="/pages/tax-calculators/">Tax Calculators</a>
+      <a href="/pages/digital-income-calculators/">Digital Income Calculators</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/pages/digital-income-calculators/">Digital Income Calculators</a></li>
+          <li><span aria-current="page">Digital Product Revenue Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="calc-page-layout">
+          <div class="calc-page-main">
+            <h1>Digital Product Revenue Calculator</h1>
+            <p class="subtitle" style="font-size:var(--text-lg);color:var(--color-gray-600);margin-bottom:var(--space-8);line-height:var(--leading-relaxed);">Calculate net revenue from ebooks, online courses, templates, and other digital products after platform fees, transaction fees, refunds, and ad spend. See your true profit margin and cost per acquisition.</p>
+
+            <div class="calc-container">
+              <div class="calc-header">
+                <h2>Digital Product Revenue Calculator</h2>
+                <p>Net revenue after all fees, refunds, and advertising costs</p>
+              </div>
+              <div class="calc-body">
+                <form id="digprod-form" onsubmit="return false;">
+                  <div class="form-group">
+                    <label class="form-label" for="product-price">Product Price ($)</label>
+                    <div class="input-prefix">
+                      <span class="prefix">$</span>
+                      <input type="number" id="product-price" name="productPrice" class="form-input" placeholder="97" min="0.01" step="0.01" required>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="monthly-sales">Monthly Sales Volume</label>
+                    <input type="number" id="monthly-sales" name="monthlySales" class="form-input" placeholder="50" min="1" step="1" required>
+                    <span class="form-hint">Number of units sold per month</span>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="platform-fee">Platform Fee (% of sale)</label>
+                    <div class="input-suffix">
+                      <input type="number" id="platform-fee" name="platformFee" class="form-input" placeholder="10" min="0" max="50" step="0.01" required>
+                      <span class="suffix">%</span>
+                    </div>
+                    <span class="form-hint">Gumroad: 10% (free plan). Teachable: 5% (Basic). Podia: 0%</span>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="transaction-fee">Payment Processing Fee (% + flat $)</label>
+                    <div style="display:flex;gap:var(--space-2);">
+                      <div class="input-suffix" style="flex:1;">
+                        <input type="number" id="transaction-fee-pct" name="transactionFeePct" class="form-input" placeholder="2.9" min="0" max="10" step="0.01">
+                        <span class="suffix">%</span>
+                      </div>
+                      <div class="input-prefix" style="flex:1;">
+                        <span class="prefix">$</span>
+                        <input type="number" id="transaction-fee-flat" name="transactionFeeFlat" class="form-input" placeholder="0.30" min="0" step="0.01">
+                      </div>
+                    </div>
+                    <span class="form-hint">Stripe: 2.9% + $0.30. PayPal: 3.49% + $0.49</span>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="refund-rate">Refund Rate (%)</label>
+                    <div class="input-suffix">
+                      <input type="number" id="refund-rate" name="refundRate" class="form-input" placeholder="3" min="0" max="50" step="0.01" required>
+                      <span class="suffix">%</span>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="ad-spend">Monthly Ad Spend ($)</label>
+                    <div class="input-prefix">
+                      <span class="prefix">$</span>
+                      <input type="number" id="ad-spend" name="adSpend" class="form-input" placeholder="500" min="0" step="1" required>
+                    </div>
+                    <span class="form-hint">Total monthly advertising budget (enter 0 if organic only)</span>
+                  </div>
+
+                  <div class="calc-actions">
+                    <button type="button" class="btn btn-calculate btn-full" onclick="calculateDigitalProduct()">Calculate Revenue</button>
+                    <button type="button" class="btn btn-reset" onclick="resetDigitalProductForm()">Reset</button>
+                  </div>
+                </form>
+
+                <div id="digprod-results" class="calc-results hidden">
+                  <div class="result-primary">
+                    <div class="result-label">Monthly Net Profit</div>
+                    <div class="result-value" id="dp-result-net-profit">$0</div>
+                  </div>
+                  <div class="result-grid result-grid-2">
+                    <div class="result-item">
+                      <div class="result-label">Gross Revenue</div>
+                      <div class="result-value" id="dp-result-gross">$0</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Net After Fees</div>
+                      <div class="result-value" id="dp-result-net-fees">$0</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Profit Margin</div>
+                      <div class="result-value" id="dp-result-margin">0%</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Annual Revenue (Net)</div>
+                      <div class="result-value" id="dp-result-annual">$0</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Cost Per Acquisition</div>
+                      <div class="result-value" id="dp-result-cpa">$0</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Total Monthly Fees</div>
+                      <div class="result-value" id="dp-result-total-fees">$0</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="ad-slot ad-slot-leaderboard"></div>
+
+            <section class="content-section">
+              <h2>Digital Product Revenue Formulas</h2>
+              <div class="formula-box">
+                <div class="formula-label">Gross Revenue</div>
+                Gross Revenue = Product Price x Monthly Sales
+              </div>
+              <div class="formula-box">
+                <div class="formula-label">Net After Refunds</div>
+                Net After Refunds = Gross Revenue x (1 - Refund Rate / 100)
+              </div>
+              <div class="formula-box">
+                <div class="formula-label">Platform + Processing Fees</div>
+                Fees = (Net After Refunds x Platform Fee%) + (Sales x (Processing% x Price + Flat Fee))
+              </div>
+              <div class="formula-box">
+                <div class="formula-label">Net Profit</div>
+                Net Profit = Net After Refunds - All Fees - Ad Spend
+              </div>
+              <div class="formula-box">
+                <div class="formula-label">Cost Per Acquisition</div>
+                CPA = Ad Spend / Monthly Sales
+              </div>
+            </section>
+
+            <section class="content-section">
+              <h2>How to Use This Calculator</h2>
+              <ol>
+                <li>Enter your <strong>product price</strong> — the selling price of your digital product.</li>
+                <li>Set your <strong>monthly sales volume</strong> — how many units you sell or expect to sell per month.</li>
+                <li>Enter your <strong>platform fee percentage</strong> — check your platform's current pricing (Gumroad, Teachable, Podia, etc.).</li>
+                <li>Set your <strong>payment processing fee</strong> — the percentage and flat fee charged by Stripe, PayPal, or your payment processor.</li>
+                <li>Enter your <strong>refund rate</strong> — the percentage of sales that are refunded.</li>
+                <li>Set your <strong>monthly ad spend</strong> — total advertising budget (enter 0 for organic sales).</li>
+                <li>Click <strong>Calculate Revenue</strong> for gross revenue, net after fees, profit margin, annual revenue, and CPA.</li>
+              </ol>
+            </section>
+
+            <section class="content-section">
+              <h2>Example Scenario</h2>
+              <p>A creator sells an online course for $197, with 30 sales/month, 10% Gumroad platform fee, 2.9% + $0.30 Stripe fee, 4% refund rate, and $300/month in Facebook ads.</p>
+              <ul>
+                <li>Gross Revenue: 30 x $197 = <strong>$5,910</strong></li>
+                <li>Refund deduction (4%): -$236 = Net <strong>$5,674</strong></li>
+                <li>Platform Fee (10%): -$567</li>
+                <li>Processing (2.9% + $0.30 x 30): -$174</li>
+                <li>Ad Spend: -$300</li>
+                <li>Net Profit: $5,674 - $567 - $174 - $300 = <strong>$4,633</strong></li>
+                <li>Profit Margin: $4,633 / $5,910 = <strong>78.4%</strong></li>
+                <li>CPA: $300 / 30 = <strong>$10 per sale</strong></li>
+              </ul>
+            </section>
+
+            <section class="faq-section">
+              <h2>Frequently Asked Questions</h2>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  What are typical platform fees for digital products?
+                  <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                </button>
+                <div class="faq-answer">
+                  <p>Platform fees vary: Gumroad charges 10% on the free plan. Teachable charges 5% on Basic, 0% on Pro/Business. Podia charges 0%. Payhip charges 5% on the free plan. Always check current pricing as platforms regularly update their fee structures.</p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  What is a typical refund rate for digital products?
+                  <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 011-1z"/></svg>
+                </button>
+                <div class="faq-answer">
+                  <p>Refund rates for digital products typically range from 1% to 5%. Online courses often see 3-7% refund rates, especially with 30-day money-back guarantees. Ebooks and smaller downloads usually see 1-3% refund rates.</p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  How do I calculate cost per acquisition for digital products?
+                  <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 011-1z"/></svg>
+                </button>
+                <div class="faq-answer">
+                  <p>CPA is total advertising spend divided by the number of sales. $1,000 ad spend generating 50 sales = $20 CPA. To be profitable, your CPA must be significantly lower than your net revenue per sale after fees and refunds.</p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  What profit margin should I target for digital products?
+                  <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 011-1z"/></svg>
+                </button>
+                <div class="faq-answer">
+                  <p>After platform fees and advertising, healthy digital product businesses target 50-80% profit margins. Lower margins can be acceptable when scaling with paid traffic as volume compensates. Organic sales with minimal fees can achieve 85-95% margins.</p>
+                </div>
+              </div>
+            </section>
+
+            <section class="related-calculators">
+              <h2>Related Calculators</h2>
+              <div class="grid grid-3">
+                <a href="/pages/digital-income-calculators/platform-fee-calculator/" class="card card-link">
+                  <h3>Platform Fee Calculator</h3>
+                  <p>Compare fees across Etsy, Gumroad, Shopify, Stripe, and more.</p>
+                </a>
+                <a href="/pages/digital-income-calculators/online-store-revenue-calculator/" class="card card-link">
+                  <h3>Online Store Revenue Calculator</h3>
+                  <p>Calculate net profit from your ecommerce store after COGS and fees.</p>
+                </a>
+                <a href="/pages/digital-income-calculators/affiliate-income-calculator/" class="card card-link">
+                  <h3>Affiliate Income Calculator</h3>
+                  <p>Estimate affiliate earnings from your traffic and click-through rates.</p>
+                </a>
+                <a href="/pages/business-calculators/pricing-calculator/" class="card card-link">
+                  <h3>Pricing Calculator</h3>
+                  <p>Determine optimal product pricing for maximum profitability.</p>
+                </a>
+              </div>
+            </section>
+
+            <div class="disclaimer">
+              <strong>Disclaimer:</strong> This calculator provides estimates for planning purposes only. Platform fees, transaction fees, and refund rates are subject to change. Always verify current fee structures with your platform provider. Results do not constitute financial or business advice.
+            </div>
+          </div>
+
+          <aside class="calc-page-sidebar">
+            <div class="ad-slot ad-slot-rectangle"></div>
+            <div class="sidebar-card">
+              <h3>Digital Income Calculators</h3>
+              <a href="/pages/digital-income-calculators/affiliate-income-calculator/">Affiliate Income</a>
+              <a href="/pages/digital-income-calculators/online-store-revenue-calculator/">Online Store Revenue</a>
+              <a href="/pages/digital-income-calculators/platform-fee-calculator/">Platform Fee Calculator</a>
+              <a href="/pages/digital-income-calculators/creator-revenue-calculator/">Creator Revenue</a>
+              <a href="/pages/digital-income-calculators/ad-revenue-calculator/">Ad Revenue Calculator</a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free online calculators for business, finance, tax, and investment decisions.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Calculators</h4>
+          <a href="/pages/business-calculators/">Business</a>
+          <a href="/pages/financial-calculators/">Financial</a>
+          <a href="/pages/tax-calculators/">Tax</a>
+          <a href="/pages/digital-income-calculators/">Digital Income</a>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <a href="/about/">About</a>
+          <a href="/blog/">Blog</a>
+          <a href="/contact/">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="/privacy/">Privacy Policy</a>
+          <a href="/terms/">Terms of Service</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/privacy/">Privacy</a>
+          <a href="/terms/">Terms</a>
+          <a href="/contact/">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateDigitalProduct() {
+      const price = CalcWise.parseNumber(document.getElementById('product-price').value);
+      const sales = CalcWise.parseNumber(document.getElementById('monthly-sales').value);
+      const platformFeePct = CalcWise.parseNumber(document.getElementById('platform-fee').value);
+      const txnPct = CalcWise.parseNumber(document.getElementById('transaction-fee-pct').value);
+      const txnFlat = CalcWise.parseNumber(document.getElementById('transaction-fee-flat').value);
+      const refundRate = CalcWise.parseNumber(document.getElementById('refund-rate').value);
+      const adSpend = CalcWise.parseNumber(document.getElementById('ad-spend').value);
+
+      if (price <= 0) { alert('Product price must be greater than zero.'); return; }
+      if (sales <= 0) { alert('Monthly sales must be greater than zero.'); return; }
+
+      const grossRevenue = price * sales;
+      const refundAmount = grossRevenue * (refundRate / 100);
+      const netAfterRefunds = grossRevenue - refundAmount;
+      const platformFeeAmount = netAfterRefunds * (platformFeePct / 100);
+      const txnFeeAmount = sales * (price * (txnPct / 100) + txnFlat);
+      const totalFees = platformFeeAmount + txnFeeAmount;
+      const netAfterFees = netAfterRefunds - totalFees;
+      const netProfit = netAfterFees - adSpend;
+      const profitMargin = grossRevenue > 0 ? (netProfit / grossRevenue) * 100 : 0;
+      const annualNet = netProfit * 12;
+      const cpa = sales > 0 ? adSpend / sales : 0;
+
+      CalcWise.setText('dp-result-net-profit', CalcWise.formatCurrency(netProfit, 0));
+      CalcWise.setText('dp-result-gross', CalcWise.formatCurrency(grossRevenue, 0));
+      CalcWise.setText('dp-result-net-fees', CalcWise.formatCurrency(netAfterFees, 0));
+      CalcWise.setText('dp-result-margin', CalcWise.formatPercent(profitMargin, 1));
+      CalcWise.setText('dp-result-annual', CalcWise.formatCurrency(annualNet, 0));
+      CalcWise.setText('dp-result-cpa', adSpend > 0 ? CalcWise.formatCurrency(cpa, 2) : 'N/A (organic)');
+      CalcWise.setText('dp-result-total-fees', CalcWise.formatCurrency(totalFees, 0));
+      CalcWise.showResults('digprod-results');
+    }
+
+    function resetDigitalProductForm() {
+      document.getElementById('digprod-form').reset();
+      CalcWise.hideResults('digprod-results');
+    }
+  </script>
+</body>
+</html>

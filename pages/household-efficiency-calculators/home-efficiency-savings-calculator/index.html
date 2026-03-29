@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Efficiency Savings Calculator - Optimize Home Operating Costs | CalcWise</title>
+    <meta name="description" content="Calculate potential savings on your home operating costs. Enter utilities, maintenance, insurance, and HOA costs, select optimization actions, and get your efficiency score and priority improvements.">
+    <link rel="canonical" href="https://calcwise.io/household-efficiency-calculators/home-efficiency-savings-calculator/">
+    <meta property="og:title" content="Home Efficiency Savings Calculator | CalcWise">
+    <meta property="og:description" content="Get an efficiency score for your home operating costs and find the highest-impact improvements you can make.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://calcwise.io/household-efficiency-calculators/home-efficiency-savings-calculator/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Home Efficiency Savings Calculator | CalcWise">
+    <meta name="twitter:description" content="Score your home efficiency and find priority improvements to reduce operating costs.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/design-system.css">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/"},
+            {"@type": "ListItem", "position": 2, "name": "Household Efficiency Calculators", "item": "https://calcwise.io/household-efficiency-calculators/"},
+            {"@type": "ListItem", "position": 3, "name": "Home Efficiency Savings Calculator"}
+        ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {"@type": "Question", "name": "What is a typical annual home operating cost?", "acceptedAnswer": {"@type": "Answer", "text": "For a median US home (~$300,000 value), annual operating costs typically run $15,000-25,000 including mortgage interest, utilities, insurance, maintenance, and property taxes. Excluding mortgage, homeowners typically spend $7,000-15,000 per year on operational costs alone."}},
+            {"@type": "Question", "name": "What is an efficiency score for home operating costs?", "acceptedAnswer": {"@type": "Answer", "text": "An efficiency score is a composite measure of how well-optimized your home costs are. It considers whether you have efficient appliances, good insulation, low water usage, and proactive maintenance -- factors that reduce operating costs relative to your home's size and value."}},
+            {"@type": "Question", "name": "How much can I save by shopping insurance annually?", "acceptedAnswer": {"@type": "Answer", "text": "Homeowners who shop their insurance annually typically save 10-25% by switching providers. Bundling home and auto insurance can save an additional 5-15%. Given average homeowners insurance costs $1,500-2,000 per year, this represents $150-500 in annual savings."}},
+            {"@type": "Question", "name": "What home optimizations give the best return?", "acceptedAnswer": {"@type": "Answer", "text": "In order of typical return: (1) Smart thermostat -- payback under 1-2 years; (2) LED lighting -- payback 6-18 months; (3) Weatherstripping and air sealing -- payback 1-3 years; (4) Attic insulation -- payback 3-7 years; (5) New HVAC when aging -- payback 5-10 years but improves comfort significantly."}}
+        ]
+    }
+    </script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="/" class="logo">
+                <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+                CalcWise
+            </a>
+            <nav class="main-nav">
+                <a href="/real-estate-calculators/">Real Estate</a>
+                <a href="/advanced-real-estate-calculators/">Advanced RE</a>
+                <a href="/energy-utility-calculators/">Energy</a>
+                <a href="/household-efficiency-calculators/">Household</a>
+                <a href="/finance-calculators/">Finance</a>
+            </nav>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+            </button>
+        </div>
+        <nav class="mobile-nav">
+            <a href="/real-estate-calculators/">Real Estate Calculators</a>
+            <a href="/advanced-real-estate-calculators/">Advanced Real Estate</a>
+            <a href="/energy-utility-calculators/">Energy &amp; Utility</a>
+            <a href="/household-efficiency-calculators/">Household Efficiency</a>
+            <a href="/finance-calculators/">Finance Calculators</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <nav class="breadcrumbs" aria-label="Breadcrumb">
+                <ol>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/household-efficiency-calculators/">Household Efficiency Calculators</a></li>
+                    <li><span aria-current="page">Home Efficiency Savings Calculator</span></li>
+                </ol>
+            </nav>
+
+            <div class="page-content">
+                <div class="calc-page-layout">
+                    <div class="calc-page-main">
+                        <h1>Home Efficiency Savings Calculator</h1>
+                        <p class="subtitle" style="color: var(--color-gray-600); font-size: var(--text-lg); line-height: var(--leading-relaxed); margin-bottom: var(--space-8);">
+                            Enter your current annual home operating costs, then check which optimizations you have taken or plan to take. Get your efficiency score, potential monthly and annual savings, and a prioritized list of improvements.
+                        </p>
+
+                        <div class="calc-container">
+                            <div class="calc-header">
+                                <h2>Home Efficiency Score</h2>
+                                <p>Potential savings and priority improvements</p>
+                            </div>
+                            <div class="calc-body">
+                                <form id="heff-form">
+                                    <div class="form-group">
+                                        <label class="form-label" for="annual-utilities">Annual Utility Costs (electric + gas + water)</label>
+                                        <div class="input-prefix">
+                                            <span class="prefix">$</span>
+                                            <input type="number" id="annual-utilities" name="annualUtilities" class="form-input" placeholder="3600" min="0" step="100" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label" for="annual-maintenance">Annual Maintenance Costs</label>
+                                        <div class="input-prefix">
+                                            <span class="prefix">$</span>
+                                            <input type="number" id="annual-maintenance" name="annualMaintenance" class="form-input" placeholder="2000" min="0" step="100" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label" for="annual-insurance">Annual Homeowners Insurance</label>
+                                        <div class="input-prefix">
+                                            <span class="prefix">$</span>
+                                            <input type="number" id="annual-insurance" name="annualInsurance" class="form-input" placeholder="1500" min="0" step="50" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label" for="annual-hoa">Annual HOA Fees (0 if none)</label>
+                                        <div class="input-prefix">
+                                            <span class="prefix">$</span>
+                                            <input type="number" id="annual-hoa" name="annualHOA" class="form-input" placeholder="0" min="0" step="50">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">Optimizations Already Done</label>
+                                        <div style="display:flex;flex-direction:column;gap:var(--space-2);margin-top:var(--space-2);">
+                                            <label style="display:flex;align-items:center;gap:var(--space-2);cursor:pointer;">
+                                                <input type="checkbox" id="has-led" name="hasLED" value="1" style="width:18px;height:18px;">
+                                                <span>LED lighting throughout home</span>
+                                            </label>
+                                            <label style="display:flex;align-items:center;gap:var(--space-2);cursor:pointer;">
+                                                <input type="checkbox" id="has-thermostat" name="hasThermostat" value="1" style="width:18px;height:18px;">
+                                                <span>Smart/programmable thermostat installed</span>
+                                            </label>
+                                            <label style="display:flex;align-items:center;gap:var(--space-2);cursor:pointer;">
+                                                <input type="checkbox" id="has-insulation" name="hasInsulation" value="1" style="width:18px;height:18px;">
+                                                <span>Adequate attic/wall insulation</span>
+                                            </label>
+                                            <label style="display:flex;align-items:center;gap:var(--space-2);cursor:pointer;">
+                                                <input type="checkbox" id="has-lowflow" name="hasLowFlow" value="1" style="width:18px;height:18px;">
+                                                <span>Low-flow fixtures installed</span>
+                                            </label>
+                                            <label style="display:flex;align-items:center;gap:var(--space-2);cursor:pointer;">
+                                                <input type="checkbox" id="has-insurance-shopped" name="hasInsuranceShopped" value="1" style="width:18px;height:18px;">
+                                                <span>Shopped insurance in the last 2 years</span>
+                                            </label>
+                                            <label style="display:flex;align-items:center;gap:var(--space-2);cursor:pointer;">
+                                                <input type="checkbox" id="has-preventive" name="hasPreventive" value="1" style="width:18px;height:18px;">
+                                                <span>Following preventive maintenance schedule</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="calc-actions">
+                                        <button type="button" class="btn btn-calculate btn-full" onclick="calculateHomeEfficiency()">Calculate Efficiency Score</button>
+                                        <button type="reset" class="btn btn-reset">Reset</button>
+                                    </div>
+                                </form>
+
+                                <div id="results" class="calc-results hidden">
+                                    <div class="result-primary">
+                                        <div class="result-label">Efficiency Score</div>
+                                        <div class="result-value" id="result-score">0/100</div>
+                                    </div>
+                                    <div class="result-grid result-grid-3">
+                                        <div class="result-item">
+                                            <div class="result-label">Potential Monthly Savings</div>
+                                            <div class="result-value" id="result-monthly-savings">$0</div>
+                                        </div>
+                                        <div class="result-item">
+                                            <div class="result-label">Potential Annual Savings</div>
+                                            <div class="result-value" id="result-annual-savings">$0</div>
+                                        </div>
+                                        <div class="result-item">
+                                            <div class="result-label">Current Annual Cost</div>
+                                            <div class="result-value" id="result-annual-cost">$0</div>
+                                        </div>
+                                    </div>
+                                    <div id="result-priorities" style="margin-top:var(--space-4);padding:var(--space-4);background:var(--color-primary-50);border-radius:var(--radius-md);"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="ad-slot ad-slot-leaderboard"></div>
+
+                        <section class="content-section">
+                            <h2>Home Efficiency Score Formula</h2>
+                            <div class="formula-box">
+                                <div class="formula-label">Efficiency Score Calculation</div>
+                                Score starts at 40 base points (for having a home)
+Each optimization completed adds points:
+  LED Lighting: +12 points
+  Smart Thermostat: +15 points
+  Adequate Insulation: +18 points
+  Low-Flow Fixtures: +8 points
+  Insurance Shopped: +12 points
+  Preventive Maintenance: +15 points
+
+Max Score: 100 points
+Potential savings = uncompleted optimizations &times; estimated savings value
+                            </div>
+                            <p>The efficiency score is a simplified composite index. A score of 70+ indicates a well-optimized home. Scores below 60 suggest significant savings opportunities remain.</p>
+                        </section>
+
+                        <section class="content-section">
+                            <h2>How to Use This Calculator</h2>
+                            <ol>
+                                <li><strong>Enter your annual operating costs</strong> -- utilities, maintenance, insurance, and HOA.</li>
+                                <li><strong>Check off optimizations you have already completed</strong> -- each one improves your efficiency score.</li>
+                                <li><strong>Click "Calculate Efficiency Score"</strong> to see your score, potential savings, and priority improvements.</li>
+                                <li><strong>Review the priority list</strong> -- tackle the highest-impact improvements first.</li>
+                            </ol>
+                        </section>
+
+                        <section class="content-section">
+                            <h2>Example Scenario</h2>
+                            <h3>Homeowner with LED and Thermostat Already Done</h3>
+                            <p>Annual utilities: $4,200 | Maintenance: $2,500 | Insurance: $1,800 | HOA: $0</p>
+                            <p>Completed: LED lighting, smart thermostat</p>
+                            <p>Efficiency Score: 40 (base) + 12 (LED) + 15 (thermostat) = <strong>67/100</strong></p>
+                            <p>Remaining savings opportunities: insulation ($630/yr), low-flow ($150/yr), insurance shopping ($270/yr), preventive maintenance ($375/yr)</p>
+                            <p>Potential annual savings: <strong>~$1,425/year</strong></p>
+                        </section>
+
+                        <section class="faq-section">
+                            <h2>Frequently Asked Questions</h2>
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">
+                                    What is a typical annual home operating cost?
+                                    <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>For a median US home, annual operating costs (excluding mortgage principal) typically run $7,000-15,000 per year including utilities, insurance, maintenance, and taxes. The exact amount depends heavily on home size, age, and location.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">
+                                    What is an efficiency score for home operating costs?
+                                    <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>An efficiency score measures how many cost-reduction opportunities you have implemented. A score of 70+ indicates a well-optimized home. Each improvement you make raises your score and lowers your ongoing operating costs.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">
+                                    How much can I save by shopping insurance annually?
+                                    <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>Homeowners who shop insurance annually typically save 10-25% by switching providers. Bundling home and auto can save an additional 5-15%. Given average costs of $1,500-2,000/year, this represents $150-500 in annual savings.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">
+                                    What home optimizations give the best return?
+                                    <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>Best return order: (1) Smart thermostat -- payback under 2 years; (2) LED lighting -- payback 6-18 months; (3) Weatherstripping/air sealing -- payback 1-3 years; (4) Attic insulation -- payback 3-7 years; (5) New HVAC -- payback 5-10 years.</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="related-calculators">
+                            <h2>Related Calculators</h2>
+                            <div class="grid grid-3">
+                                <a href="/household-efficiency-calculators/home-operating-cost-calculator/" class="card card-link">
+                                    <div class="card-icon">$</div>
+                                    <h3>Home Operating Cost</h3>
+                                    <p>Complete breakdown of all monthly home operating costs.</p>
+                                </a>
+                                <a href="/household-efficiency-calculators/energy-efficiency-savings-calculator/" class="card card-link">
+                                    <div class="card-icon">E</div>
+                                    <h3>Energy Efficiency Savings</h3>
+                                    <p>Calculate ROI on specific energy upgrades.</p>
+                                </a>
+                                <a href="/household-efficiency-calculators/household-maintenance-savings-calculator/" class="card card-link">
+                                    <div class="card-icon">M</div>
+                                    <h3>Maintenance Savings</h3>
+                                    <p>Preventive maintenance budgeting and risk scoring.</p>
+                                </a>
+                                <a href="/household-efficiency-calculators/utility-savings-calculator/" class="card card-link">
+                                    <div class="card-icon">U</div>
+                                    <h3>Utility Savings Calculator</h3>
+                                    <p>Set and calculate utility reduction targets.</p>
+                                </a>
+                            </div>
+                        </section>
+
+                        <div class="disclaimer">
+                            <strong>Disclaimer:</strong> Efficiency scores and savings estimates are simplified projections based on general research. Actual savings depend on your home's specific characteristics, local energy rates, and how thoroughly optimizations are implemented. Consider a professional home energy audit for a detailed assessment.
+                        </div>
+
+                        <div class="ad-slot ad-slot-leaderboard"></div>
+                    </div>
+
+                    <aside class="calc-page-sidebar">
+                        <div class="sidebar-card">
+                            <h3>Household Efficiency Tools</h3>
+                            <a href="/household-efficiency-calculators/utility-savings-calculator/">Utility Savings</a>
+                            <a href="/household-efficiency-calculators/energy-efficiency-savings-calculator/">Energy Efficiency Savings</a>
+                            <a href="/household-efficiency-calculators/water-usage-savings-calculator/">Water Usage Savings</a>
+                            <a href="/household-efficiency-calculators/grocery-waste-savings-calculator/">Grocery Waste Savings</a>
+                            <a href="/household-efficiency-calculators/home-efficiency-savings-calculator/">Home Efficiency Savings</a>
+                            <a href="/household-efficiency-calculators/appliance-cost-comparison-calculator/">Appliance Cost Comparison</a>
+                            <a href="/household-efficiency-calculators/heating-cost-efficiency-calculator/">Heating Cost Efficiency</a>
+                            <a href="/household-efficiency-calculators/cooling-cost-efficiency-calculator/">Cooling Cost Efficiency</a>
+                            <a href="/household-efficiency-calculators/household-maintenance-savings-calculator/">Maintenance Savings</a>
+                            <a href="/household-efficiency-calculators/home-operating-cost-calculator/">Home Operating Cost</a>
+                        </div>
+                        <div class="ad-slot ad-slot-rectangle"></div>
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="/" class="logo">
+                        <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+                        CalcWise
+                    </a>
+                    <p>Free, accurate financial calculators for everyone. Make smarter money decisions with CalcWise.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Household Efficiency</h4>
+                    <a href="/household-efficiency-calculators/home-efficiency-savings-calculator/">Home Efficiency Savings</a>
+                    <a href="/household-efficiency-calculators/home-operating-cost-calculator/">Home Operating Cost</a>
+                    <a href="/household-efficiency-calculators/utility-savings-calculator/">Utility Savings</a>
+                    <a href="/household-efficiency-calculators/energy-efficiency-savings-calculator/">Energy Efficiency</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Energy &amp; Utility</h4>
+                    <a href="/energy-utility-calculators/electricity-cost-calculator/">Electricity Cost</a>
+                    <a href="/energy-utility-calculators/solar-savings-calculator/">Solar Savings</a>
+                    <a href="/energy-utility-calculators/gas-bill-calculator/">Gas Bill</a>
+                    <a href="/energy-utility-calculators/home-energy-efficiency-calculator/">Home Energy Efficiency</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <a href="/about/">About</a>
+                    <a href="/contact/">Contact</a>
+                    <a href="/privacy/">Privacy Policy</a>
+                    <a href="/terms/">Terms of Use</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; 2026 CalcWise. All rights reserved.</span>
+                <div class="footer-links">
+                    <a href="/privacy/">Privacy</a>
+                    <a href="/terms/">Terms</a>
+                    <a href="/sitemap.xml">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/calculator-engine.js"></script>
+    <script src="/js/search-index.js"></script>
+    <script>
+    const optimizations = [
+        { id: 'has-led',               label: 'LED Lighting',              points: 12, savingsPct: 0.03 },
+        { id: 'has-thermostat',        label: 'Smart Thermostat',          points: 15, savingsPct: 0.04 },
+        { id: 'has-insulation',        label: 'Adequate Insulation',       points: 18, savingsPct: 0.05 },
+        { id: 'has-lowflow',           label: 'Low-Flow Fixtures',         points: 8,  savingsPct: 0.02 },
+        { id: 'has-insurance-shopped', label: 'Insurance Shopping',        points: 12, savingsPct: 0.15, field: 'insurance' },
+        { id: 'has-preventive',        label: 'Preventive Maintenance',    points: 15, savingsPct: 0.15, field: 'maintenance' }
+    ];
+
+    function calculateHomeEfficiency() {
+        if (!CalcWise.validateForm('heff-form')) return;
+
+        const annualUtilities = parseFloat(document.getElementById('annual-utilities').value) || 0;
+        const annualMaintenance = parseFloat(document.getElementById('annual-maintenance').value) || 0;
+        const annualInsurance = parseFloat(document.getElementById('annual-insurance').value) || 0;
+        const annualHOA = parseFloat(document.getElementById('annual-hoa').value) || 0;
+        const annualTotal = annualUtilities + annualMaintenance + annualInsurance + annualHOA;
+
+        let score = 40;
+        let potentialAnnualSavings = 0;
+        const priorities = [];
+
+        optimizations.forEach(opt => {
+            const done = document.getElementById(opt.id).checked;
+            if (done) {
+                score += opt.points;
+            } else {
+                // Calculate savings based on relevant cost base
+                let base = annualUtilities;
+                if (opt.field === 'insurance') base = annualInsurance;
+                if (opt.field === 'maintenance') base = annualMaintenance;
+                const saving = base * opt.savingsPct;
+                potentialAnnualSavings += saving;
+                priorities.push({ label: opt.label, saving: saving, points: opt.points });
+            }
+        });
+
+        score = Math.min(100, score);
+        priorities.sort((a, b) => b.saving - a.saving);
+
+        const potentialMonthlySavings = potentialAnnualSavings / 12;
+
+        let scoreGrade = score >= 80 ? 'Excellent' : score >= 65 ? 'Good' : score >= 50 ? 'Fair' : 'Needs Improvement';
+        CalcWise.setText('result-score', score + '/100 - ' + scoreGrade);
+        CalcWise.setText('result-monthly-savings', CalcWise.formatCurrency(potentialMonthlySavings));
+        CalcWise.setText('result-annual-savings', CalcWise.formatCurrency(potentialAnnualSavings, 0));
+        CalcWise.setText('result-annual-cost', CalcWise.formatCurrency(annualTotal, 0));
+
+        let priorityHtml = '<strong style="color:var(--color-primary);">Priority Improvements:</strong><ul style="margin:var(--space-2) 0 0;padding-left:var(--space-6);">';
+        if (priorities.length === 0) {
+            priorityHtml += '<li>All optimizations complete! Great job.</li>';
+        } else {
+            priorities.forEach(p => {
+                priorityHtml += `<li><strong>${p.label}</strong> -- estimated savings ${CalcWise.formatCurrency(p.saving, 0)}/year</li>`;
+            });
+        }
+        priorityHtml += '</ul>';
+        CalcWise.setHtml('result-priorities', priorityHtml);
+
+        CalcWise.showResults('results');
+    }
+
+    document.getElementById('heff-form').addEventListener('reset', function() {
+        setTimeout(() => CalcWise.hideResults('results'), 0);
+    });
+    </script>
+</body>
+</html>

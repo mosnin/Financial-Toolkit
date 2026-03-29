@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Savings Discipline Calculator - CalcWise</title>
+  <meta name="description" content="Measure your savings discipline with our free calculator. Input your savings goal, actual savings, consistency, and automation status to get your discipline score and improvement suggestions.">
+  <link rel="canonical" href="https://calcwise.io/money-psychology-calculators/savings-discipline-calculator/">
+  <meta property="og:title" content="Savings Discipline Calculator - CalcWise">
+  <meta property="og:description" content="Calculate your savings discipline score, savings rate, and gap to goal. Get personalized suggestions to build stronger savings habits.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcwise.io/money-psychology-calculators/savings-discipline-calculator/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Savings Discipline Calculator - CalcWise">
+  <meta name="twitter:description" content="Find your savings discipline score and get a personalized plan to close the gap to your savings goal.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/"},
+      {"@type": "ListItem", "position": 2, "name": "Money Psychology Calculators", "item": "https://calcwise.io/money-psychology-calculators/"},
+      {"@type": "ListItem", "position": 3, "name": "Savings Discipline Calculator"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is a good savings rate?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Financial planners generally recommend saving 20% of gross income across all goals (retirement, emergency fund, short-term goals). The FIRE community targets 40–70%. However, any positive savings rate is better than zero. If you are starting from scratch, begin with 5% and increase by 1% every three months until you reach your target."}
+      },
+      {
+        "@type": "Question",
+        "name": "Does savings automation really make a difference?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Yes — significantly. Research by Shlomo Benartzi and others shows that automatic savings contributions increase total savings rates by 30–50% compared to manual saving. Automation removes willpower from the equation. People who automate savings report both higher account balances and lower financial stress within 6 months."}
+      },
+      {
+        "@type": "Question",
+        "name": "How large should my emergency fund be?",
+        "acceptedAnswer": {"@type": "Answer", "text": "The standard recommendation is 3–6 months of essential expenses. For variable income earners, freelancers, or those in volatile industries, 6–12 months is recommended. If you have dependents or own a home with potential large repair costs, lean toward the higher end."}
+      },
+      {
+        "@type": "Question",
+        "name": "What if I can't hit my monthly savings goal?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Start where you are and use windfalls strategically. Tax refunds, bonuses, and raises are the fastest way to close a savings gap — commit to saving 50% of every windfall before it arrives. Also review subscriptions and discretionary spending; most people find $100–$300/month in adjustable expenses when they look closely."}
+      }
+    ]
+  }
+  </script>
+  <style>
+    .consistency-options { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-2); margin-top: var(--space-2); }
+    @media (max-width: 640px) { .consistency-options { grid-template-columns: repeat(2, 1fr); } }
+    .radio-card { position: relative; }
+    .radio-card input[type=radio] { position: absolute; opacity: 0; width: 0; height: 0; }
+    .radio-card label { display: block; padding: var(--space-3); border: 2px solid var(--color-gray-200); border-radius: var(--radius-md); text-align: center; cursor: pointer; font-size: var(--text-sm); font-weight: var(--font-medium); transition: all var(--transition-fast); }
+    .radio-card input[type=radio]:checked + label { border-color: var(--color-primary); background: var(--color-primary-50); color: var(--color-primary); }
+    .gauge-wrap { display: flex; flex-direction: column; align-items: center; margin: var(--space-4) 0; }
+    .gauge-score { font-size: var(--text-4xl); font-weight: var(--font-bold); color: var(--color-primary); }
+    .gauge-label { font-size: var(--text-sm); color: var(--color-gray-500); }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="logo">
+        <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav">
+        <a href="/">Home</a>
+        <a href="/pages/finance-calculators/">Finance</a>
+        <a href="/pages/business-calculators/">Business</a>
+        <a href="/pages/investment-calculators/">Investment</a>
+        <a href="/pages/money-psychology-calculators/" aria-current="page">Psychology</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav">
+      <a href="/">Home</a>
+      <a href="/pages/finance-calculators/">Finance Calculators</a>
+      <a href="/pages/business-calculators/">Business Calculators</a>
+      <a href="/pages/investment-calculators/">Investment Calculators</a>
+      <a href="/pages/money-psychology-calculators/">Money Psychology Calculators</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li><a href="/pages/money-psychology-calculators/">Money Psychology Calculators</a></li>
+        <li><span aria-current="page">Savings Discipline Calculator</span></li>
+      </ol>
+    </nav>
+
+    <div class="page-content">
+      <div class="article-content">
+        <h1>Savings Discipline Calculator</h1>
+        <p>Saving money isn't just about having enough — it's about the habits and systems that make saving consistent and automatic. This calculator scores your savings discipline across five dimensions and shows you exactly how to close the gap between where you are and where you want to be.</p>
+
+        <div class="ad-slot ad-slot-leaderboard"></div>
+
+        <div class="calc-container">
+          <div class="calc-header">
+            <h2>Evaluate Your Savings Discipline</h2>
+            <p>Enter your monthly savings details below</p>
+          </div>
+          <div class="calc-body">
+            <form id="savings-form">
+              <div class="form-group">
+                <label class="form-label" for="monthlyIncome">Monthly Take-Home Income ($)</label>
+                <div class="input-prefix">
+                  <span class="prefix">$</span>
+                  <input type="number" id="monthlyIncome" name="monthlyIncome" class="form-input" placeholder="4500" min="0" step="100" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="savingsGoal">Monthly Savings Goal ($)</label>
+                <div class="input-prefix">
+                  <span class="prefix">$</span>
+                  <input type="number" id="savingsGoal" name="savingsGoal" class="form-input" placeholder="500" min="0" step="10" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="actualSavings">Actual Savings This Month ($)</label>
+                <div class="input-prefix">
+                  <span class="prefix">$</span>
+                  <input type="number" id="actualSavings" name="actualSavings" class="form-input" placeholder="320" min="0" step="10" required>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Last 3 Months Consistency</label>
+                <div class="consistency-options">
+                  <div class="radio-card"><input type="radio" name="consistency" id="c0" value="0" required><label for="c0">Saved 0 of 3 months</label></div>
+                  <div class="radio-card"><input type="radio" name="consistency" id="c1" value="1"><label for="c1">Saved 1 of 3 months</label></div>
+                  <div class="radio-card"><input type="radio" name="consistency" id="c2" value="2"><label for="c2">Saved 2 of 3 months</label></div>
+                  <div class="radio-card"><input type="radio" name="consistency" id="c3" value="3" checked><label for="c3">Saved all 3 months</label></div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Savings Automation Status</label>
+                <div class="consistency-options" style="grid-template-columns: repeat(2,1fr);">
+                  <div class="radio-card"><input type="radio" name="automation" id="auto0" value="0" required><label for="auto0">No automation at all</label></div>
+                  <div class="radio-card"><input type="radio" name="automation" id="auto1" value="1"><label for="auto1">Some automated</label></div>
+                  <div class="radio-card"><input type="radio" name="automation" id="auto2" value="2"><label for="auto2">Mostly automated</label></div>
+                  <div class="radio-card"><input type="radio" name="automation" id="auto3" value="3" checked><label for="auto3">Fully automated</label></div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Emergency Fund Status</label>
+                <div class="consistency-options" style="grid-template-columns: repeat(2,1fr);">
+                  <div class="radio-card"><input type="radio" name="emergency" id="em0" value="0" required><label for="em0">No emergency fund</label></div>
+                  <div class="radio-card"><input type="radio" name="emergency" id="em1" value="1"><label for="em1">Less than 1 month</label></div>
+                  <div class="radio-card"><input type="radio" name="emergency" id="em2" value="2"><label for="em2">1–3 months saved</label></div>
+                  <div class="radio-card"><input type="radio" name="emergency" id="em3" value="3" checked><label for="em3">3+ months saved</label></div>
+                </div>
+              </div>
+
+              <div class="calc-actions">
+                <button type="button" class="btn btn-calculate" onclick="calcSavings()">Calculate Discipline Score</button>
+                <button type="button" class="btn btn-reset" onclick="resetSavings()">Reset</button>
+              </div>
+            </form>
+
+            <div id="results" class="calc-results hidden">
+              <div class="result-primary">
+                <div class="result-label">Savings Discipline Score</div>
+                <div class="result-value" id="disciplineScore">0 / 100</div>
+              </div>
+              <div class="result-grid result-grid-3" style="margin-bottom:var(--space-5);">
+                <div class="result-item">
+                  <div class="result-label">Savings Rate</div>
+                  <div class="result-value" id="savingsRate" style="color:var(--color-success)">0%</div>
+                </div>
+                <div class="result-item">
+                  <div class="result-label">Consistency Rating</div>
+                  <div class="result-value" id="consistencyRating" style="font-size:var(--text-base)">—</div>
+                </div>
+                <div class="result-item">
+                  <div class="result-label">Monthly Gap to Goal</div>
+                  <div class="result-value" id="gapToGoal" style="color:var(--color-error)">$0</div>
+                </div>
+              </div>
+              <h3 style="font-size:var(--text-base);margin-bottom:var(--space-3);">Improvement Suggestions</h3>
+              <div id="savingsRecs"></div>
+            </div>
+          </div>
+        </div>
+
+        <section class="content-section">
+          <h2>How the Discipline Score Is Calculated</h2>
+          <div class="formula-box">
+            <div class="formula-label">Scoring Breakdown</div>
+            Goal Achievement (40 pts): Actual ÷ Goal × 40<br>
+            Consistency (20 pts): Months saved ÷ 3 × 20<br>
+            Automation (20 pts): Automation level × 6.67<br>
+            Emergency Fund (20 pts): Fund level × 6.67<br>
+            Total Score = Sum of all four components (max 100)
+          </div>
+          <p>The score weights goal achievement highest because hitting your target is the core outcome. Consistency, automation, and emergency fund status are behavioral and structural inputs that predict whether goal achievement is sustainable long-term or a one-off event.</p>
+        </section>
+
+        <section class="content-section">
+          <h2>How to Use This Calculator</h2>
+          <ol>
+            <li><strong>Enter your monthly income and goals:</strong> Use your actual take-home pay and a realistic monthly savings target (20% of income is the benchmark).</li>
+            <li><strong>Record actual savings:</strong> What did you actually transfer to savings accounts or investments this month?</li>
+            <li><strong>Rate your consistency and automation:</strong> Honest answers here reveal whether your savings are habitual or sporadic.</li>
+            <li><strong>Act on the suggestions:</strong> The calculator pinpoints your weakest component so you know exactly where one change will move your score the most.</li>
+          </ol>
+        </section>
+
+        <section class="content-section">
+          <h2>Example Scenario</h2>
+          <p>Alex earns $4,500/month and has a $600 savings goal. This month they saved $380. They saved 2 of the last 3 months, have partial automation, and 1–3 months emergency fund.</p>
+          <p>Score: Goal Achievement 25.3/40 + Consistency 13.3/20 + Automation 13.3/20 + Emergency 13.3/20 = 65/100. Gap: $220/month. Top recommendation: Automate the remaining $220 to a separate account on payday — this closes the gap and boosts score to approximately 85 without any extra effort.</p>
+        </section>
+
+        <section class="faq-section">
+          <h2>Frequently Asked Questions</h2>
+          <div class="faq-item">
+            <button class="faq-question">What is a good savings rate?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>Financial planners generally recommend saving 20% of gross income. However, any positive savings rate is better than zero. If starting from scratch, begin with 5% and increase by 1% every three months until you reach your target.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">Does savings automation really make a difference?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>Yes — significantly. Research shows that automatic savings contributions increase total savings rates by 30–50% compared to manual saving. Automation removes willpower from the equation.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">How large should my emergency fund be?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>The standard recommendation is 3–6 months of essential expenses. For variable income earners or those in volatile industries, 6–12 months is recommended.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">What if I can't hit my monthly savings goal?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>Start where you are and use windfalls strategically. Tax refunds, bonuses, and raises are the fastest way to close a savings gap — commit to saving 50% of every windfall before it arrives.</p></div>
+          </div>
+        </section>
+
+        <section class="related-calculators">
+          <h2>Related Calculators</h2>
+          <div class="grid grid-3">
+            <a href="/pages/money-psychology-calculators/financial-stress-score-calculator/" class="card card-link">
+              <h3>Financial Stress Score</h3>
+              <p>Measure financial anxiety across 8 key stress indicators.</p>
+            </a>
+            <a href="/pages/money-psychology-calculators/budget-adherence-calculator/" class="card card-link">
+              <h3>Budget Adherence Calculator</h3>
+              <p>Track how closely you are sticking to your monthly budget.</p>
+            </a>
+            <a href="/pages/finance-calculators/emergency-fund-calculator/" class="card card-link">
+              <h3>Emergency Fund Calculator</h3>
+              <p>Calculate exactly how much you need in your emergency fund.</p>
+            </a>
+          </div>
+        </section>
+
+        <div class="disclaimer">
+          <strong>Disclaimer:</strong> This calculator is for educational purposes only and does not constitute financial advice. Savings recommendations are general guidelines. Individual financial situations vary. Consult a qualified financial advisor for personalized guidance.
+        </div>
+
+        <div class="ad-slot ad-slot-rectangle"></div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free online financial calculators to help you make smarter money decisions.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Psychology Tools</h4>
+          <a href="/pages/money-psychology-calculators/spending-behavior-calculator/">Spending Behavior</a>
+          <a href="/pages/money-psychology-calculators/savings-discipline-calculator/">Savings Discipline</a>
+          <a href="/pages/money-psychology-calculators/budget-adherence-calculator/">Budget Adherence</a>
+          <a href="/pages/money-psychology-calculators/financial-stress-score-calculator/">Financial Stress</a>
+        </div>
+        <div class="footer-col">
+          <h4>Finance</h4>
+          <a href="/pages/finance-calculators/budget-calculator/">Budget Calculator</a>
+          <a href="/pages/finance-calculators/net-worth-calculator/">Net Worth</a>
+          <a href="/pages/finance-calculators/emergency-fund-calculator/">Emergency Fund</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about/">About</a>
+          <a href="/contact/">Contact</a>
+          <a href="/privacy/">Privacy Policy</a>
+          <a href="/terms/">Terms of Service</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 CalcWise. All rights reserved.</span>
+        <div class="footer-links">
+          <a href="/privacy/">Privacy</a>
+          <a href="/terms/">Terms</a>
+          <a href="/contact/">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calcSavings() {
+      const income = parseFloat(document.getElementById('monthlyIncome').value) || 0;
+      const goal = parseFloat(document.getElementById('savingsGoal').value) || 0;
+      const actual = parseFloat(document.getElementById('actualSavings').value) || 0;
+      const consistency = parseInt(document.querySelector('input[name=consistency]:checked')?.value ?? 3);
+      const automation = parseInt(document.querySelector('input[name=automation]:checked')?.value ?? 3);
+      const emergency = parseInt(document.querySelector('input[name=emergency]:checked')?.value ?? 3);
+
+      if (!income || !goal) { alert('Please enter your income and savings goal.'); return; }
+
+      const goalPct = goal > 0 ? Math.min(actual / goal, 1) : 0;
+      const goalScore = goalPct * 40;
+      const consistencyScore = (consistency / 3) * 20;
+      const automationScore = (automation / 3) * 20;
+      const emergencyScore = (emergency / 3) * 20;
+      const total = Math.round(goalScore + consistencyScore + automationScore + emergencyScore);
+
+      const savingsRate = income > 0 ? ((actual / income) * 100).toFixed(1) : '0.0';
+      const gap = Math.max(goal - actual, 0);
+
+      const consistencyLabels = ['No recent savings', 'Inconsistent (1/3)', 'Mostly consistent (2/3)', 'Fully consistent (3/3)'];
+
+      document.getElementById('disciplineScore').textContent = total + ' / 100';
+      document.getElementById('savingsRate').textContent = savingsRate + '%';
+      document.getElementById('savingsRate').style.color = parseFloat(savingsRate) >= 20 ? 'var(--color-success)' : parseFloat(savingsRate) >= 10 ? 'var(--color-warning)' : 'var(--color-error)';
+      document.getElementById('consistencyRating').textContent = consistencyLabels[consistency];
+      document.getElementById('gapToGoal').textContent = '$' + gap.toLocaleString();
+
+      const recs = [];
+      if (goalPct < 0.8) recs.push('You are achieving ' + Math.round(goalPct*100) + '% of your savings goal. Automate the $' + Math.round(gap) + ' gap as a direct transfer on payday so it leaves before you can spend it.');
+      if (consistency < 3) recs.push('Inconsistent savings is the #1 predictor of goal failure. Set a recurring calendar reminder for the 1st and 15th to review your savings account balance.');
+      if (automation < 2) recs.push('Automating savings is the highest-ROI change you can make. Set up a recurring transfer from checking to savings for the day after your paycheck deposits.');
+      if (emergency < 2) recs.push('Your emergency fund needs attention. Even $1,000 set aside reduces financial stress significantly. Pause non-retirement investing until you have 1 month of expenses saved.');
+      if (parseFloat(savingsRate) < 10) recs.push('Your current savings rate of ' + savingsRate + '% is below the recommended 20%. Review your largest discretionary expense category for a 10–15% reduction.');
+      if (recs.length === 0) recs.push('Excellent discipline! Maintain your current habits and consider increasing your savings goal by 2–5% to accelerate wealth building.');
+
+      document.getElementById('savingsRecs').innerHTML = recs.map(r => '<div style="background:var(--color-primary-50);border-left:4px solid var(--color-primary);padding:var(--space-3) var(--space-4);border-radius:0 var(--radius-md) var(--radius-md) 0;margin-bottom:var(--space-3);">' + r + '</div>').join('');
+
+      document.getElementById('results').classList.remove('hidden');
+      document.getElementById('results').scrollIntoView({behavior:'smooth', block:'start'});
+    }
+
+    function resetSavings() {
+      document.getElementById('monthlyIncome').value = '';
+      document.getElementById('savingsGoal').value = '';
+      document.getElementById('actualSavings').value = '';
+      document.getElementById('c3').checked = true;
+      document.getElementById('auto3').checked = true;
+      document.getElementById('em3').checked = true;
+      document.getElementById('results').classList.add('hidden');
+    }
+
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const answer = btn.nextElementSibling;
+        const isOpen = answer.classList.contains('open');
+        document.querySelectorAll('.faq-answer').forEach(a => a.classList.remove('open'));
+        if (!isOpen) answer.classList.add('open');
+      });
+    });
+
+    const toggle = document.querySelector('.mobile-menu-toggle');
+    const mobileNav = document.querySelector('.mobile-nav');
+    if (toggle && mobileNav) {
+      toggle.addEventListener('click', () => {
+        const expanded = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', !expanded);
+        mobileNav.classList.toggle('open');
+      });
+    }
+  </script>
+</body>
+</html>

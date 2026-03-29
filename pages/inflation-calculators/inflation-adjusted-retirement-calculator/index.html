@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inflation-Adjusted Retirement Calculator - CalcWise</title>
+  <meta name="description" content="Calculate how much retirement income and portfolio size you truly need after inflation. See the income needed at retirement, required portfolio size, and shortfall if you don't plan for inflation.">
+  <link rel="canonical" href="https://calcwise.io/inflation-calculators/inflation-adjusted-retirement-calculator/">
+  <meta property="og:title" content="Inflation-Adjusted Retirement Calculator - CalcWise">
+  <meta property="og:description" content="Plan retirement with real inflation-adjusted numbers. Find out the income you will actually need and the portfolio required to fund it.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcwise.io/inflation-calculators/inflation-adjusted-retirement-calculator/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Inflation-Adjusted Retirement Calculator - CalcWise">
+  <meta name="twitter:description" content="Plan retirement with real inflation-adjusted numbers. Find out the income you will actually need and the portfolio required to fund it.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/"},
+      {"@type": "ListItem", "position": 2, "name": "Inflation Calculators", "item": "https://calcwise.io/inflation-calculators/"},
+      {"@type": "ListItem", "position": 3, "name": "Inflation-Adjusted Retirement Calculator"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How does inflation affect retirement planning?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Inflation means that the same retirement income will buy less every year. If you need $60,000/year today and inflation averages 3%, you will need $80,635/year in 10 years and $108,183/year in 20 years to maintain the same lifestyle. Planning without inflation leads to severely underfunded retirement."}
+      },
+      {
+        "@type": "Question",
+        "name": "What is the 4% rule for retirement withdrawals?",
+        "acceptedAnswer": {"@type": "Answer", "text": "The 4% rule states that you can withdraw 4% of your portfolio per year and have a very high probability of your money lasting 30 years. To find the required portfolio, divide your desired annual income by 0.04 (or multiply by 25). This calculator uses your custom portfolio return rate for more precision."}
+      },
+      {
+        "@type": "Question",
+        "name": "What is the retirement shortfall if I don't account for inflation?",
+        "acceptedAnswer": {"@type": "Answer", "text": "The shortfall is the difference between the portfolio needed to fund inflation-adjusted retirement income versus the portfolio needed to fund today's nominal retirement income. This gap can be hundreds of thousands of dollars over a 20-30 year retirement period."}
+      },
+      {
+        "@type": "Question",
+        "name": "What portfolio return rate should I use for retirement planning?",
+        "acceptedAnswer": {"@type": "Answer", "text": "A common assumption is 6-7% for a balanced portfolio of stocks and bonds. Conservative planners use 5%; aggressive investors may use 8-10%. Using your expected real (after-inflation) portfolio return gives the most accurate retirement portfolio target."}
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="logo">
+        <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav">
+        <a href="/">Home</a>
+        <a href="/pages/finance-calculators/">Finance</a>
+        <a href="/pages/business-calculators/">Business</a>
+        <a href="/pages/investment-calculators/">Investment</a>
+        <a href="/inflation-calculators/" aria-current="page">Inflation</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav">
+      <a href="/">Home</a>
+      <a href="/pages/finance-calculators/">Finance Calculators</a>
+      <a href="/pages/business-calculators/">Business Calculators</a>
+      <a href="/pages/investment-calculators/">Investment Calculators</a>
+      <a href="/inflation-calculators/">Inflation Calculators</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <!-- Breadcrumbs -->
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li><a href="/inflation-calculators/">Inflation Calculators</a></li>
+        <li><span aria-current="page">Inflation-Adjusted Retirement Calculator</span></li>
+      </ol>
+    </nav>
+
+    <div class="page-content">
+      <div class="article-content">
+        <h1>Inflation-Adjusted Retirement Calculator</h1>
+        <p>Most retirement calculators use today's dollars — but the retirement income you need will be much larger in future dollars due to inflation. This calculator takes your desired retirement lifestyle in today's dollars, adjusts it for inflation over your working years, calculates the inflation-adjusted income you will actually need at retirement, and shows the portfolio size required to sustain that income along with the shortfall if you plan without inflation in mind.</p>
+
+        <!-- Ad Slot -->
+        <div class="ad-slot ad-slot-leaderboard"></div>
+
+        <!-- Calculator -->
+        <div class="calc-container">
+          <div class="calc-header">
+            <h2>Calculate Inflation-Adjusted Retirement Needs</h2>
+            <p>Find out what you truly need — in future dollars — to retire comfortably</p>
+          </div>
+          <div class="calc-body">
+            <form id="retire-form">
+              <div class="form-group">
+                <label class="form-label" for="desiredIncome">Desired Retirement Income <span class="form-hint">(today's dollars, annual)</span></label>
+                <div class="input-prefix">
+                  <span class="prefix">$</span>
+                  <input type="number" id="desiredIncome" name="desiredIncome" class="form-input" placeholder="60000" min="1000" step="1000" required>
+                </div>
+              </div>
+              <div class="calc-grid calc-grid-2col">
+                <div class="form-group">
+                  <label class="form-label" for="yearsToRetirement">Years to Retirement</label>
+                  <div class="input-suffix">
+                    <input type="number" id="yearsToRetirement" name="yearsToRetirement" class="form-input" placeholder="25" min="1" max="60" step="1" required>
+                    <span class="suffix">yrs</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="inflationRate">Expected Inflation Rate <span class="form-hint">(%)</span></label>
+                  <div class="input-suffix">
+                    <input type="number" id="inflationRate" name="inflationRate" class="form-input" placeholder="3" min="0.1" max="20" step="0.1" required>
+                    <span class="suffix">%</span>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="portfolioReturn">Portfolio Return Rate <span class="form-hint">(% annual return in retirement)</span></label>
+                <div class="input-suffix">
+                  <input type="number" id="portfolioReturn" name="portfolioReturn" class="form-input" placeholder="6" min="0.1" max="20" step="0.1" required>
+                  <span class="suffix">%</span>
+                </div>
+              </div>
+
+              <div class="calc-actions">
+                <button type="button" class="btn btn-calculate" onclick="calculateRetirement()">Calculate Retirement Needs</button>
+                <button type="button" class="btn btn-reset" onclick="resetRetirement()">Reset</button>
+              </div>
+            </form>
+
+            <!-- Results -->
+            <div id="results" class="calc-results hidden">
+              <div class="result-primary">
+                <div class="result-label">Required Portfolio Size (Inflation-Adjusted)</div>
+                <div class="result-value" id="requiredPortfolio">$0</div>
+              </div>
+              <div class="result-grid result-grid-3">
+                <div class="result-item">
+                  <div class="result-label">Annual Income Needed at Retirement</div>
+                  <div class="result-value" id="adjustedIncome">$0</div>
+                </div>
+                <div class="result-item">
+                  <div class="result-label">Portfolio Without Inflation Adj.</div>
+                  <div class="result-value" id="nominalPortfolio">$0</div>
+                </div>
+                <div class="result-item">
+                  <div class="result-label">Shortfall if Not Adjusted</div>
+                  <div class="result-value" id="shortfall" style="color: var(--color-error);">$0</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Formula Section -->
+        <section class="content-section">
+          <h2>Inflation-Adjusted Retirement Formula</h2>
+          <div class="formula-box">
+            <div class="formula-label">Formulas Used</div>
+            Inflation-Adjusted Income = Desired Income × (1 + Inflation Rate)^Years to Retirement<br><br>
+            Required Portfolio = Inflation-Adjusted Income ÷ Portfolio Return Rate<br><br>
+            Nominal Portfolio (no inflation adj.) = Desired Income ÷ Portfolio Return Rate<br><br>
+            Shortfall = Required Portfolio − Nominal Portfolio
+          </div>
+          <p>The adjusted income formula shows what your desired lifestyle will actually cost in future dollars. Dividing by the portfolio return rate (a simplified perpetuity formula) gives the portfolio size needed to sustain that income indefinitely. The shortfall is the additional portfolio you need beyond a naive non-inflation-adjusted plan.</p>
+        </section>
+
+        <!-- How to Use -->
+        <section class="content-section">
+          <h2>How to Use This Calculator</h2>
+          <ol>
+            <li><strong>Enter desired retirement income:</strong> In today's dollars — the annual income you want to live on in retirement at today's prices.</li>
+            <li><strong>Set years to retirement:</strong> How many years until you plan to retire.</li>
+            <li><strong>Enter expected inflation rate:</strong> 3% is the US long-run average; use 2% for optimistic planning or 4% for conservative.</li>
+            <li><strong>Set portfolio return rate:</strong> Your expected annual return from your retirement portfolio during retirement (not the accumulation phase).</li>
+            <li><strong>Review the results:</strong> The shortfall figure is especially important — it shows how much more you need compared to a plan that ignores inflation.</li>
+          </ol>
+        </section>
+
+        <!-- Example Scenario -->
+        <section class="content-section">
+          <h2>Example Scenario</h2>
+          <p>You want $70,000/year in retirement (today's dollars), you are 30 years from retirement, inflation is 3%, and your portfolio earns 6% in retirement:</p>
+          <ul>
+            <li><strong>Inflation-adjusted income needed:</strong> $70,000 × (1.03)^30 = $169,960/year</li>
+            <li><strong>Required portfolio (inflation-adjusted):</strong> $169,960 / 0.06 = $2,832,667</li>
+            <li><strong>Nominal portfolio (no inflation adj.):</strong> $70,000 / 0.06 = $1,166,667</li>
+            <li><strong>Shortfall from ignoring inflation:</strong> $1,666,000 — over $1.6 million gap!</li>
+          </ul>
+          <p>This massive shortfall shows why inflation planning is not optional for retirement — it can be the difference between a comfortable retirement and running out of money.</p>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+          <h2>Frequently Asked Questions</h2>
+          <div class="faq-item">
+            <button class="faq-question">
+              How does inflation affect retirement planning?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>Inflation means that the same retirement income will buy less every year. If you need $60,000/year today and inflation averages 3%, you will need $80,635/year in 10 years and $108,183/year in 20 years to maintain the same lifestyle. Planning without inflation leads to severely underfunded retirement.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              What is the 4% rule for retirement withdrawals?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>The 4% rule states that you can withdraw 4% of your portfolio per year and have a very high probability of your money lasting 30 years. To find the required portfolio, divide your desired annual income by 0.04 (or multiply by 25). This calculator uses your custom portfolio return rate for more precision.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              What is the retirement shortfall if I don't account for inflation?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>The shortfall is the difference between the portfolio needed to fund inflation-adjusted retirement income versus the portfolio needed to fund today's nominal retirement income. This gap can be hundreds of thousands — or even millions — of dollars over a long retirement horizon.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              What portfolio return rate should I use for retirement planning?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>A common assumption is 5–7% for a balanced portfolio of stocks and bonds during retirement. Conservative planners use 4–5%; more equity-heavy portfolios might use 6–8%. Using a realistic rate that accounts for a conservative retirement allocation gives the most accurate target.</p></div>
+          </div>
+        </section>
+
+        <!-- Related Calculators -->
+        <section class="related-calculators">
+          <h2>Related Calculators</h2>
+          <div class="grid grid-3">
+            <a href="/inflation-calculators/inflation-adjusted-savings-calculator/" class="card card-link">
+              <h3>Inflation-Adjusted Savings Calculator</h3>
+              <p>See the real return on your savings after inflation.</p>
+            </a>
+            <a href="/inflation-calculators/future-purchasing-power-calculator/" class="card card-link">
+              <h3>Future Purchasing Power Calculator</h3>
+              <p>See what today's dollars will buy in your retirement year.</p>
+            </a>
+            <a href="/pages/finance-calculators/retirement-savings-calculator/" class="card card-link">
+              <h3>Retirement Savings Calculator</h3>
+              <p>Project your retirement savings with compound interest.</p>
+            </a>
+            <a href="/inflation-calculators/inflation-adjusted-healthcare-calculator/" class="card card-link">
+              <h3>Healthcare Inflation Calculator</h3>
+              <p>Plan for rising healthcare costs in your retirement budget.</p>
+            </a>
+            <a href="/inflation-calculators/inflation-impact-calculator/" class="card card-link">
+              <h3>Inflation Impact Calculator</h3>
+              <p>Understand the full purchasing power impact of inflation.</p>
+            </a>
+          </div>
+        </section>
+
+        <!-- Disclaimer -->
+        <div class="disclaimer">
+          <strong>Disclaimer:</strong> This calculator is provided for informational and educational purposes only. It does not constitute financial or retirement planning advice. Actual investment returns, inflation, and individual needs vary significantly. Consult a qualified financial advisor or retirement planner for personalized guidance.
+        </div>
+
+        <!-- Ad Slot -->
+        <div class="ad-slot ad-slot-rectangle"></div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free online financial calculators to help you make smarter money decisions.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Inflation Tools</h4>
+          <a href="/inflation-calculators/inflation-impact-calculator/">Inflation Impact</a>
+          <a href="/inflation-calculators/future-purchasing-power-calculator/">Purchasing Power</a>
+          <a href="/inflation-calculators/inflation-adjusted-salary-calculator/">Salary Adjustment</a>
+          <a href="/inflation-calculators/inflation-adjusted-retirement-calculator/">Retirement Inflation</a>
+        </div>
+        <div class="footer-col">
+          <h4>Finance</h4>
+          <a href="/pages/finance-calculators/net-worth-calculator/">Net Worth</a>
+          <a href="/pages/finance-calculators/budget-calculator/">Budget (50/30/20)</a>
+          <a href="/pages/finance-calculators/emergency-fund-calculator/">Emergency Fund</a>
+          <a href="/pages/finance-calculators/retirement-savings-calculator/">Retirement Savings</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about/">About</a>
+          <a href="/contact/">Contact</a>
+          <a href="/privacy/">Privacy Policy</a>
+          <a href="/terms/">Terms of Service</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 CalcWise. All rights reserved.</span>
+        <div class="footer-links">
+          <a href="/privacy/">Privacy</a>
+          <a href="/terms/">Terms</a>
+          <a href="/contact/">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateRetirement() {
+      if (!CalcWise.validateForm('retire-form')) return;
+      const v = CalcWise.getFormValues('retire-form');
+
+      const adjustedIncome = CalcWise.futureValueWithInflation(v.desiredIncome, v.inflationRate, v.yearsToRetirement);
+      const requiredPortfolio = adjustedIncome / (v.portfolioReturn / 100);
+      const nominalPortfolio = v.desiredIncome / (v.portfolioReturn / 100);
+      const shortfall = requiredPortfolio - nominalPortfolio;
+
+      CalcWise.setText('adjustedIncome', CalcWise.formatCurrency(adjustedIncome) + '/yr');
+      CalcWise.setText('requiredPortfolio', CalcWise.formatCurrency(requiredPortfolio));
+      CalcWise.setText('nominalPortfolio', CalcWise.formatCurrency(nominalPortfolio));
+      CalcWise.setText('shortfall', '+' + CalcWise.formatCurrency(shortfall) + ' needed');
+
+      CalcWise.showResults('results');
+    }
+
+    function resetRetirement() {
+      document.getElementById('retire-form').reset();
+      CalcWise.hideResults('results');
+    }
+  </script>
+</body>
+</html>

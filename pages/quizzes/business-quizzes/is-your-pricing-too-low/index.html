@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Is Your Pricing Too Low? Quiz | CalcWise</title>
+  <meta name="description" content="Take this 7-question pricing quiz to find out if you're leaving money on the table. Assess your margins, competitor positioning, and client price sensitivity to get your pricing verdict.">
+  <link rel="canonical" href="https://calcwise.io/quizzes/business-quizzes/is-your-pricing-too-low/">
+  <meta property="og:title" content="Is Your Pricing Too Low? Quiz | CalcWise">
+  <meta property="og:description" content="7 questions covering margin %, competitor comparison, value delivered, and last price increase to determine if your pricing strategy is costing you money.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcwise.io/quizzes/business-quizzes/is-your-pricing-too-low/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Is Your Pricing Too Low? Quiz | CalcWise">
+  <meta name="twitter:description" content="7-question quiz to find out if your pricing is well-positioned, slightly low, underpriced, or significantly underpriced.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+  <link rel="stylesheet" href="/css/quiz.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/"},
+      {"@type": "ListItem", "position": 2, "name": "Quizzes", "item": "https://calcwise.io/quizzes/"},
+      {"@type": "ListItem", "position": 3, "name": "Business Quizzes", "item": "https://calcwise.io/quizzes/business-quizzes/"},
+      {"@type": "ListItem", "position": 4, "name": "Is Your Pricing Too Low?", "item": "https://calcwise.io/quizzes/business-quizzes/is-your-pricing-too-low/"}
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="32" height="32" rx="8" fill="currentColor"/>
+          <path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+        </svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/business-calculators/">Business</a>
+        <a href="/quizzes/" aria-current="page">Quizzes</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/business-calculators/">Business Calculators</a>
+      <a href="/quizzes/">Quizzes</a>
+      <a href="/about.html">About</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/quizzes/">Quizzes</a></li>
+          <li><a href="/quizzes/business-quizzes/">Business Quizzes</a></li>
+          <li><span aria-current="page">Is Your Pricing Too Low?</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <h1>Is Your Pricing Too Low?</h1>
+        <p class="intro">Underpricing is one of the most costly and common mistakes small business owners make. It erodes margins, attracts the wrong clients, and signals low value. This 7-question quiz analyses your current pricing strategy against key financial and market indicators to tell you exactly where you stand.</p>
+
+        <!-- Ad Slot -->
+        <div class="ad-slot ad-slot--top" aria-hidden="true"></div>
+
+        <div class="quiz-container" id="quiz">
+          <div class="quiz-progress">
+            <div class="quiz-progress__label">
+              <span id="progress-text">Question 1 of 7</span>
+              <span id="progress-pct">0%</span>
+            </div>
+            <div class="quiz-progress__bar">
+              <div class="quiz-progress__fill" id="progress-bar" style="width:0%"></div>
+            </div>
+          </div>
+          <div id="question-container"></div>
+          <div id="result-container" class="quiz-result hidden"></div>
+        </div>
+
+        <!-- FAQ -->
+        <section class="faq-section" aria-labelledby="faq-heading" style="margin-top:3rem">
+          <h2 id="faq-heading">Frequently Asked Questions</h2>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false"><span>What profit margin should I be targeting?</span><svg class="faq-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M10 4v12M4 10h12"/></svg></button>
+            <div class="faq-answer"><p>Most service businesses should target a gross margin of 50–70% and a net margin of 15–30%. Product businesses vary more widely. If your gross margin is below 30%, you likely have insufficient room to cover operating expenses and still profit. Use this as a signal to review your pricing or reduce COGS.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false"><span>How do I know if my prices are below market rate?</span><svg class="faq-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M10 4v12M4 10h12"/></svg></button>
+            <div class="faq-answer"><p>Research competitor pricing through their websites, sales calls, or platforms like Clutch, Upwork, or industry associations. If your close rate is very high (above 80%), that's often a sign your prices are too low — clients expect some negotiation or comparison shopping. Very high demand with very thin margins is the classic underpricing signal.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false"><span>How should I raise prices without losing clients?</span><svg class="faq-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M10 4v12M4 10h12"/></svg></button>
+            <div class="faq-answer"><p>The most effective approach is to raise prices for new clients first, then grandfather existing clients in with advance notice. Lead with the value you deliver, not just the number. A 10–20% increase typically results in less than 10% client loss — meaning your revenue actually increases even if a few clients leave.</p></div>
+          </div>
+        </section>
+
+        <!-- Related Quizzes -->
+        <section aria-labelledby="related-heading" style="margin-top:3rem">
+          <h2 id="related-heading">Related Business Quizzes</h2>
+          <div class="quiz-grid" style="grid-template-columns:repeat(auto-fill,minmax(260px,1fr))">
+            <a href="/quizzes/business-quizzes/is-your-business-profitable/" class="quiz-card">
+              <div class="quiz-card__badge">Business</div>
+              <h3>Is Your Business Profitable?</h3>
+              <p>Pricing affects profitability directly. See how your margins stack up overall.</p>
+              <span class="quiz-card__cta">Take quiz <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </a>
+            <a href="/quizzes/business-quizzes/is-your-business-growing-fast-enough/" class="quiz-card">
+              <div class="quiz-card__badge">Business</div>
+              <h3>Is Your Business Growing Fast Enough?</h3>
+              <p>Growth and pricing are closely linked. Discover if your growth rate reflects proper pricing.</p>
+              <span class="quiz-card__cta">Take quiz <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </a>
+            <a href="/quizzes/business-quizzes/can-your-business-afford-to-hire/" class="quiz-card">
+              <div class="quiz-card__badge">Business</div>
+              <h3>Can Your Business Afford to Hire?</h3>
+              <p>Better pricing creates the margin needed to fund your next hire confidently.</p>
+              <span class="quiz-card__cta">Take quiz <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </a>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect width="32" height="32" rx="8" fill="currentColor"/>
+              <path d="M8 10h16M8 16h16M8 22h10" stroke="#1B4D3E" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators and quizzes built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Business Quizzes</h4>
+          <a href="/quizzes/business-quizzes/is-your-business-profitable/">Is It Profitable?</a>
+          <a href="/quizzes/business-quizzes/how-healthy-is-your-cash-flow/">Cash Flow Health</a>
+          <a href="/quizzes/business-quizzes/should-you-start-a-business/">Start a Business?</a>
+          <a href="/quizzes/business-quizzes/">View All</a>
+        </div>
+        <div class="footer-col">
+          <h4>Business Calculators</h4>
+          <a href="/business-calculators/profit-margin-calculator/">Profit Margin</a>
+          <a href="/business-calculators/pricing-calculator/">Pricing Calculator</a>
+          <a href="/business-calculators/markup-calculator/">Markup Calculator</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about.html">About</a>
+          <a href="/contact.html">Contact</a>
+          <a href="/privacy.html">Privacy Policy</a>
+          <a href="/terms.html">Terms of Use</a>
+          <a href="/disclaimer.html">Disclaimer</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/privacy.html">Privacy</a>
+          <a href="/terms.html">Terms</a>
+          <a href="/disclaimer.html">Disclaimer</a>
+          <a href="/sitemap.xml">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    document.querySelector('.mobile-menu-toggle').addEventListener('click', function() {
+      const nav = document.querySelector('.mobile-nav');
+      const isOpen = nav.classList.toggle('is-open');
+      this.setAttribute('aria-expanded', isOpen);
+      this.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+    });
+    document.querySelectorAll('.faq-question').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        const item = this.closest('.faq-item');
+        const isOpen = item.classList.toggle('is-open');
+        this.setAttribute('aria-expanded', isOpen);
+      });
+    });
+
+    const questions = [
+      {
+        question: "What is your approximate gross profit margin (after direct costs)?",
+        options: ["Below 20%", "20%–35%", "35%–55%", "Above 55%"],
+        scores: [0, 1, 2, 3],
+        explanation: "Gross margin below 30% often signals either high COGS or underpricing. Healthy service businesses typically achieve 50%+ gross margins. If yours is low, pricing is the first lever to examine."
+      },
+      {
+        question: "How does your pricing compare to your top 3 competitors?",
+        options: ["I'm noticeably cheaper than all of them", "I'm cheaper than most", "I'm roughly in line with the market", "I'm priced at or above market rate"],
+        scores: [0, 1, 2, 3],
+        explanation: "Being the cheapest is rarely a sustainable advantage for small businesses. It attracts price-sensitive clients and signals lower quality. Pricing at or above market rate is often a sign of healthy positioning."
+      },
+      {
+        question: "How sensitive do your clients seem to be about your prices?",
+        options: ["Almost every client pushes back on price", "Most clients negotiate pricing", "Some clients ask about pricing but most accept it", "Clients rarely question my pricing"],
+        scores: [0, 1, 2, 3],
+        explanation: "Constant price objections suggest you're selling to the wrong market or that perceived value doesn't match your price. Clients who rarely question pricing trust the value they're receiving."
+      },
+      {
+        question: "How does the value you deliver compare to what you charge?",
+        options: ["I deliver far more value than I charge for", "I deliver somewhat more value than I charge", "Value and price are roughly in balance", "My price reflects the full value I deliver"],
+        scores: [0, 1, 2, 3],
+        explanation: "If you consistently feel you're delivering significantly more value than you charge, that gap is money being left on the table. Pricing should reflect the outcome you create, not just your time or costs."
+      },
+      {
+        question: "When did you last increase your prices?",
+        options: ["I have never raised my prices", "More than 3 years ago", "1–3 years ago", "Within the last 12 months"],
+        scores: [0, 1, 2, 3],
+        explanation: "Inflation alone erodes your real revenue every year. Businesses that haven't raised prices in 2+ years are almost certainly earning less in real terms. Annual price reviews are a minimum best practice."
+      },
+      {
+        question: "If you tracked your effective hourly rate (revenue divided by hours worked), how does it compare to a fair market wage for your expertise?",
+        options: ["It's well below what an employee in my field would earn", "It's slightly below market rate", "It's roughly equivalent to market rate", "It's comfortably above market rate"],
+        scores: [0, 1, 2, 3],
+        explanation: "Your effective rate should exceed what you'd earn as an employee to compensate for business risk, benefits, and taxes. If it doesn't, your pricing isn't reflecting your true market value."
+      },
+      {
+        question: "Do clients ever complain that your prices are too high?",
+        options: ["Yes, frequently — I lose many clients over price", "Occasionally — some clients mention price as a concern", "Rarely — only the occasional price-sensitive prospect", "Never — clients consistently see the value and pay without issue"],
+        scores: [0, 1, 2, 3],
+        explanation: "A healthy business will lose some price-sensitive prospects — that's a sign of correct positioning, not a problem. Frequently losing clients over price typically means you're targeting the wrong market, not that prices are too high."
+      }
+    ];
+
+    const results = [
+      {
+        min: 17,
+        label: "Well-Priced",
+        colorClass: "result-score--high",
+        title: "Your Pricing Is Well-Positioned",
+        desc: "Your pricing reflects the value you deliver and is competitive in the market. You're not leaving significant money on the table and your margins appear healthy. Continue reviewing annually.",
+        recs: [
+          "Continue annual price reviews tied to inflation and the value growth of your services.",
+          "Explore premium tier offerings to serve clients who want even more value.",
+          "Monitor your close rate — if it's above 85%, you may still have room to raise prices."
+        ]
+      },
+      {
+        min: 12,
+        label: "Slightly Low",
+        colorClass: "",
+        title: "Your Pricing May Be Slightly Low",
+        desc: "Your prices are in the right ballpark but there are signals suggesting you could be charging more. A modest increase — even 10–15% — would likely improve your margins without significant client loss.",
+        recs: [
+          "Test a 10% price increase on your next 3 new clients and measure the response.",
+          "Calculate your effective hourly rate and compare it honestly to market benchmarks.",
+          "Strengthen your proposal language to emphasise the ROI and outcomes you deliver."
+        ]
+      },
+      {
+        min: 7,
+        label: "Underpriced",
+        colorClass: "result-score--mid",
+        title: "Your Business Is Underpriced",
+        desc: "Multiple indicators suggest you are charging below the fair value of your work. This is costing you significant revenue and potentially attracting clients who don't value your expertise. A pricing reset is warranted.",
+        recs: [
+          "Conduct a thorough competitor pricing analysis and position yourself in the upper third.",
+          "Identify your 3 best case studies or outcomes and build them into your sales process.",
+          "Implement a pricing increase immediately for all new clients — at least 20–30%."
+        ]
+      },
+      {
+        min: 0,
+        label: "Significantly Underpriced",
+        colorClass: "result-score--low",
+        title: "Your Pricing Is Significantly Underpriced",
+        desc: "You are substantially undercharging for your services or products. This is a major drag on your business's profitability and sustainability. A significant pricing overhaul is the most important change you can make right now.",
+        recs: [
+          "Stop competing on price — it is not a sustainable strategy for a small business.",
+          "Calculate exactly what a 25%, 50%, and 100% price increase would mean for your annual revenue.",
+          "Use the Markup and Pricing calculators to model new price points based on your target margin.",
+          "Consider repositioning your brand to attract higher-value clients who pay for quality."
+        ]
+      }
+    ];
+
+    const calculatorLinks = [
+      { href: "/business-calculators/profit-margin-calculator/", label: "Profit Margin Calculator" },
+      { href: "/business-calculators/pricing-calculator/", label: "Pricing Calculator" },
+      { href: "/business-calculators/markup-calculator/", label: "Markup Calculator" }
+    ];
+
+    let current = 0;
+    let totalScore = 0;
+    let answered = false;
+
+    function renderQuestion() {
+      answered = false;
+      const q = questions[current];
+      const pct = Math.round((current / questions.length) * 100);
+      document.getElementById('progress-bar').style.width = pct + '%';
+      document.getElementById('progress-text').textContent = 'Question ' + (current + 1) + ' of ' + questions.length;
+      document.getElementById('progress-pct').textContent = pct + '%';
+      document.getElementById('question-container').innerHTML = `
+        <div class="quiz-question">
+          <div class="quiz-question__number">Question ${current + 1}</div>
+          <p class="quiz-question__text">${q.question}</p>
+          <ul class="quiz-options" role="list">
+            ${q.options.map((opt, i) => `
+              <li>
+                <button class="quiz-option" data-index="${i}" onclick="selectAnswer(${i})">
+                  <span class="quiz-option__indicator"></span>
+                  <span>${opt}</span>
+                </button>
+              </li>`).join('')}
+          </ul>
+          <div id="explanation" class="quiz-explanation" style="display:none"></div>
+          <div class="quiz-nav">
+            <span></span>
+            <button class="btn btn-primary" id="next-btn" onclick="nextQuestion()" disabled>
+              ${current < questions.length - 1 ? 'Next Question' : 'See Results'}
+            </button>
+          </div>
+        </div>`;
+    }
+
+    function selectAnswer(idx) {
+      if (answered) return;
+      answered = true;
+      const q = questions[current];
+      const btns = document.querySelectorAll('.quiz-option');
+      const bestIdx = q.scores.indexOf(Math.max(...q.scores));
+      btns.forEach(function(btn, i) {
+        if (i === bestIdx) btn.classList.add('correct');
+        else if (i === idx && idx !== bestIdx) btn.classList.add('incorrect');
+      });
+      btns[idx].classList.add('selected');
+      totalScore += q.scores[idx];
+      const expEl = document.getElementById('explanation');
+      expEl.style.display = 'block';
+      expEl.className = 'quiz-explanation ' + (idx === bestIdx ? 'quiz-explanation--correct' : 'quiz-explanation--incorrect');
+      expEl.textContent = q.explanation;
+      document.getElementById('next-btn').disabled = false;
+    }
+
+    function nextQuestion() {
+      current++;
+      if (current < questions.length) { renderQuestion(); } else { showResult(); }
+    }
+
+    function showResult() {
+      document.getElementById('progress-bar').style.width = '100%';
+      document.getElementById('progress-text').textContent = 'Complete!';
+      document.getElementById('progress-pct').textContent = '100%';
+      document.getElementById('question-container').innerHTML = '';
+      const maxScore = questions.length * 3;
+      const result = results.find(r => totalScore >= r.min);
+      const rc = document.getElementById('result-container');
+      rc.classList.remove('hidden');
+      rc.innerHTML = `
+        <div class="result-score ${result.colorClass}">
+          <span class="result-score__number">${totalScore}/${maxScore}</span>
+          <span class="result-score__label">Score</span>
+        </div>
+        <div class="result-category">${result.label}</div>
+        <h2>${result.title}</h2>
+        <p>${result.desc}</p>
+        <div class="result-recommendations">
+          <h3>Recommended Next Steps</h3>
+          <ul>${result.recs.map(r => `<li>${r}</li>`).join('')}</ul>
+        </div>
+        <div class="result-actions">
+          ${calculatorLinks.map(l => `<a href="${l.href}" class="btn btn-secondary">${l.label}</a>`).join('')}
+        </div>
+        <div class="result-actions" style="margin-top:1rem">
+          <button class="btn btn-outline" onclick="restartQuiz()">Retake Quiz</button>
+        </div>`;
+    }
+
+    function restartQuiz() {
+      current = 0; totalScore = 0;
+      document.getElementById('result-container').classList.add('hidden');
+      renderQuestion();
+    }
+
+    renderQuestion();
+  </script>
+</body>
+</html>

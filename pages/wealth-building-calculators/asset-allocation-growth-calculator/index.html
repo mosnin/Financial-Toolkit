@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Asset Allocation Growth Calculator - Compare Portfolio Allocations | CalcWise</title>
+  <meta name="description" content="Compare projected portfolio growth across different stock, bond, and cash allocations. See risk-adjusted returns, growth comparisons, and get rebalancing guidance for your portfolio.">
+  <meta name="keywords" content="asset allocation calculator, portfolio growth calculator, stock bond allocation, risk adjusted return, portfolio rebalancing">
+  <link rel="canonical" href="https://calcwise.io/wealth-building-calculators/asset-allocation-growth-calculator/">
+
+  <meta property="og:title" content="Asset Allocation Growth Calculator - Compare Portfolio Allocations">
+  <meta property="og:description" content="Compare projected growth across stocks, bonds, and cash allocations with risk-adjusted return analysis.">
+  <meta property="og:url" content="https://calcwise.io/wealth-building-calculators/asset-allocation-growth-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Asset Allocation Growth Calculator - Compare Portfolio Allocations">
+  <meta name="twitter:description" content="Compare projected growth across stocks, bonds, and cash allocations with risk-adjusted return analysis.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Wealth Building Calculators", "item": "https://calcwise.io/wealth-building-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "Asset Allocation Growth Calculator", "item": "https://calcwise.io/wealth-building-calculators/asset-allocation-growth-calculator/" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the best asset allocation for long-term growth?",
+        "acceptedAnswer": { "@type": "Answer", "text": "For long-term growth (20+ year horizons), higher stock allocations (80–100%) historically produce better returns. Common guidance like the '110 minus age' rule suggests holding that percentage in stocks. Younger investors with more time can afford to take on more equity risk for higher expected returns." }
+      },
+      {
+        "@type": "Question",
+        "name": "What historical returns should I use for stocks and bonds?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Historically, US large-cap stocks (S&P 500) have returned approximately 10% annually before inflation and 7% after inflation. US bonds have returned approximately 4–5% annually. Cash equivalents typically return 1–3%. These are the default assumptions in this calculator, which you can adjust." }
+      },
+      {
+        "@type": "Question",
+        "name": "How often should I rebalance my portfolio?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Most financial planners recommend rebalancing annually or when any asset class drifts more than 5% from its target allocation. Rebalancing forces you to sell high and buy low, maintaining your intended risk profile and preventing any single asset class from dominating your portfolio." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is a risk-adjusted return?",
+        "acceptedAnswer": { "@type": "Answer", "text": "A risk-adjusted return measures how much return an investment generates per unit of risk. A portfolio with a 10% return and high volatility may be less attractive than one with an 8% return and low volatility. The Sharpe ratio and similar metrics quantify this trade-off, helping investors choose allocations appropriate for their risk tolerance." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/wealth-building-calculators/" aria-current="page">Wealth Building</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/wealth-building-calculators/">Wealth Building Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/wealth-building-calculators/">Wealth Building Calculators</a></li>
+          <li><span aria-current="page">Asset Allocation Growth Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="article-content">
+          <h1>Asset Allocation Growth Calculator</h1>
+          <p>Your asset allocation — the mix of stocks, bonds, and cash in your portfolio — is the single most important driver of long-term investment outcomes. This calculator projects how your portfolio grows under your chosen allocation, compares it against three benchmark allocations (aggressive, balanced, and conservative), and provides a risk-adjusted return analysis to help you find the right balance for your goals and timeline.</p>
+
+          <div class="calc-container mt-8">
+            <div class="calc-header">
+              <h2>Calculate Asset Allocation Growth</h2>
+              <p>Compare portfolio growth across different allocations</p>
+            </div>
+            <div class="calc-body">
+              <form id="aa-form" onsubmit="return false;">
+                <div class="form-group">
+                  <label class="form-label" for="aa-portfolio">Portfolio Size</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="aa-portfolio" name="portfolioSize" class="form-input" placeholder="100000" min="1" step="5000" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="aa-stocks">Stock Allocation</label>
+                  <div class="input-suffix">
+                    <input type="number" id="aa-stocks" name="stockAllocation" class="form-input" placeholder="60" min="0" max="100" step="5" required>
+                    <span class="suffix">%</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="aa-bonds">Bond Allocation</label>
+                  <div class="input-suffix">
+                    <input type="number" id="aa-bonds" name="bondAllocation" class="form-input" placeholder="30" min="0" max="100" step="5" required>
+                    <span class="suffix">%</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="aa-cash">Cash Allocation</label>
+                  <div class="input-suffix">
+                    <input type="number" id="aa-cash" name="cashAllocation" class="form-input" placeholder="10" min="0" max="100" step="5" required>
+                    <span class="suffix">%</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="aa-stock-return">Stock Annual Return Assumption</label>
+                  <div class="input-suffix">
+                    <input type="number" id="aa-stock-return" name="stockReturn" class="form-input" placeholder="10" min="0" max="30" step="0.1">
+                    <span class="suffix">%</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="aa-bond-return">Bond Annual Return Assumption</label>
+                  <div class="input-suffix">
+                    <input type="number" id="aa-bond-return" name="bondReturn" class="form-input" placeholder="4" min="0" max="15" step="0.1">
+                    <span class="suffix">%</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="aa-cash-return">Cash Annual Return Assumption</label>
+                  <div class="input-suffix">
+                    <input type="number" id="aa-cash-return" name="cashReturn" class="form-input" placeholder="2" min="0" max="10" step="0.1">
+                    <span class="suffix">%</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="aa-years">Years</label>
+                  <input type="number" id="aa-years" name="years" class="form-input" placeholder="20" min="1" max="60" step="1" required>
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calculateAllocation()">Compare Allocations</button>
+                  <button type="button" class="btn btn-reset" onclick="resetAllocation()">Reset</button>
+                </div>
+              </form>
+
+              <div id="aa-results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">Your Portfolio (Projected Value)</div>
+                  <div class="result-value" id="aa-your-value"></div>
+                </div>
+                <div class="result-grid">
+                  <div class="result-item">
+                    <div class="result-label">Blended Annual Return</div>
+                    <div class="result-value" id="aa-blended-return"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Risk-Adjusted Score</div>
+                    <div class="result-value" id="aa-risk-score"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Aggressive (100/0/0) Value</div>
+                    <div class="result-value" id="aa-aggressive"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Balanced (60/30/10) Value</div>
+                    <div class="result-value" id="aa-balanced"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Conservative (20/60/20) Value</div>
+                    <div class="result-value" id="aa-conservative"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Rebalancing Recommendation</div>
+                    <div class="result-value" id="aa-rebalance"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <section class="content-section">
+            <h2>Asset Allocation Formula</h2>
+            <p>The blended portfolio return is a weighted average of each asset class return, then applied using the compound growth formula:</p>
+            <div class="formula-box">
+              <div class="formula-label">Blended Return</div>
+              r<sub>blend</sub> = (w<sub>stocks</sub> &times; r<sub>stocks</sub>) + (w<sub>bonds</sub> &times; r<sub>bonds</sub>) + (w<sub>cash</sub> &times; r<sub>cash</sub>)
+            </div>
+            <div class="formula-box">
+              <div class="formula-label">Projected Portfolio Value</div>
+              FV = P &times; (1 + r<sub>blend</sub>)<sup>t</sup>
+            </div>
+            <div class="formula-box">
+              <div class="formula-label">Approximate Portfolio Volatility (Risk Score)</div>
+              &sigma;<sub>portfolio</sub> &approx; w<sub>stocks</sub> &times; &sigma;<sub>stocks</sub> + w<sub>bonds</sub> &times; &sigma;<sub>bonds</sub>
+            </div>
+            <p>Where <strong>w</strong> represents the allocation weight (0–1), <strong>r</strong> is the assumed return for each asset class, and <strong>P</strong> is the starting portfolio value. Volatility (risk score) uses approximate standard deviations of 18% for stocks, 7% for bonds, and 1% for cash.</p>
+          </section>
+
+          <section class="content-section">
+            <h2>How to Use This Calculator</h2>
+            <ol>
+              <li><strong>Enter your portfolio size</strong> — your current total investable portfolio value.</li>
+              <li><strong>Enter your allocation percentages</strong> — stocks, bonds, and cash must sum to 100%.</li>
+              <li><strong>Adjust return assumptions</strong> — or leave the defaults (10% stocks, 4% bonds, 2% cash) based on historical averages.</li>
+              <li><strong>Enter the number of years</strong> — your investment horizon.</li>
+              <li><strong>Click "Compare Allocations"</strong> to see your projected value alongside aggressive, balanced, and conservative benchmarks.</li>
+            </ol>
+          </section>
+
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>A $100,000 portfolio with a 60/30/10 stock/bond/cash allocation and default return assumptions (10%/4%/2%) has a blended annual return of 7.4%. Over 20 years, it grows to approximately $424,000. An aggressive 100% stock portfolio would grow to $673,000, while a conservative 20/60/20 allocation would reach only $209,000. The gap between aggressive and conservative grows dramatically over time, underscoring why asset allocation decisions matter more as your time horizon lengthens.</p>
+          </section>
+
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What is the best asset allocation for long-term growth?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>For long-term growth (20+ year horizons), higher stock allocations (80–100%) historically produce better returns. Common guidance like the "110 minus age" rule suggests holding that percentage in stocks. Younger investors with more time can afford to take on more equity risk for higher expected returns.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What historical returns should I use for stocks and bonds?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Historically, US large-cap stocks (S&P 500) have returned approximately 10% annually before inflation and 7% after inflation. US bonds have returned approximately 4–5% annually. Cash equivalents typically return 1–3%. These are the default assumptions in this calculator, which you can adjust.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                How often should I rebalance my portfolio?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Most financial planners recommend rebalancing annually or when any asset class drifts more than 5% from its target allocation. Rebalancing forces you to sell high and buy low, maintaining your intended risk profile and preventing any single asset class from dominating your portfolio.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What is a risk-adjusted return?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>A risk-adjusted return measures how much return an investment generates per unit of risk. A portfolio with a 10% return and high volatility may be less attractive than one with an 8% return and low volatility. The Sharpe ratio and similar metrics quantify this trade-off, helping investors choose allocations appropriate for their risk tolerance.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/wealth-building-calculators/wealth-accumulation-calculator/" class="card card-link">
+                <h3>Wealth Accumulation Calculator</h3>
+                <p>Project total wealth with monthly contributions.</p>
+              </a>
+              <a href="/wealth-building-calculators/compound-growth-calculator/" class="card card-link">
+                <h3>Compound Growth Calculator</h3>
+                <p>See year-by-year compound growth for any return rate.</p>
+              </a>
+              <a href="/wealth-building-calculators/net-worth-growth-calculator/" class="card card-link">
+                <h3>Net Worth Growth Calculator</h3>
+                <p>Project net worth over 5, 10, 20, and 30 years.</p>
+              </a>
+              <a href="/wealth-building-calculators/passive-income-growth-calculator/" class="card card-link">
+                <h3>Passive Income Growth Calculator</h3>
+                <p>Model passive income growth with reinvestment.</p>
+              </a>
+            </div>
+          </section>
+
+          <div class="ad-slot ad-slot-leaderboard"></div>
+
+          <div class="disclaimer">
+            <strong>Disclaimer:</strong> This calculator uses historical return assumptions which may not reflect future performance. Asset class returns and correlations vary over time. This is not financial advice. Consult a qualified financial professional or fiduciary advisor before adjusting your portfolio allocation.
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Wealth Building</h4>
+          <a href="/wealth-building-calculators/">All Wealth Building Calculators</a>
+          <a href="/wealth-building-calculators/millionaire-timeline-calculator/">Millionaire Timeline</a>
+          <a href="/wealth-building-calculators/wealth-milestone-calculator/">Wealth Milestones</a>
+        </div>
+        <div class="footer-col">
+          <h4>Finance</h4>
+          <a href="/finance-calculators/">All Finance Calculators</a>
+          <a href="/finance-calculators/compound-interest-calculator/">Compound Interest</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateAllocation() {
+      if (!CalcWise.validateForm('aa-form')) return;
+
+      const portfolio = CalcWise.parseNumber(document.getElementById('aa-portfolio').value);
+      const wStocks = (parseFloat(document.getElementById('aa-stocks').value) || 0) / 100;
+      const wBonds  = (parseFloat(document.getElementById('aa-bonds').value)  || 0) / 100;
+      const wCash   = (parseFloat(document.getElementById('aa-cash').value)   || 0) / 100;
+
+      const total = wStocks + wBonds + wCash;
+      if (Math.abs(total - 1) > 0.01) {
+        alert('Stock + Bond + Cash allocations must sum to 100%. Currently: ' + Math.round(total * 100) + '%');
+        return;
+      }
+
+      const rStocks = (parseFloat(document.getElementById('aa-stock-return').value) || 10) / 100;
+      const rBonds  = (parseFloat(document.getElementById('aa-bond-return').value)  || 4)  / 100;
+      const rCash   = (parseFloat(document.getElementById('aa-cash-return').value)  || 2)  / 100;
+      const years   = parseInt(document.getElementById('aa-years').value) || 20;
+
+      const blended = wStocks * rStocks + wBonds * rBonds + wCash * rCash;
+      const fv = portfolio * Math.pow(1 + blended, years);
+
+      // Benchmark allocations
+      const rAggressive   = 1.00 * rStocks + 0.00 * rBonds + 0.00 * rCash;
+      const rBalanced     = 0.60 * rStocks + 0.30 * rBonds + 0.10 * rCash;
+      const rConservative = 0.20 * rStocks + 0.60 * rBonds + 0.20 * rCash;
+
+      const fvAgg  = portfolio * Math.pow(1 + rAggressive, years);
+      const fvBal  = portfolio * Math.pow(1 + rBalanced, years);
+      const fvCons = portfolio * Math.pow(1 + rConservative, years);
+
+      // Risk score: approximate portfolio volatility
+      const sigmaStocks = 0.18, sigmaBonds = 0.07, sigmaCash = 0.01;
+      const sigma = wStocks * sigmaStocks + wBonds * sigmaBonds + wCash * sigmaCash;
+      const riskScore = blended / sigma; // simplified Sharpe-like ratio
+
+      // Rebalancing check
+      let rebalanceMsg = 'Allocation sums to 100% — no action needed.';
+      if (Math.abs(total - 1) > 0.01) {
+        rebalanceMsg = 'Allocation does not sum to 100%. Rebalance required.';
+      } else if (wCash > 0.20) {
+        rebalanceMsg = 'High cash allocation (>' + Math.round(wCash*100) + '%) may drag on returns. Consider reducing cash.';
+      } else if (wStocks > 0.90 && years < 10) {
+        rebalanceMsg = 'Very high equity allocation with a short horizon. Consider adding bonds for stability.';
+      } else {
+        rebalanceMsg = 'Allocation looks reasonable. Review annually.';
+      }
+
+      CalcWise.setText('aa-your-value', CalcWise.formatCurrency(fv));
+      CalcWise.setText('aa-blended-return', (blended * 100).toFixed(2) + '% / yr');
+      CalcWise.setText('aa-risk-score', riskScore.toFixed(2) + ' (return/risk ratio)');
+      CalcWise.setText('aa-aggressive', CalcWise.formatCurrency(fvAgg));
+      CalcWise.setText('aa-balanced', CalcWise.formatCurrency(fvBal));
+      CalcWise.setText('aa-conservative', CalcWise.formatCurrency(fvCons));
+      CalcWise.setText('aa-rebalance', rebalanceMsg);
+
+      CalcWise.showResults('aa-results');
+    }
+
+    function resetAllocation() {
+      document.getElementById('aa-form').reset();
+      CalcWise.hideResults('aa-results');
+    }
+  </script>
+</body>
+</html>

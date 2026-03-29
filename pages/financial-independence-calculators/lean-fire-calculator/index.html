@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lean FIRE Calculator - CalcWise</title>
+  <meta name="description" content="Calculate your Lean FIRE number for a frugal early retirement. Find your 25x lean expenses target, time to Lean FIRE, annual lean retirement income, and how it compares to standard FIRE.">
+  <link rel="canonical" href="https://calcwise.io/financial-independence-calculators/lean-fire-calculator/">
+  <meta property="og:title" content="Lean FIRE Calculator - CalcWise">
+  <meta property="og:description" content="How much do you need for Lean FIRE? Calculate your frugal retirement number, timeline, and annual income — plus a comparison to standard FIRE.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcwise.io/financial-independence-calculators/lean-fire-calculator/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Lean FIRE Calculator - CalcWise">
+  <meta name="twitter:description" content="Calculate your Lean FIRE number and timeline. See how a frugal lifestyle accelerates your path to financial independence compared to standard FIRE.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/"},
+      {"@type": "ListItem", "position": 2, "name": "Financial Independence Calculators", "item": "https://calcwise.io/financial-independence-calculators/"},
+      {"@type": "ListItem", "position": 3, "name": "Lean FIRE Calculator"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is Lean FIRE?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Lean FIRE is a variant of FIRE (Financial Independence, Retire Early) focused on a frugal, minimalist retirement lifestyle. Lean FIRE practitioners target annual expenses of roughly $20,000–$40,000, resulting in a smaller FI number and faster path to early retirement compared to standard FIRE. It typically means living below the median income in retirement."}
+      },
+      {
+        "@type": "Question",
+        "name": "How much do I need for Lean FIRE?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Your Lean FIRE number is 25 times your lean annual expenses (using the 4% safe withdrawal rate). For example, if your lean lifestyle costs $30,000/year, your Lean FIRE number is $750,000. This is significantly less than standard FIRE, which might target $1.5–2M+ for higher spending lifestyles."}
+      },
+      {
+        "@type": "Question",
+        "name": "What are the risks of Lean FIRE?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Lean FIRE leaves little budget margin for unexpected expenses, healthcare costs, or lifestyle inflation. A major medical expense, home repair, or shift in cost of living can strain a lean retirement budget. Many Lean FIRE adherents maintain some income flexibility through side projects or part-time work as a buffer."}
+      },
+      {
+        "@type": "Question",
+        "name": "How does Lean FIRE compare to standard FIRE?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Lean FIRE requires a smaller portfolio (lower expenses × 25) and is typically achievable years earlier than standard or Fat FIRE. The trade-off is a more restricted lifestyle in retirement. Standard FIRE targets typical middle-class spending, while Fat FIRE targets higher spending — both require substantially larger portfolios."}
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="logo">
+        <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav">
+        <a href="/">Home</a>
+        <a href="/pages/finance-calculators/">Finance</a>
+        <a href="/pages/financial-independence-calculators/" aria-current="page">FI Calculators</a>
+        <a href="/pages/investment-calculators/">Investment</a>
+        <a href="/pages/tax-calculators/">Tax</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav">
+      <a href="/">Home</a>
+      <a href="/pages/finance-calculators/">Finance Calculators</a>
+      <a href="/pages/financial-independence-calculators/">FI Calculators</a>
+      <a href="/pages/investment-calculators/">Investment Calculators</a>
+      <a href="/pages/tax-calculators/">Tax Calculators</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li><a href="/pages/financial-independence-calculators/">Financial Independence Calculators</a></li>
+        <li><span aria-current="page">Lean FIRE Calculator</span></li>
+      </ol>
+    </nav>
+
+    <div class="page-content">
+      <div class="article-content">
+        <h1>Lean FIRE Calculator</h1>
+        <p>Lean FIRE is the path to financial independence through a deliberately frugal retirement lifestyle — lower expenses mean a smaller FI number and a faster timeline to leaving work behind. This calculator computes your Lean FIRE number (25x your lean monthly expenses), the time to reach it, your annual lean retirement income, and how the lean path compares to achieving standard FIRE at a typical spending level.</p>
+
+        <div class="ad-slot ad-slot-leaderboard"></div>
+
+        <div class="calc-container">
+          <div class="calc-header">
+            <h2>Your Lean FIRE Number</h2>
+            <p>Calculate your frugal retirement target and timeline</p>
+          </div>
+          <div class="calc-body">
+            <form id="lfire-form">
+              <div class="result-grid result-grid-2" style="gap: var(--space-4);">
+                <div class="form-group">
+                  <label class="form-label" for="leanMonthlyExpenses">Lean Monthly Expenses (Retirement)</label>
+                  <div class="input-prefix"><span class="prefix">$</span>
+                    <input type="number" id="leanMonthlyExpenses" name="leanMonthlyExpenses" class="form-input" placeholder="2500" min="500" step="100" required>
+                  </div>
+                  <p class="form-hint">Your minimal essential monthly spending in retirement</p>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="standardMonthlyExpenses">Standard Monthly Expenses (for comparison)</label>
+                  <div class="input-prefix"><span class="prefix">$</span>
+                    <input type="number" id="standardMonthlyExpenses" name="standardMonthlyExpenses" class="form-input" placeholder="4500" min="500" step="100">
+                  </div>
+                  <p class="form-hint">Optional: your current or desired higher spending level</p>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="currentSavings">Current Savings</label>
+                  <div class="input-prefix"><span class="prefix">$</span>
+                    <input type="number" id="currentSavings" name="currentSavings" class="form-input" placeholder="50000" min="0" step="1000" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="monthlySavings">Monthly Savings</label>
+                  <div class="input-prefix"><span class="prefix">$</span>
+                    <input type="number" id="monthlySavings" name="monthlySavings" class="form-input" placeholder="2000" min="0" step="100" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="returnRate">Expected Annual Return</label>
+                  <div class="input-suffix">
+                    <input type="number" id="returnRate" name="returnRate" class="form-input" placeholder="7" min="0" max="20" step="0.1" value="7" required>
+                    <span class="suffix">%</span>
+                  </div>
+                </div>
+              </div>
+              <div class="calc-actions">
+                <button type="button" class="btn btn-calculate" onclick="calcLeanFIRE()">Calculate Lean FIRE</button>
+                <button type="button" class="btn btn-reset" onclick="resetLeanFIRE()">Reset</button>
+              </div>
+            </form>
+
+            <div id="lfire-results" class="calc-results hidden">
+              <div class="result-primary">
+                <div class="result-label">Lean FIRE Number</div>
+                <div class="result-value" id="leanFireNum">$0</div>
+              </div>
+              <div class="result-grid result-grid-3" style="margin-top: var(--space-4);">
+                <div class="result-item">
+                  <div class="result-label">Time to Lean FIRE</div>
+                  <div class="result-value" id="timeToLeanFire" style="color: var(--color-success);">—</div>
+                </div>
+                <div class="result-item">
+                  <div class="result-label">Annual Lean Retirement Income</div>
+                  <div class="result-value" id="annualLeanIncome" style="color: var(--color-info);">$0</div>
+                </div>
+                <div class="result-item">
+                  <div class="result-label">Years Saved vs Standard FIRE</div>
+                  <div class="result-value" id="yearsSaved" style="color: var(--color-accent);">—</div>
+                </div>
+              </div>
+              <div id="lfireDetails" style="margin-top: var(--space-5);"></div>
+            </div>
+          </div>
+        </div>
+
+        <section class="content-section">
+          <h2>How Lean FIRE Is Calculated</h2>
+          <div class="formula-box">
+            <div class="formula-label">Formula</div>
+            Lean Annual Expenses = Lean Monthly Expenses &times; 12<br>
+            Lean FIRE Number = Lean Annual Expenses &times; 25 (4% SWR)<br><br>
+            Time to Lean FIRE: solve for n (months) where<br>
+            PV &times; (1+r)^n + PMT &times; [(1+r)^n &minus; 1] / r &ge; Lean FIRE Number<br><br>
+            Years Saved = Time to Standard FIRE &minus; Time to Lean FIRE
+          </div>
+          <p>The Lean FIRE number is simply 25x your annual lean expenses. Because lean expenses are lower than standard retirement spending, the target is smaller — and the timeline to reach it shorter. The comparison with standard FIRE shows how many years of work a frugal lifestyle can eliminate from your path to independence.</p>
+        </section>
+
+        <section class="content-section">
+          <h2>How to Use This Calculator</h2>
+          <ol>
+            <li><strong>Enter lean monthly expenses:</strong> The minimum you could live on comfortably — essentials only, no extras.</li>
+            <li><strong>Add standard expenses (optional):</strong> Your current or preferred higher spending for comparison.</li>
+            <li><strong>Enter current savings and monthly contributions:</strong> All investment accounts combined.</li>
+            <li><strong>Set your return rate:</strong> 7% nominal is standard for a diversified portfolio.</li>
+            <li><strong>Review the comparison:</strong> See exactly how many years the frugal path saves versus standard FIRE.</li>
+          </ol>
+        </section>
+
+        <section class="content-section">
+          <h2>Example Scenario</h2>
+          <p>Riley has $60,000 saved and contributes $2,500/month. Lean monthly expenses would be $2,800/month ($33,600/year), giving a Lean FIRE number of $840,000. Standard lifestyle would cost $4,500/month ($54,000/year), needing $1,350,000 for standard FIRE. At 7% returns, Riley reaches Lean FIRE in about 14 years 2 months, versus 20 years 5 months for standard FIRE — saving over 6 years by embracing the lean lifestyle.</p>
+        </section>
+
+        <section class="faq-section">
+          <h2>Frequently Asked Questions</h2>
+          <div class="faq-item">
+            <button class="faq-question">What is Lean FIRE?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>Lean FIRE is retiring early on a minimal budget — typically under $40,000/year. It requires a smaller portfolio (lower expenses × 25) and is achievable faster than standard or Fat FIRE. The trade-off is a frugal, intentional lifestyle with little financial cushion.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">How much do I need for Lean FIRE?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>Your Lean FIRE number is 25 times your annual lean expenses. At $30,000/year in lean expenses, you need $750,000. At $40,000/year, you need $1,000,000. The lower your expenses, the smaller and more achievable the target.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">What are the risks of Lean FIRE?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>Lean FIRE has little margin for unexpected costs — a major medical event, home repair, or unexpected inflation can stress a tight budget. Many Lean FIRE practitioners maintain some part-time income flexibility or hold a small cash buffer to manage these risks.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">How does Lean FIRE compare to standard FIRE?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>Lean FIRE needs a smaller portfolio and is reached faster. Standard FIRE targets typical middle-class spending ($50,000–$80,000/year). Fat FIRE targets luxury spending ($100,000+/year). Each requires progressively larger portfolios and longer timelines.</p></div>
+          </div>
+        </section>
+
+        <section class="related-calculators">
+          <h2>Related Calculators</h2>
+          <div class="grid grid-3">
+            <a href="/pages/financial-independence-calculators/fire-timeline-calculator/" class="card card-link">
+              <h3>FIRE Timeline Calculator</h3>
+              <p>Calculate your standard FIRE number and timeline with full detail.</p>
+            </a>
+            <a href="/pages/financial-independence-calculators/barista-fire-calculator/" class="card card-link">
+              <h3>Barista FIRE Calculator</h3>
+              <p>Bridge the gap between Lean FIRE and full FIRE with part-time income.</p>
+            </a>
+            <a href="/pages/financial-independence-calculators/coast-fire-calculator/" class="card card-link">
+              <h3>Coast FIRE Calculator</h3>
+              <p>Find out if you've already saved enough to coast to your lean target.</p>
+            </a>
+            <a href="/pages/financial-independence-calculators/financial-independence-number-calculator/" class="card card-link">
+              <h3>FI Number Calculator</h3>
+              <p>Compare your FI number across 3%, 3.5%, and 4% withdrawal rates.</p>
+            </a>
+            <a href="/pages/personal-finance-calculators/financial-independence-calculator/" class="card card-link">
+              <h3>Financial Independence Calculator</h3>
+              <p>Full FI planner with multiple savings scenarios.</p>
+            </a>
+          </div>
+        </section>
+
+        <div class="disclaimer">
+          <strong>Disclaimer:</strong> This calculator is for informational and educational purposes only. Lean FIRE projections assume constant investment returns and contributions. Real-world results will vary. A frugal retirement budget carries risks from healthcare costs, inflation, and unexpected expenses. This is not financial advice. Consult a qualified financial advisor before making retirement planning decisions.
+        </div>
+
+        <div class="ad-slot ad-slot-rectangle"></div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free online financial calculators to help you make smarter money decisions.</p>
+        </div>
+        <div class="footer-col">
+          <h4>FI Calculators</h4>
+          <a href="/pages/financial-independence-calculators/fire-timeline-calculator/">FIRE Timeline</a>
+          <a href="/pages/financial-independence-calculators/coast-fire-calculator/">Coast FIRE</a>
+          <a href="/pages/financial-independence-calculators/barista-fire-calculator/">Barista FIRE</a>
+          <a href="/pages/financial-independence-calculators/safe-withdrawal-rate-calculator/">SWR Calculator</a>
+        </div>
+        <div class="footer-col">
+          <h4>Tools</h4>
+          <a href="/pages/finance-calculators/retirement-savings-calculator/">Retirement Savings</a>
+          <a href="/pages/investment-calculators/">Investment Calculators</a>
+          <a href="/pages/tax-calculators/">Tax Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about/">About</a>
+          <a href="/contact/">Contact</a>
+          <a href="/privacy/">Privacy Policy</a>
+          <a href="/terms/">Terms of Service</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 CalcWise. All rights reserved.</span>
+        <div class="footer-links">
+          <a href="/privacy/">Privacy</a>
+          <a href="/terms/">Terms</a>
+          <a href="/contact/">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function solveMonthsToTarget(currentSavings, monthlySavings, monthlyRate, target) {
+      if (currentSavings >= target) return 0;
+      for (let m = 1; m <= 720; m++) {
+        let fv;
+        if (monthlyRate === 0) {
+          fv = currentSavings + monthlySavings * m;
+        } else {
+          const fvFactor = Math.pow(1 + monthlyRate, m);
+          fv = currentSavings * fvFactor + monthlySavings * (fvFactor - 1) / monthlyRate;
+        }
+        if (fv >= target) return m;
+      }
+      return null;
+    }
+
+    function calcLeanFIRE() {
+      if (!CalcWise.validateForm('lfire-form')) return;
+      const v = CalcWise.getFormValues('lfire-form');
+
+      const leanMonthly = v.leanMonthlyExpenses;
+      const standardMonthly = v.standardMonthlyExpenses || 0;
+      const currentSavings = v.currentSavings;
+      const monthlySavings = v.monthlySavings;
+      const annualReturn = v.returnRate / 100;
+      const monthlyRate = annualReturn / 12;
+
+      const leanAnnual = leanMonthly * 12;
+      const leanFireNum = leanAnnual * 25;
+
+      const leanMonths = solveMonthsToTarget(currentSavings, monthlySavings, monthlyRate, leanFireNum);
+
+      CalcWise.setText('leanFireNum', CalcWise.formatCurrency(leanFireNum, 0));
+      CalcWise.setText('annualLeanIncome', CalcWise.formatCurrency(leanAnnual, 0) + '/yr');
+
+      if (leanMonths === 0) {
+        CalcWise.setText('timeToLeanFire', 'Already at Lean FIRE!');
+      } else if (leanMonths) {
+        const yrs = Math.floor(leanMonths / 12);
+        const mos = leanMonths % 12;
+        CalcWise.setText('timeToLeanFire', yrs > 0 ? `${yrs}y ${mos}m` : `${mos} months`);
+      } else {
+        CalcWise.setText('timeToLeanFire', '60+ years');
+      }
+
+      let yearsSavedText = '—';
+      let standardFireNum = 0;
+      let standardMonths = null;
+      if (standardMonthly > 0) {
+        standardFireNum = standardMonthly * 12 * 25;
+        standardMonths = solveMonthsToTarget(currentSavings, monthlySavings, monthlyRate, standardFireNum);
+        if (leanMonths !== null && standardMonths !== null) {
+          const diff = standardMonths - leanMonths;
+          if (diff > 0) {
+            const diffYrs = Math.floor(diff / 12);
+            const diffMos = diff % 12;
+            yearsSavedText = diffYrs > 0 ? `${diffYrs}y ${diffMos}m earlier` : `${diffMos} months earlier`;
+          } else {
+            yearsSavedText = 'Same timeline';
+          }
+        }
+      }
+      CalcWise.setText('yearsSaved', yearsSavedText);
+
+      let detailHtml = `<div class="table-container"><table class="data-table"><thead><tr><th>FIRE Type</th><th>Annual Expenses</th><th>FIRE Number</th><th>Time to FIRE</th></tr></thead><tbody>`;
+      detailHtml += `<tr><td><strong>Lean FIRE</strong></td><td>${CalcWise.formatCurrency(leanAnnual, 0)}/yr</td><td>${CalcWise.formatCurrency(leanFireNum, 0)}</td><td>${leanMonths === 0 ? 'Now!' : leanMonths ? (Math.floor(leanMonths/12) + 'y ' + (leanMonths%12) + 'm') : '60+ yrs'}</td></tr>`;
+      if (standardMonthly > 0) {
+        const stdAnnual = standardMonthly * 12;
+        detailHtml += `<tr><td>Standard FIRE</td><td>${CalcWise.formatCurrency(stdAnnual, 0)}/yr</td><td>${CalcWise.formatCurrency(standardFireNum, 0)}</td><td>${standardMonths ? (Math.floor(standardMonths/12) + 'y ' + (standardMonths%12) + 'm') : '60+ yrs'}</td></tr>`;
+      }
+      detailHtml += `</tbody></table></div>`;
+      detailHtml += `<p style="font-size:var(--text-sm);color:var(--color-text-secondary);margin-top:var(--space-3);">Lean FIRE Number: ${CalcWise.formatCurrency(leanFireNum, 0)} = ${CalcWise.formatCurrency(leanMonthly, 0)}/mo &times; 12 &times; 25</p>`;
+
+      CalcWise.setHtml('lfireDetails', detailHtml);
+      CalcWise.showResults('lfire-results');
+    }
+
+    function resetLeanFIRE() {
+      document.getElementById('lfire-form').reset();
+      CalcWise.hideResults('lfire-results');
+    }
+  </script>
+</body>
+</html>

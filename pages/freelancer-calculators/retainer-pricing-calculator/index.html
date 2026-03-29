@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Retainer Pricing Calculator for Freelancers | CalcWise</title>
+  <meta name="description" content="Calculate the right monthly retainer price for freelance clients. Balance retainer discounts with recurring income stability and show clients their ROI.">
+  <link rel="canonical" href="https://calcwise.io/freelancer-calculators/retainer-pricing-calculator/">
+  <meta property="og:title" content="Retainer Pricing Calculator for Freelancers | CalcWise">
+  <meta property="og:description" content="Calculate the right monthly retainer price and show clients their ROI for ongoing freelance work.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcwise.io/freelancer-calculators/retainer-pricing-calculator/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Retainer Pricing Calculator for Freelancers | CalcWise">
+  <meta name="twitter:description" content="Calculate the right monthly retainer price and show clients their ROI for ongoing freelance work.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/"},
+      {"@type": "ListItem", "position": 2, "name": "Freelancer Calculators", "item": "https://calcwise.io/freelancer-calculators/"},
+      {"@type": "ListItem", "position": 3, "name": "Retainer Pricing Calculator"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What discount should I offer on a monthly retainer?",
+        "acceptedAnswer": {"@type": "Answer", "text": "A retainer discount of 10-20% is typical for the value of predictable, guaranteed work. Offering too much (above 25%) erodes the income stability benefit. The discount should reflect reduced admin overhead, priority scheduling, and guaranteed cash flow."}
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between a strategic and tactical retainer?",
+        "acceptedAnswer": {"@type": "Answer", "text": "A strategic retainer involves high-level advisory work, business consulting, or ongoing strategy. A tactical retainer covers recurring execution tasks like content creation, code maintenance, or design updates. Strategic retainers typically command higher rates because of their advisory nature."}
+      },
+      {
+        "@type": "Question",
+        "name": "How do I calculate ROI for a retainer client?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Compare the value delivered to the retainer cost. If your work drives $20,000 in client revenue for a $2,000/month retainer, the ROI is 900%. Presenting this framing to clients makes retainers easier to justify and renew."}
+      },
+      {
+        "@type": "Question",
+        "name": "Should I roll over unused retainer hours?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Most freelancers use a 'use it or lose it' policy to protect their time and income predictability. Alternatively, roll over a capped amount (e.g., 25% of hours) to one month only. Avoid unlimited rollover, which creates unpredictable future workload spikes."}
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="logo">
+        <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav">
+        <a href="/">Home</a>
+        <a href="/pages/business-calculators/">Business</a>
+        <a href="/pages/financial-calculators/">Financial</a>
+        <a href="/pages/tax-calculators/">Tax</a>
+        <a href="/pages/freelancer-calculators/" aria-current="page">Freelancer</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav">
+      <a href="/">Home</a>
+      <a href="/pages/business-calculators/">Business Calculators</a>
+      <a href="/pages/financial-calculators/">Financial Calculators</a>
+      <a href="/pages/tax-calculators/">Tax Calculators</a>
+      <a href="/pages/freelancer-calculators/">Freelancer Calculators</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/pages/freelancer-calculators/">Freelancer Calculators</a></li>
+          <li><span aria-current="page">Retainer Pricing Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="calc-page-layout">
+          <div class="calc-page-main">
+            <h1>Retainer Pricing Calculator</h1>
+            <p class="subtitle" style="font-size:var(--text-lg);color:var(--color-gray-600);margin-bottom:var(--space-8);line-height:var(--leading-relaxed);">Retainer agreements are the most powerful tool for building predictable freelance income. This calculator helps you set the right retainer price, quantify the discount you can afford to offer, and show prospective clients their return on investment — turning the retainer conversation from a cost discussion into a value discussion.</p>
+
+            <div class="calc-container">
+              <div class="calc-header">
+                <h2>Retainer Pricing Calculator</h2>
+                <p>Price monthly retainers and build recurring revenue</p>
+              </div>
+              <div class="calc-body">
+                <form id="retainer-form" onsubmit="return false;">
+                  <div class="calc-grid calc-grid-2col">
+                    <div class="form-group">
+                      <label class="form-label" for="retainer-hours">Estimated Hours / Month</label>
+                      <input type="number" id="retainer-hours" class="form-input" placeholder="20" min="1" step="0.5" required>
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label" for="retainer-hourly-rate">Your Standard Hourly Rate</label>
+                      <div class="input-prefix">
+                        <span class="prefix">$</span>
+                        <input type="number" id="retainer-hourly-rate" class="form-input" placeholder="120" min="0" step="1" required>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="calc-grid calc-grid-2col">
+                    <div class="form-group">
+                      <label class="form-label" for="retainer-discount">Retainer Discount</label>
+                      <div class="input-suffix">
+                        <input type="number" id="retainer-discount" class="form-input" placeholder="15" min="0" max="50" step="1">
+                        <span class="suffix">%</span>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label" for="client-type">Client Type</label>
+                      <select id="client-type" class="form-input">
+                        <option value="tactical">Tactical (execution work)</option>
+                        <option value="strategic">Strategic (advisory/consulting)</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="value-delivered">Estimated Monthly Value Delivered to Client</label>
+                    <div class="input-prefix">
+                      <span class="prefix">$</span>
+                      <input type="number" id="value-delivered" class="form-input" placeholder="15000" min="0" step="100">
+                    </div>
+                    <span class="form-hint" style="display:block;margin-top:var(--space-1);">Revenue generated, costs saved, or business value created</span>
+                  </div>
+
+                  <div class="calc-actions">
+                    <button type="button" class="btn btn-calculate btn-full" onclick="calculateRetainer()">Calculate Retainer</button>
+                    <button type="button" class="btn btn-reset" onclick="resetRetainerForm()">Reset</button>
+                  </div>
+                </form>
+
+                <div id="results" class="calc-results hidden">
+                  <div class="result-primary">
+                    <div class="result-label">Monthly Retainer Price</div>
+                    <div class="result-value" id="result-retainer-price">$0</div>
+                  </div>
+                  <div class="result-grid result-grid-3">
+                    <div class="result-item">
+                      <div class="result-label">Full Rate Value</div>
+                      <div class="result-value" id="result-full-value">$0</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Discount Amount</div>
+                      <div class="result-value" id="result-discount-amt">$0</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Effective Hourly Rate</div>
+                      <div class="result-value" id="result-eff-hourly">$0/hr</div>
+                    </div>
+                  </div>
+                  <div class="result-grid result-grid-3">
+                    <div class="result-item">
+                      <div class="result-label">Annual Retainer Value</div>
+                      <div class="result-value" id="result-annual-value">$0</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Client ROI</div>
+                      <div class="result-value" id="result-client-roi">--</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Value-to-Cost Ratio</div>
+                      <div class="result-value" id="result-vcr">--</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="ad-slot ad-slot-leaderboard"></div>
+
+            <section class="content-section">
+              <h2>Retainer Pricing Formula</h2>
+              <div class="formula-box">
+                <div class="formula-label">Full Rate Value</div>
+                Full Value = Hours / Month × Hourly Rate
+              </div>
+              <div class="formula-box">
+                <div class="formula-label">Retainer Price (with discount)</div>
+                Retainer = Full Value × (1 - Discount %)
+              </div>
+              <div class="formula-box">
+                <div class="formula-label">Annual Retainer Value</div>
+                Annual = Monthly Retainer × 12
+              </div>
+              <div class="formula-box">
+                <div class="formula-label">Client ROI</div>
+                ROI = (Value Delivered - Retainer Cost) / Retainer Cost × 100
+              </div>
+            </section>
+
+            <section class="content-section">
+              <h2>How to Use This Calculator</h2>
+              <ol>
+                <li>Enter your <strong>estimated hours per month</strong> for the client engagement and your <strong>standard hourly rate</strong>.</li>
+                <li>Set a <strong>retainer discount percentage</strong> — the loyalty discount you offer for recurring guaranteed work (typically 10-20%).</li>
+                <li>Select whether this is a <strong>strategic</strong> (advisory) or <strong>tactical</strong> (execution) engagement.</li>
+                <li>Optionally enter the <strong>monthly value delivered</strong> to show the client their return on investment.</li>
+                <li>Click <strong>Calculate Retainer</strong> to see your pricing and the client's ROI.</li>
+              </ol>
+            </section>
+
+            <section class="content-section">
+              <h2>Example Scenario</h2>
+              <p>A freelance marketing strategist estimates 20 hours/month for a client at their $120/hr rate, offers a 15% retainer discount, and delivers an estimated $15,000/month in marketing value.</p>
+              <ul>
+                <li>Full Rate Value: 20 × $120 = <strong>$2,400</strong></li>
+                <li>Retainer Price: $2,400 × (1 - 0.15) = <strong>$2,040/month</strong></li>
+                <li>Discount Amount: <strong>$360/month</strong></li>
+                <li>Annual Retainer Value: $2,040 × 12 = <strong>$24,480</strong></li>
+                <li>Client ROI: ($15,000 - $2,040) / $2,040 = <strong>635%</strong></li>
+              </ul>
+            </section>
+
+            <section class="faq-section">
+              <h2>Frequently Asked Questions</h2>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  What discount should I offer on a monthly retainer?
+                  <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                </button>
+                <div class="faq-answer">
+                  <p>A retainer discount of 10-20% is typical. Offering above 25% erodes the income stability benefit. The discount reflects reduced admin overhead, priority scheduling, and guaranteed cash flow rather than just reduced hourly revenue.</p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  What is the difference between a strategic and tactical retainer?
+                  <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 011-1z"/></svg>
+                </button>
+                <div class="faq-answer">
+                  <p>Strategic retainers involve advisory work, consulting, or ongoing strategy direction. Tactical retainers cover recurring execution like content, code maintenance, or design. Strategic retainers typically command premium rates due to their higher business impact.</p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  How do I calculate ROI for a retainer client?
+                  <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 011-1z"/></svg>
+                </button>
+                <div class="faq-answer">
+                  <p>Divide the value delivered minus retainer cost by retainer cost. If your work drives $20,000 in client revenue for a $2,000 retainer, ROI is 900%. This framing makes retainers easier to justify and renew at increasing rates.</p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  Should I roll over unused retainer hours?
+                  <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 011-1z"/></svg>
+                </button>
+                <div class="faq-answer">
+                  <p>Most freelancers use a 'use it or lose it' policy to protect time and income predictability. If you do offer rollover, cap it at 25% of monthly hours with a one-month expiry. Avoid unlimited rollover which creates unpredictable workload spikes.</p>
+                </div>
+              </div>
+            </section>
+
+            <section class="related-calculators">
+              <h2>Related Calculators</h2>
+              <div class="grid grid-3">
+                <a href="/pages/freelancer-calculators/client-profitability-calculator/" class="card card-link">
+                  <h3>Client Profitability Calculator</h3>
+                  <p>Assess which clients deserve a retainer offer vs. project work.</p>
+                </a>
+                <a href="/pages/freelancer-calculators/project-pricing-calculator/" class="card card-link">
+                  <h3>Project Pricing Calculator</h3>
+                  <p>Build accurate quotes for one-off projects before proposing retainers.</p>
+                </a>
+                <a href="/pages/freelancer-calculators/freelance-income-stability-calculator/" class="card card-link">
+                  <h3>Income Stability Calculator</h3>
+                  <p>See how adding retainer clients improves your income variability score.</p>
+                </a>
+                <a href="/pages/freelancer-calculators/freelance-revenue-forecast-calculator/" class="card card-link">
+                  <h3>Revenue Forecast Calculator</h3>
+                  <p>Model how retainer revenue changes your 3 and 6 month forecast.</p>
+                </a>
+              </div>
+            </section>
+
+            <div class="disclaimer">
+              <strong>Disclaimer:</strong> This calculator provides pricing estimates for informational purposes only. Retainer rates vary significantly by industry, location, expertise level, and client size. Always validate pricing against current market rates in your specialty.
+            </div>
+          </div>
+
+          <aside class="calc-page-sidebar">
+            <div class="ad-slot ad-slot-rectangle"></div>
+            <div class="sidebar-card">
+              <h3>Freelancer Calculators</h3>
+              <a href="/pages/freelancer-calculators/freelance-tax-estimator/">Tax Estimator</a>
+              <a href="/pages/freelancer-calculators/freelance-income-stability-calculator/">Income Stability</a>
+              <a href="/pages/freelancer-calculators/project-pricing-calculator/">Project Pricing</a>
+              <a href="/pages/freelancer-calculators/client-profitability-calculator/">Client Profitability</a>
+              <a href="/pages/freelancer-calculators/freelance-break-even-calculator/">Break-Even Calculator</a>
+              <a href="/pages/freelancer-calculators/retainer-pricing-calculator/">Retainer Pricing</a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free online calculators for business, finance, tax, and investment decisions.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Calculators</h4>
+          <a href="/pages/business-calculators/">Business</a>
+          <a href="/pages/financial-calculators/">Financial</a>
+          <a href="/pages/tax-calculators/">Tax</a>
+          <a href="/pages/investment-calculators/">Investment</a>
+          <a href="/pages/freelancer-calculators/">Freelancer</a>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <a href="/about/">About</a>
+          <a href="/blog/">Blog</a>
+          <a href="/contact/">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="/privacy/">Privacy Policy</a>
+          <a href="/terms/">Terms of Service</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/privacy/">Privacy</a>
+          <a href="/terms/">Terms</a>
+          <a href="/contact/">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateRetainer() {
+      const hours = CalcWise.parseNumber(document.getElementById('retainer-hours').value);
+      const rate = CalcWise.parseNumber(document.getElementById('retainer-hourly-rate').value);
+      const discountPct = (CalcWise.parseNumber(document.getElementById('retainer-discount').value) || 0) / 100;
+      const clientType = document.getElementById('client-type').value;
+      const valueDelivered = CalcWise.parseNumber(document.getElementById('value-delivered').value) || 0;
+
+      if (hours <= 0 || rate <= 0) { alert('Please enter estimated hours and hourly rate.'); return; }
+
+      // Strategic clients get a slight premium suggestion (but we just note it)
+      const adjustedRate = clientType === 'strategic' ? rate * 1.1 : rate;
+      const fullValue = hours * adjustedRate;
+      const retainerPrice = fullValue * (1 - discountPct);
+      const discountAmt = fullValue - retainerPrice;
+      const effHourly = retainerPrice / hours;
+      const annualValue = retainerPrice * 12;
+
+      let roiText = '--';
+      let vcrText = '--';
+      if (valueDelivered > 0) {
+        const roi = ((valueDelivered - retainerPrice) / retainerPrice) * 100;
+        const vcr = valueDelivered / retainerPrice;
+        roiText = roi.toFixed(0) + '%';
+        vcrText = vcr.toFixed(1) + 'x';
+      }
+
+      CalcWise.setText('result-retainer-price', CalcWise.formatCurrency(retainerPrice) + '/month');
+      CalcWise.setText('result-full-value', CalcWise.formatCurrency(fullValue));
+      CalcWise.setText('result-discount-amt', CalcWise.formatCurrency(discountAmt));
+      CalcWise.setText('result-eff-hourly', CalcWise.formatCurrency(effHourly) + '/hr');
+      CalcWise.setText('result-annual-value', CalcWise.formatCurrency(annualValue));
+      CalcWise.setText('result-client-roi', roiText);
+      CalcWise.setText('result-vcr', vcrText);
+      CalcWise.showResults('results');
+    }
+
+    function resetRetainerForm() {
+      document.getElementById('retainer-form').reset();
+      CalcWise.hideResults('results');
+    }
+
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', !expanded);
+        btn.nextElementSibling.style.display = expanded ? 'none' : 'block';
+      });
+    });
+
+    const toggle = document.querySelector('.mobile-menu-toggle');
+    const mobileNav = document.querySelector('.mobile-nav');
+    if (toggle && mobileNav) {
+      toggle.addEventListener('click', () => {
+        const open = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', !open);
+        mobileNav.classList.toggle('open', !open);
+      });
+    }
+  </script>
+</body>
+</html>

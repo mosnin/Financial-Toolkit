@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Should You Freelance or Stay Employed? – Career Quiz | CalcWise</title>
+  <meta name="description" content="Compare the financial realities of freelancing versus salaried employment. 9-question quiz weighing taxes, benefits, risk, and income potential.">
+  <link rel="canonical" href="https://calcwise.io/quizzes/career-quizzes/should-you-freelance-or-stay-employed/">
+  <meta property="og:title" content="Should You Freelance or Stay Employed? – Career Quiz | CalcWise">
+  <meta property="og:description" content="9 questions to determine whether freelancing or employment is the right financial move.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcwise.io/quizzes/career-quizzes/should-you-freelance-or-stay-employed/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Should You Freelance or Stay Employed? – Career Quiz | CalcWise">
+  <meta name="twitter:description" content="9 questions to determine whether freelancing or employment is the right financial move.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+  <link rel="stylesheet" href="/css/quiz.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://calcwise.io/"},
+    {"@type":"ListItem","position":2,"name":"Quizzes","item":"https://calcwise.io/quizzes/"},
+    {"@type":"ListItem","position":3,"name":"Career Quizzes","item":"https://calcwise.io/quizzes/career-quizzes/"},
+    {"@type":"ListItem","position":4,"name":"Should You Freelance or Stay Employed?","item":"https://calcwise.io/quizzes/career-quizzes/should-you-freelance-or-stay-employed/"}
+  ]}
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/business-calculators/">Business</a>
+        <a href="/quizzes/" aria-current="page">Quizzes</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/business-calculators/">Business Calculators</a>
+      <a href="/quizzes/">Quizzes</a>
+      <a href="/about.html">About</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+  </header>
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/quizzes/">Quizzes</a></li>
+          <li><a href="/quizzes/career-quizzes/">Career Quizzes</a></li>
+          <li><span aria-current="page">Should You Freelance or Stay Employed?</span></li>
+        </ol>
+      </nav>
+      <div class="quiz-container">
+        <h1>Should You Freelance or Stay Employed?</h1>
+        <p>Freelancing promises autonomy and income upside — but it also means self-employment tax, no benefits, and the grind of finding clients. Employment offers stability and predictable income but limits your earnings ceiling. This quiz weighs your risk tolerance, client pipeline, financial runway, and current satisfaction to give you a clear, financially-grounded recommendation.</p>
+        <div style="margin:1.5rem 0;text-align:center;min-height:90px;background:var(--color-gray-100);border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--color-gray-400);font-size:0.85rem;">Advertisement</div>
+        <div id="quiz-area">
+          <div id="quiz-start">
+            <div class="quiz-question" style="text-align:center;">
+              <p style="font-size:1.1rem;color:var(--color-text-muted);margin-bottom:1.5rem;">9 questions &bull; About 5 minutes &bull; Instant results</p>
+              <button class="btn btn-primary btn-lg" onclick="startQuiz()">Start Quiz</button>
+            </div>
+          </div>
+          <div id="quiz-main" style="display:none;"></div>
+          <div id="quiz-results" style="display:none;"></div>
+        </div>
+        <section class="faq-section" aria-labelledby="faq-heading" style="margin-top:3rem;">
+          <h2 id="faq-heading">Frequently Asked Questions</h2>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false"><span>How much more do I need to charge as a freelancer vs. my salary?</span><svg class="faq-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M10 4v12M4 10h12"/></svg></button>
+            <div class="faq-answer"><p>As a freelancer you pay self-employment tax (15.3%), provide your own health insurance ($5,000–$15,000/year), and handle retirement savings, unpaid time, and business expenses. A freelancer typically needs to earn 35–50% more than an equivalent salary to net the same take-home. Use the freelance rate calculator to find your break-even rate.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false"><span>What is the biggest financial risk of freelancing?</span><svg class="faq-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M10 4v12M4 10h12"/></svg></button>
+            <div class="faq-answer"><p>The biggest financial risks are income gaps between clients, underpricing your services (very common), failing to set aside money for self-employment taxes (leading to a surprise bill), and underestimating healthcare costs. Proper rate-setting and a 30% tax savings rate address most of these proactively.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false"><span>Should I freelance part-time before going full-time?</span><svg class="faq-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M10 4v12M4 10h12"/></svg></button>
+            <div class="faq-answer"><p>Starting freelance work while still employed is strongly recommended. It lets you build a client base and recurring income without income risk. Once your side freelance income reliably replaces 50–75% of your employment take-home, you have meaningful validation that full-time freelancing is financially viable.</p></div>
+          </div>
+        </section>
+        <section style="margin-top:3rem;" aria-labelledby="related-heading">
+          <h2 id="related-heading">Related Career Quizzes</h2>
+          <div class="quiz-grid">
+            <a href="/quizzes/career-quizzes/can-you-afford-to-quit-your-job/" class="quiz-card">
+              <div class="quiz-card__badge">Career</div>
+              <h3>Can You Afford to Quit?</h3>
+              <p>Evaluate your financial runway before leaving employment.</p>
+              <span class="quiz-card__cta">Take quiz <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </a>
+            <a href="/quizzes/career-quizzes/what-remote-job-suits-you/" class="quiz-card">
+              <div class="quiz-card__badge">Career</div>
+              <h3>What Remote Job Suits You?</h3>
+              <p>Find the right remote work arrangement for your work style.</p>
+              <span class="quiz-card__cta">Take quiz <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </a>
+            <a href="/quizzes/career-quizzes/how-stable-is-your-income/" class="quiz-card">
+              <div class="quiz-card__badge">Career</div>
+              <h3>How Stable Is Your Income?</h3>
+              <p>Assess the security of your current employment before making a change.</p>
+              <span class="quiz-card__cta">Take quiz <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </a>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="#1B4D3E" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators and quizzes built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Career Quizzes</h4>
+          <a href="/quizzes/career-quizzes/what-remote-job-suits-you/">Remote Job Quiz</a>
+          <a href="/quizzes/career-quizzes/can-you-afford-to-quit-your-job/">Quit Your Job?</a>
+          <a href="/quizzes/career-quizzes/">View All</a>
+        </div>
+        <div class="footer-col">
+          <h4>Calculators</h4>
+          <a href="/business-calculators/freelance-rate-calculator/">Freelance Rate</a>
+          <a href="/business-calculators/contractor-vs-employee-calculator/">Contractor vs Employee</a>
+          <a href="/business-calculators/freelance-income-calculator/">Freelance Income</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about.html">About</a>
+          <a href="/privacy.html">Privacy Policy</a>
+          <a href="/terms.html">Terms of Use</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/privacy.html">Privacy</a>
+          <a href="/terms.html">Terms</a>
+          <a href="/disclaimer.html">Disclaimer</a>
+          <a href="/sitemap.xml">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    const questions = [
+      {
+        question: "How satisfied are you with your current job?",
+        options: ["Very satisfied — I'd only leave for something significantly better", "Somewhat satisfied — I'd consider the right opportunity", "Dissatisfied — I actively want to leave", "Very dissatisfied — I'm miserable and need out"],
+        correct: 0,
+        explanation: "Satisfaction affects the urgency of your decision. Starting freelance from a place of frustration leads to worse decisions than starting from a position of strength.",
+        weight: 1
+      },
+      {
+        question: "How comfortable are you with financial risk and income variability?",
+        options: ["Not comfortable — I need predictable income and stability", "Somewhat tolerant — I can handle modest variability", "Comfortable — I manage money well and can handle income swings", "Very comfortable — I thrive under variable income with high upside"],
+        correct: 3,
+        explanation: "Freelance income can vary 50–200% month to month. Risk tolerance is fundamental — not just financially, but psychologically.",
+        weight: 2
+      },
+      {
+        question: "How comfortable are you marketing yourself and finding clients?",
+        options: ["Not comfortable — self-promotion feels unnatural and difficult", "Somewhat — I could do it but it's not my strength", "Comfortable — I have networking and sales skills", "Very comfortable — I'm already building a client base"],
+        correct: 3,
+        explanation: "Client acquisition is the make-or-break skill for freelancers. Without it, income collapses regardless of technical skill quality.",
+        weight: 2
+      },
+      {
+        question: "Do you have an existing client pipeline or market for your services?",
+        options: ["No — I would start from zero with no existing contacts", "A few weak leads — some people might hire me", "Good potential — several warm contacts who would likely pay", "Strong pipeline — I already have paying clients or solid commitments"],
+        correct: 3,
+        explanation: "An existing client pipeline is the single biggest risk reducer in freelancing. Starting with revenue is exponentially safer than starting from zero.",
+        weight: 3
+      },
+      {
+        question: "How dependent are you on employer-provided benefits?",
+        options: ["Fully dependent — I rely on employer health insurance, 401k match, and benefits", "Mostly dependent — benefits are significant but I could arrange alternatives", "Somewhat — I could manage with ACA marketplace coverage", "Not dependent — I can self-fund all benefits or am covered otherwise"],
+        correct: 3,
+        explanation: "Benefits replacement is often the biggest hidden cost of freelancing. Health insurance alone can cost $500–$1,200/month for an individual.",
+        weight: 2
+      },
+      {
+        question: "How much financial runway (savings) do you currently have?",
+        options: ["Less than 3 months of expenses", "3–6 months of expenses", "6–12 months of expenses", "12+ months of expenses"],
+        correct: 3,
+        explanation: "Freelance transitions are safest with 6–12 months of savings. Less than 3 months creates severe pressure to accept any client at any rate.",
+        weight: 2
+      },
+      {
+        question: "How disciplined are you with your own time management and productivity?",
+        options: ["Poor — I need structure and accountability to perform", "Moderate — I can self-manage with effort", "Good — I'm consistently productive without external pressure", "Excellent — I'm highly productive and self-motivated"],
+        correct: 3,
+        explanation: "Self-discipline is essential in freelancing — there's no manager, no office rhythm, and no guardrails. Without it, billable hours collapse.",
+        weight: 2
+      },
+      {
+        question: "How comfortable are you with income that varies significantly from month to month?",
+        options: ["Not at all — monthly income swings cause significant anxiety", "Somewhat uncomfortable — I prefer predictability", "Fine — I budget for variability and maintain a buffer", "Completely fine — I actually prefer performance-based income"],
+        correct: 3,
+        explanation: "Income variability tolerance is separate from financial risk tolerance. Psychologically comfortable freelancers make better business decisions under pressure.",
+        weight: 1
+      },
+      {
+        question: "How in-demand are your skills in the freelance marketplace?",
+        options: ["Not clear — I'm not sure if there's a freelance market for my skills", "Limited demand — niche skills with few buyers", "Good demand — multiple types of clients would hire me", "High demand — my skills are consistently sought after and short in supply"],
+        correct: 3,
+        explanation: "Skills demand determines how fast you find clients and how much you can charge. High-demand skills translate directly to higher and more stable freelance income.",
+        weight: 2
+      }
+    ];
+
+    let currentQ = 0, score = 0, answers = [];
+
+    function startQuiz() {
+      document.getElementById('quiz-start').style.display = 'none';
+      document.getElementById('quiz-main').style.display = 'block';
+      renderQuestion();
+    }
+
+    function renderQuestion() {
+      const q = questions[currentQ];
+      const pct = Math.round((currentQ / questions.length) * 100);
+      document.getElementById('quiz-main').innerHTML = `
+        <div class="quiz-progress">
+          <div class="quiz-progress__label"><span>Question ${currentQ + 1} of ${questions.length}</span><span>${pct}% complete</span></div>
+          <div class="quiz-progress__bar"><div class="quiz-progress__fill" style="width:${pct}%"></div></div>
+        </div>
+        <div class="quiz-question">
+          <div class="quiz-question__number">Question ${currentQ + 1}</div>
+          <div class="quiz-question__text">${q.question}</div>
+          <ul class="quiz-options">
+            ${q.options.map((opt, i) => `<li><button class="quiz-option" onclick="selectAnswer(${i})"><span class="quiz-option__indicator"></span><span>${opt}</span></button></li>`).join('')}
+          </ul>
+          <div id="explanation" style="display:none;" class="quiz-explanation"></div>
+        </div>
+        <div class="quiz-nav">
+          <span style="color:var(--color-text-muted);font-size:0.875rem;">${currentQ + 1} / ${questions.length}</span>
+          <button class="btn btn-primary" id="next-btn" style="display:none;" onclick="nextQuestion()">${currentQ + 1 === questions.length ? 'See Results' : 'Next Question'}</button>
+        </div>`;
+    }
+
+    function selectAnswer(idx) {
+      if (document.querySelector('.quiz-option.selected')) return;
+      const q = questions[currentQ];
+      answers.push(idx);
+      score += idx * q.weight;
+      document.querySelectorAll('.quiz-option').forEach((btn, i) => {
+        btn.disabled = true;
+        if (i === idx) btn.classList.add('selected');
+        if (i === q.correct) btn.classList.add('correct');
+        if (i === idx && i !== q.correct) btn.classList.add('incorrect');
+      });
+      const expEl = document.getElementById('explanation');
+      expEl.style.display = 'block';
+      expEl.className = 'quiz-explanation ' + (idx === q.correct ? 'quiz-explanation--correct' : 'quiz-explanation--incorrect');
+      expEl.textContent = q.explanation;
+      document.getElementById('next-btn').style.display = 'inline-flex';
+    }
+
+    function nextQuestion() {
+      currentQ++;
+      if (currentQ < questions.length) renderQuestion(); else showResults();
+    }
+
+    function showResults() {
+      document.getElementById('quiz-main').style.display = 'none';
+      const resultsEl = document.getElementById('quiz-results');
+      resultsEl.style.display = 'block';
+      const maxScore = questions.reduce((s, q) => s + (q.options.length - 1) * q.weight, 0);
+      const pct = score / maxScore;
+      let tier, tierClass, desc, recs;
+      if (pct <= 0.25) {
+        tier = 'Stay Employed'; tierClass = 'result-score--high';
+        desc = 'Your current profile — risk tolerance, financial cushion, client pipeline, and benefits dependency — suggests staying employed is the financially safer and likely better choice for now.';
+        recs = ['Focus on maximizing compensation in your current role via negotiation', 'Use the raise percentage calculator to quantify your next salary ask', 'Explore side projects to test freelance demand without financial risk', 'Build your emergency fund to create future optionality'];
+      } else if (pct <= 0.5) {
+        tier = 'Freelance on the Side'; tierClass = '';
+        desc = 'You have real freelance potential but aren\'t yet set up to go all-in safely. Starting a side practice while keeping your job is the financially rational move right now.';
+        recs = ['Start freelancing 5–10 hours per week to validate client demand', 'Calculate your minimum viable freelance rate using the freelance rate calculator', 'Set a savings target and timeline for a potential full-time freelance transition', 'Track freelance income vs. employment income monthly to see the trajectory'];
+      } else if (pct <= 0.75) {
+        tier = 'Transition to Freelance'; tierClass = 'result-score--mid';
+        desc = 'You have strong signals — client demand, skills, and risk tolerance — that support a transition to freelancing. A structured 6–12 month plan to make the shift is realistic and financially sound.';
+        recs = ['Set a hard date for your freelance transition and work backward to financial milestones', 'Calculate your freelance rate to replace your full employment income including benefits', 'Use the contractor vs. employee calculator to understand your full net income picture', 'Build your client base to 50% replacement income before quitting'];
+      } else {
+        tier = 'Go Full Freelance Now'; tierClass = 'result-score--high';
+        desc = 'Your risk tolerance, client pipeline, financial runway, and skills demand all point strongly toward going full-time freelance. You have the foundations in place to make this work financially.';
+        recs = ['Calculate your freelance rate and formalize your service offerings before launch', 'Ensure your emergency fund covers 6+ months of expenses for the transition period', 'Set up quarterly tax payments immediately to avoid a large tax bill', 'Use the freelance income calculator to model your first-year income scenario'];
+      }
+      resultsEl.innerHTML = `
+        <div class="quiz-result">
+          <div class="result-score ${tierClass}"><span class="result-score__number">${Math.round(pct*100)}%</span><span class="result-score__label">Score</span></div>
+          <div class="result-category">${tier}</div>
+          <h2>Your result: ${tier}</h2>
+          <p>${desc}</p>
+          <div class="result-recommendations"><h3>Recommended Next Steps</h3><ul>${recs.map(r=>`<li>${r}</li>`).join('')}</ul></div>
+          <div class="result-actions">
+            <a href="/business-calculators/freelance-rate-calculator/" class="btn btn-primary">Freelance Rate Calculator</a>
+            <a href="/business-calculators/contractor-vs-employee-calculator/" class="btn btn-secondary">Contractor vs Employee</a>
+            <a href="/business-calculators/freelance-income-calculator/" class="btn btn-secondary">Freelance Income Calculator</a>
+          </div>
+          <div style="margin-top:1.5rem;"><button class="btn btn-ghost" onclick="restartQuiz()">Retake Quiz</button></div>
+        </div>`;
+    }
+
+    function restartQuiz() {
+      currentQ = 0; score = 0; answers = [];
+      document.getElementById('quiz-results').style.display = 'none';
+      document.getElementById('quiz-main').style.display = 'block';
+      renderQuestion();
+    }
+
+    document.querySelector('.mobile-menu-toggle').addEventListener('click', function() {
+      const nav = document.querySelector('.mobile-nav');
+      const isOpen = nav.classList.toggle('is-open');
+      this.setAttribute('aria-expanded', isOpen);
+      this.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+    });
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', function() {
+        const item = this.closest('.faq-item');
+        const isOpen = item.classList.toggle('is-open');
+        this.setAttribute('aria-expanded', isOpen);
+      });
+    });
+  </script>
+</body>
+</html>

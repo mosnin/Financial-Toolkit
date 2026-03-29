@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Lifetime Value (LTV) Calculator - CalcWise</title>
+  <meta name="description" content="Calculate customer lifetime value (LTV) and LTV:CAC ratio. Enter average purchase value, frequency, lifespan, and profit margin to estimate the total value of a customer.">
+  <link rel="canonical" href="https://calcwise.io/business-calculators/ltv-calculator/">
+
+  <meta property="og:title" content="Customer Lifetime Value Calculator - CalcWise">
+  <meta property="og:description" content="Calculate customer lifetime value (LTV) and LTV:CAC ratio for your business.">
+  <meta property="og:url" content="https://calcwise.io/business-calculators/ltv-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Customer Lifetime Value Calculator - CalcWise">
+  <meta name="twitter:description" content="Calculate customer lifetime value (LTV) and LTV:CAC ratio for your business.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Business Calculators", "item": "https://calcwise.io/business-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "LTV Calculator", "item": "https://calcwise.io/business-calculators/ltv-calculator/" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is Customer Lifetime Value (LTV)?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Customer Lifetime Value (LTV or CLV) is the total revenue or profit a business can expect from a single customer account over the entire duration of the relationship. It helps businesses understand how much they can afford to spend to acquire customers." }
+      },
+      {
+        "@type": "Question",
+        "name": "How is LTV calculated?",
+        "acceptedAnswer": { "@type": "Answer", "text": "A common formula is: LTV = Average Purchase Value x Purchase Frequency per Year x Customer Lifespan in Years x Profit Margin %. This gives the total profit expected from one customer over their lifetime." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is a good LTV:CAC ratio?",
+        "acceptedAnswer": { "@type": "Answer", "text": "A ratio of 3:1 is generally considered healthy, meaning you earn $3 for every $1 spent on acquisition. A ratio below 1:1 means you are losing money on each customer. A ratio above 5:1 may indicate you are under-investing in growth." }
+      },
+      {
+        "@type": "Question",
+        "name": "Why is LTV important?",
+        "acceptedAnswer": { "@type": "Answer", "text": "LTV helps determine how much to invest in customer acquisition, informs marketing budget allocation, guides customer retention strategies, and is a key metric for investors evaluating a business." }
+      },
+      {
+        "@type": "Question",
+        "name": "How can I increase LTV?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Increase purchase frequency through engagement and loyalty programs, raise average order value through upselling and cross-selling, extend customer lifespan through excellent support and retention efforts, and improve profit margins." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/business-calculators/" aria-current="page">Business</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/business-calculators/" aria-current="page">Business Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container page-content">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/business-calculators/">Business Calculators</a></li>
+          <li><span aria-current="page">LTV Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="calc-page-layout">
+        <div class="calc-page-main">
+          <h1>Customer Lifetime Value (LTV) Calculator</h1>
+          <p class="mt-4 mb-8" style="font-size:var(--text-lg); color:var(--color-gray-600); max-width:700px; line-height:var(--leading-relaxed);">Estimate the total value a customer brings to your business over their entire relationship. Enter purchase data, customer lifespan, and profit margin to calculate LTV. Optionally enter your CAC to see the LTV:CAC ratio.</p>
+
+          <div class="calc-container">
+            <div class="calc-header">
+              <h2>Calculate Customer Lifetime Value</h2>
+              <p>Enter your customer and purchase data</p>
+            </div>
+            <div class="calc-body">
+              <form id="ltvForm" novalidate>
+                <div class="form-group">
+                  <label class="form-label" for="avgPurchaseValue">Average Purchase Value <span class="form-hint">Revenue per transaction</span></label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="avgPurchaseValue" name="avgPurchaseValue" class="form-input" placeholder="50" min="0" step="0.01" required>
+                  </div>
+                  <span class="form-error">Please enter a valid purchase value.</span>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="purchaseFrequency">Purchase Frequency Per Year <span class="form-hint">Times a customer buys per year</span></label>
+                  <input type="number" id="purchaseFrequency" name="purchaseFrequency" class="form-input" placeholder="12" min="0" step="0.1" required>
+                  <span class="form-error">Please enter a valid frequency.</span>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="customerLifespan">Customer Lifespan (Years) <span class="form-hint">Average retention period</span></label>
+                  <input type="number" id="customerLifespan" name="customerLifespan" class="form-input" placeholder="3" min="0" step="0.1" required>
+                  <span class="form-error">Please enter a valid lifespan.</span>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="profitMargin">Profit Margin % <span class="form-hint">Gross or net margin</span></label>
+                  <div class="input-suffix">
+                    <input type="number" id="profitMargin" name="profitMargin" class="form-input" placeholder="30" min="0" max="100" step="0.1" required>
+                    <span class="suffix">%</span>
+                  </div>
+                  <span class="form-error">Please enter a valid margin.</span>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="cacInput">Customer Acquisition Cost (Optional) <span class="form-hint">For LTV:CAC ratio</span></label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="cacInput" name="cacInput" class="form-input" placeholder="400" min="0" step="0.01">
+                  </div>
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calculateLTV()">Calculate LTV</button>
+                  <button type="button" class="btn btn-reset" onclick="resetForm()">Reset</button>
+                </div>
+              </form>
+
+              <div id="results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">Customer Lifetime Value</div>
+                  <div class="result-value" id="resultLTV">$0</div>
+                </div>
+                <div class="result-grid result-grid-4">
+                  <div class="result-item">
+                    <div class="result-label">Annual Revenue</div>
+                    <div class="result-value" id="resultAnnualRev">$0</div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Lifetime Revenue</div>
+                    <div class="result-value" id="resultLifetimeRev">$0</div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Lifetime Profit</div>
+                    <div class="result-value" id="resultLifetimeProfit">$0</div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">LTV:CAC Ratio</div>
+                    <div class="result-value" id="resultRatio">--</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="disclaimer">
+            <strong>Disclaimer:</strong> This calculator provides simplified estimates. Actual LTV depends on customer behavior, churn rates, discount rates, and evolving business conditions. Consult a financial professional for detailed customer value analysis.
+          </div>
+
+          <div class="ad-slot ad-slot-leaderboard"></div>
+
+          <section class="content-section">
+            <h2>LTV Formulas</h2>
+            <div class="formula-box">
+              <div class="formula-label">Customer Lifetime Value</div>
+              LTV = Avg Purchase Value x Frequency/Year x Lifespan (Years) x Profit Margin %
+            </div>
+            <div class="formula-box">
+              <div class="formula-label">Annual Customer Revenue</div>
+              Annual Revenue = Avg Purchase Value x Purchase Frequency Per Year
+            </div>
+            <div class="formula-box">
+              <div class="formula-label">LTV:CAC Ratio</div>
+              LTV:CAC Ratio = Customer Lifetime Value / Customer Acquisition Cost
+            </div>
+          </section>
+
+          <section class="content-section">
+            <h2>How to Use This Calculator</h2>
+            <ol>
+              <li><strong>Enter the average purchase value</strong> -- how much a customer spends per transaction on average.</li>
+              <li><strong>Enter the purchase frequency</strong> -- how many times a customer buys from you per year.</li>
+              <li><strong>Enter the customer lifespan</strong> -- the average number of years a customer remains active.</li>
+              <li><strong>Enter your profit margin</strong> -- the percentage of revenue that is profit (gross or net, depending on your preference).</li>
+              <li><strong>Optionally enter your CAC</strong> -- to calculate the LTV:CAC ratio and evaluate acquisition efficiency.</li>
+              <li><strong>Click "Calculate LTV"</strong> to see the full breakdown.</li>
+            </ol>
+          </section>
+
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>An e-commerce business has these averages: customers spend <strong>$50 per order</strong>, purchase <strong>12 times per year</strong>, stay active for <strong>3 years</strong>, and the profit margin is <strong>30%</strong>. CAC is <strong>$400</strong>.</p>
+            <ul>
+              <li><strong>Annual Revenue Per Customer:</strong> $50 x 12 = $600</li>
+              <li><strong>Lifetime Revenue:</strong> $600 x 3 = $1,800</li>
+              <li><strong>LTV (Profit):</strong> $1,800 x 0.30 = $540</li>
+              <li><strong>LTV:CAC Ratio:</strong> $540 / $400 = 1.35:1</li>
+            </ul>
+            <p>A ratio of 1.35:1 is below the 3:1 benchmark, suggesting this business needs to either reduce CAC, increase purchase frequency, extend customer lifespan, or improve margins to be sustainable.</p>
+          </section>
+
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">What is Customer Lifetime Value (LTV)?<svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg></button>
+              <div class="faq-answer"><p>Customer Lifetime Value (LTV or CLV) is the total revenue or profit a business can expect from a single customer account over the entire duration of the relationship. It helps businesses understand how much they can afford to spend to acquire customers.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">How is LTV calculated?<svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg></button>
+              <div class="faq-answer"><p>A common formula is: LTV = Average Purchase Value x Purchase Frequency per Year x Customer Lifespan in Years x Profit Margin %. This gives the total profit expected from one customer over their lifetime.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">What is a good LTV:CAC ratio?<svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg></button>
+              <div class="faq-answer"><p>A ratio of 3:1 is generally considered healthy, meaning you earn $3 for every $1 spent on acquisition. A ratio below 1:1 means you are losing money on each customer. A ratio above 5:1 may indicate you are under-investing in growth.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">Why is LTV important?<svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg></button>
+              <div class="faq-answer"><p>LTV helps determine how much to invest in customer acquisition, informs marketing budget allocation, guides customer retention strategies, and is a key metric for investors evaluating a business.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">How can I increase LTV?<svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg></button>
+              <div class="faq-answer"><p>Increase purchase frequency through engagement and loyalty programs, raise average order value through upselling and cross-selling, extend customer lifespan through excellent support and retention efforts, and improve profit margins.</p></div>
+            </div>
+          </section>
+
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/business-calculators/cac-calculator/" class="card card-link"><h3>CAC Calculator</h3><p>Calculate your customer acquisition cost.</p></a>
+              <a href="/business-calculators/roi-calculator/" class="card card-link"><h3>ROI Calculator</h3><p>Calculate return on investment and annualized ROI.</p></a>
+              <a href="/business-calculators/profit-margin-calculator/" class="card card-link"><h3>Profit Margin Calculator</h3><p>Calculate gross profit and margin.</p></a>
+              <a href="/business-calculators/burn-rate-calculator/" class="card card-link"><h3>Burn Rate Calculator</h3><p>Calculate startup burn rate and runway.</p></a>
+              <a href="/business-calculators/break-even-calculator/" class="card card-link"><h3>Break-Even Calculator</h3><p>Find how many units to sell to cover costs.</p></a>
+            </div>
+          </section>
+        </div>
+
+        <aside class="calc-page-sidebar">
+          <div class="sidebar-card">
+            <h3>Business Calculators</h3>
+            <a href="/business-calculators/profit-margin-calculator/">Profit Margin</a>
+            <a href="/business-calculators/markup-calculator/">Markup</a>
+            <a href="/business-calculators/break-even-calculator/">Break-Even</a>
+            <a href="/business-calculators/roi-calculator/">ROI</a>
+            <a href="/business-calculators/burn-rate-calculator/">Burn Rate</a>
+            <a href="/business-calculators/cac-calculator/">Customer Acquisition Cost</a>
+            <a href="/business-calculators/ltv-calculator/">Customer Lifetime Value</a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col"><h4>Real Estate</h4><a href="/real-estate-calculators/">All Real Estate</a></div>
+        <div class="footer-col"><h4>Finance</h4><a href="/finance-calculators/">All Finance</a></div>
+        <div class="footer-col"><h4>Business</h4><a href="/business-calculators/">All Business</a></div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/about.html">About</a>
+          <a href="/contact.html">Contact</a>
+          <a href="/privacy.html">Privacy</a>
+          <a href="/terms.html">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateLTV() {
+      if (!CalcWise.validateForm('ltvForm')) return;
+
+      const avgPurchase = CalcWise.parseNumber(document.getElementById('avgPurchaseValue').value);
+      const frequency = CalcWise.parseNumber(document.getElementById('purchaseFrequency').value);
+      const lifespan = CalcWise.parseNumber(document.getElementById('customerLifespan').value);
+      const margin = CalcWise.parseNumber(document.getElementById('profitMargin').value);
+      const cac = CalcWise.parseNumber(document.getElementById('cacInput').value);
+
+      const annualRevenue = avgPurchase * frequency;
+      const lifetimeRevenue = annualRevenue * lifespan;
+      const ltv = lifetimeRevenue * (margin / 100);
+
+      let ratioText = '--';
+      if (cac > 0) {
+        const ratio = ltv / cac;
+        ratioText = ratio.toFixed(2) + ':1';
+      }
+
+      CalcWise.setText('resultLTV', CalcWise.formatCurrency(ltv));
+      CalcWise.setText('resultAnnualRev', CalcWise.formatCurrency(annualRevenue));
+      CalcWise.setText('resultLifetimeRev', CalcWise.formatCurrency(lifetimeRevenue));
+      CalcWise.setText('resultLifetimeProfit', CalcWise.formatCurrency(ltv));
+      CalcWise.setText('resultRatio', ratioText);
+      CalcWise.showResults('results');
+    }
+
+    function resetForm() {
+      document.getElementById('ltvForm').reset();
+      CalcWise.hideResults('results');
+    }
+  </script>
+</body>
+</html>

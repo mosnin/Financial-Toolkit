@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Estate Commission Calculator - Agent Commission Split | CalcWise</title>
+    <meta name="description" content="Calculate real estate agent commissions, brokerage splits, and seller net proceeds. Enter sale price, commission rate, and split percentage.">
+    <link rel="canonical" href="https://calcwise.com/real-estate-calculators/commission-calculator/">
+    <meta property="og:title" content="Real Estate Commission Calculator | CalcWise">
+    <meta property="og:description" content="Calculate real estate commissions, agent/brokerage splits, and seller net proceeds.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://calcwise.com/real-estate-calculators/commission-calculator/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Real Estate Commission Calculator | CalcWise">
+    <meta name="twitter:description" content="Calculate agent commissions, splits, and seller net proceeds.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/design-system.css">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.com/"},
+            {"@type": "ListItem", "position": 2, "name": "Real Estate Calculators", "item": "https://calcwise.com/real-estate-calculators/"},
+            {"@type": "ListItem", "position": 3, "name": "Commission Calculator"}
+        ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {"@type": "Question", "name": "What is the typical real estate commission rate?", "acceptedAnswer": {"@type": "Answer", "text": "The total commission rate has traditionally been 5-6% of the sale price, split between the listing and buyer's agents. However, rates are negotiable and have been trending lower in some markets, especially following recent industry changes."}},
+            {"@type": "Question", "name": "How is commission split between agent and brokerage?", "acceptedAnswer": {"@type": "Answer", "text": "Commission splits vary widely. New agents may start at 50/50 or 60/40 splits, while experienced agents often negotiate 70/30 or 80/20 splits. Some brokerages offer 100% commission models where agents pay a flat monthly fee instead."}},
+            {"@type": "Question", "name": "Who pays the real estate commission?", "acceptedAnswer": {"@type": "Answer", "text": "Traditionally, the seller pays the total commission, which is then split between the listing and buyer's agents. However, recent industry changes mean buyer agent compensation is increasingly negotiated separately."}},
+            {"@type": "Question", "name": "Are real estate commissions negotiable?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, commissions are always negotiable. Factors that may influence negotiation include the property price, local market conditions, the agent's experience, and the scope of services provided. Higher-value properties sometimes have lower percentage rates."}},
+            {"@type": "Question", "name": "How do I calculate my net proceeds from a home sale?", "acceptedAnswer": {"@type": "Answer", "text": "Net proceeds = Sale Price - Commission - Closing Costs - Remaining Mortgage Balance. This calculator shows proceeds after commission; you would also need to subtract closing costs and your mortgage payoff amount for the full picture."}}
+        ]
+    }
+    </script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="/" class="logo">
+                <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+                CalcWise
+            </a>
+            <nav class="main-nav">
+                <a href="/real-estate-calculators/">Real Estate</a>
+                <a href="/finance-calculators/">Finance</a>
+                <a href="/business-calculators/">Business</a>
+                <a href="/tax-calculators/">Tax</a>
+            </nav>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+            </button>
+        </div>
+        <nav class="mobile-nav">
+            <a href="/real-estate-calculators/">Real Estate Calculators</a>
+            <a href="/finance-calculators/">Finance Calculators</a>
+            <a href="/business-calculators/">Business Calculators</a>
+            <a href="/tax-calculators/">Tax Calculators</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <nav class="breadcrumbs" aria-label="Breadcrumb">
+                <ol>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/real-estate-calculators/">Real Estate Calculators</a></li>
+                    <li><span aria-current="page">Commission Calculator</span></li>
+                </ol>
+            </nav>
+
+            <div class="page-content">
+                <div class="calc-page-layout">
+                    <div class="calc-page-main">
+                        <h1>Real Estate Commission Calculator</h1>
+                        <p class="subtitle" style="color: var(--color-gray-600); font-size: var(--text-lg); line-height: var(--leading-relaxed); margin-bottom: var(--space-8);">
+                            Calculate real estate agent commissions and see how they are split between the agent and brokerage. Also see the seller's net proceeds after commission.
+                        </p>
+
+                        <div class="calc-container">
+                            <div class="calc-header">
+                                <h2>Commission Calculator</h2>
+                                <p>Enter sale details to calculate commission and splits</p>
+                            </div>
+                            <div class="calc-body">
+                                <form id="commission-form">
+                                    <div class="form-group">
+                                        <label class="form-label" for="sale-price">Sale Price</label>
+                                        <div class="input-prefix">
+                                            <span class="prefix">$</span>
+                                            <input type="number" id="sale-price" name="salePrice" class="form-input" placeholder="450,000" min="1" step="1000" required>
+                                        </div>
+                                    </div>
+                                    <div class="calc-grid calc-grid-2col">
+                                        <div class="form-group">
+                                            <label class="form-label" for="commission-rate">Commission Rate</label>
+                                            <div class="input-suffix">
+                                                <input type="number" id="commission-rate" name="commissionRate" class="form-input" placeholder="6" min="0.1" max="15" step="0.1" required>
+                                                <span class="suffix">%</span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label" for="agent-split">Agent Split (of their side)</label>
+                                            <div class="input-suffix">
+                                                <input type="number" id="agent-split" name="agentSplit" class="form-input" placeholder="70" min="0" max="100" step="5" required>
+                                                <span class="suffix">%</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="calc-actions">
+                                        <button type="button" class="btn btn-calculate btn-full" onclick="calculateCommission()">Calculate Commission</button>
+                                        <button type="reset" class="btn btn-reset">Reset</button>
+                                    </div>
+                                </form>
+
+                                <div id="results" class="calc-results hidden">
+                                    <div class="result-primary">
+                                        <div class="result-label">Total Commission</div>
+                                        <div class="result-value" id="result-total-commission">$0</div>
+                                    </div>
+                                    <div class="result-grid result-grid-3">
+                                        <div class="result-item">
+                                            <div class="result-label">Agent Share</div>
+                                            <div class="result-value" id="result-agent-share">$0</div>
+                                        </div>
+                                        <div class="result-item">
+                                            <div class="result-label">Brokerage Share</div>
+                                            <div class="result-value" id="result-brokerage-share">$0</div>
+                                        </div>
+                                        <div class="result-item">
+                                            <div class="result-label">Seller Net Proceeds</div>
+                                            <div class="result-value" id="result-seller-net">$0</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="ad-slot ad-slot-leaderboard"></div>
+
+                        <section class="content-section">
+                            <h2>Commission Formulas</h2>
+                            <div class="formula-box">
+                                <div class="formula-label">Real Estate Commission</div>
+                                Total Commission = Sale Price x (Commission Rate / 100)
+Agent Share = Total Commission x (Agent Split / 100)
+Brokerage Share = Total Commission - Agent Share
+Seller Net Proceeds = Sale Price - Total Commission
+                            </div>
+                            <p>The total commission is calculated as a percentage of the sale price. This is then divided between the agent and their brokerage according to their agreed-upon split.</p>
+                            <p>Note: In a typical transaction, the total commission is split between the listing side and buyer side first (usually 50/50), then each side is further split between agent and brokerage. This calculator shows the split for one side.</p>
+                        </section>
+
+                        <section class="content-section">
+                            <h2>How to Use This Calculator</h2>
+                            <ol>
+                                <li><strong>Enter the sale price</strong> -- the agreed-upon selling price of the property.</li>
+                                <li><strong>Enter the commission rate</strong> -- the total percentage commission (typically 5-6%).</li>
+                                <li><strong>Enter the agent split</strong> -- the percentage the agent keeps of their side of the commission (e.g., 70% in a 70/30 split).</li>
+                                <li><strong>Click "Calculate Commission"</strong> to see the breakdown.</li>
+                            </ol>
+                        </section>
+
+                        <section class="content-section">
+                            <h2>Example Scenario</h2>
+                            <h3>$450,000 Home Sale with 6% Commission</h3>
+                            <p>Sale price: $450,000. Commission rate: 6%. Agent/brokerage split: 70/30.</p>
+                            <p>Total commission: $450,000 x 0.06 = <strong>$27,000</strong>.</p>
+                            <p>Agent share: $27,000 x 0.70 = <strong>$18,900</strong>. Brokerage share: $27,000 x 0.30 = <strong>$8,100</strong>.</p>
+                            <p>Seller net proceeds (before other closing costs): $450,000 - $27,000 = <strong>$423,000</strong>.</p>
+                        </section>
+
+                        <section class="faq-section">
+                            <h2>Frequently Asked Questions</h2>
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">What is the typical real estate commission rate?<svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg></button>
+                                <div class="faq-answer"><p>The total commission rate has traditionally been 5-6% of the sale price, split between the listing and buyer's agents. However, rates are negotiable and have been trending lower in some markets, especially following recent industry changes.</p></div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">How is commission split between agent and brokerage?<svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg></button>
+                                <div class="faq-answer"><p>Commission splits vary widely. New agents may start at 50/50 or 60/40 splits, while experienced agents often negotiate 70/30 or 80/20 splits. Some brokerages offer 100% commission models where agents pay a flat monthly fee instead.</p></div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">Who pays the real estate commission?<svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg></button>
+                                <div class="faq-answer"><p>Traditionally, the seller pays the total commission, which is then split between the listing and buyer's agents. However, recent industry changes mean buyer agent compensation is increasingly negotiated separately.</p></div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">Are real estate commissions negotiable?<svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg></button>
+                                <div class="faq-answer"><p>Yes, commissions are always negotiable. Factors that may influence negotiation include the property price, local market conditions, the agent's experience, and the scope of services provided. Higher-value properties sometimes have lower percentage rates.</p></div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">How do I calculate my net proceeds from a home sale?<svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg></button>
+                                <div class="faq-answer"><p>Net proceeds = Sale Price - Commission - Closing Costs - Remaining Mortgage Balance. This calculator shows proceeds after commission; you would also need to subtract closing costs and your mortgage payoff amount for the full picture.</p></div>
+                            </div>
+                        </section>
+
+                        <section class="related-calculators">
+                            <h2>Related Calculators</h2>
+                            <div class="grid grid-3">
+                                <a href="/real-estate-calculators/house-flip-calculator/" class="card card-link"><div class="card-icon">$</div><h3>House Flip Calculator</h3><p>Calculate fix-and-flip profits and ROI.</p></a>
+                                <a href="/real-estate-calculators/amortization-calculator/" class="card card-link"><div class="card-icon">T</div><h3>Amortization Calculator</h3><p>Generate a complete loan amortization schedule.</p></a>
+                                <a href="/real-estate-calculators/cap-rate-calculator/" class="card card-link"><div class="card-icon">%</div><h3>Cap Rate Calculator</h3><p>Calculate capitalization rates for investment properties.</p></a>
+                                <a href="/real-estate-calculators/rental-property-roi-calculator/" class="card card-link"><div class="card-icon">%</div><h3>Rental Property ROI</h3><p>Calculate return on investment for rental properties.</p></a>
+                            </div>
+                        </section>
+
+                        <div class="disclaimer">
+                            <strong>Disclaimer:</strong> This calculator is for informational and educational purposes only. Commission rates and splits vary by market, brokerage, and individual agreement. Consult your real estate agent or broker for specific commission details.
+                        </div>
+                        <div class="ad-slot ad-slot-leaderboard"></div>
+                    </div>
+
+                    <aside class="calc-page-sidebar">
+                        <div class="sidebar-card">
+                            <h3>Real Estate Tools</h3>
+                            <a href="/real-estate-calculators/amortization-calculator/">Amortization Calculator</a>
+                            <a href="/real-estate-calculators/cap-rate-calculator/">Cap Rate Calculator</a>
+                            <a href="/real-estate-calculators/rental-cash-flow-calculator/">Rental Cash Flow Calculator</a>
+                            <a href="/real-estate-calculators/rental-property-roi-calculator/">Rental Property ROI</a>
+                            <a href="/real-estate-calculators/airbnb-income-calculator/">Airbnb Income Calculator</a>
+                            <a href="/real-estate-calculators/house-flip-calculator/">House Flip Calculator</a>
+                        </div>
+                        <div class="ad-slot ad-slot-rectangle"></div>
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="/" class="logo">
+                        <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+                        CalcWise
+                    </a>
+                    <p>Free, accurate financial calculators for everyone. Make smarter money decisions with CalcWise.</p>
+                </div>
+                <div class="footer-col"><h4>Real Estate</h4><a href="/real-estate-calculators/amortization-calculator/">Amortization</a><a href="/real-estate-calculators/cap-rate-calculator/">Cap Rate</a><a href="/real-estate-calculators/rental-cash-flow-calculator/">Rental Cash Flow</a><a href="/real-estate-calculators/commission-calculator/">Commission</a></div>
+                <div class="footer-col"><h4>Finance</h4><a href="/finance-calculators/loan-calculator/">Loan Calculator</a><a href="/finance-calculators/compound-interest-calculator/">Compound Interest</a><a href="/finance-calculators/savings-calculator/">Savings Calculator</a><a href="/finance-calculators/debt-payoff-calculator/">Debt Payoff</a></div>
+                <div class="footer-col"><h4>Company</h4><a href="/about/">About</a><a href="/contact/">Contact</a><a href="/privacy/">Privacy Policy</a><a href="/terms/">Terms of Use</a></div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; 2026 CalcWise. All rights reserved.</span>
+                <div class="footer-links"><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="/sitemap.xml">Sitemap</a></div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/calculator-engine.js"></script>
+    <script src="/js/search-index.js"></script>
+    <script>
+    function calculateCommission() {
+        if (!CalcWise.validateForm('commission-form')) return;
+
+        const v = CalcWise.getFormValues('commission-form');
+        const totalCommission = v.salePrice * (v.commissionRate / 100);
+        const agentShare = totalCommission * (v.agentSplit / 100);
+        const brokerageShare = totalCommission - agentShare;
+        const sellerNet = v.salePrice - totalCommission;
+
+        CalcWise.setText('result-total-commission', CalcWise.formatCurrency(totalCommission));
+        CalcWise.setText('result-agent-share', CalcWise.formatCurrency(agentShare));
+        CalcWise.setText('result-brokerage-share', CalcWise.formatCurrency(brokerageShare));
+        CalcWise.setText('result-seller-net', CalcWise.formatCurrency(sellerNet, 0));
+
+        CalcWise.showResults('results');
+    }
+
+    document.getElementById('commission-form').addEventListener('reset', function() {
+        setTimeout(() => CalcWise.hideResults('results'), 0);
+    });
+    </script>
+</body>
+</html>

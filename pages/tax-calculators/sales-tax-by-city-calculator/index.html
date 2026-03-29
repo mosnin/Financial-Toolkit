@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sales Tax by City Calculator | CalcWise</title>
+  <meta name="description" content="Calculate combined sales tax for major US cities. See state, county, and city tax rates plus total tax amount and final price for any purchase.">
+  <link rel="canonical" href="https://calcwise.io/tax-calculators/sales-tax-by-city-calculator/">
+  <meta property="og:title" content="Sales Tax by City Calculator | CalcWise">
+  <meta property="og:description" content="Look up combined sales tax rates for major US cities including state, county, and city portions.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcwise.io/tax-calculators/sales-tax-by-city-calculator/">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/"},
+      {"@type": "ListItem", "position": 2, "name": "Tax Calculators", "item": "https://calcwise.io/tax-calculators/"},
+      {"@type": "ListItem", "position": 3, "name": "Sales Tax by City Calculator"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Which US city has the highest combined sales tax rate?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Some of the highest combined sales tax rates in the US are found in cities like Tacoma, WA; Chicago, IL; Long Beach and Los Angeles, CA; and New Orleans, LA, where combined state + county + city rates can exceed 10%."}
+      },
+      {
+        "@type": "Question",
+        "name": "Are there cities with no sales tax?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Cities in states without a state sales tax — like Portland, OR; Anchorage, AK; and Helena, MT — have 0% or very low sales tax rates."}
+      },
+      {
+        "@type": "Question",
+        "name": "Why does sales tax differ by city?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Sales tax is a combination of state, county, and city/local tax rates. Local governments can add their own sales tax on top of the state rate, which is why rates vary significantly even within the same state."}
+      },
+      {
+        "@type": "Question",
+        "name": "Are groceries taxed in all cities?",
+        "acceptedAnswer": {"@type": "Answer", "text": "No. Many states and cities exempt groceries from sales tax or apply a reduced rate. For example, Texas exempts most unprepared foods, while Illinois taxes groceries at 1% rather than the standard 6.25% state rate."}
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="logo">
+        <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav">
+        <a href="/">Home</a>
+        <a href="/pages/business-calculators/">Business</a>
+        <a href="/pages/financial-calculators/">Financial</a>
+        <a href="/pages/tax-calculators/" aria-current="page">Tax</a>
+        <a href="/pages/investment-calculators/">Investment</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav">
+      <a href="/">Home</a>
+      <a href="/pages/business-calculators/">Business Calculators</a>
+      <a href="/pages/financial-calculators/">Financial Calculators</a>
+      <a href="/pages/tax-calculators/">Tax Calculators</a>
+      <a href="/pages/investment-calculators/">Investment Calculators</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/pages/tax-calculators/">Tax Calculators</a></li>
+          <li><span aria-current="page">Sales Tax by City Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="calc-page-layout">
+          <div class="calc-page-main">
+            <h1>Sales Tax by City Calculator</h1>
+            <p class="subtitle" style="font-size:var(--text-lg);color:var(--color-gray-600);margin-bottom:var(--space-8);line-height:var(--leading-relaxed);">Calculate the exact combined sales tax for major US cities, broken down by state, county, and city portions. Enter your purchase price and city to see total tax and final price for general merchandise or food purchases.</p>
+
+            <div class="calc-container">
+              <div class="calc-header">
+                <h2>Sales Tax by City Calculator</h2>
+                <p>Find combined sales tax for major US cities</p>
+              </div>
+              <div class="calc-body">
+                <form id="calc-form" onsubmit="return false;">
+                  <div class="form-group">
+                    <label class="form-label" for="purchase-price">Purchase Price</label>
+                    <div class="input-prefix">
+                      <span class="prefix">$</span>
+                      <input type="number" id="purchase-price" class="form-input" placeholder="100.00" min="0" step="0.01">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="city">City</label>
+                    <select id="city" class="form-select">
+                      <option value="nyc">New York City, NY</option>
+                      <option value="la">Los Angeles, CA</option>
+                      <option value="chicago">Chicago, IL</option>
+                      <option value="houston">Houston, TX</option>
+                      <option value="phoenix">Phoenix, AZ</option>
+                      <option value="philadelphia">Philadelphia, PA</option>
+                      <option value="sanantonio">San Antonio, TX</option>
+                      <option value="sandiego">San Diego, CA</option>
+                      <option value="dallas">Dallas, TX</option>
+                      <option value="sanjose">San Jose, CA</option>
+                      <option value="austin">Austin, TX</option>
+                      <option value="jacksonville">Jacksonville, FL</option>
+                      <option value="sanfrancisco">San Francisco, CA</option>
+                      <option value="columbus">Columbus, OH</option>
+                      <option value="charlotte">Charlotte, NC</option>
+                      <option value="seattle">Seattle, WA</option>
+                      <option value="denver">Denver, CO</option>
+                      <option value="nashville">Nashville, TN</option>
+                      <option value="okc">Oklahoma City, OK</option>
+                      <option value="miami">Miami, FL</option>
+                      <option value="portland">Portland, OR</option>
+                      <option value="lasvegas">Las Vegas, NV</option>
+                      <option value="atlanta">Atlanta, GA</option>
+                      <option value="boston">Boston, MA</option>
+                      <option value="minneapolis">Minneapolis, MN</option>
+                      <option value="neworleans">New Orleans, LA</option>
+                      <option value="detroit">Detroit, MI</option>
+                      <option value="tucson">Tucson, AZ</option>
+                      <option value="albuquerque">Albuquerque, NM</option>
+                      <option value="sacramento">Sacramento, CA</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="category">Product Category</label>
+                    <select id="category" class="form-select">
+                      <option value="general">General Merchandise</option>
+                      <option value="food">Groceries / Food</option>
+                      <option value="restaurant">Restaurant / Prepared Food</option>
+                    </select>
+                  </div>
+                  <div class="calc-actions">
+                    <button type="button" class="btn btn-calculate btn-full" onclick="calculateCityTax()">Calculate Sales Tax</button>
+                    <button type="button" class="btn btn-reset" onclick="resetForm()">Reset</button>
+                  </div>
+                </form>
+
+                <div id="results" class="calc-results hidden">
+                  <div class="result-primary">
+                    <div class="result-label">Total Sales Tax</div>
+                    <div class="result-value" id="result-total-tax">$0</div>
+                  </div>
+                  <div class="result-grid">
+                    <div class="result-item">
+                      <div class="result-label">State Tax</div>
+                      <div class="result-value" id="result-state-tax">$0</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">County Tax</div>
+                      <div class="result-value" id="result-county-tax">$0</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">City Tax</div>
+                      <div class="result-value" id="result-city-tax">$0</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Combined Rate</div>
+                      <div class="result-value" id="result-combined-rate">0%</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Final Price</div>
+                      <div class="result-value" id="result-final-price">$0</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="ad-slot ad-slot-leaderboard"></div>
+
+            <section class="content-section">
+              <h2>How City Sales Tax Is Calculated</h2>
+              <div class="formula-box">
+                <div class="formula-label">Combined Rate</div>
+                Combined Rate = State Rate + County Rate + City Rate<br>
+                Tax Amount = Purchase Price × Combined Rate<br>
+                Final Price = Purchase Price + Tax Amount
+              </div>
+              <p>Note: Product category affects tax rate in many cities. Groceries may be exempt or taxed at a reduced rate, while restaurant food is often taxed at the full combined rate.</p>
+            </section>
+
+            <section class="content-section">
+              <h2>How to Use This Calculator</h2>
+              <ol>
+                <li>Enter the <strong>purchase price</strong> before tax.</li>
+                <li>Select the <strong>city</strong> where the purchase is made.</li>
+                <li>Select the <strong>product category</strong> to apply the correct rate.</li>
+                <li>Click <strong>Calculate Sales Tax</strong> to see the breakdown.</li>
+              </ol>
+            </section>
+
+            <section class="content-section">
+              <h2>Example Scenario</h2>
+              <p>Buying a $500 television in Chicago, IL (general merchandise):</p>
+              <ul>
+                <li>Illinois State Rate: 6.25%</li>
+                <li>Cook County: 1.75%</li>
+                <li>Chicago City: 1.25%</li>
+                <li>Combined Rate: <strong>10.25%</strong></li>
+                <li>Tax: $500 × 10.25% = <strong>$51.25</strong></li>
+                <li>Final Price: <strong>$551.25</strong></li>
+              </ul>
+            </section>
+
+            <section class="faq-section">
+              <h2>Frequently Asked Questions</h2>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">Which US city has the highest combined sales tax rate?<svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg></button>
+                <div class="faq-answer"><p>Some of the highest combined rates are found in cities like Tacoma, WA; Chicago, IL; Los Angeles, CA; and New Orleans, LA, where rates can exceed 10%.</p></div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">Are there cities with no sales tax?<svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg></button>
+                <div class="faq-answer"><p>Cities in states without a state sales tax — like Portland, OR; Anchorage, AK; and Helena, MT — have 0% or very low combined sales tax rates.</p></div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">Why does sales tax differ by city?<svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg></button>
+                <div class="faq-answer"><p>Sales tax is a combination of state, county, and city/local tax rates. Local governments add their own tax on top of the state rate, so rates vary significantly even within the same state.</p></div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">Are groceries taxed in all cities?<svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg></button>
+                <div class="faq-answer"><p>No. Many states and cities exempt groceries or apply a reduced rate. Texas exempts most unprepared foods, while Illinois taxes groceries at 1% rather than the standard state rate.</p></div>
+              </div>
+            </section>
+
+            <section class="related-calculators">
+              <h2>Related Calculators</h2>
+              <div class="grid grid-3">
+                <a href="/pages/tax-calculators/sales-tax-by-state-calculator/" class="card card-link">
+                  <h3>Sales Tax by State Calculator</h3>
+                  <p>Find sales tax rates for all 50 states.</p>
+                </a>
+                <a href="/pages/business-calculators/sales-tax-calculator/" class="card card-link">
+                  <h3>Sales Tax Calculator</h3>
+                  <p>Calculate sales tax for any custom rate.</p>
+                </a>
+                <a href="/pages/tax-calculators/after-tax-income-calculator/" class="card card-link">
+                  <h3>After-Tax Income Calculator</h3>
+                  <p>Calculate your net income after all taxes.</p>
+                </a>
+              </div>
+            </section>
+
+            <div class="disclaimer">
+              <strong>Tax Disclaimer:</strong> Sales tax rates shown are estimates based on publicly available data and are subject to change. Rates may vary within a city based on the exact location of purchase and special tax districts. Always verify the current rate with your local tax authority. This calculator is for informational purposes only and does not constitute tax advice. Copyright &copy; 2026 CalcWise.
+            </div>
+          </div>
+
+          <aside class="calc-page-sidebar">
+            <div class="ad-slot ad-slot-rectangle"></div>
+            <div class="sidebar-card">
+              <h3>Tax Calculators</h3>
+              <a href="/pages/tax-calculators/sales-tax-by-state-calculator/">Sales Tax by State</a>
+              <a href="/pages/business-calculators/sales-tax-calculator/">Sales Tax Calculator</a>
+              <a href="/pages/tax-calculators/after-tax-income-calculator/">After-Tax Income</a>
+              <a href="/pages/tax-calculators/tax-bracket-calculator/">Tax Bracket Calculator</a>
+              <a href="/pages/tax-calculators/property-tax-deduction-calculator/">Property Tax Deduction</a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free online calculators for business, finance, tax, and investment decisions.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Calculators</h4>
+          <a href="/pages/business-calculators/">Business</a>
+          <a href="/pages/financial-calculators/">Financial</a>
+          <a href="/pages/tax-calculators/">Tax</a>
+          <a href="/pages/investment-calculators/">Investment</a>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <a href="/about/">About</a>
+          <a href="/blog/">Blog</a>
+          <a href="/contact/">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="/privacy/">Privacy Policy</a>
+          <a href="/terms/">Terms of Service</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/privacy/">Privacy</a>
+          <a href="/terms/">Terms</a>
+          <a href="/contact/">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    // City data: [stateRate, countyRate, cityRate, groceryStateRate]
+    const CITIES = {
+      nyc:          {name:'New York City, NY', state:0.04, county:0.045, city:0.004875, groceryState:0},
+      la:           {name:'Los Angeles, CA', state:0.0725, county:0.0025, city:0.0125, groceryState:0},
+      chicago:      {name:'Chicago, IL', state:0.0625, county:0.0175, city:0.0125, groceryState:0.01},
+      houston:      {name:'Houston, TX', state:0.0625, county:0, city:0.02, groceryState:0},
+      phoenix:      {name:'Phoenix, AZ', state:0.056, county:0.007, city:0.02, groceryState:0.056},
+      philadelphia: {name:'Philadelphia, PA', state:0.06, county:0, city:0.02, groceryState:0},
+      sanantonio:   {name:'San Antonio, TX', state:0.0625, county:0, city:0.02, groceryState:0},
+      sandiego:     {name:'San Diego, CA', state:0.0725, county:0.0025, city:0, groceryState:0},
+      dallas:       {name:'Dallas, TX', state:0.0625, county:0, city:0.02, groceryState:0},
+      sanjose:      {name:'San Jose, CA', state:0.0725, county:0.0025, city:0.0125, groceryState:0},
+      austin:       {name:'Austin, TX', state:0.0625, county:0, city:0.02, groceryState:0},
+      jacksonville: {name:'Jacksonville, FL', state:0.06, county:0.01, city:0, groceryState:0},
+      sanfrancisco: {name:'San Francisco, CA', state:0.0725, county:0.0025, city:0.0125, groceryState:0},
+      columbus:     {name:'Columbus, OH', state:0.0575, county:0.0125, city:0, groceryState:0},
+      charlotte:    {name:'Charlotte, NC', state:0.0475, county:0.0225, city:0, groceryState:0.02},
+      seattle:      {name:'Seattle, WA', state:0.065, county:0.021, city:0.036, groceryState:0},
+      denver:       {name:'Denver, CO', state:0.029, county:0, city:0.0888, groceryState:0},
+      nashville:    {name:'Nashville, TN', state:0.07, county:0.0225, city:0, groceryState:0.05},
+      okc:          {name:'Oklahoma City, OK', state:0.045, county:0.01125, city:0.0413, groceryState:0.045},
+      miami:        {name:'Miami, FL', state:0.06, county:0.01, city:0, groceryState:0},
+      portland:     {name:'Portland, OR', state:0, county:0, city:0, groceryState:0},
+      lasvegas:     {name:'Las Vegas, NV', state:0.0685, county:0.015, city:0, groceryState:0},
+      atlanta:      {name:'Atlanta, GA', state:0.04, county:0.03, city:0.015, groceryState:0},
+      boston:       {name:'Boston, MA', state:0.0625, county:0, city:0, groceryState:0},
+      minneapolis:  {name:'Minneapolis, MN', state:0.06875, county:0.005, city:0.005, groceryState:0},
+      neworleans:   {name:'New Orleans, LA', state:0.0445, county:0.05, city:0, groceryState:0},
+      detroit:      {name:'Detroit, MI', state:0.06, county:0, city:0, groceryState:0},
+      tucson:       {name:'Tucson, AZ', state:0.056, county:0.007, city:0.025, groceryState:0.056},
+      albuquerque:  {name:'Albuquerque, NM', state:0.05125, county:0.0125, city:0.02375, groceryState:0},
+      sacramento:   {name:'Sacramento, CA', state:0.0725, county:0.0025, city:0.0125, groceryState:0}
+    };
+
+    function calculateCityTax() {
+      const price = CalcWise.parseNumber(document.getElementById('purchase-price').value);
+      const cityKey = document.getElementById('city').value;
+      const category = document.getElementById('category').value;
+
+      if (price <= 0) { alert('Please enter a purchase price.'); return; }
+
+      const city = CITIES[cityKey];
+      let stateRate = city.state, countyRate = city.county, cityRate = city.city;
+
+      if (category === 'food') {
+        stateRate = city.groceryState;
+        countyRate = 0;
+        cityRate = 0;
+      }
+
+      const combinedRate = stateRate + countyRate + cityRate;
+      const stateTax = price * stateRate;
+      const countyTax = price * countyRate;
+      const cityTax = price * cityRate;
+      const totalTax = price * combinedRate;
+      const finalPrice = price + totalTax;
+
+      CalcWise.setText('result-total-tax', CalcWise.formatCurrency(totalTax));
+      CalcWise.setText('result-state-tax', CalcWise.formatCurrency(stateTax) + ' (' + (stateRate*100).toFixed(2) + '%)');
+      CalcWise.setText('result-county-tax', CalcWise.formatCurrency(countyTax) + ' (' + (countyRate*100).toFixed(2) + '%)');
+      CalcWise.setText('result-city-tax', CalcWise.formatCurrency(cityTax) + ' (' + (cityRate*100).toFixed(2) + '%)');
+      CalcWise.setText('result-combined-rate', (combinedRate*100).toFixed(3) + '%');
+      CalcWise.setText('result-final-price', CalcWise.formatCurrency(finalPrice));
+      CalcWise.showResults('results');
+    }
+
+    function resetForm() {
+      document.getElementById('calc-form').reset();
+      CalcWise.hideResults('results');
+    }
+
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', !expanded);
+        btn.nextElementSibling.style.display = expanded ? 'none' : 'block';
+      });
+    });
+    document.querySelectorAll('.faq-answer').forEach(a => a.style.display = 'none');
+
+    const toggle = document.querySelector('.mobile-menu-toggle');
+    const mobileNav = document.querySelector('.mobile-nav');
+    if (toggle && mobileNav) {
+      toggle.addEventListener('click', () => {
+        const open = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', !open);
+        mobileNav.style.display = open ? 'none' : 'block';
+      });
+    }
+  </script>
+</body>
+</html>

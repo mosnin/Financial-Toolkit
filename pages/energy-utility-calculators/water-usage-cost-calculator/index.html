@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Usage Cost Calculator - Monthly Water Bill Estimator | CalcWise</title>
+    <meta name="description" content="Calculate your monthly water bill, annual cost, cost per gallon, and potential savings from water conservation. Enter monthly gallons, water rate, and sewer rate.">
+    <link rel="canonical" href="https://calcwise.io/energy-utility-calculators/water-usage-cost-calculator/">
+    <meta property="og:title" content="Water Usage Cost Calculator | CalcWise">
+    <meta property="og:description" content="Estimate your water and sewer bill based on monthly usage and local rates. See cost per gallon and savings potential from conservation.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://calcwise.io/energy-utility-calculators/water-usage-cost-calculator/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Water Usage Cost Calculator | CalcWise">
+    <meta name="twitter:description" content="Calculate your water bill and find out how much you could save through conservation.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/design-system.css">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/"},
+            {"@type": "ListItem", "position": 2, "name": "Energy & Utility Calculators", "item": "https://calcwise.io/energy-utility-calculators/"},
+            {"@type": "ListItem", "position": 3, "name": "Water Usage Cost Calculator"}
+        ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {"@type": "Question", "name": "How much does the average American household spend on water?", "acceptedAnswer": {"@type": "Answer", "text": "The average US household spends about $70-$100 per month on combined water and sewer service, or $840-$1,200 per year. Usage averages about 80-100 gallons per person per day. Rates vary widely by municipality and region."}},
+            {"@type": "Question", "name": "What is a sewer rate and how is it calculated?", "acceptedAnswer": {"@type": "Answer", "text": "The sewer rate covers wastewater treatment and is typically calculated as a percentage or multiple of your water usage. Most utilities assume that most of the water you use eventually enters the sewer system. Sewer charges often equal or exceed the water supply charge."}},
+            {"@type": "Question", "name": "How can I reduce my water bill?", "acceptedAnswer": {"@type": "Answer", "text": "Key conservation steps include fixing leaks (a dripping faucet can waste 3,000+ gallons/year), installing low-flow showerheads and faucet aerators, using WaterSense-certified toilets (1.28 gpf vs. older 3.5-5 gpf), running full loads in dishwashers and washing machines, and watering lawns at dawn or dusk to reduce evaporation."}},
+            {"@type": "Question", "name": "How is water usage typically measured on bills?", "acceptedAnswer": {"@type": "Answer", "text": "Water utilities typically bill by the hundred cubic feet (CCF) or by the thousand gallons (kGal). One CCF equals approximately 748 gallons. Your bill will show the rate per CCF or per 1,000 gallons, and your meter reading in those units. This calculator uses gallons directly for ease of use."}}
+        ]
+    }
+    </script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="/" class="logo">
+                <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+                CalcWise
+            </a>
+            <nav class="main-nav">
+                <a href="/real-estate-calculators/">Real Estate</a>
+                <a href="/advanced-real-estate-calculators/">Advanced RE</a>
+                <a href="/energy-utility-calculators/">Energy</a>
+                <a href="/finance-calculators/">Finance</a>
+            </nav>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+            </button>
+        </div>
+        <nav class="mobile-nav">
+            <a href="/real-estate-calculators/">Real Estate Calculators</a>
+            <a href="/advanced-real-estate-calculators/">Advanced Real Estate</a>
+            <a href="/energy-utility-calculators/">Energy &amp; Utility</a>
+            <a href="/finance-calculators/">Finance Calculators</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <nav class="breadcrumbs" aria-label="Breadcrumb">
+                <ol>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/energy-utility-calculators/">Energy &amp; Utility Calculators</a></li>
+                    <li><span aria-current="page">Water Usage Cost Calculator</span></li>
+                </ol>
+            </nav>
+
+            <div class="page-content">
+                <div class="calc-page-layout">
+                    <div class="calc-page-main">
+                        <h1>Water Usage Cost Calculator</h1>
+                        <p class="subtitle" style="color: var(--color-gray-600); font-size: var(--text-lg); line-height: var(--leading-relaxed); margin-bottom: var(--space-8);">
+                            Estimate your monthly water and sewer bill based on actual usage and local rates. See your cost per gallon and discover how much you could save with simple conservation measures.
+                        </p>
+
+                        <div class="calc-container">
+                            <div class="calc-header">
+                                <h2>Water Usage Cost Estimator</h2>
+                                <p>Calculate your water bill and conservation savings</p>
+                            </div>
+                            <div class="calc-body">
+                                <form id="water-form">
+                                    <div class="form-group">
+                                        <label class="form-label" for="monthly-gallons">Monthly Gallons Used</label>
+                                        <input type="number" id="monthly-gallons" name="monthlyGallons" class="form-input" placeholder="5,000" min="100" step="100" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label" for="water-rate">Water Rate (per 1,000 gallons)</label>
+                                        <div class="input-prefix">
+                                            <span class="prefix">$</span>
+                                            <input type="number" id="water-rate" name="waterRate" class="form-input" placeholder="5.50" min="0.01" max="100" step="0.01" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label" for="sewer-rate">Sewer Rate (per 1,000 gallons)</label>
+                                        <div class="input-prefix">
+                                            <span class="prefix">$</span>
+                                            <input type="number" id="sewer-rate" name="sewerRate" class="form-input" placeholder="6.00" min="0" max="100" step="0.01" required>
+                                        </div>
+                                    </div>
+                                    <div class="calc-actions">
+                                        <button type="button" class="btn btn-calculate btn-full" onclick="calculateWater()">Calculate Water Bill</button>
+                                        <button type="reset" class="btn btn-reset">Reset</button>
+                                    </div>
+                                </form>
+
+                                <div id="results" class="calc-results hidden">
+                                    <div class="result-primary">
+                                        <div class="result-label">Monthly Water Bill</div>
+                                        <div class="result-value" id="result-monthly-bill">$0</div>
+                                    </div>
+                                    <div class="result-grid result-grid-3">
+                                        <div class="result-item">
+                                            <div class="result-label">Annual Cost</div>
+                                            <div class="result-value" id="result-annual-cost">$0</div>
+                                        </div>
+                                        <div class="result-item">
+                                            <div class="result-label">Cost per Gallon</div>
+                                            <div class="result-value" id="result-per-gallon">$0</div>
+                                        </div>
+                                        <div class="result-item">
+                                            <div class="result-label">Water Charge Only</div>
+                                            <div class="result-value" id="result-water-only">$0</div>
+                                        </div>
+                                        <div class="result-item">
+                                            <div class="result-label">Sewer Charge Only</div>
+                                            <div class="result-value" id="result-sewer-only">$0</div>
+                                        </div>
+                                        <div class="result-item">
+                                            <div class="result-label">10% Conservation Saves</div>
+                                            <div class="result-value" id="result-conservation-10">$0/yr</div>
+                                        </div>
+                                        <div class="result-item">
+                                            <div class="result-label">20% Conservation Saves</div>
+                                            <div class="result-value" id="result-conservation-20">$0/yr</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="ad-slot ad-slot-leaderboard"></div>
+
+                        <section class="content-section">
+                            <h2>Water Bill Formula</h2>
+                            <div class="formula-box">
+                                <div class="formula-label">Cost Calculations</div>
+                                Water Charge = (Monthly Gallons / 1,000) &times; Water Rate
+Sewer Charge = (Monthly Gallons / 1,000) &times; Sewer Rate
+Monthly Bill = Water Charge + Sewer Charge
+Annual Cost = Monthly Bill &times; 12
+Cost per Gallon = Monthly Bill / Monthly Gallons
+10% Conservation Savings = Annual Cost &times; 10%
+20% Conservation Savings = Annual Cost &times; 20%
+                            </div>
+                            <p>Water and sewer rates are typically charged per 1,000 gallons or per CCF (100 cubic feet = 748 gallons). This calculator uses per-1,000-gallon rates for simplicity. Divide your bill rate by 0.748 if you need to convert from CCF to 1,000-gallon units.</p>
+                            <p>Most utilities also charge a fixed monthly service fee in addition to usage-based charges. Check your bill for any base charges not captured in this estimate.</p>
+                        </section>
+
+                        <section class="content-section">
+                            <h2>How to Use This Calculator</h2>
+                            <ol>
+                                <li><strong>Enter monthly gallons used</strong> -- find this on your water bill; average US household is 3,000-8,000 gallons/month.</li>
+                                <li><strong>Enter water rate per 1,000 gallons</strong> -- the usage charge from your bill (typically $3-$10/thousand gallons).</li>
+                                <li><strong>Enter sewer rate per 1,000 gallons</strong> -- the wastewater charge from your bill (often equals or exceeds water charge).</li>
+                                <li><strong>Click "Calculate Water Bill"</strong> to see monthly bill, annual cost, cost per gallon, and conservation savings.</li>
+                            </ol>
+                        </section>
+
+                        <section class="content-section">
+                            <h2>Example Scenario</h2>
+                            <h3>Family of 4: 6,000 Gallons/Month</h3>
+                            <p>Monthly usage: 6,000 gallons | Water rate: $5.50/thousand gal | Sewer rate: $6.00/thousand gal</p>
+                            <p>Water Charge = 6 &times; $5.50 = <strong>$33.00</strong></p>
+                            <p>Sewer Charge = 6 &times; $6.00 = <strong>$36.00</strong></p>
+                            <p>Monthly Bill = $33 + $36 = <strong>$69.00</strong></p>
+                            <p>Annual Cost = $69 &times; 12 = <strong>$828/year</strong></p>
+                            <p>Cost per Gallon = $69 / 6,000 = <strong>$0.0115/gallon</strong></p>
+                            <p>20% Conservation Savings = $828 &times; 20% = <strong>$165.60/year</strong></p>
+                        </section>
+
+                        <section class="faq-section">
+                            <h2>Frequently Asked Questions</h2>
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">
+                                    How much does the average American household spend on water?
+                                    <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>The average US household spends about $70-$100 per month on combined water and sewer service, or $840-$1,200 per year. Usage averages about 80-100 gallons per person per day. Rates vary widely by municipality and region.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">
+                                    What is a sewer rate and how is it calculated?
+                                    <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>The sewer rate covers wastewater treatment and is typically calculated based on your water usage. Most utilities assume that most of the water you use eventually enters the sewer system. Sewer charges often equal or exceed the water supply charge.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">
+                                    How can I reduce my water bill?
+                                    <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>Key conservation steps include fixing leaks (a dripping faucet can waste 3,000+ gallons/year), installing low-flow showerheads and faucet aerators, using WaterSense-certified toilets, running full loads in dishwashers and washing machines, and watering lawns at dawn or dusk to reduce evaporation.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">
+                                    How is water usage typically measured on bills?
+                                    <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 011-1z"/></svg>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>Water utilities typically bill by the hundred cubic feet (CCF) or by the thousand gallons (kGal). One CCF equals approximately 748 gallons. Your bill will show the rate per CCF or per 1,000 gallons, and your meter reading in those units.</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="related-calculators">
+                            <h2>Related Calculators</h2>
+                            <div class="grid grid-3">
+                                <a href="/energy-utility-calculators/electricity-cost-calculator/" class="card card-link">
+                                    <div class="card-icon">E</div>
+                                    <h3>Electricity Cost Calculator</h3>
+                                    <p>Calculate your electricity bill by usage and rate.</p>
+                                </a>
+                                <a href="/energy-utility-calculators/utility-bill-comparison-calculator/" class="card card-link">
+                                    <div class="card-icon">U</div>
+                                    <h3>Utility Bill Comparison</h3>
+                                    <p>Compare energy providers to find the best rates.</p>
+                                </a>
+                                <a href="/energy-utility-calculators/home-energy-efficiency-calculator/" class="card card-link">
+                                    <div class="card-icon">H</div>
+                                    <h3>Home Energy Efficiency</h3>
+                                    <p>Find savings opportunities across all your home utilities.</p>
+                                </a>
+                            </div>
+                        </section>
+
+                        <div class="disclaimer">
+                            <strong>Disclaimer:</strong> This calculator provides estimates based on entered values. Actual water bills include fixed service charges, taxes, and may use tiered pricing structures not reflected here. Contact your local water utility for your specific rate schedule.
+                        </div>
+
+                        <div class="ad-slot ad-slot-leaderboard"></div>
+                    </div>
+
+                    <aside class="calc-page-sidebar">
+                        <div class="sidebar-card">
+                            <h3>Energy &amp; Utility Tools</h3>
+                            <a href="/energy-utility-calculators/carbon-footprint-calculator/">Carbon Footprint</a>
+                            <a href="/energy-utility-calculators/electricity-cost-calculator/">Electricity Cost</a>
+                            <a href="/energy-utility-calculators/solar-savings-calculator/">Solar Savings</a>
+                            <a href="/energy-utility-calculators/ev-range-calculator/">EV Range</a>
+                            <a href="/energy-utility-calculators/gas-bill-calculator/">Gas Bill</a>
+                            <a href="/energy-utility-calculators/home-energy-efficiency-calculator/">Home Energy Efficiency</a>
+                            <a href="/energy-utility-calculators/utility-bill-comparison-calculator/">Utility Bill Comparison</a>
+                            <a href="/energy-utility-calculators/water-usage-cost-calculator/">Water Usage Cost</a>
+                        </div>
+                        <div class="ad-slot ad-slot-rectangle"></div>
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="/" class="logo">
+                        <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+                        CalcWise
+                    </a>
+                    <p>Free, accurate financial calculators for everyone. Make smarter money decisions with CalcWise.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Energy &amp; Utility</h4>
+                    <a href="/energy-utility-calculators/carbon-footprint-calculator/">Carbon Footprint</a>
+                    <a href="/energy-utility-calculators/electricity-cost-calculator/">Electricity Cost</a>
+                    <a href="/energy-utility-calculators/solar-savings-calculator/">Solar Savings</a>
+                    <a href="/energy-utility-calculators/ev-range-calculator/">EV Range</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Advanced Real Estate</h4>
+                    <a href="/advanced-real-estate-calculators/property-appreciation-calculator/">Property Appreciation</a>
+                    <a href="/advanced-real-estate-calculators/real-estate-leverage-calculator/">Leverage Calculator</a>
+                    <a href="/advanced-real-estate-calculators/real-estate-yield-calculator/">Yield Calculator</a>
+                    <a href="/advanced-real-estate-calculators/rental-expense-ratio-calculator/">Expense Ratio</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <a href="/about/">About</a>
+                    <a href="/contact/">Contact</a>
+                    <a href="/privacy/">Privacy Policy</a>
+                    <a href="/terms/">Terms of Use</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; 2026 CalcWise. All rights reserved.</span>
+                <div class="footer-links">
+                    <a href="/privacy/">Privacy</a>
+                    <a href="/terms/">Terms</a>
+                    <a href="/sitemap.xml">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/calculator-engine.js"></script>
+    <script src="/js/search-index.js"></script>
+    <script>
+    function calculateWater() {
+        if (!CalcWise.validateForm('water-form')) return;
+
+        const values = CalcWise.getFormValues('water-form');
+        const monthlyGallons = values.monthlyGallons;
+        const waterRate = values.waterRate;
+        const sewerRate = values.sewerRate;
+
+        const thousandGallons = monthlyGallons / 1000;
+        const waterCharge = thousandGallons * waterRate;
+        const sewerCharge = thousandGallons * sewerRate;
+        const monthlyBill = waterCharge + sewerCharge;
+        const annualCost = monthlyBill * 12;
+        const costPerGallon = monthlyGallons > 0 ? monthlyBill / monthlyGallons : 0;
+        const conservation10 = annualCost * 0.10;
+        const conservation20 = annualCost * 0.20;
+
+        CalcWise.setText('result-monthly-bill', CalcWise.formatCurrency(monthlyBill));
+        CalcWise.setText('result-annual-cost', CalcWise.formatCurrency(annualCost, 0));
+        CalcWise.setText('result-per-gallon', '$' + costPerGallon.toFixed(5) + '/gal');
+        CalcWise.setText('result-water-only', CalcWise.formatCurrency(waterCharge));
+        CalcWise.setText('result-sewer-only', CalcWise.formatCurrency(sewerCharge));
+        CalcWise.setText('result-conservation-10', CalcWise.formatCurrency(conservation10, 0) + '/yr');
+        CalcWise.setText('result-conservation-20', CalcWise.formatCurrency(conservation20, 0) + '/yr');
+
+        CalcWise.showResults('results');
+    }
+
+    document.getElementById('water-form').addEventListener('reset', function() {
+        setTimeout(() => CalcWise.hideResults('results'), 0);
+    });
+    </script>
+</body>
+</html>

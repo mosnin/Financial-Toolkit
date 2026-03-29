@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Hosting Cost Calculator | CalcWise</title>
+  <meta name="description" content="Estimate web hosting costs based on traffic, storage, and hosting type. Compare shared, VPS, dedicated, and cloud hosting with SSL and backup add-ons included.">
+  <link rel="canonical" href="https://calcwise.io/technology-cost-calculators/web-hosting-cost-calculator/">
+  <meta property="og:title" content="Web Hosting Cost Calculator | CalcWise">
+  <meta property="og:description" content="Find your recommended hosting tier and compare shared, VPS, dedicated, and cloud hosting costs by traffic and storage needs.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcwise.io/technology-cost-calculators/web-hosting-cost-calculator/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Web Hosting Cost Calculator | CalcWise">
+  <meta name="twitter:description" content="Find your recommended hosting tier and compare hosting costs by traffic and storage needs.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/"},
+      {"@type": "ListItem", "position": 2, "name": "Technology Cost Calculators", "item": "https://calcwise.io/technology-cost-calculators/"},
+      {"@type": "ListItem", "position": 3, "name": "Web Hosting Cost Calculator"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the difference between shared, VPS, dedicated, and cloud hosting?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Shared hosting puts multiple websites on one server, making it the cheapest option ($3-15/month) but with limited resources and performance. VPS (Virtual Private Server) gives you a dedicated portion of a server ($20-80/month) with better performance and control. Dedicated hosting gives you an entire physical server ($80-300/month) for maximum performance. Cloud hosting scales resources on demand and is priced per usage ($20-500+/month depending on traffic)."}
+      },
+      {
+        "@type": "Question",
+        "name": "When should I upgrade from shared to VPS hosting?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Consider upgrading to VPS when your site receives more than 10,000-20,000 visits per month, experiences slow loading times during peak traffic, requires custom server software installations, or needs more reliable uptime for business-critical operations. VPS also makes sense for e-commerce sites processing transactions."}
+      },
+      {
+        "@type": "Question",
+        "name": "Does every website need an SSL certificate?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Yes, virtually every website needs SSL. Google Chrome and other browsers mark sites without SSL as 'Not Secure,' which hurts user trust and SEO rankings. SSL is required for any site collecting form data, processing payments, or requiring login. Many hosting providers now include free SSL via Let's Encrypt, but premium SSL certificates with extended validation (EV) cost $50-200/year."}
+      },
+      {
+        "@type": "Question",
+        "name": "How often should I back up my website and what does it cost?",
+        "acceptedAnswer": {"@type": "Answer", "text": "For business websites, daily automated backups stored offsite are recommended. Most managed hosting plans include weekly or daily backups for $1-10/month. Standalone backup solutions like CodeGuard or ManageWP Guardian start around $3-10/month. For e-commerce or high-transaction sites, real-time or hourly backups may be worth the additional cost."}
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="logo">
+        <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav">
+        <a href="/">Home</a>
+        <a href="/pages/real-estate-calculators/">Real Estate</a>
+        <a href="/pages/financial-calculators/">Finance</a>
+        <a href="/pages/business-calculators/">Business</a>
+        <a href="/about/">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav">
+      <a href="/">Home</a>
+      <a href="/pages/real-estate-calculators/">Real Estate</a>
+      <a href="/pages/financial-calculators/">Finance</a>
+      <a href="/pages/business-calculators/">Business</a>
+      <a href="/about/">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/pages/technology-cost-calculators/">Technology Cost Calculators</a></li>
+          <li><span aria-current="page">Web Hosting Cost Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="calc-page-layout">
+          <div class="calc-page-main">
+            <h1>Web Hosting Cost Calculator</h1>
+            <p class="subtitle" style="font-size:var(--text-lg);color:var(--color-gray-600);margin-bottom:var(--space-8);line-height:var(--leading-relaxed);">Estimate your monthly and annual web hosting costs based on expected traffic, storage requirements, and hosting type. Compare shared, VPS, dedicated, and cloud hosting tiers side-by-side including SSL certificate and backup add-on costs.</p>
+
+            <div class="calc-container">
+              <div class="calc-header">
+                <h2>Web Hosting Cost Calculator</h2>
+                <p>Find your recommended tier and compare hosting costs</p>
+              </div>
+              <div class="calc-body">
+                <form id="hosting-form" onsubmit="return false;">
+                  <div class="form-group">
+                    <label class="form-label" for="monthly-visits">Expected Monthly Visits</label>
+                    <select id="monthly-visits" class="form-input">
+                      <option value="1000">Under 1,000 visits/month</option>
+                      <option value="5000">1,000 – 5,000 visits/month</option>
+                      <option value="10000">5,000 – 10,000 visits/month</option>
+                      <option value="25000">10,000 – 25,000 visits/month</option>
+                      <option value="50000">25,000 – 50,000 visits/month</option>
+                      <option value="100000">50,000 – 100,000 visits/month</option>
+                      <option value="250000">100,000 – 250,000 visits/month</option>
+                      <option value="500000">250,000 – 500,000 visits/month</option>
+                      <option value="1000000">500,000+ visits/month</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="storage-gb">Storage Needed (GB)</label>
+                    <div class="input-suffix">
+                      <input type="number" id="storage-gb" class="form-input" placeholder="10" min="1" step="1" required>
+                      <span class="suffix">GB</span>
+                    </div>
+                    <span class="form-hint" style="display:block;margin-top:var(--space-1);">Website files, database, media, emails</span>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="hosting-type">Hosting Type</label>
+                    <select id="hosting-type" class="form-input">
+                      <option value="recommended">Auto-Recommend Based on Traffic</option>
+                      <option value="shared">Shared Hosting</option>
+                      <option value="vps">VPS Hosting</option>
+                      <option value="dedicated">Dedicated Server</option>
+                      <option value="cloud">Cloud Hosting (AWS/GCP/Azure)</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="ssl">SSL Certificate</label>
+                    <select id="ssl" class="form-input">
+                      <option value="free">Free (Let's Encrypt) — $0/month</option>
+                      <option value="standard">Standard DV SSL — $0.83/month ($10/yr)</option>
+                      <option value="wildcard">Wildcard SSL — $5/month ($60/yr)</option>
+                      <option value="ev">Extended Validation (EV) SSL — $16.67/month ($200/yr)</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="backups">Automated Backups</label>
+                    <select id="backups" class="form-input">
+                      <option value="none">None / Manual — $0/month</option>
+                      <option value="weekly">Weekly Automated — $2/month</option>
+                      <option value="daily">Daily Automated — $5/month</option>
+                      <option value="realtime">Real-Time / Hourly — $15/month</option>
+                    </select>
+                  </div>
+
+                  <div class="calc-actions">
+                    <button type="button" class="btn btn-calculate btn-full" onclick="calculateHosting()">Calculate Hosting Cost</button>
+                    <button type="button" class="btn btn-reset" onclick="resetHosting()">Reset</button>
+                  </div>
+                </form>
+
+                <div id="results" class="calc-results hidden">
+                  <div class="result-primary">
+                    <div class="result-label">Estimated Monthly Cost</div>
+                    <div class="result-value" id="result-monthly">$0.00</div>
+                  </div>
+                  <div class="result-grid result-grid-3">
+                    <div class="result-item">
+                      <div class="result-label">Annual Cost</div>
+                      <div class="result-value" id="result-annual">$0.00</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Recommended Tier</div>
+                      <div class="result-value" id="result-tier">—</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Add-ons (SSL + Backup)</div>
+                      <div class="result-value" id="result-addons">$0.00/mo</div>
+                    </div>
+                  </div>
+                  <div style="margin-top:var(--space-6);">
+                    <h3 style="font-size:var(--text-base);font-weight:var(--font-semibold);margin-bottom:var(--space-3);">Hosting Tier Comparison</h3>
+                    <div style="overflow-x:auto;">
+                      <table style="width:100%;border-collapse:collapse;font-size:var(--text-sm);">
+                        <thead>
+                          <tr style="background:var(--color-gray-100);">
+                            <th style="padding:var(--space-2) var(--space-3);text-align:left;border-bottom:2px solid var(--color-gray-200);">Tier</th>
+                            <th style="padding:var(--space-2) var(--space-3);text-align:right;border-bottom:2px solid var(--color-gray-200);">Base/mo</th>
+                            <th style="padding:var(--space-2) var(--space-3);text-align:right;border-bottom:2px solid var(--color-gray-200);">With Add-ons</th>
+                            <th style="padding:var(--space-2) var(--space-3);text-align:right;border-bottom:2px solid var(--color-gray-200);">Annual</th>
+                            <th style="padding:var(--space-2) var(--space-3);text-align:left;border-bottom:2px solid var(--color-gray-200);">Best For</th>
+                          </tr>
+                        </thead>
+                        <tbody id="comparison-tbody"></tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="ad-slot ad-slot-leaderboard"></div>
+
+            <section class="content-section">
+              <h2>Hosting Tier Pricing &amp; Methodology</h2>
+              <div class="formula-box">
+                <div class="formula-label">Total Monthly Cost</div>
+                Monthly = Base Hosting Cost + SSL Monthly Cost + Backup Monthly Cost
+              </div>
+              <div class="formula-box">
+                <div class="formula-label">Annual Cost</div>
+                Annual = Monthly Cost × 12 (most hosts offer 10-20% annual billing discount)
+              </div>
+              <p style="margin-top:var(--space-4);">Approximate hosting tier base prices (market average, 2026):</p>
+              <ul>
+                <li><strong>Shared Hosting:</strong> $3–$15/month — up to 25,000 visits/month, limited resources</li>
+                <li><strong>VPS Hosting:</strong> $20–$80/month — 10,000–100,000 visits/month, dedicated resources</li>
+                <li><strong>Dedicated Server:</strong> $80–$300/month — 50,000–500,000+ visits/month, full server control</li>
+                <li><strong>Cloud Hosting:</strong> $20–$500+/month — scales with traffic, pay-as-you-go pricing</li>
+              </ul>
+              <p style="margin-top:var(--space-3);font-size:var(--text-sm);color:var(--color-gray-600);">Traffic thresholds are guidelines. Actual hosting needs depend on page complexity, media assets, database queries, and application efficiency.</p>
+            </section>
+
+            <section class="content-section">
+              <h2>How to Use This Calculator</h2>
+              <ol>
+                <li>Select your expected <strong>monthly visit range</strong> and enter required <strong>storage in GB</strong>.</li>
+                <li>Choose a <strong>hosting type</strong> or select "Auto-Recommend" to get a suggestion based on traffic.</li>
+                <li>Select your <strong>SSL certificate</strong> type — most sites can use free Let's Encrypt; e-commerce may need EV SSL.</li>
+                <li>Choose an <strong>automated backup</strong> frequency based on how often your content changes.</li>
+                <li>Click <strong>Calculate Hosting Cost</strong> to see your total and a full tier comparison table.</li>
+              </ol>
+            </section>
+
+            <section class="content-section">
+              <h2>Example Scenario</h2>
+              <p>A growing e-commerce store with the following requirements:</p>
+              <ul>
+                <li>Traffic: <strong>30,000 visits/month</strong> → VPS recommended</li>
+                <li>Storage: <strong>25 GB</strong> (products, images, database)</li>
+                <li>Hosting: <strong>VPS mid-tier</strong> at $40/month</li>
+                <li>SSL: <strong>Wildcard SSL</strong> (covers subdomains) at $5/month</li>
+                <li>Backups: <strong>Daily automated</strong> at $5/month</li>
+              </ul>
+              <p><strong>Total: $50/month ($600/year)</strong>. Upgrading to dedicated hosting would cost ~$120-150/month but provides headroom for 10x traffic growth.</p>
+            </section>
+
+            <section class="faq-section">
+              <h2>Frequently Asked Questions</h2>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  What is the difference between shared, VPS, dedicated, and cloud hosting?
+                  <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                </button>
+                <div class="faq-answer">
+                  <p>Shared hosting ($3-15/mo) puts multiple sites on one server — cheap but limited. VPS ($20-80/mo) gives a dedicated server partition with better performance. Dedicated ($80-300/mo) provides an entire server. Cloud hosting scales on demand and suits variable or rapidly growing traffic.</p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  When should I upgrade from shared to VPS hosting?
+                  <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                </button>
+                <div class="faq-answer">
+                  <p>Upgrade to VPS when your site exceeds 10,000-20,000 monthly visits, experiences slow loading during peak traffic, needs custom server configuration, or requires higher uptime reliability for business-critical operations or e-commerce transactions.</p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  Does every website need an SSL certificate?
+                  <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                </button>
+                <div class="faq-answer">
+                  <p>Yes. Browsers mark sites without SSL as "Not Secure," which damages trust and SEO rankings. Free SSL via Let's Encrypt is adequate for most sites. E-commerce sites processing payments should use at minimum a Standard DV SSL; high-trust sites may benefit from EV SSL certificates.</p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  How often should I back up my website?
+                  <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                </button>
+                <div class="faq-answer">
+                  <p>For business websites, daily automated backups stored offsite are recommended. E-commerce or high-transaction sites should consider real-time or hourly backups. Static brochure sites may be fine with weekly backups. Always store backups in a separate location from your primary host.</p>
+                </div>
+              </div>
+            </section>
+
+            <section class="related-calculators">
+              <h2>Related Calculators</h2>
+              <div class="grid grid-3">
+                <a href="/pages/technology-cost-calculators/cloud-storage-cost-calculator/" class="card card-link">
+                  <h3>Cloud Storage Cost Calculator</h3>
+                  <p>Compare cloud storage costs across AWS S3, GCS, and Azure.</p>
+                </a>
+                <a href="/pages/technology-cost-calculators/saas-subscription-cost-calculator/" class="card card-link">
+                  <h3>SaaS Subscription Cost Calculator</h3>
+                  <p>Total all your SaaS tool spending in one place.</p>
+                </a>
+                <a href="/pages/technology-cost-calculators/software-licensing-cost-calculator/" class="card card-link">
+                  <h3>Software Licensing Cost Calculator</h3>
+                  <p>Compare perpetual vs subscription licensing and 3-year TCO.</p>
+                </a>
+                <a href="/pages/technology-cost-calculators/internet-speed-requirement-calculator/" class="card card-link">
+                  <h3>Internet Speed Requirement Calculator</h3>
+                  <p>Find the minimum Mbps for your household or office.</p>
+                </a>
+                <a href="/pages/business-calculators/pricing-calculator/" class="card card-link">
+                  <h3>Pricing Calculator</h3>
+                  <p>Calculate optimal product pricing from cost and margin.</p>
+                </a>
+              </div>
+            </section>
+
+            <div class="disclaimer">
+              <strong>Disclaimer:</strong> Hosting cost estimates are based on market-average pricing as of early 2026 and vary significantly by provider, plan features, contract length, and promotional pricing. Actual costs depend on your specific traffic patterns, server configuration, and chosen provider. Always obtain quotes directly from hosting providers before purchasing. Prices shown are for estimation and comparison purposes only.
+            </div>
+          </div>
+
+          <aside class="calc-page-sidebar">
+            <div class="ad-slot ad-slot-rectangle"></div>
+            <div class="sidebar-card">
+              <h3>Technology Cost Calculators</h3>
+              <a href="/pages/technology-cost-calculators/cloud-storage-cost-calculator/">Cloud Storage Cost</a>
+              <a href="/pages/technology-cost-calculators/data-usage-calculator/">Data Usage</a>
+              <a href="/pages/technology-cost-calculators/internet-speed-requirement-calculator/">Internet Speed Requirement</a>
+              <a href="/pages/technology-cost-calculators/saas-subscription-cost-calculator/">SaaS Subscription Cost</a>
+              <a href="/pages/technology-cost-calculators/software-licensing-cost-calculator/">Software Licensing Cost</a>
+              <a href="/pages/technology-cost-calculators/streaming-service-cost-calculator/">Streaming Service Cost</a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free online calculators for business, finance, tax, and investment decisions.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Calculators</h4>
+          <a href="/pages/business-calculators/">Business</a>
+          <a href="/pages/financial-calculators/">Financial</a>
+          <a href="/pages/tax-calculators/">Tax</a>
+          <a href="/pages/investment-calculators/">Investment</a>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <a href="/about/">About</a>
+          <a href="/blog/">Blog</a>
+          <a href="/contact/">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="/privacy/">Privacy Policy</a>
+          <a href="/terms/">Terms of Service</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/privacy/">Privacy</a>
+          <a href="/terms/">Terms</a>
+          <a href="/contact/">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    const HOSTING_TIERS = [
+      {
+        key: 'shared',
+        name: 'Shared Hosting',
+        basePrice: 8,        // mid-range shared
+        maxVisits: 25000,
+        bestFor: 'Blogs, personal sites, low-traffic business sites'
+      },
+      {
+        key: 'vps',
+        name: 'VPS Hosting',
+        basePrice: 40,
+        maxVisits: 100000,
+        bestFor: 'Growing businesses, e-commerce, 10K–100K visits/mo'
+      },
+      {
+        key: 'dedicated',
+        name: 'Dedicated Server',
+        basePrice: 150,
+        maxVisits: 500000,
+        bestFor: 'High-traffic sites, resource-intensive apps'
+      },
+      {
+        key: 'cloud',
+        name: 'Cloud Hosting',
+        basePrice: 50,       // base; scales with traffic
+        maxVisits: 9999999,
+        bestFor: 'Variable/rapidly growing traffic, high availability'
+      }
+    ];
+
+    const SSL_COSTS = { free: 0, standard: 0.83, wildcard: 5, ev: 16.67 };
+    const BACKUP_COSTS = { none: 0, weekly: 2, daily: 5, realtime: 15 };
+
+    function recommendTier(visits) {
+      if (visits <= 25000)  return 'shared';
+      if (visits <= 100000) return 'vps';
+      if (visits <= 500000) return 'dedicated';
+      return 'cloud';
+    }
+
+    function getStorageAddon(tier, storageGB) {
+      // Storage overage: shared includes ~10GB, VPS ~50GB, dedicated ~200GB
+      const included = { shared: 10, vps: 50, dedicated: 200, cloud: 100 };
+      const rate = { shared: 0.50, vps: 0.25, dedicated: 0.15, cloud: 0.023 };
+      const over = Math.max(0, storageGB - (included[tier] || 10));
+      return over * (rate[tier] || 0.25);
+    }
+
+    function calculateHosting() {
+      const visitVal  = parseInt(document.getElementById('monthly-visits').value);
+      const storageGB = CalcWise.parseNumber(document.getElementById('storage-gb').value);
+      const hostType  = document.getElementById('hosting-type').value;
+      const sslType   = document.getElementById('ssl').value;
+      const backupType= document.getElementById('backups').value;
+
+      if (storageGB <= 0) { alert('Please enter a storage amount.'); return; }
+
+      const sslCost    = SSL_COSTS[sslType] || 0;
+      const backupCost = BACKUP_COSTS[backupType] || 0;
+      const addonCost  = sslCost + backupCost;
+
+      const recTierKey = recommendTier(visitVal);
+      const selectedKey = hostType === 'recommended' ? recTierKey : hostType;
+      const selectedTier = HOSTING_TIERS.find(t => t.key === selectedKey);
+      const storageAddon = getStorageAddon(selectedKey, storageGB);
+      const baseMonthly = selectedTier.basePrice + storageAddon;
+      const totalMonthly = baseMonthly + addonCost;
+      const totalAnnual  = totalMonthly * 12;
+
+      CalcWise.setText('result-monthly', CalcWise.formatCurrency(totalMonthly));
+      CalcWise.setText('result-annual', CalcWise.formatCurrency(totalAnnual));
+      CalcWise.setText('result-tier', selectedTier.name);
+      CalcWise.setText('result-addons', CalcWise.formatCurrency(addonCost) + '/mo');
+
+      const tbody = document.getElementById('comparison-tbody');
+      tbody.innerHTML = HOSTING_TIERS.map(tier => {
+        const sa = getStorageAddon(tier.key, storageGB);
+        const base = tier.basePrice + sa;
+        const total = base + addonCost;
+        const isRec = tier.key === recTierKey;
+        const isSel = tier.key === selectedKey;
+        const rowBg = isSel ? 'background:var(--color-primary-light,#eff6ff);' : '';
+        return `<tr style="${rowBg}">
+          <td style="padding:var(--space-2) var(--space-3);border-bottom:1px solid var(--color-gray-100);">
+            ${tier.name}${isRec ? ' <span style="font-size:var(--text-xs);background:var(--color-success,#16a34a);color:white;padding:1px 6px;border-radius:var(--radius-full);">Recommended</span>' : ''}
+          </td>
+          <td style="padding:var(--space-2) var(--space-3);text-align:right;border-bottom:1px solid var(--color-gray-100);">${CalcWise.formatCurrency(base)}</td>
+          <td style="padding:var(--space-2) var(--space-3);text-align:right;border-bottom:1px solid var(--color-gray-100);font-weight:var(--font-semibold);">${CalcWise.formatCurrency(total)}</td>
+          <td style="padding:var(--space-2) var(--space-3);text-align:right;border-bottom:1px solid var(--color-gray-100);">${CalcWise.formatCurrency(total * 12)}</td>
+          <td style="padding:var(--space-2) var(--space-3);border-bottom:1px solid var(--color-gray-100);font-size:var(--text-xs);color:var(--color-gray-600);">${tier.bestFor}</td>
+        </tr>`;
+      }).join('');
+
+      CalcWise.showResults('results');
+    }
+
+    function resetHosting() {
+      document.getElementById('hosting-form').reset();
+      CalcWise.hideResults('results');
+    }
+  </script>
+</body>
+</html>

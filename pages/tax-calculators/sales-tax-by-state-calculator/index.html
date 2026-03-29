@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sales Tax by State Calculator | CalcWise</title>
+  <meta name="description" content="Calculate sales tax for all 50 US states. Find state sales tax rates, tax amount, and total price. Includes product category exemptions and state tax comparison.">
+  <link rel="canonical" href="https://calcwise.io/tax-calculators/sales-tax-by-state-calculator/">
+  <meta property="og:title" content="Sales Tax by State Calculator | CalcWise">
+  <meta property="og:description" content="Find sales tax rates for all 50 US states with product category exemptions and tax amount calculator.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcwise.io/tax-calculators/sales-tax-by-state-calculator/">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/"},
+      {"@type": "ListItem", "position": 2, "name": "Tax Calculators", "item": "https://calcwise.io/tax-calculators/"},
+      {"@type": "ListItem", "position": 3, "name": "Sales Tax by State Calculator"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Which states have no sales tax?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Five states have no state sales tax: Oregon, Montana, New Hampshire, Delaware, and Alaska. Note that some local jurisdictions in Alaska do collect local sales taxes."}
+      },
+      {
+        "@type": "Question",
+        "name": "What is the highest state sales tax rate in the US?",
+        "acceptedAnswer": {"@type": "Answer", "text": "As of 2026, California has the highest state sales tax rate at 7.25%, followed by Indiana, Mississippi, Rhode Island, and Tennessee at 7%."}
+      },
+      {
+        "@type": "Question",
+        "name": "Are groceries taxable in most states?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Most states exempt groceries from sales tax or tax them at a reduced rate. States that fully tax groceries include Alabama, Hawaii, Kansas, Mississippi, Oklahoma, and South Dakota."}
+      },
+      {
+        "@type": "Question",
+        "name": "Is online shopping subject to sales tax?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Yes, following the 2018 South Dakota v. Wayfair Supreme Court decision, states can require online retailers to collect sales tax even without a physical presence in the state. Most major online retailers now collect sales tax in all applicable states."}
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="logo">
+        <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav">
+        <a href="/">Home</a>
+        <a href="/pages/business-calculators/">Business</a>
+        <a href="/pages/financial-calculators/">Financial</a>
+        <a href="/pages/tax-calculators/" aria-current="page">Tax</a>
+        <a href="/pages/investment-calculators/">Investment</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav">
+      <a href="/">Home</a>
+      <a href="/pages/business-calculators/">Business Calculators</a>
+      <a href="/pages/financial-calculators/">Financial Calculators</a>
+      <a href="/pages/tax-calculators/">Tax Calculators</a>
+      <a href="/pages/investment-calculators/">Investment Calculators</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/pages/tax-calculators/">Tax Calculators</a></li>
+          <li><span aria-current="page">Sales Tax by State Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="calc-page-layout">
+          <div class="calc-page-main">
+            <h1>Sales Tax by State Calculator</h1>
+            <p class="subtitle" style="font-size:var(--text-lg);color:var(--color-gray-600);margin-bottom:var(--space-8);line-height:var(--leading-relaxed);">Calculate the sales tax for any purchase in all 50 US states. Enter your purchase price, select a state, and choose a product category to see the applicable tax rate, tax amount, and total price.</p>
+
+            <div class="calc-container">
+              <div class="calc-header">
+                <h2>Sales Tax by State Calculator</h2>
+                <p>Find the sales tax rate and amount for any state</p>
+              </div>
+              <div class="calc-body">
+                <form id="calc-form" onsubmit="return false;">
+                  <div class="form-group">
+                    <label class="form-label" for="purchase-price">Purchase Price</label>
+                    <div class="input-prefix">
+                      <span class="prefix">$</span>
+                      <input type="number" id="purchase-price" class="form-input" placeholder="100.00" min="0" step="0.01">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="state">State</label>
+                    <select id="state" class="form-select">
+                      <option value="AL">Alabama — 4%</option>
+                      <option value="AK">Alaska — 0%</option>
+                      <option value="AZ">Arizona — 5.6%</option>
+                      <option value="AR">Arkansas — 6.5%</option>
+                      <option value="CA">California — 7.25%</option>
+                      <option value="CO">Colorado — 2.9%</option>
+                      <option value="CT">Connecticut — 6.35%</option>
+                      <option value="DE">Delaware — 0%</option>
+                      <option value="FL">Florida — 6%</option>
+                      <option value="GA">Georgia — 4%</option>
+                      <option value="HI">Hawaii — 4%</option>
+                      <option value="ID">Idaho — 6%</option>
+                      <option value="IL">Illinois — 6.25%</option>
+                      <option value="IN">Indiana — 7%</option>
+                      <option value="IA">Iowa — 6%</option>
+                      <option value="KS">Kansas — 6.5%</option>
+                      <option value="KY">Kentucky — 6%</option>
+                      <option value="LA">Louisiana — 4.45%</option>
+                      <option value="ME">Maine — 5.5%</option>
+                      <option value="MD">Maryland — 6%</option>
+                      <option value="MA">Massachusetts — 6.25%</option>
+                      <option value="MI">Michigan — 6%</option>
+                      <option value="MN">Minnesota — 6.875%</option>
+                      <option value="MS">Mississippi — 7%</option>
+                      <option value="MO">Missouri — 4.225%</option>
+                      <option value="MT">Montana — 0%</option>
+                      <option value="NE">Nebraska — 5.5%</option>
+                      <option value="NV">Nevada — 6.85%</option>
+                      <option value="NH">New Hampshire — 0%</option>
+                      <option value="NJ">New Jersey — 6.625%</option>
+                      <option value="NM">New Mexico — 5.125%</option>
+                      <option value="NY">New York — 4%</option>
+                      <option value="NC">North Carolina — 4.75%</option>
+                      <option value="ND">North Dakota — 5%</option>
+                      <option value="OH">Ohio — 5.75%</option>
+                      <option value="OK">Oklahoma — 4.5%</option>
+                      <option value="OR">Oregon — 0%</option>
+                      <option value="PA">Pennsylvania — 6%</option>
+                      <option value="RI">Rhode Island — 7%</option>
+                      <option value="SC">South Carolina — 6%</option>
+                      <option value="SD">South Dakota — 4.5%</option>
+                      <option value="TN">Tennessee — 7%</option>
+                      <option value="TX">Texas — 6.25%</option>
+                      <option value="UT">Utah — 4.85%</option>
+                      <option value="VT">Vermont — 6%</option>
+                      <option value="VA">Virginia — 5.3%</option>
+                      <option value="WA">Washington — 6.5%</option>
+                      <option value="WV">West Virginia — 6%</option>
+                      <option value="WI">Wisconsin — 5%</option>
+                      <option value="WY">Wyoming — 4%</option>
+                      <option value="DC">Washington DC — 6%</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="category">Product Category</label>
+                    <select id="category" class="form-select">
+                      <option value="general">General Merchandise (taxable)</option>
+                      <option value="grocery">Groceries / Unprepared Food</option>
+                      <option value="prescription">Prescription Drugs</option>
+                      <option value="clothing">Clothing</option>
+                    </select>
+                  </div>
+                  <div class="calc-actions">
+                    <button type="button" class="btn btn-calculate btn-full" onclick="calculateStateTax()">Calculate Sales Tax</button>
+                    <button type="button" class="btn btn-reset" onclick="resetForm()">Reset</button>
+                  </div>
+                </form>
+
+                <div id="results" class="calc-results hidden">
+                  <div class="result-primary">
+                    <div class="result-label">Sales Tax Amount</div>
+                    <div class="result-value" id="result-tax-amount">$0</div>
+                  </div>
+                  <div class="result-grid">
+                    <div class="result-item">
+                      <div class="result-label">State Tax Rate</div>
+                      <div class="result-value" id="result-rate">0%</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Category Status</div>
+                      <div class="result-value" id="result-category">Taxable</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Pre-Tax Price</div>
+                      <div class="result-value" id="result-pretax">$0</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Total Price</div>
+                      <div class="result-value" id="result-total">$0</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="ad-slot ad-slot-leaderboard"></div>
+
+            <section class="content-section">
+              <h2>State Sales Tax Formula</h2>
+              <div class="formula-box">
+                <div class="formula-label">Tax Calculation</div>
+                Tax Amount = Purchase Price × Effective State Rate<br>
+                Total Price = Purchase Price + Tax Amount
+              </div>
+              <p style="margin-top:var(--space-4);">Note: State rates shown are base state rates. Most localities add county/city taxes on top. The combined average state + local rate is typically 1–3% higher than the state rate shown.</p>
+            </section>
+
+            <section class="content-section">
+              <h2>How to Use This Calculator</h2>
+              <ol>
+                <li>Enter the <strong>purchase price</strong> before tax.</li>
+                <li>Select the <strong>state</strong> where the purchase is made.</li>
+                <li>Select the <strong>product category</strong> to apply the correct exemption or reduced rate.</li>
+                <li>Click <strong>Calculate Sales Tax</strong>.</li>
+              </ol>
+            </section>
+
+            <section class="content-section">
+              <h2>Example Scenario</h2>
+              <p>Buying a $250 jacket in California:</p>
+              <ul>
+                <li>California State Rate: <strong>7.25%</strong></li>
+                <li>Tax: $250 × 7.25% = <strong>$18.13</strong></li>
+                <li>Total: $250 + $18.13 = <strong>$268.13</strong></li>
+                <li>Note: Add local taxes (e.g., Los Angeles adds ~2.25%) for the full combined rate.</li>
+              </ul>
+            </section>
+
+            <section class="faq-section">
+              <h2>Frequently Asked Questions</h2>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">Which states have no sales tax?<svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg></button>
+                <div class="faq-answer"><p>Five states have no state sales tax: Oregon, Montana, New Hampshire, Delaware, and Alaska (though some Alaska localities do collect local sales taxes).</p></div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">What is the highest state sales tax rate in the US?<svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg></button>
+                <div class="faq-answer"><p>California has the highest state sales tax rate at 7.25%, followed by Indiana, Mississippi, Rhode Island, and Tennessee at 7%.</p></div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">Are groceries taxable in most states?<svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 011-1z"/></svg></button>
+                <div class="faq-answer"><p>Most states exempt groceries or tax them at a reduced rate. States that fully tax groceries include Alabama, Hawaii, Kansas, Mississippi, Oklahoma, and South Dakota.</p></div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">Is online shopping subject to sales tax?<svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg></button>
+                <div class="faq-answer"><p>Yes. Following South Dakota v. Wayfair (2018), states can require online retailers to collect sales tax even without a physical presence. Most major retailers now collect tax in all applicable states.</p></div>
+              </div>
+            </section>
+
+            <section class="related-calculators">
+              <h2>Related Calculators</h2>
+              <div class="grid grid-3">
+                <a href="/pages/tax-calculators/sales-tax-by-city-calculator/" class="card card-link">
+                  <h3>Sales Tax by City Calculator</h3>
+                  <p>Find combined state + local sales tax for major cities.</p>
+                </a>
+                <a href="/pages/business-calculators/sales-tax-calculator/" class="card card-link">
+                  <h3>Sales Tax Calculator</h3>
+                  <p>Calculate sales tax for any custom rate.</p>
+                </a>
+                <a href="/pages/tax-calculators/after-tax-income-calculator/" class="card card-link">
+                  <h3>After-Tax Income Calculator</h3>
+                  <p>Calculate your net take-home after all taxes.</p>
+                </a>
+              </div>
+            </section>
+
+            <div class="disclaimer">
+              <strong>Tax Disclaimer:</strong> State tax rates shown are base state rates and may not include local, county, or special district taxes. Rates are estimates and subject to change. Category exemptions vary by state and may have exceptions. This calculator is for informational purposes only and does not constitute tax advice. Always verify current rates with your state's department of revenue. &copy; 2026 CalcWise.
+            </div>
+          </div>
+
+          <aside class="calc-page-sidebar">
+            <div class="ad-slot ad-slot-rectangle"></div>
+            <div class="sidebar-card">
+              <h3>Tax Calculators</h3>
+              <a href="/pages/tax-calculators/sales-tax-by-city-calculator/">Sales Tax by City</a>
+              <a href="/pages/business-calculators/sales-tax-calculator/">Sales Tax Calculator</a>
+              <a href="/pages/tax-calculators/state-income-tax-calculator/">State Income Tax</a>
+              <a href="/pages/tax-calculators/after-tax-income-calculator/">After-Tax Income</a>
+              <a href="/pages/tax-calculators/property-tax-deduction-calculator/">Property Tax Deduction</a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free online calculators for business, finance, tax, and investment decisions.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Calculators</h4>
+          <a href="/pages/business-calculators/">Business</a>
+          <a href="/pages/financial-calculators/">Financial</a>
+          <a href="/pages/tax-calculators/">Tax</a>
+          <a href="/pages/investment-calculators/">Investment</a>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <a href="/about/">About</a>
+          <a href="/blog/">Blog</a>
+          <a href="/contact/">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="/privacy/">Privacy Policy</a>
+          <a href="/terms/">Terms of Service</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/privacy/">Privacy</a>
+          <a href="/terms/">Terms</a>
+          <a href="/contact/">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    // [stateRate, groceryRate (0=exempt), prescriptionRate (always 0), clothingRate]
+    const STATE_RATES = {
+      AL:{rate:0.04,grocery:0.04,rx:0,clothing:0.04},
+      AK:{rate:0,grocery:0,rx:0,clothing:0},
+      AZ:{rate:0.056,grocery:0,rx:0,clothing:0.056},
+      AR:{rate:0.065,grocery:0.015,rx:0,clothing:0.065},
+      CA:{rate:0.0725,grocery:0,rx:0,clothing:0.0725},
+      CO:{rate:0.029,grocery:0,rx:0,clothing:0.029},
+      CT:{rate:0.0635,grocery:0,rx:0,clothing:0.0635},
+      DE:{rate:0,grocery:0,rx:0,clothing:0},
+      FL:{rate:0.06,grocery:0,rx:0,clothing:0.06},
+      GA:{rate:0.04,grocery:0,rx:0,clothing:0.04},
+      HI:{rate:0.04,grocery:0.04,rx:0,clothing:0.04},
+      ID:{rate:0.06,grocery:0,rx:0,clothing:0.06},
+      IL:{rate:0.0625,grocery:0.01,rx:0,clothing:0.0625},
+      IN:{rate:0.07,grocery:0,rx:0,clothing:0.07},
+      IA:{rate:0.06,grocery:0,rx:0,clothing:0.06},
+      KS:{rate:0.065,grocery:0.065,rx:0,clothing:0.065},
+      KY:{rate:0.06,grocery:0,rx:0,clothing:0.06},
+      LA:{rate:0.0445,grocery:0,rx:0,clothing:0.0445},
+      ME:{rate:0.055,grocery:0,rx:0,clothing:0.055},
+      MD:{rate:0.06,grocery:0,rx:0,clothing:0.06},
+      MA:{rate:0.0625,grocery:0,rx:0,clothing:0},
+      MI:{rate:0.06,grocery:0,rx:0,clothing:0.06},
+      MN:{rate:0.06875,grocery:0,rx:0,clothing:0},
+      MS:{rate:0.07,grocery:0.07,rx:0,clothing:0.07},
+      MO:{rate:0.04225,grocery:0.01225,rx:0,clothing:0.04225},
+      MT:{rate:0,grocery:0,rx:0,clothing:0},
+      NE:{rate:0.055,grocery:0,rx:0,clothing:0.055},
+      NV:{rate:0.0685,grocery:0,rx:0,clothing:0.0685},
+      NH:{rate:0,grocery:0,rx:0,clothing:0},
+      NJ:{rate:0.06625,grocery:0,rx:0,clothing:0},
+      NM:{rate:0.05125,grocery:0,rx:0,clothing:0.05125},
+      NY:{rate:0.04,grocery:0,rx:0,clothing:0},
+      NC:{rate:0.0475,grocery:0.02,rx:0,clothing:0.0475},
+      ND:{rate:0.05,grocery:0,rx:0,clothing:0.05},
+      OH:{rate:0.0575,grocery:0,rx:0,clothing:0.0575},
+      OK:{rate:0.045,grocery:0.045,rx:0,clothing:0.045},
+      OR:{rate:0,grocery:0,rx:0,clothing:0},
+      PA:{rate:0.06,grocery:0,rx:0,clothing:0},
+      RI:{rate:0.07,grocery:0,rx:0,clothing:0.07},
+      SC:{rate:0.06,grocery:0,rx:0,clothing:0.06},
+      SD:{rate:0.045,grocery:0.045,rx:0,clothing:0.045},
+      TN:{rate:0.07,grocery:0.05,rx:0,clothing:0.07},
+      TX:{rate:0.0625,grocery:0,rx:0,clothing:0.0625},
+      UT:{rate:0.0485,grocery:0.03,rx:0,clothing:0.0485},
+      VT:{rate:0.06,grocery:0,rx:0,clothing:0.06},
+      VA:{rate:0.053,grocery:0.025,rx:0,clothing:0.053},
+      WA:{rate:0.065,grocery:0,rx:0,clothing:0.065},
+      WV:{rate:0.06,grocery:0,rx:0,clothing:0.06},
+      WI:{rate:0.05,grocery:0,rx:0,clothing:0.05},
+      WY:{rate:0.04,grocery:0,rx:0,clothing:0.04},
+      DC:{rate:0.06,grocery:0,rx:0,clothing:0.06}
+    };
+
+    function calculateStateTax() {
+      const price = CalcWise.parseNumber(document.getElementById('purchase-price').value);
+      const stateCode = document.getElementById('state').value;
+      const category = document.getElementById('category').value;
+
+      if (price <= 0) { alert('Please enter a purchase price.'); return; }
+
+      const s = STATE_RATES[stateCode];
+      let rate = s.rate, categoryLabel = 'Taxable';
+
+      if (category === 'grocery') {
+        rate = s.grocery;
+        categoryLabel = rate === 0 ? 'Exempt' : rate === s.rate ? 'Taxable (not exempt)' : 'Reduced rate';
+      } else if (category === 'prescription') {
+        rate = 0;
+        categoryLabel = 'Exempt (all states)';
+      } else if (category === 'clothing') {
+        rate = s.clothing;
+        categoryLabel = rate === 0 ? 'Exempt' : 'Taxable';
+      }
+
+      const taxAmount = price * rate;
+      const totalPrice = price + taxAmount;
+
+      CalcWise.setText('result-tax-amount', CalcWise.formatCurrency(taxAmount));
+      CalcWise.setText('result-rate', (rate * 100).toFixed(3) + '%');
+      CalcWise.setText('result-category', categoryLabel);
+      CalcWise.setText('result-pretax', CalcWise.formatCurrency(price));
+      CalcWise.setText('result-total', CalcWise.formatCurrency(totalPrice));
+      CalcWise.showResults('results');
+    }
+
+    function resetForm() {
+      document.getElementById('calc-form').reset();
+      CalcWise.hideResults('results');
+    }
+
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', !expanded);
+        btn.nextElementSibling.style.display = expanded ? 'none' : 'block';
+      });
+    });
+    document.querySelectorAll('.faq-answer').forEach(a => a.style.display = 'none');
+
+    const toggle = document.querySelector('.mobile-menu-toggle');
+    const mobileNav = document.querySelector('.mobile-nav');
+    if (toggle && mobileNav) {
+      toggle.addEventListener('click', () => {
+        const open = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', !open);
+        mobileNav.style.display = open ? 'none' : 'block';
+      });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mortgage Calculator - Calculate Your Monthly Payment | CalcWise</title>
+  <meta name="description" content="Calculate your monthly mortgage payment, total interest, and total cost with our free mortgage calculator. Compare 15-year and 30-year loan terms instantly.">
+  <link rel="canonical" href="https://calcwise.com/real-estate-calculators/mortgage-calculator/">
+  <meta property="og:title" content="Mortgage Calculator - Calculate Your Monthly Payment | CalcWise">
+  <meta property="og:description" content="Calculate your monthly mortgage payment, total interest, and total cost with our free mortgage calculator.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcwise.com/real-estate-calculators/mortgage-calculator/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Mortgage Calculator - Calculate Your Monthly Payment | CalcWise">
+  <meta name="twitter:description" content="Calculate your monthly mortgage payment, total interest, and total cost with our free mortgage calculator.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.com/"},
+      {"@type": "ListItem", "position": 2, "name": "Real Estate Calculators", "item": "https://calcwise.com/real-estate-calculators/"},
+      {"@type": "ListItem", "position": 3, "name": "Mortgage Calculator"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type": "Question", "name": "How is my monthly mortgage payment calculated?", "acceptedAnswer": {"@type": "Answer", "text": "Your monthly mortgage payment is calculated using the formula M = P[r(1+r)^n]/[(1+r)^n-1], where P is the loan principal, r is the monthly interest rate, and n is the total number of payments. This formula accounts for both principal repayment and interest charges spread evenly over the life of the loan."}},
+      {"@type": "Question", "name": "What is the difference between a 15-year and 30-year mortgage?", "acceptedAnswer": {"@type": "Answer", "text": "A 15-year mortgage has higher monthly payments but significantly lower total interest costs. A 30-year mortgage offers lower monthly payments, making it more affordable month-to-month, but you pay substantially more in interest over the life of the loan. For example, on a $300,000 loan at 6.5%, a 15-year term costs about $130,000 in interest while a 30-year term costs roughly $383,000."}},
+      {"@type": "Question", "name": "Does this calculator include property taxes and insurance?", "acceptedAnswer": {"@type": "Answer", "text": "This calculator focuses on the principal and interest portion of your mortgage payment. Your actual monthly housing cost will also include property taxes, homeowners insurance, and possibly private mortgage insurance (PMI) if your down payment is less than 20%. Use our Property Tax Calculator and Down Payment Calculator for those estimates."}},
+      {"@type": "Question", "name": "How much should I put as a down payment?", "acceptedAnswer": {"@type": "Answer", "text": "The traditional recommendation is 20% to avoid private mortgage insurance (PMI). However, many loan programs allow as little as 3-5% down. A larger down payment means a smaller loan, lower monthly payments, and less total interest paid. Use our Down Payment Calculator to plan your savings strategy."}},
+      {"@type": "Question", "name": "What interest rate should I use?", "acceptedAnswer": {"@type": "Answer", "text": "Use the rate quoted by your lender or check current average rates from sources like Freddie Mac. Rates vary based on your credit score, loan type, down payment, and market conditions. Even a small difference in rate can significantly affect your total cost over the life of the loan."}}
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="logo">
+        <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/" aria-current="page">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/business-calculators/">Business</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/business-calculators/">Business Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main class="container page-content">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li><a href="/real-estate-calculators/">Real Estate Calculators</a></li>
+        <li><span aria-current="page">Mortgage Calculator</span></li>
+      </ol>
+    </nav>
+
+    <div class="article-content">
+      <h1>Mortgage Calculator</h1>
+      <p>Estimate your monthly mortgage payment based on the home price, down payment, interest rate, and loan term. This calculator helps you understand the true cost of homeownership and compare different loan scenarios before you commit.</p>
+
+      <div class="ad-slot" aria-hidden="true"></div>
+
+      <div class="calc-container">
+        <div class="calc-header">
+          <h2>Calculate Your Monthly Payment</h2>
+          <p>Enter your loan details below</p>
+        </div>
+        <div class="calc-body">
+          <form id="mortgage-form">
+            <div class="form-group">
+              <label class="form-label" for="home-price">Home Price</label>
+              <div class="input-prefix">
+                <span class="prefix">$</span>
+                <input type="number" id="home-price" name="homePrice" class="form-input" placeholder="350,000" required min="0" step="1000">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="down-payment">Down Payment <span class="form-hint">(%)</span></label>
+              <div class="input-suffix">
+                <input type="number" id="down-payment" name="downPayment" class="form-input" placeholder="20" required min="0" max="100" step="0.5" value="20">
+                <span class="suffix">%</span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="interest-rate">Interest Rate <span class="form-hint">(annual %)</span></label>
+              <div class="input-suffix">
+                <input type="number" id="interest-rate" name="interestRate" class="form-input" placeholder="6.5" required min="0" max="25" step="0.125">
+                <span class="suffix">%</span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="loan-term">Loan Term</label>
+              <select id="loan-term" name="loanTerm" class="form-select">
+                <option value="30">30 Years</option>
+                <option value="15">15 Years</option>
+                <option value="20">20 Years</option>
+                <option value="10">10 Years</option>
+              </select>
+            </div>
+            <div class="calc-actions">
+              <button type="button" class="btn btn-calculate btn-full" onclick="calculateMortgage()">Calculate Payment</button>
+              <button type="reset" class="btn btn-reset">Reset</button>
+            </div>
+          </form>
+
+          <div id="mortgage-results" class="calc-results hidden">
+            <div class="result-primary">
+              <div class="result-label">Monthly Payment</div>
+              <div class="result-value" id="result-monthly"></div>
+            </div>
+            <div class="result-grid result-grid-3">
+              <div class="result-item">
+                <div class="result-label">Loan Amount</div>
+                <div class="result-value" id="result-loan"></div>
+              </div>
+              <div class="result-item">
+                <div class="result-label">Total Interest</div>
+                <div class="result-value" id="result-interest"></div>
+              </div>
+              <div class="result-item">
+                <div class="result-label">Total Cost</div>
+                <div class="result-value" id="result-total"></div>
+              </div>
+            </div>
+            <div class="result-grid" style="margin-top: var(--space-4);">
+              <div class="result-item">
+                <div class="result-label">Down Payment</div>
+                <div class="result-value" id="result-down"></div>
+              </div>
+              <div class="result-item">
+                <div class="result-label">Interest / Principal</div>
+                <div class="result-value" id="result-ratio"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ad-slot" aria-hidden="true"></div>
+
+      <section class="content-section">
+        <h2>How the Formula Works</h2>
+        <p>The mortgage payment formula calculates the fixed monthly payment needed to fully amortize a loan over a set period. The standard formula is:</p>
+        <div class="formula-box">
+          <div class="formula-label">Monthly Payment Formula</div>
+          M = P [ r(1 + r)^n ] / [ (1 + r)^n - 1 ]
+        </div>
+        <p>Where <strong>M</strong> is the monthly payment, <strong>P</strong> is the principal (loan amount), <strong>r</strong> is the monthly interest rate (annual rate divided by 12), and <strong>n</strong> is the total number of payments (years multiplied by 12). Each payment covers both interest on the remaining balance and a portion of the principal.</p>
+      </section>
+
+      <section class="content-section">
+        <h2>How to Use This Calculator</h2>
+        <ol>
+          <li>Enter the total home price you are considering.</li>
+          <li>Set your down payment as a percentage of the home price. The default is 20%, which avoids private mortgage insurance.</li>
+          <li>Enter the annual interest rate offered by your lender or a current average rate.</li>
+          <li>Select your preferred loan term. A 30-year term has lower monthly payments, while a 15-year term saves significantly on interest.</li>
+          <li>Click "Calculate Payment" to see your estimated monthly payment, total interest, and total cost.</li>
+        </ol>
+      </section>
+
+      <section class="content-section">
+        <h2>Example Scenario</h2>
+        <p>Suppose you are buying a home for <strong>$400,000</strong> with a <strong>20% down payment</strong> ($80,000), leaving a loan amount of $320,000. At a <strong>6.5% interest rate</strong> on a <strong>30-year term</strong>, your monthly payment would be approximately <strong>$2,023</strong>. Over the life of the loan, you would pay about <strong>$408,274 in total interest</strong>, making the total cost of the home around <strong>$808,274</strong> including your down payment.</p>
+        <p>If you chose a 15-year term instead, your monthly payment would jump to about <strong>$2,787</strong>, but your total interest drops to roughly <strong>$181,703</strong> -- saving you over $226,000 in interest.</p>
+      </section>
+
+      <section class="faq-section">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            How is my monthly mortgage payment calculated?
+            <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Your monthly mortgage payment is calculated using the formula M = P[r(1+r)^n]/[(1+r)^n-1], where P is the loan principal, r is the monthly interest rate, and n is the total number of payments. This formula accounts for both principal repayment and interest charges spread evenly over the life of the loan.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            What is the difference between a 15-year and 30-year mortgage?
+            <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>A 15-year mortgage has higher monthly payments but significantly lower total interest costs. A 30-year mortgage offers lower monthly payments, making it more affordable month-to-month, but you pay substantially more in interest over the life of the loan. For example, on a $300,000 loan at 6.5%, a 15-year term costs about $130,000 in interest while a 30-year term costs roughly $383,000.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Does this calculator include property taxes and insurance?
+            <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>This calculator focuses on the principal and interest portion of your mortgage payment. Your actual monthly housing cost will also include property taxes, homeowners insurance, and possibly private mortgage insurance (PMI) if your down payment is less than 20%. Use our Property Tax Calculator and Down Payment Calculator for those estimates.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            How much should I put as a down payment?
+            <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>The traditional recommendation is 20% to avoid private mortgage insurance (PMI). However, many loan programs allow as little as 3-5% down. A larger down payment means a smaller loan, lower monthly payments, and less total interest paid. Use our Down Payment Calculator to plan your savings strategy.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            What interest rate should I use?
+            <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Use the rate quoted by your lender or check current average rates from sources like Freddie Mac. Rates vary based on your credit score, loan type, down payment, and market conditions. Even a small difference in rate can significantly affect your total cost over the life of the loan.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="related-calculators">
+        <h2>Related Calculators</h2>
+        <div class="grid grid-3">
+          <a href="/real-estate-calculators/affordability-calculator/" class="card card-link">
+            <h3>Affordability Calculator</h3>
+            <p>Find out how much house you can afford based on your income.</p>
+          </a>
+          <a href="/real-estate-calculators/refinance-calculator/" class="card card-link">
+            <h3>Refinance Calculator</h3>
+            <p>See if refinancing could lower your monthly payment.</p>
+          </a>
+          <a href="/real-estate-calculators/down-payment-calculator/" class="card card-link">
+            <h3>Down Payment Calculator</h3>
+            <p>Plan your down payment savings and estimate PMI.</p>
+          </a>
+          <a href="/real-estate-calculators/closing-cost-calculator/" class="card card-link">
+            <h3>Closing Cost Calculator</h3>
+            <p>Estimate the fees and costs due at closing.</p>
+          </a>
+          <a href="/real-estate-calculators/property-tax-calculator/" class="card card-link">
+            <h3>Property Tax Calculator</h3>
+            <p>Calculate your annual and monthly property tax.</p>
+          </a>
+        </div>
+      </section>
+
+      <div class="disclaimer">
+        <strong>Disclaimer:</strong> This calculator provides estimates for informational purposes only. Actual mortgage payments may vary based on your lender, credit score, loan type, and other factors. This tool does not constitute financial advice. Consult with a qualified mortgage professional before making any financial decisions.
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free, accurate financial calculators to help you make smarter money decisions.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Real Estate</h4>
+          <a href="/real-estate-calculators/mortgage-calculator/">Mortgage Calculator</a>
+          <a href="/real-estate-calculators/affordability-calculator/">Affordability Calculator</a>
+          <a href="/real-estate-calculators/refinance-calculator/">Refinance Calculator</a>
+          <a href="/real-estate-calculators/rent-vs-buy-calculator/">Rent vs Buy Calculator</a>
+        </div>
+        <div class="footer-col">
+          <h4>Finance</h4>
+          <a href="/finance-calculators/">All Finance Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about.html">About</a>
+          <a href="/contact.html">Contact</a>
+          <a href="/privacy.html">Privacy Policy</a>
+          <a href="/terms.html">Terms of Service</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 CalcWise. All rights reserved.</span>
+        <div class="footer-links">
+          <a href="/privacy.html">Privacy</a>
+          <a href="/terms.html">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateMortgage() {
+      if (!CalcWise.validateForm('mortgage-form')) return;
+
+      const v = CalcWise.getFormValues('mortgage-form');
+      const downPaymentAmount = v.homePrice * (v.downPayment / 100);
+      const principal = v.homePrice - downPaymentAmount;
+      const years = v.loanTerm;
+
+      const loan = CalcWise.loanCalculation(principal, v.interestRate, years);
+
+      CalcWise.setText('result-monthly', CalcWise.formatCurrency(loan.monthlyPayment));
+      CalcWise.setText('result-loan', CalcWise.formatCurrency(principal));
+      CalcWise.setText('result-interest', CalcWise.formatCurrency(loan.totalInterest));
+      CalcWise.setText('result-total', CalcWise.formatCurrency(loan.totalPayments + downPaymentAmount));
+      CalcWise.setText('result-down', CalcWise.formatCurrency(downPaymentAmount));
+
+      const ratio = principal > 0 ? ((loan.totalInterest / principal) * 100).toFixed(1) + '%' : '0%';
+      CalcWise.setText('result-ratio', ratio);
+
+      CalcWise.showResults('mortgage-results');
+    }
+  </script>
+</body>
+</html>

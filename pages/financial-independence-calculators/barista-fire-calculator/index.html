@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Barista FIRE Calculator - CalcWise</title>
+  <meta name="description" content="Calculate your Barista FIRE number — the reduced portfolio needed when combined with part-time income. Find your time to Barista FIRE and how much of expenses your part-time work covers.">
+  <link rel="canonical" href="https://calcwise.io/financial-independence-calculators/barista-fire-calculator/">
+  <meta property="og:title" content="Barista FIRE Calculator - CalcWise">
+  <meta property="og:description" content="How much do you need for Barista FIRE? Calculate the reduced portfolio size when part-time income covers part of your retirement expenses.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcwise.io/financial-independence-calculators/barista-fire-calculator/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Barista FIRE Calculator - CalcWise">
+  <meta name="twitter:description" content="Calculate your Barista FIRE number and timeline. Find out how part-time retirement income shrinks the portfolio you need for financial independence.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/"},
+      {"@type": "ListItem", "position": 2, "name": "Financial Independence Calculators", "item": "https://calcwise.io/financial-independence-calculators/"},
+      {"@type": "ListItem", "position": 3, "name": "Barista FIRE Calculator"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is Barista FIRE?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Barista FIRE is a semi-retirement strategy where you work a low-stress part-time job (originally inspired by barista positions at coffee shops) to cover part of your living expenses. This allows you to retire from your career with a smaller investment portfolio since the portfolio only needs to fund the gap between your expenses and your part-time income."}
+      },
+      {
+        "@type": "Question",
+        "name": "How is the Barista FIRE number calculated?",
+        "acceptedAnswer": {"@type": "Answer", "text": "The Barista FIRE number is the portfolio needed to fund the gap between your annual expenses and your part-time income. Formula: Barista FIRE Number = (Annual Expenses - Annual Part-time Income) / Safe Withdrawal Rate. Since part-time income covers some expenses, you need a smaller portfolio than standard FIRE."}
+      },
+      {
+        "@type": "Question",
+        "name": "What counts as Barista FIRE income?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Any part-time or reduced-hours income counts — retail, food service, consulting, freelancing, seasonal work, or a passion-based side business. The key is that the income is low-pressure, flexible, and chosen by you rather than required for financial survival. Health benefits are a common bonus."}
+      },
+      {
+        "@type": "Question",
+        "name": "When should part-time income stop being factored in?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Part-time income is typically factored in during the early semi-retirement years, often until Social Security or traditional retirement account age (59½ in the US). As you fully retire, the portfolio must eventually cover all expenses. Some Barista FIRE plans transition to full retirement as the portfolio grows."}
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="logo">
+        <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav">
+        <a href="/">Home</a>
+        <a href="/pages/finance-calculators/">Finance</a>
+        <a href="/pages/financial-independence-calculators/" aria-current="page">FI Calculators</a>
+        <a href="/pages/investment-calculators/">Investment</a>
+        <a href="/pages/tax-calculators/">Tax</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav">
+      <a href="/">Home</a>
+      <a href="/pages/finance-calculators/">Finance Calculators</a>
+      <a href="/pages/financial-independence-calculators/">FI Calculators</a>
+      <a href="/pages/investment-calculators/">Investment Calculators</a>
+      <a href="/pages/tax-calculators/">Tax Calculators</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li><a href="/pages/financial-independence-calculators/">Financial Independence Calculators</a></li>
+        <li><span aria-current="page">Barista FIRE Calculator</span></li>
+      </ol>
+    </nav>
+
+    <div class="page-content">
+      <div class="article-content">
+        <h1>Barista FIRE Calculator</h1>
+        <p>Barista FIRE lets you retire early from your career with a smaller portfolio by supplementing investment income with part-time work. Your portfolio only needs to cover the gap between your retirement expenses and your part-time income. This calculator finds your Barista FIRE number, your timeline to reach it, and exactly what percentage of your expenses your part-time income covers — making early retirement achievable years sooner than standard FIRE.</p>
+
+        <div class="ad-slot ad-slot-leaderboard"></div>
+
+        <div class="calc-container">
+          <div class="calc-header">
+            <h2>Your Barista FIRE Number</h2>
+            <p>Calculate the reduced portfolio needed with part-time retirement income</p>
+          </div>
+          <div class="calc-body">
+            <form id="bfire-form">
+              <div class="result-grid result-grid-2" style="gap: var(--space-4);">
+                <div class="form-group">
+                  <label class="form-label" for="currentAge">Current Age</label>
+                  <input type="number" id="currentAge" name="currentAge" class="form-input" placeholder="35" min="18" max="70" step="1" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="currentSavings">Current Savings</label>
+                  <div class="input-prefix"><span class="prefix">$</span>
+                    <input type="number" id="currentSavings" name="currentSavings" class="form-input" placeholder="200000" min="0" step="1000" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="retirementExpenses">Annual Retirement Expenses</label>
+                  <div class="input-prefix"><span class="prefix">$</span>
+                    <input type="number" id="retirementExpenses" name="retirementExpenses" class="form-input" placeholder="55000" min="1000" step="1000" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="partTimeIncome">Annual Part-Time Income in Retirement</label>
+                  <div class="input-prefix"><span class="prefix">$</span>
+                    <input type="number" id="partTimeIncome" name="partTimeIncome" class="form-input" placeholder="20000" min="0" step="1000" required>
+                  </div>
+                  <p class="form-hint">Income from part-time work, freelancing, or side income</p>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="monthlySavings">Current Monthly Savings</label>
+                  <div class="input-prefix"><span class="prefix">$</span>
+                    <input type="number" id="monthlySavings" name="monthlySavings" class="form-input" placeholder="2500" min="0" step="100" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="returnRate">Expected Annual Return</label>
+                  <div class="input-suffix">
+                    <input type="number" id="returnRate" name="returnRate" class="form-input" placeholder="7" min="0" max="20" step="0.1" value="7" required>
+                    <span class="suffix">%</span>
+                  </div>
+                </div>
+              </div>
+              <div class="calc-actions">
+                <button type="button" class="btn btn-calculate" onclick="calcBaristaFIRE()">Calculate Barista FIRE</button>
+                <button type="button" class="btn btn-reset" onclick="resetBaristaFIRE()">Reset</button>
+              </div>
+            </form>
+
+            <div id="bfire-results" class="calc-results hidden">
+              <div class="result-primary">
+                <div class="result-label">Barista FIRE Number</div>
+                <div class="result-value" id="baristaNum">$0</div>
+              </div>
+              <div class="result-grid result-grid-3" style="margin-top: var(--space-4);">
+                <div class="result-item">
+                  <div class="result-label">Time to Barista FIRE</div>
+                  <div class="result-value" id="timeToBaristaFire" style="color: var(--color-success);">—</div>
+                </div>
+                <div class="result-item">
+                  <div class="result-label">Part-Time Income Covers</div>
+                  <div class="result-value" id="ptCoverage" style="color: var(--color-accent);">0%</div>
+                </div>
+                <div class="result-item">
+                  <div class="result-label">Savings vs Standard FIRE</div>
+                  <div class="result-value" id="vsStandardFire" style="color: var(--color-info);">$0</div>
+                </div>
+              </div>
+              <div id="bfireDetails" style="margin-top: var(--space-5);"></div>
+            </div>
+          </div>
+        </div>
+
+        <section class="content-section">
+          <h2>How Barista FIRE Is Calculated</h2>
+          <div class="formula-box">
+            <div class="formula-label">Formula</div>
+            Gap Expenses = Annual Expenses &minus; Annual Part-Time Income<br>
+            Barista FIRE Number = Gap Expenses &divide; 0.04 (4% SWR)<br><br>
+            Part-Time Coverage = Part-Time Income &divide; Annual Expenses &times; 100%<br>
+            Savings vs Standard = Standard FIRE &minus; Barista FIRE Number<br><br>
+            Standard FIRE = Annual Expenses &divide; 0.04
+          </div>
+          <p>Because your part-time income covers a portion of expenses, your portfolio only needs to fund the remaining gap. The smaller portfolio requirement is calculated by dividing that gap by the safe withdrawal rate. The difference between standard FIRE and Barista FIRE is the amount of capital you avoid needing to accumulate — potentially saving years of work.</p>
+        </section>
+
+        <section class="content-section">
+          <h2>How to Use This Calculator</h2>
+          <ol>
+            <li><strong>Enter your retirement expenses:</strong> Total annual spending in retirement including all essential and discretionary costs.</li>
+            <li><strong>Set your part-time income:</strong> Realistic annual income from a relaxed part-time role — barista, consultant, freelancer, seasonal worker.</li>
+            <li><strong>Add current savings and monthly contributions:</strong> All investment accounts combined.</li>
+            <li><strong>Review results:</strong> See your Barista FIRE number, timeline, and how many dollars you avoid accumulating versus standard FIRE.</li>
+          </ol>
+        </section>
+
+        <section class="content-section">
+          <h2>Example Scenario</h2>
+          <p>Sam is 36 with $200,000 saved, contributing $2,500/month. Annual retirement expenses: $55,000. Part-time income (part-time consulting): $22,000/year. Gap expenses: $33,000. Barista FIRE number: $825,000. Standard FIRE would require $1,375,000 — so Barista FIRE saves $550,000 in required savings. At 7% returns, Sam reaches Barista FIRE in approximately 10 years 4 months (age 46) versus an estimated 18+ years for standard FIRE. Part-time income covers 40% of total expenses.</p>
+        </section>
+
+        <section class="faq-section">
+          <h2>Frequently Asked Questions</h2>
+          <div class="faq-item">
+            <button class="faq-question">What is Barista FIRE?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>Barista FIRE is semi-retirement using a smaller portfolio supplemented by part-time income. The portfolio only needs to cover expenses beyond your part-time earnings, so the required savings are much lower than standard FIRE — enabling earlier career departure.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">How is the Barista FIRE number calculated?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>Barista FIRE Number = (Annual Expenses − Part-Time Income) ÷ 0.04. The portfolio only funds the expense gap. The more income you earn part-time, the smaller the portfolio needed — and the sooner you can leave full-time work.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">What counts as Barista FIRE income?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>Any flexible, lower-pressure income: part-time retail, food service, freelancing, consulting, seasonal work, or passion-based side businesses. Many people choose roles offering health benefits, social connection, and structure without career pressure.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">When should I stop counting part-time income?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>Part-time income is typically planned for the early semi-retirement phase, often until Social Security eligibility or 59½ for penalty-free retirement account access. As your portfolio grows and these income sources activate, you can fully retire. Always plan for a transition to full portfolio funding eventually.</p></div>
+          </div>
+        </section>
+
+        <section class="related-calculators">
+          <h2>Related Calculators</h2>
+          <div class="grid grid-3">
+            <a href="/pages/financial-independence-calculators/fire-timeline-calculator/" class="card card-link">
+              <h3>FIRE Timeline Calculator</h3>
+              <p>Calculate your standard FIRE number and full retirement timeline.</p>
+            </a>
+            <a href="/pages/financial-independence-calculators/coast-fire-calculator/" class="card card-link">
+              <h3>Coast FIRE Calculator</h3>
+              <p>Find the point where you can stop contributing and coast to retirement.</p>
+            </a>
+            <a href="/pages/financial-independence-calculators/semi-retirement-calculator/" class="card card-link">
+              <h3>Semi-Retirement Calculator</h3>
+              <p>Plan a gradual transition from full-time work to complete retirement.</p>
+            </a>
+            <a href="/pages/financial-independence-calculators/lean-fire-calculator/" class="card card-link">
+              <h3>Lean FIRE Calculator</h3>
+              <p>Reach independence faster with a frugal retirement lifestyle.</p>
+            </a>
+            <a href="/pages/financial-independence-calculators/financial-independence-number-calculator/" class="card card-link">
+              <h3>FI Number Calculator</h3>
+              <p>Compare FI targets at different safe withdrawal rates.</p>
+            </a>
+          </div>
+        </section>
+
+        <div class="disclaimer">
+          <strong>Disclaimer:</strong> This calculator is for informational and educational purposes only. Barista FIRE projections assume consistent part-time income, constant investment returns, and stable expenses in retirement — conditions that real life may not provide. Part-time income is not guaranteed. This is not financial advice. Consult a qualified financial advisor before making career transition decisions.
+        </div>
+
+        <div class="ad-slot ad-slot-rectangle"></div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free online financial calculators to help you make smarter money decisions.</p>
+        </div>
+        <div class="footer-col">
+          <h4>FI Calculators</h4>
+          <a href="/pages/financial-independence-calculators/fire-timeline-calculator/">FIRE Timeline</a>
+          <a href="/pages/financial-independence-calculators/coast-fire-calculator/">Coast FIRE</a>
+          <a href="/pages/financial-independence-calculators/lean-fire-calculator/">Lean FIRE</a>
+          <a href="/pages/financial-independence-calculators/safe-withdrawal-rate-calculator/">SWR Calculator</a>
+        </div>
+        <div class="footer-col">
+          <h4>Tools</h4>
+          <a href="/pages/finance-calculators/retirement-savings-calculator/">Retirement Savings</a>
+          <a href="/pages/investment-calculators/">Investment Calculators</a>
+          <a href="/pages/tax-calculators/">Tax Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about/">About</a>
+          <a href="/contact/">Contact</a>
+          <a href="/privacy/">Privacy Policy</a>
+          <a href="/terms/">Terms of Service</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 CalcWise. All rights reserved.</span>
+        <div class="footer-links">
+          <a href="/privacy/">Privacy</a>
+          <a href="/terms/">Terms</a>
+          <a href="/contact/">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calcBaristaFIRE() {
+      if (!CalcWise.validateForm('bfire-form')) return;
+      const v = CalcWise.getFormValues('bfire-form');
+
+      const currentAge = v.currentAge;
+      const currentSavings = v.currentSavings;
+      const retirementExpenses = v.retirementExpenses;
+      const partTimeIncome = v.partTimeIncome;
+      const monthlySavings = v.monthlySavings;
+      const annualReturn = v.returnRate / 100;
+      const monthlyRate = annualReturn / 12;
+
+      if (partTimeIncome >= retirementExpenses) {
+        alert('Part-time income covers all expenses — you do not need any portfolio. Consider standard FIRE for a full no-work retirement.');
+        return;
+      }
+
+      const gapExpenses = retirementExpenses - partTimeIncome;
+      const baristaFireNum = gapExpenses / 0.04;
+      const standardFireNum = retirementExpenses / 0.04;
+      const vsStandard = standardFireNum - baristaFireNum;
+      const ptCoveragePct = partTimeIncome / retirementExpenses * 100;
+
+      CalcWise.setText('baristaNum', CalcWise.formatCurrency(baristaFireNum, 0));
+      CalcWise.setText('ptCoverage', ptCoveragePct.toFixed(1) + '% of expenses');
+      CalcWise.setText('vsStandardFire', CalcWise.formatCurrency(vsStandard, 0) + ' less needed');
+
+      // Solve time to Barista FIRE
+      let bMonths = null;
+      if (currentSavings >= baristaFireNum) {
+        bMonths = 0;
+      } else {
+        for (let m = 1; m <= 720; m++) {
+          let fv;
+          if (monthlyRate === 0) {
+            fv = currentSavings + monthlySavings * m;
+          } else {
+            const fvf = Math.pow(1 + monthlyRate, m);
+            fv = currentSavings * fvf + monthlySavings * (fvf - 1) / monthlyRate;
+          }
+          if (fv >= baristaFireNum) { bMonths = m; break; }
+        }
+      }
+
+      if (bMonths === 0) {
+        CalcWise.setText('timeToBaristaFire', 'Already at Barista FIRE!');
+      } else if (bMonths) {
+        const yrs = Math.floor(bMonths / 12);
+        const mos = bMonths % 12;
+        CalcWise.setText('timeToBaristaFire', `${yrs}y ${mos}m (age ${currentAge + yrs + (mos > 0 ? 1 : 0)})`);
+      } else {
+        CalcWise.setText('timeToBaristaFire', '60+ years');
+      }
+
+      let detailHtml = `<div class="table-container"><table class="data-table"><thead><tr><th>Metric</th><th>Barista FIRE</th><th>Standard FIRE</th></tr></thead><tbody>`;
+      detailHtml += `<tr><td>Annual Income Needed from Portfolio</td><td>${CalcWise.formatCurrency(gapExpenses, 0)}/yr</td><td>${CalcWise.formatCurrency(retirementExpenses, 0)}/yr</td></tr>`;
+      detailHtml += `<tr><td>Required Portfolio (4% SWR)</td><td><strong>${CalcWise.formatCurrency(baristaFireNum, 0)}</strong></td><td>${CalcWise.formatCurrency(standardFireNum, 0)}</td></tr>`;
+      detailHtml += `<tr><td>Portfolio Savings</td><td colspan="2" style="color:var(--color-success)">${CalcWise.formatCurrency(vsStandard, 0)} less needed for Barista FIRE</td></tr>`;
+      detailHtml += `</tbody></table></div>`;
+      detailHtml += `<p style="font-size:var(--text-sm);color:var(--color-text-secondary);margin-top:var(--space-3);">Part-time income (${CalcWise.formatCurrency(partTimeIncome, 0)}/yr) covers ${ptCoveragePct.toFixed(1)}% of ${CalcWise.formatCurrency(retirementExpenses, 0)}/yr total expenses.</p>`;
+
+      CalcWise.setHtml('bfireDetails', detailHtml);
+      CalcWise.showResults('bfire-results');
+    }
+
+    function resetBaristaFIRE() {
+      document.getElementById('bfire-form').reset();
+      CalcWise.hideResults('bfire-results');
+    }
+  </script>
+</body>
+</html>

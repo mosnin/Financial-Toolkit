@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Freelance Retirement Calculator | CalcWise</title>
+  <meta name="description" content="Calculate how much freelancers need to save for retirement without an employer match. Find your required monthly contribution and retirement nest egg target.">
+  <link rel="canonical" href="https://calcwise.io/freelancer-calculators/freelance-retirement-calculator/">
+  <meta property="og:title" content="Freelance Retirement Calculator | CalcWise">
+  <meta property="og:description" content="Calculate how much freelancers need to save for retirement without an employer match. Find your required monthly contribution and retirement nest egg target.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcwise.io/freelancer-calculators/freelance-retirement-calculator/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Freelance Retirement Calculator | CalcWise">
+  <meta name="twitter:description" content="Calculate how much freelancers need to save for retirement without an employer match.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/"},
+      {"@type": "ListItem", "position": 2, "name": "Freelancer Calculators", "item": "https://calcwise.io/freelancer-calculators/"},
+      {"@type": "ListItem", "position": 3, "name": "Freelance Retirement Calculator"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What retirement accounts are available to freelancers?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Freelancers have access to several retirement accounts: a Solo 401(k) allows contributions up to $69,000 in 2024 (both employee and employer portions); a SEP-IRA allows up to 25% of net self-employment income; a SIMPLE IRA is available if you have employees; and a traditional or Roth IRA allows up to $7,000 per year ($8,000 if 50+). The Solo 401(k) and SEP-IRA are typically most advantageous for self-employed individuals."}
+      },
+      {
+        "@type": "Question",
+        "name": "How much should a freelancer save for retirement each month?",
+        "acceptedAnswer": {"@type": "Answer", "text": "A common rule of thumb is to save 15-20% of gross income for retirement, but freelancers should save more to compensate for the lack of employer match. Because no employer contributes on your behalf, saving 20-25% of gross income is a more appropriate target. Use this calculator to find the exact monthly amount needed to reach your retirement goal."}
+      },
+      {
+        "@type": "Question",
+        "name": "What is the 4% withdrawal rule for retirement planning?",
+        "acceptedAnswer": {"@type": "Answer", "text": "The 4% rule suggests retirees can withdraw 4% of their portfolio in the first year of retirement and adjust for inflation thereafter with a high probability of not running out of money over a 30-year retirement. To find your target nest egg, divide your desired annual retirement income by 0.04. For example, $60,000/year requires a $1,500,000 portfolio."}
+      },
+      {
+        "@type": "Question",
+        "name": "How does Social Security factor into freelance retirement planning?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Freelancers do pay into Social Security via self-employment tax and are eligible for Social Security benefits. However, benefits are typically lower for self-employed individuals who have irregular income histories, and Social Security alone is rarely sufficient for retirement. Factor your estimated Social Security benefit (available at ssa.gov) as a credit against your retirement income needs."}
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="logo">
+        <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav">
+        <a href="/">Home</a>
+        <a href="/pages/business-calculators/">Business</a>
+        <a href="/pages/financial-calculators/">Financial</a>
+        <a href="/pages/tax-calculators/">Tax</a>
+        <a href="/pages/freelancer-calculators/" aria-current="page">Freelancer</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav">
+      <a href="/">Home</a>
+      <a href="/pages/business-calculators/">Business Calculators</a>
+      <a href="/pages/financial-calculators/">Financial Calculators</a>
+      <a href="/pages/tax-calculators/">Tax Calculators</a>
+      <a href="/pages/freelancer-calculators/">Freelancer Calculators</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/pages/freelancer-calculators/">Freelancer Calculators</a></li>
+          <li><span aria-current="page">Freelance Retirement Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="calc-page-layout">
+          <div class="calc-page-main">
+            <h1>Freelance Retirement Calculator</h1>
+            <p class="subtitle" style="font-size:var(--text-lg);color:var(--color-gray-600);margin-bottom:var(--space-8);line-height:var(--leading-relaxed);">With no employer pension or 401(k) match, retirement planning is entirely on your shoulders. This calculator determines your target retirement nest egg, the required monthly savings, and shows how your current savings will grow — so you know exactly how much to set aside from every invoice.</p>
+
+            <div class="calc-container">
+              <div class="calc-header">
+                <h2>Freelance Retirement Calculator</h2>
+                <p>Plan your retirement savings without relying on an employer match</p>
+              </div>
+              <div class="calc-body">
+                <form id="retirement-form" onsubmit="return false;">
+                  <div class="calc-grid calc-grid-2col">
+                    <div class="form-group">
+                      <label class="form-label" for="current-age">Current Age</label>
+                      <input type="number" id="current-age" class="form-input" placeholder="35" min="18" max="80" step="1" required>
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label" for="retirement-age">Target Retirement Age</label>
+                      <input type="number" id="retirement-age" class="form-input" placeholder="65" min="40" max="90" step="1" required>
+                    </div>
+                  </div>
+
+                  <div class="calc-grid calc-grid-2col">
+                    <div class="form-group">
+                      <label class="form-label" for="annual-retirement-income">Desired Annual Retirement Income</label>
+                      <div class="input-prefix">
+                        <span class="prefix">$</span>
+                        <input type="number" id="annual-retirement-income" class="form-input" placeholder="60000" min="0" step="1000" required>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label" for="current-savings">Current Retirement Savings</label>
+                      <div class="input-prefix">
+                        <span class="prefix">$</span>
+                        <input type="number" id="current-savings" class="form-input" placeholder="25000" min="0" step="1000">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="calc-grid calc-grid-2col">
+                    <div class="form-group">
+                      <label class="form-label" for="annual-return">Expected Annual Investment Return</label>
+                      <div class="input-suffix">
+                        <input type="number" id="annual-return" class="form-input" placeholder="7" min="0" max="20" step="0.1" required>
+                        <span class="suffix">%</span>
+                      </div>
+                      <span class="form-hint" style="display:block;margin-top:var(--space-1);">Historical stock market average ~7% inflation-adjusted</span>
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label" for="withdrawal-rate">Safe Withdrawal Rate</label>
+                      <div class="input-suffix">
+                        <input type="number" id="withdrawal-rate" class="form-input" placeholder="4" min="1" max="10" step="0.1">
+                        <span class="suffix">%</span>
+                      </div>
+                      <span class="form-hint" style="display:block;margin-top:var(--space-1);">4% rule is standard; use 3.5% for extra safety</span>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="social-security">Expected Annual Social Security Benefit</label>
+                    <div class="input-prefix">
+                      <span class="prefix">$</span>
+                      <input type="number" id="social-security" class="form-input" placeholder="18000" min="0" step="500">
+                    </div>
+                    <span class="form-hint" style="display:block;margin-top:var(--space-1);">Check your estimate at ssa.gov (enter 0 to ignore)</span>
+                  </div>
+
+                  <div class="calc-actions">
+                    <button type="button" class="btn btn-calculate btn-full" onclick="calculateRetirement()">Calculate Retirement Plan</button>
+                    <button type="button" class="btn btn-reset" onclick="resetRetirementForm()">Reset</button>
+                  </div>
+                </form>
+
+                <div id="results" class="calc-results hidden">
+                  <div class="result-primary">
+                    <div class="result-label">Required Monthly Savings</div>
+                    <div class="result-value" id="result-monthly-savings">$0/mo</div>
+                  </div>
+                  <div class="result-grid result-grid-3">
+                    <div class="result-item">
+                      <div class="result-label">Retirement Nest Egg Target</div>
+                      <div class="result-value" id="result-nest-egg">$0</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Portfolio-Funded Income Needed</div>
+                      <div class="result-value" id="result-portfolio-income">$0/yr</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Years to Save</div>
+                      <div class="result-value" id="result-years">0 yrs</div>
+                    </div>
+                  </div>
+                  <div class="result-grid result-grid-3">
+                    <div class="result-item">
+                      <div class="result-label">Future Value of Current Savings</div>
+                      <div class="result-value" id="result-fv-current">$0</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Additional Savings Gap</div>
+                      <div class="result-value" id="result-gap">$0</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">% of Income to Save</div>
+                      <div class="result-value" id="result-savings-pct">0%</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="ad-slot ad-slot-leaderboard"></div>
+
+            <section class="content-section">
+              <h2>Retirement Savings Formula</h2>
+              <div class="formula-box">
+                <div class="formula-label">Nest Egg Target (4% Rule)</div>
+                Nest Egg = Portfolio-Funded Annual Income ÷ Withdrawal Rate
+              </div>
+              <div class="formula-box">
+                <div class="formula-label">Portfolio-Funded Income</div>
+                Portfolio Income = Desired Income − Social Security Benefit
+              </div>
+              <div class="formula-box">
+                <div class="formula-label">Future Value of Current Savings</div>
+                FV = Current Savings × (1 + r)^n &nbsp;where r = annual return, n = years
+              </div>
+              <div class="formula-box">
+                <div class="formula-label">Additional Gap to Fund via Monthly Contributions</div>
+                Gap = Nest Egg Target − Future Value of Current Savings
+              </div>
+              <div class="formula-box">
+                <div class="formula-label">Required Monthly Contribution</div>
+                Monthly = Gap × (r/12) ÷ [(1 + r/12)^(12n) − 1]
+              </div>
+            </section>
+
+            <section class="content-section">
+              <h2>How to Use This Calculator</h2>
+              <ol>
+                <li>Enter your <strong>current age</strong> and <strong>target retirement age</strong> to calculate your savings runway.</li>
+                <li>Set your <strong>desired annual retirement income</strong> in today's dollars — what you want to live on each year.</li>
+                <li>Enter your <strong>current retirement savings</strong> across all accounts (IRAs, Solo 401(k), brokerage, etc.).</li>
+                <li>Set your expected <strong>annual investment return</strong> — 7% is a common inflation-adjusted estimate for a diversified portfolio.</li>
+                <li>Enter your <strong>safe withdrawal rate</strong> — the 4% rule is standard; use 3-3.5% for a more conservative plan.</li>
+                <li>Add your estimated <strong>Social Security benefit</strong> to reduce the portfolio-funded income requirement.</li>
+                <li>Click <strong>Calculate Retirement Plan</strong> to see your target nest egg and required monthly savings.</li>
+              </ol>
+            </section>
+
+            <section class="content-section">
+              <h2>Example Scenario</h2>
+              <p>A 38-year-old freelancer wants $65,000/year in retirement at age 65, has $30,000 saved, expects 7% returns, uses a 4% withdrawal rate, and estimates $15,000/year in Social Security.</p>
+              <ul>
+                <li>Portfolio-Funded Income: $65,000 − $15,000 = <strong>$50,000/year</strong></li>
+                <li>Nest Egg Target: $50,000 ÷ 0.04 = <strong>$1,250,000</strong></li>
+                <li>Years to Save: 65 − 38 = <strong>27 years</strong></li>
+                <li>Future Value of Current $30,000 at 7%: <strong>$197,300</strong></li>
+                <li>Remaining Gap: $1,250,000 − $197,300 = <strong>$1,052,700</strong></li>
+                <li>Required Monthly Savings: approximately <strong>$1,118/month</strong></li>
+              </ul>
+            </section>
+
+            <section class="faq-section">
+              <h2>Frequently Asked Questions</h2>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  What retirement accounts are available to freelancers?
+                  <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                </button>
+                <div class="faq-answer">
+                  <p>Freelancers have access to several retirement accounts: a Solo 401(k) allows contributions up to $69,000 in 2024; a SEP-IRA allows up to 25% of net self-employment income; and a traditional or Roth IRA allows up to $7,000 per year ($8,000 if 50+). The Solo 401(k) and SEP-IRA are typically most advantageous for self-employed individuals.</p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  How much should a freelancer save for retirement each month?
+                  <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                </button>
+                <div class="faq-answer">
+                  <p>A common rule of thumb is to save 15-20% of gross income for retirement, but freelancers should save more to compensate for the lack of employer match. Saving 20-25% of gross income is a more appropriate target. Use this calculator to find the exact monthly amount needed to reach your retirement goal.</p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  What is the 4% withdrawal rule for retirement planning?
+                  <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                </button>
+                <div class="faq-answer">
+                  <p>The 4% rule suggests retirees can withdraw 4% of their portfolio in the first year of retirement and adjust for inflation thereafter with a high probability of not running out of money over a 30-year retirement. To find your target nest egg, divide your desired annual income by 0.04. For example, $60,000/year requires a $1,500,000 portfolio.</p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  How does Social Security factor into freelance retirement planning?
+                  <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                </button>
+                <div class="faq-answer">
+                  <p>Freelancers pay into Social Security via self-employment tax and are eligible for benefits. However, Social Security alone is rarely sufficient for retirement. Factor your estimated benefit (available at ssa.gov) as income that reduces your portfolio-funded requirement, lowering your required nest egg.</p>
+                </div>
+              </div>
+            </section>
+
+            <section class="related-calculators">
+              <h2>Related Calculators</h2>
+              <div class="grid grid-3">
+                <a href="/pages/freelancer-calculators/hourly-rate-calculator/" class="card card-link">
+                  <h3>Hourly Rate Calculator</h3>
+                  <p>Find the rate that covers your income, expenses, taxes, and savings goals.</p>
+                </a>
+                <a href="/pages/freelancer-calculators/freelance-tax-estimator/" class="card card-link">
+                  <h3>Freelance Tax Estimator</h3>
+                  <p>Estimate your quarterly tax payments and annual self-employment tax burden.</p>
+                </a>
+                <a href="/pages/financial-calculators/compound-interest-calculator/" class="card card-link">
+                  <h3>Compound Interest Calculator</h3>
+                  <p>See how your retirement savings grow over time with compound returns.</p>
+                </a>
+                <a href="/pages/freelancer-calculators/freelance-income-stability-calculator/" class="card card-link">
+                  <h3>Income Stability Calculator</h3>
+                  <p>Measure your income variability to plan consistent retirement contributions.</p>
+                </a>
+              </div>
+            </section>
+
+            <div class="disclaimer">
+              <strong>Disclaimer:</strong> This calculator provides retirement savings estimates for informational purposes only. Actual investment returns vary and are not guaranteed. Tax laws change frequently. Consult a licensed financial advisor or retirement planner before making investment decisions.
+            </div>
+          </div>
+
+          <aside class="calc-page-sidebar">
+            <div class="ad-slot ad-slot-rectangle"></div>
+            <div class="sidebar-card">
+              <h3>Freelancer Calculators</h3>
+              <a href="/pages/freelancer-calculators/hourly-rate-calculator/">Hourly Rate Calculator</a>
+              <a href="/pages/freelancer-calculators/freelance-tax-estimator/">Tax Estimator</a>
+              <a href="/pages/freelancer-calculators/freelance-income-stability-calculator/">Income Stability</a>
+              <a href="/pages/freelancer-calculators/project-pricing-calculator/">Project Pricing</a>
+              <a href="/pages/freelancer-calculators/client-profitability-calculator/">Client Profitability</a>
+              <a href="/pages/freelancer-calculators/freelance-break-even-calculator/">Break-Even Calculator</a>
+              <a href="/pages/freelancer-calculators/freelance-retirement-calculator/">Retirement Calculator</a>
+              <a href="/pages/freelancer-calculators/client-acquisition-cost-calculator/">Client Acquisition Cost</a>
+              <a href="/pages/freelancer-calculators/freelance-scope-creep-calculator/">Scope Creep Calculator</a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free online calculators for business, finance, tax, and investment decisions.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Calculators</h4>
+          <a href="/pages/business-calculators/">Business</a>
+          <a href="/pages/financial-calculators/">Financial</a>
+          <a href="/pages/tax-calculators/">Tax</a>
+          <a href="/pages/investment-calculators/">Investment</a>
+          <a href="/pages/freelancer-calculators/">Freelancer</a>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <a href="/about/">About</a>
+          <a href="/blog/">Blog</a>
+          <a href="/contact/">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="/privacy/">Privacy Policy</a>
+          <a href="/terms/">Terms of Service</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/privacy/">Privacy</a>
+          <a href="/terms/">Terms</a>
+          <a href="/contact/">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateRetirement() {
+      const currentAge = CalcWise.parseNumber(document.getElementById('current-age').value);
+      const retirementAge = CalcWise.parseNumber(document.getElementById('retirement-age').value);
+      const annualIncome = CalcWise.parseNumber(document.getElementById('annual-retirement-income').value);
+      const currentSavings = CalcWise.parseNumber(document.getElementById('current-savings').value) || 0;
+      const annualReturn = (CalcWise.parseNumber(document.getElementById('annual-return').value) || 7) / 100;
+      const withdrawalRate = (CalcWise.parseNumber(document.getElementById('withdrawal-rate').value) || 4) / 100;
+      const socialSecurity = CalcWise.parseNumber(document.getElementById('social-security').value) || 0;
+
+      if (currentAge <= 0 || retirementAge <= currentAge) { alert('Retirement age must be greater than current age.'); return; }
+      if (annualIncome <= 0) { alert('Please enter your desired annual retirement income.'); return; }
+      if (withdrawalRate <= 0) { alert('Withdrawal rate must be greater than 0%.'); return; }
+
+      const years = retirementAge - currentAge;
+      const portfolioIncome = Math.max(0, annualIncome - socialSecurity);
+      const nestEgg = portfolioIncome / withdrawalRate;
+      const monthlyReturn = annualReturn / 12;
+      const months = years * 12;
+
+      // Future value of current savings
+      const fvCurrentSavings = currentSavings * Math.pow(1 + annualReturn, years);
+
+      const gap = Math.max(0, nestEgg - fvCurrentSavings);
+
+      // Required monthly contribution (future value of annuity formula)
+      let monthlySavings = 0;
+      if (gap > 0 && months > 0) {
+        if (monthlyReturn === 0) {
+          monthlySavings = gap / months;
+        } else {
+          monthlySavings = gap * monthlyReturn / (Math.pow(1 + monthlyReturn, months) - 1);
+        }
+      }
+
+      // Estimate savings % of income (assume income = desired income × some factor)
+      const annualSavings = monthlySavings * 12;
+      const savingsPct = annualIncome > 0 ? (annualSavings / annualIncome) * 100 : 0;
+
+      CalcWise.setText('result-nest-egg', CalcWise.formatCurrency(nestEgg));
+      CalcWise.setText('result-portfolio-income', CalcWise.formatCurrency(portfolioIncome) + '/yr');
+      CalcWise.setText('result-years', years + ' yrs');
+      CalcWise.setText('result-fv-current', CalcWise.formatCurrency(fvCurrentSavings));
+      CalcWise.setText('result-gap', CalcWise.formatCurrency(gap));
+      CalcWise.setText('result-monthly-savings', CalcWise.formatCurrency(monthlySavings) + '/mo');
+      CalcWise.setText('result-savings-pct', savingsPct.toFixed(1) + '%');
+      CalcWise.showResults('results');
+    }
+
+    function resetRetirementForm() {
+      document.getElementById('retirement-form').reset();
+      CalcWise.hideResults('results');
+    }
+
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', !expanded);
+        btn.nextElementSibling.style.display = expanded ? 'none' : 'block';
+      });
+    });
+
+    const toggle = document.querySelector('.mobile-menu-toggle');
+    const mobileNav = document.querySelector('.mobile-nav');
+    if (toggle && mobileNav) {
+      toggle.addEventListener('click', () => {
+        const open = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', !open);
+        mobileNav.classList.toggle('open', !open);
+      });
+    }
+  </script>
+</body>
+</html>

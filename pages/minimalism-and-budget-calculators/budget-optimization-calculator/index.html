@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Budget Optimization Calculator - CalcWise</title>
+  <meta name="description" content="Optimize your monthly budget allocations. Compare your current category percentages to recommended targets, find your potential monthly savings, and get an optimization score.">
+  <link rel="canonical" href="https://calcwise.io/minimalism-and-budget-calculators/budget-optimization-calculator/">
+  <meta property="og:title" content="Budget Optimization Calculator - CalcWise">
+  <meta property="og:description" content="Compare your spending allocations to optimal benchmarks, find monthly savings opportunities, and get a personalized budget optimization score.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcwise.io/minimalism-and-budget-calculators/budget-optimization-calculator/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Budget Optimization Calculator - CalcWise">
+  <meta name="twitter:description" content="Get a budget optimization score and see exactly where your spending is out of alignment.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/"},
+      {"@type": "ListItem", "position": 2, "name": "Minimalism & Budget Calculators", "item": "https://calcwise.io/minimalism-and-budget-calculators/"},
+      {"@type": "ListItem", "position": 3, "name": "Budget Optimization Calculator"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is a budget optimization score?",
+        "acceptedAnswer": {"@type": "Answer", "text": "A budget optimization score measures how closely your actual spending aligns with recommended allocation percentages for each category. A score of 100 means perfect alignment. Scores below 70 suggest significant over-spending in one or more categories relative to your income. The score helps you quickly identify where your budget needs the most attention."}
+      },
+      {
+        "@type": "Question",
+        "name": "What are the optimal budget allocation percentages?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Common benchmark allocations include: housing 25–35%, food 10–15%, transportation 10–15%, savings and investments 15–20%, healthcare 5–10%, entertainment and dining out 5–10%, and all other categories sharing the remainder. These are guidelines, not rules, and should be adjusted for your location, income, and life stage."}
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between budget optimization and the 50/30/20 rule?",
+        "acceptedAnswer": {"@type": "Answer", "text": "The 50/30/20 rule divides spending into just three broad buckets (needs, wants, savings). Budget optimization goes deeper by evaluating individual category allocations against benchmarks and computing a composite score. Budget optimization is more granular and helps identify specific problem areas within the three broad 50/30/20 categories."}
+      },
+      {
+        "@type": "Question",
+        "name": "How can I improve my budget optimization score?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Focus first on categories where your actual percentage is highest above the recommended range. Reducing over-allocated categories by even 2–5% of income can move hundreds of dollars per month toward savings or debt repayment. Small adjustments across multiple categories compound quickly into meaningful improvement."}
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="logo">
+        <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav">
+        <a href="/">Home</a>
+        <a href="/pages/finance-calculators/">Finance</a>
+        <a href="/pages/business-calculators/">Business</a>
+        <a href="/pages/investment-calculators/">Investment</a>
+        <a href="/pages/minimalism-and-budget-calculators/" aria-current="page">Minimalism</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav">
+      <a href="/">Home</a>
+      <a href="/pages/finance-calculators/">Finance Calculators</a>
+      <a href="/pages/business-calculators/">Business Calculators</a>
+      <a href="/pages/investment-calculators/">Investment Calculators</a>
+      <a href="/pages/minimalism-and-budget-calculators/">Minimalism &amp; Budget Calculators</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li><a href="/pages/minimalism-and-budget-calculators/">Minimalism &amp; Budget Calculators</a></li>
+        <li><span aria-current="page">Budget Optimization Calculator</span></li>
+      </ol>
+    </nav>
+
+    <div class="page-content">
+      <div class="article-content">
+        <h1>Budget Optimization Calculator</h1>
+        <p>A well-optimized budget is not about cutting everything — it is about spending the right amount on the right things. This calculator compares your current spending allocations to recommended benchmarks across key budget categories, calculates your optimization score, identifies where you are overspending, and shows your potential monthly savings if you realign with optimal targets.</p>
+
+        <div class="ad-slot ad-slot-leaderboard"></div>
+
+        <div class="calc-container">
+          <div class="calc-header">
+            <h2>Optimize Your Budget Allocations</h2>
+            <p>Enter your monthly income and current spending in each category</p>
+          </div>
+          <div class="calc-body">
+            <form id="optimization-form">
+              <div class="form-group">
+                <label class="form-label" for="monthlyIncome">Monthly After-Tax Income</label>
+                <div class="input-prefix">
+                  <span class="prefix">$</span>
+                  <input type="number" id="monthlyIncome" name="monthlyIncome" class="form-input" placeholder="5000" min="1" step="100" required>
+                </div>
+              </div>
+
+              <div style="margin-top: var(--space-4); display:grid; gap: var(--space-3);">
+                <div style="display:grid; grid-template-columns: 2fr 1fr; gap: var(--space-3); font-weight: var(--font-semibold); font-size: var(--text-sm); color: var(--color-gray-600); padding-bottom: var(--space-2); border-bottom: 2px solid var(--color-gray-200);">
+                  <span>Category</span>
+                  <span>Monthly Spending ($)</span>
+                </div>
+                <div id="opt-rows"></div>
+              </div>
+
+              <div class="calc-actions" style="margin-top: var(--space-5);">
+                <button type="button" class="btn btn-calculate" onclick="calculateOptimization()">Optimize My Budget</button>
+                <button type="button" class="btn btn-reset" onclick="resetOptimization()">Reset</button>
+              </div>
+            </form>
+
+            <div id="results" class="calc-results hidden">
+              <div class="result-primary">
+                <div class="result-label">Optimization Score</div>
+                <div class="result-value" id="optScore">0 / 100</div>
+              </div>
+              <div class="result-grid result-grid-3">
+                <div class="result-item">
+                  <div class="result-label">Total Monthly Spending</div>
+                  <div class="result-value" id="totalSpending">$0</div>
+                </div>
+                <div class="result-item">
+                  <div class="result-label">Unallocated / Savings</div>
+                  <div class="result-value" id="unallocated">$0</div>
+                </div>
+                <div class="result-item">
+                  <div class="result-label">Potential Monthly Savings</div>
+                  <div class="result-value" id="potentialSavings" style="color: var(--color-success);">$0</div>
+                </div>
+              </div>
+              <div style="margin-top: var(--space-6);">
+                <div id="optBreakdown"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <section class="content-section">
+          <h2>How the Optimization Score Works</h2>
+          <div class="formula-box">
+            <div class="formula-label">Formulas</div>
+            Current Allocation % = Category Spending / Monthly Income × 100<br>
+            Over-Budget Amount = Max(0, Current % − Optimal Max %) × Income<br>
+            Potential Monthly Savings = Sum of all over-budget amounts<br>
+            Score per Category = Max(0, 100 − penalty for over-allocation)<br>
+            Optimization Score = Average of all category scores
+          </div>
+          <p>Each category is evaluated against its recommended maximum allocation. Categories within the recommended range score 100. Over-budget categories are penalized proportionally. The composite optimization score (0–100) gives you an at-a-glance assessment of your budget health, with 80+ considered well-optimized.</p>
+        </section>
+
+        <section class="content-section">
+          <h2>How to Use This Calculator</h2>
+          <ol>
+            <li><strong>Enter your monthly income:</strong> Use your after-tax take-home pay.</li>
+            <li><strong>Enter spending per category:</strong> Use your actual average monthly spending from recent bank and credit card statements.</li>
+            <li><strong>Review your score:</strong> Scores of 80+ are good, 60–79 need improvement, below 60 indicate significant over-spending in multiple categories.</li>
+            <li><strong>Focus on red categories:</strong> The breakdown highlights categories that exceed their recommended allocation percentage — these are your optimization priorities.</li>
+          </ol>
+        </section>
+
+        <section class="content-section">
+          <h2>Example Scenario</h2>
+          <p>Pat earns $6,000/month after tax and enters current spending:</p>
+          <ul>
+            <li><strong>Housing ($2,400 = 40%)</strong> — optimal max is 35%; over by 5% = $300 over-budget</li>
+            <li><strong>Dining out ($600 = 10%)</strong> — optimal max is 8%; over by 2% = $120 over-budget</li>
+            <li><strong>Entertainment ($480 = 8%)</strong> — optimal max is 7%; over by 1% = $60 over-budget</li>
+          </ul>
+          <p>Potential monthly savings by aligning to optimal: <strong>$480/month</strong>. Optimization score: <strong>72/100</strong>.</p>
+        </section>
+
+        <section class="faq-section">
+          <h2>Frequently Asked Questions</h2>
+          <div class="faq-item">
+            <button class="faq-question">What is a budget optimization score?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>A budget optimization score measures how closely your actual spending aligns with recommended allocation percentages for each category. A score of 100 means perfect alignment. Scores below 70 suggest significant over-spending in one or more categories relative to your income.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">What are the optimal budget allocation percentages?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>Common benchmark allocations include: housing 25–35%, food 10–15%, transportation 10–15%, savings and investments 15–20%, healthcare 5–10%, entertainment and dining out 5–10% combined. These are guidelines that should be adjusted for your location, income, and life stage.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">What is the difference between budget optimization and the 50/30/20 rule?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>The 50/30/20 rule divides spending into just three broad buckets. Budget optimization goes deeper by evaluating individual category allocations against benchmarks and computing a composite score. It is more granular and helps identify specific problem areas within the broad categories.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">How can I improve my budget optimization score?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>Focus first on categories where your actual percentage is highest above the recommended range. Reducing over-allocated categories by even 2–5% of income can move hundreds of dollars per month toward savings or debt repayment. Small adjustments across multiple categories compound quickly.</p></div>
+          </div>
+        </section>
+
+        <section class="related-calculators">
+          <h2>Related Calculators</h2>
+          <div class="grid grid-3">
+            <a href="/pages/finance-calculators/budget-calculator/" class="card card-link">
+              <h3>50/30/20 Budget Calculator</h3>
+              <p>Allocate your income using the classic 50/30/20 budgeting rule.</p>
+            </a>
+            <a href="/pages/minimalism-and-budget-calculators/expense-reduction-calculator/" class="card card-link">
+              <h3>Expense Reduction Calculator</h3>
+              <p>Set percentage reduction targets across 8 spending categories.</p>
+            </a>
+            <a href="/pages/minimalism-and-budget-calculators/monthly-spending-simplification-calculator/" class="card card-link">
+              <h3>Monthly Spending Simplification Calculator</h3>
+              <p>Simplify your budget to a lean monthly target.</p>
+            </a>
+            <a href="/pages/minimalism-and-budget-calculators/spending-reduction-impact-calculator/" class="card card-link">
+              <h3>Spending Reduction Impact Calculator</h3>
+              <p>See the long-term wealth impact of optimizing your budget.</p>
+            </a>
+            <a href="/pages/minimalism-and-budget-calculators/subscription-reduction-calculator/" class="card card-link">
+              <h3>Subscription Reduction Calculator</h3>
+              <p>Audit recurring subscriptions and find quick wins.</p>
+            </a>
+          </div>
+        </section>
+
+        <div class="disclaimer">
+          <strong>Disclaimer:</strong> This calculator is for informational and educational purposes only. Optimal budget allocations are general benchmarks and may not apply to all financial situations, locations, or life stages. This does not constitute financial advice. Consult a qualified financial advisor for personalized guidance.
+        </div>
+
+        <div class="ad-slot ad-slot-rectangle"></div>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free online financial calculators to help you make smarter money decisions.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Minimalism &amp; Budget</h4>
+          <a href="/pages/minimalism-and-budget-calculators/budget-optimization-calculator/">Budget Optimization</a>
+          <a href="/pages/minimalism-and-budget-calculators/expense-reduction-calculator/">Expense Reduction</a>
+          <a href="/pages/minimalism-and-budget-calculators/monthly-spending-simplification-calculator/">Spending Simplification</a>
+          <a href="/pages/minimalism-and-budget-calculators/subscription-reduction-calculator/">Subscription Reduction</a>
+        </div>
+        <div class="footer-col">
+          <h4>Finance</h4>
+          <a href="/pages/finance-calculators/budget-calculator/">Budget (50/30/20)</a>
+          <a href="/pages/finance-calculators/net-worth-calculator/">Net Worth</a>
+          <a href="/pages/finance-calculators/retirement-savings-calculator/">Retirement Savings</a>
+          <a href="/pages/finance-calculators/emergency-fund-calculator/">Emergency Fund</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about/">About</a>
+          <a href="/contact/">Contact</a>
+          <a href="/privacy/">Privacy Policy</a>
+          <a href="/terms/">Terms of Service</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 CalcWise. All rights reserved.</span>
+        <div class="footer-links">
+          <a href="/privacy/">Privacy</a>
+          <a href="/terms/">Terms</a>
+          <a href="/contact/">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    // Category: [label, optimal max %]
+    const OPT_CATEGORIES = [
+      ['Housing (rent/mortgage)', 35],
+      ['Food & Groceries', 15],
+      ['Transportation', 15],
+      ['Healthcare', 10],
+      ['Entertainment', 7],
+      ['Dining Out', 8],
+      ['Subscriptions', 5],
+      ['Shopping & Clothing', 8],
+      ['Savings & Investments', 100], // no penalty for saving more
+      ['Miscellaneous', 8]
+    ];
+
+    function buildOptRows() {
+      let html = '';
+      OPT_CATEGORIES.forEach((cat, i) => {
+        html += `<div style="display:grid; grid-template-columns: 2fr 1fr; gap: var(--space-3); align-items: center;">
+          <label class="form-label" style="margin:0; font-size:var(--text-sm);" for="optCat${i}">${cat[0]} <span style="color:var(--color-gray-400); font-weight:400;">(optimal ≤${cat[1]}%)</span></label>
+          <div class="input-prefix">
+            <span class="prefix">$</span>
+            <input type="number" id="optCat${i}" name="optCat${i}" class="form-input" placeholder="0" min="0" step="10" style="font-size:var(--text-sm);">
+          </div>
+        </div>`;
+      });
+      document.getElementById('opt-rows').innerHTML = html;
+    }
+
+    function calculateOptimization() {
+      if (!CalcWise.validateForm('optimization-form')) return;
+      const v = CalcWise.getFormValues('optimization-form');
+      const income = v.monthlyIncome;
+      if (!income || income <= 0) return;
+
+      let totalSpending = 0;
+      let potentialSavings = 0;
+      let totalScore = 0;
+      let scoredCats = 0;
+      const rows = [];
+
+      OPT_CATEGORIES.forEach((cat, i) => {
+        const amount = v[`optCat${i}`] || 0;
+        const actualPct = (amount / income) * 100;
+        const optMax = cat[1];
+        totalSpending += amount;
+
+        let catScore = 100;
+        let overAmt = 0;
+        if (optMax < 100 && actualPct > optMax) {
+          const overPct = actualPct - optMax;
+          overAmt = (overPct / 100) * income;
+          potentialSavings += overAmt;
+          catScore = Math.max(0, 100 - (overPct / optMax) * 100);
+        }
+
+        if (optMax < 100) {
+          totalScore += catScore;
+          scoredCats++;
+        }
+
+        rows.push({ label: cat[0], amount, actualPct, optMax, overAmt, catScore });
+      });
+
+      const avgScore = scoredCats > 0 ? totalScore / scoredCats : 100;
+      const unallocated = income - totalSpending;
+
+      CalcWise.setText('optScore', avgScore.toFixed(0) + ' / 100');
+      CalcWise.setText('totalSpending', CalcWise.formatCurrency(totalSpending, 0));
+      CalcWise.setText('unallocated', CalcWise.formatCurrency(unallocated, 0));
+      CalcWise.setText('potentialSavings', CalcWise.formatCurrency(potentialSavings, 0));
+
+      const scoreEl = document.getElementById('optScore');
+      if (scoreEl) {
+        scoreEl.style.color = avgScore >= 80 ? 'var(--color-success)' : avgScore >= 60 ? 'var(--color-warning)' : 'var(--color-error)';
+      }
+      const unallocEl = document.getElementById('unallocated');
+      if (unallocEl) {
+        unallocEl.style.color = unallocated >= 0 ? 'var(--color-success)' : 'var(--color-error)';
+      }
+
+      let html = '<div class="table-container"><table class="data-table"><thead><tr><th>Category</th><th>Amount</th><th>Your %</th><th>Optimal Max</th><th>Status</th></tr></thead><tbody>';
+      rows.forEach(r => {
+        const statusBadge = r.optMax === 100
+          ? '<span style="color:var(--color-info);">Savings</span>'
+          : r.overAmt > 0
+          ? `<span style="color:var(--color-error);font-weight:600;">Over by ${CalcWise.formatCurrency(r.overAmt, 0)}</span>`
+          : '<span style="color:var(--color-success);">On Track</span>';
+        html += `<tr>
+          <td>${r.label}</td>
+          <td>${CalcWise.formatCurrency(r.amount, 0)}</td>
+          <td>${r.actualPct.toFixed(1)}%</td>
+          <td>${r.optMax === 100 ? 'n/a' : r.optMax + '%'}</td>
+          <td>${statusBadge}</td>
+        </tr>`;
+      });
+      html += '</tbody></table></div>';
+
+      const grade = avgScore >= 80 ? 'Well Optimized' : avgScore >= 60 ? 'Needs Improvement' : 'Needs Significant Work';
+      const gradeColor = avgScore >= 80 ? 'var(--color-success)' : avgScore >= 60 ? 'var(--color-warning)' : 'var(--color-error)';
+      html += `<div style="margin-top:var(--space-4);padding:var(--space-4);background:var(--color-gray-50);border-radius:var(--radius-lg);">
+        Budget Grade: <strong style="color:${gradeColor};">${grade}</strong> (${avgScore.toFixed(0)}/100).
+        Realigning over-budget categories could free up <strong>${CalcWise.formatCurrency(potentialSavings, 0)}/month</strong> for savings or investments.
+      </div>`;
+
+      CalcWise.setHtml('optBreakdown', html);
+      CalcWise.showResults('results');
+    }
+
+    function resetOptimization() {
+      document.getElementById('optimization-form').reset();
+      CalcWise.hideResults('results');
+    }
+
+    buildOptRows();
+  </script>
+</body>
+</html>

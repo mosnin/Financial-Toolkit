@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inflation-Adjusted Tuition Calculator - CalcWise</title>
+  <meta name="description" content="Calculate how much college tuition will cost when your child enrolls. See projected annual tuition, total 4-year cost, and the monthly savings amount you need to start saving now.">
+  <link rel="canonical" href="https://calcwise.io/inflation-calculators/inflation-adjusted-tuition-calculator/">
+  <meta property="og:title" content="Inflation-Adjusted Tuition Calculator - CalcWise">
+  <meta property="og:description" content="Plan for college costs before they hit. Find projected tuition when your child enrolls, total 4-year cost, and monthly savings needed today.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcwise.io/inflation-calculators/inflation-adjusted-tuition-calculator/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Inflation-Adjusted Tuition Calculator - CalcWise">
+  <meta name="twitter:description" content="Plan for college costs before they hit. Find projected tuition when your child enrolls and the monthly savings needed today.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/"},
+      {"@type": "ListItem", "position": 2, "name": "Inflation Calculators", "item": "https://calcwise.io/inflation-calculators/"},
+      {"@type": "ListItem", "position": 3, "name": "Inflation-Adjusted Tuition Calculator"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How fast does college tuition increase each year?",
+        "acceptedAnswer": {"@type": "Answer", "text": "College tuition in the US has historically increased at 5-7% per year on average, significantly outpacing general inflation. Over the past 30 years, college costs have increased by over 200% in inflation-adjusted terms. Private universities tend to increase faster than public ones."}
+      },
+      {
+        "@type": "Question",
+        "name": "How do I calculate the projected tuition when my child enrolls?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Projected Tuition = Current Annual Tuition × (1 + Tuition Inflation Rate)^Years Until Enrollment. Years until enrollment = Enrollment Age − Child's Current Age. The 4-year total accounts for continued tuition inflation during the 4 years of college."}
+      },
+      {
+        "@type": "Question",
+        "name": "How much should I save monthly to cover college costs?",
+        "acceptedAnswer": {"@type": "Answer", "text": "The required monthly savings depends on your investment return rate and years until enrollment. If you invest in a 529 plan earning 6-7%, you need significantly less per month than if savings sit in cash. Earlier you start, the lower the monthly contribution required due to compound growth."}
+      },
+      {
+        "@type": "Question",
+        "name": "What is a 529 plan and how does it help with tuition inflation?",
+        "acceptedAnswer": {"@type": "Answer", "text": "A 529 plan is a tax-advantaged college savings account that allows your money to grow tax-free when used for qualified education expenses. Starting a 529 plan early and investing in growth assets allows compound returns to offset the impact of tuition inflation, potentially covering a large portion of future costs."}
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="logo">
+        <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav">
+        <a href="/">Home</a>
+        <a href="/pages/finance-calculators/">Finance</a>
+        <a href="/pages/business-calculators/">Business</a>
+        <a href="/pages/investment-calculators/">Investment</a>
+        <a href="/inflation-calculators/" aria-current="page">Inflation</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav">
+      <a href="/">Home</a>
+      <a href="/pages/finance-calculators/">Finance Calculators</a>
+      <a href="/pages/business-calculators/">Business Calculators</a>
+      <a href="/pages/investment-calculators/">Investment Calculators</a>
+      <a href="/inflation-calculators/">Inflation Calculators</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <!-- Breadcrumbs -->
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li><a href="/inflation-calculators/">Inflation Calculators</a></li>
+        <li><span aria-current="page">Inflation-Adjusted Tuition Calculator</span></li>
+      </ol>
+    </nav>
+
+    <div class="page-content">
+      <div class="article-content">
+        <h1>Inflation-Adjusted Tuition Calculator</h1>
+        <p>College tuition inflation has historically outpaced general inflation at roughly 5–7% per year, meaning today's tuition will look very different by the time your child enrolls. This calculator projects the per-year tuition cost at enrollment, the complete 4-year college cost estimate, and the monthly amount you need to save right now — invested at a reasonable return — to cover the full projected cost.</p>
+
+        <!-- Ad Slot -->
+        <div class="ad-slot ad-slot-leaderboard"></div>
+
+        <!-- Calculator -->
+        <div class="calc-container">
+          <div class="calc-header">
+            <h2>Calculate Future College Costs & Monthly Savings Target</h2>
+            <p>Find out what college will cost and how much to save each month starting now</p>
+          </div>
+          <div class="calc-body">
+            <form id="tuition-form">
+              <div class="form-group">
+                <label class="form-label" for="currentTuition">Current Annual Tuition</label>
+                <div class="input-prefix">
+                  <span class="prefix">$</span>
+                  <input type="number" id="currentTuition" name="currentTuition" class="form-input" placeholder="35000" min="1000" step="500" required>
+                </div>
+                <span class="form-hint">National avg for 4-year public: ~$11,000/yr; private: ~$42,000/yr (tuition only)</span>
+              </div>
+              <div class="calc-grid calc-grid-2col">
+                <div class="form-group">
+                  <label class="form-label" for="tuitionInflation">Tuition Inflation Rate <span class="form-hint">(%/yr)</span></label>
+                  <div class="input-suffix">
+                    <input type="number" id="tuitionInflation" name="tuitionInflation" class="form-input" placeholder="6" min="0.1" max="20" step="0.1" required>
+                    <span class="suffix">%</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="savingsReturn">Your Savings/Investment Return <span class="form-hint">(%/yr)</span></label>
+                  <div class="input-suffix">
+                    <input type="number" id="savingsReturn" name="savingsReturn" class="form-input" placeholder="6" min="0.1" max="20" step="0.1" required>
+                    <span class="suffix">%</span>
+                  </div>
+                </div>
+              </div>
+              <div class="calc-grid calc-grid-2col">
+                <div class="form-group">
+                  <label class="form-label" for="childAge">Child's Current Age</label>
+                  <div class="input-suffix">
+                    <input type="number" id="childAge" name="childAge" class="form-input" placeholder="5" min="0" max="17" step="1" required>
+                    <span class="suffix">yrs</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="enrollmentAge">College Enrollment Age</label>
+                  <div class="input-suffix">
+                    <input type="number" id="enrollmentAge" name="enrollmentAge" class="form-input" placeholder="18" min="14" max="25" step="1" required>
+                    <span class="suffix">yrs</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="calc-actions">
+                <button type="button" class="btn btn-calculate" onclick="calculateTuition()">Calculate College Costs</button>
+                <button type="button" class="btn btn-reset" onclick="resetTuition()">Reset</button>
+              </div>
+            </form>
+
+            <!-- Results -->
+            <div id="results" class="calc-results hidden">
+              <div class="result-primary">
+                <div class="result-label">Monthly Savings Needed Starting Now</div>
+                <div class="result-value" id="monthlySavings">$0/mo</div>
+              </div>
+              <div class="result-grid result-grid-3">
+                <div class="result-item">
+                  <div class="result-label">Projected Year 1 Tuition</div>
+                  <div class="result-value" id="projectedTuition">$0</div>
+                </div>
+                <div class="result-item">
+                  <div class="result-label">Total 4-Year Cost</div>
+                  <div class="result-value" id="totalFourYear">$0</div>
+                </div>
+                <div class="result-item">
+                  <div class="result-label">Years Until Enrollment</div>
+                  <div class="result-value" id="yearsLeft">0 yrs</div>
+                </div>
+              </div>
+
+              <!-- Year-by-year college cost table -->
+              <div style="margin-top:1.5rem;">
+                <h3 style="margin-bottom:0.75rem; font-size:var(--text-lg);">Projected Tuition by College Year</h3>
+                <div style="overflow-x:auto;">
+                  <table class="data-table">
+                    <thead>
+                      <tr>
+                        <th>College Year</th>
+                        <th>Calendar Year</th>
+                        <th>Projected Annual Tuition</th>
+                        <th>vs. Today</th>
+                      </tr>
+                    </thead>
+                    <tbody id="tuitionTableBody"></tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Formula Section -->
+        <section class="content-section">
+          <h2>Tuition Projection Formula</h2>
+          <div class="formula-box">
+            <div class="formula-label">Formulas Used</div>
+            Years Until Enrollment = Enrollment Age − Child's Current Age<br><br>
+            Tuition at Enrollment = Current Tuition × (1 + Tuition Inflation Rate)^Years Until Enrollment<br><br>
+            Total 4-Year Cost = Σ Tuition at Enrollment × (1 + Rate)^(0, 1, 2, 3)<br><br>
+            Monthly Savings = Total 4-Year Cost × (r/12) / ((1 + r/12)^(months) − 1)<br>
+            where r = annual investment return rate
+          </div>
+          <p>The monthly savings formula is the present value of an annuity — it calculates the level monthly contribution needed to reach a future savings target given a specified investment return. The earlier you start, the lower the monthly contribution due to more compound growth years.</p>
+        </section>
+
+        <!-- How to Use -->
+        <section class="content-section">
+          <h2>How to Use This Calculator</h2>
+          <ol>
+            <li><strong>Enter current annual tuition:</strong> Use the tuition for your target school type. National averages: public 4-year ~$11,000/yr, private 4-year ~$42,000/yr (tuition only — add room and board for total cost).</li>
+            <li><strong>Set tuition inflation rate:</strong> Historically 5–7% for US colleges. Use 6% as a conservative baseline.</li>
+            <li><strong>Enter your investment return:</strong> A 529 plan invested in index funds historically earns 6–8%. Use a lower rate for conservative planning.</li>
+            <li><strong>Enter child's current age and enrollment age:</strong> Most students start college at 18, but you can adjust for early or late enrollment.</li>
+            <li><strong>Review the monthly savings target:</strong> This is the amount to invest each month, starting today, in a 529 or education savings account.</li>
+          </ol>
+        </section>
+
+        <!-- Example Scenario -->
+        <section class="content-section">
+          <h2>Example Scenario</h2>
+          <p>Your child is 5 years old. A private university currently costs $42,000/year. Tuition inflation is 6%/year. You invest savings at 7% return. Enrollment at age 18 means 13 years to save:</p>
+          <ul>
+            <li><strong>Tuition at year 1 of college:</strong> $42,000 × (1.06)^13 = $89,644/yr</li>
+            <li><strong>Total 4-year projected cost:</strong> ~$402,000</li>
+            <li><strong>Monthly savings needed (starting now):</strong> approximately $1,320/month in a 7% return account</li>
+            <li><strong>If you wait until child is 10:</strong> Monthly savings jumps to about $2,500/month — nearly double!</li>
+          </ul>
+          <p>This example shows the powerful effect of starting early: every year you delay college savings significantly increases the monthly contribution required.</p>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+          <h2>Frequently Asked Questions</h2>
+          <div class="faq-item">
+            <button class="faq-question">
+              How fast does college tuition increase each year?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>College tuition in the US has historically increased at 5–7% per year on average, significantly outpacing general inflation. Over the past 30 years, college costs have increased by over 200% in inflation-adjusted terms. Private universities tend to increase faster than public ones.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              How do I calculate the projected tuition when my child enrolls?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>Projected Tuition = Current Annual Tuition × (1 + Tuition Inflation Rate)^Years Until Enrollment. The 4-year total accounts for continued tuition inflation during each of the 4 years of college, making the total cost higher than simply multiplying year-1 cost by 4.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              How much should I save monthly to cover college costs?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>The required monthly savings depends on your investment return rate and years until enrollment. If you invest in a 529 plan earning 6–7%, you need significantly less per month than if savings sit in cash. The earlier you start, the lower the monthly contribution required due to compound growth.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              What is a 529 plan and how does it help with tuition inflation?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>A 529 plan is a tax-advantaged college savings account that allows your money to grow tax-free when used for qualified education expenses. Starting a 529 plan early and investing in growth assets allows compound returns to offset the impact of tuition inflation, potentially covering a large portion of future costs.</p></div>
+          </div>
+        </section>
+
+        <!-- Related Calculators -->
+        <section class="related-calculators">
+          <h2>Related Calculators</h2>
+          <div class="grid grid-3">
+            <a href="/inflation-calculators/cost-increase-projection-calculator/" class="card card-link">
+              <h3>Cost Increase Projection Calculator</h3>
+              <p>Project how any cost grows at any annual increase rate.</p>
+            </a>
+            <a href="/inflation-calculators/inflation-adjusted-savings-calculator/" class="card card-link">
+              <h3>Inflation-Adjusted Savings Calculator</h3>
+              <p>See the real after-inflation return on your college savings.</p>
+            </a>
+            <a href="/inflation-calculators/future-purchasing-power-calculator/" class="card card-link">
+              <h3>Future Purchasing Power Calculator</h3>
+              <p>Understand what today's dollars will be worth when your child enrolls.</p>
+            </a>
+            <a href="/inflation-calculators/inflation-adjusted-retirement-calculator/" class="card card-link">
+              <h3>Inflation-Adjusted Retirement Calculator</h3>
+              <p>Balance retirement savings alongside college savings goals.</p>
+            </a>
+            <a href="/pages/finance-calculators/budget-calculator/" class="card card-link">
+              <h3>Budget Calculator (50/30/20)</h3>
+              <p>Build a budget that includes monthly college savings contributions.</p>
+            </a>
+          </div>
+        </section>
+
+        <!-- Disclaimer -->
+        <div class="disclaimer">
+          <strong>Disclaimer:</strong> This calculator is provided for informational and educational purposes only. It does not constitute financial or education planning advice. Actual tuition rates vary by institution and state. Investment returns are not guaranteed. Consult a qualified financial advisor or college financial planner for personalized guidance.
+        </div>
+
+        <!-- Ad Slot -->
+        <div class="ad-slot ad-slot-rectangle"></div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free online financial calculators to help you make smarter money decisions.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Inflation Tools</h4>
+          <a href="/inflation-calculators/inflation-impact-calculator/">Inflation Impact</a>
+          <a href="/inflation-calculators/future-purchasing-power-calculator/">Purchasing Power</a>
+          <a href="/inflation-calculators/inflation-adjusted-salary-calculator/">Salary Adjustment</a>
+          <a href="/inflation-calculators/inflation-adjusted-retirement-calculator/">Retirement Inflation</a>
+        </div>
+        <div class="footer-col">
+          <h4>Finance</h4>
+          <a href="/pages/finance-calculators/net-worth-calculator/">Net Worth</a>
+          <a href="/pages/finance-calculators/budget-calculator/">Budget (50/30/20)</a>
+          <a href="/pages/finance-calculators/emergency-fund-calculator/">Emergency Fund</a>
+          <a href="/pages/finance-calculators/retirement-savings-calculator/">Retirement Savings</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about/">About</a>
+          <a href="/contact/">Contact</a>
+          <a href="/privacy/">Privacy Policy</a>
+          <a href="/terms/">Terms of Service</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 CalcWise. All rights reserved.</span>
+        <div class="footer-links">
+          <a href="/privacy/">Privacy</a>
+          <a href="/terms/">Terms</a>
+          <a href="/contact/">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateTuition() {
+      if (!CalcWise.validateForm('tuition-form')) return;
+      const v = CalcWise.getFormValues('tuition-form');
+      const yearsToEnroll = v.enrollmentAge - v.childAge;
+
+      if (yearsToEnroll <= 0) {
+        alert('Enrollment age must be greater than child\'s current age.');
+        return;
+      }
+
+      const currentYear = 2026;
+      // Project tuition at each of 4 college years
+      const tuitionRows = [];
+      let total4Year = 0;
+      for (let yr = 0; yr < 4; yr++) {
+        const yearsTotal = yearsToEnroll + yr;
+        const projected = CalcWise.futureValueWithInflation(v.currentTuition, v.tuitionInflation, yearsTotal);
+        total4Year += projected;
+        tuitionRows.push({ collegeYear: yr + 1, calYear: currentYear + yearsTotal, tuition: projected });
+      }
+
+      const projectedYear1 = tuitionRows[0].tuition;
+
+      // Monthly savings needed: future value of annuity formula
+      // PMT = FV * r / ((1+r)^n - 1)
+      const months = yearsToEnroll * 12;
+      const monthlyRate = v.savingsReturn / 100 / 12;
+      let monthlySavings;
+      if (monthlyRate === 0) {
+        monthlySavings = total4Year / months;
+      } else {
+        monthlySavings = total4Year * monthlyRate / (Math.pow(1 + monthlyRate, months) - 1);
+      }
+
+      CalcWise.setText('projectedTuition', CalcWise.formatCurrency(projectedYear1) + '/yr');
+      CalcWise.setText('totalFourYear', CalcWise.formatCurrency(total4Year));
+      CalcWise.setText('yearsLeft', yearsToEnroll + ' years');
+      CalcWise.setText('monthlySavings', CalcWise.formatCurrency(monthlySavings) + '/mo');
+
+      // Table
+      const tbody = tuitionRows.map(r => {
+        const increase = ((r.tuition - v.currentTuition) / v.currentTuition * 100).toFixed(1);
+        return `<tr>
+          <td>Year ${r.collegeYear}</td>
+          <td>${r.calYear}</td>
+          <td>${CalcWise.formatCurrency(r.tuition)}</td>
+          <td style="color:var(--color-error);">+${increase}%</td>
+        </tr>`;
+      }).join('');
+      document.getElementById('tuitionTableBody').innerHTML = tbody;
+
+      CalcWise.showResults('results');
+    }
+
+    function resetTuition() {
+      document.getElementById('tuition-form').reset();
+      CalcWise.hideResults('results');
+    }
+  </script>
+</body>
+</html>

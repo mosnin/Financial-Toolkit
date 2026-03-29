@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ad Revenue Calculator | CalcWise</title>
+  <meta name="description" content="Calculate estimated display ad revenue based on monthly page views, RPM, ad density, and fill rate. Get monthly and annual ad income plus optimization potential.">
+  <link rel="canonical" href="https://calcwise.io/digital-income-calculators/ad-revenue-calculator/">
+  <meta property="og:title" content="Ad Revenue Calculator | CalcWise">
+  <meta property="og:description" content="Estimate display advertising revenue from page views, RPM, ad density, and fill rate for your blog, website, or content platform.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcwise.io/digital-income-calculators/ad-revenue-calculator/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ad Revenue Calculator | CalcWise">
+  <meta name="twitter:description" content="Estimate display ad revenue based on page views, RPM, ad density, and fill rate.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/"},
+      {"@type": "ListItem", "position": 2, "name": "Digital Income Calculators", "item": "https://calcwise.io/digital-income-calculators/"},
+      {"@type": "ListItem", "position": 3, "name": "Ad Revenue Calculator"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is RPM in display advertising?",
+        "acceptedAnswer": {"@type": "Answer", "text": "RPM (Revenue Per Mille) is the estimated revenue per 1,000 page views. It is calculated as (Total Revenue / Total Page Views) x 1,000. RPM varies widely by niche, geography, and season — typically ranging from $1-$5 for general content to $20-$50+ for finance, legal, and high-CPC niches."}
+      },
+      {
+        "@type": "Question",
+        "name": "What is a good ad fill rate?",
+        "acceptedAnswer": {"@type": "Answer", "text": "A fill rate of 90-100% is typical for premium ad networks like Mediavine or AdThrive. Google AdSense fill rates are often 80-95%. Lower fill rates can indicate insufficient bidder competition. Most header bidding setups with multiple demand partners achieve 95%+ fill rates."}
+      },
+      {
+        "@type": "Question",
+        "name": "How many ads per page maximizes revenue without hurting UX?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Google recommends no more than 3 standard ad units per page, though they have since removed hard limits. Most successful publishers use 2-4 ads per page. Going above 5-6 ads per page often hurts user experience, increases bounce rates, and can actually reduce RPM as ad viewability scores drop."}
+      },
+      {
+        "@type": "Question",
+        "name": "Which ad networks offer the highest RPM?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Mediavine and AdThrive (Raptive) generally offer the highest RPMs for content publishers, often $10-$40+. They require minimum traffic thresholds (50,000 and 100,000 sessions/month respectively). Google AdSense is accessible to all publishers but typically delivers lower RPMs of $2-$10."}
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="logo">
+        <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav">
+        <a href="/">Home</a>
+        <a href="/pages/business-calculators/">Business</a>
+        <a href="/pages/financial-calculators/">Financial</a>
+        <a href="/pages/tax-calculators/">Tax</a>
+        <a href="/pages/digital-income-calculators/" aria-current="page">Digital Income</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav">
+      <a href="/">Home</a>
+      <a href="/pages/business-calculators/">Business Calculators</a>
+      <a href="/pages/financial-calculators/">Financial Calculators</a>
+      <a href="/pages/tax-calculators/">Tax Calculators</a>
+      <a href="/pages/digital-income-calculators/">Digital Income Calculators</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/pages/digital-income-calculators/">Digital Income Calculators</a></li>
+          <li><span aria-current="page">Ad Revenue Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="calc-page-layout">
+          <div class="calc-page-main">
+            <h1>Ad Revenue Calculator</h1>
+            <p class="subtitle" style="font-size:var(--text-lg);color:var(--color-gray-600);margin-bottom:var(--space-8);line-height:var(--leading-relaxed);">Estimate monthly and annual display advertising revenue for your website or blog based on page views, RPM, ad density, and fill rate. See your revenue per page view and optimization upside.</p>
+
+            <div class="calc-container">
+              <div class="calc-header">
+                <h2>Ad Revenue Calculator</h2>
+                <p>Estimate display ad earnings from page views and RPM</p>
+              </div>
+              <div class="calc-body">
+                <form id="ad-form" onsubmit="return false;">
+                  <div class="form-group">
+                    <label class="form-label" for="monthly-pageviews">Monthly Page Views</label>
+                    <input type="number" id="monthly-pageviews" name="monthlyPageviews" class="form-input" placeholder="100000" min="1" step="1" required>
+                    <span class="form-hint">Total page views per month across your entire site</span>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="rpm">RPM — Revenue per 1,000 Views ($)</label>
+                    <div class="input-prefix">
+                      <span class="prefix">$</span>
+                      <input type="number" id="rpm" name="rpm" class="form-input" placeholder="15" min="0.01" step="0.01" required>
+                    </div>
+                    <span class="form-hint">AdSense: $2-$10. Mediavine: $10-$30. AdThrive: $15-$40+</span>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="ads-per-page">Ad Units per Page</label>
+                    <input type="number" id="ads-per-page" name="adsPerPage" class="form-input" placeholder="3" min="1" max="20" step="1" required>
+                    <span class="form-hint">Number of ad slots displayed on an average page</span>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="fill-rate">Fill Rate (%)</label>
+                    <div class="input-suffix">
+                      <input type="number" id="fill-rate" name="fillRate" class="form-input" placeholder="90" min="1" max="100" step="0.1" required>
+                      <span class="suffix">%</span>
+                    </div>
+                    <span class="form-hint">Percentage of ad slots actually filled with paying ads</span>
+                  </div>
+
+                  <div class="calc-actions">
+                    <button type="button" class="btn btn-calculate btn-full" onclick="calculateAdRevenue()">Calculate Ad Revenue</button>
+                    <button type="button" class="btn btn-reset" onclick="resetAdForm()">Reset</button>
+                  </div>
+                </form>
+
+                <div id="ad-results" class="calc-results hidden">
+                  <div class="result-primary">
+                    <div class="result-label">Estimated Monthly Ad Revenue</div>
+                    <div class="result-value" id="ad-result-monthly">$0</div>
+                  </div>
+                  <div class="result-grid result-grid-2">
+                    <div class="result-item">
+                      <div class="result-label">Annual Ad Revenue</div>
+                      <div class="result-value" id="ad-result-annual">$0</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Revenue per Page View</div>
+                      <div class="result-value" id="ad-result-per-pv">$0.000</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Effective Ad Impressions</div>
+                      <div class="result-value" id="ad-result-impressions">0</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Potential at 100% Fill Rate</div>
+                      <div class="result-value" id="ad-result-potential">$0</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="ad-slot ad-slot-leaderboard"></div>
+
+            <section class="content-section">
+              <h2>Ad Revenue Formulas</h2>
+              <div class="formula-box">
+                <div class="formula-label">Effective Impressions</div>
+                Impressions = Page Views x Ads per Page x (Fill Rate / 100)
+              </div>
+              <div class="formula-box">
+                <div class="formula-label">Monthly Ad Revenue</div>
+                Monthly Revenue = (Impressions / 1,000) x RPM
+              </div>
+              <div class="formula-box">
+                <div class="formula-label">Revenue per Page View</div>
+                RPPV = Monthly Revenue / Monthly Page Views
+              </div>
+              <div class="formula-box">
+                <div class="formula-label">Optimization Potential (100% fill)</div>
+                Potential = (Page Views x Ads per Page / 1,000) x RPM
+              </div>
+            </section>
+
+            <section class="content-section">
+              <h2>How to Use This Calculator</h2>
+              <ol>
+                <li>Enter your <strong>monthly page views</strong> from Google Analytics or your platform dashboard.</li>
+                <li>Set your <strong>RPM</strong> — find this in your ad network dashboard. If new, use $5-$10 for AdSense, $15-$25 for Mediavine as starting estimates.</li>
+                <li>Enter the <strong>number of ad units per page</strong> — count how many ad slots you display on a typical content page.</li>
+                <li>Set your <strong>fill rate</strong> — find this in your ad network reports. 90% is a reasonable default if unsure.</li>
+                <li>Click <strong>Calculate Ad Revenue</strong> to see monthly earnings, annual projection, revenue per page view, and the revenue gap from your fill rate.</li>
+              </ol>
+            </section>
+
+            <section class="content-section">
+              <h2>Example Scenario</h2>
+              <p>A lifestyle blog generates 200,000 page views per month with an RPM of $18, 3 ads per page, and 88% fill rate from Mediavine.</p>
+              <ul>
+                <li>Effective Impressions: 200,000 x 3 x 88% = <strong>528,000</strong></li>
+                <li>Monthly Revenue: (528,000 / 1,000) x $18 = <strong>$9,504</strong></li>
+                <li>Annual Revenue: $9,504 x 12 = <strong>$114,048</strong></li>
+                <li>Revenue per Page View: $9,504 / 200,000 = <strong>$0.0475</strong></li>
+                <li>100% Fill Rate Potential: (600,000 / 1,000) x $18 = <strong>$10,800</strong></li>
+                <li>Optimization Upside: $10,800 - $9,504 = <strong>$1,296/month</strong></li>
+              </ul>
+            </section>
+
+            <section class="faq-section">
+              <h2>Frequently Asked Questions</h2>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  What is RPM in display advertising?
+                  <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                </button>
+                <div class="faq-answer">
+                  <p>RPM (Revenue Per Mille) is the estimated revenue per 1,000 page views. It is calculated as (Total Revenue / Total Page Views) x 1,000. RPM varies by niche, geography, and season — typically $1-$5 for general content to $20-$50+ for finance and legal niches.</p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  What is a good ad fill rate?
+                  <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 011-1z"/></svg>
+                </button>
+                <div class="faq-answer">
+                  <p>Fill rates of 90-100% are typical for premium ad networks like Mediavine or AdThrive. Google AdSense fill rates are often 80-95%. Header bidding setups with multiple demand partners typically achieve 95%+ fill rates.</p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  How many ads per page maximizes revenue without hurting UX?
+                  <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 011-1z"/></svg>
+                </button>
+                <div class="faq-answer">
+                  <p>Most successful publishers use 2-4 ads per page. Going above 5-6 ads often hurts user experience, increases bounce rates, and can reduce RPM as ad viewability scores drop. Quality placement in high-viewability positions beats quantity.</p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  Which ad networks offer the highest RPM?
+                  <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 011-1z"/></svg>
+                </button>
+                <div class="faq-answer">
+                  <p>Mediavine and AdThrive (Raptive) generally offer the highest RPMs, often $10-$40+. They require minimum traffic thresholds (50,000 and 100,000 sessions/month). Google AdSense is accessible to all but typically delivers $2-$10 RPM.</p>
+                </div>
+              </div>
+            </section>
+
+            <section class="related-calculators">
+              <h2>Related Calculators</h2>
+              <div class="grid grid-3">
+                <a href="/pages/digital-income-calculators/affiliate-income-calculator/" class="card card-link">
+                  <h3>Affiliate Income Calculator</h3>
+                  <p>Estimate affiliate earnings from your traffic and click-through rates.</p>
+                </a>
+                <a href="/pages/digital-income-calculators/newsletter-revenue-calculator/" class="card card-link">
+                  <h3>Newsletter Revenue Calculator</h3>
+                  <p>Calculate newsletter sponsorship and paid subscription income.</p>
+                </a>
+                <a href="/pages/digital-income-calculators/creator-revenue-calculator/" class="card card-link">
+                  <h3>Creator Revenue Calculator</h3>
+                  <p>Estimate total creator income across all monetization channels.</p>
+                </a>
+                <a href="/pages/side-hustle-calculators/blog-income-calculator/" class="card card-link">
+                  <h3>Blog Income Calculator</h3>
+                  <p>Calculate your blog's total earning potential from all revenue sources.</p>
+                </a>
+              </div>
+            </section>
+
+            <div class="disclaimer">
+              <strong>Disclaimer:</strong> This calculator provides estimates for educational purposes only. Actual ad revenue varies based on audience geography, device type, seasonality, content niche, and ad network algorithms. RPM figures fluctuate significantly throughout the year and are not guaranteed.
+            </div>
+          </div>
+
+          <aside class="calc-page-sidebar">
+            <div class="ad-slot ad-slot-rectangle"></div>
+            <div class="sidebar-card">
+              <h3>Digital Income Calculators</h3>
+              <a href="/pages/digital-income-calculators/affiliate-income-calculator/">Affiliate Income</a>
+              <a href="/pages/digital-income-calculators/newsletter-revenue-calculator/">Newsletter Revenue</a>
+              <a href="/pages/digital-income-calculators/creator-revenue-calculator/">Creator Revenue</a>
+              <a href="/pages/digital-income-calculators/online-store-revenue-calculator/">Online Store Revenue</a>
+              <a href="/pages/digital-income-calculators/digital-product-revenue-calculator/">Digital Product Revenue</a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free online calculators for business, finance, tax, and investment decisions.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Calculators</h4>
+          <a href="/pages/business-calculators/">Business</a>
+          <a href="/pages/financial-calculators/">Financial</a>
+          <a href="/pages/tax-calculators/">Tax</a>
+          <a href="/pages/digital-income-calculators/">Digital Income</a>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <a href="/about/">About</a>
+          <a href="/blog/">Blog</a>
+          <a href="/contact/">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="/privacy/">Privacy Policy</a>
+          <a href="/terms/">Terms of Service</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/privacy/">Privacy</a>
+          <a href="/terms/">Terms</a>
+          <a href="/contact/">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateAdRevenue() {
+      const pageviews = CalcWise.parseNumber(document.getElementById('monthly-pageviews').value);
+      const rpm = CalcWise.parseNumber(document.getElementById('rpm').value);
+      const adsPerPage = CalcWise.parseNumber(document.getElementById('ads-per-page').value);
+      const fillRate = CalcWise.parseNumber(document.getElementById('fill-rate').value);
+
+      if (pageviews <= 0) { alert('Monthly page views must be greater than zero.'); return; }
+      if (rpm <= 0) { alert('RPM must be greater than zero.'); return; }
+      if (adsPerPage < 1) { alert('Ads per page must be at least 1.'); return; }
+      if (fillRate <= 0 || fillRate > 100) { alert('Fill rate must be between 1% and 100%.'); return; }
+
+      const effectiveImpressions = pageviews * adsPerPage * (fillRate / 100);
+      const monthlyRevenue = (effectiveImpressions / 1000) * rpm;
+      const annualRevenue = monthlyRevenue * 12;
+      const revenuePerPV = pageviews > 0 ? monthlyRevenue / pageviews : 0;
+      const fullFillPotential = (pageviews * adsPerPage / 1000) * rpm;
+
+      CalcWise.setText('ad-result-monthly', CalcWise.formatCurrency(monthlyRevenue, 0));
+      CalcWise.setText('ad-result-annual', CalcWise.formatCurrency(annualRevenue, 0));
+      CalcWise.setText('ad-result-per-pv', CalcWise.formatCurrency(revenuePerPV, 4));
+      CalcWise.setText('ad-result-impressions', CalcWise.formatNumber(Math.round(effectiveImpressions)));
+      CalcWise.setText('ad-result-potential', CalcWise.formatCurrency(fullFillPotential, 0));
+      CalcWise.showResults('ad-results');
+    }
+
+    function resetAdForm() {
+      document.getElementById('ad-form').reset();
+      CalcWise.hideResults('ad-results');
+    }
+  </script>
+</body>
+</html>

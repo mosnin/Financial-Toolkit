@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contractor vs. Employee Income Calculator | CalcWise</title>
+  <meta name="description" content="Compare your true annual net income as an independent contractor versus a salaried employee after accounting for benefits, SE tax, business expenses, and job security.">
+  <link rel="canonical" href="https://calcwise.io/freelancer-calculators/contractor-vs-employee-income-calculator/">
+  <meta property="og:title" content="Contractor vs. Employee Income Calculator | CalcWise">
+  <meta property="og:description" content="Compare your true net income as a contractor versus a salaried employee after taxes, benefits, and expenses.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcwise.io/freelancer-calculators/contractor-vs-employee-income-calculator/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Contractor vs. Employee Income Calculator | CalcWise">
+  <meta name="twitter:description" content="Compare your true net income as a contractor versus a salaried employee after taxes, benefits, and expenses.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/"},
+      {"@type": "ListItem", "position": 2, "name": "Freelancer Calculators", "item": "https://calcwise.io/freelancer-calculators/"},
+      {"@type": "ListItem", "position": 3, "name": "Contractor vs. Employee Income Calculator"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How much more does a contractor need to earn to match an employee salary?",
+        "acceptedAnswer": {"@type": "Answer", "text": "A contractor typically needs to earn 30-50% more than an equivalent salary to account for self-employment tax, loss of benefits (health insurance, 401k matching, PTO), and business expenses. Use this calculator to find your exact break-even contractor rate."}
+      },
+      {
+        "@type": "Question",
+        "name": "What benefits should I factor into employee vs contractor comparison?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Count employer-sponsored health insurance (average $7,000-$15,000/year), 401k match (typically 3-6% of salary), paid time off (3-4 weeks = 6-8% of salary), and other perks like equipment, training budgets, and liability coverage."}
+      },
+      {
+        "@type": "Question",
+        "name": "What is the self-employment tax impact on contractor income?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Contractors pay both the employee and employer portions of FICA taxes — 15.3% on 92.35% of net income. Employees only pay the employee half (7.65%). This means a contractor earning $100,000 pays roughly $14,130 more in Social Security and Medicare taxes than an employee."}
+      },
+      {
+        "@type": "Question",
+        "name": "What is a job security premium for contractor work?",
+        "acceptedAnswer": {"@type": "Answer", "text": "A job security premium compensates for the risk of income gaps between contracts, potential periods of zero revenue, and the cost of finding new work. Many financial advisors recommend contractors factor in an additional 10-20% premium over the equivalent employee income to account for this risk."}
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="logo">
+        <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav">
+        <a href="/">Home</a>
+        <a href="/pages/business-calculators/">Business</a>
+        <a href="/pages/financial-calculators/">Financial</a>
+        <a href="/pages/tax-calculators/">Tax</a>
+        <a href="/pages/freelancer-calculators/" aria-current="page">Freelancer</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav">
+      <a href="/">Home</a>
+      <a href="/pages/business-calculators/">Business Calculators</a>
+      <a href="/pages/financial-calculators/">Financial Calculators</a>
+      <a href="/pages/tax-calculators/">Tax Calculators</a>
+      <a href="/pages/freelancer-calculators/">Freelancer Calculators</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/pages/freelancer-calculators/">Freelancer Calculators</a></li>
+          <li><span aria-current="page">Contractor vs. Employee Income Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="calc-page-layout">
+          <div class="calc-page-main">
+            <h1>Contractor vs. Employee Income Calculator</h1>
+            <p class="subtitle" style="font-size:var(--text-lg);color:var(--color-gray-600);margin-bottom:var(--space-8);line-height:var(--leading-relaxed);">Deciding between contract work and employment requires an apples-to-apples comparison that accounts for taxes, benefits, business expenses, and the risk premium of self-employment. This calculator computes your true annual net income in both scenarios and tells you the break-even contractor rate — the minimum you must charge to come out ahead of a given salary.</p>
+
+            <div class="calc-container">
+              <div class="calc-header">
+                <h2>Contractor vs. Employee Calculator</h2>
+                <p>Find your true financial position in both scenarios</p>
+              </div>
+              <div class="calc-body">
+                <form id="cve-form" onsubmit="return false;">
+                  <p style="font-weight:var(--font-semibold);margin-bottom:var(--space-3);color:var(--color-primary);">Contractor Side</p>
+                  <div class="calc-grid calc-grid-2col">
+                    <div class="form-group">
+                      <label class="form-label" for="cve-hourly-rate">Contractor Hourly Rate</label>
+                      <div class="input-prefix">
+                        <span class="prefix">$</span>
+                        <input type="number" id="cve-hourly-rate" class="form-input" placeholder="85" min="0" step="1" required>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label" for="cve-billable-hrs">Billable Hours / Year</label>
+                      <input type="number" id="cve-billable-hrs" class="form-input" placeholder="1800" min="0" step="10" required>
+                    </div>
+                  </div>
+                  <div class="calc-grid calc-grid-2col">
+                    <div class="form-group">
+                      <label class="form-label" for="cve-business-exp">Annual Business Expenses</label>
+                      <div class="input-prefix">
+                        <span class="prefix">$</span>
+                        <input type="number" id="cve-business-exp" class="form-input" placeholder="8000" min="0" step="100">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label" for="cve-se-rate">SE + Income Tax Rate</label>
+                      <div class="input-suffix">
+                        <input type="number" id="cve-se-rate" class="form-input" placeholder="35" min="0" max="60" step="0.5" required>
+                        <span class="suffix">%</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <p style="font-weight:var(--font-semibold);margin-bottom:var(--space-3);margin-top:var(--space-4);color:var(--color-primary);">Employee Side</p>
+                  <div class="calc-grid calc-grid-2col">
+                    <div class="form-group">
+                      <label class="form-label" for="cve-salary">Employee Annual Salary</label>
+                      <div class="input-prefix">
+                        <span class="prefix">$</span>
+                        <input type="number" id="cve-salary" class="form-input" placeholder="120000" min="0" step="1000" required>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label" for="cve-benefits">Annual Benefits Value</label>
+                      <div class="input-prefix">
+                        <span class="prefix">$</span>
+                        <input type="number" id="cve-benefits" class="form-input" placeholder="18000" min="0" step="100">
+                      </div>
+                      <span class="form-hint" style="display:block;margin-top:var(--space-1);">Health, 401k match, PTO value, other perks</span>
+                    </div>
+                  </div>
+                  <div class="calc-grid calc-grid-2col">
+                    <div class="form-group">
+                      <label class="form-label" for="cve-emp-tax">Employee Income Tax Rate</label>
+                      <div class="input-suffix">
+                        <input type="number" id="cve-emp-tax" class="form-input" placeholder="28" min="0" max="50" step="0.5" required>
+                        <span class="suffix">%</span>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label" for="cve-security-premium">Job Security Premium</label>
+                      <div class="input-suffix">
+                        <input type="number" id="cve-security-premium" class="form-input" placeholder="15" min="0" max="50" step="1">
+                        <span class="suffix">%</span>
+                      </div>
+                      <span class="form-hint" style="display:block;margin-top:var(--space-1);">Premium contractor should earn over employee</span>
+                    </div>
+                  </div>
+
+                  <div class="calc-actions">
+                    <button type="button" class="btn btn-calculate btn-full" onclick="calculateCvE()">Compare Income</button>
+                    <button type="button" class="btn btn-reset" onclick="resetCvEForm()">Reset</button>
+                  </div>
+                </form>
+
+                <div id="results" class="calc-results hidden">
+                  <div class="result-primary">
+                    <div class="result-label">Recommendation</div>
+                    <div class="result-value" id="result-recommendation" style="font-size:var(--text-xl);">--</div>
+                  </div>
+                  <div class="result-grid result-grid-3">
+                    <div class="result-item">
+                      <div class="result-label">True Contractor Annual Net</div>
+                      <div class="result-value" id="result-contractor-net">$0</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">True Employee Annual Net</div>
+                      <div class="result-value" id="result-employee-net">$0</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Net Difference</div>
+                      <div class="result-value" id="result-difference">$0</div>
+                    </div>
+                  </div>
+                  <div class="result-grid result-grid-3">
+                    <div class="result-item">
+                      <div class="result-label">Break-Even Contractor Rate</div>
+                      <div class="result-value" id="result-breakeven-rate">$0/hr</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Contractor Gross Revenue</div>
+                      <div class="result-value" id="result-contractor-gross">$0</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Employee Total Comp</div>
+                      <div class="result-value" id="result-emp-total-comp">$0</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="ad-slot ad-slot-leaderboard"></div>
+
+            <section class="content-section">
+              <h2>Comparison Formula</h2>
+              <div class="formula-box">
+                <div class="formula-label">Contractor Annual Net</div>
+                Net = (Hourly Rate × Billable Hours - Business Expenses) × (1 - Tax Rate)
+              </div>
+              <div class="formula-box">
+                <div class="formula-label">Employee Annual Net</div>
+                Net = (Salary × (1 - Employee Tax Rate)) + Benefits Value
+              </div>
+              <div class="formula-box">
+                <div class="formula-label">Break-Even Contractor Rate</div>
+                Rate = Employee Total Need / (Billable Hours × (1 - Tax Rate))
+              </div>
+              <div class="formula-box">
+                <div class="formula-label">Employee Total Need (with security premium)</div>
+                Need = (Salary + Benefits) × (1 + Security Premium %)
+              </div>
+            </section>
+
+            <section class="content-section">
+              <h2>How to Use This Calculator</h2>
+              <ol>
+                <li>Enter your <strong>contractor hourly rate</strong> and estimated <strong>annual billable hours</strong>.</li>
+                <li>Add <strong>annual business expenses</strong> and estimate your combined SE + income <strong>tax rate</strong>.</li>
+                <li>Enter the <strong>employee salary</strong> you're comparing against and the full <strong>benefits value</strong> (health, 401k match, PTO).</li>
+                <li>Set a <strong>job security premium</strong> — the additional compensation a contractor should earn to justify income risk.</li>
+                <li>Click <strong>Compare Income</strong> to see true net income for both scenarios and your break-even rate.</li>
+              </ol>
+            </section>
+
+            <section class="content-section">
+              <h2>Example Scenario</h2>
+              <p>A contractor charges $85/hr for 1,800 billable hours with $8,000 in expenses and 35% taxes. The employee comparison is a $120,000 salary with $18,000 in benefits at 28% tax rate, plus 15% security premium.</p>
+              <ul>
+                <li>Contractor Gross: $85 × 1,800 = <strong>$153,000</strong></li>
+                <li>Contractor Net: ($153,000 - $8,000) × 0.65 = <strong>$94,250</strong></li>
+                <li>Employee Net: $120,000 × 0.72 + $18,000 = <strong>$104,400</strong></li>
+                <li>Employee Total Need (15% premium): $138,000 × 1.15 = <strong>$158,700</strong></li>
+                <li>Break-Even Rate: $158,700 / (1,800 × 0.65) = <strong>$135.64/hr</strong></li>
+                <li>Verdict: <strong>Contractor earns less — needs to raise rate or find more hours</strong></li>
+              </ul>
+            </section>
+
+            <section class="faq-section">
+              <h2>Frequently Asked Questions</h2>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  How much more does a contractor need to earn to match an employee salary?
+                  <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 011-1z"/></svg>
+                </button>
+                <div class="faq-answer">
+                  <p>A contractor typically needs to earn 30-50% more than an equivalent salary to account for self-employment tax, benefits costs, and business expenses. Use this calculator to find your exact break-even rate.</p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  What benefits should I factor into the employee vs. contractor comparison?
+                  <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 011-1z"/></svg>
+                </button>
+                <div class="faq-answer">
+                  <p>Count employer health insurance ($7,000-$15,000/year), 401k match (3-6% of salary), paid time off (6-8% of salary equivalent), equipment, training budgets, and liability coverage.</p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  What is the self-employment tax impact on contractor income?
+                  <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 011-1z"/></svg>
+                </button>
+                <div class="faq-answer">
+                  <p>Contractors pay both employee and employer FICA taxes — 15.3% on 92.35% of net income. Employees only pay the employee half (7.65%). This means a contractor earning $100,000 pays roughly $14,130 more in Social Security and Medicare than an employee.</p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  What is a job security premium for contractor work?
+                  <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 011-1z"/></svg>
+                </button>
+                <div class="faq-answer">
+                  <p>A job security premium compensates for income gaps between contracts and the cost of finding new work. Most advisors recommend contractors factor in an additional 10-20% premium to account for this risk.</p>
+                </div>
+              </div>
+            </section>
+
+            <section class="related-calculators">
+              <h2>Related Calculators</h2>
+              <div class="grid grid-3">
+                <a href="/pages/freelancer-calculators/freelance-tax-estimator/" class="card card-link">
+                  <h3>Freelance Tax Estimator</h3>
+                  <p>Get a precise tax breakdown to set your contractor tax rate assumption.</p>
+                </a>
+                <a href="/pages/freelancer-calculators/hourly-to-annual-income-calculator/" class="card card-link">
+                  <h3>Hourly to Annual Income</h3>
+                  <p>Model annual income at different hourly rates and utilization levels.</p>
+                </a>
+                <a href="/pages/business-calculators/freelance-rate-calculator/" class="card card-link">
+                  <h3>Freelance Rate Calculator</h3>
+                  <p>Calculate your minimum hourly rate to meet income and expense goals.</p>
+                </a>
+                <a href="/pages/freelancer-calculators/freelance-break-even-calculator/" class="card card-link">
+                  <h3>Break-Even Calculator</h3>
+                  <p>Know the absolute minimum revenue floor for your freelance business.</p>
+                </a>
+              </div>
+            </section>
+
+            <div class="disclaimer">
+              <strong>Disclaimer:</strong> This calculator provides simplified estimates for comparison purposes. Actual tax situations vary by filing status, deductions, and state. Benefits values, business expenses, and billable hours are estimates. Consult a tax professional and financial advisor before making career decisions.
+            </div>
+          </div>
+
+          <aside class="calc-page-sidebar">
+            <div class="ad-slot ad-slot-rectangle"></div>
+            <div class="sidebar-card">
+              <h3>Freelancer Calculators</h3>
+              <a href="/pages/freelancer-calculators/freelance-tax-estimator/">Tax Estimator</a>
+              <a href="/pages/freelancer-calculators/hourly-to-annual-income-calculator/">Hourly to Annual</a>
+              <a href="/pages/freelancer-calculators/project-pricing-calculator/">Project Pricing</a>
+              <a href="/pages/freelancer-calculators/freelance-break-even-calculator/">Break-Even Calculator</a>
+              <a href="/pages/freelancer-calculators/contractor-vs-employee-income-calculator/">Contractor vs Employee</a>
+              <a href="/pages/freelancer-calculators/freelance-utilization-rate-calculator/">Utilization Rate</a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free online calculators for business, finance, tax, and investment decisions.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Calculators</h4>
+          <a href="/pages/business-calculators/">Business</a>
+          <a href="/pages/financial-calculators/">Financial</a>
+          <a href="/pages/tax-calculators/">Tax</a>
+          <a href="/pages/investment-calculators/">Investment</a>
+          <a href="/pages/freelancer-calculators/">Freelancer</a>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <a href="/about/">About</a>
+          <a href="/blog/">Blog</a>
+          <a href="/contact/">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="/privacy/">Privacy Policy</a>
+          <a href="/terms/">Terms of Service</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/privacy/">Privacy</a>
+          <a href="/terms/">Terms</a>
+          <a href="/contact/">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateCvE() {
+      const cRate = CalcWise.parseNumber(document.getElementById('cve-hourly-rate').value);
+      const cHours = CalcWise.parseNumber(document.getElementById('cve-billable-hrs').value);
+      const cExpenses = CalcWise.parseNumber(document.getElementById('cve-business-exp').value) || 0;
+      const cTaxRate = (CalcWise.parseNumber(document.getElementById('cve-se-rate').value) || 0) / 100;
+      const eSalary = CalcWise.parseNumber(document.getElementById('cve-salary').value);
+      const eBenefits = CalcWise.parseNumber(document.getElementById('cve-benefits').value) || 0;
+      const eTaxRate = (CalcWise.parseNumber(document.getElementById('cve-emp-tax').value) || 0) / 100;
+      const secPremium = (CalcWise.parseNumber(document.getElementById('cve-security-premium').value) || 0) / 100;
+
+      if (cRate <= 0 || cHours <= 0 || eSalary <= 0) {
+        alert('Please fill in contractor rate, billable hours, and employee salary.');
+        return;
+      }
+
+      const contractorGross = cRate * cHours;
+      const contractorNet = (contractorGross - cExpenses) * (1 - cTaxRate);
+      const employeeTotalComp = eSalary + eBenefits;
+      const employeeNet = eSalary * (1 - eTaxRate) + eBenefits;
+      const difference = contractorNet - employeeNet;
+
+      // Break-even: contractor needs to net employee total comp + security premium
+      const targetNet = employeeTotalComp * (1 + secPremium);
+      // net = (rate * hours - expenses) * (1 - taxRate)
+      // rate = (targetNet / (1-taxRate) + expenses) / hours
+      const beRate = cHours > 0 ? (targetNet / (1 - cTaxRate) + cExpenses) / cHours : 0;
+
+      let recommendation = '';
+      if (contractorNet >= employeeNet * (1 + secPremium)) {
+        recommendation = 'Contracting is financially superior at this rate';
+      } else if (contractorNet >= employeeNet) {
+        recommendation = 'Contracting pays more, but below security premium threshold';
+      } else {
+        recommendation = 'Employment wins — raise contractor rate to ' + CalcWise.formatCurrency(beRate) + '/hr to compete';
+      }
+
+      document.getElementById('result-recommendation').textContent = recommendation;
+      document.getElementById('result-recommendation').style.color = contractorNet >= employeeNet * (1 + secPremium) ? 'var(--color-success)' : contractorNet >= employeeNet ? 'var(--color-warning)' : 'var(--color-error)';
+
+      CalcWise.setText('result-contractor-net', CalcWise.formatCurrency(contractorNet));
+      CalcWise.setText('result-employee-net', CalcWise.formatCurrency(employeeNet));
+      CalcWise.setText('result-difference', (difference >= 0 ? '+' : '') + CalcWise.formatCurrency(difference));
+      CalcWise.setText('result-breakeven-rate', CalcWise.formatCurrency(beRate) + '/hr');
+      CalcWise.setText('result-contractor-gross', CalcWise.formatCurrency(contractorGross));
+      CalcWise.setText('result-emp-total-comp', CalcWise.formatCurrency(employeeTotalComp));
+      CalcWise.showResults('results');
+    }
+
+    function resetCvEForm() {
+      document.getElementById('cve-form').reset();
+      CalcWise.hideResults('results');
+    }
+
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', !expanded);
+        btn.nextElementSibling.style.display = expanded ? 'none' : 'block';
+      });
+    });
+
+    const toggle = document.querySelector('.mobile-menu-toggle');
+    const mobileNav = document.querySelector('.mobile-nav');
+    if (toggle && mobileNav) {
+      toggle.addEventListener('click', () => {
+        const open = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', !open);
+        mobileNav.classList.toggle('open', !open);
+      });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ebook Sales Calculator | CalcWise</title>
+  <meta name="description" content="Calculate your ebook sales revenue and royalties based on monthly sales volume, price, and royalty rate. Get monthly income, annual projections, and effective earnings per copy sold.">
+  <link rel="canonical" href="https://calcwise.io/digital-income-calculators/ebook-sales-calculator/">
+  <meta property="og:title" content="Ebook Sales Calculator | CalcWise">
+  <meta property="og:description" content="Estimate your ebook earnings with our free calculator. Enter sales volume, price, and royalty rate to see monthly and annual revenue projections.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcwise.io/digital-income-calculators/ebook-sales-calculator/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ebook Sales Calculator | CalcWise">
+  <meta name="twitter:description" content="Estimate ebook revenue and royalties from sales volume, pricing, and royalty rates.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/"},
+      {"@type": "ListItem", "position": 2, "name": "Digital Income Calculators", "item": "https://calcwise.io/digital-income-calculators/"},
+      {"@type": "ListItem", "position": 3, "name": "Ebook Sales Calculator"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What royalty rate does Amazon KDP pay for ebooks?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Amazon KDP pays a 70% royalty on ebooks priced between $2.99 and $9.99 (in select territories), and a 35% royalty on ebooks priced outside that range or in certain countries. There is also a small delivery fee deducted for the 70% tier based on file size. Enrolling in KDP Select can provide additional income from Kindle Unlimited page reads."}
+      },
+      {
+        "@type": "Question",
+        "name": "How many ebooks do self-published authors typically sell per month?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Sales vary widely. New authors with no platform may sell fewer than 10 copies per month initially. Authors with an email list, strong reviews, and active marketing can sell 100-1,000+ copies monthly. Bestselling self-published authors in competitive niches may sell thousands of copies per month across multiple titles."}
+      },
+      {
+        "@type": "Question",
+        "name": "Should I sell directly or through platforms like Amazon?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Selling directly through your own site (via Gumroad, Payhip, or your own checkout) keeps 95-100% of revenue but requires you to drive all traffic. Platforms like Amazon offer built-in discovery but take a larger cut. Many authors use both: selling direct to their audience while leveraging Amazon for discovery. Direct sales generate higher margins per copy."}
+      },
+      {
+        "@type": "Question",
+        "name": "What is the best price for a self-published ebook?",
+        "acceptedAnswer": {"@type": "Answer", "text": "For Amazon, $2.99-$4.99 is a sweet spot that qualifies for 70% royalties and attracts impulse buyers. For nonfiction or how-to ebooks sold directly, $9.99-$29.99 is common. Premium guides or professional ebooks sold through your own channels can command $49-$197 or more. Pricing should reflect the value delivered and your audience's willingness to pay."}
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="logo">
+        <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav">
+        <a href="/">Home</a>
+        <a href="/pages/business-calculators/">Business</a>
+        <a href="/pages/financial-calculators/">Financial</a>
+        <a href="/pages/tax-calculators/">Tax</a>
+        <a href="/pages/digital-income-calculators/" aria-current="page">Digital Income</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav">
+      <a href="/">Home</a>
+      <a href="/pages/business-calculators/">Business Calculators</a>
+      <a href="/pages/financial-calculators/">Financial Calculators</a>
+      <a href="/pages/tax-calculators/">Tax Calculators</a>
+      <a href="/pages/digital-income-calculators/">Digital Income Calculators</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/pages/digital-income-calculators/">Digital Income Calculators</a></li>
+          <li><span aria-current="page">Ebook Sales Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="calc-page-layout">
+          <div class="calc-page-main">
+            <h1>Ebook Sales Calculator</h1>
+            <p class="subtitle" style="font-size:var(--text-lg);color:var(--color-gray-600);margin-bottom:var(--space-8);line-height:var(--leading-relaxed);">Calculate your ebook revenue and royalties by entering your monthly sales volume, list price, royalty rate, and number of titles. See monthly royalties, annual income, and effective earnings per copy.</p>
+
+            <div class="calc-container">
+              <div class="calc-header">
+                <h2>Ebook Sales Calculator</h2>
+                <p>Estimate ebook royalties and revenue from sales volume and pricing</p>
+              </div>
+              <div class="calc-body">
+                <form id="ebook-form" onsubmit="return false;">
+                  <div class="form-group">
+                    <label class="form-label" for="monthly-sales">Monthly Sales (copies)</label>
+                    <input type="number" id="monthly-sales" name="monthlySales" class="form-input" placeholder="150" min="1" step="1" required>
+                    <span class="form-hint">Total ebook copies sold per month across all titles</span>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="ebook-price">List Price per Ebook ($)</label>
+                    <div class="input-prefix">
+                      <span class="prefix">$</span>
+                      <input type="number" id="ebook-price" name="ebookPrice" class="form-input" placeholder="9.99" min="0.01" step="0.01" required>
+                    </div>
+                    <span class="form-hint">Selling price per copy (use average if you have multiple titles at different prices)</span>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="royalty-rate">Royalty Rate (%)</label>
+                    <div class="input-suffix">
+                      <input type="number" id="royalty-rate" name="royaltyRate" class="form-input" placeholder="70" min="1" max="100" step="0.1" required>
+                      <span class="suffix">%</span>
+                    </div>
+                    <span class="form-hint">Amazon KDP: 70% ($2.99-$9.99) or 35%. Direct sales: typically 90-97% after fees.</span>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="num-titles">Number of Titles</label>
+                    <input type="number" id="num-titles" name="numTitles" class="form-input" placeholder="1" min="1" max="500" step="1" required>
+                    <span class="form-hint">Total number of ebooks you have published and available for sale</span>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="monthly-growth">Monthly Sales Growth Rate (%)</label>
+                    <div class="input-suffix">
+                      <input type="number" id="monthly-growth" name="monthlyGrowth" class="form-input" placeholder="5" min="0" max="200" step="0.1">
+                      <span class="suffix">%</span>
+                    </div>
+                    <span class="form-hint">Optional: expected monthly growth in sales (0 for no growth projection)</span>
+                  </div>
+
+                  <div class="calc-actions">
+                    <button type="button" class="btn btn-calculate btn-full" onclick="calculateEbookRevenue()">Calculate Revenue</button>
+                    <button type="button" class="btn btn-reset" onclick="resetEbookForm()">Reset</button>
+                  </div>
+                </form>
+
+                <div id="ebook-results" class="calc-results hidden">
+                  <div class="result-primary">
+                    <div class="result-label">Monthly Royalty Income</div>
+                    <div class="result-value" id="result-monthly-royalty">$0</div>
+                  </div>
+                  <div class="result-grid result-grid-2">
+                    <div class="result-item">
+                      <div class="result-label">Royalty per Copy</div>
+                      <div class="result-value" id="result-royalty-per-copy">$0.00</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Monthly Gross Sales</div>
+                      <div class="result-value" id="result-monthly-gross">$0</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Annual Royalty Income</div>
+                      <div class="result-value" id="result-annual-royalty">$0</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Annual Copies Sold</div>
+                      <div class="result-value" id="result-annual-copies">0</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Income per Title/Month</div>
+                      <div class="result-value" id="result-per-title">$0</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Yr-End Monthly Income*</div>
+                      <div class="result-value" id="result-yr-end-monthly">$0</div>
+                    </div>
+                  </div>
+                  <p style="font-size:var(--text-sm);color:var(--color-gray-500);margin-top:var(--space-3);">*Projected month 12 income if growth rate applied monthly.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="ad-slot ad-slot-leaderboard"></div>
+
+            <section class="content-section">
+              <h2>Ebook Revenue Formulas</h2>
+              <div class="formula-box">
+                <div class="formula-label">Royalty per Copy</div>
+                Royalty per Copy = List Price x (Royalty Rate / 100)
+              </div>
+              <div class="formula-box">
+                <div class="formula-label">Monthly Royalty Income</div>
+                Monthly Royalty = Monthly Sales x Royalty per Copy
+              </div>
+              <div class="formula-box">
+                <div class="formula-label">Annual Royalty Income</div>
+                Annual Royalty = Monthly Royalty x 12
+              </div>
+              <div class="formula-box">
+                <div class="formula-label">Projected Month 12 Income (with growth)</div>
+                Month 12 = Monthly Royalty x (1 + Growth Rate / 100)^11
+              </div>
+            </section>
+
+            <section class="content-section">
+              <h2>How to Use This Calculator</h2>
+              <ol>
+                <li>Enter your <strong>monthly sales</strong> — the total number of ebook copies sold across all titles each month.</li>
+                <li>Set your <strong>list price</strong> — the average selling price per copy. If you sell at different prices, use a weighted average.</li>
+                <li>Enter your <strong>royalty rate</strong> — 70% for Amazon KDP in the qualifying price range, 35% for titles outside that range, or 90-97% for direct sales platforms.</li>
+                <li>Enter the <strong>number of titles</strong> you have published to see per-title monthly income.</li>
+                <li>Optionally enter a <strong>monthly growth rate</strong> to project where your income could be in 12 months.</li>
+                <li>Click <strong>Calculate Revenue</strong> to see monthly royalties, annual income, and per-title averages.</li>
+              </ol>
+            </section>
+
+            <section class="content-section">
+              <h2>Example Scenario</h2>
+              <p>An author publishes 5 ebooks on Amazon KDP, each priced at $4.99, and sells a combined 300 copies per month. Sales grow at 8% per month as reviews accumulate.</p>
+              <ul>
+                <li>Royalty per copy: $4.99 x 70% = <strong>$3.49</strong></li>
+                <li>Monthly royalty: 300 x $3.49 = <strong>$1,047/month</strong></li>
+                <li>Annual royalty: $1,047 x 12 = <strong>$12,564/year</strong> (at flat sales)</li>
+                <li>Income per title: $1,047 / 5 = <strong>$209/title/month</strong></li>
+                <li>Month 12 projection (8% growth): $1,047 x (1.08)^11 = <strong>~$2,390/month</strong></li>
+              </ul>
+            </section>
+
+            <section class="faq-section">
+              <h2>Frequently Asked Questions</h2>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  What royalty rate does Amazon KDP pay for ebooks?
+                  <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                </button>
+                <div class="faq-answer">
+                  <p>Amazon KDP pays a 70% royalty on ebooks priced between $2.99 and $9.99 (in select territories), and a 35% royalty on ebooks priced outside that range or in certain countries. There is also a small delivery fee deducted for the 70% tier based on file size. Enrolling in KDP Select can provide additional income from Kindle Unlimited page reads.</p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  How many ebooks do self-published authors typically sell per month?
+                  <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                </button>
+                <div class="faq-answer">
+                  <p>Sales vary widely. New authors with no platform may sell fewer than 10 copies per month initially. Authors with an email list, strong reviews, and active marketing can sell 100-1,000+ copies monthly. Bestselling self-published authors in competitive niches may sell thousands of copies per month across multiple titles.</p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  Should I sell directly or through platforms like Amazon?
+                  <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                </button>
+                <div class="faq-answer">
+                  <p>Selling directly through your own site (via Gumroad, Payhip, or your own checkout) keeps 95-100% of revenue but requires you to drive all traffic. Platforms like Amazon offer built-in discovery but take a larger cut. Many authors use both: selling direct to their audience while leveraging Amazon for discovery. Direct sales generate higher margins per copy.</p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  What is the best price for a self-published ebook?
+                  <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                </button>
+                <div class="faq-answer">
+                  <p>For Amazon, $2.99-$4.99 is a sweet spot that qualifies for 70% royalties and attracts impulse buyers. For nonfiction or how-to ebooks sold directly, $9.99-$29.99 is common. Premium guides or professional ebooks sold through your own channels can command $49-$197 or more. Pricing should reflect the value delivered and your audience's willingness to pay.</p>
+                </div>
+              </div>
+            </section>
+
+            <section class="related-calculators">
+              <h2>Related Calculators</h2>
+              <div class="grid grid-3">
+                <a href="/pages/digital-income-calculators/online-course-revenue-calculator/" class="card card-link">
+                  <h3>Online Course Revenue Calculator</h3>
+                  <p>Project revenue from selling online courses based on audience and launch metrics.</p>
+                </a>
+                <a href="/pages/digital-income-calculators/affiliate-income-calculator/" class="card card-link">
+                  <h3>Affiliate Income Calculator</h3>
+                  <p>Estimate affiliate marketing earnings from traffic and conversion metrics.</p>
+                </a>
+                <a href="/pages/digital-income-calculators/newsletter-revenue-calculator/" class="card card-link">
+                  <h3>Newsletter Revenue Calculator</h3>
+                  <p>Calculate paid newsletter revenue and subscriber growth value.</p>
+                </a>
+                <a href="/pages/digital-income-calculators/subscription-revenue-calculator/" class="card card-link">
+                  <h3>Subscription Revenue Calculator</h3>
+                  <p>Model recurring subscription revenue, churn, and LTV.</p>
+                </a>
+                <a href="/pages/digital-income-calculators/social-media-monetization-calculator/" class="card card-link">
+                  <h3>Social Media Monetization Calculator</h3>
+                  <p>Estimate monthly income from brand deals and creator funds.</p>
+                </a>
+              </div>
+            </section>
+
+            <div class="disclaimer">
+              <strong>Disclaimer:</strong> This calculator provides estimates for educational and planning purposes only. Actual ebook royalties depend on platform policies, pricing, sales velocity, category competition, and marketing effort. Royalty rates and fee structures are subject to change. Results are not guaranteed.
+            </div>
+          </div>
+
+          <aside class="calc-page-sidebar">
+            <div class="ad-slot ad-slot-rectangle"></div>
+            <div class="sidebar-card">
+              <h3>Digital Income Calculators</h3>
+              <a href="/pages/digital-income-calculators/affiliate-income-calculator/">Affiliate Income</a>
+              <a href="/pages/digital-income-calculators/membership-revenue-calculator/">Membership Revenue</a>
+              <a href="/pages/digital-income-calculators/saas-revenue-calculator/">SaaS Revenue</a>
+              <a href="/pages/digital-income-calculators/subscription-revenue-calculator/">Subscription Revenue</a>
+              <a href="/pages/digital-income-calculators/online-course-revenue-calculator/">Online Course Revenue</a>
+              <a href="/pages/digital-income-calculators/podcast-monetization-calculator/">Podcast Monetization</a>
+              <a href="/pages/digital-income-calculators/newsletter-revenue-calculator/">Newsletter Revenue</a>
+              <a href="/pages/digital-income-calculators/social-media-monetization-calculator/">Social Media Monetization</a>
+              <a href="/pages/digital-income-calculators/app-revenue-calculator/">App Revenue</a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free online calculators for business, finance, tax, and investment decisions.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Calculators</h4>
+          <a href="/pages/business-calculators/">Business</a>
+          <a href="/pages/financial-calculators/">Financial</a>
+          <a href="/pages/tax-calculators/">Tax</a>
+          <a href="/pages/digital-income-calculators/">Digital Income</a>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <a href="/about/">About</a>
+          <a href="/blog/">Blog</a>
+          <a href="/contact/">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="/privacy/">Privacy Policy</a>
+          <a href="/terms/">Terms of Service</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/privacy/">Privacy</a>
+          <a href="/terms/">Terms</a>
+          <a href="/contact/">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateEbookRevenue() {
+      const monthlySales = CalcWise.parseNumber(document.getElementById('monthly-sales').value);
+      const ebookPrice = CalcWise.parseNumber(document.getElementById('ebook-price').value);
+      const royaltyRate = CalcWise.parseNumber(document.getElementById('royalty-rate').value);
+      const numTitles = CalcWise.parseNumber(document.getElementById('num-titles').value);
+      const monthlyGrowth = CalcWise.parseNumber(document.getElementById('monthly-growth').value) || 0;
+
+      if (monthlySales <= 0) { alert('Please enter monthly sales greater than zero.'); return; }
+      if (ebookPrice <= 0) { alert('Ebook price must be greater than zero.'); return; }
+      if (royaltyRate <= 0 || royaltyRate > 100) { alert('Royalty rate must be between 1% and 100%.'); return; }
+      if (numTitles < 1) { alert('Number of titles must be at least 1.'); return; }
+      if (monthlyGrowth < 0 || monthlyGrowth > 200) { alert('Monthly growth rate must be between 0% and 200%.'); return; }
+
+      const royaltyPerCopy = ebookPrice * (royaltyRate / 100);
+      const monthlyRoyalty = monthlySales * royaltyPerCopy;
+      const monthlyGross = monthlySales * ebookPrice;
+      const annualRoyalty = monthlyRoyalty * 12;
+      const annualCopies = monthlySales * 12;
+      const perTitle = numTitles > 0 ? monthlyRoyalty / numTitles : 0;
+      const yrEndMonthly = monthlyRoyalty * Math.pow(1 + monthlyGrowth / 100, 11);
+
+      CalcWise.setText('result-monthly-royalty', CalcWise.formatCurrency(monthlyRoyalty, 0));
+      CalcWise.setText('result-royalty-per-copy', CalcWise.formatCurrency(royaltyPerCopy, 2));
+      CalcWise.setText('result-monthly-gross', CalcWise.formatCurrency(monthlyGross, 0));
+      CalcWise.setText('result-annual-royalty', CalcWise.formatCurrency(annualRoyalty, 0));
+      CalcWise.setText('result-annual-copies', CalcWise.formatNumber(annualCopies, 0));
+      CalcWise.setText('result-per-title', CalcWise.formatCurrency(perTitle, 0));
+      CalcWise.setText('result-yr-end-monthly', CalcWise.formatCurrency(yrEndMonthly, 0));
+      CalcWise.showResults('ebook-results');
+    }
+
+    function resetEbookForm() {
+      document.getElementById('ebook-form').reset();
+      CalcWise.hideResults('ebook-results');
+    }
+  </script>
+</body>
+</html>

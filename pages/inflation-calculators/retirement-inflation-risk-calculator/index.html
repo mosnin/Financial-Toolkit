@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Retirement Inflation Risk Calculator - CalcWise</title>
+  <meta name="description" content="Calculate how inflation erodes your retirement savings over time. See the real purchasing power of your nest egg at retirement and the annual shortfall caused by inflation.">
+  <link rel="canonical" href="https://calcwise.io/inflation-calculators/retirement-inflation-risk-calculator/">
+  <meta property="og:title" content="Retirement Inflation Risk Calculator - CalcWise">
+  <meta property="og:description" content="See how inflation quietly drains your retirement nest egg. Calculate your real purchasing power at retirement and the inflation shortfall you need to plan for.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcwise.io/inflation-calculators/retirement-inflation-risk-calculator/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Retirement Inflation Risk Calculator - CalcWise">
+  <meta name="twitter:description" content="See how inflation quietly drains your retirement nest egg. Calculate your real purchasing power at retirement and the inflation shortfall you need to plan for.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/"},
+      {"@type": "ListItem", "position": 2, "name": "Inflation Calculators", "item": "https://calcwise.io/inflation-calculators/"},
+      {"@type": "ListItem", "position": 3, "name": "Retirement Inflation Risk Calculator"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How does inflation affect retirement savings?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Inflation erodes the purchasing power of a fixed retirement nest egg over time. A $1,000,000 retirement fund at 3% inflation will only have the purchasing power of $744,000 in 10 years and $554,000 in 20 years. This means the income your savings generates buys progressively less each year you are in retirement."}
+      },
+      {
+        "@type": "Question",
+        "name": "What is the 4% rule and how does inflation affect it?",
+        "acceptedAnswer": {"@type": "Answer", "text": "The 4% rule suggests withdrawing 4% of your retirement portfolio in year one, then adjusting withdrawals for inflation each subsequent year. Inflation directly determines how quickly your withdrawals must grow. At 3% inflation, a $40,000 initial withdrawal grows to $53,756 after 10 years and $72,244 after 20 years just to maintain purchasing power."}
+      },
+      {
+        "@type": "Question",
+        "name": "How much extra should I save for retirement inflation risk?",
+        "acceptedAnswer": {"@type": "Answer", "text": "A common rule of thumb is to multiply your target retirement income by 25 (the 4% rule), but then increase that target by the expected inflation factor over your retirement horizon. For a 20-year retirement at 3% inflation, multiply your target nest egg by approximately 1.81 to ensure the same purchasing power throughout."}
+      },
+      {
+        "@type": "Question",
+        "name": "What investments protect against retirement inflation risk?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Treasury Inflation-Protected Securities (TIPS), Series I Savings Bonds, real estate, commodities, and dividend-growth stocks are commonly used inflation hedges. A diversified portfolio that includes stocks historically keeps pace with or exceeds inflation over long periods, making equity exposure important even in retirement."}
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="logo">
+        <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav">
+        <a href="/">Home</a>
+        <a href="/pages/finance-calculators/">Finance</a>
+        <a href="/pages/business-calculators/">Business</a>
+        <a href="/pages/investment-calculators/">Investment</a>
+        <a href="/inflation-calculators/" aria-current="page">Inflation</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav">
+      <a href="/">Home</a>
+      <a href="/pages/finance-calculators/">Finance Calculators</a>
+      <a href="/pages/business-calculators/">Business Calculators</a>
+      <a href="/pages/investment-calculators/">Investment Calculators</a>
+      <a href="/inflation-calculators/">Inflation Calculators</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <!-- Breadcrumbs -->
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li><a href="/inflation-calculators/">Inflation Calculators</a></li>
+        <li><span aria-current="page">Retirement Inflation Risk Calculator</span></li>
+      </ol>
+    </nav>
+
+    <div class="page-content">
+      <div class="article-content">
+        <h1>Retirement Inflation Risk Calculator</h1>
+        <p>Inflation is one of the greatest hidden threats to a comfortable retirement. Even at a modest 3% annual rate, it cuts the purchasing power of your nest egg nearly in half over 20 years. This calculator shows you the real value of your retirement savings at your target retirement date, how much your annual income requirement will grow due to inflation, and the additional savings needed to maintain your standard of living throughout retirement.</p>
+
+        <!-- Ad Slot -->
+        <div class="ad-slot ad-slot-leaderboard"></div>
+
+        <!-- Calculator -->
+        <div class="calc-container">
+          <div class="calc-header">
+            <h2>Calculate Your Retirement Inflation Risk</h2>
+            <p>Enter your current savings, years to retirement, and inflation assumptions to see your real purchasing power</p>
+          </div>
+          <div class="calc-body">
+            <form id="rir-form">
+              <div class="calc-grid calc-grid-2col">
+                <div class="form-group">
+                  <label class="form-label" for="currentSavings">Current Retirement Savings</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="currentSavings" name="currentSavings" class="form-input" placeholder="250000" min="0" step="1000" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="annualContribution">Annual Contribution</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="annualContribution" name="annualContribution" class="form-input" placeholder="15000" min="0" step="500" required>
+                  </div>
+                </div>
+              </div>
+              <div class="calc-grid calc-grid-2col">
+                <div class="form-group">
+                  <label class="form-label" for="yearsToRetirement">Years Until Retirement</label>
+                  <div class="input-suffix">
+                    <input type="number" id="yearsToRetirement" name="yearsToRetirement" class="form-input" placeholder="20" min="1" max="50" step="1" required>
+                    <span class="suffix">yrs</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="retirementDuration">Years in Retirement</label>
+                  <div class="input-suffix">
+                    <input type="number" id="retirementDuration" name="retirementDuration" class="form-input" placeholder="25" min="1" max="50" step="1" required>
+                    <span class="suffix">yrs</span>
+                  </div>
+                </div>
+              </div>
+              <div class="calc-grid calc-grid-2col">
+                <div class="form-group">
+                  <label class="form-label" for="desiredIncome">Desired Annual Income <span class="form-hint">(today's $)</span></label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="desiredIncome" name="desiredIncome" class="form-input" placeholder="60000" min="1" step="1000" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="inflationRate">Expected Inflation Rate</label>
+                  <div class="input-suffix">
+                    <input type="number" id="inflationRate" name="inflationRate" class="form-input" placeholder="3" min="0.1" max="20" step="0.1" required>
+                    <span class="suffix">%</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="calc-actions">
+                <button type="button" class="btn btn-calculate" onclick="calculateRetirementRisk()">Calculate Inflation Risk</button>
+                <button type="button" class="btn btn-reset" onclick="resetRetirementRisk()">Reset</button>
+              </div>
+            </form>
+
+            <!-- Results -->
+            <div id="results" class="calc-results hidden">
+              <div class="result-primary">
+                <div class="result-label">Inflation-Adjusted Income Needed at Retirement</div>
+                <div class="result-value" id="adjustedIncomeResult">$0/yr</div>
+              </div>
+              <div class="result-grid result-grid-3">
+                <div class="result-item">
+                  <div class="result-label">Nominal Nest Egg at Retirement</div>
+                  <div class="result-value" id="nominalNestEggResult">$0</div>
+                </div>
+                <div class="result-item">
+                  <div class="result-label">Real Purchasing Power</div>
+                  <div class="result-value" id="realPurchasingPowerResult" style="color: var(--color-error);">$0</div>
+                </div>
+                <div class="result-item">
+                  <div class="result-label">Inflation Erosion</div>
+                  <div class="result-value" id="erosionPercentResult" style="color: var(--color-error);">0%</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Formula Section -->
+        <section class="content-section">
+          <h2>Retirement Inflation Risk Formula</h2>
+          <div class="formula-box">
+            <div class="formula-label">Formulas Used</div>
+            Nominal Nest Egg = (Savings × (1 + r)^n) + Contribution × [((1 + r)^n − 1) / r]<br><br>
+            Inflation-Adjusted Income = Desired Income × (1 + Inflation Rate)^Years to Retirement<br><br>
+            Real Purchasing Power = Nominal Nest Egg / (1 + Inflation Rate)^Years to Retirement<br><br>
+            Erosion % = (1 − Real Purchasing Power / Nominal Nest Egg) × 100
+          </div>
+          <p>The nominal nest egg formula projects your savings forward assuming a growth rate. Here we use the inflation rate as a conservative minimum. The inflation-adjusted income figure tells you how much you will actually need to spend in future dollars to maintain today's lifestyle. The real purchasing power figure shows what your nominal nest egg is actually worth in today's dollars — the gap between these two numbers is your inflation risk.</p>
+        </section>
+
+        <!-- How to Use -->
+        <section class="content-section">
+          <h2>How to Use This Calculator</h2>
+          <ol>
+            <li><strong>Enter current savings:</strong> Your total retirement account balances today (401k, IRA, etc.).</li>
+            <li><strong>Add annual contribution:</strong> How much you contribute each year across all retirement accounts.</li>
+            <li><strong>Set years to retirement:</strong> How many years until you plan to stop working.</li>
+            <li><strong>Set years in retirement:</strong> How long your savings need to last (typically 20–30 years).</li>
+            <li><strong>Enter desired annual income:</strong> What you want to spend each year in retirement, in today's dollars.</li>
+            <li><strong>Set inflation rate:</strong> Use 3% for the historical US average, or your own estimate.</li>
+          </ol>
+        </section>
+
+        <!-- Example Scenario -->
+        <section class="content-section">
+          <h2>Example Scenario</h2>
+          <p>Suppose you have $250,000 saved, contribute $15,000 per year, plan to retire in 20 years, and want $60,000/year in today's dollars, with 3% inflation:</p>
+          <ul>
+            <li><strong>Inflation-adjusted income needed:</strong> $60,000 × (1.03)^20 = $108,366 per year in future dollars</li>
+            <li><strong>Nominal nest egg (at 3% growth):</strong> approximately $797,000</li>
+            <li><strong>Real purchasing power:</strong> $797,000 / (1.03)^20 = $441,000 in today's dollars</li>
+            <li><strong>Inflation erosion:</strong> 44.6% of your nominal savings is lost to inflation</li>
+          </ul>
+          <p>This highlights that a $797,000 nominal nest egg only delivers the equivalent of $441,000 in today's purchasing power — meaning you may need a significantly larger nest egg than your nominal target suggests.</p>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+          <h2>Frequently Asked Questions</h2>
+          <div class="faq-item">
+            <button class="faq-question">
+              How does inflation affect retirement savings?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>Inflation erodes the purchasing power of a fixed retirement nest egg over time. A $1,000,000 retirement fund at 3% inflation will only have the purchasing power of $744,000 in 10 years and $554,000 in 20 years. This means the income your savings generates buys progressively less each year you are in retirement.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              What is the 4% rule and how does inflation affect it?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>The 4% rule suggests withdrawing 4% of your retirement portfolio in year one, then adjusting withdrawals for inflation each subsequent year. Inflation directly determines how quickly your withdrawals must grow. At 3% inflation, a $40,000 initial withdrawal grows to $53,756 after 10 years and $72,244 after 20 years just to maintain purchasing power.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              How much extra should I save for retirement inflation risk?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>A common rule of thumb is to multiply your target retirement income by 25 (the 4% rule), but then increase that target by the expected inflation factor over your retirement horizon. For a 20-year retirement at 3% inflation, multiply your target nest egg by approximately 1.81 to ensure the same purchasing power throughout.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              What investments protect against retirement inflation risk?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>Treasury Inflation-Protected Securities (TIPS), Series I Savings Bonds, real estate, commodities, and dividend-growth stocks are commonly used inflation hedges. A diversified portfolio that includes stocks historically keeps pace with or exceeds inflation over long periods, making equity exposure important even in retirement.</p></div>
+          </div>
+        </section>
+
+        <!-- Related Calculators -->
+        <section class="related-calculators">
+          <h2>Related Calculators</h2>
+          <div class="grid grid-3">
+            <a href="/inflation-calculators/real-vs-nominal-return-calculator/" class="card card-link">
+              <h3>Real vs Nominal Return Calculator</h3>
+              <p>Calculate your true investment return after adjusting for inflation.</p>
+            </a>
+            <a href="/inflation-calculators/future-purchasing-power-calculator/" class="card card-link">
+              <h3>Future Purchasing Power Calculator</h3>
+              <p>Find out what today's dollars will be worth in any future year.</p>
+            </a>
+            <a href="/inflation-calculators/inflation-adjusted-savings-calculator/" class="card card-link">
+              <h3>Inflation-Adjusted Savings Calculator</h3>
+              <p>See your real savings growth after accounting for inflation.</p>
+            </a>
+            <a href="/pages/finance-calculators/retirement-savings-calculator/" class="card card-link">
+              <h3>Retirement Savings Calculator</h3>
+              <p>Project how much your retirement contributions will grow over time.</p>
+            </a>
+            <a href="/inflation-calculators/emergency-fund-inflation-calculator/" class="card card-link">
+              <h3>Emergency Fund Inflation Calculator</h3>
+              <p>See how inflation shrinks your emergency fund each year.</p>
+            </a>
+          </div>
+        </section>
+
+        <!-- Disclaimer -->
+        <div class="disclaimer">
+          <strong>Disclaimer:</strong> This calculator is provided for informational and educational purposes only. It does not constitute financial advice. Retirement projections involve many variables and are not guaranteed. Consult a qualified financial advisor for a personalized retirement plan.
+        </div>
+
+        <!-- Ad Slot -->
+        <div class="ad-slot ad-slot-rectangle"></div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free online financial calculators to help you make smarter money decisions.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Inflation Tools</h4>
+          <a href="/inflation-calculators/inflation-impact-calculator/">Inflation Impact</a>
+          <a href="/inflation-calculators/future-purchasing-power-calculator/">Purchasing Power</a>
+          <a href="/inflation-calculators/real-vs-nominal-return-calculator/">Real vs Nominal Return</a>
+          <a href="/inflation-calculators/retirement-inflation-risk-calculator/">Retirement Inflation Risk</a>
+        </div>
+        <div class="footer-col">
+          <h4>Finance</h4>
+          <a href="/pages/finance-calculators/net-worth-calculator/">Net Worth</a>
+          <a href="/pages/finance-calculators/budget-calculator/">Budget (50/30/20)</a>
+          <a href="/pages/finance-calculators/emergency-fund-calculator/">Emergency Fund</a>
+          <a href="/pages/finance-calculators/retirement-savings-calculator/">Retirement Savings</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about/">About</a>
+          <a href="/contact/">Contact</a>
+          <a href="/privacy/">Privacy Policy</a>
+          <a href="/terms/">Terms of Service</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 CalcWise. All rights reserved.</span>
+        <div class="footer-links">
+          <a href="/privacy/">Privacy</a>
+          <a href="/terms/">Terms</a>
+          <a href="/contact/">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateRetirementRisk() {
+      if (!CalcWise.validateForm('rir-form')) return;
+      const v = CalcWise.getFormValues('rir-form');
+
+      const r = v.inflationRate / 100;
+      const n = v.yearsToRetirement;
+
+      // Nominal nest egg using inflation rate as a conservative growth floor
+      let nominalNestEgg;
+      if (r === 0) {
+        nominalNestEgg = v.currentSavings + v.annualContribution * n;
+      } else {
+        nominalNestEgg = v.currentSavings * Math.pow(1 + r, n) +
+          v.annualContribution * ((Math.pow(1 + r, n) - 1) / r);
+      }
+
+      const adjustedIncome = v.desiredIncome * Math.pow(1 + r, n);
+      const realPurchasingPower = nominalNestEgg / Math.pow(1 + r, n);
+      const erosionPct = (1 - realPurchasingPower / nominalNestEgg) * 100;
+
+      CalcWise.setText('adjustedIncomeResult', CalcWise.formatCurrency(adjustedIncome) + '/yr');
+      CalcWise.setText('nominalNestEggResult', CalcWise.formatCurrency(nominalNestEgg));
+      CalcWise.setText('realPurchasingPowerResult', CalcWise.formatCurrency(realPurchasingPower));
+      CalcWise.setText('erosionPercentResult', '-' + CalcWise.formatPercent(erosionPct));
+
+      CalcWise.showResults('results');
+    }
+
+    function resetRetirementRisk() {
+      document.getElementById('rir-form').reset();
+      CalcWise.hideResults('results');
+    }
+  </script>
+</body>
+</html>

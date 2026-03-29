@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appliance Cost Comparison Calculator - Old vs New Energy Cost & Payback | CalcWise</title>
+    <meta name="description" content="Compare the annual energy cost of your old appliance vs a new efficient model. Enter wattage, daily usage hours, and electricity rate to see annual savings, payback period, and 10-year savings.">
+    <link rel="canonical" href="https://calcwise.io/household-efficiency-calculators/appliance-cost-comparison-calculator/">
+    <meta property="og:title" content="Appliance Cost Comparison Calculator | CalcWise">
+    <meta property="og:description" content="Find out how much you will save by upgrading to a more efficient appliance and how fast it pays back.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://calcwise.io/household-efficiency-calculators/appliance-cost-comparison-calculator/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Appliance Cost Comparison Calculator | CalcWise">
+    <meta name="twitter:description" content="Compare old vs new appliance energy costs and calculate your payback period and 10-year savings.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/design-system.css">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/"},
+            {"@type": "ListItem", "position": 2, "name": "Household Efficiency Calculators", "item": "https://calcwise.io/household-efficiency-calculators/"},
+            {"@type": "ListItem", "position": 3, "name": "Appliance Cost Comparison Calculator"}
+        ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {"@type": "Question", "name": "How do I find the wattage of my appliance?", "acceptedAnswer": {"@type": "Answer", "text": "The wattage is usually printed on a label on the back or bottom of the appliance, or listed in the owner's manual. It may be expressed as watts (W) or kilowatts (kW -- multiply by 1,000 to get watts). For appliances with variable loads like refrigerators, the label wattage is the maximum draw; actual average usage is typically 40-50% of that."}},
+            {"@type": "Question", "name": "What appliances use the most energy?", "acceptedAnswer": {"@type": "Answer", "text": "The biggest energy consumers in a typical home are: central air conditioning (3,000-5,000W), electric water heater (4,000-5,500W), electric dryer (5,000-6,000W), electric range/oven (2,000-5,000W), and refrigerator (100-400W but runs 24/7). Older models of any of these categories can use significantly more than modern efficient versions."}},
+            {"@type": "Question", "name": "How much can I save by upgrading my refrigerator?", "acceptedAnswer": {"@type": "Answer", "text": "A refrigerator from the 1990s can use 800-1,200 kWh per year. A modern ENERGY STAR model uses 400-600 kWh per year. At $0.16/kWh, the savings are $64-128 per year. Over 10 years that is $640-1,280 in energy savings, often more than the cost of a new refrigerator."}},
+            {"@type": "Question", "name": "Is it worth replacing a working appliance for energy savings?", "acceptedAnswer": {"@type": "Answer", "text": "It depends on the age and efficiency gap. Appliances over 10-15 years old often have significant efficiency gaps compared to modern models. Calculate the payback period: if annual savings exceed the appliance cost within 5-7 years, replacement is generally financially sensible -- especially when accounting for repair risk on aging units."}}
+        ]
+    }
+    </script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="/" class="logo">
+                <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+                CalcWise
+            </a>
+            <nav class="main-nav">
+                <a href="/real-estate-calculators/">Real Estate</a>
+                <a href="/advanced-real-estate-calculators/">Advanced RE</a>
+                <a href="/energy-utility-calculators/">Energy</a>
+                <a href="/household-efficiency-calculators/">Household</a>
+                <a href="/finance-calculators/">Finance</a>
+            </nav>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+            </button>
+        </div>
+        <nav class="mobile-nav">
+            <a href="/real-estate-calculators/">Real Estate Calculators</a>
+            <a href="/advanced-real-estate-calculators/">Advanced Real Estate</a>
+            <a href="/energy-utility-calculators/">Energy &amp; Utility</a>
+            <a href="/household-efficiency-calculators/">Household Efficiency</a>
+            <a href="/finance-calculators/">Finance Calculators</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <nav class="breadcrumbs" aria-label="Breadcrumb">
+                <ol>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/household-efficiency-calculators/">Household Efficiency Calculators</a></li>
+                    <li><span aria-current="page">Appliance Cost Comparison Calculator</span></li>
+                </ol>
+            </nav>
+
+            <div class="page-content">
+                <div class="calc-page-layout">
+                    <div class="calc-page-main">
+                        <h1>Appliance Cost Comparison Calculator</h1>
+                        <p class="subtitle" style="color: var(--color-gray-600); font-size: var(--text-lg); line-height: var(--leading-relaxed); margin-bottom: var(--space-8);">
+                            Compare the true energy cost of your current appliance against a more efficient replacement. Enter wattage for both models, daily usage hours, and your electricity rate to see annual savings, payback period, and 10-year value.
+                        </p>
+
+                        <div class="calc-container">
+                            <div class="calc-header">
+                                <h2>Appliance Energy Cost Comparison</h2>
+                                <p>Old vs. new -- annual cost, savings, and payback</p>
+                            </div>
+                            <div class="calc-body">
+                                <form id="appliance-form">
+                                    <div class="form-group">
+                                        <label class="form-label" for="appliance-type">Appliance Type</label>
+                                        <select id="appliance-type" name="applianceType" class="form-input" onchange="fillTypicalWatts()">
+                                            <option value="custom">Custom (enter wattage manually)</option>
+                                            <option value="refrigerator">Refrigerator</option>
+                                            <option value="washer">Washing Machine</option>
+                                            <option value="dryer">Clothes Dryer (electric)</option>
+                                            <option value="dishwasher">Dishwasher</option>
+                                            <option value="ac_window">Window Air Conditioner</option>
+                                            <option value="water_heater">Electric Water Heater</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label" for="old-watts">Old Model Wattage (W)</label>
+                                        <input type="number" id="old-watts" name="oldWatts" class="form-input" placeholder="800" min="1" step="10" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label" for="new-watts">New Model Wattage (W)</label>
+                                        <input type="number" id="new-watts" name="newWatts" class="form-input" placeholder="400" min="1" step="10" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label" for="hours-day">Hours Used Per Day</label>
+                                        <input type="number" id="hours-day" name="hoursDay" class="form-input" placeholder="8" min="0.1" max="24" step="0.5" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label" for="elec-rate">Electricity Rate (per kWh)</label>
+                                        <div class="input-prefix">
+                                            <span class="prefix">$</span>
+                                            <input type="number" id="elec-rate" name="elecRate" class="form-input" placeholder="0.16" min="0.01" max="2" step="0.001" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label" for="appliance-cost">New Appliance Cost (optional)</label>
+                                        <div class="input-prefix">
+                                            <span class="prefix">$</span>
+                                            <input type="number" id="appliance-cost" name="applianceCost" class="form-input" placeholder="600" min="0" step="50">
+                                        </div>
+                                    </div>
+                                    <div class="calc-actions">
+                                        <button type="button" class="btn btn-calculate btn-full" onclick="calculateApplianceCost()">Compare Appliance Costs</button>
+                                        <button type="reset" class="btn btn-reset">Reset</button>
+                                    </div>
+                                </form>
+
+                                <div id="results" class="calc-results hidden">
+                                    <div class="result-primary">
+                                        <div class="result-label">Annual Energy Savings</div>
+                                        <div class="result-value" id="result-annual-savings">$0</div>
+                                    </div>
+                                    <div class="result-grid result-grid-3">
+                                        <div class="result-item">
+                                            <div class="result-label">Old Model Annual Cost</div>
+                                            <div class="result-value" id="result-old-annual">$0</div>
+                                        </div>
+                                        <div class="result-item">
+                                            <div class="result-label">New Model Annual Cost</div>
+                                            <div class="result-value" id="result-new-annual">$0</div>
+                                        </div>
+                                        <div class="result-item">
+                                            <div class="result-label">Payback Period</div>
+                                            <div class="result-value" id="result-payback">N/A</div>
+                                        </div>
+                                        <div class="result-item">
+                                            <div class="result-label">10-Year Old Cost</div>
+                                            <div class="result-value" id="result-old-10yr">$0</div>
+                                        </div>
+                                        <div class="result-item">
+                                            <div class="result-label">10-Year New Cost</div>
+                                            <div class="result-value" id="result-new-10yr">$0</div>
+                                        </div>
+                                        <div class="result-item">
+                                            <div class="result-label">10-Year Net Savings</div>
+                                            <div class="result-value" id="result-10yr-net">$0</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="ad-slot ad-slot-leaderboard"></div>
+
+                        <section class="content-section">
+                            <h2>Appliance Cost Comparison Formula</h2>
+                            <div class="formula-box">
+                                <div class="formula-label">Energy Cost Calculation</div>
+                                Daily kWh = Wattage &times; Hours / 1,000
+Annual kWh = Daily kWh &times; 365
+Annual Cost = Annual kWh &times; Electricity Rate
+Annual Savings = Old Annual Cost - New Annual Cost
+Payback Period = Appliance Cost / Annual Savings
+10-Year Net Savings = (Annual Savings &times; 10) - Appliance Cost
+                            </div>
+                            <p>For appliances like refrigerators that cycle on and off, the wattage listed is typically the running wattage. Actual average consumption is around 1/3 of rated wattage due to the duty cycle. Adjust hours-per-day to reflect effective run time for cycling appliances.</p>
+                        </section>
+
+                        <section class="content-section">
+                            <h2>How to Use This Calculator</h2>
+                            <ol>
+                                <li><strong>Select your appliance type</strong> to auto-fill typical old and new wattages, or choose "Custom" to enter manually.</li>
+                                <li><strong>Enter or confirm the wattages</strong> -- find your old model's wattage on its label or manufacturer specs.</li>
+                                <li><strong>Enter daily hours of use</strong> -- how many hours per day is this appliance actually running?</li>
+                                <li><strong>Enter your electricity rate</strong> from your utility bill (typically $0.10-0.30/kWh).</li>
+                                <li><strong>Optionally enter the new appliance cost</strong> to calculate payback period.</li>
+                            </ol>
+                        </section>
+
+                        <section class="content-section">
+                            <h2>Example Scenario</h2>
+                            <h3>Replacing a 1995 Refrigerator with a Modern ENERGY STAR Model</h3>
+                            <p>Old model: 800W | New model: 350W | Hours/day: 8 (effective run time) | Rate: $0.16/kWh | New appliance: $800</p>
+                            <p>Old annual kWh: 800W &times; 8h / 1,000 &times; 365 = 2,336 kWh</p>
+                            <p>Old annual cost: 2,336 &times; $0.16 = <strong>$373.76/year</strong></p>
+                            <p>New annual kWh: 350W &times; 8h / 1,000 &times; 365 = 1,022 kWh</p>
+                            <p>New annual cost: 1,022 &times; $0.16 = <strong>$163.52/year</strong></p>
+                            <p>Annual savings: <strong>$210.24/year</strong></p>
+                            <p>Payback: $800 / $210.24 = <strong>3.8 years</strong></p>
+                            <p>10-Year net savings: ($210.24 &times; 10) - $800 = <strong>$1,302.40</strong></p>
+                        </section>
+
+                        <section class="faq-section">
+                            <h2>Frequently Asked Questions</h2>
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">
+                                    How do I find the wattage of my appliance?
+                                    <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>Wattage is usually on a label on the back or bottom of the appliance, or in the owner's manual. It may be in watts (W) or kilowatts (kW -- multiply by 1,000). For cycling appliances like refrigerators, use the rated wattage and adjust hours down to reflect the duty cycle.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">
+                                    What appliances use the most energy?
+                                    <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>The biggest consumers are: central AC (3,000-5,000W), electric water heater (4,000-5,500W), electric dryer (5,000-6,000W), electric range/oven (2,000-5,000W), and refrigerator (100-400W but runs 24/7). Upgrading aging versions of these offers the greatest savings.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">
+                                    How much can I save by upgrading my refrigerator?
+                                    <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>A refrigerator from the 1990s uses 800-1,200 kWh/year. A modern ENERGY STAR model uses 400-600 kWh/year. At $0.16/kWh, that is $64-128/year in savings, or $640-1,280 over 10 years -- often more than the cost of a new refrigerator.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">
+                                    Is it worth replacing a working appliance for energy savings?
+                                    <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>It depends on the efficiency gap and age. If payback is within 5-7 years on an appliance over 10-15 years old, replacement is generally worthwhile -- especially when accounting for growing repair risk. Also check for utility rebates that can significantly reduce the upfront cost.</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="related-calculators">
+                            <h2>Related Calculators</h2>
+                            <div class="grid grid-3">
+                                <a href="/household-efficiency-calculators/energy-efficiency-savings-calculator/" class="card card-link">
+                                    <div class="card-icon">E</div>
+                                    <h3>Energy Efficiency Savings</h3>
+                                    <p>ROI calculator for home energy upgrades including HVAC.</p>
+                                </a>
+                                <a href="/energy-utility-calculators/electricity-cost-calculator/" class="card card-link">
+                                    <div class="card-icon">$</div>
+                                    <h3>Electricity Cost Calculator</h3>
+                                    <p>Calculate total electricity cost by kWh and rate.</p>
+                                </a>
+                                <a href="/household-efficiency-calculators/utility-savings-calculator/" class="card card-link">
+                                    <div class="card-icon">U</div>
+                                    <h3>Utility Savings Calculator</h3>
+                                    <p>Set and calculate bill reduction targets across all utilities.</p>
+                                </a>
+                                <a href="/household-efficiency-calculators/heating-cost-efficiency-calculator/" class="card card-link">
+                                    <div class="card-icon">H</div>
+                                    <h3>Heating Cost Efficiency</h3>
+                                    <p>Analyze your heating system costs and efficiency grade.</p>
+                                </a>
+                            </div>
+                        </section>
+
+                        <div class="disclaimer">
+                            <strong>Disclaimer:</strong> Energy cost estimates are based on the wattage and usage hours you enter. Actual consumption varies with usage patterns, ambient temperature, and appliance maintenance. For accurate energy use data, consider using a plug-in energy meter. Utility rebates and tax credits may further improve the economics of appliance replacement.
+                        </div>
+
+                        <div class="ad-slot ad-slot-leaderboard"></div>
+                    </div>
+
+                    <aside class="calc-page-sidebar">
+                        <div class="sidebar-card">
+                            <h3>Household Efficiency Tools</h3>
+                            <a href="/household-efficiency-calculators/utility-savings-calculator/">Utility Savings</a>
+                            <a href="/household-efficiency-calculators/energy-efficiency-savings-calculator/">Energy Efficiency Savings</a>
+                            <a href="/household-efficiency-calculators/water-usage-savings-calculator/">Water Usage Savings</a>
+                            <a href="/household-efficiency-calculators/grocery-waste-savings-calculator/">Grocery Waste Savings</a>
+                            <a href="/household-efficiency-calculators/home-efficiency-savings-calculator/">Home Efficiency Savings</a>
+                            <a href="/household-efficiency-calculators/appliance-cost-comparison-calculator/">Appliance Cost Comparison</a>
+                            <a href="/household-efficiency-calculators/heating-cost-efficiency-calculator/">Heating Cost Efficiency</a>
+                            <a href="/household-efficiency-calculators/cooling-cost-efficiency-calculator/">Cooling Cost Efficiency</a>
+                            <a href="/household-efficiency-calculators/household-maintenance-savings-calculator/">Maintenance Savings</a>
+                            <a href="/household-efficiency-calculators/home-operating-cost-calculator/">Home Operating Cost</a>
+                        </div>
+                        <div class="ad-slot ad-slot-rectangle"></div>
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="/" class="logo">
+                        <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+                        CalcWise
+                    </a>
+                    <p>Free, accurate financial calculators for everyone. Make smarter money decisions with CalcWise.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Household Efficiency</h4>
+                    <a href="/household-efficiency-calculators/appliance-cost-comparison-calculator/">Appliance Comparison</a>
+                    <a href="/household-efficiency-calculators/energy-efficiency-savings-calculator/">Energy Efficiency</a>
+                    <a href="/household-efficiency-calculators/utility-savings-calculator/">Utility Savings</a>
+                    <a href="/household-efficiency-calculators/home-operating-cost-calculator/">Home Operating Cost</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Energy &amp; Utility</h4>
+                    <a href="/energy-utility-calculators/electricity-cost-calculator/">Electricity Cost</a>
+                    <a href="/energy-utility-calculators/solar-savings-calculator/">Solar Savings</a>
+                    <a href="/energy-utility-calculators/home-energy-efficiency-calculator/">Home Energy Efficiency</a>
+                    <a href="/energy-utility-calculators/gas-bill-calculator/">Gas Bill</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <a href="/about/">About</a>
+                    <a href="/contact/">Contact</a>
+                    <a href="/privacy/">Privacy Policy</a>
+                    <a href="/terms/">Terms of Use</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; 2026 CalcWise. All rights reserved.</span>
+                <div class="footer-links">
+                    <a href="/privacy/">Privacy</a>
+                    <a href="/terms/">Terms</a>
+                    <a href="/sitemap.xml">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/calculator-engine.js"></script>
+    <script src="/js/search-index.js"></script>
+    <script>
+    const applianceDefaults = {
+        refrigerator:  { oldW: 800,  newW: 350,  hours: 8  },
+        washer:        { oldW: 1200, newW: 500,  hours: 1  },
+        dryer:         { oldW: 5500, newW: 3500, hours: 1  },
+        dishwasher:    { oldW: 1800, newW: 1200, hours: 1  },
+        ac_window:     { oldW: 1500, newW: 900,  hours: 8  },
+        water_heater:  { oldW: 4500, newW: 2000, hours: 3  },
+        custom:        { oldW: '',   newW: '',   hours: ''  }
+    };
+
+    function fillTypicalWatts() {
+        const type = document.getElementById('appliance-type').value;
+        const d = applianceDefaults[type];
+        if (type !== 'custom') {
+            document.getElementById('old-watts').value = d.oldW;
+            document.getElementById('new-watts').value = d.newW;
+            document.getElementById('hours-day').value = d.hours;
+        }
+    }
+
+    function calculateApplianceCost() {
+        if (!CalcWise.validateForm('appliance-form')) return;
+
+        const values = CalcWise.getFormValues('appliance-form');
+        const oldWatts = values.oldWatts;
+        const newWatts = values.newWatts;
+        const hoursDay = values.hoursDay;
+        const elecRate = values.elecRate;
+        const applianceCost = values.applianceCost || 0;
+
+        const oldDailyKwh = (oldWatts * hoursDay) / 1000;
+        const newDailyKwh = (newWatts * hoursDay) / 1000;
+        const oldAnnualKwh = oldDailyKwh * 365;
+        const newAnnualKwh = newDailyKwh * 365;
+        const oldAnnualCost = oldAnnualKwh * elecRate;
+        const newAnnualCost = newAnnualKwh * elecRate;
+        const annualSavings = oldAnnualCost - newAnnualCost;
+        const paybackYears = (applianceCost > 0 && annualSavings > 0) ? applianceCost / annualSavings : null;
+        const old10yr = oldAnnualCost * 10;
+        const new10yr = (newAnnualCost * 10) + applianceCost;
+        const net10yr = old10yr - new10yr;
+
+        CalcWise.setText('result-annual-savings', CalcWise.formatCurrency(annualSavings, 0));
+        CalcWise.setText('result-old-annual', CalcWise.formatCurrency(oldAnnualCost, 0));
+        CalcWise.setText('result-new-annual', CalcWise.formatCurrency(newAnnualCost, 0));
+        CalcWise.setText('result-payback', paybackYears !== null ? paybackYears.toFixed(1) + ' yrs' : 'N/A');
+        CalcWise.setText('result-old-10yr', CalcWise.formatCurrency(old10yr, 0));
+        CalcWise.setText('result-new-10yr', CalcWise.formatCurrency(new10yr, 0));
+        CalcWise.setText('result-10yr-net', CalcWise.formatCurrency(net10yr, 0));
+
+        CalcWise.showResults('results');
+    }
+
+    document.getElementById('appliance-form').addEventListener('reset', function() {
+        setTimeout(() => CalcWise.hideResults('results'), 0);
+    });
+    </script>
+</body>
+</html>

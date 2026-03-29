@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heating Cost Efficiency Calculator - Cost Per Sq Ft & Thermostat Savings | CalcWise</title>
+    <meta name="description" content="Analyze your home heating costs per square foot, get an efficiency grade, and calculate savings from lowering your thermostat 2 degrees or upgrading insulation. Compare gas, electric, and heat pump systems.">
+    <link rel="canonical" href="https://calcwise.io/household-efficiency-calculators/heating-cost-efficiency-calculator/">
+    <meta property="og:title" content="Heating Cost Efficiency Calculator | CalcWise">
+    <meta property="og:description" content="Get your heating efficiency grade and see how much you can save by adjusting your thermostat or improving insulation.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://calcwise.io/household-efficiency-calculators/heating-cost-efficiency-calculator/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Heating Cost Efficiency Calculator | CalcWise">
+    <meta name="twitter:description" content="Calculate your home heating cost per sq ft, efficiency grade, and savings from thermostat and insulation improvements.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/design-system.css">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/"},
+            {"@type": "ListItem", "position": 2, "name": "Household Efficiency Calculators", "item": "https://calcwise.io/household-efficiency-calculators/"},
+            {"@type": "ListItem", "position": 3, "name": "Heating Cost Efficiency Calculator"}
+        ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {"@type": "Question", "name": "How much does lowering the thermostat save?", "acceptedAnswer": {"@type": "Answer", "text": "The DOE estimates you can save about 1% on your heating bill for every 1°F you lower your thermostat over 8 hours. Lowering the thermostat by 7-10°F for 8 hours a day (while sleeping or away) can save up to 10% on your annual heating bill. A 2°F continuous reduction saves approximately 2-3% on heating costs."}},
+            {"@type": "Question", "name": "What is an efficient heating cost per square foot?", "acceptedAnswer": {"@type": "Answer", "text": "An efficient home in a moderate climate should spend $0.50-1.00 per square foot per year on heating. In cold climates (New England, Midwest), $1.00-2.00 per square foot is typical. Costs above $2.00/sq ft suggest poor insulation, an inefficient system, or very cold climate without compensating upgrades."}},
+            {"@type": "Question", "name": "Is a heat pump more efficient than gas heating?", "acceptedAnswer": {"@type": "Answer", "text": "Modern heat pumps are 200-400% efficient (they move 2-4 units of heat for every unit of electricity consumed). Gas furnaces are 80-98% efficient. In mild climates and where electricity is reasonably priced, heat pumps are generally more cost-effective. In very cold climates, high-efficiency gas or a dual-fuel system may be more economical."}},
+            {"@type": "Question", "name": "How does insulation quality affect heating costs?", "acceptedAnswer": {"@type": "Answer", "text": "Poor insulation can increase heating costs by 20-40% compared to well-insulated homes. Air leaks and inadequate attic insulation are the two biggest culprits. Upgrading attic insulation from R-19 to R-49 can reduce heating energy use by 15-25% in cold climates."}}
+        ]
+    }
+    </script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="/" class="logo">
+                <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+                CalcWise
+            </a>
+            <nav class="main-nav">
+                <a href="/real-estate-calculators/">Real Estate</a>
+                <a href="/advanced-real-estate-calculators/">Advanced RE</a>
+                <a href="/energy-utility-calculators/">Energy</a>
+                <a href="/household-efficiency-calculators/">Household</a>
+                <a href="/finance-calculators/">Finance</a>
+            </nav>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+            </button>
+        </div>
+        <nav class="mobile-nav">
+            <a href="/real-estate-calculators/">Real Estate Calculators</a>
+            <a href="/advanced-real-estate-calculators/">Advanced Real Estate</a>
+            <a href="/energy-utility-calculators/">Energy &amp; Utility</a>
+            <a href="/household-efficiency-calculators/">Household Efficiency</a>
+            <a href="/finance-calculators/">Finance Calculators</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <nav class="breadcrumbs" aria-label="Breadcrumb">
+                <ol>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/household-efficiency-calculators/">Household Efficiency Calculators</a></li>
+                    <li><span aria-current="page">Heating Cost Efficiency Calculator</span></li>
+                </ol>
+            </nav>
+
+            <div class="page-content">
+                <div class="calc-page-layout">
+                    <div class="calc-page-main">
+                        <h1>Heating Cost Efficiency Calculator</h1>
+                        <p class="subtitle" style="color: var(--color-gray-600); font-size: var(--text-lg); line-height: var(--leading-relaxed); margin-bottom: var(--space-8);">
+                            Analyze your home's heating costs per square foot, receive an efficiency grade, and discover how much you can save by lowering your thermostat 2&deg;F or improving insulation quality.
+                        </p>
+
+                        <div class="calc-container">
+                            <div class="calc-header">
+                                <h2>Heating Efficiency Analysis</h2>
+                                <p>Cost per sq ft, efficiency grade, and savings opportunities</p>
+                            </div>
+                            <div class="calc-body">
+                                <form id="heating-form">
+                                    <div class="form-group">
+                                        <label class="form-label" for="home-sqft">Home Size (sq ft)</label>
+                                        <input type="number" id="home-sqft" name="homeSqft" class="form-input" placeholder="2000" min="100" step="50" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label" for="heating-type">Heating System Type</label>
+                                        <select id="heating-type" name="heatingType" class="form-input">
+                                            <option value="gas">Natural Gas Furnace</option>
+                                            <option value="electric">Electric Resistance</option>
+                                            <option value="heatpump">Heat Pump</option>
+                                            <option value="oil">Oil Heat</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label" for="monthly-heating-bill">Average Monthly Heating Bill (winter months)</label>
+                                        <div class="input-prefix">
+                                            <span class="prefix">$</span>
+                                            <input type="number" id="monthly-heating-bill" name="monthlyHeatingBill" class="form-input" placeholder="180" min="1" step="5" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label" for="thermostat-setting">Current Thermostat Setting (&deg;F)</label>
+                                        <input type="number" id="thermostat-setting" name="thermostatSetting" class="form-input" placeholder="70" min="50" max="85" step="1" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label" for="insulation-quality">Insulation Quality</label>
+                                        <select id="insulation-quality" name="insulationQuality" class="form-input">
+                                            <option value="poor">Poor (older home, minimal insulation)</option>
+                                            <option value="average" selected>Average (some insulation, typical older home)</option>
+                                            <option value="good">Good (modern insulation, weatherstripped)</option>
+                                            <option value="excellent">Excellent (high-performance, energy audited)</option>
+                                        </select>
+                                    </div>
+                                    <div class="calc-actions">
+                                        <button type="button" class="btn btn-calculate btn-full" onclick="calculateHeatingEfficiency()">Analyze Heating Efficiency</button>
+                                        <button type="reset" class="btn btn-reset">Reset</button>
+                                    </div>
+                                </form>
+
+                                <div id="results" class="calc-results hidden">
+                                    <div class="result-primary">
+                                        <div class="result-label">Efficiency Grade</div>
+                                        <div class="result-value" id="result-grade">-</div>
+                                    </div>
+                                    <div class="result-grid result-grid-3">
+                                        <div class="result-item">
+                                            <div class="result-label">Heating Cost per Sq Ft</div>
+                                            <div class="result-value" id="result-cost-sqft">$0</div>
+                                        </div>
+                                        <div class="result-item">
+                                            <div class="result-label">Monthly Savings (2&deg;F lower)</div>
+                                            <div class="result-value" id="result-thermostat-savings">$0</div>
+                                        </div>
+                                        <div class="result-item">
+                                            <div class="result-label">Annual Improvement Potential</div>
+                                            <div class="result-value" id="result-annual-potential">$0</div>
+                                        </div>
+                                        <div class="result-item">
+                                            <div class="result-label">Annual Heating Cost</div>
+                                            <div class="result-value" id="result-annual-heating">$0</div>
+                                        </div>
+                                        <div class="result-item">
+                                            <div class="result-label">Insulation Savings (if upgraded)</div>
+                                            <div class="result-value" id="result-insulation-savings">$0</div>
+                                        </div>
+                                        <div class="result-item">
+                                            <div class="result-label">Recommended Thermostat</div>
+                                            <div class="result-value" id="result-recommended-temp">-</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="ad-slot ad-slot-leaderboard"></div>
+
+                        <section class="content-section">
+                            <h2>Heating Efficiency Formula</h2>
+                            <div class="formula-box">
+                                <div class="formula-label">Efficiency Calculations</div>
+                                Annual Heating Cost = Monthly Bill &times; 6 (avg heating months)
+Cost per Sq Ft = Annual Heating Cost / Home Size
+Thermostat Savings (2&deg;F) = Monthly Bill &times; 2% (DOE: ~1% per 1&deg;F)
+Insulation Upgrade Savings varies by current quality:
+  Poor to Average: ~20% reduction
+  Average to Good: ~15% reduction
+  Good to Excellent: ~8% reduction
+
+Efficiency Grade benchmarks (cost/sq ft/year):
+  A: under $0.80  |  B: $0.80-1.20
+  C: $1.20-1.80   |  D: $1.80-2.50  |  F: over $2.50
+                            </div>
+                            <p>Heating months vary by climate. The calculator uses 6 months as an average US assumption. Adjust by multiplying your actual heating season months / 6 to refine annual estimates for your climate.</p>
+                        </section>
+
+                        <section class="content-section">
+                            <h2>How to Use This Calculator</h2>
+                            <ol>
+                                <li><strong>Enter your home size</strong> in square feet -- heated living area only.</li>
+                                <li><strong>Select your heating system type</strong> -- each has different efficiency characteristics.</li>
+                                <li><strong>Enter your average winter monthly bill</strong> -- use bills from December-February for best accuracy.</li>
+                                <li><strong>Enter your current thermostat setting</strong> and <strong>insulation quality</strong>.</li>
+                                <li><strong>Click "Analyze Heating Efficiency"</strong> to get your grade and savings opportunities.</li>
+                            </ol>
+                        </section>
+
+                        <section class="content-section">
+                            <h2>Example Scenario</h2>
+                            <h3>2,000 Sq Ft Home with Gas Heat, Average Insulation</h3>
+                            <p>Home: 2,000 sq ft | System: Gas furnace | Monthly bill: $180 | Thermostat: 70&deg;F | Insulation: Average</p>
+                            <p>Annual heating cost: $180 &times; 6 = <strong>$1,080/year</strong></p>
+                            <p>Cost per sq ft: $1,080 / 2,000 = <strong>$0.54/sq ft</strong> -- Grade A</p>
+                            <p>2&deg;F thermostat reduction: $180 &times; 2% = <strong>$3.60/month savings</strong></p>
+                            <p>Insulation upgrade (average to good): $1,080 &times; 15% = <strong>$162/year savings</strong></p>
+                            <p>Total annual improvement potential: <strong>~$205/year</strong></p>
+                        </section>
+
+                        <section class="faq-section">
+                            <h2>Frequently Asked Questions</h2>
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">
+                                    How much does lowering the thermostat save?
+                                    <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>The DOE estimates savings of about 1% per 1&deg;F reduction over 8 hours. Lowering by 7-10&deg;F while sleeping or away can save up to 10% annually. A continuous 2&deg;F reduction saves approximately 2-3% on heating costs.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">
+                                    What is an efficient heating cost per square foot?
+                                    <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>In moderate climates, an efficient home should spend $0.50-1.00 per square foot per year on heating. Cold climate homes typically spend $1.00-2.00/sq ft. Costs above $2.00/sq ft suggest poor insulation or an inefficient system needing attention.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">
+                                    Is a heat pump more efficient than gas heating?
+                                    <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>Modern heat pumps are 200-400% efficient (moving 2-4 units of heat per unit of electricity). Gas furnaces are 80-98% efficient. Heat pumps are generally more cost-effective in mild climates. In very cold climates, high-efficiency gas may still be more economical depending on local fuel prices.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">
+                                    How does insulation quality affect heating costs?
+                                    <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>Poor insulation can increase heating costs 20-40% versus a well-insulated home. Air leaks and inadequate attic insulation are the biggest culprits. Upgrading attic insulation from R-19 to R-49 can reduce heating energy use by 15-25% in cold climates.</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="related-calculators">
+                            <h2>Related Calculators</h2>
+                            <div class="grid grid-3">
+                                <a href="/household-efficiency-calculators/cooling-cost-efficiency-calculator/" class="card card-link">
+                                    <div class="card-icon">C</div>
+                                    <h3>Cooling Cost Efficiency</h3>
+                                    <p>Analyze AC costs per sq ft and efficiency grade.</p>
+                                </a>
+                                <a href="/household-efficiency-calculators/energy-efficiency-savings-calculator/" class="card card-link">
+                                    <div class="card-icon">E</div>
+                                    <h3>Energy Efficiency Savings</h3>
+                                    <p>Calculate ROI on insulation and HVAC upgrades.</p>
+                                </a>
+                                <a href="/household-efficiency-calculators/utility-savings-calculator/" class="card card-link">
+                                    <div class="card-icon">U</div>
+                                    <h3>Utility Savings Calculator</h3>
+                                    <p>Set reduction targets for all utility bills.</p>
+                                </a>
+                                <a href="/energy-utility-calculators/gas-bill-calculator/" class="card card-link">
+                                    <div class="card-icon">G</div>
+                                    <h3>Gas Bill Calculator</h3>
+                                    <p>Calculate your natural gas costs by usage and rate.</p>
+                                </a>
+                            </div>
+                        </section>
+
+                        <div class="disclaimer">
+                            <strong>Disclaimer:</strong> Heating cost estimates use 6 months as an average heating season, which may not match your climate. Efficiency grades are benchmarks based on national averages and should be interpreted relative to your climate zone. Consult an HVAC professional or energy auditor for a precise assessment of your home's heating performance.
+                        </div>
+
+                        <div class="ad-slot ad-slot-leaderboard"></div>
+                    </div>
+
+                    <aside class="calc-page-sidebar">
+                        <div class="sidebar-card">
+                            <h3>Household Efficiency Tools</h3>
+                            <a href="/household-efficiency-calculators/utility-savings-calculator/">Utility Savings</a>
+                            <a href="/household-efficiency-calculators/energy-efficiency-savings-calculator/">Energy Efficiency Savings</a>
+                            <a href="/household-efficiency-calculators/water-usage-savings-calculator/">Water Usage Savings</a>
+                            <a href="/household-efficiency-calculators/grocery-waste-savings-calculator/">Grocery Waste Savings</a>
+                            <a href="/household-efficiency-calculators/home-efficiency-savings-calculator/">Home Efficiency Savings</a>
+                            <a href="/household-efficiency-calculators/appliance-cost-comparison-calculator/">Appliance Cost Comparison</a>
+                            <a href="/household-efficiency-calculators/heating-cost-efficiency-calculator/">Heating Cost Efficiency</a>
+                            <a href="/household-efficiency-calculators/cooling-cost-efficiency-calculator/">Cooling Cost Efficiency</a>
+                            <a href="/household-efficiency-calculators/household-maintenance-savings-calculator/">Maintenance Savings</a>
+                            <a href="/household-efficiency-calculators/home-operating-cost-calculator/">Home Operating Cost</a>
+                        </div>
+                        <div class="ad-slot ad-slot-rectangle"></div>
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="/" class="logo">
+                        <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+                        CalcWise
+                    </a>
+                    <p>Free, accurate financial calculators for everyone. Make smarter money decisions with CalcWise.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Household Efficiency</h4>
+                    <a href="/household-efficiency-calculators/heating-cost-efficiency-calculator/">Heating Cost Efficiency</a>
+                    <a href="/household-efficiency-calculators/cooling-cost-efficiency-calculator/">Cooling Cost Efficiency</a>
+                    <a href="/household-efficiency-calculators/energy-efficiency-savings-calculator/">Energy Efficiency</a>
+                    <a href="/household-efficiency-calculators/utility-savings-calculator/">Utility Savings</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Energy &amp; Utility</h4>
+                    <a href="/energy-utility-calculators/electricity-cost-calculator/">Electricity Cost</a>
+                    <a href="/energy-utility-calculators/gas-bill-calculator/">Gas Bill</a>
+                    <a href="/energy-utility-calculators/home-energy-efficiency-calculator/">Home Energy Efficiency</a>
+                    <a href="/energy-utility-calculators/solar-savings-calculator/">Solar Savings</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <a href="/about/">About</a>
+                    <a href="/contact/">Contact</a>
+                    <a href="/privacy/">Privacy Policy</a>
+                    <a href="/terms/">Terms of Use</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; 2026 CalcWise. All rights reserved.</span>
+                <div class="footer-links">
+                    <a href="/privacy/">Privacy</a>
+                    <a href="/terms/">Terms</a>
+                    <a href="/sitemap.xml">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/calculator-engine.js"></script>
+    <script src="/js/search-index.js"></script>
+    <script>
+    const insulationSavings = {
+        poor:      0.20,
+        average:   0.15,
+        good:      0.08,
+        excellent: 0.00
+    };
+
+    function calculateHeatingEfficiency() {
+        if (!CalcWise.validateForm('heating-form')) return;
+
+        const values = CalcWise.getFormValues('heating-form');
+        const homeSqft = values.homeSqft;
+        const monthlyBill = values.monthlyHeatingBill;
+        const thermostat = values.thermostatSetting;
+        const insulation = document.getElementById('insulation-quality').value;
+
+        const annualHeating = monthlyBill * 6; // 6 heating months avg
+        const costPerSqft = annualHeating / homeSqft;
+
+        // Efficiency grade
+        let grade;
+        if (costPerSqft < 0.80) grade = 'A - Excellent';
+        else if (costPerSqft < 1.20) grade = 'B - Good';
+        else if (costPerSqft < 1.80) grade = 'C - Fair';
+        else if (costPerSqft < 2.50) grade = 'D - Below Average';
+        else grade = 'F - Poor';
+
+        // 2 degree thermostat savings (~1% per degree per DOE)
+        const thermostatMonthlySavings = monthlyBill * 0.02;
+
+        // Insulation upgrade savings
+        const insulationSavingPct = insulationSavings[insulation];
+        const insulationAnnualSavings = annualHeating * insulationSavingPct;
+
+        // Annual improvement potential
+        const annualThermostatSavings = thermostatMonthlySavings * 6;
+        const annualPotential = annualThermostatSavings + insulationAnnualSavings;
+
+        const recommendedTemp = Math.max(68, thermostat - 2);
+
+        CalcWise.setText('result-grade', grade);
+        CalcWise.setText('result-cost-sqft', '$' + costPerSqft.toFixed(2) + '/sq ft/yr');
+        CalcWise.setText('result-thermostat-savings', CalcWise.formatCurrency(thermostatMonthlySavings));
+        CalcWise.setText('result-annual-potential', CalcWise.formatCurrency(annualPotential, 0));
+        CalcWise.setText('result-annual-heating', CalcWise.formatCurrency(annualHeating, 0));
+        CalcWise.setText('result-insulation-savings', insulationSavingPct > 0 ? CalcWise.formatCurrency(insulationAnnualSavings, 0) + '/yr' : 'Already optimized');
+        CalcWise.setText('result-recommended-temp', recommendedTemp + '°F (saves ~' + CalcWise.formatCurrency(thermostatMonthlySavings) + '/mo)');
+
+        CalcWise.showResults('results');
+    }
+
+    document.getElementById('heating-form').addEventListener('reset', function() {
+        setTimeout(() => CalcWise.hideResults('results'), 0);
+    });
+    </script>
+</body>
+</html>

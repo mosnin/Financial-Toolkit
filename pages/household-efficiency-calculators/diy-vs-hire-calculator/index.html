@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIY vs Hire Calculator - Compare Savings vs Professional Service Cost | CalcWise</title>
+    <meta name="description" content="Calculate whether doing a home project yourself saves money compared to hiring a professional. Factor in materials, your time value, and risk of mistakes.">
+    <link rel="canonical" href="https://calcwise.io/household-efficiency-calculators/diy-vs-hire-calculator/">
+    <meta property="og:title" content="DIY vs Hire Calculator | CalcWise">
+    <meta property="og:description" content="Find out if DIY or hiring a professional saves you more money after factoring in materials, time, and risk.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://calcwise.io/household-efficiency-calculators/diy-vs-hire-calculator/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="DIY vs Hire Calculator | CalcWise">
+    <meta name="twitter:description" content="Compare DIY savings vs professional service cost for any home project.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/design-system.css">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/"},
+            {"@type": "ListItem", "position": 2, "name": "Household Efficiency Calculators", "item": "https://calcwise.io/household-efficiency-calculators/"},
+            {"@type": "ListItem", "position": 3, "name": "DIY vs Hire Calculator"}
+        ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {"@type": "Question", "name": "When does DIY actually save money?", "acceptedAnswer": {"@type": "Answer", "text": "DIY saves money when: the material cost is significantly lower than the professional quote, your time value is lower than the labor charge, the skill requirement matches your abilities, and the risk of a costly mistake is low. Simple projects like painting, basic landscaping, and minor repairs are often good DIY candidates."}},
+            {"@type": "Question", "name": "What is 'time value' and how do I calculate it?", "acceptedAnswer": {"@type": "Answer", "text": "Time value is how much your time is worth per hour -- typically your after-tax hourly wage, or the hourly rate of work you could be doing instead. If you earn $40/hour and a DIY project takes 8 hours, your time cost is $320. If the labor portion of the pro quote is $280, hiring out makes financial sense."}},
+            {"@type": "Question", "name": "Should I include the risk of mistakes in my calculation?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. For complex projects like electrical, plumbing, or roofing, a mistake can cost far more to fix than the original pro quote. Add a risk factor (typically 10-30% of materials cost) for any project where errors could damage your home or require a professional to come in and redo the work."}},
+            {"@type": "Question", "name": "Which home projects are typically not good for DIY?", "acceptedAnswer": {"@type": "Answer", "text": "Projects that typically should not be DIY include: main electrical panel work, gas line repairs, structural changes, roofing on high-pitch roofs, foundation work, HVAC refrigerant handling, and any work that requires a permit and inspection. Errors in these areas can be dangerous or void your home insurance."}}
+        ]
+    }
+    </script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="/" class="logo">
+                <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+                CalcWise
+            </a>
+            <nav class="main-nav">
+                <a href="/real-estate-calculators/">Real Estate</a>
+                <a href="/advanced-real-estate-calculators/">Advanced RE</a>
+                <a href="/energy-utility-calculators/">Energy</a>
+                <a href="/household-efficiency-calculators/">Household</a>
+                <a href="/finance-calculators/">Finance</a>
+            </nav>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+            </button>
+        </div>
+        <nav class="mobile-nav">
+            <a href="/real-estate-calculators/">Real Estate Calculators</a>
+            <a href="/advanced-real-estate-calculators/">Advanced Real Estate</a>
+            <a href="/energy-utility-calculators/">Energy &amp; Utility</a>
+            <a href="/household-efficiency-calculators/">Household Efficiency</a>
+            <a href="/finance-calculators/">Finance Calculators</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <nav class="breadcrumbs" aria-label="Breadcrumb">
+                <ol>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/household-efficiency-calculators/">Household Efficiency Calculators</a></li>
+                    <li><span aria-current="page">DIY vs Hire Calculator</span></li>
+                </ol>
+            </nav>
+
+            <div class="page-content">
+                <div class="calc-page-layout">
+                    <div class="calc-page-main">
+                        <h1>DIY vs Hire Calculator</h1>
+                        <p class="subtitle" style="color: var(--color-gray-600); font-size: var(--text-lg); line-height: var(--leading-relaxed); margin-bottom: var(--space-8);">
+                            Before picking up a paintbrush or calling a contractor, find out which option actually saves you money. This calculator factors in material costs, your hourly time value, project hours, and the risk of costly mistakes to give you a true DIY savings figure.
+                        </p>
+
+                        <div class="calc-container">
+                            <div class="calc-header">
+                                <h2>DIY vs Professional Cost Comparison</h2>
+                                <p>True savings after time and risk</p>
+                            </div>
+                            <div class="calc-body">
+                                <form id="diy-form">
+                                    <div class="form-group">
+                                        <label class="form-label" for="pro-quote">Professional Quote (total)</label>
+                                        <div class="input-prefix">
+                                            <span class="prefix">$</span>
+                                            <input type="number" id="pro-quote" name="proQuote" class="form-input" placeholder="1200" min="0" step="10" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label" for="diy-materials">DIY Material Cost</label>
+                                        <div class="input-prefix">
+                                            <span class="prefix">$</span>
+                                            <input type="number" id="diy-materials" name="diyMaterials" class="form-input" placeholder="350" min="0" step="10" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label" for="diy-hours">Estimated DIY Hours</label>
+                                        <input type="number" id="diy-hours" name="diyHours" class="form-input" placeholder="8" min="0.5" step="0.5" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label" for="hourly-value">Your Hourly Time Value</label>
+                                        <div class="input-prefix">
+                                            <span class="prefix">$</span>
+                                            <input type="number" id="hourly-value" name="hourlyValue" class="form-input" placeholder="35" min="1" step="1" required>
+                                        </div>
+                                        <div class="form-hint" style="font-size:var(--text-sm);color:var(--color-gray-500);margin-top:var(--space-1);">Use your after-tax hourly wage or what your free time is worth to you.</div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label" for="mistake-risk">Risk of Costly Mistake</label>
+                                        <select id="mistake-risk" name="mistakeRisk" class="form-input">
+                                            <option value="low">Low -- simple project, easy to redo</option>
+                                            <option value="medium" selected>Medium -- some complexity, fixable errors</option>
+                                            <option value="high">High -- complex project, errors are expensive</option>
+                                        </select>
+                                    </div>
+                                    <div class="calc-actions">
+                                        <button type="button" class="btn btn-calculate btn-full" onclick="calculateDIY()">Compare Costs</button>
+                                        <button type="reset" class="btn btn-reset">Reset</button>
+                                    </div>
+                                </form>
+
+                                <div id="results" class="calc-results hidden">
+                                    <div class="result-primary">
+                                        <div class="result-label">True DIY Cost (with time &amp; risk)</div>
+                                        <div class="result-value" id="result-true-diy">$0</div>
+                                    </div>
+                                    <div class="result-grid result-grid-3">
+                                        <div class="result-item">
+                                            <div class="result-label">Pro Quote</div>
+                                            <div class="result-value" id="result-pro">$0</div>
+                                        </div>
+                                        <div class="result-item">
+                                            <div class="result-label">Materials Only</div>
+                                            <div class="result-value" id="result-materials">$0</div>
+                                        </div>
+                                        <div class="result-item">
+                                            <div class="result-label">Your Time Cost</div>
+                                            <div class="result-value" id="result-time-cost">$0</div>
+                                        </div>
+                                        <div class="result-item">
+                                            <div class="result-label">Mistake Risk Buffer</div>
+                                            <div class="result-value" id="result-risk">$0</div>
+                                        </div>
+                                        <div class="result-item">
+                                            <div class="result-label">Net Savings (DIY)</div>
+                                            <div class="result-value" id="result-net-savings">$0</div>
+                                        </div>
+                                        <div class="result-item">
+                                            <div class="result-label">Verdict</div>
+                                            <div class="result-value" id="result-verdict" style="font-size:var(--text-base);">--</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="ad-slot ad-slot-leaderboard"></div>
+
+                        <section class="content-section">
+                            <h2>DIY vs Hire Formula</h2>
+                            <div class="formula-box">
+                                <div class="formula-label">Cost Comparison</div>
+                                Time Cost = DIY Hours &times; Hourly Value
+
+Risk Buffer % by complexity:
+  Low: 5% of materials  |  Medium: 15%  |  High: 30%
+
+Risk Buffer = Materials &times; Risk %
+True DIY Cost = Materials + Time Cost + Risk Buffer
+Net Savings = Pro Quote - True DIY Cost
+
+If Net Savings &gt; 0: DIY wins financially
+If Net Savings &lt; 0: Hiring out is the smarter financial choice
+                            </div>
+                            <p>Note: this calculator measures financial savings only. Other factors like quality, warranty, permits, and your personal enjoyment of the work are also valid considerations.</p>
+                        </section>
+
+                        <section class="content-section">
+                            <h2>How to Use This Calculator</h2>
+                            <ol>
+                                <li><strong>Enter the professional quote</strong> -- get a real quote if possible; otherwise use a typical cost from sites like HomeAdvisor or Angi.</li>
+                                <li><strong>Enter your material cost</strong> -- price out the materials you would need at a hardware store.</li>
+                                <li><strong>Estimate your DIY hours</strong> -- be honest and add a 25% buffer for learning time on unfamiliar projects.</li>
+                                <li><strong>Enter your hourly time value</strong> -- your after-tax wage is a good baseline.</li>
+                                <li><strong>Select mistake risk level</strong> -- higher for projects that involve plumbing, electrical, or structural work.</li>
+                                <li><strong>Click "Compare Costs"</strong> for a clear financial verdict.</li>
+                            </ol>
+                        </section>
+
+                        <section class="content-section">
+                            <h2>Example Scenario</h2>
+                            <h3>Interior Painting -- 3 Rooms</h3>
+                            <p>Pro quote: $1,200 | Materials: $280 | Hours: 12 | Hourly value: $40 | Risk: Low</p>
+                            <p>Time cost: 12 &times; $40 = $480 | Risk buffer: $280 &times; 5% = $14</p>
+                            <p>True DIY cost: $280 + $480 + $14 = <strong>$774</strong></p>
+                            <p>Net savings: $1,200 - $774 = <strong>$426 -- DIY wins</strong></p>
+                        </section>
+
+                        <section class="faq-section">
+                            <h2>Frequently Asked Questions</h2>
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">
+                                    When does DIY actually save money?
+                                    <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>DIY saves money when the material cost is significantly lower than the professional quote, your time value is lower than the labor charge, the skill requirement matches your abilities, and the risk of a costly mistake is low. Simple projects like painting, basic landscaping, and minor repairs are often good DIY candidates.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">
+                                    What is 'time value' and how do I calculate it?
+                                    <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>Time value is how much your time is worth per hour -- typically your after-tax hourly wage, or the hourly rate of work you could be doing instead. If you earn $40/hour and a DIY project takes 8 hours, your time cost is $320. If the labor portion of the pro quote is $280, hiring out makes financial sense.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">
+                                    Should I include the risk of mistakes in my calculation?
+                                    <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>Yes. For complex projects like electrical, plumbing, or roofing, a mistake can cost far more to fix than the original pro quote. Add a risk factor (typically 10-30% of materials cost) for any project where errors could damage your home or require a professional to redo the work.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">
+                                    Which home projects are typically not good for DIY?
+                                    <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>Projects that typically should not be DIY include: main electrical panel work, gas line repairs, structural changes, roofing on high-pitch roofs, foundation work, HVAC refrigerant handling, and any work that requires a permit and inspection. Errors in these areas can be dangerous or void your home insurance.</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="related-calculators">
+                            <h2>Related Calculators</h2>
+                            <div class="grid grid-3">
+                                <a href="/household-efficiency-calculators/home-maintenance-budget-calculator/" class="card card-link">
+                                    <div class="card-icon">M</div>
+                                    <h3>Home Maintenance Budget</h3>
+                                    <p>Annual maintenance budget by home value and age.</p>
+                                </a>
+                                <a href="/household-efficiency-calculators/home-operating-cost-calculator/" class="card card-link">
+                                    <div class="card-icon">O</div>
+                                    <h3>Home Operating Cost</h3>
+                                    <p>Total annual cost to own and operate your home.</p>
+                                </a>
+                                <a href="/household-efficiency-calculators/appliance-efficiency-calculator/" class="card card-link">
+                                    <div class="card-icon">A</div>
+                                    <h3>Appliance Efficiency</h3>
+                                    <p>Energy cost and upgrade ROI for home appliances.</p>
+                                </a>
+                            </div>
+                        </section>
+
+                        <div class="disclaimer">
+                            <strong>Disclaimer:</strong> This calculator provides a financial comparison only. Safety, permit requirements, insurance implications, and quality of work are important factors not fully captured here. Always consult licensed professionals for hazardous or regulated work.
+                        </div>
+
+                        <div class="ad-slot ad-slot-leaderboard"></div>
+                    </div>
+
+                    <aside class="calc-page-sidebar">
+                        <div class="sidebar-card">
+                            <h3>Household Efficiency Tools</h3>
+                            <a href="/household-efficiency-calculators/home-maintenance-budget-calculator/">Home Maintenance Budget</a>
+                            <a href="/household-efficiency-calculators/diy-vs-hire-calculator/">DIY vs Hire</a>
+                            <a href="/household-efficiency-calculators/car-cost-per-mile-calculator/">Car Cost Per Mile</a>
+                            <a href="/household-efficiency-calculators/meal-prep-savings-calculator/">Meal Prep Savings</a>
+                            <a href="/household-efficiency-calculators/appliance-efficiency-calculator/">Appliance Efficiency</a>
+                            <a href="/household-efficiency-calculators/home-insurance-audit-calculator/">Home Insurance Audit</a>
+                            <a href="/household-efficiency-calculators/utility-savings-calculator/">Utility Savings</a>
+                            <a href="/household-efficiency-calculators/energy-efficiency-savings-calculator/">Energy Efficiency Savings</a>
+                            <a href="/household-efficiency-calculators/water-usage-savings-calculator/">Water Usage Savings</a>
+                            <a href="/household-efficiency-calculators/grocery-waste-savings-calculator/">Grocery Waste Savings</a>
+                        </div>
+                        <div class="ad-slot ad-slot-rectangle"></div>
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="/" class="logo">
+                        <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+                        CalcWise
+                    </a>
+                    <p>Free, accurate financial calculators for everyone. Make smarter money decisions with CalcWise.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Household Efficiency</h4>
+                    <a href="/household-efficiency-calculators/home-maintenance-budget-calculator/">Home Maintenance Budget</a>
+                    <a href="/household-efficiency-calculators/diy-vs-hire-calculator/">DIY vs Hire</a>
+                    <a href="/household-efficiency-calculators/appliance-efficiency-calculator/">Appliance Efficiency</a>
+                    <a href="/household-efficiency-calculators/home-insurance-audit-calculator/">Home Insurance Audit</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Energy &amp; Utility</h4>
+                    <a href="/energy-utility-calculators/electricity-cost-calculator/">Electricity Cost</a>
+                    <a href="/energy-utility-calculators/solar-savings-calculator/">Solar Savings</a>
+                    <a href="/energy-utility-calculators/gas-bill-calculator/">Gas Bill</a>
+                    <a href="/energy-utility-calculators/home-energy-efficiency-calculator/">Home Energy Efficiency</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <a href="/about/">About</a>
+                    <a href="/contact/">Contact</a>
+                    <a href="/privacy/">Privacy Policy</a>
+                    <a href="/terms/">Terms of Use</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; 2026 CalcWise. All rights reserved.</span>
+                <div class="footer-links">
+                    <a href="/privacy/">Privacy</a>
+                    <a href="/terms/">Terms</a>
+                    <a href="/sitemap.xml">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/calculator-engine.js"></script>
+    <script src="/js/search-index.js"></script>
+    <script>
+    const riskBuffers = { low: 0.05, medium: 0.15, high: 0.30 };
+
+    function calculateDIY() {
+        if (!CalcWise.validateForm('diy-form')) return;
+
+        const values     = CalcWise.getFormValues('diy-form');
+        const proQuote   = values.proQuote;
+        const materials  = values.diyMaterials;
+        const hours      = values.diyHours;
+        const hourlyVal  = values.hourlyValue;
+        const riskLevel  = document.getElementById('mistake-risk').value;
+
+        const timeCost   = hours * hourlyVal;
+        const riskBuf    = materials * riskBuffers[riskLevel];
+        const trueDIY    = materials + timeCost + riskBuf;
+        const netSavings = proQuote - trueDIY;
+        const verdict    = netSavings > 0 ? 'DIY saves $' + Math.abs(netSavings).toFixed(0) : 'Hire out, saves $' + Math.abs(netSavings).toFixed(0);
+
+        CalcWise.setText('result-true-diy',  CalcWise.formatCurrency(trueDIY, 0));
+        CalcWise.setText('result-pro',        CalcWise.formatCurrency(proQuote, 0));
+        CalcWise.setText('result-materials',  CalcWise.formatCurrency(materials, 0));
+        CalcWise.setText('result-time-cost',  CalcWise.formatCurrency(timeCost, 0));
+        CalcWise.setText('result-risk',       CalcWise.formatCurrency(riskBuf, 0));
+        CalcWise.setText('result-net-savings', CalcWise.formatCurrency(Math.abs(netSavings), 0));
+        CalcWise.setText('result-verdict',    verdict);
+
+        CalcWise.showResults('results');
+    }
+
+    document.getElementById('diy-form').addEventListener('reset', function() {
+        setTimeout(() => CalcWise.hideResults('results'), 0);
+    });
+    </script>
+</body>
+</html>

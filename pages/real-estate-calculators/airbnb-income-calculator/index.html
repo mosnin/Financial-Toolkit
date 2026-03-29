@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airbnb Income Calculator - Short-Term Rental Estimator | CalcWise</title>
+    <meta name="description" content="Estimate your Airbnb or short-term rental income. Calculate monthly revenue, profit, and effective nightly rate after expenses and platform fees.">
+    <link rel="canonical" href="https://calcwise.com/real-estate-calculators/airbnb-income-calculator/">
+    <meta property="og:title" content="Airbnb Income Calculator | CalcWise">
+    <meta property="og:description" content="Estimate Airbnb income including occupancy, cleaning fees, expenses, and platform fees.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://calcwise.com/real-estate-calculators/airbnb-income-calculator/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Airbnb Income Calculator | CalcWise">
+    <meta name="twitter:description" content="Estimate short-term rental income and profit potential.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/design-system.css">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.com/"},
+            {"@type": "ListItem", "position": 2, "name": "Real Estate Calculators", "item": "https://calcwise.com/real-estate-calculators/"},
+            {"@type": "ListItem", "position": 3, "name": "Airbnb Income Calculator"}
+        ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {"@type": "Question", "name": "What is a realistic Airbnb occupancy rate?", "acceptedAnswer": {"@type": "Answer", "text": "Average Airbnb occupancy rates range from 50-75% depending on location, season, and property type. Popular tourist destinations may see 70-90%, while other areas average 45-60%. Start conservatively and adjust based on local market data."}},
+            {"@type": "Question", "name": "What platform fees does Airbnb charge?", "acceptedAnswer": {"@type": "Answer", "text": "Airbnb typically charges hosts 3% per booking under the split-fee model, or 14-16% under the host-only fee model. VRBO charges 5%, and other platforms vary. Factor in the fee model you use."}},
+            {"@type": "Question", "name": "How do cleaning fees affect revenue?", "acceptedAnswer": {"@type": "Answer", "text": "Cleaning fees are charged per stay and help offset turnover costs. They add to total revenue but can affect booking demand if set too high. Many hosts set cleaning fees to cover actual cleaning costs while keeping nightly rates competitive."}},
+            {"@type": "Question", "name": "Is Airbnb more profitable than long-term rental?", "acceptedAnswer": {"@type": "Answer", "text": "Short-term rentals can generate 2-3x more revenue than long-term rentals but come with higher expenses, more management effort, seasonal variability, and regulatory risks. Net profit depends heavily on location, occupancy rates, and management efficiency."}},
+            {"@type": "Question", "name": "What expenses should I budget for an Airbnb property?", "acceptedAnswer": {"@type": "Answer", "text": "Budget for mortgage, utilities, internet, cleaning, linens and supplies, furniture replacement, insurance, property management (if applicable), maintenance, lawn care, and local taxes or permits. Short-term rental expenses are typically higher than long-term rental expenses."}}
+        ]
+    }
+    </script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="/" class="logo">
+                <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+                CalcWise
+            </a>
+            <nav class="main-nav">
+                <a href="/real-estate-calculators/">Real Estate</a>
+                <a href="/finance-calculators/">Finance</a>
+                <a href="/business-calculators/">Business</a>
+                <a href="/tax-calculators/">Tax</a>
+            </nav>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+            </button>
+        </div>
+        <nav class="mobile-nav">
+            <a href="/real-estate-calculators/">Real Estate Calculators</a>
+            <a href="/finance-calculators/">Finance Calculators</a>
+            <a href="/business-calculators/">Business Calculators</a>
+            <a href="/tax-calculators/">Tax Calculators</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <nav class="breadcrumbs" aria-label="Breadcrumb">
+                <ol>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/real-estate-calculators/">Real Estate Calculators</a></li>
+                    <li><span aria-current="page">Airbnb Income Calculator</span></li>
+                </ol>
+            </nav>
+
+            <div class="page-content">
+                <div class="calc-page-layout">
+                    <div class="calc-page-main">
+                        <h1>Airbnb Income Calculator</h1>
+                        <p class="subtitle" style="color: var(--color-gray-600); font-size: var(--text-lg); line-height: var(--leading-relaxed); margin-bottom: var(--space-8);">
+                            Estimate your short-term rental income from Airbnb, VRBO, or other platforms. Calculate monthly and annual revenue, profit, and your effective nightly rate after all fees and expenses.
+                        </p>
+
+                        <div class="calc-container">
+                            <div class="calc-header">
+                                <h2>Short-Term Rental Income</h2>
+                                <p>Estimate revenue and profit from your vacation rental</p>
+                            </div>
+                            <div class="calc-body">
+                                <form id="airbnb-form">
+                                    <div class="calc-grid calc-grid-2col">
+                                        <div class="form-group">
+                                            <label class="form-label" for="nightly-rate">Nightly Rate</label>
+                                            <div class="input-prefix">
+                                                <span class="prefix">$</span>
+                                                <input type="number" id="nightly-rate" name="nightlyRate" class="form-input" placeholder="150" min="1" step="5" required>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label" for="occupancy-rate">Occupancy Rate</label>
+                                            <div class="input-suffix">
+                                                <input type="number" id="occupancy-rate" name="occupancyRate" class="form-input" placeholder="65" min="1" max="100" step="1" required>
+                                                <span class="suffix">%</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label" for="cleaning-fee">Cleaning Fee Per Stay</label>
+                                        <div class="input-prefix">
+                                            <span class="prefix">$</span>
+                                            <input type="number" id="cleaning-fee" name="cleaningFee" class="form-input" placeholder="100" min="0" step="5" required>
+                                        </div>
+                                    </div>
+                                    <div class="calc-grid calc-grid-2col">
+                                        <div class="form-group">
+                                            <label class="form-label" for="monthly-expenses">Monthly Expenses <span class="form-hint">(mortgage, utilities, etc.)</span></label>
+                                            <div class="input-prefix">
+                                                <span class="prefix">$</span>
+                                                <input type="number" id="monthly-expenses" name="monthlyExpenses" class="form-input" placeholder="2,000" min="0" step="50" required>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label" for="platform-fee">Platform Fee</label>
+                                            <div class="input-suffix">
+                                                <input type="number" id="platform-fee" name="platformFee" class="form-input" placeholder="3" min="0" max="30" step="0.5" required>
+                                                <span class="suffix">%</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="calc-actions">
+                                        <button type="button" class="btn btn-calculate btn-full" onclick="calculateAirbnb()">Calculate Income</button>
+                                        <button type="reset" class="btn btn-reset">Reset</button>
+                                    </div>
+                                </form>
+
+                                <div id="results" class="calc-results hidden">
+                                    <div class="result-primary">
+                                        <div class="result-label">Monthly Profit</div>
+                                        <div class="result-value" id="result-monthly-profit">$0</div>
+                                    </div>
+                                    <div class="result-grid result-grid-4">
+                                        <div class="result-item">
+                                            <div class="result-label">Monthly Revenue</div>
+                                            <div class="result-value" id="result-monthly-revenue">$0</div>
+                                        </div>
+                                        <div class="result-item">
+                                            <div class="result-label">Annual Profit</div>
+                                            <div class="result-value" id="result-annual-profit">$0</div>
+                                        </div>
+                                        <div class="result-item">
+                                            <div class="result-label">Effective Nightly Rate</div>
+                                            <div class="result-value" id="result-effective-rate">$0</div>
+                                        </div>
+                                        <div class="result-item">
+                                            <div class="result-label">Booked Nights/Month</div>
+                                            <div class="result-value" id="result-booked-nights">0</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="ad-slot ad-slot-leaderboard"></div>
+
+                        <section class="content-section">
+                            <h2>Income Formulas</h2>
+                            <div class="formula-box">
+                                <div class="formula-label">Short-Term Rental Revenue</div>
+                                Booked Nights = 30.44 x (Occupancy Rate / 100)
+Avg Stay Length = 3 nights (assumed)
+Number of Stays = Booked Nights / Avg Stay Length
+
+Gross Revenue = (Booked Nights x Nightly Rate)
+              + (Number of Stays x Cleaning Fee)
+Platform Fees = Gross Revenue x (Platform Fee / 100)
+Monthly Revenue = Gross Revenue - Platform Fees
+
+Monthly Profit = Monthly Revenue - Monthly Expenses
+                            </div>
+                            <p>The effective nightly rate divides your monthly profit by booked nights to show what you truly earn per night after all costs.</p>
+                        </section>
+
+                        <section class="content-section">
+                            <h2>How to Use This Calculator</h2>
+                            <ol>
+                                <li><strong>Enter your nightly rate</strong> -- research comparable listings in your area for competitive pricing.</li>
+                                <li><strong>Set the occupancy rate</strong> -- this represents the percentage of nights booked per month.</li>
+                                <li><strong>Enter the cleaning fee</strong> -- charged per guest stay to cover turnover costs.</li>
+                                <li><strong>Enter total monthly expenses</strong> -- mortgage, utilities, internet, insurance, supplies, maintenance.</li>
+                                <li><strong>Set the platform fee percentage</strong> -- Airbnb charges 3% (split-fee) or 14-16% (host-only).</li>
+                            </ol>
+                        </section>
+
+                        <section class="content-section">
+                            <h2>Example Scenario</h2>
+                            <h3>Beach Condo at $150/Night</h3>
+                            <p>Nightly rate: $150. Occupancy: 65%. Cleaning fee: $100/stay. Monthly expenses: $2,000. Platform fee: 3%.</p>
+                            <p>Booked nights: 30.44 x 0.65 = ~19.8 nights. With an average 3-night stay, that is about 6.6 stays per month.</p>
+                            <p>Gross revenue: (19.8 x $150) + (6.6 x $100) = $2,970 + $660 = $3,630. Platform fee: $3,630 x 0.03 = $109. Net revenue: $3,521.</p>
+                            <p>Monthly profit: $3,521 - $2,000 = <strong>$1,521</strong>. Annual profit: <strong>$18,252</strong>. Effective nightly rate: $1,521 / 19.8 = <strong>$76.82</strong>.</p>
+                        </section>
+
+                        <section class="faq-section">
+                            <h2>Frequently Asked Questions</h2>
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">What is a realistic Airbnb occupancy rate?<svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg></button>
+                                <div class="faq-answer"><p>Average Airbnb occupancy rates range from 50-75% depending on location, season, and property type. Popular tourist destinations may see 70-90%, while other areas average 45-60%. Start conservatively and adjust based on local market data.</p></div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">What platform fees does Airbnb charge?<svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg></button>
+                                <div class="faq-answer"><p>Airbnb typically charges hosts 3% per booking under the split-fee model, or 14-16% under the host-only fee model. VRBO charges 5%, and other platforms vary. Factor in the fee model you use.</p></div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">How do cleaning fees affect revenue?<svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg></button>
+                                <div class="faq-answer"><p>Cleaning fees are charged per stay and help offset turnover costs. They add to total revenue but can affect booking demand if set too high. Many hosts set cleaning fees to cover actual cleaning costs while keeping nightly rates competitive.</p></div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">Is Airbnb more profitable than long-term rental?<svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg></button>
+                                <div class="faq-answer"><p>Short-term rentals can generate 2-3x more revenue than long-term rentals but come with higher expenses, more management effort, seasonal variability, and regulatory risks. Net profit depends heavily on location, occupancy rates, and management efficiency.</p></div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">What expenses should I budget for an Airbnb property?<svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg></button>
+                                <div class="faq-answer"><p>Budget for mortgage, utilities, internet, cleaning, linens and supplies, furniture replacement, insurance, property management (if applicable), maintenance, lawn care, and local taxes or permits.</p></div>
+                            </div>
+                        </section>
+
+                        <section class="related-calculators">
+                            <h2>Related Calculators</h2>
+                            <div class="grid grid-3">
+                                <a href="/real-estate-calculators/rental-cash-flow-calculator/" class="card card-link"><div class="card-icon">$</div><h3>Rental Cash Flow Calculator</h3><p>Analyze long-term rental property cash flow.</p></a>
+                                <a href="/real-estate-calculators/rental-property-roi-calculator/" class="card card-link"><div class="card-icon">%</div><h3>Rental Property ROI</h3><p>Calculate total return on investment for rentals.</p></a>
+                                <a href="/real-estate-calculators/cap-rate-calculator/" class="card card-link"><div class="card-icon">%</div><h3>Cap Rate Calculator</h3><p>Evaluate property returns with cap rate analysis.</p></a>
+                                <a href="/real-estate-calculators/house-flip-calculator/" class="card card-link"><div class="card-icon">$</div><h3>House Flip Calculator</h3><p>Estimate profits from flipping a property.</p></a>
+                            </div>
+                        </section>
+
+                        <div class="disclaimer">
+                            <strong>Disclaimer:</strong> This calculator is for informational and educational purposes only. Actual Airbnb income varies based on location, seasonality, competition, and market conditions. Consult local regulations regarding short-term rentals in your area.
+                        </div>
+                        <div class="ad-slot ad-slot-leaderboard"></div>
+                    </div>
+
+                    <aside class="calc-page-sidebar">
+                        <div class="sidebar-card">
+                            <h3>Real Estate Tools</h3>
+                            <a href="/real-estate-calculators/amortization-calculator/">Amortization Calculator</a>
+                            <a href="/real-estate-calculators/cap-rate-calculator/">Cap Rate Calculator</a>
+                            <a href="/real-estate-calculators/rental-cash-flow-calculator/">Rental Cash Flow Calculator</a>
+                            <a href="/real-estate-calculators/rental-property-roi-calculator/">Rental Property ROI</a>
+                            <a href="/real-estate-calculators/house-flip-calculator/">House Flip Calculator</a>
+                            <a href="/real-estate-calculators/commission-calculator/">Commission Calculator</a>
+                        </div>
+                        <div class="ad-slot ad-slot-rectangle"></div>
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="/" class="logo">
+                        <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+                        CalcWise
+                    </a>
+                    <p>Free, accurate financial calculators for everyone. Make smarter money decisions with CalcWise.</p>
+                </div>
+                <div class="footer-col"><h4>Real Estate</h4><a href="/real-estate-calculators/amortization-calculator/">Amortization</a><a href="/real-estate-calculators/cap-rate-calculator/">Cap Rate</a><a href="/real-estate-calculators/rental-cash-flow-calculator/">Rental Cash Flow</a><a href="/real-estate-calculators/commission-calculator/">Commission</a></div>
+                <div class="footer-col"><h4>Finance</h4><a href="/finance-calculators/loan-calculator/">Loan Calculator</a><a href="/finance-calculators/compound-interest-calculator/">Compound Interest</a><a href="/finance-calculators/savings-calculator/">Savings Calculator</a><a href="/finance-calculators/debt-payoff-calculator/">Debt Payoff</a></div>
+                <div class="footer-col"><h4>Company</h4><a href="/about/">About</a><a href="/contact/">Contact</a><a href="/privacy/">Privacy Policy</a><a href="/terms/">Terms of Use</a></div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; 2026 CalcWise. All rights reserved.</span>
+                <div class="footer-links"><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="/sitemap.xml">Sitemap</a></div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/calculator-engine.js"></script>
+    <script src="/js/search-index.js"></script>
+    <script>
+    function calculateAirbnb() {
+        if (!CalcWise.validateForm('airbnb-form')) return;
+
+        const v = CalcWise.getFormValues('airbnb-form');
+        const avgDaysPerMonth = 30.44;
+        const bookedNights = avgDaysPerMonth * (v.occupancyRate / 100);
+        const avgStayLength = 3; // assumed average stay
+        const numberOfStays = bookedNights / avgStayLength;
+
+        const grossRevenue = (bookedNights * v.nightlyRate) + (numberOfStays * v.cleaningFee);
+        const platformFees = grossRevenue * (v.platformFee / 100);
+        const monthlyRevenue = grossRevenue - platformFees;
+        const monthlyProfit = monthlyRevenue - v.monthlyExpenses;
+        const annualProfit = monthlyProfit * 12;
+        const effectiveRate = bookedNights > 0 ? monthlyProfit / bookedNights : 0;
+
+        CalcWise.setText('result-monthly-profit', CalcWise.formatCurrency(monthlyProfit));
+        CalcWise.setText('result-monthly-revenue', CalcWise.formatCurrency(monthlyRevenue));
+        CalcWise.setText('result-annual-profit', CalcWise.formatCurrency(annualProfit, 0));
+        CalcWise.setText('result-effective-rate', CalcWise.formatCurrency(effectiveRate));
+        CalcWise.setText('result-booked-nights', CalcWise.formatNumber(bookedNights, 1));
+
+        const profitEl = document.getElementById('result-monthly-profit');
+        if (profitEl) {
+            profitEl.style.color = monthlyProfit >= 0 ? 'var(--color-success)' : 'var(--color-error)';
+        }
+
+        CalcWise.showResults('results');
+    }
+
+    document.getElementById('airbnb-form').addEventListener('reset', function() {
+        setTimeout(() => CalcWise.hideResults('results'), 0);
+    });
+    </script>
+</body>
+</html>

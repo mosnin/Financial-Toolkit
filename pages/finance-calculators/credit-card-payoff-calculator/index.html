@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Credit Card Payoff Calculator - Plan to Eliminate Card Debt | CalcWise</title>
+  <meta name="description" content="Free credit card payoff calculator. Enter your balance, APR, and monthly payment to find out how long to pay off your credit card, total interest, and total cost.">
+  <meta name="keywords" content="credit card payoff calculator, credit card calculator, pay off credit card, credit card interest, credit card debt">
+  <link rel="canonical" href="https://calcwise.io/finance-calculators/credit-card-payoff-calculator/">
+
+  <meta property="og:title" content="Credit Card Payoff Calculator - Plan to Eliminate Card Debt">
+  <meta property="og:description" content="Free credit card payoff calculator. See how long to pay off your card and how much interest you will pay.">
+  <meta property="og:url" content="https://calcwise.io/finance-calculators/credit-card-payoff-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Credit Card Payoff Calculator - Plan to Eliminate Card Debt">
+  <meta name="twitter:description" content="Free credit card payoff calculator. See how long to pay off your card and how much interest you will pay.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Finance Calculators", "item": "https://calcwise.io/finance-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "Credit Card Payoff Calculator", "item": "https://calcwise.io/finance-calculators/credit-card-payoff-calculator/" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How long will it take to pay off my credit card?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The time depends on your balance, APR, and monthly payment. Making only minimum payments on a $5,000 balance at 20% APR could take over 25 years. Increasing your payment significantly shortens the payoff timeline and reduces total interest." }
+      },
+      {
+        "@type": "Question",
+        "name": "Why is paying only the minimum a bad idea?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Minimum payments are designed to keep you in debt longer. Most of the minimum payment goes toward interest, with very little reducing the principal. This means you pay far more in total interest and it can take decades to become debt-free." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is a good strategy to pay off credit card debt?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Pay more than the minimum, consider balance transfer cards with 0% intro APR, use the avalanche method (highest rate first) or snowball method (smallest balance first), and avoid adding new charges while paying down existing debt." }
+      },
+      {
+        "@type": "Question",
+        "name": "How is credit card interest calculated?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Credit card interest is typically calculated daily using the daily periodic rate (APR / 365). The daily interest charges are added to your balance, resulting in compound interest that makes credit card debt grow quickly if not paid off." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I calculate the payment needed to pay off in a specific time?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. This calculator lets you enter your desired payoff timeframe in months to see what monthly payment is required. This helps you set a concrete budget goal for eliminating your credit card debt." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/" aria-current="page">Finance</a>
+        <a href="/business-calculators/">Business</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/business-calculators/">Business Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/finance-calculators/">Finance Calculators</a></li>
+          <li><span aria-current="page">Credit Card Payoff Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="article-content">
+          <h1>Credit Card Payoff Calculator</h1>
+          <p>Find out how long it will take to pay off your credit card balance and how much interest you will pay. Enter your balance and APR, then choose either a fixed monthly payment or a desired payoff timeline to see your personalized plan.</p>
+
+          <div class="calc-container mt-8">
+            <div class="calc-header">
+              <h2>Credit Card Payoff Plan</h2>
+              <p>Choose your payment approach</p>
+            </div>
+            <div class="calc-body">
+              <form id="cc-form" onsubmit="return false;">
+                <div class="form-group">
+                  <label class="form-label" for="cc-balance">Credit Card Balance</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="cc-balance" name="ccBalance" class="form-input" placeholder="5000" min="1" step="100" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="cc-apr">Annual Percentage Rate (APR)</label>
+                  <div class="input-suffix">
+                    <input type="number" id="cc-apr" name="ccApr" class="form-input" placeholder="20" min="0" max="100" step="0.01" required>
+                    <span class="suffix">%</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="calc-mode">I want to enter:</label>
+                  <select id="calc-mode" class="form-select" onchange="toggleMode()">
+                    <option value="payment">Monthly Payment Amount</option>
+                    <option value="months">Desired Payoff Months</option>
+                  </select>
+                </div>
+                <div class="form-group" id="payment-group">
+                  <label class="form-label" for="cc-payment">Monthly Payment</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="cc-payment" name="ccPayment" class="form-input" placeholder="200" min="1" step="10">
+                  </div>
+                </div>
+                <div class="form-group hidden" id="months-group">
+                  <label class="form-label" for="cc-months">Desired Payoff Months</label>
+                  <input type="number" id="cc-months" name="ccMonths" class="form-input" placeholder="24" min="1" max="600" step="1">
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calculateCC()">Calculate</button>
+                  <button type="button" class="btn btn-reset" onclick="resetCC()">Reset</button>
+                </div>
+              </form>
+
+              <div id="cc-results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label" id="cc-primary-label">Months to Pay Off</div>
+                  <div class="result-value" id="result-cc-primary"></div>
+                </div>
+                <div class="result-grid result-grid-3">
+                  <div class="result-item">
+                    <div class="result-label">Total Interest</div>
+                    <div class="result-value" id="result-cc-interest"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Total Paid</div>
+                    <div class="result-value" id="result-cc-total"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label" id="cc-secondary-label">Payoff Date</div>
+                    <div class="result-value" id="result-cc-secondary"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <section class="content-section">
+            <h2>Credit Card Payoff Formula</h2>
+            <p>Credit card payoff calculations use the same amortization math as other loans. Given a fixed monthly payment:</p>
+            <div class="formula-box">
+              <div class="formula-label">Months to Payoff</div>
+              n = -ln(1 - (B x r / P)) / ln(1 + r)
+            </div>
+            <p>Where <strong>n</strong> is the number of months, <strong>B</strong> is the balance, <strong>r</strong> is the monthly interest rate (APR / 12), and <strong>P</strong> is the monthly payment. To find the required payment for a desired number of months, use the standard amortization payment formula.</p>
+          </section>
+
+          <section class="content-section">
+            <h2>How to Use This Calculator</h2>
+            <ol>
+              <li><strong>Enter your credit card balance</strong> - the current amount you owe.</li>
+              <li><strong>Enter your APR</strong> - the annual percentage rate on your card.</li>
+              <li><strong>Choose your approach</strong> - enter a monthly payment to see the payoff timeline, or enter a desired number of months to see the required payment.</li>
+              <li><strong>Click "Calculate"</strong> to see your payoff plan, total interest, and total cost.</li>
+            </ol>
+          </section>
+
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>If you have a $5,000 credit card balance at 20% APR and pay $200 per month, it would take approximately 32 months to pay it off. You would pay about $1,314 in interest, for a total of $6,314. Increasing your payment to $300 per month would cut the payoff time to 20 months and save over $400 in interest.</p>
+          </section>
+
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                How long will it take to pay off my credit card?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>The time depends on your balance, APR, and monthly payment. Making only minimum payments on a $5,000 balance at 20% APR could take over 25 years. Increasing your payment significantly shortens the payoff timeline and reduces total interest.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Why is paying only the minimum a bad idea?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Minimum payments are designed to keep you in debt longer. Most of the minimum payment goes toward interest, with very little reducing the principal. This means you pay far more in total interest and it can take decades to become debt-free.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What is a good strategy to pay off credit card debt?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Pay more than the minimum, consider balance transfer cards with 0% intro APR, use the avalanche method (highest rate first) or snowball method (smallest balance first), and avoid adding new charges while paying down existing debt.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                How is credit card interest calculated?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Credit card interest is typically calculated daily using the daily periodic rate (APR / 365). The daily interest charges are added to your balance, resulting in compound interest that makes credit card debt grow quickly if not paid off.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Can I calculate the payment needed to pay off in a specific time?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Yes. Switch the mode to "Desired Payoff Months" and enter the number of months you want to be debt-free. The calculator will show you the required monthly payment to meet that goal.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/finance-calculators/debt-payoff-calculator/" class="card card-link">
+                <h3>Debt Payoff Calculator</h3>
+                <p>Plan your path to freedom from all types of debt.</p>
+              </a>
+              <a href="/finance-calculators/loan-calculator/" class="card card-link">
+                <h3>Loan Calculator</h3>
+                <p>Calculate monthly payments for any fixed-rate loan.</p>
+              </a>
+              <a href="/finance-calculators/interest-calculator/" class="card card-link">
+                <h3>Simple Interest Calculator</h3>
+                <p>Understand how interest works on your balances.</p>
+              </a>
+              <a href="/finance-calculators/savings-calculator/" class="card card-link">
+                <h3>Savings Goal Calculator</h3>
+                <p>Start building savings after eliminating debt.</p>
+              </a>
+              <a href="/finance-calculators/compound-interest-calculator/" class="card card-link">
+                <h3>Compound Interest Calculator</h3>
+                <p>See how investing grows your money over time.</p>
+              </a>
+            </div>
+          </section>
+
+          <div class="disclaimer">
+            <strong>Disclaimer:</strong> This calculator provides estimates for informational purposes only. Actual credit card payoff timelines may vary based on variable APR changes, fees, minimum payment adjustments, and additional charges. This is not financial advice. Consult a qualified financial professional for personalized debt management guidance.
+          </div>
+
+          <div class="ad-slot ad-slot-leaderboard"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Real Estate</h4>
+          <a href="/real-estate-calculators/">All Real Estate Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Finance</h4>
+          <a href="/finance-calculators/">All Finance Calculators</a>
+          <a href="/finance-calculators/loan-calculator/">Loan Calculator</a>
+          <a href="/finance-calculators/compound-interest-calculator/">Compound Interest</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function toggleMode() {
+      const mode = document.getElementById('calc-mode').value;
+      document.getElementById('payment-group').classList.toggle('hidden', mode === 'months');
+      document.getElementById('months-group').classList.toggle('hidden', mode === 'payment');
+    }
+
+    function calculateCC() {
+      const balance = CalcWise.parseNumber(document.getElementById('cc-balance').value);
+      const apr = parseFloat(document.getElementById('cc-apr').value);
+      const mode = document.getElementById('calc-mode').value;
+
+      if (!balance || isNaN(apr)) return;
+
+      const monthlyRate = apr / 100 / 12;
+
+      if (mode === 'payment') {
+        const payment = CalcWise.parseNumber(document.getElementById('cc-payment').value);
+        if (!payment) return;
+
+        const result = CalcWise.debtPayoff(balance, apr, payment);
+
+        if (result.months === Infinity) {
+          CalcWise.setText('cc-primary-label', 'Months to Pay Off');
+          CalcWise.setText('result-cc-primary', 'Never');
+          CalcWise.setText('result-cc-interest', 'N/A');
+          CalcWise.setText('result-cc-total', 'N/A');
+          CalcWise.setText('cc-secondary-label', 'Payoff Date');
+          CalcWise.setText('result-cc-secondary', 'Payment too low');
+          CalcWise.showResults('cc-results');
+          return;
+        }
+
+        const totalPaid = payment * result.months;
+        const payoffDate = new Date();
+        payoffDate.setMonth(payoffDate.getMonth() + result.months);
+        const dateStr = payoffDate.toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
+
+        CalcWise.setText('cc-primary-label', 'Months to Pay Off');
+        CalcWise.setText('result-cc-primary', result.months);
+        CalcWise.setText('result-cc-interest', CalcWise.formatCurrency(result.totalInterest));
+        CalcWise.setText('result-cc-total', CalcWise.formatCurrency(totalPaid));
+        CalcWise.setText('cc-secondary-label', 'Payoff Date');
+        CalcWise.setText('result-cc-secondary', dateStr);
+
+      } else {
+        const months = parseInt(document.getElementById('cc-months').value);
+        if (!months) return;
+
+        let requiredPayment;
+        if (monthlyRate === 0) {
+          requiredPayment = balance / months;
+        } else {
+          requiredPayment = balance * (monthlyRate * Math.pow(1 + monthlyRate, months)) / (Math.pow(1 + monthlyRate, months) - 1);
+        }
+
+        const totalPaid = requiredPayment * months;
+        const totalInterest = totalPaid - balance;
+
+        CalcWise.setText('cc-primary-label', 'Required Monthly Payment');
+        CalcWise.setText('result-cc-primary', CalcWise.formatCurrency(requiredPayment));
+        CalcWise.setText('result-cc-interest', CalcWise.formatCurrency(totalInterest));
+        CalcWise.setText('result-cc-total', CalcWise.formatCurrency(totalPaid));
+        CalcWise.setText('cc-secondary-label', 'Payoff Period');
+        CalcWise.setText('result-cc-secondary', months + ' months');
+      }
+
+      CalcWise.showResults('cc-results');
+    }
+
+    function resetCC() {
+      document.getElementById('cc-form').reset();
+      CalcWise.hideResults('cc-results');
+      document.getElementById('payment-group').classList.remove('hidden');
+      document.getElementById('months-group').classList.add('hidden');
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Investment Return Calculator - Project Your Portfolio Growth | CalcWise</title>
+  <meta name="description" content="Free investment return calculator. Project the future value of your investments based on initial investment, annual return, time horizon, and annual contributions.">
+  <meta name="keywords" content="investment return calculator, investment calculator, ROI calculator, portfolio growth, future value calculator">
+  <link rel="canonical" href="https://calcwise.io/finance-calculators/investment-return-calculator/">
+
+  <meta property="og:title" content="Investment Return Calculator - Project Your Portfolio Growth">
+  <meta property="og:description" content="Free investment return calculator. Project the future value of your portfolio with annual contributions and compounding returns.">
+  <meta property="og:url" content="https://calcwise.io/finance-calculators/investment-return-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Investment Return Calculator - Project Your Portfolio Growth">
+  <meta name="twitter:description" content="Free investment return calculator. Project the future value of your portfolio with annual contributions.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Finance Calculators", "item": "https://calcwise.io/finance-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "Investment Return Calculator", "item": "https://calcwise.io/finance-calculators/investment-return-calculator/" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is a good annual return on investment?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The S&P 500 has historically returned about 10% annually before inflation (roughly 7% after inflation). A 'good' return depends on your risk tolerance and investment type. Bonds typically return 3-5%, while stocks average 8-12% over long periods." }
+      },
+      {
+        "@type": "Question",
+        "name": "How does the investment return calculator work?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The calculator uses compound growth to project your investment's future value. It takes your initial investment, adds annual contributions, and applies compound growth at your specified annual return rate over your investment period." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is annualized return?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Annualized return is the geometric average return per year. It accounts for compounding and gives a more accurate picture of performance than simple average return, especially over multiple years with varying annual returns." }
+      },
+      {
+        "@type": "Question",
+        "name": "Should I account for inflation in my investment projections?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes, inflation reduces purchasing power over time. To get a real (inflation-adjusted) return, subtract the expected inflation rate (typically 2-3%) from your nominal return rate. For example, a 10% nominal return with 3% inflation gives a 7% real return." }
+      },
+      {
+        "@type": "Question",
+        "name": "How important is starting early with investing?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Starting early is extremely important due to compound growth. An investor who starts at 25 can accumulate significantly more than someone who starts at 35 with the same contributions, because those extra 10 years of compounding make a dramatic difference." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/" aria-current="page">Finance</a>
+        <a href="/business-calculators/">Business</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/business-calculators/">Business Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/finance-calculators/">Finance Calculators</a></li>
+          <li><span aria-current="page">Investment Return Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="article-content">
+          <h1>Investment Return Calculator</h1>
+          <p>Project the future value of your investments with this calculator. Enter your initial investment, expected annual return, time horizon, and annual contributions to see how your portfolio could grow over time.</p>
+
+          <div class="calc-container mt-8">
+            <div class="calc-header">
+              <h2>Calculate Investment Returns</h2>
+              <p>Project your portfolio growth</p>
+            </div>
+            <div class="calc-body">
+              <form id="investment-form" onsubmit="return false;">
+                <div class="form-group">
+                  <label class="form-label" for="initial-investment">Initial Investment</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="initial-investment" name="initialInvestment" class="form-input" placeholder="10000" min="0" step="100" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="annual-return">Annual Return</label>
+                  <div class="input-suffix">
+                    <input type="number" id="annual-return" name="annualReturn" class="form-input" placeholder="8" min="-50" max="100" step="0.1" required>
+                    <span class="suffix">%</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="invest-years">Investment Period <span class="form-hint">(years)</span></label>
+                  <input type="number" id="invest-years" name="investYears" class="form-input" placeholder="20" min="1" max="100" step="1" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="annual-contribution">Annual Contribution</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="annual-contribution" name="annualContribution" class="form-input" placeholder="5000" min="0" step="100">
+                  </div>
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calculateInvestment()">Calculate Returns</button>
+                  <button type="button" class="btn btn-reset" onclick="resetInvestment()">Reset</button>
+                </div>
+              </form>
+
+              <div id="investment-results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">Future Value</div>
+                  <div class="result-value" id="result-future"></div>
+                </div>
+                <div class="result-grid result-grid-3">
+                  <div class="result-item">
+                    <div class="result-label">Total Invested</div>
+                    <div class="result-value" id="result-invested"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Total Returns</div>
+                    <div class="result-value" id="result-returns"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Annualized Return</div>
+                    <div class="result-value" id="result-annualized"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <section class="content-section">
+            <h2>Investment Return Formula</h2>
+            <p>The future value of an investment with annual contributions is calculated using compound growth:</p>
+            <div class="formula-box">
+              <div class="formula-label">Future Value with Contributions</div>
+              FV = PV x (1 + r)^t + C x [((1 + r)^t - 1) / r]
+            </div>
+            <p>Where <strong>FV</strong> is the future value, <strong>PV</strong> is the initial investment, <strong>r</strong> is the annual return rate (decimal), <strong>t</strong> is the number of years, and <strong>C</strong> is the annual contribution.</p>
+          </section>
+
+          <section class="content-section">
+            <h2>How to Use This Calculator</h2>
+            <ol>
+              <li><strong>Enter your initial investment</strong> - the amount you are starting with.</li>
+              <li><strong>Enter the expected annual return</strong> - the yearly percentage return you expect.</li>
+              <li><strong>Enter the investment period</strong> - how many years you plan to invest.</li>
+              <li><strong>Enter annual contributions</strong> - additional money you plan to invest each year (optional).</li>
+              <li><strong>Click "Calculate Returns"</strong> to see your projected portfolio value.</li>
+            </ol>
+          </section>
+
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>If you invest $10,000 with an 8% annual return over 20 years and add $5,000 each year, your portfolio would grow to approximately $275,172. Of that, $110,000 is your total invested amount and $165,172 is returns earned through compound growth.</p>
+          </section>
+
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What is a good annual return on investment?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>The S&P 500 has historically returned about 10% annually before inflation (roughly 7% after inflation). A "good" return depends on your risk tolerance and investment type. Bonds typically return 3-5%, while stocks average 8-12% over long periods.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                How does the investment return calculator work?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>The calculator uses compound growth to project your investment's future value. It takes your initial investment, adds annual contributions, and applies compound growth at your specified annual return rate over your investment period.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What is annualized return?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Annualized return is the geometric average return per year. It accounts for compounding and gives a more accurate picture of performance than simple average return, especially over multiple years with varying annual returns.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Should I account for inflation in my projections?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Yes, inflation reduces purchasing power over time. To get a real (inflation-adjusted) return, subtract the expected inflation rate (typically 2-3%) from your nominal return rate. For example, a 10% nominal return with 3% inflation gives a 7% real return.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                How important is starting early with investing?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Starting early is extremely important due to compound growth. An investor who starts at 25 can accumulate significantly more than someone who starts at 35 with the same contributions, because those extra 10 years of compounding make a dramatic difference.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/finance-calculators/compound-interest-calculator/" class="card card-link">
+                <h3>Compound Interest Calculator</h3>
+                <p>See how compound interest grows your money over time.</p>
+              </a>
+              <a href="/finance-calculators/savings-calculator/" class="card card-link">
+                <h3>Savings Goal Calculator</h3>
+                <p>Calculate how long to reach your savings target.</p>
+              </a>
+              <a href="/finance-calculators/interest-calculator/" class="card card-link">
+                <h3>Simple Interest Calculator</h3>
+                <p>Calculate interest using the simple I = Prt formula.</p>
+              </a>
+              <a href="/finance-calculators/loan-calculator/" class="card card-link">
+                <h3>Loan Calculator</h3>
+                <p>Calculate monthly payments for any fixed-rate loan.</p>
+              </a>
+            </div>
+          </section>
+
+          <div class="disclaimer">
+            <strong>Disclaimer:</strong> This calculator provides estimates for informational purposes only. Actual investment returns will vary and are not guaranteed. Past performance does not guarantee future results. This is not financial advice. Consult a qualified financial advisor before making investment decisions.
+          </div>
+
+          <div class="ad-slot ad-slot-leaderboard"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Real Estate</h4>
+          <a href="/real-estate-calculators/">All Real Estate Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Finance</h4>
+          <a href="/finance-calculators/">All Finance Calculators</a>
+          <a href="/finance-calculators/loan-calculator/">Loan Calculator</a>
+          <a href="/finance-calculators/compound-interest-calculator/">Compound Interest</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateInvestment() {
+      if (!CalcWise.validateForm('investment-form')) return;
+
+      const initial = CalcWise.parseNumber(document.getElementById('initial-investment').value);
+      const annualReturn = parseFloat(document.getElementById('annual-return').value) / 100;
+      const years = parseFloat(document.getElementById('invest-years').value);
+      const annualContribution = CalcWise.parseNumber(document.getElementById('annual-contribution').value);
+
+      let futureValue;
+      if (annualReturn === 0) {
+        futureValue = initial + (annualContribution * years);
+      } else {
+        // FV of initial investment
+        futureValue = initial * Math.pow(1 + annualReturn, years);
+        // FV of annual contributions (annuity)
+        futureValue += annualContribution * ((Math.pow(1 + annualReturn, years) - 1) / annualReturn);
+      }
+
+      const totalInvested = initial + (annualContribution * years);
+      const totalReturns = futureValue - totalInvested;
+      const annualized = totalInvested > 0 ? ((Math.pow(futureValue / totalInvested, 1 / years) - 1) * 100) : 0;
+
+      CalcWise.setText('result-future', CalcWise.formatCurrency(futureValue));
+      CalcWise.setText('result-invested', CalcWise.formatCurrency(totalInvested));
+      CalcWise.setText('result-returns', CalcWise.formatCurrency(totalReturns));
+      CalcWise.setText('result-annualized', annualized.toFixed(2) + '%');
+      CalcWise.showResults('investment-results');
+    }
+
+    function resetInvestment() {
+      document.getElementById('investment-form').reset();
+      CalcWise.hideResults('investment-results');
+    }
+  </script>
+</body>
+</html>

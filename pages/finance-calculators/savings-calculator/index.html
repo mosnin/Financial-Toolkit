@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Savings Goal Calculator - How Long to Reach Your Goal | CalcWise</title>
+  <meta name="description" content="Free savings goal calculator. Find out how many months it will take to reach your savings target based on your current savings, monthly contribution, and expected return rate.">
+  <meta name="keywords" content="savings goal calculator, savings calculator, how long to save, monthly savings, savings target">
+  <link rel="canonical" href="https://calcwise.io/finance-calculators/savings-calculator/">
+
+  <meta property="og:title" content="Savings Goal Calculator - How Long to Reach Your Goal">
+  <meta property="og:description" content="Free savings goal calculator. Find out how many months to reach your target with monthly contributions.">
+  <meta property="og:url" content="https://calcwise.io/finance-calculators/savings-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Savings Goal Calculator - How Long to Reach Your Goal">
+  <meta name="twitter:description" content="Free savings goal calculator. Find out how many months to reach your target with monthly contributions.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Finance Calculators", "item": "https://calcwise.io/finance-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "Savings Goal Calculator", "item": "https://calcwise.io/finance-calculators/savings-calculator/" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do I calculate how long it takes to reach a savings goal?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The time depends on the gap between your goal and current savings, your monthly contribution, and the return rate on your savings. With interest, a logarithmic formula determines the exact number of months needed to close the gap." }
+      },
+      {
+        "@type": "Question",
+        "name": "Should I include investment returns in my savings plan?",
+        "acceptedAnswer": { "@type": "Answer", "text": "If your savings are in a high-yield savings account, CD, or investment account, including the expected return rate gives a more accurate timeline. For a regular checking account with no interest, use 0% as the return rate." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is a realistic monthly savings amount?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Financial experts often recommend saving 15-20% of your income. However, any consistent amount helps. The key is choosing an amount you can sustain without compromising essential expenses." }
+      },
+      {
+        "@type": "Question",
+        "name": "How can I reach my savings goal faster?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Increase your monthly contributions, reduce unnecessary expenses, earn a higher return by moving savings to a high-yield account or investments, or supplement income with side work. Even small increases in contributions can shave months off your timeline." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/" aria-current="page">Finance</a>
+        <a href="/business-calculators/">Business</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/business-calculators/">Business Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/finance-calculators/">Finance Calculators</a></li>
+          <li><span aria-current="page">Savings Goal Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="article-content">
+          <h1>Savings Goal Calculator</h1>
+          <p>Find out how long it will take to reach your savings goal. Enter your target amount, current savings, monthly contribution, and expected annual return rate to get a personalized timeline with a breakdown of contributions and interest earned.</p>
+
+          <div class="calc-container mt-8">
+            <div class="calc-header">
+              <h2>Plan Your Savings</h2>
+              <p>Set your goal and see your timeline</p>
+            </div>
+            <div class="calc-body">
+              <form id="savings-form" onsubmit="return false;">
+                <div class="form-group">
+                  <label class="form-label" for="savings-goal">Savings Goal</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="savings-goal" name="savingsGoal" class="form-input" placeholder="50000" min="1" step="100" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="current-savings">Current Savings</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="current-savings" name="currentSavings" class="form-input" placeholder="5000" min="0" step="100">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="monthly-savings">Monthly Contribution</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="monthly-savings" name="monthlySavings" class="form-input" placeholder="500" min="1" step="10" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="return-rate">Annual Return Rate</label>
+                  <div class="input-suffix">
+                    <input type="number" id="return-rate" name="returnRate" class="form-input" placeholder="4" min="0" max="50" step="0.1">
+                    <span class="suffix">%</span>
+                  </div>
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calculateSavings()">Calculate</button>
+                  <button type="button" class="btn btn-reset" onclick="resetSavings()">Reset</button>
+                </div>
+              </form>
+
+              <div id="savings-results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">Months to Reach Goal</div>
+                  <div class="result-value" id="result-months"></div>
+                </div>
+                <div class="result-grid result-grid-3">
+                  <div class="result-item">
+                    <div class="result-label">Total Contributed</div>
+                    <div class="result-value" id="result-total-contributed"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Interest Earned</div>
+                    <div class="result-value" id="result-savings-interest"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Target Date</div>
+                    <div class="result-value" id="result-target-date"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <section class="content-section">
+            <h2>Savings Goal Formula</h2>
+            <p>When a return rate is applied, the number of months to reach a savings goal is calculated using the future value of an annuity formula solved for time:</p>
+            <div class="formula-box">
+              <div class="formula-label">Months to Goal (with interest)</div>
+              n = ln((FV * r + PMT) / (PV * r + PMT)) / ln(1 + r)
+            </div>
+            <p>Where <strong>FV</strong> is the savings goal, <strong>PV</strong> is current savings, <strong>PMT</strong> is the monthly contribution, and <strong>r</strong> is the monthly interest rate. Without interest, it simplifies to (Goal - Current) / Monthly Contribution.</p>
+          </section>
+
+          <section class="content-section">
+            <h2>How to Use This Calculator</h2>
+            <ol>
+              <li><strong>Enter your savings goal</strong> - the total amount you want to save.</li>
+              <li><strong>Enter your current savings</strong> - what you have saved already.</li>
+              <li><strong>Enter your monthly contribution</strong> - how much you can save each month.</li>
+              <li><strong>Enter the annual return rate</strong> - expected interest or investment return (use 0 for no returns).</li>
+              <li><strong>Click "Calculate"</strong> to see your timeline and breakdown.</li>
+            </ol>
+          </section>
+
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>Suppose you want to save $50,000 for a down payment. You currently have $5,000 saved and can contribute $500 per month into an account earning 4% annually. This calculator would show you need approximately 78 months (about 6.5 years) to reach your goal, with about $44,000 in total contributions and $6,000 in interest earned.</p>
+          </section>
+
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                How do I calculate how long it takes to reach a savings goal?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>The time depends on the gap between your goal and current savings, your monthly contribution, and the return rate. With interest, a logarithmic formula determines the exact number of months needed. Without interest, simply divide the remaining amount by your monthly contribution.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Should I include investment returns in my savings plan?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>If your savings are in a high-yield savings account, CD, or investment account, including the expected return rate gives a more accurate timeline. For a regular checking account with no interest, use 0% as the return rate.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What is a realistic monthly savings amount?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Financial experts often recommend saving 15-20% of your income. However, any consistent amount helps. The key is choosing an amount you can sustain without compromising essential expenses.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                How can I reach my savings goal faster?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Increase your monthly contributions, reduce unnecessary expenses, earn a higher return by moving savings to a high-yield account, or supplement income with side work. Even small increases in contributions can shave months off your timeline.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/finance-calculators/compound-interest-calculator/" class="card card-link">
+                <h3>Compound Interest Calculator</h3>
+                <p>See how compound interest grows your money over time.</p>
+              </a>
+              <a href="/finance-calculators/investment-return-calculator/" class="card card-link">
+                <h3>Investment Return Calculator</h3>
+                <p>Project the future value of your investments.</p>
+              </a>
+              <a href="/finance-calculators/loan-calculator/" class="card card-link">
+                <h3>Loan Calculator</h3>
+                <p>Calculate monthly payments for any fixed-rate loan.</p>
+              </a>
+              <a href="/finance-calculators/interest-calculator/" class="card card-link">
+                <h3>Simple Interest Calculator</h3>
+                <p>Calculate interest using the simple I = Prt formula.</p>
+              </a>
+              <a href="/finance-calculators/debt-payoff-calculator/" class="card card-link">
+                <h3>Debt Payoff Calculator</h3>
+                <p>Find out how long it takes to become debt-free.</p>
+              </a>
+            </div>
+          </section>
+
+          <div class="disclaimer">
+            <strong>Disclaimer:</strong> This calculator provides estimates for informational purposes only. Actual savings timelines may vary based on fluctuating interest rates, fees, taxes, and changes in contribution amounts. This is not financial advice. Consult a qualified financial professional for personalized guidance.
+          </div>
+
+          <div class="ad-slot ad-slot-leaderboard"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Real Estate</h4>
+          <a href="/real-estate-calculators/">All Real Estate Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Finance</h4>
+          <a href="/finance-calculators/">All Finance Calculators</a>
+          <a href="/finance-calculators/loan-calculator/">Loan Calculator</a>
+          <a href="/finance-calculators/compound-interest-calculator/">Compound Interest</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateSavings() {
+      if (!CalcWise.validateForm('savings-form')) return;
+
+      const goal = CalcWise.parseNumber(document.getElementById('savings-goal').value);
+      const current = CalcWise.parseNumber(document.getElementById('current-savings').value);
+      const monthly = CalcWise.parseNumber(document.getElementById('monthly-savings').value);
+      const annualRate = parseFloat(document.getElementById('return-rate').value) || 0;
+
+      if (current >= goal) {
+        CalcWise.setText('result-months', '0');
+        CalcWise.setText('result-total-contributed', CalcWise.formatCurrency(0));
+        CalcWise.setText('result-savings-interest', CalcWise.formatCurrency(0));
+        CalcWise.setText('result-target-date', 'Already reached!');
+        CalcWise.showResults('savings-results');
+        return;
+      }
+
+      let months;
+      let totalContributed;
+      let interestEarned;
+
+      if (annualRate === 0) {
+        months = Math.ceil((goal - current) / monthly);
+        totalContributed = current + (monthly * months);
+        interestEarned = 0;
+      } else {
+        const monthlyRate = annualRate / 100 / 12;
+        // FV = PV*(1+r)^n + PMT*((1+r)^n - 1)/r = goal
+        // Solve for n: n = ln((goal*r + PMT)/(PV*r + PMT)) / ln(1+r)
+        const numerator = Math.log((goal * monthlyRate + monthly) / (current * monthlyRate + monthly));
+        const denominator = Math.log(1 + monthlyRate);
+        months = Math.ceil(numerator / denominator);
+
+        // Simulate to get accurate totals
+        let balance = current;
+        let totalInterest = 0;
+        for (let i = 0; i < months; i++) {
+          const interest = balance * monthlyRate;
+          totalInterest += interest;
+          balance += interest + monthly;
+        }
+        totalContributed = current + (monthly * months);
+        interestEarned = totalInterest;
+      }
+
+      const targetDate = new Date();
+      targetDate.setMonth(targetDate.getMonth() + months);
+      const dateStr = targetDate.toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
+
+      const yearsDisplay = months >= 12 ? Math.floor(months / 12) + 'y ' + (months % 12) + 'm' : months + ' months';
+
+      CalcWise.setText('result-months', yearsDisplay);
+      CalcWise.setText('result-total-contributed', CalcWise.formatCurrency(totalContributed));
+      CalcWise.setText('result-savings-interest', CalcWise.formatCurrency(interestEarned));
+      CalcWise.setText('result-target-date', dateStr);
+      CalcWise.showResults('savings-results');
+    }
+
+    function resetSavings() {
+      document.getElementById('savings-form').reset();
+      CalcWise.hideResults('savings-results');
+    }
+  </script>
+</body>
+</html>

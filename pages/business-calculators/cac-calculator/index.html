@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Acquisition Cost (CAC) Calculator - CalcWise</title>
+  <meta name="description" content="Calculate your customer acquisition cost (CAC), marketing CAC, and sales CAC. Understand how much it costs to acquire each new customer.">
+  <link rel="canonical" href="https://calcwise.io/business-calculators/cac-calculator/">
+
+  <meta property="og:title" content="Customer Acquisition Cost Calculator - CalcWise">
+  <meta property="og:description" content="Calculate your customer acquisition cost (CAC), marketing CAC, and sales CAC.">
+  <meta property="og:url" content="https://calcwise.io/business-calculators/cac-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Customer Acquisition Cost Calculator - CalcWise">
+  <meta name="twitter:description" content="Calculate your customer acquisition cost (CAC), marketing CAC, and sales CAC.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Business Calculators", "item": "https://calcwise.io/business-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "CAC Calculator", "item": "https://calcwise.io/business-calculators/cac-calculator/" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is Customer Acquisition Cost (CAC)?",
+        "acceptedAnswer": { "@type": "Answer", "text": "CAC is the total cost of acquiring a new customer, including all marketing and sales expenses divided by the number of new customers acquired in a given period." }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I calculate CAC?",
+        "acceptedAnswer": { "@type": "Answer", "text": "CAC = (Total Marketing Spend + Total Sales Spend) / Number of New Customers Acquired. Include all costs: advertising, salaries, tools, commissions, and overhead allocated to acquisition." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is a good CAC?",
+        "acceptedAnswer": { "@type": "Answer", "text": "A good CAC depends on your customer lifetime value (LTV). The general benchmark is an LTV:CAC ratio of 3:1 or higher, meaning each customer generates at least 3x what it cost to acquire them." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between marketing CAC and sales CAC?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Marketing CAC isolates the marketing spend per customer (Marketing Spend / New Customers). Sales CAC isolates the sales spend per customer (Sales Spend / New Customers). Together they equal total CAC." }
+      },
+      {
+        "@type": "Question",
+        "name": "How can I reduce my CAC?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Improve conversion rates, focus on high-performing channels, implement referral programs, optimize your sales process, invest in content marketing and SEO for organic acquisition, and improve customer targeting." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/business-calculators/" aria-current="page">Business</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/business-calculators/" aria-current="page">Business Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container page-content">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/business-calculators/">Business Calculators</a></li>
+          <li><span aria-current="page">CAC Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="calc-page-layout">
+        <div class="calc-page-main">
+          <h1>Customer Acquisition Cost (CAC) Calculator</h1>
+          <p class="mt-4 mb-8" style="font-size:var(--text-lg); color:var(--color-gray-600); max-width:700px; line-height:var(--leading-relaxed);">Calculate your customer acquisition cost by entering your total marketing spend, sales spend, and number of new customers acquired. See the breakdown of marketing CAC vs. sales CAC to optimize your spending.</p>
+
+          <div class="calc-container">
+            <div class="calc-header">
+              <h2>Calculate Customer Acquisition Cost</h2>
+              <p>Enter your acquisition spending and results</p>
+            </div>
+            <div class="calc-body">
+              <form id="cacForm" novalidate>
+                <div class="form-group">
+                  <label class="form-label" for="marketingSpend">Total Marketing Spend <span class="form-hint">Ads, content, tools, staff</span></label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="marketingSpend" name="marketingSpend" class="form-input" placeholder="25000" min="0" step="0.01" required>
+                  </div>
+                  <span class="form-error">Please enter valid marketing spend.</span>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="salesSpend">Total Sales Spend <span class="form-hint">Salaries, commissions, tools</span></label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="salesSpend" name="salesSpend" class="form-input" placeholder="15000" min="0" step="0.01" required>
+                  </div>
+                  <span class="form-error">Please enter valid sales spend.</span>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="newCustomers">New Customers Acquired <span class="form-hint">During the same period</span></label>
+                  <input type="number" id="newCustomers" name="newCustomers" class="form-input" placeholder="100" min="1" step="1" required>
+                  <span class="form-error">Please enter the number of new customers.</span>
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calculateCAC()">Calculate CAC</button>
+                  <button type="button" class="btn btn-reset" onclick="resetForm()">Reset</button>
+                </div>
+              </form>
+
+              <div id="results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">Customer Acquisition Cost</div>
+                  <div class="result-value" id="resultCAC">$0</div>
+                </div>
+                <div class="result-grid result-grid-3">
+                  <div class="result-item">
+                    <div class="result-label">Marketing CAC</div>
+                    <div class="result-value" id="resultMarketingCAC">$0</div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Sales CAC</div>
+                    <div class="result-value" id="resultSalesCAC">$0</div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Total Spend</div>
+                    <div class="result-value" id="resultTotalSpend">$0</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="disclaimer">
+            <strong>Disclaimer:</strong> This calculator provides estimates for educational purposes. Actual CAC calculations may need to account for attribution models, time lag between spend and conversion, and indirect costs. Consult a financial professional for detailed analysis.
+          </div>
+
+          <div class="ad-slot ad-slot-leaderboard"></div>
+
+          <section class="content-section">
+            <h2>CAC Formulas</h2>
+            <div class="formula-box">
+              <div class="formula-label">Total CAC</div>
+              CAC = (Marketing Spend + Sales Spend) / New Customers Acquired
+            </div>
+            <div class="formula-box">
+              <div class="formula-label">Marketing CAC</div>
+              Marketing CAC = Marketing Spend / New Customers Acquired
+            </div>
+            <div class="formula-box">
+              <div class="formula-label">Sales CAC</div>
+              Sales CAC = Sales Spend / New Customers Acquired
+            </div>
+          </section>
+
+          <section class="content-section">
+            <h2>How to Use This Calculator</h2>
+            <ol>
+              <li><strong>Enter your total marketing spend</strong> -- all marketing-related costs including advertising, content creation, marketing tools, and marketing team salaries for the period.</li>
+              <li><strong>Enter your total sales spend</strong> -- all sales-related costs including salaries, commissions, CRM tools, and travel for the period.</li>
+              <li><strong>Enter the number of new customers</strong> acquired during the same time period.</li>
+              <li><strong>Click "Calculate CAC"</strong> to see your overall CAC, plus the breakdown between marketing and sales costs per customer.</li>
+            </ol>
+          </section>
+
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>A B2B SaaS company spent <strong>$25,000 on marketing</strong> and <strong>$15,000 on sales</strong> in Q1. They acquired <strong>100 new customers</strong> during that quarter.</p>
+            <ul>
+              <li><strong>Total CAC:</strong> ($25,000 + $15,000) / 100 = $400 per customer</li>
+              <li><strong>Marketing CAC:</strong> $25,000 / 100 = $250 per customer</li>
+              <li><strong>Sales CAC:</strong> $15,000 / 100 = $150 per customer</li>
+            </ul>
+            <p>If the average customer LTV is $1,200, the LTV:CAC ratio is 3:1, which is considered healthy for a SaaS business.</p>
+          </section>
+
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">What is Customer Acquisition Cost (CAC)?<svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg></button>
+              <div class="faq-answer"><p>CAC is the total cost of acquiring a new customer, including all marketing and sales expenses divided by the number of new customers acquired in a given period.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">How do I calculate CAC?<svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg></button>
+              <div class="faq-answer"><p>CAC = (Total Marketing Spend + Total Sales Spend) / Number of New Customers Acquired. Include all costs: advertising, salaries, tools, commissions, and overhead allocated to acquisition.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">What is a good CAC?<svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg></button>
+              <div class="faq-answer"><p>A good CAC depends on your customer lifetime value (LTV). The general benchmark is an LTV:CAC ratio of 3:1 or higher, meaning each customer generates at least 3x what it cost to acquire them.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">What is the difference between marketing CAC and sales CAC?<svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg></button>
+              <div class="faq-answer"><p>Marketing CAC isolates the marketing spend per customer (Marketing Spend / New Customers). Sales CAC isolates the sales spend per customer (Sales Spend / New Customers). Together they equal total CAC.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">How can I reduce my CAC?<svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg></button>
+              <div class="faq-answer"><p>Improve conversion rates, focus on high-performing channels, implement referral programs, optimize your sales process, invest in content marketing and SEO for organic acquisition, and improve customer targeting.</p></div>
+            </div>
+          </section>
+
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/business-calculators/ltv-calculator/" class="card card-link"><h3>LTV Calculator</h3><p>Estimate customer lifetime value and LTV:CAC ratio.</p></a>
+              <a href="/business-calculators/roi-calculator/" class="card card-link"><h3>ROI Calculator</h3><p>Calculate return on investment and annualized ROI.</p></a>
+              <a href="/business-calculators/burn-rate-calculator/" class="card card-link"><h3>Burn Rate Calculator</h3><p>Calculate your startup burn rate and runway.</p></a>
+              <a href="/business-calculators/profit-margin-calculator/" class="card card-link"><h3>Profit Margin Calculator</h3><p>Calculate gross profit and margin.</p></a>
+              <a href="/business-calculators/break-even-calculator/" class="card card-link"><h3>Break-Even Calculator</h3><p>Find how many units to sell to cover costs.</p></a>
+            </div>
+          </section>
+        </div>
+
+        <aside class="calc-page-sidebar">
+          <div class="sidebar-card">
+            <h3>Business Calculators</h3>
+            <a href="/business-calculators/profit-margin-calculator/">Profit Margin</a>
+            <a href="/business-calculators/markup-calculator/">Markup</a>
+            <a href="/business-calculators/break-even-calculator/">Break-Even</a>
+            <a href="/business-calculators/roi-calculator/">ROI</a>
+            <a href="/business-calculators/burn-rate-calculator/">Burn Rate</a>
+            <a href="/business-calculators/cac-calculator/">Customer Acquisition Cost</a>
+            <a href="/business-calculators/ltv-calculator/">Customer Lifetime Value</a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col"><h4>Real Estate</h4><a href="/real-estate-calculators/">All Real Estate</a></div>
+        <div class="footer-col"><h4>Finance</h4><a href="/finance-calculators/">All Finance</a></div>
+        <div class="footer-col"><h4>Business</h4><a href="/business-calculators/">All Business</a></div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/about.html">About</a>
+          <a href="/contact.html">Contact</a>
+          <a href="/privacy.html">Privacy</a>
+          <a href="/terms.html">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateCAC() {
+      if (!CalcWise.validateForm('cacForm')) return;
+
+      const marketingSpend = CalcWise.parseNumber(document.getElementById('marketingSpend').value);
+      const salesSpend = CalcWise.parseNumber(document.getElementById('salesSpend').value);
+      const customers = CalcWise.parseNumber(document.getElementById('newCustomers').value);
+
+      if (customers <= 0) { alert('Number of new customers must be greater than zero.'); return; }
+
+      const totalSpend = marketingSpend + salesSpend;
+      const cac = totalSpend / customers;
+      const marketingCAC = marketingSpend / customers;
+      const salesCAC = salesSpend / customers;
+
+      CalcWise.setText('resultCAC', CalcWise.formatCurrency(cac));
+      CalcWise.setText('resultMarketingCAC', CalcWise.formatCurrency(marketingCAC));
+      CalcWise.setText('resultSalesCAC', CalcWise.formatCurrency(salesCAC));
+      CalcWise.setText('resultTotalSpend', CalcWise.formatCurrency(totalSpend));
+      CalcWise.showResults('results');
+    }
+
+    function resetForm() {
+      document.getElementById('cacForm').reset();
+      CalcWise.hideResults('results');
+    }
+  </script>
+</body>
+</html>

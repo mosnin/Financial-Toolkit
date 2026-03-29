@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Refinance Calculator - Mortgage Refinance Savings | CalcWise</title>
+  <meta name="description" content="Calculate your mortgage refinance savings. Compare your current payment to a new rate, find your breakeven point, and see total lifetime savings.">
+  <link rel="canonical" href="https://calcwise.com/real-estate-calculators/refinance-calculator/">
+  <meta property="og:title" content="Refinance Calculator - Mortgage Refinance Savings | CalcWise">
+  <meta property="og:description" content="Calculate how much you could save by refinancing your mortgage with a lower interest rate.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcwise.com/real-estate-calculators/refinance-calculator/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Refinance Calculator | CalcWise">
+  <meta name="twitter:description" content="Calculate how much you could save by refinancing your mortgage.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.com/"},
+      {"@type": "ListItem", "position": 2, "name": "Real Estate Calculators", "item": "https://calcwise.com/real-estate-calculators/"},
+      {"@type": "ListItem", "position": 3, "name": "Refinance Calculator"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type": "Question", "name": "When does it make sense to refinance?", "acceptedAnswer": {"@type": "Answer", "text": "Refinancing generally makes sense when you can lower your interest rate by at least 0.5-1%, plan to stay in the home long enough to recoup closing costs (past the breakeven point), and have good credit and sufficient equity. It can also make sense to refinance to switch from an adjustable rate to a fixed rate for stability."}},
+      {"@type": "Question", "name": "What is the breakeven point on a refinance?", "acceptedAnswer": {"@type": "Answer", "text": "The breakeven point is the number of months it takes for your monthly savings to equal the closing costs of the refinance. For example, if closing costs are $6,000 and you save $200 per month, your breakeven point is 30 months. You should plan to stay in your home at least this long for refinancing to be worthwhile."}},
+      {"@type": "Question", "name": "What are typical refinance closing costs?", "acceptedAnswer": {"@type": "Answer", "text": "Refinance closing costs typically range from 2-5% of the loan amount. Common fees include application fees, appraisal ($300-600), title search and insurance ($400-900), origination fees (0.5-1% of loan), and recording fees. On a $300,000 loan, expect to pay $6,000-$15,000 in closing costs."}},
+      {"@type": "Question", "name": "Should I refinance to a shorter loan term?", "acceptedAnswer": {"@type": "Answer", "text": "Refinancing to a shorter term (e.g., 30-year to 15-year) usually means a higher monthly payment but significantly less total interest and a faster payoff. This makes sense if you can comfortably afford the higher payments and want to build equity faster and save on interest."}},
+      {"@type": "Question", "name": "Does refinancing reset my loan term?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, refinancing replaces your old loan with a new one. If you refinance into a new 30-year loan after 10 years, you are starting a fresh 30-year term, potentially paying more total interest despite a lower rate. Consider refinancing into the remaining term of your original loan to avoid extending your payoff date."}}
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="logo">
+        <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/" aria-current="page">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/business-calculators/">Business</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/business-calculators/">Business Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main class="container page-content">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li><a href="/real-estate-calculators/">Real Estate Calculators</a></li>
+        <li><span aria-current="page">Refinance Calculator</span></li>
+      </ol>
+    </nav>
+
+    <div class="article-content">
+      <h1>Refinance Calculator</h1>
+      <p>Find out how much you could save by refinancing your mortgage to a lower interest rate. This calculator compares your current loan payment to a new one, showing your monthly savings, breakeven point, and total lifetime savings after closing costs.</p>
+
+      <div class="ad-slot" aria-hidden="true"></div>
+
+      <div class="calc-container">
+        <div class="calc-header">
+          <h2>Calculate Your Refinance Savings</h2>
+          <p>Compare your current loan to a new one</p>
+        </div>
+        <div class="calc-body">
+          <form id="refi-form">
+            <div class="form-group">
+              <label class="form-label" for="current-balance">Current Loan Balance</label>
+              <div class="input-prefix">
+                <span class="prefix">$</span>
+                <input type="number" id="current-balance" name="currentBalance" class="form-input" placeholder="280,000" required min="0" step="1000">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="current-rate">Current Interest Rate <span class="form-hint">(annual %)</span></label>
+              <div class="input-suffix">
+                <input type="number" id="current-rate" name="currentRate" class="form-input" placeholder="7.0" required min="0" max="25" step="0.125">
+                <span class="suffix">%</span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="new-rate">New Interest Rate <span class="form-hint">(annual %)</span></label>
+              <div class="input-suffix">
+                <input type="number" id="new-rate" name="newRate" class="form-input" placeholder="5.5" required min="0" max="25" step="0.125">
+                <span class="suffix">%</span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="remaining-term">Remaining Loan Term <span class="form-hint">(years)</span></label>
+              <input type="number" id="remaining-term" name="remainingTerm" class="form-input" placeholder="25" required min="1" max="40" value="25">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="closing-costs">Closing Costs</label>
+              <div class="input-prefix">
+                <span class="prefix">$</span>
+                <input type="number" id="closing-costs" name="closingCosts" class="form-input" placeholder="6,000" required min="0" step="500">
+              </div>
+            </div>
+            <div class="calc-actions">
+              <button type="button" class="btn btn-calculate btn-full" onclick="calculateRefinance()">Calculate Savings</button>
+              <button type="reset" class="btn btn-reset">Reset</button>
+            </div>
+          </form>
+
+          <div id="refi-results" class="calc-results hidden">
+            <div class="result-grid">
+              <div class="result-item">
+                <div class="result-label">Current Payment</div>
+                <div class="result-value" id="result-current-payment"></div>
+              </div>
+              <div class="result-item">
+                <div class="result-label">New Payment</div>
+                <div class="result-value" id="result-new-payment"></div>
+              </div>
+            </div>
+            <div class="result-primary">
+              <div class="result-label">Monthly Savings</div>
+              <div class="result-value" id="result-monthly-savings"></div>
+            </div>
+            <div class="result-grid result-grid-3">
+              <div class="result-item">
+                <div class="result-label">Breakeven</div>
+                <div class="result-value" id="result-breakeven"></div>
+              </div>
+              <div class="result-item">
+                <div class="result-label">Total Interest Saved</div>
+                <div class="result-value" id="result-interest-saved"></div>
+              </div>
+              <div class="result-item">
+                <div class="result-label">Net Savings</div>
+                <div class="result-value" id="result-net-savings"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ad-slot" aria-hidden="true"></div>
+
+      <section class="content-section">
+        <h2>How the Formula Works</h2>
+        <p>The refinance calculator compares two mortgage scenarios: your current loan at its existing rate and remaining term, versus a new loan at the lower rate for the same remaining term.</p>
+        <div class="formula-box">
+          <div class="formula-label">Refinance Savings Calculation</div>
+          Current Payment = P[r1(1+r1)^n] / [(1+r1)^n - 1]
+          New Payment = P[r2(1+r2)^n] / [(1+r2)^n - 1]
+          Monthly Savings = Current Payment - New Payment
+          Breakeven Months = Closing Costs / Monthly Savings
+          Net Savings = (Monthly Savings x Months) - Closing Costs
+        </div>
+        <p>The breakeven point tells you how many months of savings you need to recoup the upfront closing costs. After that point, every month of savings is pure profit. The net savings represent your total benefit over the remaining life of the loan after subtracting closing costs.</p>
+      </section>
+
+      <section class="content-section">
+        <h2>How to Use This Calculator</h2>
+        <ol>
+          <li>Enter the current outstanding balance on your mortgage.</li>
+          <li>Enter your current interest rate and the new rate you have been offered or are considering.</li>
+          <li>Set the remaining term on your current loan. The new loan will use this same term for an apples-to-apples comparison.</li>
+          <li>Enter the estimated closing costs for the refinance.</li>
+          <li>Click "Calculate Savings" to see your potential savings and breakeven point.</li>
+        </ol>
+      </section>
+
+      <section class="content-section">
+        <h2>Example Scenario</h2>
+        <p>You have a mortgage with a <strong>$280,000 balance</strong> at <strong>7.0%</strong> with <strong>25 years remaining</strong>. You are offered a refinance at <strong>5.5%</strong> with <strong>$6,000 in closing costs</strong>. Your current payment is about <strong>$1,979</strong>, and the new payment would be approximately <strong>$1,718</strong>, saving you <strong>$261 per month</strong>. The breakeven point would be about <strong>23 months</strong>. Over the remaining 25 years, your net savings after closing costs would be approximately <strong>$72,300</strong>.</p>
+      </section>
+
+      <section class="faq-section">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            When does it make sense to refinance?
+            <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Refinancing generally makes sense when you can lower your interest rate by at least 0.5-1%, plan to stay in the home long enough to recoup closing costs (past the breakeven point), and have good credit and sufficient equity. It can also make sense to refinance to switch from an adjustable rate to a fixed rate for stability.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            What is the breakeven point on a refinance?
+            <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>The breakeven point is the number of months it takes for your monthly savings to equal the closing costs of the refinance. For example, if closing costs are $6,000 and you save $200 per month, your breakeven point is 30 months. You should plan to stay in your home at least this long for refinancing to be worthwhile.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            What are typical refinance closing costs?
+            <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Refinance closing costs typically range from 2-5% of the loan amount. Common fees include application fees, appraisal ($300-600), title search and insurance ($400-900), origination fees (0.5-1% of loan), and recording fees. On a $300,000 loan, expect to pay $6,000-$15,000 in closing costs.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Should I refinance to a shorter loan term?
+            <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Refinancing to a shorter term (e.g., 30-year to 15-year) usually means a higher monthly payment but significantly less total interest and a faster payoff. This makes sense if you can comfortably afford the higher payments and want to build equity faster and save on interest.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Does refinancing reset my loan term?
+            <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Yes, refinancing replaces your old loan with a new one. If you refinance into a new 30-year loan after 10 years, you are starting a fresh 30-year term, potentially paying more total interest despite a lower rate. Consider refinancing into the remaining term of your original loan to avoid extending your payoff date.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="related-calculators">
+        <h2>Related Calculators</h2>
+        <div class="grid grid-3">
+          <a href="/real-estate-calculators/mortgage-calculator/" class="card card-link">
+            <h3>Mortgage Calculator</h3>
+            <p>Calculate your monthly mortgage payment.</p>
+          </a>
+          <a href="/real-estate-calculators/closing-cost-calculator/" class="card card-link">
+            <h3>Closing Cost Calculator</h3>
+            <p>Estimate the fees and costs of refinancing.</p>
+          </a>
+          <a href="/real-estate-calculators/affordability-calculator/" class="card card-link">
+            <h3>Affordability Calculator</h3>
+            <p>Find out how much house you can afford.</p>
+          </a>
+          <a href="/real-estate-calculators/property-tax-calculator/" class="card card-link">
+            <h3>Property Tax Calculator</h3>
+            <p>Estimate your annual property tax payments.</p>
+          </a>
+        </div>
+      </section>
+
+      <div class="disclaimer">
+        <strong>Disclaimer:</strong> This calculator provides estimates for informational purposes only. Actual refinance savings depend on your specific loan terms, creditworthiness, and lender fees. This tool does not constitute financial advice. Consult with a qualified mortgage professional before refinancing your home.
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free, accurate financial calculators to help you make smarter money decisions.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Real Estate</h4>
+          <a href="/real-estate-calculators/mortgage-calculator/">Mortgage Calculator</a>
+          <a href="/real-estate-calculators/affordability-calculator/">Affordability Calculator</a>
+          <a href="/real-estate-calculators/refinance-calculator/">Refinance Calculator</a>
+          <a href="/real-estate-calculators/rent-vs-buy-calculator/">Rent vs Buy Calculator</a>
+        </div>
+        <div class="footer-col">
+          <h4>Finance</h4>
+          <a href="/finance-calculators/">All Finance Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about.html">About</a>
+          <a href="/contact.html">Contact</a>
+          <a href="/privacy.html">Privacy Policy</a>
+          <a href="/terms.html">Terms of Service</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 CalcWise. All rights reserved.</span>
+        <div class="footer-links">
+          <a href="/privacy.html">Privacy</a>
+          <a href="/terms.html">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateRefinance() {
+      if (!CalcWise.validateForm('refi-form')) return;
+
+      const v = CalcWise.getFormValues('refi-form');
+      const currentPayment = CalcWise.monthlyPayment(v.currentBalance, v.currentRate, v.remainingTerm);
+      const newPayment = CalcWise.monthlyPayment(v.currentBalance, v.newRate, v.remainingTerm);
+      const monthlySavings = currentPayment - newPayment;
+
+      const totalMonths = v.remainingTerm * 12;
+      const currentTotalInterest = (currentPayment * totalMonths) - v.currentBalance;
+      const newTotalInterest = (newPayment * totalMonths) - v.currentBalance;
+      const interestSaved = currentTotalInterest - newTotalInterest;
+
+      const breakevenMonths = monthlySavings > 0 ? Math.ceil(v.closingCosts / monthlySavings) : Infinity;
+      const netSavings = (monthlySavings * totalMonths) - v.closingCosts;
+
+      CalcWise.setText('result-current-payment', CalcWise.formatCurrency(currentPayment));
+      CalcWise.setText('result-new-payment', CalcWise.formatCurrency(newPayment));
+      CalcWise.setText('result-monthly-savings', CalcWise.formatCurrency(monthlySavings));
+      CalcWise.setText('result-breakeven', breakevenMonths === Infinity ? 'Never' : breakevenMonths + ' months');
+      CalcWise.setText('result-interest-saved', CalcWise.formatCurrency(interestSaved));
+      CalcWise.setText('result-net-savings', CalcWise.formatCurrency(netSavings));
+
+      CalcWise.showResults('refi-results');
+    }
+  </script>
+</body>
+</html>

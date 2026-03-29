@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Burn Rate Calculator - Startup Runway | CalcWise</title>
+  <meta name="description" content="Calculate your startup's gross burn rate, net burn rate, and cash runway in months. Plan your finances and fundraising timeline with this free tool.">
+  <link rel="canonical" href="https://calcwise.io/business-calculators/burn-rate-calculator/">
+
+  <meta property="og:title" content="Burn Rate Calculator - CalcWise">
+  <meta property="og:description" content="Calculate your startup's gross burn rate, net burn rate, and cash runway in months.">
+  <meta property="og:url" content="https://calcwise.io/business-calculators/burn-rate-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Burn Rate Calculator - CalcWise">
+  <meta name="twitter:description" content="Calculate your startup's gross burn rate, net burn rate, and cash runway in months.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Business Calculators", "item": "https://calcwise.io/business-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "Burn Rate Calculator", "item": "https://calcwise.io/business-calculators/burn-rate-calculator/" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is burn rate?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Burn rate is the rate at which a startup spends its cash reserves. Gross burn rate is total monthly expenses, while net burn rate subtracts monthly revenue from expenses to show actual cash consumed per month." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between gross and net burn rate?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Gross burn rate is your total monthly spending regardless of income. Net burn rate accounts for revenue: Net Burn = Monthly Expenses - Monthly Revenue. If you spend $50,000/month and earn $20,000/month, your net burn is $30,000/month." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is runway?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Runway is the number of months a startup can continue operating before running out of cash. It is calculated as Cash in Bank / Net Burn Rate. A startup with $300,000 and a $30,000 net burn has 10 months of runway." }
+      },
+      {
+        "@type": "Question",
+        "name": "How much runway should a startup have?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Most advisors recommend 12-18 months of runway. This gives enough time to hit milestones, adjust strategy, and raise the next round of funding without desperation." }
+      },
+      {
+        "@type": "Question",
+        "name": "How can I reduce my burn rate?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Common strategies include renegotiating contracts, reducing headcount or hiring slowly, cutting non-essential software subscriptions, moving to cheaper office space, and focusing marketing spend on the highest-ROI channels." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/business-calculators/" aria-current="page">Business</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/business-calculators/" aria-current="page">Business Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container page-content">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/business-calculators/">Business Calculators</a></li>
+          <li><span aria-current="page">Burn Rate Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="calc-page-layout">
+        <div class="calc-page-main">
+          <h1>Startup Burn Rate Calculator</h1>
+          <p class="mt-4 mb-8" style="font-size:var(--text-lg); color:var(--color-gray-600); max-width:700px; line-height:var(--leading-relaxed);">Calculate your startup's gross burn rate, net burn rate, and cash runway. Understand how long your current cash reserves will last and plan your fundraising timeline accordingly.</p>
+
+          <div class="calc-container">
+            <div class="calc-header">
+              <h2>Calculate Burn Rate & Runway</h2>
+              <p>Enter your monthly financials</p>
+            </div>
+            <div class="calc-body">
+              <form id="burnRateForm" novalidate>
+                <div class="form-group">
+                  <label class="form-label" for="monthlyExpenses">Monthly Expenses <span class="form-hint">Total monthly spending</span></label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="monthlyExpenses" name="monthlyExpenses" class="form-input" placeholder="50000" min="0" step="0.01" required>
+                  </div>
+                  <span class="form-error">Please enter valid monthly expenses.</span>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="monthlyRevenue">Monthly Revenue <span class="form-hint">Enter 0 if pre-revenue</span></label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="monthlyRevenue" name="monthlyRevenue" class="form-input" placeholder="15000" min="0" step="0.01" required>
+                  </div>
+                  <span class="form-error">Please enter valid monthly revenue.</span>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="cashInBank">Cash in Bank <span class="form-hint">Total available cash</span></label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="cashInBank" name="cashInBank" class="form-input" placeholder="500000" min="0" step="0.01" required>
+                  </div>
+                  <span class="form-error">Please enter valid cash amount.</span>
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calculateBurnRate()">Calculate Burn Rate</button>
+                  <button type="button" class="btn btn-reset" onclick="resetForm()">Reset</button>
+                </div>
+              </form>
+
+              <div id="results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">Cash Runway</div>
+                  <div class="result-value" id="resultRunway">0 months</div>
+                </div>
+                <div class="result-grid result-grid-3">
+                  <div class="result-item">
+                    <div class="result-label">Gross Burn Rate</div>
+                    <div class="result-value" id="resultGrossBurn">$0/mo</div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Net Burn Rate</div>
+                    <div class="result-value" id="resultNetBurn">$0/mo</div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Runway Date</div>
+                    <div class="result-value" id="resultRunwayDate">--</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="disclaimer">
+            <strong>Disclaimer:</strong> This calculator provides simplified estimates. Actual burn rate and runway depend on many factors including revenue growth, expense changes, and seasonal variations. Consult a financial advisor for detailed financial planning.
+          </div>
+
+          <div class="ad-slot ad-slot-leaderboard"></div>
+
+          <section class="content-section">
+            <h2>Burn Rate Formulas</h2>
+            <div class="formula-box">
+              <div class="formula-label">Gross Burn Rate</div>
+              Gross Burn Rate = Total Monthly Expenses
+            </div>
+            <div class="formula-box">
+              <div class="formula-label">Net Burn Rate</div>
+              Net Burn Rate = Monthly Expenses - Monthly Revenue
+            </div>
+            <div class="formula-box">
+              <div class="formula-label">Runway (Months)</div>
+              Runway = Cash in Bank / Net Burn Rate
+            </div>
+          </section>
+
+          <section class="content-section">
+            <h2>How to Use This Calculator</h2>
+            <ol>
+              <li><strong>Enter your monthly expenses</strong> -- total recurring costs including salaries, rent, software, marketing, and all other expenses.</li>
+              <li><strong>Enter your monthly revenue</strong> -- your recurring monthly income. Enter 0 if you are pre-revenue.</li>
+              <li><strong>Enter your cash in bank</strong> -- total available cash reserves, including any recent funding.</li>
+              <li><strong>Click "Calculate Burn Rate"</strong> to see your gross burn, net burn, runway in months, and estimated end date.</li>
+            </ol>
+          </section>
+
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>A SaaS startup has <strong>$500,000 in the bank</strong>, spends <strong>$50,000/month</strong>, and earns <strong>$15,000/month</strong> in revenue.</p>
+            <ul>
+              <li><strong>Gross Burn Rate:</strong> $50,000/month</li>
+              <li><strong>Net Burn Rate:</strong> $50,000 - $15,000 = $35,000/month</li>
+              <li><strong>Runway:</strong> $500,000 / $35,000 = 14.3 months</li>
+            </ul>
+            <p>The startup has roughly 14 months of runway. If they want 18 months of runway, they need to either reduce net burn to ~$27,800/month or raise more capital.</p>
+          </section>
+
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">What is burn rate?<svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg></button>
+              <div class="faq-answer"><p>Burn rate is the rate at which a startup spends its cash reserves. Gross burn rate is total monthly expenses, while net burn rate subtracts monthly revenue from expenses to show actual cash consumed per month.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">What is the difference between gross and net burn rate?<svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg></button>
+              <div class="faq-answer"><p>Gross burn rate is your total monthly spending regardless of income. Net burn rate accounts for revenue: Net Burn = Monthly Expenses - Monthly Revenue. If you spend $50,000/month and earn $20,000/month, your net burn is $30,000/month.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">What is runway?<svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg></button>
+              <div class="faq-answer"><p>Runway is the number of months a startup can continue operating before running out of cash. It is calculated as Cash in Bank / Net Burn Rate.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">How much runway should a startup have?<svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg></button>
+              <div class="faq-answer"><p>Most advisors recommend 12-18 months of runway. This gives enough time to hit milestones, adjust strategy, and raise the next round of funding without desperation.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">How can I reduce my burn rate?<svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg></button>
+              <div class="faq-answer"><p>Common strategies include renegotiating contracts, reducing headcount or hiring slowly, cutting non-essential software subscriptions, moving to cheaper office space, and focusing marketing spend on the highest-ROI channels.</p></div>
+            </div>
+          </section>
+
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/business-calculators/roi-calculator/" class="card card-link"><h3>ROI Calculator</h3><p>Calculate return on investment and annualized ROI.</p></a>
+              <a href="/business-calculators/cac-calculator/" class="card card-link"><h3>CAC Calculator</h3><p>Find your customer acquisition cost.</p></a>
+              <a href="/business-calculators/ltv-calculator/" class="card card-link"><h3>LTV Calculator</h3><p>Estimate customer lifetime value.</p></a>
+              <a href="/business-calculators/break-even-calculator/" class="card card-link"><h3>Break-Even Calculator</h3><p>Find how many units to sell to cover your costs.</p></a>
+              <a href="/business-calculators/profit-margin-calculator/" class="card card-link"><h3>Profit Margin Calculator</h3><p>Calculate gross profit and margin.</p></a>
+            </div>
+          </section>
+        </div>
+
+        <aside class="calc-page-sidebar">
+          <div class="sidebar-card">
+            <h3>Business Calculators</h3>
+            <a href="/business-calculators/profit-margin-calculator/">Profit Margin</a>
+            <a href="/business-calculators/markup-calculator/">Markup</a>
+            <a href="/business-calculators/break-even-calculator/">Break-Even</a>
+            <a href="/business-calculators/roi-calculator/">ROI</a>
+            <a href="/business-calculators/burn-rate-calculator/">Burn Rate</a>
+            <a href="/business-calculators/cac-calculator/">Customer Acquisition Cost</a>
+            <a href="/business-calculators/ltv-calculator/">Customer Lifetime Value</a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col"><h4>Real Estate</h4><a href="/real-estate-calculators/">All Real Estate</a></div>
+        <div class="footer-col"><h4>Finance</h4><a href="/finance-calculators/">All Finance</a></div>
+        <div class="footer-col"><h4>Business</h4><a href="/business-calculators/">All Business</a></div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/about.html">About</a>
+          <a href="/contact.html">Contact</a>
+          <a href="/privacy.html">Privacy</a>
+          <a href="/terms.html">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateBurnRate() {
+      if (!CalcWise.validateForm('burnRateForm')) return;
+
+      const expenses = CalcWise.parseNumber(document.getElementById('monthlyExpenses').value);
+      const revenue = CalcWise.parseNumber(document.getElementById('monthlyRevenue').value);
+      const cash = CalcWise.parseNumber(document.getElementById('cashInBank').value);
+
+      const grossBurn = expenses;
+      const netBurn = expenses - revenue;
+
+      let runwayMonths, runwayDate;
+      if (netBurn <= 0) {
+        runwayMonths = Infinity;
+        runwayDate = 'Profitable';
+      } else {
+        runwayMonths = cash / netBurn;
+        const endDate = new Date();
+        endDate.setMonth(endDate.getMonth() + Math.floor(runwayMonths));
+        runwayDate = endDate.toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
+      }
+
+      CalcWise.setText('resultRunway', runwayMonths === Infinity ? 'Unlimited' : CalcWise.formatNumber(runwayMonths, 1) + ' months');
+      CalcWise.setText('resultGrossBurn', CalcWise.formatCurrency(grossBurn) + '/mo');
+      CalcWise.setText('resultNetBurn', netBurn <= 0 ? 'Cash positive' : CalcWise.formatCurrency(netBurn) + '/mo');
+      CalcWise.setText('resultRunwayDate', runwayDate);
+      CalcWise.showResults('results');
+    }
+
+    function resetForm() {
+      document.getElementById('burnRateForm').reset();
+      CalcWise.hideResults('results');
+    }
+  </script>
+</body>
+</html>

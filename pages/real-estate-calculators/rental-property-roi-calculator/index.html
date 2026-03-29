@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rental Property ROI Calculator - Return on Investment | CalcWise</title>
+    <meta name="description" content="Calculate the return on investment for rental properties. Factor in purchase price, down payment, rental income, expenses, and appreciation.">
+    <link rel="canonical" href="https://calcwise.com/real-estate-calculators/rental-property-roi-calculator/">
+    <meta property="og:title" content="Rental Property ROI Calculator | CalcWise">
+    <meta property="og:description" content="Calculate the total return on investment for rental properties including cash flow and appreciation.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://calcwise.com/real-estate-calculators/rental-property-roi-calculator/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Rental Property ROI Calculator | CalcWise">
+    <meta name="twitter:description" content="Calculate your rental property ROI with appreciation and cash flow analysis.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/design-system.css">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.com/"},
+            {"@type": "ListItem", "position": 2, "name": "Real Estate Calculators", "item": "https://calcwise.com/real-estate-calculators/"},
+            {"@type": "ListItem", "position": 3, "name": "Rental Property ROI Calculator"}
+        ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {"@type": "Question", "name": "What is a good ROI for rental property?", "acceptedAnswer": {"@type": "Answer", "text": "Most investors consider 8-12% annual ROI as a good return for rental property. This includes both cash flow and appreciation. However, returns vary significantly by market, property type, and management approach."}},
+            {"@type": "Question", "name": "How is rental property ROI different from cap rate?", "acceptedAnswer": {"@type": "Answer", "text": "ROI measures the return relative to your actual cash investment (including leverage effects), while cap rate measures the property's return relative to its total value, ignoring financing. ROI is typically higher when using leverage."}},
+            {"@type": "Question", "name": "Should I include appreciation in ROI calculations?", "acceptedAnswer": {"@type": "Answer", "text": "Including appreciation gives a more complete picture of total returns but adds uncertainty since future appreciation is not guaranteed. Many conservative investors focus on cash-on-cash return and treat appreciation as a bonus."}},
+            {"@type": "Question", "name": "What expenses should I include in monthly expenses?", "acceptedAnswer": {"@type": "Answer", "text": "Include mortgage payment, property taxes, insurance, maintenance, property management fees, HOA dues, vacancy allowance, and reserves for capital expenditures. The more comprehensive your expense estimate, the more accurate your ROI calculation."}},
+            {"@type": "Question", "name": "How does leverage affect rental property ROI?", "acceptedAnswer": {"@type": "Answer", "text": "Leverage (using a mortgage) amplifies returns because you control a large asset with a smaller cash investment. If the property appreciates or generates positive cash flow, your percentage return on invested cash is higher than it would be with an all-cash purchase."}}
+        ]
+    }
+    </script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="/" class="logo">
+                <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+                CalcWise
+            </a>
+            <nav class="main-nav">
+                <a href="/real-estate-calculators/">Real Estate</a>
+                <a href="/finance-calculators/">Finance</a>
+                <a href="/business-calculators/">Business</a>
+                <a href="/tax-calculators/">Tax</a>
+            </nav>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+            </button>
+        </div>
+        <nav class="mobile-nav">
+            <a href="/real-estate-calculators/">Real Estate Calculators</a>
+            <a href="/finance-calculators/">Finance Calculators</a>
+            <a href="/business-calculators/">Business Calculators</a>
+            <a href="/tax-calculators/">Tax Calculators</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <nav class="breadcrumbs" aria-label="Breadcrumb">
+                <ol>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/real-estate-calculators/">Real Estate Calculators</a></li>
+                    <li><span aria-current="page">Rental Property ROI Calculator</span></li>
+                </ol>
+            </nav>
+
+            <div class="page-content">
+                <div class="calc-page-layout">
+                    <div class="calc-page-main">
+                        <h1>Rental Property ROI Calculator</h1>
+                        <p class="subtitle" style="color: var(--color-gray-600); font-size: var(--text-lg); line-height: var(--leading-relaxed); margin-bottom: var(--space-8);">
+                            Evaluate the total return on investment for a rental property by factoring in purchase costs, rental income, operating expenses, and property appreciation.
+                        </p>
+
+                        <div class="calc-container">
+                            <div class="calc-header">
+                                <h2>ROI for Rental Property</h2>
+                                <p>Enter purchase details, income, and expenses to calculate your return</p>
+                            </div>
+                            <div class="calc-body">
+                                <form id="roi-form">
+                                    <div class="form-group">
+                                        <label class="form-label" for="purchase-price">Purchase Price</label>
+                                        <div class="input-prefix">
+                                            <span class="prefix">$</span>
+                                            <input type="number" id="purchase-price" name="purchasePrice" class="form-input" placeholder="400,000" min="1" step="1000" required>
+                                        </div>
+                                    </div>
+                                    <div class="calc-grid calc-grid-2col">
+                                        <div class="form-group">
+                                            <label class="form-label" for="down-payment">Down Payment</label>
+                                            <div class="input-prefix">
+                                                <span class="prefix">$</span>
+                                                <input type="number" id="down-payment" name="downPayment" class="form-input" placeholder="80,000" min="0" step="1000" required>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label" for="closing-costs">Closing Costs</label>
+                                            <div class="input-prefix">
+                                                <span class="prefix">$</span>
+                                                <input type="number" id="closing-costs" name="closingCosts" class="form-input" placeholder="8,000" min="0" step="100" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="calc-grid calc-grid-2col">
+                                        <div class="form-group">
+                                            <label class="form-label" for="monthly-rent">Monthly Rent</label>
+                                            <div class="input-prefix">
+                                                <span class="prefix">$</span>
+                                                <input type="number" id="monthly-rent" name="monthlyRent" class="form-input" placeholder="2,800" min="0" step="50" required>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label" for="monthly-expenses">Monthly Expenses <span class="form-hint">(mortgage + all costs)</span></label>
+                                            <div class="input-prefix">
+                                                <span class="prefix">$</span>
+                                                <input type="number" id="monthly-expenses" name="monthlyExpenses" class="form-input" placeholder="2,200" min="0" step="50" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label" for="annual-appreciation">Annual Appreciation Rate</label>
+                                        <div class="input-suffix">
+                                            <input type="number" id="annual-appreciation" name="annualAppreciation" class="form-input" placeholder="3" min="0" max="20" step="0.1" required>
+                                            <span class="suffix">%</span>
+                                        </div>
+                                    </div>
+                                    <div class="calc-actions">
+                                        <button type="button" class="btn btn-calculate btn-full" onclick="calculateROI()">Calculate ROI</button>
+                                        <button type="reset" class="btn btn-reset">Reset</button>
+                                    </div>
+                                </form>
+
+                                <div id="results" class="calc-results hidden">
+                                    <div class="result-primary">
+                                        <div class="result-label">Annual ROI</div>
+                                        <div class="result-value" id="result-annual-roi">0%</div>
+                                    </div>
+                                    <div class="result-grid result-grid-4">
+                                        <div class="result-item">
+                                            <div class="result-label">Cash-on-Cash Return</div>
+                                            <div class="result-value" id="result-coc">0%</div>
+                                        </div>
+                                        <div class="result-item">
+                                            <div class="result-label">Annual Cash Flow</div>
+                                            <div class="result-value" id="result-annual-cf">$0</div>
+                                        </div>
+                                        <div class="result-item">
+                                            <div class="result-label">Equity Gain (Year 1)</div>
+                                            <div class="result-value" id="result-equity-gain">$0</div>
+                                        </div>
+                                        <div class="result-item">
+                                            <div class="result-label">Total Return (Year 1)</div>
+                                            <div class="result-value" id="result-total-return">$0</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="ad-slot ad-slot-leaderboard"></div>
+
+                        <section class="content-section">
+                            <h2>ROI Formulas</h2>
+                            <div class="formula-box">
+                                <div class="formula-label">Return on Investment</div>
+                                Total Cash Invested = Down Payment + Closing Costs
+Annual Cash Flow = (Monthly Rent - Monthly Expenses) x 12
+Equity Gain = Purchase Price x (Appreciation Rate / 100)
+Total Annual Return = Annual Cash Flow + Equity Gain
+
+Annual ROI = (Total Annual Return / Total Cash Invested) x 100
+Cash-on-Cash = (Annual Cash Flow / Total Cash Invested) x 100
+                            </div>
+                            <p>The annual ROI combines both cash flow and appreciation to give a complete picture of the investment's return relative to the cash you put in.</p>
+                        </section>
+
+                        <section class="content-section">
+                            <h2>How to Use This Calculator</h2>
+                            <ol>
+                                <li><strong>Enter the purchase price</strong> of the property.</li>
+                                <li><strong>Enter down payment and closing costs</strong> -- these form your total cash investment.</li>
+                                <li><strong>Enter monthly rent</strong> -- the gross rent you expect to collect.</li>
+                                <li><strong>Enter total monthly expenses</strong> -- include mortgage, taxes, insurance, maintenance, management, and vacancy allowance.</li>
+                                <li><strong>Enter the expected annual appreciation rate</strong> -- the national average is roughly 3-4% historically.</li>
+                                <li><strong>Click "Calculate ROI"</strong> to see your returns.</li>
+                            </ol>
+                        </section>
+
+                        <section class="content-section">
+                            <h2>Example Scenario</h2>
+                            <h3>$400,000 Rental Property with 20% Down</h3>
+                            <p>Purchase price: $400,000. Down payment: $80,000. Closing costs: $8,000. Total cash invested: $88,000.</p>
+                            <p>Monthly rent: $2,800. Monthly expenses: $2,200. Monthly cash flow: $600. Annual cash flow: $7,200.</p>
+                            <p>At 3% annual appreciation, the property gains $12,000 in equity from appreciation in the first year.</p>
+                            <p>Total return = $7,200 + $12,000 = <strong>$19,200</strong>. Annual ROI = $19,200 / $88,000 = <strong>21.82%</strong>. Cash-on-cash return = $7,200 / $88,000 = <strong>8.18%</strong>.</p>
+                        </section>
+
+                        <section class="faq-section">
+                            <h2>Frequently Asked Questions</h2>
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">What is a good ROI for rental property?<svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg></button>
+                                <div class="faq-answer"><p>Most investors consider 8-12% annual ROI as a good return for rental property. This includes both cash flow and appreciation. However, returns vary significantly by market, property type, and management approach.</p></div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">How is rental property ROI different from cap rate?<svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg></button>
+                                <div class="faq-answer"><p>ROI measures the return relative to your actual cash investment (including leverage effects), while cap rate measures the property's return relative to its total value, ignoring financing. ROI is typically higher when using leverage.</p></div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">Should I include appreciation in ROI calculations?<svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg></button>
+                                <div class="faq-answer"><p>Including appreciation gives a more complete picture of total returns but adds uncertainty since future appreciation is not guaranteed. Many conservative investors focus on cash-on-cash return and treat appreciation as a bonus.</p></div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">What expenses should I include in monthly expenses?<svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg></button>
+                                <div class="faq-answer"><p>Include mortgage payment, property taxes, insurance, maintenance, property management fees, HOA dues, vacancy allowance, and reserves for capital expenditures. The more comprehensive your expense estimate, the more accurate your ROI calculation.</p></div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">How does leverage affect rental property ROI?<svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg></button>
+                                <div class="faq-answer"><p>Leverage (using a mortgage) amplifies returns because you control a large asset with a smaller cash investment. If the property appreciates or generates positive cash flow, your percentage return on invested cash is higher than it would be with an all-cash purchase.</p></div>
+                            </div>
+                        </section>
+
+                        <section class="related-calculators">
+                            <h2>Related Calculators</h2>
+                            <div class="grid grid-3">
+                                <a href="/real-estate-calculators/cap-rate-calculator/" class="card card-link">
+                                    <div class="card-icon">%</div><h3>Cap Rate Calculator</h3><p>Calculate the capitalization rate for investment properties.</p>
+                                </a>
+                                <a href="/real-estate-calculators/rental-cash-flow-calculator/" class="card card-link">
+                                    <div class="card-icon">$</div><h3>Rental Cash Flow Calculator</h3><p>Analyze monthly and annual rental property cash flow.</p>
+                                </a>
+                                <a href="/real-estate-calculators/house-flip-calculator/" class="card card-link">
+                                    <div class="card-icon">$</div><h3>House Flip Calculator</h3><p>Estimate profits from flipping a property.</p>
+                                </a>
+                                <a href="/real-estate-calculators/commission-calculator/" class="card card-link">
+                                    <div class="card-icon">%</div><h3>Commission Calculator</h3><p>Calculate real estate agent commissions and splits.</p>
+                                </a>
+                            </div>
+                        </section>
+
+                        <div class="disclaimer">
+                            <strong>Disclaimer:</strong> This calculator is for informational and educational purposes only. Actual returns may differ based on market conditions, property management, and other factors. Consult a qualified financial advisor before making investment decisions.
+                        </div>
+                        <div class="ad-slot ad-slot-leaderboard"></div>
+                    </div>
+
+                    <aside class="calc-page-sidebar">
+                        <div class="sidebar-card">
+                            <h3>Real Estate Tools</h3>
+                            <a href="/real-estate-calculators/amortization-calculator/">Amortization Calculator</a>
+                            <a href="/real-estate-calculators/cap-rate-calculator/">Cap Rate Calculator</a>
+                            <a href="/real-estate-calculators/rental-cash-flow-calculator/">Rental Cash Flow Calculator</a>
+                            <a href="/real-estate-calculators/airbnb-income-calculator/">Airbnb Income Calculator</a>
+                            <a href="/real-estate-calculators/house-flip-calculator/">House Flip Calculator</a>
+                            <a href="/real-estate-calculators/commission-calculator/">Commission Calculator</a>
+                        </div>
+                        <div class="ad-slot ad-slot-rectangle"></div>
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="/" class="logo">
+                        <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+                        CalcWise
+                    </a>
+                    <p>Free, accurate financial calculators for everyone. Make smarter money decisions with CalcWise.</p>
+                </div>
+                <div class="footer-col"><h4>Real Estate</h4><a href="/real-estate-calculators/amortization-calculator/">Amortization</a><a href="/real-estate-calculators/cap-rate-calculator/">Cap Rate</a><a href="/real-estate-calculators/rental-cash-flow-calculator/">Rental Cash Flow</a><a href="/real-estate-calculators/commission-calculator/">Commission</a></div>
+                <div class="footer-col"><h4>Finance</h4><a href="/finance-calculators/loan-calculator/">Loan Calculator</a><a href="/finance-calculators/compound-interest-calculator/">Compound Interest</a><a href="/finance-calculators/savings-calculator/">Savings Calculator</a><a href="/finance-calculators/debt-payoff-calculator/">Debt Payoff</a></div>
+                <div class="footer-col"><h4>Company</h4><a href="/about/">About</a><a href="/contact/">Contact</a><a href="/privacy/">Privacy Policy</a><a href="/terms/">Terms of Use</a></div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; 2026 CalcWise. All rights reserved.</span>
+                <div class="footer-links"><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="/sitemap.xml">Sitemap</a></div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/calculator-engine.js"></script>
+    <script src="/js/search-index.js"></script>
+    <script>
+    function calculateROI() {
+        if (!CalcWise.validateForm('roi-form')) return;
+
+        const v = CalcWise.getFormValues('roi-form');
+        const totalCashInvested = v.downPayment + v.closingCosts;
+        const annualCashFlow = (v.monthlyRent - v.monthlyExpenses) * 12;
+        const equityGain = v.purchasePrice * (v.annualAppreciation / 100);
+        const totalReturn = annualCashFlow + equityGain;
+        const annualROI = totalCashInvested > 0 ? (totalReturn / totalCashInvested) * 100 : 0;
+        const cocReturn = totalCashInvested > 0 ? (annualCashFlow / totalCashInvested) * 100 : 0;
+
+        CalcWise.setText('result-annual-roi', CalcWise.formatPercent(annualROI));
+        CalcWise.setText('result-coc', CalcWise.formatPercent(cocReturn));
+        CalcWise.setText('result-annual-cf', CalcWise.formatCurrency(annualCashFlow, 0));
+        CalcWise.setText('result-equity-gain', CalcWise.formatCurrency(equityGain, 0));
+        CalcWise.setText('result-total-return', CalcWise.formatCurrency(totalReturn, 0));
+
+        CalcWise.showResults('results');
+    }
+
+    document.getElementById('roi-form').addEventListener('reset', function() {
+        setTimeout(() => CalcWise.hideResults('results'), 0);
+    });
+    </script>
+</body>
+</html>

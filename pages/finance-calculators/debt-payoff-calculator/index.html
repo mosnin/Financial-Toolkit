@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Debt Payoff Calculator - Plan Your Path to Debt Freedom | CalcWise</title>
+  <meta name="description" content="Free debt payoff calculator. Find out how long it takes to pay off your debt, total interest paid, and your payoff date based on your balance, rate, and monthly payment.">
+  <meta name="keywords" content="debt payoff calculator, debt calculator, pay off debt, debt free calculator, debt repayment">
+  <link rel="canonical" href="https://calcwise.io/finance-calculators/debt-payoff-calculator/">
+
+  <meta property="og:title" content="Debt Payoff Calculator - Plan Your Path to Debt Freedom">
+  <meta property="og:description" content="Free debt payoff calculator. Find out how long it takes to pay off your debt and how much interest you will pay.">
+  <meta property="og:url" content="https://calcwise.io/finance-calculators/debt-payoff-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Debt Payoff Calculator - Plan Your Path to Debt Freedom">
+  <meta name="twitter:description" content="Free debt payoff calculator. Find out how long it takes to pay off your debt and how much interest you will pay.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Finance Calculators", "item": "https://calcwise.io/finance-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "Debt Payoff Calculator", "item": "https://calcwise.io/finance-calculators/debt-payoff-calculator/" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How is the debt payoff time calculated?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The payoff time is calculated using the formula: n = -ln(1 - (B x r / P)) / ln(1 + r), where B is the balance, r is the monthly interest rate, and P is the monthly payment. Your payment must exceed the monthly interest charge for the debt to be payable." }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens if my payment only covers the interest?",
+        "acceptedAnswer": { "@type": "Answer", "text": "If your monthly payment equals or is less than the monthly interest charge, you will never pay off the debt. The balance will stay the same or grow. You need to pay more than the interest portion to reduce the principal." }
+      },
+      {
+        "@type": "Question",
+        "name": "Should I use the debt avalanche or snowball method?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The avalanche method (paying highest-interest debt first) saves the most money on interest. The snowball method (paying smallest balance first) provides psychological wins. Both work - choose the approach that keeps you motivated." }
+      },
+      {
+        "@type": "Question",
+        "name": "How much extra should I pay to become debt-free faster?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Even an extra $50-100 per month can dramatically reduce your payoff time and total interest. Use this calculator to compare different payment amounts and see how much time and money you save with higher payments." }
+      },
+      {
+        "@type": "Question",
+        "name": "Does this calculator work for all types of debt?",
+        "acceptedAnswer": { "@type": "Answer", "text": "This calculator works for any fixed-rate debt with regular monthly payments, including personal loans, auto loans, student loans, and credit cards. It assumes a constant interest rate and consistent monthly payments." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/" aria-current="page">Finance</a>
+        <a href="/business-calculators/">Business</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/business-calculators/">Business Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/finance-calculators/">Finance Calculators</a></li>
+          <li><span aria-current="page">Debt Payoff Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="article-content">
+          <h1>Debt Payoff Calculator</h1>
+          <p>Plan your path to debt freedom with this calculator. Enter your total debt balance, interest rate, and monthly payment to see how long it will take to become debt-free, plus the total interest and amount you will pay.</p>
+
+          <div class="calc-container mt-8">
+            <div class="calc-header">
+              <h2>Calculate Your Debt Payoff</h2>
+              <p>See your debt-free date</p>
+            </div>
+            <div class="calc-body">
+              <form id="debt-form" onsubmit="return false;">
+                <div class="form-group">
+                  <label class="form-label" for="total-debt">Total Debt Balance</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="total-debt" name="totalDebt" class="form-input" placeholder="15000" min="1" step="100" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="debt-rate">Annual Interest Rate</label>
+                  <div class="input-suffix">
+                    <input type="number" id="debt-rate" name="debtRate" class="form-input" placeholder="18" min="0" max="100" step="0.01" required>
+                    <span class="suffix">%</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="debt-payment">Monthly Payment</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="debt-payment" name="debtPayment" class="form-input" placeholder="500" min="1" step="10" required>
+                  </div>
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calculateDebt()">Calculate Payoff</button>
+                  <button type="button" class="btn btn-reset" onclick="resetDebt()">Reset</button>
+                </div>
+              </form>
+
+              <div id="debt-results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">Months to Payoff</div>
+                  <div class="result-value" id="result-debt-months"></div>
+                </div>
+                <div class="result-grid result-grid-3">
+                  <div class="result-item">
+                    <div class="result-label">Total Interest Paid</div>
+                    <div class="result-value" id="result-debt-interest"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Total Paid</div>
+                    <div class="result-value" id="result-debt-total"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Payoff Date</div>
+                    <div class="result-value" id="result-payoff-date"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <section class="content-section">
+            <h2>Debt Payoff Formula</h2>
+            <p>The number of months to pay off a debt is calculated using the following formula:</p>
+            <div class="formula-box">
+              <div class="formula-label">Debt Payoff Formula</div>
+              n = -ln(1 - (B x r / P)) / ln(1 + r)
+            </div>
+            <p>Where <strong>n</strong> is the number of months, <strong>B</strong> is the current balance, <strong>r</strong> is the monthly interest rate (annual rate / 12), and <strong>P</strong> is the monthly payment. This formula requires that P is greater than B x r (the monthly interest charge).</p>
+          </section>
+
+          <section class="content-section">
+            <h2>How to Use This Calculator</h2>
+            <ol>
+              <li><strong>Enter your total debt balance</strong> - the current amount you owe.</li>
+              <li><strong>Enter the annual interest rate</strong> - the APR on your debt.</li>
+              <li><strong>Enter your monthly payment</strong> - the amount you pay each month.</li>
+              <li><strong>Click "Calculate Payoff"</strong> to see your payoff timeline, total interest, and debt-free date.</li>
+            </ol>
+          </section>
+
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>Suppose you have $15,000 in debt at 18% APR and pay $500 per month. You would be debt-free in approximately 39 months (about 3 years and 3 months), paying $4,311 in total interest for a total outlay of $19,311.</p>
+          </section>
+
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                How is the debt payoff time calculated?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>The payoff time uses the formula n = -ln(1 - (B x r / P)) / ln(1 + r), where B is the balance, r is the monthly interest rate, and P is the monthly payment. Your payment must exceed the monthly interest charge for the debt to be payable.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What happens if my payment only covers the interest?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>If your monthly payment equals or is less than the monthly interest charge, you will never pay off the debt. The balance will stay the same or grow. You need to pay more than the interest portion to reduce the principal.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Should I use the debt avalanche or snowball method?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>The avalanche method (paying highest-interest debt first) saves the most money on interest. The snowball method (paying smallest balance first) provides psychological wins. Both work - choose the approach that keeps you motivated.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                How much extra should I pay to become debt-free faster?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Even an extra $50-100 per month can dramatically reduce your payoff time and total interest. Use this calculator to compare different payment amounts and see how much time and money you save with higher payments.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Does this calculator work for all types of debt?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>This calculator works for any fixed-rate debt with regular monthly payments, including personal loans, auto loans, student loans, and credit cards. It assumes a constant interest rate and consistent monthly payments.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/finance-calculators/credit-card-payoff-calculator/" class="card card-link">
+                <h3>Credit Card Payoff Calculator</h3>
+                <p>Plan your credit card payoff strategy.</p>
+              </a>
+              <a href="/finance-calculators/loan-calculator/" class="card card-link">
+                <h3>Loan Calculator</h3>
+                <p>Calculate monthly payments for any fixed-rate loan.</p>
+              </a>
+              <a href="/finance-calculators/savings-calculator/" class="card card-link">
+                <h3>Savings Goal Calculator</h3>
+                <p>Start saving once your debt is under control.</p>
+              </a>
+              <a href="/finance-calculators/interest-calculator/" class="card card-link">
+                <h3>Simple Interest Calculator</h3>
+                <p>Understand how interest works on your balances.</p>
+              </a>
+              <a href="/finance-calculators/compound-interest-calculator/" class="card card-link">
+                <h3>Compound Interest Calculator</h3>
+                <p>See the power of compound growth on investments.</p>
+              </a>
+            </div>
+          </section>
+
+          <div class="disclaimer">
+            <strong>Disclaimer:</strong> This calculator provides estimates for informational purposes only. Actual payoff timelines may vary based on changes in interest rates, fees, payment amounts, and other factors. This is not financial advice. Consult a qualified financial professional for personalized debt management guidance.
+          </div>
+
+          <div class="ad-slot ad-slot-leaderboard"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Real Estate</h4>
+          <a href="/real-estate-calculators/">All Real Estate Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Finance</h4>
+          <a href="/finance-calculators/">All Finance Calculators</a>
+          <a href="/finance-calculators/loan-calculator/">Loan Calculator</a>
+          <a href="/finance-calculators/compound-interest-calculator/">Compound Interest</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateDebt() {
+      if (!CalcWise.validateForm('debt-form')) return;
+
+      const balance = CalcWise.parseNumber(document.getElementById('total-debt').value);
+      const rate = parseFloat(document.getElementById('debt-rate').value);
+      const payment = CalcWise.parseNumber(document.getElementById('debt-payment').value);
+
+      const result = CalcWise.debtPayoff(balance, rate, payment);
+
+      if (result.months === Infinity) {
+        CalcWise.setText('result-debt-months', 'Never');
+        CalcWise.setText('result-debt-interest', 'N/A');
+        CalcWise.setText('result-debt-total', 'N/A');
+        CalcWise.setText('result-payoff-date', 'Payment too low');
+        CalcWise.showResults('debt-results');
+        return;
+      }
+
+      const totalPaid = (payment * result.months);
+      const payoffDate = new Date();
+      payoffDate.setMonth(payoffDate.getMonth() + result.months);
+      const dateStr = payoffDate.toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
+
+      const yearsDisplay = result.months >= 12 ? Math.floor(result.months / 12) + 'y ' + (result.months % 12) + 'm' : result.months + ' mo';
+
+      CalcWise.setText('result-debt-months', yearsDisplay);
+      CalcWise.setText('result-debt-interest', CalcWise.formatCurrency(result.totalInterest));
+      CalcWise.setText('result-debt-total', CalcWise.formatCurrency(totalPaid));
+      CalcWise.setText('result-payoff-date', dateStr);
+      CalcWise.showResults('debt-results');
+    }
+
+    function resetDebt() {
+      document.getElementById('debt-form').reset();
+      CalcWise.hideResults('debt-results');
+    }
+  </script>
+</body>
+</html>

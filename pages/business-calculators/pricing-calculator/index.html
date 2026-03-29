@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Pricing Calculator | CalcWise</title>
+  <meta name="description" content="Calculate the optimal selling price for your products. Enter cost of goods, desired margin, and overhead to get recommended pricing, markup percentage, and profit per unit.">
+  <link rel="canonical" href="https://calcwise.com/pages/business-calculators/pricing-calculator/">
+  <meta property="og:title" content="Product Pricing Calculator | CalcWise">
+  <meta property="og:description" content="Calculate the optimal selling price for your products based on costs, margins, and overhead.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcwise.com/pages/business-calculators/pricing-calculator/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Product Pricing Calculator | CalcWise">
+  <meta name="twitter:description" content="Calculate the optimal selling price for your products based on costs, margins, and overhead.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.com/"},
+      {"@type": "ListItem", "position": 2, "name": "Business Calculators", "item": "https://calcwise.com/pages/business-calculators/"},
+      {"@type": "ListItem", "position": 3, "name": "Pricing Calculator"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the difference between margin and markup?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Margin is the percentage of the selling price that is profit (profit / price x 100). Markup is the percentage added to cost (profit / cost x 100). A 50% markup results in a 33.3% margin."}
+      },
+      {
+        "@type": "Question",
+        "name": "How do I calculate the selling price from a desired margin?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Divide your total cost by (1 - desired margin as a decimal). For example, if your cost is $60 and you want a 40% margin: $60 / (1 - 0.40) = $100 selling price."}
+      },
+      {
+        "@type": "Question",
+        "name": "What is overhead allocation?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Overhead allocation distributes indirect business costs (rent, utilities, admin) to each product unit. It ensures your pricing covers not just direct costs but also the cost of running your business."}
+      },
+      {
+        "@type": "Question",
+        "name": "How should I factor in competitor pricing?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Use competitor pricing as a reference point, not a ceiling. If your calculated price is higher, identify what value justifies the premium. If it's lower, you may have room to increase margins."}
+      },
+      {
+        "@type": "Question",
+        "name": "What is a good profit margin for my industry?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Profit margins vary widely by industry. Retail typically sees 2-5%, software 70-90%, consulting 15-25%, and manufacturing 5-15%. Research your specific industry benchmarks."}
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="logo">
+        <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav">
+        <a href="/">Home</a>
+        <a href="/pages/business-calculators/" aria-current="page">Business</a>
+        <a href="/pages/financial-calculators/">Financial</a>
+        <a href="/pages/tax-calculators/">Tax</a>
+        <a href="/pages/investment-calculators/">Investment</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav">
+      <a href="/">Home</a>
+      <a href="/pages/business-calculators/">Business Calculators</a>
+      <a href="/pages/financial-calculators/">Financial Calculators</a>
+      <a href="/pages/tax-calculators/">Tax Calculators</a>
+      <a href="/pages/investment-calculators/">Investment Calculators</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/pages/business-calculators/">Business Calculators</a></li>
+          <li><span aria-current="page">Pricing Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="calc-page-layout">
+          <div class="calc-page-main">
+            <h1>Product Pricing Calculator</h1>
+            <p class="subtitle" style="font-size:var(--text-lg);color:var(--color-gray-600);margin-bottom:var(--space-8);line-height:var(--leading-relaxed);">Set the right price for your products by calculating recommended selling price from cost of goods, desired profit margin, and overhead costs. Compare against competitor pricing.</p>
+
+            <div class="calc-container">
+              <div class="calc-header">
+                <h2>Pricing Calculator</h2>
+                <p>Determine your optimal selling price</p>
+              </div>
+              <div class="calc-body">
+                <form id="pricing-form" onsubmit="return false;">
+                  <div class="form-group">
+                    <label class="form-label" for="cost-of-goods">Cost of Goods (per unit)</label>
+                    <div class="input-prefix">
+                      <span class="prefix">$</span>
+                      <input type="number" id="cost-of-goods" name="costOfGoods" class="form-input" placeholder="25.00" min="0" step="0.01" required>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="desired-margin">Desired Profit Margin <span class="form-hint">(%)</span></label>
+                    <div class="input-suffix">
+                      <input type="number" id="desired-margin" name="desiredMargin" class="form-input" placeholder="40" min="0" max="99.99" step="0.01" required>
+                      <span class="suffix">%</span>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="overhead">Overhead Allocation (per unit) <span class="form-hint">(optional)</span></label>
+                    <div class="input-prefix">
+                      <span class="prefix">$</span>
+                      <input type="number" id="overhead" name="overhead" class="form-input" placeholder="5.00" min="0" step="0.01">
+                    </div>
+                    <span class="form-hint" style="display:block;margin-top:var(--space-1);">Rent, utilities, admin costs allocated per unit</span>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="competitor-price">Competitor Price <span class="form-hint">(reference, optional)</span></label>
+                    <div class="input-prefix">
+                      <span class="prefix">$</span>
+                      <input type="number" id="competitor-price" name="competitorPrice" class="form-input" placeholder="59.99" min="0" step="0.01">
+                    </div>
+                  </div>
+
+                  <div class="calc-actions">
+                    <button type="button" class="btn btn-calculate btn-full" onclick="calculatePricing()">Calculate Price</button>
+                    <button type="button" class="btn btn-reset" onclick="resetForm()">Reset</button>
+                  </div>
+                </form>
+
+                <div id="results" class="calc-results hidden">
+                  <div class="result-primary">
+                    <div class="result-label">Recommended Selling Price</div>
+                    <div class="result-value" id="result-price">$0.00</div>
+                  </div>
+                  <div class="result-grid result-grid-3">
+                    <div class="result-item">
+                      <div class="result-label">Markup %</div>
+                      <div class="result-value" id="result-markup">0%</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Profit Per Unit</div>
+                      <div class="result-value" id="result-profit">$0.00</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Total Cost Per Unit</div>
+                      <div class="result-value" id="result-total-cost">$0.00</div>
+                    </div>
+                  </div>
+                  <div id="competitor-comparison" class="hidden" style="margin-top:var(--space-4);padding:var(--space-4);border-radius:var(--radius-md);text-align:center;">
+                    <p id="competitor-text" style="font-size:var(--text-sm);font-weight:var(--font-semibold);"></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="ad-slot ad-slot-leaderboard"></div>
+
+            <section class="content-section">
+              <h2>Pricing Formulas</h2>
+              <div class="formula-box">
+                <div class="formula-label">Selling Price (from margin)</div>
+                Selling Price = Total Cost / (1 - Desired Margin / 100)
+              </div>
+              <div class="formula-box">
+                <div class="formula-label">Markup Percentage</div>
+                Markup % = ((Selling Price - Total Cost) / Total Cost) x 100
+              </div>
+              <div class="formula-box">
+                <div class="formula-label">Profit Per Unit</div>
+                Profit = Selling Price - Total Cost
+              </div>
+            </section>
+
+            <section class="content-section">
+              <h2>How to Use This Calculator</h2>
+              <ol>
+                <li>Enter the <strong>cost of goods</strong> per unit (materials, labor, manufacturing).</li>
+                <li>Set your <strong>desired profit margin</strong> as a percentage of the selling price.</li>
+                <li>Optionally add <strong>overhead allocation</strong> per unit to cover indirect costs.</li>
+                <li>Optionally enter a <strong>competitor price</strong> to see how your pricing compares.</li>
+                <li>Click <strong>Calculate Price</strong> to see the recommended selling price, markup, and profit.</li>
+              </ol>
+            </section>
+
+            <section class="content-section">
+              <h2>Example Scenario</h2>
+              <p>A candle maker has these costs per unit:</p>
+              <ul>
+                <li>Cost of Goods: <strong>$8.00</strong> (wax, wick, fragrance, jar)</li>
+                <li>Overhead: <strong>$2.00</strong> (portion of rent, utilities, packaging)</li>
+                <li>Desired Margin: <strong>60%</strong></li>
+              </ul>
+              <p>Calculation:</p>
+              <ul>
+                <li>Total Cost: $8.00 + $2.00 = <strong>$10.00</strong></li>
+                <li>Selling Price: $10.00 / (1 - 0.60) = <strong>$25.00</strong></li>
+                <li>Profit Per Unit: $25.00 - $10.00 = <strong>$15.00</strong></li>
+                <li>Markup: ($25.00 - $10.00) / $10.00 x 100 = <strong>150%</strong></li>
+              </ul>
+            </section>
+
+            <section class="faq-section">
+              <h2>Frequently Asked Questions</h2>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  What is the difference between margin and markup?
+                  <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                </button>
+                <div class="faq-answer">
+                  <p>Margin is the percentage of the selling price that is profit (profit / price x 100). Markup is the percentage added to cost (profit / cost x 100). A 50% markup results in a 33.3% margin.</p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  How do I calculate the selling price from a desired margin?
+                  <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                </button>
+                <div class="faq-answer">
+                  <p>Divide your total cost by (1 - desired margin as a decimal). For example, if your cost is $60 and you want a 40% margin: $60 / (1 - 0.40) = $100 selling price.</p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  What is overhead allocation?
+                  <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                </button>
+                <div class="faq-answer">
+                  <p>Overhead allocation distributes indirect business costs (rent, utilities, admin) to each product unit. It ensures your pricing covers not just direct costs but also the cost of running your business.</p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  How should I factor in competitor pricing?
+                  <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                </button>
+                <div class="faq-answer">
+                  <p>Use competitor pricing as a reference point, not a ceiling. If your calculated price is higher, identify what value justifies the premium. If lower, you may have room to increase margins.</p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  What is a good profit margin for my industry?
+                  <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                </button>
+                <div class="faq-answer">
+                  <p>Profit margins vary widely by industry. Retail typically sees 2-5%, software 70-90%, consulting 15-25%, and manufacturing 5-15%. Research your specific industry benchmarks.</p>
+                </div>
+              </div>
+            </section>
+
+            <section class="related-calculators">
+              <h2>Related Calculators</h2>
+              <div class="grid grid-3">
+                <a href="/pages/business-calculators/commission-calculator/" class="card card-link">
+                  <h3>Commission Calculator</h3>
+                  <p>Calculate sales commissions with flat or tiered rate structures.</p>
+                </a>
+                <a href="/pages/business-calculators/revenue-growth-calculator/" class="card card-link">
+                  <h3>Revenue Growth Calculator</h3>
+                  <p>Track and project your revenue growth rate over time.</p>
+                </a>
+                <a href="/pages/business-calculators/cash-runway-calculator/" class="card card-link">
+                  <h3>Cash Runway Calculator</h3>
+                  <p>Find out how long your cash will last at current burn rates.</p>
+                </a>
+                <a href="/pages/business-calculators/freelance-rate-calculator/" class="card card-link">
+                  <h3>Freelance Rate Calculator</h3>
+                  <p>Determine the right hourly rate for your freelance business.</p>
+                </a>
+                <a href="/pages/business-calculators/sales-tax-calculator/" class="card card-link">
+                  <h3>Sales Tax Calculator</h3>
+                  <p>Calculate sales tax on any purchase amount.</p>
+                </a>
+              </div>
+            </section>
+
+            <div class="disclaimer">
+              <strong>Disclaimer:</strong> This calculator is for informational and educational purposes only. Pricing decisions should also consider market demand, brand positioning, customer willingness to pay, and competitive dynamics beyond what this tool covers.
+            </div>
+          </div>
+
+          <aside class="calc-page-sidebar">
+            <div class="ad-slot ad-slot-rectangle"></div>
+            <div class="sidebar-card">
+              <h3>Business Calculators</h3>
+              <a href="/pages/business-calculators/commission-calculator/">Commission Calculator</a>
+              <a href="/pages/business-calculators/sales-tax-calculator/">Sales Tax Calculator</a>
+              <a href="/pages/business-calculators/freelance-rate-calculator/">Freelance Rate Calculator</a>
+              <a href="/pages/business-calculators/revenue-growth-calculator/">Revenue Growth Calculator</a>
+              <a href="/pages/business-calculators/cash-runway-calculator/">Cash Runway Calculator</a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free online calculators for business, finance, tax, and investment decisions.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Calculators</h4>
+          <a href="/pages/business-calculators/">Business</a>
+          <a href="/pages/financial-calculators/">Financial</a>
+          <a href="/pages/tax-calculators/">Tax</a>
+          <a href="/pages/investment-calculators/">Investment</a>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <a href="/about/">About</a>
+          <a href="/blog/">Blog</a>
+          <a href="/contact/">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="/privacy/">Privacy Policy</a>
+          <a href="/terms/">Terms of Service</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/privacy/">Privacy</a>
+          <a href="/terms/">Terms</a>
+          <a href="/contact/">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculatePricing() {
+      const costOfGoods = CalcWise.parseNumber(document.getElementById('cost-of-goods').value);
+      const desiredMargin = CalcWise.parseNumber(document.getElementById('desired-margin').value);
+      const overhead = CalcWise.parseNumber(document.getElementById('overhead').value);
+      const competitorPrice = CalcWise.parseNumber(document.getElementById('competitor-price').value);
+
+      if (costOfGoods <= 0) {
+        alert('Please enter a valid cost of goods.');
+        return;
+      }
+      if (desiredMargin <= 0 || desiredMargin >= 100) {
+        alert('Please enter a margin between 0% and 100%.');
+        return;
+      }
+
+      const totalCost = costOfGoods + overhead;
+      const sellingPrice = totalCost / (1 - desiredMargin / 100);
+      const profit = sellingPrice - totalCost;
+      const markupPct = CalcWise.markup(totalCost, sellingPrice);
+
+      CalcWise.setText('result-price', CalcWise.formatCurrency(sellingPrice));
+      CalcWise.setText('result-markup', CalcWise.formatPercent(markupPct));
+      CalcWise.setText('result-profit', CalcWise.formatCurrency(profit));
+      CalcWise.setText('result-total-cost', CalcWise.formatCurrency(totalCost));
+
+      // Competitor comparison
+      const compSection = document.getElementById('competitor-comparison');
+      if (competitorPrice > 0) {
+        const diff = sellingPrice - competitorPrice;
+        const diffPct = ((diff / competitorPrice) * 100).toFixed(1);
+        const compText = document.getElementById('competitor-text');
+        if (diff > 0) {
+          compSection.style.background = 'var(--color-warning-light)';
+          compText.textContent = 'Your price is $' + Math.abs(diff).toFixed(2) + ' (' + Math.abs(diffPct) + '%) above competitor price of ' + CalcWise.formatCurrency(competitorPrice);
+          compText.style.color = 'var(--color-warning)';
+        } else if (diff < 0) {
+          compSection.style.background = 'var(--color-success-light)';
+          compText.textContent = 'Your price is $' + Math.abs(diff).toFixed(2) + ' (' + Math.abs(diffPct) + '%) below competitor price of ' + CalcWise.formatCurrency(competitorPrice);
+          compText.style.color = 'var(--color-success)';
+        } else {
+          compSection.style.background = 'var(--color-info-light)';
+          compText.textContent = 'Your price matches the competitor price of ' + CalcWise.formatCurrency(competitorPrice);
+          compText.style.color = 'var(--color-info)';
+        }
+        compSection.classList.remove('hidden');
+      } else {
+        compSection.classList.add('hidden');
+      }
+
+      CalcWise.showResults('results');
+    }
+
+    function resetForm() {
+      document.getElementById('pricing-form').reset();
+      document.getElementById('competitor-comparison').classList.add('hidden');
+      CalcWise.hideResults('results');
+    }
+  </script>
+</body>
+</html>

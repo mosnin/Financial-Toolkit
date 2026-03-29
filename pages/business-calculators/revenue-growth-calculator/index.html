@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Revenue Growth Rate Calculator | CalcWise</title>
+  <meta name="description" content="Calculate your revenue growth rate over any time period. Get total growth, monthly growth rate, annualized growth, and projected next-period revenue.">
+  <link rel="canonical" href="https://calcwise.com/pages/business-calculators/revenue-growth-calculator/">
+  <meta property="og:title" content="Revenue Growth Rate Calculator | CalcWise">
+  <meta property="og:description" content="Calculate your revenue growth rate over any time period. Get total, monthly, and annualized growth rates.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcwise.com/pages/business-calculators/revenue-growth-calculator/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Revenue Growth Rate Calculator | CalcWise">
+  <meta name="twitter:description" content="Calculate your revenue growth rate over any time period with total, monthly, and annualized rates.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.com/"},
+      {"@type": "ListItem", "position": 2, "name": "Business Calculators", "item": "https://calcwise.com/pages/business-calculators/"},
+      {"@type": "ListItem", "position": 3, "name": "Revenue Growth Calculator"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do you calculate revenue growth rate?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Revenue growth rate is calculated as ((Ending Revenue - Starting Revenue) / Starting Revenue) x 100. For monthly compounding, use the CAGR formula with months."}
+      },
+      {
+        "@type": "Question",
+        "name": "What is a good revenue growth rate?",
+        "acceptedAnswer": {"@type": "Answer", "text": "A good revenue growth rate depends on company stage and industry. Early-stage startups may target 15-20% month-over-month, while established companies consider 10-20% year-over-year strong."}
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between total growth and annualized growth?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Total growth is the simple percentage change over the entire period. Annualized growth normalizes it to a yearly rate using compound growth, making it useful for comparing different time periods."}
+      },
+      {
+        "@type": "Question",
+        "name": "How is monthly growth rate calculated?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Monthly growth rate uses the compound growth formula: ((Ending / Starting) ^ (1 / months) - 1) x 100. This gives the average compounded monthly rate, not a simple average."}
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="logo">
+        <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav">
+        <a href="/">Home</a>
+        <a href="/pages/business-calculators/" aria-current="page">Business</a>
+        <a href="/pages/financial-calculators/">Financial</a>
+        <a href="/pages/tax-calculators/">Tax</a>
+        <a href="/pages/investment-calculators/">Investment</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav">
+      <a href="/">Home</a>
+      <a href="/pages/business-calculators/">Business Calculators</a>
+      <a href="/pages/financial-calculators/">Financial Calculators</a>
+      <a href="/pages/tax-calculators/">Tax Calculators</a>
+      <a href="/pages/investment-calculators/">Investment Calculators</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/pages/business-calculators/">Business Calculators</a></li>
+          <li><span aria-current="page">Revenue Growth Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="calc-page-layout">
+          <div class="calc-page-main">
+            <h1>Revenue Growth Rate Calculator</h1>
+            <p class="subtitle" style="font-size:var(--text-lg);color:var(--color-gray-600);margin-bottom:var(--space-8);line-height:var(--leading-relaxed);">Measure your business growth by calculating total, monthly, and annualized revenue growth rates. Project your next period revenue based on current growth trends.</p>
+
+            <div class="calc-container">
+              <div class="calc-header">
+                <h2>Revenue Growth Calculator</h2>
+                <p>Analyze your revenue growth over time</p>
+              </div>
+              <div class="calc-body">
+                <form id="growth-form" onsubmit="return false;">
+                  <div class="form-group">
+                    <label class="form-label" for="starting-revenue">Starting Revenue</label>
+                    <div class="input-prefix">
+                      <span class="prefix">$</span>
+                      <input type="number" id="starting-revenue" name="startingRevenue" class="form-input" placeholder="50000" min="0.01" step="0.01" required>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="ending-revenue">Ending Revenue</label>
+                    <div class="input-prefix">
+                      <span class="prefix">$</span>
+                      <input type="number" id="ending-revenue" name="endingRevenue" class="form-input" placeholder="75000" min="0" step="0.01" required>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="time-period">Time Period <span class="form-hint">(months)</span></label>
+                    <div class="input-suffix">
+                      <input type="number" id="time-period" name="timePeriod" class="form-input" placeholder="12" min="1" max="600" step="1" required>
+                      <span class="suffix">mo</span>
+                    </div>
+                  </div>
+
+                  <div class="calc-actions">
+                    <button type="button" class="btn btn-calculate btn-full" onclick="calculateGrowth()">Calculate Growth</button>
+                    <button type="button" class="btn btn-reset" onclick="resetForm()">Reset</button>
+                  </div>
+                </form>
+
+                <div id="results" class="calc-results hidden">
+                  <div class="result-primary">
+                    <div class="result-label">Total Growth</div>
+                    <div class="result-value" id="result-total-growth">0%</div>
+                  </div>
+                  <div class="result-grid result-grid-3">
+                    <div class="result-item">
+                      <div class="result-label">Monthly Growth Rate</div>
+                      <div class="result-value" id="result-monthly-growth">0%</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Annualized Growth</div>
+                      <div class="result-value" id="result-annual-growth">0%</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Projected Next Period</div>
+                      <div class="result-value" id="result-projected">$0</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="ad-slot ad-slot-leaderboard"></div>
+
+            <section class="content-section">
+              <h2>Revenue Growth Formulas</h2>
+              <div class="formula-box">
+                <div class="formula-label">Total Growth Rate</div>
+                Total Growth = ((Ending Revenue - Starting Revenue) / Starting Revenue) x 100
+              </div>
+              <div class="formula-box">
+                <div class="formula-label">Monthly Growth Rate (Compound)</div>
+                Monthly Rate = ((Ending / Starting) ^ (1 / Months) - 1) x 100
+              </div>
+              <div class="formula-box">
+                <div class="formula-label">Annualized Growth Rate</div>
+                Annual Rate = ((1 + Monthly Rate) ^ 12 - 1) x 100
+              </div>
+              <div class="formula-box">
+                <div class="formula-label">Projected Next Period</div>
+                Projected = Ending Revenue x (1 + Monthly Rate) ^ Months
+              </div>
+            </section>
+
+            <section class="content-section">
+              <h2>How to Use This Calculator</h2>
+              <ol>
+                <li>Enter your <strong>starting revenue</strong> (beginning of the period).</li>
+                <li>Enter your <strong>ending revenue</strong> (end of the period).</li>
+                <li>Specify the <strong>time period</strong> in months between the two revenue figures.</li>
+                <li>Click <strong>Calculate Growth</strong> to see total growth, monthly rate, annualized rate, and a projection for the next equivalent period.</li>
+              </ol>
+            </section>
+
+            <section class="content-section">
+              <h2>Example Scenario</h2>
+              <p>A SaaS startup grew from $50,000 MRR to $120,000 MRR over 18 months.</p>
+              <ul>
+                <li>Total Growth: (($120,000 - $50,000) / $50,000) x 100 = <strong>140%</strong></li>
+                <li>Monthly Growth Rate: ($120,000 / $50,000) ^ (1/18) - 1 = <strong>4.97%</strong></li>
+                <li>Annualized Growth Rate: (1.0497)^12 - 1 = <strong>79.0%</strong></li>
+                <li>Projected Next 18 Months: $120,000 x (1.0497)^18 = <strong>$288,000</strong></li>
+              </ul>
+            </section>
+
+            <section class="faq-section">
+              <h2>Frequently Asked Questions</h2>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  How do you calculate revenue growth rate?
+                  <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                </button>
+                <div class="faq-answer">
+                  <p>Revenue growth rate is calculated as ((Ending Revenue - Starting Revenue) / Starting Revenue) x 100. For compound monthly growth, use the formula: ((Ending / Starting) ^ (1 / months) - 1) x 100.</p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  What is a good revenue growth rate?
+                  <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                </button>
+                <div class="faq-answer">
+                  <p>A good revenue growth rate depends on company stage and industry. Early-stage startups may target 15-20% month-over-month, while established companies consider 10-20% year-over-year strong growth.</p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  What is the difference between total growth and annualized growth?
+                  <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                </button>
+                <div class="faq-answer">
+                  <p>Total growth is the simple percentage change over the entire period. Annualized growth normalizes it to a yearly rate using compound growth, making it useful for comparing different time periods.</p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  How is monthly growth rate calculated?
+                  <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                </button>
+                <div class="faq-answer">
+                  <p>Monthly growth rate uses the compound growth formula: ((Ending / Starting) ^ (1 / months) - 1) x 100. This gives the average compounded monthly rate, not a simple average.</p>
+                </div>
+              </div>
+            </section>
+
+            <section class="related-calculators">
+              <h2>Related Calculators</h2>
+              <div class="grid grid-3">
+                <a href="/pages/business-calculators/cash-runway-calculator/" class="card card-link">
+                  <h3>Cash Runway Calculator</h3>
+                  <p>Calculate how long your cash reserves will last at current rates.</p>
+                </a>
+                <a href="/pages/business-calculators/pricing-calculator/" class="card card-link">
+                  <h3>Pricing Calculator</h3>
+                  <p>Determine optimal product pricing for maximum profitability.</p>
+                </a>
+                <a href="/pages/business-calculators/commission-calculator/" class="card card-link">
+                  <h3>Commission Calculator</h3>
+                  <p>Calculate sales commissions with flat or tiered structures.</p>
+                </a>
+                <a href="/pages/business-calculators/freelance-rate-calculator/" class="card card-link">
+                  <h3>Freelance Rate Calculator</h3>
+                  <p>Find your ideal hourly rate as a freelancer.</p>
+                </a>
+              </div>
+            </section>
+
+            <div class="disclaimer">
+              <strong>Disclaimer:</strong> This calculator is for informational and educational purposes only. Past growth rates do not guarantee future performance. Projections assume constant growth, which rarely occurs in practice. Use results as one input among many for business planning.
+            </div>
+          </div>
+
+          <aside class="calc-page-sidebar">
+            <div class="ad-slot ad-slot-rectangle"></div>
+            <div class="sidebar-card">
+              <h3>Business Calculators</h3>
+              <a href="/pages/business-calculators/commission-calculator/">Commission Calculator</a>
+              <a href="/pages/business-calculators/sales-tax-calculator/">Sales Tax Calculator</a>
+              <a href="/pages/business-calculators/freelance-rate-calculator/">Freelance Rate Calculator</a>
+              <a href="/pages/business-calculators/pricing-calculator/">Pricing Calculator</a>
+              <a href="/pages/business-calculators/cash-runway-calculator/">Cash Runway Calculator</a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free online calculators for business, finance, tax, and investment decisions.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Calculators</h4>
+          <a href="/pages/business-calculators/">Business</a>
+          <a href="/pages/financial-calculators/">Financial</a>
+          <a href="/pages/tax-calculators/">Tax</a>
+          <a href="/pages/investment-calculators/">Investment</a>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <a href="/about/">About</a>
+          <a href="/blog/">Blog</a>
+          <a href="/contact/">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="/privacy/">Privacy Policy</a>
+          <a href="/terms/">Terms of Service</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/privacy/">Privacy</a>
+          <a href="/terms/">Terms</a>
+          <a href="/contact/">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateGrowth() {
+      const startingRevenue = CalcWise.parseNumber(document.getElementById('starting-revenue').value);
+      const endingRevenue = CalcWise.parseNumber(document.getElementById('ending-revenue').value);
+      const months = CalcWise.parseNumber(document.getElementById('time-period').value);
+
+      if (startingRevenue <= 0) {
+        alert('Starting revenue must be greater than zero.');
+        return;
+      }
+      if (endingRevenue < 0) {
+        alert('Please enter a valid ending revenue.');
+        return;
+      }
+      if (months <= 0) {
+        alert('Time period must be at least 1 month.');
+        return;
+      }
+
+      const totalGrowth = ((endingRevenue - startingRevenue) / startingRevenue) * 100;
+      const monthlyGrowthRate = (Math.pow(endingRevenue / startingRevenue, 1 / months) - 1) * 100;
+      const annualGrowthRate = (Math.pow(1 + monthlyGrowthRate / 100, 12) - 1) * 100;
+      const projected = endingRevenue * Math.pow(1 + monthlyGrowthRate / 100, months);
+
+      CalcWise.setText('result-total-growth', CalcWise.formatPercent(totalGrowth));
+      CalcWise.setText('result-monthly-growth', CalcWise.formatPercent(monthlyGrowthRate));
+      CalcWise.setText('result-annual-growth', CalcWise.formatPercent(annualGrowthRate));
+      CalcWise.setText('result-projected', CalcWise.formatCurrency(projected, 0));
+      CalcWise.showResults('results');
+    }
+
+    function resetForm() {
+      document.getElementById('growth-form').reset();
+      CalcWise.hideResults('results');
+    }
+  </script>
+</body>
+</html>

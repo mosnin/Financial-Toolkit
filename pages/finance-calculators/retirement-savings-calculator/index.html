@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Retirement Savings Calculator - CalcWise</title>
+  <meta name="description" content="Project your retirement savings with compound interest. Calculate how much you will have at retirement, adjusted for inflation, with monthly income estimates.">
+  <link rel="canonical" href="https://calcwise.com/pages/finance-calculators/retirement-savings-calculator/">
+  <meta property="og:title" content="Retirement Savings Calculator - CalcWise">
+  <meta property="og:description" content="Project your retirement savings with compound interest. See your inflation-adjusted value and monthly retirement income estimate.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcwise.com/pages/finance-calculators/retirement-savings-calculator/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Retirement Savings Calculator - CalcWise">
+  <meta name="twitter:description" content="Project your retirement savings with compound interest. See your inflation-adjusted value and monthly retirement income estimate.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.com/"},
+      {"@type": "ListItem", "position": 2, "name": "Finance Calculators", "item": "https://calcwise.com/pages/finance-calculators/"},
+      {"@type": "ListItem", "position": 3, "name": "Retirement Savings Calculator"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How much do I need to retire?",
+        "acceptedAnswer": {"@type": "Answer", "text": "A common rule of thumb is to save 25 times your annual expenses (the 4% rule). For example, if you need $50,000 per year in retirement, aim for $1.25 million. However, the right amount depends on your lifestyle, healthcare needs, and other income sources like Social Security."}
+      },
+      {
+        "@type": "Question",
+        "name": "What annual return should I assume?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Historically, a diversified stock portfolio has returned about 7-10% per year before inflation. A conservative estimate of 6-7% is often used for long-term projections. Bond-heavy portfolios might assume 4-5%. Use a rate that reflects your investment mix."}
+      },
+      {
+        "@type": "Question",
+        "name": "Why does inflation matter for retirement planning?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Inflation reduces the purchasing power of your money over time. A dollar today buys more than a dollar will in 30 years. Adjusting for inflation gives you a realistic picture of what your savings will actually be worth when you retire."}
+      },
+      {
+        "@type": "Question",
+        "name": "When should I start saving for retirement?",
+        "acceptedAnswer": {"@type": "Answer", "text": "The sooner the better. Starting early gives your money more time to compound. Even small contributions in your 20s can grow significantly by retirement age. Delaying by just 10 years can cut your final savings in half due to the power of compound interest."}
+      },
+      {
+        "@type": "Question",
+        "name": "What is the 4% rule?",
+        "acceptedAnswer": {"@type": "Answer", "text": "The 4% rule suggests you can withdraw 4% of your retirement savings each year without running out of money over a 30-year retirement. For example, with $1 million saved, you could withdraw $40,000 per year. This rule is a guideline and may need adjustment based on market conditions."}
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="logo">
+        <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav">
+        <a href="/">Home</a>
+        <a href="/pages/finance-calculators/" aria-current="page">Finance</a>
+        <a href="/pages/business-calculators/">Business</a>
+        <a href="/pages/investment-calculators/">Investment</a>
+        <a href="/pages/tax-calculators/">Tax</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav">
+      <a href="/">Home</a>
+      <a href="/pages/finance-calculators/">Finance Calculators</a>
+      <a href="/pages/business-calculators/">Business Calculators</a>
+      <a href="/pages/investment-calculators/">Investment Calculators</a>
+      <a href="/pages/tax-calculators/">Tax Calculators</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <!-- Breadcrumbs -->
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li><a href="/pages/finance-calculators/">Finance Calculators</a></li>
+        <li><span aria-current="page">Retirement Savings Calculator</span></li>
+      </ol>
+    </nav>
+
+    <div class="page-content">
+      <div class="article-content">
+        <h1>Retirement Savings Calculator</h1>
+        <p>Plan for a secure retirement by projecting how your savings will grow over time. This calculator accounts for compound interest, monthly contributions, and inflation to give you a realistic picture of your future financial position.</p>
+
+        <!-- Ad Slot -->
+        <div class="ad-slot ad-slot-leaderboard"></div>
+
+        <!-- Calculator -->
+        <div class="calc-container">
+          <div class="calc-header">
+            <h2>Project Your Retirement Savings</h2>
+            <p>See how your savings will grow with compound interest</p>
+          </div>
+          <div class="calc-body">
+            <form id="ret-form">
+              <div class="calc-grid calc-grid-2col">
+                <div class="form-group">
+                  <label class="form-label" for="currentAge">Current Age</label>
+                  <input type="number" id="currentAge" name="currentAge" class="form-input" placeholder="30" min="18" max="80" step="1" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="retirementAge">Retirement Age</label>
+                  <input type="number" id="retirementAge" name="retirementAge" class="form-input" placeholder="65" min="30" max="90" step="1" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="currentSavings">Current Retirement Savings</label>
+                <div class="input-prefix">
+                  <span class="prefix">$</span>
+                  <input type="number" id="currentSavings" name="currentSavings" class="form-input" placeholder="50000" min="0" step="1000" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="monthlyContrib">Monthly Contribution</label>
+                <div class="input-prefix">
+                  <span class="prefix">$</span>
+                  <input type="number" id="monthlyContrib" name="monthlyContrib" class="form-input" placeholder="500" min="0" step="50" required>
+                </div>
+              </div>
+              <div class="calc-grid calc-grid-2col">
+                <div class="form-group">
+                  <label class="form-label" for="annualReturn">Annual Return <span class="form-hint">(%)</span></label>
+                  <div class="input-suffix">
+                    <input type="number" id="annualReturn" name="annualReturn" class="form-input" placeholder="7" min="0" max="20" step="0.1" required>
+                    <span class="suffix">%</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="inflationRate">Inflation Rate <span class="form-hint">(%)</span></label>
+                  <div class="input-suffix">
+                    <input type="number" id="inflationRate" name="inflationRate" class="form-input" placeholder="3" min="0" max="15" step="0.1" required>
+                    <span class="suffix">%</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="calc-actions">
+                <button type="button" class="btn btn-calculate" onclick="calculateRetirement()">Calculate</button>
+                <button type="button" class="btn btn-reset" onclick="resetRet()">Reset</button>
+              </div>
+            </form>
+
+            <!-- Results -->
+            <div id="results" class="calc-results hidden">
+              <div class="result-primary">
+                <div class="result-label">Projected Savings at Retirement</div>
+                <div class="result-value" id="projectedResult">$0</div>
+              </div>
+              <div class="result-grid result-grid-3">
+                <div class="result-item">
+                  <div class="result-label">Inflation-Adjusted Value</div>
+                  <div class="result-value" id="adjustedResult">$0</div>
+                </div>
+                <div class="result-item">
+                  <div class="result-label">Total Contributions</div>
+                  <div class="result-value" id="contribResult">$0</div>
+                </div>
+                <div class="result-item">
+                  <div class="result-label">Interest Earned</div>
+                  <div class="result-value" id="interestResult" style="color: var(--color-success);">$0</div>
+                </div>
+              </div>
+              <div class="result-grid" style="margin-top: var(--space-4);">
+                <div class="result-item">
+                  <div class="result-label">Monthly Retirement Income (4% Rule)</div>
+                  <div class="result-value" id="monthlyIncomeResult">$0</div>
+                </div>
+                <div class="result-item">
+                  <div class="result-label">Inflation-Adjusted Monthly Income</div>
+                  <div class="result-value" id="adjMonthlyIncomeResult">$0</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Formula Section -->
+        <section class="content-section">
+          <h2>Retirement Savings Formula</h2>
+          <div class="formula-box">
+            <div class="formula-label">Compound Interest with Contributions</div>
+            FV = PV x (1 + r/n)^(n*t) + PMT x [((1 + r/n)^(n*t) - 1) / (r/n)]<br><br>
+            Where:<br>
+            FV = Future Value &nbsp;|&nbsp; PV = Present Value (current savings)<br>
+            r = Annual return rate &nbsp;|&nbsp; n = Compounds per year (12)<br>
+            t = Years until retirement &nbsp;|&nbsp; PMT = Monthly contribution<br><br>
+            Inflation-Adjusted = FV / (1 + inflation)^t<br>
+            Monthly Income (4% rule) = FV x 0.04 / 12
+          </div>
+          <p>This calculator uses the compound interest formula with monthly compounding and regular contributions to project your savings growth. The inflation adjustment shows the purchasing power of your savings in today's dollars.</p>
+        </section>
+
+        <!-- How to Use -->
+        <section class="content-section">
+          <h2>How to Use This Calculator</h2>
+          <ol>
+            <li><strong>Enter your current and retirement ages:</strong> The difference determines how many years your money has to grow.</li>
+            <li><strong>Enter current savings:</strong> Include all retirement accounts (401k, IRA, Roth IRA, etc.).</li>
+            <li><strong>Enter monthly contribution:</strong> How much you contribute to retirement each month, including any employer match.</li>
+            <li><strong>Set return and inflation rates:</strong> Use 7% for a moderate stock portfolio. Historical inflation averages about 3%.</li>
+            <li><strong>Review results:</strong> The projected amount, inflation-adjusted value, and estimated monthly retirement income based on the 4% withdrawal rule.</li>
+          </ol>
+        </section>
+
+        <!-- Example Scenario -->
+        <section class="content-section">
+          <h2>Example Scenario</h2>
+          <p>Maria is 30 years old and plans to retire at 65. She has $50,000 saved and contributes $500/month. Assuming 7% annual returns and 3% inflation:</p>
+          <ul>
+            <li><strong>Years to retirement:</strong> 35 years</li>
+            <li><strong>Projected savings:</strong> Approximately $1,148,000</li>
+            <li><strong>Inflation-adjusted value:</strong> Approximately $408,000 (in today's dollars)</li>
+            <li><strong>Monthly retirement income (4% rule):</strong> Approximately $3,827/month ($1,360 in today's dollars)</li>
+          </ul>
+          <p>This illustrates why starting early and contributing consistently makes such a significant difference.</p>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+          <h2>Frequently Asked Questions</h2>
+          <div class="faq-item">
+            <button class="faq-question">
+              How much do I need to retire?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>A common rule of thumb is to save 25 times your annual expenses (the 4% rule). For example, if you need $50,000 per year, aim for $1.25 million. The right amount depends on your lifestyle, healthcare needs, and other income sources.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              What annual return should I assume?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>Historically, diversified stock portfolios have returned about 7-10% per year before inflation. A conservative estimate of 6-7% is often used for long-term projections. Bond-heavy portfolios might assume 4-5%.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              Why does inflation matter for retirement planning?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>Inflation reduces the purchasing power of your money over time. Adjusting for inflation gives you a realistic picture of what your savings will actually be worth when you retire.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              When should I start saving for retirement?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>The sooner the better. Starting early gives your money more time to compound. Even small contributions in your 20s can grow significantly. Delaying by just 10 years can cut your final savings in half.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              What is the 4% rule?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>The 4% rule suggests you can withdraw 4% of your retirement savings each year without running out over a 30-year retirement. With $1 million saved, you could withdraw $40,000 per year.</p></div>
+          </div>
+        </section>
+
+        <!-- Related Calculators -->
+        <section class="related-calculators">
+          <h2>Related Calculators</h2>
+          <div class="grid grid-3">
+            <a href="/pages/finance-calculators/inflation-calculator/" class="card card-link">
+              <h3>Inflation Calculator</h3>
+              <p>See how inflation affects your purchasing power over time.</p>
+            </a>
+            <a href="/pages/finance-calculators/net-worth-calculator/" class="card card-link">
+              <h3>Net Worth Calculator</h3>
+              <p>Calculate your total net worth from assets and liabilities.</p>
+            </a>
+            <a href="/pages/finance-calculators/emergency-fund-calculator/" class="card card-link">
+              <h3>Emergency Fund Calculator</h3>
+              <p>Find out how much you need in your emergency fund.</p>
+            </a>
+            <a href="/pages/finance-calculators/budget-calculator/" class="card card-link">
+              <h3>50/30/20 Budget Calculator</h3>
+              <p>Plan your monthly budget with the 50/30/20 rule.</p>
+            </a>
+            <a href="/pages/finance-calculators/salary-to-hourly-calculator/" class="card card-link">
+              <h3>Salary to Hourly Calculator</h3>
+              <p>Convert your annual salary to an hourly rate.</p>
+            </a>
+          </div>
+        </section>
+
+        <!-- Disclaimer -->
+        <div class="disclaimer">
+          <strong>Disclaimer:</strong> This calculator is provided for informational and educational purposes only. It does not constitute financial advice. Actual investment returns vary and past performance does not guarantee future results. Consult a qualified financial advisor for personalized retirement planning.
+        </div>
+
+        <!-- Ad Slot -->
+        <div class="ad-slot ad-slot-rectangle"></div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free online financial calculators to help you make smarter money decisions.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Finance</h4>
+          <a href="/pages/finance-calculators/net-worth-calculator/">Net Worth</a>
+          <a href="/pages/finance-calculators/budget-calculator/">Budget (50/30/20)</a>
+          <a href="/pages/finance-calculators/emergency-fund-calculator/">Emergency Fund</a>
+          <a href="/pages/finance-calculators/retirement-savings-calculator/">Retirement Savings</a>
+        </div>
+        <div class="footer-col">
+          <h4>Tools</h4>
+          <a href="/pages/finance-calculators/inflation-calculator/">Inflation</a>
+          <a href="/pages/finance-calculators/salary-to-hourly-calculator/">Salary to Hourly</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about/">About</a>
+          <a href="/contact/">Contact</a>
+          <a href="/privacy/">Privacy Policy</a>
+          <a href="/terms/">Terms of Service</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 CalcWise. All rights reserved.</span>
+        <div class="footer-links">
+          <a href="/privacy/">Privacy</a>
+          <a href="/terms/">Terms</a>
+          <a href="/contact/">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateRetirement() {
+      if (!CalcWise.validateForm('ret-form')) return;
+      const v = CalcWise.getFormValues('ret-form');
+
+      const years = v.retirementAge - v.currentAge;
+      if (years <= 0) {
+        alert('Retirement age must be greater than current age.');
+        return;
+      }
+
+      const result = CalcWise.compoundInterest(v.currentSavings, v.annualReturn, years, 12, v.monthlyContrib);
+      const inflationAdjusted = CalcWise.inflationAdjusted(result.futureValue, v.inflationRate, years);
+      const monthlyIncome = (result.futureValue * 0.04) / 12;
+      const adjMonthlyIncome = (inflationAdjusted * 0.04) / 12;
+
+      CalcWise.setText('projectedResult', CalcWise.formatCurrency(result.futureValue, 0));
+      CalcWise.setText('adjustedResult', CalcWise.formatCurrency(inflationAdjusted, 0));
+      CalcWise.setText('contribResult', CalcWise.formatCurrency(result.totalContributions, 0));
+      CalcWise.setText('interestResult', CalcWise.formatCurrency(result.interestEarned, 0));
+      CalcWise.setText('monthlyIncomeResult', CalcWise.formatCurrency(monthlyIncome, 0));
+      CalcWise.setText('adjMonthlyIncomeResult', CalcWise.formatCurrency(adjMonthlyIncome, 0));
+
+      CalcWise.showResults('results');
+    }
+
+    function resetRet() {
+      document.getElementById('ret-form').reset();
+      CalcWise.hideResults('results');
+    }
+  </script>
+</body>
+</html>

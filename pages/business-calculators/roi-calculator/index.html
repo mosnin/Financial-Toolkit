@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ROI Calculator - Return on Investment | CalcWise</title>
+  <meta name="description" content="Calculate return on investment (ROI), annualized ROI, and net profit. Enter your initial investment and final value to get instant results.">
+  <link rel="canonical" href="https://calcwise.io/business-calculators/roi-calculator/">
+
+  <meta property="og:title" content="ROI Calculator - CalcWise">
+  <meta property="og:description" content="Calculate return on investment (ROI), annualized ROI, and net profit from your investments.">
+  <meta property="og:url" content="https://calcwise.io/business-calculators/roi-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ROI Calculator - CalcWise">
+  <meta name="twitter:description" content="Calculate return on investment (ROI), annualized ROI, and net profit from your investments.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Business Calculators", "item": "https://calcwise.io/business-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "ROI Calculator", "item": "https://calcwise.io/business-calculators/roi-calculator/" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is ROI?",
+        "acceptedAnswer": { "@type": "Answer", "text": "ROI (Return on Investment) measures the gain or loss generated on an investment relative to its cost. It is expressed as a percentage: ROI = (Net Profit / Initial Investment) x 100." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is annualized ROI?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Annualized ROI adjusts the return to reflect a per-year rate, making it easier to compare investments held for different time periods. It uses the formula: ((1 + ROI)^(1/years) - 1) x 100." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is a good ROI?",
+        "acceptedAnswer": { "@type": "Answer", "text": "A good ROI depends on the type of investment and risk involved. The S&P 500 has historically returned about 10% annually. Real estate typically yields 8-12%. Any ROI above the risk-free rate (treasury bonds) and inflation is generally considered acceptable." }
+      },
+      {
+        "@type": "Question",
+        "name": "Does ROI account for risk?",
+        "acceptedAnswer": { "@type": "Answer", "text": "No, ROI is a simple return metric that does not factor in risk, volatility, time value of money, or opportunity cost. Use risk-adjusted metrics like the Sharpe ratio for a more complete analysis." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can ROI be negative?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. A negative ROI means the investment lost money -- the final value is less than the initial investment. For example, investing $10,000 that becomes $8,000 gives an ROI of -20%." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/business-calculators/" aria-current="page">Business</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/business-calculators/" aria-current="page">Business Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container page-content">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/business-calculators/">Business Calculators</a></li>
+          <li><span aria-current="page">ROI Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="calc-page-layout">
+        <div class="calc-page-main">
+          <h1>ROI Calculator</h1>
+          <p class="mt-4 mb-8" style="font-size:var(--text-lg); color:var(--color-gray-600); max-width:700px; line-height:var(--leading-relaxed);">Calculate return on investment, annualized ROI, and net profit for any investment. Enter your initial investment amount, final value, and time period to evaluate investment performance.</p>
+
+          <div class="calc-container">
+            <div class="calc-header">
+              <h2>Calculate Return on Investment</h2>
+              <p>Enter your investment details</p>
+            </div>
+            <div class="calc-body">
+              <form id="roiForm" novalidate>
+                <div class="form-group">
+                  <label class="form-label" for="initialInvestment">Initial Investment</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="initialInvestment" name="initialInvestment" class="form-input" placeholder="10000" min="0" step="0.01" required>
+                  </div>
+                  <span class="form-error">Please enter a valid investment amount.</span>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="finalValue">Final Value <span class="form-hint">Current or exit value</span></label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="finalValue" name="finalValue" class="form-input" placeholder="15000" min="0" step="0.01" required>
+                  </div>
+                  <span class="form-error">Please enter a valid final value.</span>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="timePeriod">Time Period (Years) <span class="form-hint">How long the investment was held</span></label>
+                  <input type="number" id="timePeriod" name="timePeriod" class="form-input" placeholder="3" min="0.1" step="0.1" required>
+                  <span class="form-error">Please enter a valid time period.</span>
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calculateROI()">Calculate ROI</button>
+                  <button type="button" class="btn btn-reset" onclick="resetForm()">Reset</button>
+                </div>
+              </form>
+
+              <div id="results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">Total ROI</div>
+                  <div class="result-value" id="resultROI">0%</div>
+                </div>
+                <div class="result-grid result-grid-3">
+                  <div class="result-item">
+                    <div class="result-label">Annualized ROI</div>
+                    <div class="result-value" id="resultAnnualROI">0%</div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Net Profit</div>
+                    <div class="result-value" id="resultNetProfit">$0</div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Total Return</div>
+                    <div class="result-value" id="resultTotalReturn">$0</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="disclaimer">
+            <strong>Disclaimer:</strong> This calculator provides estimates for educational purposes only. ROI does not account for risk, taxes, inflation, or opportunity cost. Past performance does not guarantee future results. Consult a financial advisor before making investment decisions.
+          </div>
+
+          <div class="ad-slot ad-slot-leaderboard"></div>
+
+          <section class="content-section">
+            <h2>ROI Formulas</h2>
+            <div class="formula-box">
+              <div class="formula-label">ROI (Return on Investment)</div>
+              ROI = ((Final Value - Initial Investment) / Initial Investment) x 100
+            </div>
+            <div class="formula-box">
+              <div class="formula-label">Annualized ROI</div>
+              Annualized ROI = ((Final Value / Initial Investment)^(1/Years) - 1) x 100
+            </div>
+            <div class="formula-box">
+              <div class="formula-label">Net Profit</div>
+              Net Profit = Final Value - Initial Investment
+            </div>
+          </section>
+
+          <section class="content-section">
+            <h2>How to Use This Calculator</h2>
+            <ol>
+              <li><strong>Enter your initial investment</strong> -- the total amount you invested at the start.</li>
+              <li><strong>Enter the final value</strong> -- the current value or the amount you received when you sold.</li>
+              <li><strong>Enter the time period</strong> -- how many years you held the investment (can include decimals, e.g., 2.5 years).</li>
+              <li><strong>Click "Calculate ROI"</strong> to see your total ROI, annualized ROI, and net profit.</li>
+            </ol>
+          </section>
+
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>You invested <strong>$10,000</strong> in a stock portfolio that grew to <strong>$15,000</strong> over <strong>3 years</strong>.</p>
+            <ul>
+              <li><strong>Net Profit:</strong> $15,000 - $10,000 = $5,000</li>
+              <li><strong>ROI:</strong> ($5,000 / $10,000) x 100 = 50%</li>
+              <li><strong>Annualized ROI:</strong> (($15,000 / $10,000)^(1/3) - 1) x 100 = 14.47%</li>
+            </ul>
+            <p>While the total return was 50%, the annualized rate of 14.47% lets you compare this to other investments of different durations on an apples-to-apples basis.</p>
+          </section>
+
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">What is ROI?<svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg></button>
+              <div class="faq-answer"><p>ROI (Return on Investment) measures the gain or loss generated on an investment relative to its cost. It is expressed as a percentage: ROI = (Net Profit / Initial Investment) x 100.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">What is annualized ROI?<svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg></button>
+              <div class="faq-answer"><p>Annualized ROI adjusts the return to reflect a per-year rate, making it easier to compare investments held for different time periods. It uses the formula: ((1 + ROI)^(1/years) - 1) x 100.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">What is a good ROI?<svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg></button>
+              <div class="faq-answer"><p>A good ROI depends on the type of investment and risk involved. The S&P 500 has historically returned about 10% annually. Real estate typically yields 8-12%. Any ROI above the risk-free rate and inflation is generally considered acceptable.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">Does ROI account for risk?<svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg></button>
+              <div class="faq-answer"><p>No, ROI is a simple return metric that does not factor in risk, volatility, time value of money, or opportunity cost. Use risk-adjusted metrics like the Sharpe ratio for a more complete analysis.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">Can ROI be negative?<svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg></button>
+              <div class="faq-answer"><p>Yes. A negative ROI means the investment lost money -- the final value is less than the initial investment. For example, investing $10,000 that becomes $8,000 gives an ROI of -20%.</p></div>
+            </div>
+          </section>
+
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/business-calculators/profit-margin-calculator/" class="card card-link"><h3>Profit Margin Calculator</h3><p>Calculate gross profit and margin from revenue and COGS.</p></a>
+              <a href="/business-calculators/break-even-calculator/" class="card card-link"><h3>Break-Even Calculator</h3><p>Find how many units you need to sell to cover costs.</p></a>
+              <a href="/business-calculators/ltv-calculator/" class="card card-link"><h3>LTV Calculator</h3><p>Estimate customer lifetime value for your business.</p></a>
+              <a href="/business-calculators/burn-rate-calculator/" class="card card-link"><h3>Burn Rate Calculator</h3><p>Calculate your startup burn rate and runway.</p></a>
+            </div>
+          </section>
+        </div>
+
+        <aside class="calc-page-sidebar">
+          <div class="sidebar-card">
+            <h3>Business Calculators</h3>
+            <a href="/business-calculators/profit-margin-calculator/">Profit Margin</a>
+            <a href="/business-calculators/markup-calculator/">Markup</a>
+            <a href="/business-calculators/break-even-calculator/">Break-Even</a>
+            <a href="/business-calculators/roi-calculator/">ROI</a>
+            <a href="/business-calculators/burn-rate-calculator/">Burn Rate</a>
+            <a href="/business-calculators/cac-calculator/">Customer Acquisition Cost</a>
+            <a href="/business-calculators/ltv-calculator/">Customer Lifetime Value</a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col"><h4>Real Estate</h4><a href="/real-estate-calculators/">All Real Estate</a></div>
+        <div class="footer-col"><h4>Finance</h4><a href="/finance-calculators/">All Finance</a></div>
+        <div class="footer-col"><h4>Business</h4><a href="/business-calculators/">All Business</a></div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/about.html">About</a>
+          <a href="/contact.html">Contact</a>
+          <a href="/privacy.html">Privacy</a>
+          <a href="/terms.html">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateROI() {
+      if (!CalcWise.validateForm('roiForm')) return;
+
+      const initial = CalcWise.parseNumber(document.getElementById('initialInvestment').value);
+      const finalVal = CalcWise.parseNumber(document.getElementById('finalValue').value);
+      const years = CalcWise.parseNumber(document.getElementById('timePeriod').value);
+
+      if (initial <= 0) { alert('Initial investment must be greater than zero.'); return; }
+      if (years <= 0) { alert('Time period must be greater than zero.'); return; }
+
+      const netProfit = finalVal - initial;
+      const roiPct = CalcWise.roi(finalVal, initial);
+      const annualizedROI = (Math.pow(finalVal / initial, 1 / years) - 1) * 100;
+
+      CalcWise.setText('resultROI', CalcWise.formatPercent(roiPct));
+      CalcWise.setText('resultAnnualROI', CalcWise.formatPercent(annualizedROI));
+      CalcWise.setText('resultNetProfit', CalcWise.formatCurrency(netProfit));
+      CalcWise.setText('resultTotalReturn', CalcWise.formatCurrency(finalVal));
+      CalcWise.showResults('results');
+    }
+
+    function resetForm() {
+      document.getElementById('roiForm').reset();
+      CalcWise.hideResults('results');
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Freelance Hourly to Annual Income Calculator | CalcWise</title>
+  <meta name="description" content="Convert your freelance hourly rate to projected annual income accounting for non-billable time, vacation weeks, and income variability range.">
+  <link rel="canonical" href="https://calcwise.io/freelancer-calculators/hourly-to-annual-income-calculator/">
+  <meta property="og:title" content="Freelance Hourly to Annual Income Calculator | CalcWise">
+  <meta property="og:description" content="Convert your freelance hourly rate to a realistic projected annual income, including non-billable time and vacation.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcwise.io/freelancer-calculators/hourly-to-annual-income-calculator/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Freelance Hourly to Annual Income Calculator | CalcWise">
+  <meta name="twitter:description" content="Convert your freelance hourly rate to a realistic projected annual income.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/"},
+      {"@type": "ListItem", "position": 2, "name": "Freelancer Calculators", "item": "https://calcwise.io/freelancer-calculators/"},
+      {"@type": "ListItem", "position": 3, "name": "Hourly to Annual Income Calculator"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do I convert a freelance hourly rate to annual income?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Multiply your hourly rate by actual billable hours per week, then by weeks worked per year (total weeks minus vacation weeks). Don't forget to subtract non-billable time — the time spent on admin, marketing, and professional development that doesn't generate revenue."}
+      },
+      {
+        "@type": "Question",
+        "name": "What is a non-billable ratio for freelancers?",
+        "acceptedAnswer": {"@type": "Answer", "text": "The non-billable ratio is the percentage of your total working hours spent on tasks that don't generate direct revenue — such as admin, business development, networking, and professional development. Most freelancers have a 25-40% non-billable ratio."}
+      },
+      {
+        "@type": "Question",
+        "name": "How many weeks per year do freelancers typically work?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Most freelancers target 46-50 working weeks per year after accounting for holidays, vacation, sick days, and professional development time. Using 48 weeks is a conservative, realistic planning assumption."}
+      },
+      {
+        "@type": "Question",
+        "name": "What is the income stability range in freelancing?",
+        "acceptedAnswer": {"@type": "Answer", "text": "The stability range represents the realistic low-to-high income spread based on billable hour variability. Your low end might be 15-20% below average (slow months, gaps between clients), while your high end represents peak utilization months."}
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="logo">
+        <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav">
+        <a href="/">Home</a>
+        <a href="/pages/business-calculators/">Business</a>
+        <a href="/pages/financial-calculators/">Financial</a>
+        <a href="/pages/tax-calculators/">Tax</a>
+        <a href="/pages/freelancer-calculators/" aria-current="page">Freelancer</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav">
+      <a href="/">Home</a>
+      <a href="/pages/business-calculators/">Business Calculators</a>
+      <a href="/pages/financial-calculators/">Financial Calculators</a>
+      <a href="/pages/tax-calculators/">Tax Calculators</a>
+      <a href="/pages/freelancer-calculators/">Freelancer Calculators</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/pages/freelancer-calculators/">Freelancer Calculators</a></li>
+          <li><span aria-current="page">Hourly to Annual Income Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="calc-page-layout">
+          <div class="calc-page-main">
+            <h1>Freelance Hourly to Annual Income Calculator</h1>
+            <p class="subtitle" style="font-size:var(--text-lg);color:var(--color-gray-600);margin-bottom:var(--space-8);line-height:var(--leading-relaxed);">Knowing your hourly rate doesn't tell the full story — your true annual income depends on how many weeks you work, how much of your time is actually billable, and how you handle vacation. This calculator converts your freelance hourly rate to a realistic annual income projection, including a stability range that reflects real-world variability.</p>
+
+            <div class="calc-container">
+              <div class="calc-header">
+                <h2>Hourly to Annual Income Calculator</h2>
+                <p>Translate your hourly rate into real annual earnings</p>
+              </div>
+              <div class="calc-body">
+                <form id="annual-form" onsubmit="return false;">
+                  <div class="calc-grid calc-grid-2col">
+                    <div class="form-group">
+                      <label class="form-label" for="h2a-rate">Hourly Rate</label>
+                      <div class="input-prefix">
+                        <span class="prefix">$</span>
+                        <input type="number" id="h2a-rate" class="form-input" placeholder="100" min="0" step="1" required>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label" for="h2a-hours-week">Billable Hours / Week (target)</label>
+                      <input type="number" id="h2a-hours-week" class="form-input" placeholder="30" min="1" max="80" step="1" required>
+                    </div>
+                  </div>
+
+                  <div class="calc-grid calc-grid-2col">
+                    <div class="form-group">
+                      <label class="form-label" for="h2a-weeks-year">Weeks Worked / Year</label>
+                      <input type="number" id="h2a-weeks-year" class="form-input" placeholder="48" min="1" max="52" step="1" required>
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label" for="h2a-nonbillable">Non-Billable Time Ratio</label>
+                      <div class="input-suffix">
+                        <input type="number" id="h2a-nonbillable" class="form-input" placeholder="30" min="0" max="80" step="1">
+                        <span class="suffix">%</span>
+                      </div>
+                      <span class="form-hint" style="display:block;margin-top:var(--space-1);">Admin, marketing, professional dev</span>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="h2a-vacation">Vacation Weeks / Year</label>
+                    <input type="number" id="h2a-vacation" class="form-input" placeholder="4" min="0" max="20" step="1">
+                  </div>
+
+                  <div class="calc-actions">
+                    <button type="button" class="btn btn-calculate btn-full" onclick="calculateAnnualIncome()">Calculate Annual Income</button>
+                    <button type="button" class="btn btn-reset" onclick="resetAnnualForm()">Reset</button>
+                  </div>
+                </form>
+
+                <div id="results" class="calc-results hidden">
+                  <div class="result-primary">
+                    <div class="result-label">Projected Annual Revenue</div>
+                    <div class="result-value" id="result-gross-annual">$0</div>
+                  </div>
+                  <div class="result-grid result-grid-3">
+                    <div class="result-item">
+                      <div class="result-label">Actual Billable Hours / Year</div>
+                      <div class="result-value" id="result-billable-hrs">0 hrs</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Effective Annual Income</div>
+                      <div class="result-value" id="result-eff-annual">$0</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Monthly Average</div>
+                      <div class="result-value" id="result-monthly-avg">$0</div>
+                    </div>
+                  </div>
+                  <div class="result-grid result-grid-3">
+                    <div class="result-item">
+                      <div class="result-label">Income Stability Low</div>
+                      <div class="result-value" id="result-low">$0</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Most Likely Range</div>
+                      <div class="result-value" id="result-mid">$0</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Income Stability High</div>
+                      <div class="result-value" id="result-high">$0</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="ad-slot ad-slot-leaderboard"></div>
+
+            <section class="content-section">
+              <h2>Hourly to Annual Income Formula</h2>
+              <div class="formula-box">
+                <div class="formula-label">Working Weeks</div>
+                Working Weeks = Weeks Worked Per Year - Vacation Weeks
+              </div>
+              <div class="formula-box">
+                <div class="formula-label">Gross Annual Revenue</div>
+                Revenue = Hourly Rate × Billable Hrs/Week × Working Weeks
+              </div>
+              <div class="formula-box">
+                <div class="formula-label">Effective Annual Income (adjusted for non-billable time)</div>
+                Effective = Revenue × (1 - Non-Billable Ratio) — reflects true time investment
+              </div>
+              <div class="formula-box">
+                <div class="formula-label">Income Stability Range</div>
+                Low = Revenue × 0.75 | High = Revenue × 1.10 (capacity ceiling)
+              </div>
+            </section>
+
+            <section class="content-section">
+              <h2>How to Use This Calculator</h2>
+              <ol>
+                <li>Enter your <strong>hourly rate</strong> and <strong>target billable hours per week</strong>.</li>
+                <li>Set the <strong>total weeks you plan to work</strong> per year, and separately your <strong>vacation weeks</strong>.</li>
+                <li>Enter your <strong>non-billable time ratio</strong> — the percentage of your total working hours not generating direct revenue.</li>
+                <li>Click <strong>Calculate Annual Income</strong> to see projected revenue, effective income, and your income stability range.</li>
+              </ol>
+            </section>
+
+            <section class="content-section">
+              <h2>Example Scenario</h2>
+              <p>A freelance UX designer charges $100/hr, targets 30 billable hours/week, works 48 weeks/year, takes 4 vacation weeks, and has a 30% non-billable ratio.</p>
+              <ul>
+                <li>Working Weeks: 48 - 4 = <strong>44 weeks</strong></li>
+                <li>Gross Revenue: $100 × 30 × 44 = <strong>$132,000</strong></li>
+                <li>Effective Annual Income (adjusted): $132,000 (revenue is as-billed; non-billable just measures time cost)</li>
+                <li>Monthly Average: $132,000 / 12 = <strong>$11,000</strong></li>
+                <li>Income Stability Range: <strong>$99,000 – $145,200</strong></li>
+              </ul>
+            </section>
+
+            <section class="faq-section">
+              <h2>Frequently Asked Questions</h2>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  How do I convert a freelance hourly rate to annual income?
+                  <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 011-1z"/></svg>
+                </button>
+                <div class="faq-answer">
+                  <p>Multiply your hourly rate by actual billable hours per week, then by working weeks per year (total minus vacation). Subtract non-billable time to understand the true time cost of generating that revenue.</p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  What is a non-billable ratio for freelancers?
+                  <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 011-1z"/></svg>
+                </button>
+                <div class="faq-answer">
+                  <p>The non-billable ratio is the percentage of total working hours spent on tasks that don't generate direct revenue — admin, business development, networking, and professional development. Most freelancers have a 25-40% non-billable ratio.</p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  How many weeks per year do freelancers typically work?
+                  <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 011-1z"/></svg>
+                </button>
+                <div class="faq-answer">
+                  <p>Most freelancers target 46-50 working weeks per year after accounting for holidays, vacation, sick days, and professional development. Using 48 weeks is a conservative, realistic planning assumption.</p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  What is the income stability range in freelancing?
+                  <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 011-1z"/></svg>
+                </button>
+                <div class="faq-answer">
+                  <p>The stability range represents the realistic low-to-high income spread. Your low end reflects slow months and client gaps (roughly 75% of projected), while the high end represents peak utilization during strong months.</p>
+                </div>
+              </div>
+            </section>
+
+            <section class="related-calculators">
+              <h2>Related Calculators</h2>
+              <div class="grid grid-3">
+                <a href="/pages/business-calculators/freelance-rate-calculator/" class="card card-link">
+                  <h3>Freelance Rate Calculator</h3>
+                  <p>Calculate your minimum hourly rate starting from desired annual income.</p>
+                </a>
+                <a href="/pages/freelancer-calculators/freelance-tax-estimator/" class="card card-link">
+                  <h3>Freelance Tax Estimator</h3>
+                  <p>Estimate your full tax burden and quarterly payments from this income.</p>
+                </a>
+                <a href="/pages/freelancer-calculators/freelance-utilization-rate-calculator/" class="card card-link">
+                  <h3>Utilization Rate Calculator</h3>
+                  <p>Track your actual billable utilization and its impact on annual revenue.</p>
+                </a>
+                <a href="/pages/freelancer-calculators/contractor-vs-employee-income-calculator/" class="card card-link">
+                  <h3>Contractor vs. Employee Calculator</h3>
+                  <p>Compare your projected freelance income against an equivalent salary.</p>
+                </a>
+              </div>
+            </section>
+
+            <div class="disclaimer">
+              <strong>Disclaimer:</strong> This calculator provides projections for informational purposes only. Actual annual income depends on client demand, market conditions, skill development, and economic factors outside your control. Treat projections as planning targets, not guarantees.
+            </div>
+          </div>
+
+          <aside class="calc-page-sidebar">
+            <div class="ad-slot ad-slot-rectangle"></div>
+            <div class="sidebar-card">
+              <h3>Freelancer Calculators</h3>
+              <a href="/pages/freelancer-calculators/freelance-tax-estimator/">Tax Estimator</a>
+              <a href="/pages/freelancer-calculators/hourly-to-annual-income-calculator/">Hourly to Annual</a>
+              <a href="/pages/freelancer-calculators/project-pricing-calculator/">Project Pricing</a>
+              <a href="/pages/freelancer-calculators/client-profitability-calculator/">Client Profitability</a>
+              <a href="/pages/freelancer-calculators/freelance-break-even-calculator/">Break-Even Calculator</a>
+              <a href="/pages/freelancer-calculators/contractor-vs-employee-income-calculator/">Contractor vs Employee</a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free online calculators for business, finance, tax, and investment decisions.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Calculators</h4>
+          <a href="/pages/business-calculators/">Business</a>
+          <a href="/pages/financial-calculators/">Financial</a>
+          <a href="/pages/tax-calculators/">Tax</a>
+          <a href="/pages/investment-calculators/">Investment</a>
+          <a href="/pages/freelancer-calculators/">Freelancer</a>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <a href="/about/">About</a>
+          <a href="/blog/">Blog</a>
+          <a href="/contact/">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="/privacy/">Privacy Policy</a>
+          <a href="/terms/">Terms of Service</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/privacy/">Privacy</a>
+          <a href="/terms/">Terms</a>
+          <a href="/contact/">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateAnnualIncome() {
+      const rate = CalcWise.parseNumber(document.getElementById('h2a-rate').value);
+      const hoursWeek = CalcWise.parseNumber(document.getElementById('h2a-hours-week').value);
+      const weeksYear = CalcWise.parseNumber(document.getElementById('h2a-weeks-year').value);
+      const nonBillablePct = (CalcWise.parseNumber(document.getElementById('h2a-nonbillable').value) || 0) / 100;
+      const vacationWeeks = CalcWise.parseNumber(document.getElementById('h2a-vacation').value) || 0;
+
+      if (rate <= 0 || hoursWeek <= 0 || weeksYear <= 0) {
+        alert('Please enter hourly rate, billable hours, and weeks worked.');
+        return;
+      }
+
+      const workingWeeks = Math.max(0, weeksYear - vacationWeeks);
+      const billableHrsYear = hoursWeek * workingWeeks;
+      const grossRevenue = rate * billableHrsYear;
+      const effAnnual = grossRevenue; // revenue is as-billed; non-billable is a time cost note
+      const monthlyAvg = grossRevenue / 12;
+
+      // Stability range: low at 75% utilization, high at 110%
+      const lowIncome = grossRevenue * 0.75;
+      const highIncome = grossRevenue * 1.10;
+
+      CalcWise.setText('result-gross-annual', CalcWise.formatCurrency(grossRevenue));
+      CalcWise.setText('result-billable-hrs', billableHrsYear.toLocaleString() + ' hrs');
+      CalcWise.setText('result-eff-annual', CalcWise.formatCurrency(effAnnual));
+      CalcWise.setText('result-monthly-avg', CalcWise.formatCurrency(monthlyAvg));
+      CalcWise.setText('result-low', CalcWise.formatCurrency(lowIncome));
+      CalcWise.setText('result-mid', CalcWise.formatCurrency(lowIncome) + ' – ' + CalcWise.formatCurrency(highIncome));
+      CalcWise.setText('result-high', CalcWise.formatCurrency(highIncome));
+      CalcWise.showResults('results');
+    }
+
+    function resetAnnualForm() {
+      document.getElementById('annual-form').reset();
+      CalcWise.hideResults('results');
+    }
+
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', !expanded);
+        btn.nextElementSibling.style.display = expanded ? 'none' : 'block';
+      });
+    });
+
+    const toggle = document.querySelector('.mobile-menu-toggle');
+    const mobileNav = document.querySelector('.mobile-nav');
+    if (toggle && mobileNav) {
+      toggle.addEventListener('click', () => {
+        const open = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', !open);
+        mobileNav.classList.toggle('open', !open);
+      });
+    }
+  </script>
+</body>
+</html>

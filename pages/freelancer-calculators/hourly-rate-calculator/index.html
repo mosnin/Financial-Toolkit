@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Freelance Hourly Rate Calculator | CalcWise</title>
+  <meta name="description" content="Calculate your optimal freelance hourly rate based on target income, billable hours, business expenses, and taxes. Stop undercharging for your time.">
+  <link rel="canonical" href="https://calcwise.io/freelancer-calculators/hourly-rate-calculator/">
+  <meta property="og:title" content="Freelance Hourly Rate Calculator | CalcWise">
+  <meta property="og:description" content="Calculate your optimal freelance hourly rate based on target income, billable hours, business expenses, and taxes. Stop undercharging for your time.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcwise.io/freelancer-calculators/hourly-rate-calculator/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Freelance Hourly Rate Calculator | CalcWise">
+  <meta name="twitter:description" content="Calculate your optimal freelance hourly rate based on target income, billable hours, business expenses, and taxes.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/"},
+      {"@type": "ListItem", "position": 2, "name": "Freelancer Calculators", "item": "https://calcwise.io/freelancer-calculators/"},
+      {"@type": "ListItem", "position": 3, "name": "Hourly Rate Calculator"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How many billable hours can a freelancer realistically work per year?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Most freelancers bill between 1,000 and 1,500 hours per year. Out of a 2,080-hour work year, time is consumed by client communication, marketing, admin, accounting, and professional development. A utilization rate of 60-75% (roughly 1,250-1,560 hours) is a realistic target for full-time freelancers."}
+      },
+      {
+        "@type": "Question",
+        "name": "Should self-employment tax be included in my hourly rate?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Yes. Freelancers pay self-employment tax (15.3% in the US) on top of income tax, with no employer splitting the cost. Your hourly rate must cover both the employer and employee portions of Social Security and Medicare, which is why freelancers typically charge 25-40% more than equivalent salaried employees earn."}
+      },
+      {
+        "@type": "Question",
+        "name": "What business expenses should I factor into my hourly rate?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Include software subscriptions, hardware depreciation, office costs, professional insurance (E&O, general liability), accounting and legal fees, marketing spend, professional development, and any subcontractor costs. Total these annually and divide by billable hours to find the per-hour overhead cost that must be covered by your rate."}
+      },
+      {
+        "@type": "Question",
+        "name": "How do I account for unpaid vacation and sick days in my rate?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Unlike employees, freelancers don't receive paid time off. Subtract your planned vacation, sick days, and holidays from your annual working days before calculating billable hours. If you want 15 days off, that's roughly 120 hours of income you must earn in the remaining days — increasing your required hourly rate."}
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="logo">
+        <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav">
+        <a href="/">Home</a>
+        <a href="/pages/business-calculators/">Business</a>
+        <a href="/pages/financial-calculators/">Financial</a>
+        <a href="/pages/tax-calculators/">Tax</a>
+        <a href="/pages/freelancer-calculators/" aria-current="page">Freelancer</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav">
+      <a href="/">Home</a>
+      <a href="/pages/business-calculators/">Business Calculators</a>
+      <a href="/pages/financial-calculators/">Financial Calculators</a>
+      <a href="/pages/tax-calculators/">Tax Calculators</a>
+      <a href="/pages/freelancer-calculators/">Freelancer Calculators</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/pages/freelancer-calculators/">Freelancer Calculators</a></li>
+          <li><span aria-current="page">Hourly Rate Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="calc-page-layout">
+          <div class="calc-page-main">
+            <h1>Freelance Hourly Rate Calculator</h1>
+            <p class="subtitle" style="font-size:var(--text-lg);color:var(--color-gray-600);margin-bottom:var(--space-8);line-height:var(--leading-relaxed);">Stop guessing your rate. This calculator works backwards from your target take-home income, adds business expenses, taxes, and unpaid time off to derive the minimum hourly rate you must charge — plus a recommended rate with a profitability buffer.</p>
+
+            <div class="calc-container">
+              <div class="calc-header">
+                <h2>Hourly Rate Calculator</h2>
+                <p>Find the rate that covers income, taxes, expenses, and time off</p>
+              </div>
+              <div class="calc-body">
+                <form id="hourly-rate-form" onsubmit="return false;">
+                  <div class="calc-grid calc-grid-2col">
+                    <div class="form-group">
+                      <label class="form-label" for="target-income">Target Annual Take-Home Income</label>
+                      <div class="input-prefix">
+                        <span class="prefix">$</span>
+                        <input type="number" id="target-income" class="form-input" placeholder="80000" min="0" step="1000" required>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label" for="annual-expenses">Annual Business Expenses</label>
+                      <div class="input-prefix">
+                        <span class="prefix">$</span>
+                        <input type="number" id="annual-expenses" class="form-input" placeholder="12000" min="0" step="100" required>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="calc-grid calc-grid-2col">
+                    <div class="form-group">
+                      <label class="form-label" for="weeks-worked">Weeks Worked Per Year</label>
+                      <input type="number" id="weeks-worked" class="form-input" placeholder="48" min="1" max="52" step="1" required>
+                      <span class="form-hint" style="display:block;margin-top:var(--space-1);">Subtract vacation, sick, and holiday weeks</span>
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label" for="billable-hours-week">Billable Hours Per Week</label>
+                      <input type="number" id="billable-hours-week" class="form-input" placeholder="25" min="1" max="80" step="0.5" required>
+                      <span class="form-hint" style="display:block;margin-top:var(--space-1);">Hours spent on paid client work (not admin/marketing)</span>
+                    </div>
+                  </div>
+
+                  <div class="calc-grid calc-grid-2col">
+                    <div class="form-group">
+                      <label class="form-label" for="tax-rate">Effective Tax Rate</label>
+                      <div class="input-suffix">
+                        <input type="number" id="tax-rate" class="form-input" placeholder="30" min="0" max="60" step="1" required>
+                        <span class="suffix">%</span>
+                      </div>
+                      <span class="form-hint" style="display:block;margin-top:var(--space-1);">Include income tax + self-employment tax (~15.3%)</span>
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label" for="profit-buffer">Profit Buffer</label>
+                      <div class="input-suffix">
+                        <input type="number" id="profit-buffer" class="form-input" placeholder="20" min="0" max="100" step="1">
+                        <span class="suffix">%</span>
+                      </div>
+                      <span class="form-hint" style="display:block;margin-top:var(--space-1);">Additional margin above minimum rate</span>
+                    </div>
+                  </div>
+
+                  <div class="calc-actions">
+                    <button type="button" class="btn btn-calculate btn-full" onclick="calculateHourlyRate()">Calculate My Rate</button>
+                    <button type="button" class="btn btn-reset" onclick="resetHourlyRateForm()">Reset</button>
+                  </div>
+                </form>
+
+                <div id="results" class="calc-results hidden">
+                  <div class="result-primary">
+                    <div class="result-label">Recommended Hourly Rate (with profit buffer)</div>
+                    <div class="result-value" id="result-recommended-rate">$0/hr</div>
+                  </div>
+                  <div class="result-grid result-grid-3">
+                    <div class="result-item">
+                      <div class="result-label">Minimum Hourly Rate</div>
+                      <div class="result-value" id="result-min-rate">$0/hr</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Total Annual Billable Hours</div>
+                      <div class="result-value" id="result-billable-hours">0 hrs</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Required Gross Revenue</div>
+                      <div class="result-value" id="result-gross-revenue">$0</div>
+                    </div>
+                  </div>
+                  <div class="result-grid result-grid-3">
+                    <div class="result-item">
+                      <div class="result-label">Taxes to Set Aside</div>
+                      <div class="result-value" id="result-tax-amount">$0</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Break-Even Rate (after expenses)</div>
+                      <div class="result-value" id="result-breakeven-rate">$0/hr</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Recommended Annual Revenue</div>
+                      <div class="result-value" id="result-recommended-revenue">$0</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="ad-slot ad-slot-leaderboard"></div>
+
+            <section class="content-section">
+              <h2>Hourly Rate Formula</h2>
+              <div class="formula-box">
+                <div class="formula-label">Total Annual Billable Hours</div>
+                Billable Hours = Weeks Worked × Billable Hours Per Week
+              </div>
+              <div class="formula-box">
+                <div class="formula-label">Required Gross Revenue</div>
+                Gross Revenue = (Target Income + Business Expenses) ÷ (1 - Tax Rate)
+              </div>
+              <div class="formula-box">
+                <div class="formula-label">Minimum Hourly Rate</div>
+                Minimum Rate = Required Gross Revenue ÷ Annual Billable Hours
+              </div>
+              <div class="formula-box">
+                <div class="formula-label">Recommended Rate (with buffer)</div>
+                Recommended Rate = Minimum Rate × (1 + Profit Buffer %)
+              </div>
+            </section>
+
+            <section class="content-section">
+              <h2>How to Use This Calculator</h2>
+              <ol>
+                <li>Enter your <strong>target take-home income</strong> — the after-tax amount you want to keep each year.</li>
+                <li>List your <strong>annual business expenses</strong> — software, insurance, equipment, marketing, and professional fees.</li>
+                <li>Set <strong>weeks worked per year</strong> by subtracting vacation, sick days, and holidays from 52 weeks.</li>
+                <li>Enter your realistic <strong>billable hours per week</strong> — only count actual client-facing work, not admin time.</li>
+                <li>Set your <strong>effective tax rate</strong>, including income tax and self-employment tax (~15.3%).</li>
+                <li>Add a <strong>profit buffer</strong> (10-25% recommended) to give yourself a cushion above the minimum rate.</li>
+                <li>Click <strong>Calculate My Rate</strong> to see your minimum and recommended hourly rates.</li>
+              </ol>
+            </section>
+
+            <section class="content-section">
+              <h2>Example Scenario</h2>
+              <p>A freelance designer wants $75,000 take-home, has $10,000 in expenses, works 46 weeks/year, bills 25 hours/week, faces a 32% tax rate, and wants a 20% buffer.</p>
+              <ul>
+                <li>Annual Billable Hours: 46 × 25 = <strong>1,150 hours</strong></li>
+                <li>Required Gross Revenue: ($75,000 + $10,000) ÷ (1 - 0.32) = <strong>$125,000</strong></li>
+                <li>Minimum Hourly Rate: $125,000 ÷ 1,150 = <strong>$108.70/hr</strong></li>
+                <li>Recommended Rate (20% buffer): $108.70 × 1.20 = <strong>$130.44/hr</strong></li>
+                <li>Taxes to set aside: $125,000 × 0.32 = <strong>$40,000/year</strong></li>
+              </ul>
+            </section>
+
+            <section class="faq-section">
+              <h2>Frequently Asked Questions</h2>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  How many billable hours can a freelancer realistically work per year?
+                  <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                </button>
+                <div class="faq-answer">
+                  <p>Most freelancers bill between 1,000 and 1,500 hours per year. Out of a 2,080-hour work year, time is consumed by client communication, marketing, admin, accounting, and professional development. A utilization rate of 60-75% is a realistic target for full-time freelancers.</p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  Should self-employment tax be included in my hourly rate?
+                  <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                </button>
+                <div class="faq-answer">
+                  <p>Yes. Freelancers pay self-employment tax (15.3% in the US) on top of income tax, with no employer splitting the cost. Your hourly rate must cover both the employer and employee portions of Social Security and Medicare, which is why freelancers typically charge 25-40% more than equivalent salaried employees earn.</p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  What business expenses should I factor into my hourly rate?
+                  <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                </button>
+                <div class="faq-answer">
+                  <p>Include software subscriptions, hardware depreciation, office costs, professional insurance (E&O, general liability), accounting and legal fees, marketing spend, professional development, and any subcontractor costs. Total these annually and divide by billable hours to find the per-hour overhead cost that must be covered by your rate.</p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  How do I account for unpaid vacation and sick days in my rate?
+                  <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                </button>
+                <div class="faq-answer">
+                  <p>Unlike employees, freelancers don't receive paid time off. Subtract your planned vacation, sick days, and holidays from your annual working days before calculating billable hours. If you want 15 days off, that's roughly 120 hours of income you must earn in the remaining days — increasing your required hourly rate.</p>
+                </div>
+              </div>
+            </section>
+
+            <section class="related-calculators">
+              <h2>Related Calculators</h2>
+              <div class="grid grid-3">
+                <a href="/pages/freelancer-calculators/project-pricing-calculator/" class="card card-link">
+                  <h3>Project Pricing Calculator</h3>
+                  <p>Build a fully-loaded project quote from hours, complexity, overhead, and margin.</p>
+                </a>
+                <a href="/pages/freelancer-calculators/freelance-break-even-calculator/" class="card card-link">
+                  <h3>Break-Even Calculator</h3>
+                  <p>Find the minimum monthly revenue to cover all your freelance costs.</p>
+                </a>
+                <a href="/pages/freelancer-calculators/freelance-tax-estimator/" class="card card-link">
+                  <h3>Freelance Tax Estimator</h3>
+                  <p>Estimate quarterly tax payments and annual self-employment tax burden.</p>
+                </a>
+                <a href="/pages/freelancer-calculators/freelance-scope-creep-calculator/" class="card card-link">
+                  <h3>Scope Creep Calculator</h3>
+                  <p>See how unpaid extra hours erode your effective hourly rate.</p>
+                </a>
+              </div>
+            </section>
+
+            <div class="disclaimer">
+              <strong>Disclaimer:</strong> This calculator provides hourly rate estimates for informational purposes only. Actual rates depend on market conditions, your experience level, client budgets, and geographic location. Consult a financial advisor or accountant for personalized guidance.
+            </div>
+          </div>
+
+          <aside class="calc-page-sidebar">
+            <div class="ad-slot ad-slot-rectangle"></div>
+            <div class="sidebar-card">
+              <h3>Freelancer Calculators</h3>
+              <a href="/pages/freelancer-calculators/hourly-rate-calculator/">Hourly Rate Calculator</a>
+              <a href="/pages/freelancer-calculators/freelance-tax-estimator/">Tax Estimator</a>
+              <a href="/pages/freelancer-calculators/freelance-income-stability-calculator/">Income Stability</a>
+              <a href="/pages/freelancer-calculators/project-pricing-calculator/">Project Pricing</a>
+              <a href="/pages/freelancer-calculators/client-profitability-calculator/">Client Profitability</a>
+              <a href="/pages/freelancer-calculators/freelance-break-even-calculator/">Break-Even Calculator</a>
+              <a href="/pages/freelancer-calculators/freelance-retirement-calculator/">Retirement Calculator</a>
+              <a href="/pages/freelancer-calculators/client-acquisition-cost-calculator/">Client Acquisition Cost</a>
+              <a href="/pages/freelancer-calculators/freelance-scope-creep-calculator/">Scope Creep Calculator</a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free online calculators for business, finance, tax, and investment decisions.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Calculators</h4>
+          <a href="/pages/business-calculators/">Business</a>
+          <a href="/pages/financial-calculators/">Financial</a>
+          <a href="/pages/tax-calculators/">Tax</a>
+          <a href="/pages/investment-calculators/">Investment</a>
+          <a href="/pages/freelancer-calculators/">Freelancer</a>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <a href="/about/">About</a>
+          <a href="/blog/">Blog</a>
+          <a href="/contact/">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="/privacy/">Privacy Policy</a>
+          <a href="/terms/">Terms of Service</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/privacy/">Privacy</a>
+          <a href="/terms/">Terms</a>
+          <a href="/contact/">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateHourlyRate() {
+      const targetIncome = CalcWise.parseNumber(document.getElementById('target-income').value);
+      const annualExpenses = CalcWise.parseNumber(document.getElementById('annual-expenses').value);
+      const weeksWorked = CalcWise.parseNumber(document.getElementById('weeks-worked').value);
+      const billableHoursWeek = CalcWise.parseNumber(document.getElementById('billable-hours-week').value);
+      const taxRate = (CalcWise.parseNumber(document.getElementById('tax-rate').value) || 0) / 100;
+      const profitBuffer = (CalcWise.parseNumber(document.getElementById('profit-buffer').value) || 0) / 100;
+
+      if (targetIncome <= 0) { alert('Please enter a target annual income.'); return; }
+      if (weeksWorked <= 0 || weeksWorked > 52) { alert('Please enter valid weeks worked (1-52).'); return; }
+      if (billableHoursWeek <= 0) { alert('Please enter billable hours per week.'); return; }
+      if (taxRate >= 1) { alert('Tax rate must be less than 100%.'); return; }
+
+      const annualBillableHours = weeksWorked * billableHoursWeek;
+      const grossRevenue = taxRate < 1 ? (targetIncome + annualExpenses) / (1 - taxRate) : (targetIncome + annualExpenses);
+      const taxAmount = grossRevenue * taxRate;
+      const breakEvenRate = annualBillableHours > 0 ? (targetIncome + annualExpenses) / annualBillableHours : 0;
+      const minRate = annualBillableHours > 0 ? grossRevenue / annualBillableHours : 0;
+      const recommendedRate = minRate * (1 + profitBuffer);
+      const recommendedRevenue = recommendedRate * annualBillableHours;
+
+      CalcWise.setText('result-billable-hours', annualBillableHours.toLocaleString() + ' hrs');
+      CalcWise.setText('result-gross-revenue', CalcWise.formatCurrency(grossRevenue));
+      CalcWise.setText('result-tax-amount', CalcWise.formatCurrency(taxAmount));
+      CalcWise.setText('result-breakeven-rate', CalcWise.formatCurrency(breakEvenRate) + '/hr');
+      CalcWise.setText('result-min-rate', CalcWise.formatCurrency(minRate) + '/hr');
+      CalcWise.setText('result-recommended-rate', CalcWise.formatCurrency(recommendedRate) + '/hr');
+      CalcWise.setText('result-recommended-revenue', CalcWise.formatCurrency(recommendedRevenue));
+      CalcWise.showResults('results');
+    }
+
+    function resetHourlyRateForm() {
+      document.getElementById('hourly-rate-form').reset();
+      CalcWise.hideResults('results');
+    }
+
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', !expanded);
+        btn.nextElementSibling.style.display = expanded ? 'none' : 'block';
+      });
+    });
+
+    const toggle = document.querySelector('.mobile-menu-toggle');
+    const mobileNav = document.querySelector('.mobile-nav');
+    if (toggle && mobileNav) {
+      toggle.addEventListener('click', () => {
+        const open = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', !open);
+        mobileNav.classList.toggle('open', !open);
+      });
+    }
+  </script>
+</body>
+</html>

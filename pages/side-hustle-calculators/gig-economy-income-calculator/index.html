@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gig Economy Income Calculator - Net Earnings After Expenses &amp; Taxes | CalcWise</title>
+  <meta name="description" content="Calculate your true net earnings from Uber, Lyft, DoorDash, or TaskRabbit after vehicle expenses, platform fees, and self-employment taxes. Know your real hourly rate.">
+  <link rel="canonical" href="https://calcwise.io/side-hustle-calculators/gig-economy-income-calculator/">
+
+  <meta property="og:title" content="Gig Economy Income Calculator - CalcWise">
+  <meta property="og:description" content="Find your true net earnings from rideshare and delivery gigs after mileage costs, platform commissions, and self-employment taxes.">
+  <meta property="og:url" content="https://calcwise.io/side-hustle-calculators/gig-economy-income-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Gig Economy Income Calculator - CalcWise">
+  <meta name="twitter:description" content="Find your true net earnings from rideshare and delivery gigs after mileage costs, platform commissions, and self-employment taxes.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Side Hustle Calculators", "item": "https://calcwise.io/side-hustle-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "Gig Economy Income Calculator", "item": "https://calcwise.io/side-hustle-calculators/gig-economy-income-calculator/" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How much do gig workers actually take home?",
+        "acceptedAnswer": { "@type": "Answer", "text": "After vehicle expenses (using the IRS standard mileage rate of $0.70/mile in 2026), platform commissions (typically 20–30%), and the 15.3% self-employment tax, most gig workers net 40–60% of their gross earnings. The actual amount depends heavily on miles driven per dollar earned." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I deduct mileage as a gig worker?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Gig workers can deduct business mileage using the IRS standard mileage rate (or actual vehicle expenses). For Uber, Lyft, and DoorDash drivers, this is one of the largest deductions available and can significantly reduce your taxable income." }
+      },
+      {
+        "@type": "Question",
+        "name": "Do gig workers pay self-employment tax?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. As an independent contractor, you pay both the employee and employer portions of Social Security and Medicare, totaling 15.3% on net self-employment income. However, you can deduct half of this self-employment tax when calculating your federal income tax." }
+      },
+      {
+        "@type": "Question",
+        "name": "What expenses can DoorDash or Uber drivers deduct?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Deductible gig work expenses include mileage (or actual car expenses), a portion of your phone bill, insulated delivery bags, parking fees, tolls, and any other ordinary and necessary business expenses. Keep detailed records and consult a tax professional for your specific situation." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/business-calculators/">Business</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/business-calculators/">Business Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container page-content">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/side-hustle-calculators/">Side Hustle Calculators</a></li>
+          <li><span aria-current="page">Gig Economy Income Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="calc-page-layout">
+        <div class="calc-page-main">
+          <h1>Gig Economy Income Calculator</h1>
+          <p class="mt-4 mb-8" style="font-size:var(--text-lg); color:var(--color-gray-600); max-width:700px; line-height:var(--leading-relaxed);">Calculate your true net earnings from Uber, Lyft, DoorDash, TaskRabbit, and other gig platforms after vehicle expenses, platform commissions, and self-employment taxes. Discover your real hourly rate before and after all costs.</p>
+
+          <div class="calc-container">
+            <div class="calc-header">
+              <h2>Calculate Gig Earnings</h2>
+              <p>Enter your weekly or monthly figures for an accurate net income estimate</p>
+            </div>
+            <div class="calc-body">
+              <form id="gigForm" novalidate>
+                <div class="form-group">
+                  <label class="form-label" for="grossEarnings">Gross Earnings <span class="form-hint">Total amount paid out by the platform before any deductions</span></label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="grossEarnings" name="grossEarnings" class="form-input" placeholder="1200.00" min="0" step="0.01" required>
+                  </div>
+                  <span class="form-error">Please enter your gross earnings.</span>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="milesDriven">Miles Driven <span class="form-hint">Total business miles for this period (all driving, including to pickups)</span></label>
+                  <div class="input-suffix">
+                    <input type="number" id="milesDriven" name="milesDriven" class="form-input" placeholder="800" min="0" step="1" required>
+                    <span class="suffix">miles</span>
+                  </div>
+                  <span class="form-error">Please enter miles driven.</span>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="mileageRate">Mileage Rate <span class="form-hint">IRS standard mileage rate is $0.70/mile for 2026</span></label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="mileageRate" name="mileageRate" class="form-input" placeholder="0.70" min="0" step="0.01" required>
+                  </div>
+                  <span class="form-error">Please enter a mileage rate.</span>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="otherExpenses">Other Expenses <span class="form-hint">Phone plan portion, delivery bags, parking, tolls, supplies</span></label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="otherExpenses" name="otherExpenses" class="form-input" placeholder="30.00" min="0" step="0.01" required>
+                  </div>
+                  <span class="form-error">Please enter other expenses (enter 0 if none).</span>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="hoursWorked">Hours Worked <span class="form-hint">Total hours on the platform including wait time</span></label>
+                  <div class="input-suffix">
+                    <input type="number" id="hoursWorked" name="hoursWorked" class="form-input" placeholder="40" min="0" step="0.5" required>
+                    <span class="suffix">hours</span>
+                  </div>
+                  <span class="form-error">Please enter hours worked.</span>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="taxBracket">Estimated Federal Tax Rate <span class="form-hint">Your marginal federal income tax rate (self-employment tax is added separately)</span></label>
+                  <div class="input-suffix">
+                    <input type="number" id="taxBracket" name="taxBracket" class="form-input" placeholder="12" min="0" max="37" step="1" required>
+                    <span class="suffix">%</span>
+                  </div>
+                  <span class="form-error">Please enter a tax rate between 0 and 37.</span>
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calculateGigIncome()">Calculate Net Earnings</button>
+                  <button type="button" class="btn btn-reset" onclick="resetGigForm()">Reset</button>
+                </div>
+              </form>
+
+              <div id="results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">Net Take-Home Income</div>
+                  <div class="result-value" id="resultNetIncome">$0</div>
+                </div>
+                <div class="result-grid result-grid-2">
+                  <div class="result-item">
+                    <div class="result-label">Mileage Deduction</div>
+                    <div class="result-value" id="resultMileageCost">$0</div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Total Expenses</div>
+                    <div class="result-value" id="resultTotalExpenses">$0</div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Net Self-Employment Income</div>
+                    <div class="result-value" id="resultNetSEIncome">$0</div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Self-Employment Tax (15.3%)</div>
+                    <div class="result-value" id="resultSETax">$0</div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Income Tax Estimate</div>
+                    <div class="result-value" id="resultIncomeTax">$0</div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Effective Hourly Rate</div>
+                    <div class="result-value" id="resultHourlyRate">$0/hr</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="disclaimer">
+            <strong>Disclaimer:</strong> This calculator provides estimates for educational purposes only. The IRS standard mileage rate and tax brackets change annually. Self-employment tax calculation uses a simplified method. Consult a licensed tax professional for advice specific to your situation.
+          </div>
+
+          <div class="ad-slot ad-slot-leaderboard"></div>
+
+          <section class="content-section">
+            <h2>Gig Income Formulas</h2>
+            <p>Several layers of costs reduce your gross platform earnings to your true take-home pay:</p>
+            <div class="formula-box">
+              <div class="formula-label">Mileage Deduction</div>
+              Miles Driven x IRS Standard Mileage Rate (e.g., $0.70/mile)
+            </div>
+            <div class="formula-box">
+              <div class="formula-label">Total Expenses</div>
+              Mileage Deduction + Other Business Expenses
+            </div>
+            <div class="formula-box">
+              <div class="formula-label">Net Self-Employment Income</div>
+              Gross Earnings - Total Expenses
+            </div>
+            <div class="formula-box">
+              <div class="formula-label">Self-Employment Tax</div>
+              Net SE Income x 92.35% x 15.3% (both employer and employee share)
+            </div>
+            <div class="formula-box">
+              <div class="formula-label">Net Take-Home Income</div>
+              Net SE Income - SE Tax - Income Tax Estimate
+            </div>
+            <div class="formula-box">
+              <div class="formula-label">Effective Hourly Rate</div>
+              Net Take-Home Income / Hours Worked
+            </div>
+          </section>
+
+          <section class="content-section">
+            <h2>How to Use This Calculator</h2>
+            <ol>
+              <li><strong>Enter gross earnings</strong> — the total payout from your platform dashboard, including tips and bonuses.</li>
+              <li><strong>Enter miles driven</strong> — track every business mile, including deadhead miles driving to a pickup or delivery zone.</li>
+              <li><strong>Set the mileage rate</strong> — the IRS standard rate for 2026 is $0.70/mile; you can also use your actual cost-per-mile if you track it.</li>
+              <li><strong>Add other expenses</strong> — phone plan allocation, insulated bags, parking fees, tolls, and any other direct costs.</li>
+              <li><strong>Enter hours worked</strong> — include all time on the app, including waiting for orders.</li>
+              <li><strong>Enter your tax rate</strong> — use your marginal federal rate (10%, 12%, 22%, etc.). State taxes are not included.</li>
+              <li><strong>Click Calculate</strong> to see your true take-home and effective hourly rate.</li>
+            </ol>
+          </section>
+
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>Marcus drives for DoorDash and Uber Eats on weekends. In one month he earned <strong>$1,200 gross</strong>, drove <strong>900 miles</strong>, had <strong>$25 in other expenses</strong>, worked <strong>45 hours</strong>, and is in the <strong>12% federal bracket</strong>.</p>
+            <ul>
+              <li><strong>Mileage deduction:</strong> 900 x $0.70 = $630.00</li>
+              <li><strong>Total expenses:</strong> $630 + $25 = $655.00</li>
+              <li><strong>Net SE income:</strong> $1,200 - $655 = $545.00</li>
+              <li><strong>SE tax:</strong> $545 x 92.35% x 15.3% = $77.02</li>
+              <li><strong>Income tax estimate:</strong> ($545 - $38.51 SE deduction) x 12% = $60.78</li>
+              <li><strong>Net take-home:</strong> $545 - $77.02 - $60.78 = $407.20</li>
+              <li><strong>Effective hourly rate:</strong> $407.20 / 45 = <strong>$9.05/hr</strong></li>
+            </ul>
+            <p>This reveals that Marcus is effectively earning $9.05/hr — well below the gross earnings imply, making the case for tracking all costs carefully.</p>
+          </section>
+
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                How much do gig workers actually take home?
+                <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 011-1z"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>After vehicle expenses (using the IRS standard mileage rate of $0.70/mile in 2026), platform commissions (typically 20–30%), and the 15.3% self-employment tax, most gig workers net 40–60% of their gross earnings. The actual amount depends heavily on miles driven per dollar earned.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Can I deduct mileage as a gig worker?
+                <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 011-1z"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Yes. Gig workers can deduct business mileage using the IRS standard mileage rate (or actual vehicle expenses). For Uber, Lyft, and DoorDash drivers, this is one of the largest deductions available and can significantly reduce your taxable income.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Do gig workers pay self-employment tax?
+                <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 011-1z"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Yes. As an independent contractor, you pay both the employee and employer portions of Social Security and Medicare, totaling 15.3% on net self-employment income. However, you can deduct half of this self-employment tax when calculating your federal income tax.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What expenses can DoorDash or Uber drivers deduct?
+                <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 011-1z"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Deductible gig work expenses include mileage (or actual car expenses), a portion of your phone bill, insulated delivery bags, parking fees, tolls, and any other ordinary and necessary business expenses. Keep detailed records and consult a tax professional for your specific situation.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/side-hustle-calculators/side-hustle-profit-calculator/" class="card card-link">
+                <h3>Side Hustle Profit Calculator</h3>
+                <p>Evaluate any side hustle's overall monthly profitability and hourly rate.</p>
+              </a>
+              <a href="/side-hustle-calculators/consulting-side-income-calculator/" class="card card-link">
+                <h3>Consulting Income Calculator</h3>
+                <p>Calculate consulting revenue and your effective hourly rate.</p>
+              </a>
+              <a href="/side-hustle-calculators/dropshipping-profit-calculator/" class="card card-link">
+                <h3>Dropshipping Profit Calculator</h3>
+                <p>Find break-even price and net profit for dropshipping businesses.</p>
+              </a>
+              <a href="/side-hustle-calculators/content-creator-earnings-calculator/" class="card card-link">
+                <h3>Content Creator Earnings</h3>
+                <p>Estimate total revenue from ads, sponsorships, merch, and courses.</p>
+              </a>
+              <a href="/side-hustle-calculators/youtube-earnings-calculator/" class="card card-link">
+                <h3>YouTube Earnings Calculator</h3>
+                <p>Estimate your YouTube ad revenue based on views and CPM.</p>
+              </a>
+            </div>
+          </section>
+        </div>
+
+        <aside class="calc-page-sidebar">
+          <div class="sidebar-card">
+            <h3>Side Hustle Calculators</h3>
+            <a href="/side-hustle-calculators/side-hustle-profit-calculator/">Side Hustle Profit</a>
+            <a href="/side-hustle-calculators/etsy-profit-calculator/">Etsy Profit</a>
+            <a href="/side-hustle-calculators/amazon-seller-profit-calculator/">Amazon Seller Profit</a>
+            <a href="/side-hustle-calculators/dropshipping-profit-calculator/">Dropshipping Profit</a>
+            <a href="/side-hustle-calculators/youtube-earnings-calculator/">YouTube Earnings</a>
+            <a href="/side-hustle-calculators/gig-economy-income-calculator/">Gig Economy Income</a>
+            <a href="/side-hustle-calculators/content-creator-earnings-calculator/">Content Creator Earnings</a>
+            <a href="/side-hustle-calculators/rental-property-side-income-calculator/">Rental Property Income</a>
+            <a href="/side-hustle-calculators/consulting-side-income-calculator/">Consulting Income</a>
+            <a href="/side-hustle-calculators/freelance-hourly-rate-calculator/">Freelance Hourly Rate</a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Real Estate</h4>
+          <a href="/real-estate-calculators/">All Real Estate</a>
+        </div>
+        <div class="footer-col">
+          <h4>Finance</h4>
+          <a href="/finance-calculators/">All Finance</a>
+        </div>
+        <div class="footer-col">
+          <h4>Business</h4>
+          <a href="/business-calculators/">All Business</a>
+        </div>
+        <div class="footer-col">
+          <h4>Side Hustles</h4>
+          <a href="/side-hustle-calculators/">All Side Hustle</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/about.html">About</a>
+          <a href="/contact.html">Contact</a>
+          <a href="/privacy.html">Privacy</a>
+          <a href="/terms.html">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateGigIncome() {
+      if (!CalcWise.validateForm('gigForm')) return;
+
+      const gross        = CalcWise.parseNumber(document.getElementById('grossEarnings').value);
+      const miles        = CalcWise.parseNumber(document.getElementById('milesDriven').value);
+      const mileRate     = CalcWise.parseNumber(document.getElementById('mileageRate').value);
+      const otherExp     = CalcWise.parseNumber(document.getElementById('otherExpenses').value);
+      const hours        = CalcWise.parseNumber(document.getElementById('hoursWorked').value);
+      const taxRate      = CalcWise.parseNumber(document.getElementById('taxBracket').value) / 100;
+
+      if (gross <= 0) { alert('Gross earnings must be greater than zero.'); return; }
+
+      const mileageCost     = miles * mileRate;
+      const totalExpenses   = mileageCost + otherExp;
+      const netSEIncome     = Math.max(0, gross - totalExpenses);
+
+      // SE tax: 92.35% of net SE income x 15.3%
+      const seTax           = netSEIncome * 0.9235 * 0.153;
+
+      // Income tax: net SE income minus half of SE tax (deductible) times rate
+      const seDeduction     = seTax / 2;
+      const taxableIncome   = Math.max(0, netSEIncome - seDeduction);
+      const incomeTax       = taxableIncome * taxRate;
+
+      const netTakeHome     = netSEIncome - seTax - incomeTax;
+      const hourlyRate      = hours > 0 ? netTakeHome / hours : 0;
+
+      CalcWise.setText('resultMileageCost',    CalcWise.formatCurrency(mileageCost));
+      CalcWise.setText('resultTotalExpenses',  CalcWise.formatCurrency(totalExpenses));
+      CalcWise.setText('resultNetSEIncome',    CalcWise.formatCurrency(netSEIncome));
+      CalcWise.setText('resultSETax',          CalcWise.formatCurrency(seTax));
+      CalcWise.setText('resultIncomeTax',      CalcWise.formatCurrency(incomeTax));
+      CalcWise.setText('resultNetIncome',      CalcWise.formatCurrency(netTakeHome));
+      CalcWise.setText('resultHourlyRate',     CalcWise.formatCurrency(hourlyRate) + '/hr');
+
+      CalcWise.showResults('results');
+    }
+
+    function resetGigForm() {
+      document.getElementById('gigForm').reset();
+      CalcWise.hideResults('results');
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Utility Bill Comparison Calculator - Compare Energy Provider Rates | CalcWise</title>
+    <meta name="description" content="Compare utility provider rates side by side. Calculate monthly savings, annual savings, 5-year savings, and switching ROI when changing energy providers.">
+    <link rel="canonical" href="https://calcwise.io/energy-utility-calculators/utility-bill-comparison-calculator/">
+    <meta property="og:title" content="Utility Bill Comparison Calculator | CalcWise">
+    <meta property="og:description" content="Find out how much you could save by switching utility providers. Compare current vs. alternative rates for electricity or natural gas.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://calcwise.io/energy-utility-calculators/utility-bill-comparison-calculator/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Utility Bill Comparison Calculator | CalcWise">
+    <meta name="twitter:description" content="Compare energy provider rates and calculate your potential savings from switching.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/design-system.css">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/"},
+            {"@type": "ListItem", "position": 2, "name": "Energy & Utility Calculators", "item": "https://calcwise.io/energy-utility-calculators/"},
+            {"@type": "ListItem", "position": 3, "name": "Utility Bill Comparison Calculator"}
+        ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {"@type": "Question", "name": "Can I choose my electricity or gas provider?", "acceptedAnswer": {"@type": "Answer", "text": "In deregulated energy markets, residential customers can choose their electricity or gas supplier. States with deregulated electricity markets include Texas, Ohio, Pennsylvania, New York, Illinois, and others. In regulated markets, you typically have one utility. Check your state's public utilities commission website to find out if your area is deregulated."}},
+            {"@type": "Question", "name": "What should I look for when comparing utility providers?", "acceptedAnswer": {"@type": "Answer", "text": "Compare the total rate per kWh or therm including all fees, not just the advertised rate. Check if rates are fixed or variable. Variable rates can be lower initially but may increase. Also evaluate contract length, cancellation fees, renewable energy options, and customer service reputation."}},
+            {"@type": "Question", "name": "Are there fees for switching energy providers?", "acceptedAnswer": {"@type": "Answer", "text": "Switching fees depend on your current contract. Many month-to-month plans have no switching fee. Fixed-rate contracts may have early termination fees, typically $50-$150. Always read the fine print before switching and factor any switching costs into your savings calculation."}},
+            {"@type": "Question", "name": "How long does it take to switch energy providers?", "acceptedAnswer": {"@type": "Answer", "text": "Switching electricity or gas suppliers typically takes 1-3 billing cycles (1-3 months). Your physical service and reliability do not change -- only the supplier billing changes. The distribution infrastructure (poles, wires, pipes) remains owned by the local utility."}}
+        ]
+    }
+    </script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="/" class="logo">
+                <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+                CalcWise
+            </a>
+            <nav class="main-nav">
+                <a href="/real-estate-calculators/">Real Estate</a>
+                <a href="/advanced-real-estate-calculators/">Advanced RE</a>
+                <a href="/energy-utility-calculators/">Energy</a>
+                <a href="/finance-calculators/">Finance</a>
+            </nav>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+            </button>
+        </div>
+        <nav class="mobile-nav">
+            <a href="/real-estate-calculators/">Real Estate Calculators</a>
+            <a href="/advanced-real-estate-calculators/">Advanced Real Estate</a>
+            <a href="/energy-utility-calculators/">Energy &amp; Utility</a>
+            <a href="/finance-calculators/">Finance Calculators</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <nav class="breadcrumbs" aria-label="Breadcrumb">
+                <ol>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/energy-utility-calculators/">Energy &amp; Utility Calculators</a></li>
+                    <li><span aria-current="page">Utility Bill Comparison Calculator</span></li>
+                </ol>
+            </nav>
+
+            <div class="page-content">
+                <div class="calc-page-layout">
+                    <div class="calc-page-main">
+                        <h1>Utility Bill Comparison Calculator</h1>
+                        <p class="subtitle" style="color: var(--color-gray-600); font-size: var(--text-lg); line-height: var(--leading-relaxed); margin-bottom: var(--space-8);">
+                            Compare your current utility rate against an alternative provider's offer. Calculate monthly, annual, and 5-year savings to decide if switching is worth it.
+                        </p>
+
+                        <div class="calc-container">
+                            <div class="calc-header">
+                                <h2>Utility Provider Comparison</h2>
+                                <p>See how much you could save by switching providers</p>
+                            </div>
+                            <div class="calc-body">
+                                <form id="compare-form">
+                                    <div class="form-group">
+                                        <label class="form-label" for="current-rate">Current Provider Rate (per kWh or therm)</label>
+                                        <div class="input-prefix">
+                                            <span class="prefix">$</span>
+                                            <input type="number" id="current-rate" name="currentRate" class="form-input" placeholder="0.18" min="0.001" max="5" step="0.001" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label" for="alt-rate">Alternative Provider Rate (per kWh or therm)</label>
+                                        <div class="input-prefix">
+                                            <span class="prefix">$</span>
+                                            <input type="number" id="alt-rate" name="altRate" class="form-input" placeholder="0.14" min="0.001" max="5" step="0.001" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label" for="monthly-usage">Monthly Usage (kWh or therms)</label>
+                                        <input type="number" id="monthly-usage" name="monthlyUsage" class="form-input" placeholder="900" min="1" step="10" required>
+                                    </div>
+                                    <div class="calc-actions">
+                                        <button type="button" class="btn btn-calculate btn-full" onclick="calculateComparison()">Compare Utility Bills</button>
+                                        <button type="reset" class="btn btn-reset">Reset</button>
+                                    </div>
+                                </form>
+
+                                <div id="results" class="calc-results hidden">
+                                    <div class="result-primary">
+                                        <div class="result-label">Annual Savings</div>
+                                        <div class="result-value" id="result-annual-savings">$0</div>
+                                    </div>
+                                    <div class="result-grid result-grid-3">
+                                        <div class="result-item">
+                                            <div class="result-label">Monthly Savings</div>
+                                            <div class="result-value" id="result-monthly-savings">$0</div>
+                                        </div>
+                                        <div class="result-item">
+                                            <div class="result-label">5-Year Savings</div>
+                                            <div class="result-value" id="result-5yr-savings">$0</div>
+                                        </div>
+                                        <div class="result-item">
+                                            <div class="result-label">Switching ROI</div>
+                                            <div class="result-value" id="result-roi">0%</div>
+                                        </div>
+                                        <div class="result-item">
+                                            <div class="result-label">Current Monthly Bill</div>
+                                            <div class="result-value" id="result-current-bill">$0</div>
+                                        </div>
+                                        <div class="result-item">
+                                            <div class="result-label">New Monthly Bill</div>
+                                            <div class="result-value" id="result-new-bill">$0</div>
+                                        </div>
+                                        <div class="result-item">
+                                            <div class="result-label">Rate Difference</div>
+                                            <div class="result-value" id="result-rate-diff">$0</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="ad-slot ad-slot-leaderboard"></div>
+
+                        <section class="content-section">
+                            <h2>Utility Comparison Formula</h2>
+                            <div class="formula-box">
+                                <div class="formula-label">Savings Calculations</div>
+                                Current Monthly Bill = Monthly Usage &times; Current Rate
+New Monthly Bill = Monthly Usage &times; Alternative Rate
+Monthly Savings = Current Bill &minus; New Bill
+Annual Savings = Monthly Savings &times; 12
+5-Year Savings = Annual Savings &times; 5
+Switching ROI = (Annual Savings / Current Annual Bill) &times; 100
+Rate Difference = Current Rate &minus; Alternative Rate
+                            </div>
+                            <p>This calculation assumes consistent usage throughout the year. Actual savings depend on usage patterns and whether the alternative rate is fixed or variable.</p>
+                            <p>Always check for <strong>contract terms</strong> and any switching fees before changing providers, as these can reduce net savings.</p>
+                        </section>
+
+                        <section class="content-section">
+                            <h2>How to Use This Calculator</h2>
+                            <ol>
+                                <li><strong>Enter your current provider rate</strong> -- find this on your utility bill as the energy charge per kWh or per therm.</li>
+                                <li><strong>Enter the alternative provider rate</strong> -- from a competing supplier's offer or quote.</li>
+                                <li><strong>Enter your monthly usage</strong> -- in kWh (electricity) or therms (natural gas) from your recent bills.</li>
+                                <li><strong>Click "Compare Utility Bills"</strong> to see your potential savings and ROI from switching.</li>
+                            </ol>
+                        </section>
+
+                        <section class="content-section">
+                            <h2>Example Scenario</h2>
+                            <h3>Switching from $0.18/kWh to $0.14/kWh at 900 kWh/Month</h3>
+                            <p>Current rate: $0.18/kWh | Alternative rate: $0.14/kWh | Monthly usage: 900 kWh</p>
+                            <p>Current Monthly Bill = 900 &times; $0.18 = <strong>$162.00</strong></p>
+                            <p>New Monthly Bill = 900 &times; $0.14 = <strong>$126.00</strong></p>
+                            <p>Monthly Savings = <strong>$36.00</strong></p>
+                            <p>Annual Savings = $36 &times; 12 = <strong>$432/year</strong></p>
+                            <p>5-Year Savings = $432 &times; 5 = <strong>$2,160</strong></p>
+                            <p>Switching ROI = $432 / $1,944 = <strong>22.2%</strong></p>
+                        </section>
+
+                        <section class="faq-section">
+                            <h2>Frequently Asked Questions</h2>
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">
+                                    Can I choose my electricity or gas provider?
+                                    <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>In deregulated energy markets, residential customers can choose their electricity or gas supplier. States with deregulated electricity markets include Texas, Ohio, Pennsylvania, New York, and Illinois. Check your state's public utilities commission website to find out if your area is deregulated.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">
+                                    What should I look for when comparing utility providers?
+                                    <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>Compare the total rate per kWh or therm including all fees, not just the advertised rate. Check if rates are fixed or variable. Variable rates can be lower initially but may increase. Also evaluate contract length, cancellation fees, renewable energy options, and customer service reputation.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">
+                                    Are there fees for switching energy providers?
+                                    <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>Switching fees depend on your current contract. Many month-to-month plans have no switching fee. Fixed-rate contracts may have early termination fees, typically $50-$150. Always read the fine print before switching and factor any switching costs into your savings calculation.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">
+                                    How long does it take to switch energy providers?
+                                    <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 011-1z"/></svg>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>Switching electricity or gas suppliers typically takes 1-3 billing cycles. Your physical service and reliability do not change -- only the supplier billing changes. The distribution infrastructure remains owned by the local utility.</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="related-calculators">
+                            <h2>Related Calculators</h2>
+                            <div class="grid grid-3">
+                                <a href="/energy-utility-calculators/electricity-cost-calculator/" class="card card-link">
+                                    <div class="card-icon">E</div>
+                                    <h3>Electricity Cost Calculator</h3>
+                                    <p>Calculate your electricity costs at any rate.</p>
+                                </a>
+                                <a href="/energy-utility-calculators/gas-bill-calculator/" class="card card-link">
+                                    <div class="card-icon">G</div>
+                                    <h3>Gas Bill Calculator</h3>
+                                    <p>Estimate your natural gas costs by usage and rate.</p>
+                                </a>
+                                <a href="/energy-utility-calculators/solar-savings-calculator/" class="card card-link">
+                                    <div class="card-icon">S</div>
+                                    <h3>Solar Savings Calculator</h3>
+                                    <p>See if solar is a better long-term option than switching providers.</p>
+                                </a>
+                            </div>
+                        </section>
+
+                        <div class="disclaimer">
+                            <strong>Disclaimer:</strong> This calculator provides estimates based on stated rates and usage. Actual bills include fixed fees, taxes, and delivery charges not reflected here. Variable rates may change. Review the full rate schedule from any provider before switching.
+                        </div>
+
+                        <div class="ad-slot ad-slot-leaderboard"></div>
+                    </div>
+
+                    <aside class="calc-page-sidebar">
+                        <div class="sidebar-card">
+                            <h3>Energy &amp; Utility Tools</h3>
+                            <a href="/energy-utility-calculators/carbon-footprint-calculator/">Carbon Footprint</a>
+                            <a href="/energy-utility-calculators/electricity-cost-calculator/">Electricity Cost</a>
+                            <a href="/energy-utility-calculators/solar-savings-calculator/">Solar Savings</a>
+                            <a href="/energy-utility-calculators/ev-range-calculator/">EV Range</a>
+                            <a href="/energy-utility-calculators/gas-bill-calculator/">Gas Bill</a>
+                            <a href="/energy-utility-calculators/home-energy-efficiency-calculator/">Home Energy Efficiency</a>
+                            <a href="/energy-utility-calculators/utility-bill-comparison-calculator/">Utility Bill Comparison</a>
+                            <a href="/energy-utility-calculators/water-usage-cost-calculator/">Water Usage Cost</a>
+                        </div>
+                        <div class="ad-slot ad-slot-rectangle"></div>
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="/" class="logo">
+                        <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+                        CalcWise
+                    </a>
+                    <p>Free, accurate financial calculators for everyone. Make smarter money decisions with CalcWise.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Energy &amp; Utility</h4>
+                    <a href="/energy-utility-calculators/carbon-footprint-calculator/">Carbon Footprint</a>
+                    <a href="/energy-utility-calculators/electricity-cost-calculator/">Electricity Cost</a>
+                    <a href="/energy-utility-calculators/solar-savings-calculator/">Solar Savings</a>
+                    <a href="/energy-utility-calculators/ev-range-calculator/">EV Range</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Advanced Real Estate</h4>
+                    <a href="/advanced-real-estate-calculators/property-appreciation-calculator/">Property Appreciation</a>
+                    <a href="/advanced-real-estate-calculators/real-estate-leverage-calculator/">Leverage Calculator</a>
+                    <a href="/advanced-real-estate-calculators/real-estate-yield-calculator/">Yield Calculator</a>
+                    <a href="/advanced-real-estate-calculators/rental-expense-ratio-calculator/">Expense Ratio</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <a href="/about/">About</a>
+                    <a href="/contact/">Contact</a>
+                    <a href="/privacy/">Privacy Policy</a>
+                    <a href="/terms/">Terms of Use</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; 2026 CalcWise. All rights reserved.</span>
+                <div class="footer-links">
+                    <a href="/privacy/">Privacy</a>
+                    <a href="/terms/">Terms</a>
+                    <a href="/sitemap.xml">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/calculator-engine.js"></script>
+    <script src="/js/search-index.js"></script>
+    <script>
+    function calculateComparison() {
+        if (!CalcWise.validateForm('compare-form')) return;
+
+        const values = CalcWise.getFormValues('compare-form');
+        const currentRate = values.currentRate;
+        const altRate = values.altRate;
+        const monthlyUsage = values.monthlyUsage;
+
+        const currentMonthlyBill = monthlyUsage * currentRate;
+        const newMonthlyBill = monthlyUsage * altRate;
+        const monthlySavings = currentMonthlyBill - newMonthlyBill;
+        const annualSavings = monthlySavings * 12;
+        const savings5yr = annualSavings * 5;
+        const currentAnnualBill = currentMonthlyBill * 12;
+        const switchingROI = currentAnnualBill > 0 ? (annualSavings / currentAnnualBill) * 100 : 0;
+        const rateDiff = currentRate - altRate;
+
+        CalcWise.setText('result-annual-savings', CalcWise.formatCurrency(annualSavings, 0));
+        CalcWise.setText('result-monthly-savings', CalcWise.formatCurrency(monthlySavings));
+        CalcWise.setText('result-5yr-savings', CalcWise.formatCurrency(savings5yr, 0));
+        CalcWise.setText('result-roi', CalcWise.formatPercent(switchingROI));
+        CalcWise.setText('result-current-bill', CalcWise.formatCurrency(currentMonthlyBill));
+        CalcWise.setText('result-new-bill', CalcWise.formatCurrency(newMonthlyBill));
+        CalcWise.setText('result-rate-diff', '$' + Math.abs(rateDiff).toFixed(4) + (rateDiff >= 0 ? ' savings' : ' more'));
+
+        CalcWise.showResults('results');
+    }
+
+    document.getElementById('compare-form').addEventListener('reset', function() {
+        setTimeout(() => CalcWise.hideResults('results'), 0);
+    });
+    </script>
+</body>
+</html>

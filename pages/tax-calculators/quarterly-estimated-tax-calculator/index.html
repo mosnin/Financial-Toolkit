@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quarterly Estimated Tax Calculator | CalcWise</title>
+  <meta name="description" content="Calculate your quarterly estimated tax payments for 2026. Find due dates, safe harbor amounts, and payment amounts for self-employed and freelance workers.">
+  <link rel="canonical" href="https://calcwise.io/tax-calculators/quarterly-estimated-tax-calculator/">
+  <meta property="og:title" content="Quarterly Estimated Tax Calculator | CalcWise">
+  <meta property="og:description" content="Calculate quarterly estimated tax payment amounts and due dates for self-employed individuals.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcwise.io/tax-calculators/quarterly-estimated-tax-calculator/">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/"},
+      {"@type": "ListItem", "position": 2, "name": "Tax Calculators", "item": "https://calcwise.io/tax-calculators/"},
+      {"@type": "ListItem", "position": 3, "name": "Quarterly Estimated Tax Calculator"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "When are quarterly estimated taxes due in 2026?",
+        "acceptedAnswer": {"@type": "Answer", "text": "2026 estimated tax due dates are: Q1 — April 15, 2026; Q2 — June 15, 2026; Q3 — September 15, 2026; Q4 — January 15, 2027. If a due date falls on a weekend or holiday, it moves to the next business day."}
+      },
+      {
+        "@type": "Question",
+        "name": "Who needs to pay quarterly estimated taxes?",
+        "acceptedAnswer": {"@type": "Answer", "text": "You must pay quarterly estimated taxes if you expect to owe at least $1,000 in federal tax for the year and your withholding covers less than 90% of your current-year tax liability or 100% of your prior-year tax liability (110% if prior-year AGI exceeded $150,000)."}
+      },
+      {
+        "@type": "Question",
+        "name": "What is the safe harbor rule for estimated taxes?",
+        "acceptedAnswer": {"@type": "Answer", "text": "You avoid underpayment penalties by paying either 90% of the current year's tax liability, or 100% of last year's tax liability (110% if prior-year AGI was over $150,000). This is known as the safe harbor rule."}
+      },
+      {
+        "@type": "Question",
+        "name": "Can I pay estimated taxes online?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Yes. The IRS accepts estimated tax payments via IRS Direct Pay, EFTPS (Electronic Federal Tax Payment System), debit/credit card, or check with Form 1040-ES mailed to the IRS."}
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="logo">
+        <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav">
+        <a href="/">Home</a>
+        <a href="/pages/business-calculators/">Business</a>
+        <a href="/pages/financial-calculators/">Financial</a>
+        <a href="/pages/tax-calculators/" aria-current="page">Tax</a>
+        <a href="/pages/investment-calculators/">Investment</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav">
+      <a href="/">Home</a>
+      <a href="/pages/business-calculators/">Business Calculators</a>
+      <a href="/pages/financial-calculators/">Financial Calculators</a>
+      <a href="/pages/tax-calculators/">Tax Calculators</a>
+      <a href="/pages/investment-calculators/">Investment Calculators</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/pages/tax-calculators/">Tax Calculators</a></li>
+          <li><span aria-current="page">Quarterly Estimated Tax Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="calc-page-layout">
+          <div class="calc-page-main">
+            <h1>Quarterly Estimated Tax Calculator</h1>
+            <p class="subtitle" style="font-size:var(--text-lg);color:var(--color-gray-600);margin-bottom:var(--space-8);line-height:var(--leading-relaxed);">Calculate how much to pay each quarter to avoid underpayment penalties. This tool estimates your quarterly payment amounts, shows 2026 due dates, and calculates your safe harbor amount based on prior year taxes.</p>
+
+            <div class="calc-container">
+              <div class="calc-header">
+                <h2>Quarterly Estimated Tax Calculator</h2>
+                <p>Find your quarterly payment amounts and due dates</p>
+              </div>
+              <div class="calc-body">
+                <form id="calc-form" onsubmit="return false;">
+                  <div class="form-group">
+                    <label class="form-label" for="expected-income">Expected Annual Business/Self-Employment Income</label>
+                    <div class="input-prefix">
+                      <span class="prefix">$</span>
+                      <input type="number" id="expected-income" class="form-input" placeholder="80000" min="0" step="1000">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="other-income">Other Income (wages, investment, rental)</label>
+                    <div class="input-prefix">
+                      <span class="prefix">$</span>
+                      <input type="number" id="other-income" class="form-input" placeholder="0" min="0" step="1000">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="deductions">Expected Deductions (business expenses + personal)</label>
+                    <div class="input-prefix">
+                      <span class="prefix">$</span>
+                      <input type="number" id="deductions" class="form-input" placeholder="20000" min="0" step="1000">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="prior-year-tax">Prior Year Total Tax Liability (Line 24, Form 1040)</label>
+                    <div class="input-prefix">
+                      <span class="prefix">$</span>
+                      <input type="number" id="prior-year-tax" class="form-input" placeholder="12000" min="0" step="100">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="prior-year-agi">Prior Year AGI (for safe harbor determination)</label>
+                    <div class="input-prefix">
+                      <span class="prefix">$</span>
+                      <input type="number" id="prior-year-agi" class="form-input" placeholder="100000" min="0" step="1000">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="filing-status">Filing Status</label>
+                    <select id="filing-status" class="form-select">
+                      <option value="single">Single</option>
+                      <option value="married">Married Filing Jointly</option>
+                      <option value="hoh">Head of Household</option>
+                    </select>
+                  </div>
+                  <div class="calc-actions">
+                    <button type="button" class="btn btn-calculate btn-full" onclick="calculateQuarterly()">Calculate Quarterly Payments</button>
+                    <button type="button" class="btn btn-reset" onclick="resetForm()">Reset</button>
+                  </div>
+                </form>
+
+                <div id="results" class="calc-results hidden">
+                  <div class="result-primary">
+                    <div class="result-label">Estimated Per-Quarter Payment</div>
+                    <div class="result-value" id="result-per-quarter">$0</div>
+                  </div>
+                  <div class="result-grid">
+                    <div class="result-item">
+                      <div class="result-label">Estimated Annual Tax</div>
+                      <div class="result-value" id="result-annual-tax">$0</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Safe Harbor Amount (total)</div>
+                      <div class="result-value" id="result-safe-harbor">$0</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Safe Harbor Per Quarter</div>
+                      <div class="result-value" id="result-sh-quarterly">$0</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Recommended Approach</div>
+                      <div class="result-value" id="result-recommendation" style="font-size:var(--text-sm);">—</div>
+                    </div>
+                  </div>
+                  <div style="margin-top:var(--space-6);padding:var(--space-4);background:var(--color-primary-50);border-radius:var(--radius-lg);">
+                    <h3 style="font-size:var(--text-base);font-weight:var(--font-semibold);color:var(--color-primary);margin-bottom:var(--space-3);">2026 Due Dates</h3>
+                    <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-2);font-size:var(--text-sm);">
+                      <div><strong>Q1:</strong> April 15, 2026</div>
+                      <div id="q1-amount" style="text-align:right;font-weight:var(--font-semibold);">$0</div>
+                      <div><strong>Q2:</strong> June 15, 2026</div>
+                      <div id="q2-amount" style="text-align:right;font-weight:var(--font-semibold);">$0</div>
+                      <div><strong>Q3:</strong> September 15, 2026</div>
+                      <div id="q3-amount" style="text-align:right;font-weight:var(--font-semibold);">$0</div>
+                      <div><strong>Q4:</strong> January 15, 2027</div>
+                      <div id="q4-amount" style="text-align:right;font-weight:var(--font-semibold);">$0</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="ad-slot ad-slot-leaderboard"></div>
+
+            <section class="content-section">
+              <h2>How Quarterly Estimated Taxes Work</h2>
+              <div class="formula-box">
+                <div class="formula-label">Estimated Annual Tax</div>
+                Net SE Income = Business Income − Business Expenses<br>
+                SE Tax = Net SE Income × 0.9235 × 15.3%<br>
+                AGI = Net SE + Other Income − SE Tax/2 − Deductions<br>
+                Federal Income Tax = From brackets<br>
+                Total Tax = Federal Tax + SE Tax
+              </div>
+              <div class="formula-box">
+                <div class="formula-label">Safe Harbor Calculation</div>
+                If Prior Year AGI ≤ $150,000: Safe Harbor = Prior Year Tax × 100%<br>
+                If Prior Year AGI &gt; $150,000: Safe Harbor = Prior Year Tax × 110%<br>
+                Per Quarter = Safe Harbor / 4
+              </div>
+              <div class="formula-box">
+                <div class="formula-label">Quarterly Payment</div>
+                Pay the LESSER of: (Current Year Estimated Tax / 4) or (Safe Harbor / 4)<br>
+                to avoid underpayment penalties.
+              </div>
+            </section>
+
+            <section class="content-section">
+              <h2>2026 Estimated Tax Due Dates</h2>
+              <ul>
+                <li><strong>Q1 (Jan 1 – Mar 31):</strong> Due April 15, 2026</li>
+                <li><strong>Q2 (Apr 1 – May 31):</strong> Due June 15, 2026</li>
+                <li><strong>Q3 (Jun 1 – Aug 31):</strong> Due September 15, 2026</li>
+                <li><strong>Q4 (Sep 1 – Dec 31):</strong> Due January 15, 2027</li>
+              </ul>
+            </section>
+
+            <section class="content-section">
+              <h2>How to Use This Calculator</h2>
+              <ol>
+                <li>Enter your <strong>expected business or self-employment income</strong> for the year.</li>
+                <li>Enter any <strong>other income</strong> from wages, investments, or rental properties.</li>
+                <li>Enter your <strong>expected deductions</strong> (business expenses, retirement contributions, etc.).</li>
+                <li>Enter your <strong>prior year total tax</strong> from last year's Form 1040.</li>
+                <li>Enter <strong>prior year AGI</strong> to determine the correct safe harbor percentage.</li>
+                <li>Click <strong>Calculate Quarterly Payments</strong>.</li>
+              </ol>
+            </section>
+
+            <section class="faq-section">
+              <h2>Frequently Asked Questions</h2>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">When are quarterly estimated taxes due in 2026?<svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg></button>
+                <div class="faq-answer"><p>2026 estimated tax due dates are: Q1 — April 15, 2026; Q2 — June 15, 2026; Q3 — September 15, 2026; Q4 — January 15, 2027.</p></div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">Who needs to pay quarterly estimated taxes?<svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg></button>
+                <div class="faq-answer"><p>You must pay quarterly estimated taxes if you expect to owe at least $1,000 in federal tax and your withholding covers less than 90% of your current-year tax or 100% of last year's tax (110% if prior AGI exceeded $150,000).</p></div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">What is the safe harbor rule for estimated taxes?<svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg></button>
+                <div class="faq-answer"><p>You avoid underpayment penalties by paying 90% of the current year's tax, or 100% of last year's tax liability (110% if prior-year AGI was over $150,000).</p></div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">Can I pay estimated taxes online?<svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg></button>
+                <div class="faq-answer"><p>Yes. The IRS accepts estimated tax payments via IRS Direct Pay, EFTPS, debit/credit card, or check with Form 1040-ES.</p></div>
+              </div>
+            </section>
+
+            <section class="related-calculators">
+              <h2>Related Calculators</h2>
+              <div class="grid grid-3">
+                <a href="/pages/tax-calculators/self-employment-tax-calculator/" class="card card-link">
+                  <h3>Self-Employment Tax Calculator</h3>
+                  <p>Calculate your full SE tax and deductible portion.</p>
+                </a>
+                <a href="/pages/tax-calculators/1099-vs-w2-calculator/" class="card card-link">
+                  <h3>1099 vs W2 Calculator</h3>
+                  <p>Compare contractor vs employee net income.</p>
+                </a>
+                <a href="/pages/tax-calculators/tax-penalty-calculator/" class="card card-link">
+                  <h3>Tax Penalty Calculator</h3>
+                  <p>Estimate penalties for underpayment or late filing.</p>
+                </a>
+                <a href="/pages/tax-calculators/business-tax-liability-calculator/" class="card card-link">
+                  <h3>Business Tax Liability</h3>
+                  <p>Estimate total business tax by entity type.</p>
+                </a>
+              </div>
+            </section>
+
+            <div class="disclaimer">
+              <strong>Tax Disclaimer:</strong> This calculator provides estimates for educational purposes only and does not constitute tax advice. Actual quarterly estimated tax amounts depend on your specific income, deductions, credits, and prior year tax liability. State estimated taxes are not included. Consult a qualified tax professional for personalized guidance. Results are based on estimated 2026 federal tax parameters.
+            </div>
+          </div>
+
+          <aside class="calc-page-sidebar">
+            <div class="ad-slot ad-slot-rectangle"></div>
+            <div class="sidebar-card">
+              <h3>Tax Calculators</h3>
+              <a href="/pages/tax-calculators/self-employment-tax-calculator/">Self-Employment Tax</a>
+              <a href="/pages/tax-calculators/tax-penalty-calculator/">Tax Penalty Calculator</a>
+              <a href="/pages/tax-calculators/business-tax-liability-calculator/">Business Tax Liability</a>
+              <a href="/pages/tax-calculators/1099-vs-w2-calculator/">1099 vs W2</a>
+              <a href="/pages/tax-calculators/after-tax-income-calculator/">After-Tax Income</a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free online calculators for business, finance, tax, and investment decisions.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Calculators</h4>
+          <a href="/pages/business-calculators/">Business</a>
+          <a href="/pages/financial-calculators/">Financial</a>
+          <a href="/pages/tax-calculators/">Tax</a>
+          <a href="/pages/investment-calculators/">Investment</a>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <a href="/about/">About</a>
+          <a href="/blog/">Blog</a>
+          <a href="/contact/">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="/privacy/">Privacy Policy</a>
+          <a href="/terms/">Terms of Service</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/privacy/">Privacy</a>
+          <a href="/terms/">Terms</a>
+          <a href="/contact/">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    const BRACKETS = {
+      single: [{rate:0.10,min:0,max:11925},{rate:0.12,min:11925,max:48475},{rate:0.22,min:48475,max:103350},{rate:0.24,min:103350,max:197300},{rate:0.32,min:197300,max:250525},{rate:0.35,min:250525,max:626350},{rate:0.37,min:626350,max:Infinity}],
+      married: [{rate:0.10,min:0,max:23850},{rate:0.12,min:23850,max:96950},{rate:0.22,min:96950,max:206700},{rate:0.24,min:206700,max:394600},{rate:0.32,min:394600,max:501050},{rate:0.35,min:501050,max:751600},{rate:0.37,min:751600,max:Infinity}],
+      hoh: [{rate:0.10,min:0,max:17000},{rate:0.12,min:17000,max:64850},{rate:0.22,min:64850,max:103350},{rate:0.24,min:103350,max:197300},{rate:0.32,min:197300,max:250500},{rate:0.35,min:250500,max:626350},{rate:0.37,min:626350,max:Infinity}]
+    };
+    const STD_DED = {single:14600, married:29200, hoh:21900};
+
+    function calcTax(taxable, status) {
+      const b = BRACKETS[status] || BRACKETS.single;
+      let tax = 0;
+      for (const br of b) {
+        if (taxable <= br.min) break;
+        tax += (Math.min(taxable, br.max) - br.min) * br.rate;
+      }
+      return tax;
+    }
+
+    function calculateQuarterly() {
+      const businessIncome = CalcWise.parseNumber(document.getElementById('expected-income').value);
+      const otherIncome = CalcWise.parseNumber(document.getElementById('other-income').value);
+      const deductions = CalcWise.parseNumber(document.getElementById('deductions').value);
+      const priorYearTax = CalcWise.parseNumber(document.getElementById('prior-year-tax').value);
+      const priorYearAGI = CalcWise.parseNumber(document.getElementById('prior-year-agi').value);
+      const status = document.getElementById('filing-status').value;
+
+      if (businessIncome <= 0 && otherIncome <= 0) { alert('Please enter expected income.'); return; }
+
+      // SE tax
+      const seTax = businessIncome * 0.9235 * 0.153;
+      const deductSE = seTax / 2;
+      const totalIncome = businessIncome + otherIncome;
+      const agi = Math.max(0, totalIncome - deductSE - deductions);
+      const federalTaxable = Math.max(0, agi - STD_DED[status]);
+      const fedTax = calcTax(federalTaxable, status);
+      const annualTax = fedTax + seTax;
+
+      // Safe harbor
+      const shMultiplier = priorYearAGI > 150000 ? 1.10 : 1.00;
+      const safeHarbor = priorYearTax * shMultiplier;
+
+      const paymentBasis = Math.min(annualTax, safeHarbor);
+      const perQuarter = paymentBasis / 4;
+
+      const recommendation = annualTax < safeHarbor
+        ? 'Use current year estimate (lower)'
+        : 'Use safe harbor (lower risk of penalty)';
+
+      CalcWise.setText('result-per-quarter', CalcWise.formatCurrency(perQuarter));
+      CalcWise.setText('result-annual-tax', CalcWise.formatCurrency(annualTax));
+      CalcWise.setText('result-safe-harbor', CalcWise.formatCurrency(safeHarbor));
+      CalcWise.setText('result-sh-quarterly', CalcWise.formatCurrency(safeHarbor / 4));
+      CalcWise.setText('result-recommendation', recommendation);
+
+      // Per-quarter amounts
+      ['q1-amount','q2-amount','q3-amount','q4-amount'].forEach(id => {
+        CalcWise.setText(id, CalcWise.formatCurrency(perQuarter));
+      });
+
+      CalcWise.showResults('results');
+    }
+
+    function resetForm() {
+      document.getElementById('calc-form').reset();
+      CalcWise.hideResults('results');
+    }
+
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', !expanded);
+        btn.nextElementSibling.style.display = expanded ? 'none' : 'block';
+      });
+    });
+    document.querySelectorAll('.faq-answer').forEach(a => a.style.display = 'none');
+
+    const toggle = document.querySelector('.mobile-menu-toggle');
+    const mobileNav = document.querySelector('.mobile-nav');
+    if (toggle && mobileNav) {
+      toggle.addEventListener('click', () => {
+        const open = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', !open);
+        mobileNav.style.display = open ? 'none' : 'block';
+      });
+    }
+  </script>
+</body>
+</html>

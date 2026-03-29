@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Therapy Session Cost Calculator - Mental Health Cost Estimator | CalcWise</title>
+  <meta name="description" content="Free therapy session cost calculator. Estimate your monthly and annual out-of-pocket mental health therapy costs based on sessions per month, session cost, and insurance coverage.">
+  <meta name="keywords" content="therapy session cost calculator, mental health cost calculator, therapy copay calculator, psychotherapy cost estimator, counseling cost calculator">
+  <link rel="canonical" href="https://calcwise.io/healthcare-calculators/therapy-session-cost-calculator/">
+
+  <meta property="og:title" content="Therapy Session Cost Calculator - Mental Health Cost Estimator">
+  <meta property="og:description" content="Estimate monthly and annual therapy costs based on session frequency, session cost, and your insurance coverage.">
+  <meta property="og:url" content="https://calcwise.io/healthcare-calculators/therapy-session-cost-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Therapy Session Cost Calculator - Mental Health Cost Estimator">
+  <meta name="twitter:description" content="Estimate monthly and annual therapy costs based on session frequency and insurance coverage.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Healthcare Calculators", "item": "https://calcwise.io/healthcare-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "Therapy Session Cost Calculator", "item": "https://calcwise.io/healthcare-calculators/therapy-session-cost-calculator/" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How much does therapy cost without insurance?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Without insurance, therapy typically costs $100-$250 per 50-minute session, with rates varying by therapist type, location, and specialty. Psychiatrists charge more ($200-$400). Many therapists offer sliding scale fees based on income. Community mental health centers often provide low-cost or free therapy." }
+      },
+      {
+        "@type": "Question",
+        "name": "Does health insurance cover therapy?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Under the Mental Health Parity and Addiction Equity Act, health plans that cover mental health must provide benefits comparable to medical/surgical coverage. Most ACA-compliant plans cover outpatient mental health services, though you may still owe a copay, coinsurance, or need to meet your deductible first." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between a therapist copay and coinsurance?",
+        "acceptedAnswer": { "@type": "Answer", "text": "A copay is a flat fee per session (e.g., $30) regardless of the therapist's full charge. Coinsurance is a percentage of the allowed amount (e.g., 20% of $150 = $30 per session after the deductible is met). Many plans use copays for mental health once the deductible is met." }
+      },
+      {
+        "@type": "Question",
+        "name": "Are online/telehealth therapy sessions covered by insurance?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Most major insurance plans now cover telehealth mental health services at the same rate as in-person therapy, particularly after expanded coverage during and after COVID-19. Always verify with your insurer that your specific telehealth provider and platform are in-network before starting." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/business-calculators/">Business</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/business-calculators/">Business Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/healthcare-calculators/">Healthcare Calculators</a></li>
+          <li><span aria-current="page">Therapy Session Cost Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="article-content">
+          <h1>Therapy Session Cost Calculator</h1>
+          <p>Mental health care is a critical investment, and understanding the cost is the first step to accessing it. This calculator estimates your monthly and annual out-of-pocket therapy costs based on how many sessions you attend per month, the session cost, your insurance coverage type, and your copay or coinsurance — so you can budget with confidence.</p>
+
+          <div class="calc-container mt-8">
+            <div class="calc-header">
+              <h2>Estimate Your Therapy Costs</h2>
+              <p>Enter your session frequency, cost, and insurance details</p>
+            </div>
+            <div class="calc-body">
+              <form id="therapy-form" onsubmit="return false;">
+                <div class="form-group">
+                  <label class="form-label" for="sessions-month">Sessions Per Month</label>
+                  <input type="number" id="sessions-month" class="form-input" placeholder="4" min="1" max="30" step="1" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="session-cost">Session Cost (provider's full fee)</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="session-cost" class="form-input" placeholder="150" min="0" step="5" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="coverage-type">Insurance Coverage Type</label>
+                  <select id="coverage-type" class="form-input" onchange="toggleCoverageFields()" required>
+                    <option value="">Select coverage type...</option>
+                    <option value="none">No Insurance</option>
+                    <option value="copay">Flat Copay per Session</option>
+                    <option value="coinsurance">Coinsurance % per Session</option>
+                  </select>
+                </div>
+                <div class="form-group" id="copay-group" style="display:none;">
+                  <label class="form-label" for="therapy-copay">Your Copay per Session</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="therapy-copay" class="form-input" placeholder="30" min="0" step="5">
+                  </div>
+                </div>
+                <div class="form-group" id="coinsurance-group" style="display:none;">
+                  <label class="form-label" for="therapy-coinsurance">Your Coinsurance %</label>
+                  <div class="input-suffix">
+                    <input type="number" id="therapy-coinsurance" class="form-input" placeholder="20" min="0" max="100" step="1">
+                    <span class="suffix">%</span>
+                  </div>
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calculateTherapy()">Calculate</button>
+                  <button type="button" class="btn btn-reset" onclick="resetTherapy()">Reset</button>
+                </div>
+              </form>
+
+              <div id="therapy-results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">Monthly Out-of-Pocket</div>
+                  <div class="result-value" id="result-monthly-therapy"></div>
+                </div>
+                <div class="result-grid result-grid-3">
+                  <div class="result-item">
+                    <div class="result-label">Annual Out-of-Pocket</div>
+                    <div class="result-value" id="result-annual-therapy"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Insurance Saves You (Annual)</div>
+                    <div class="result-value" id="result-ins-saves"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Cost Per Session (Your Share)</div>
+                    <div class="result-value" id="result-per-session"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <section class="content-section">
+            <h2>How Therapy Cost Calculations Work</h2>
+            <p>Your actual therapy cost depends on the coverage structure your plan uses:</p>
+            <div class="formula-box">
+              <div class="formula-label">With Flat Copay</div>
+              Monthly Cost = Copay per Session &times; Sessions per Month
+            </div>
+            <div class="formula-box">
+              <div class="formula-label">With Coinsurance</div>
+              Monthly Cost = Session Cost &times; (Coinsurance % / 100) &times; Sessions per Month
+            </div>
+            <div class="formula-box">
+              <div class="formula-label">Annual Insurance Savings</div>
+              Savings = (Session Cost &times; Annual Sessions) - Annual Out-of-Pocket
+            </div>
+          </section>
+
+          <section class="content-section">
+            <h2>How to Use This Calculator</h2>
+            <ol>
+              <li><strong>Enter sessions per month</strong> - weekly therapy = 4 sessions; biweekly = 2 sessions.</li>
+              <li><strong>Enter the session cost</strong> - your therapist's standard fee (before insurance adjustments).</li>
+              <li><strong>Select coverage type</strong> - check your insurance card or plan summary for copay vs coinsurance.</li>
+              <li><strong>Enter your copay or coinsurance</strong> - the amount per session you pay after your deductible is met.</li>
+              <li><strong>Click Calculate</strong> to see your monthly cost, annual total, and what insurance saves you.</li>
+            </ol>
+          </section>
+
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>A person attends therapy weekly (4 sessions/month) at $160 per session. Their insurance plan covers mental health with a $35 copay per session. Monthly out-of-pocket: $35 &times; 4 = $140. Annual cost: $1,680. Without insurance at the full rate: $160 &times; 48 = $7,680. Their insurance saves them $6,000 annually — making the choice to seek mental health support far more financially accessible than going out-of-network or self-pay.</p>
+          </section>
+
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                How much does therapy cost without insurance?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Without insurance, therapy typically costs $100-$250 per 50-minute session depending on therapist type, location, and specialty. Many therapists offer sliding scale fees based on income. Community mental health centers often provide low-cost or free therapy.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Does health insurance cover therapy?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Under the Mental Health Parity Act, health plans covering mental health must provide benefits comparable to medical/surgical coverage. Most ACA-compliant plans cover outpatient mental health, though you may still owe copays or coinsurance after meeting your deductible.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What is the difference between a therapy copay and coinsurance?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>A copay is a flat fee per session (e.g., $30) regardless of cost. Coinsurance is a percentage of the allowed amount (e.g., 20% of $150 = $30 per session after deductible). Many plans use copays for mental health services once the deductible is met.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Are online/telehealth therapy sessions covered by insurance?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Most major insurance plans now cover telehealth mental health services at the same rate as in-person therapy. Always verify with your insurer that your specific telehealth provider and platform are in-network before beginning treatment.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/healthcare-calculators/out-of-pocket-cost-calculator/" class="card card-link">
+                <h3>Out-of-Pocket Cost Calculator</h3>
+                <p>Model how your full annual medical costs flow through your plan.</p>
+              </a>
+              <a href="/healthcare-calculators/health-savings-account-calculator/" class="card card-link">
+                <h3>HSA Calculator</h3>
+                <p>Use HSA funds tax-free for mental health and medical expenses.</p>
+              </a>
+              <a href="/healthcare-calculators/healthcare-deductible-calculator/" class="card card-link">
+                <h3>Deductible Calculator</h3>
+                <p>Compare plans to find the best total cost for your situation.</p>
+              </a>
+            </div>
+          </section>
+
+          <div class="disclaimer">
+            <strong>Disclaimer:</strong> This calculator provides estimates for budgeting purposes. Actual therapy costs depend on your specific insurance plan, whether your therapist is in-network, and your deductible status. If you are experiencing a mental health emergency, please contact the 988 Suicide & Crisis Lifeline by calling or texting 988. This is not medical advice.
+          </div>
+
+          <div class="ad-slot ad-slot-leaderboard"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Healthcare</h4>
+          <a href="/healthcare-calculators/">All Healthcare Calculators</a>
+          <a href="/healthcare-calculators/out-of-pocket-cost-calculator/">Out-of-Pocket Costs</a>
+        </div>
+        <div class="footer-col">
+          <h4>Finance</h4>
+          <a href="/finance-calculators/">All Finance Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    document.getElementById('coverage-type').addEventListener('change', toggleCoverageFields);
+
+    function toggleCoverageFields() {
+      const val = document.getElementById('coverage-type').value;
+      document.getElementById('copay-group').style.display = val === 'copay' ? 'block' : 'none';
+      document.getElementById('coinsurance-group').style.display = val === 'coinsurance' ? 'block' : 'none';
+    }
+
+    function calculateTherapy() {
+      const sessionsMonth = CalcWise.parseNumber(document.getElementById('sessions-month').value);
+      const sessionCost = CalcWise.parseNumber(document.getElementById('session-cost').value);
+      const coverageType = document.getElementById('coverage-type').value;
+
+      if (!sessionsMonth || !sessionCost || !coverageType) {
+        alert('Please fill in all required fields.');
+        return;
+      }
+
+      let perSessionCost;
+      if (coverageType === 'none') {
+        perSessionCost = sessionCost;
+      } else if (coverageType === 'copay') {
+        perSessionCost = CalcWise.parseNumber(document.getElementById('therapy-copay').value) || 0;
+      } else {
+        const coinPct = parseFloat(document.getElementById('therapy-coinsurance').value) / 100 || 0;
+        perSessionCost = sessionCost * coinPct;
+      }
+
+      const monthlyCost = perSessionCost * sessionsMonth;
+      const annualCost = monthlyCost * 12;
+      const annualFull = sessionCost * sessionsMonth * 12;
+      const insSaves = Math.max(0, annualFull - annualCost);
+
+      CalcWise.setText('result-monthly-therapy', CalcWise.formatCurrency(monthlyCost));
+      CalcWise.setText('result-annual-therapy', CalcWise.formatCurrency(annualCost));
+      CalcWise.setText('result-ins-saves', coverageType !== 'none' ? CalcWise.formatCurrency(insSaves) : '$0');
+      CalcWise.setText('result-per-session', CalcWise.formatCurrency(perSessionCost));
+      CalcWise.showResults('therapy-results');
+    }
+
+    function resetTherapy() {
+      document.getElementById('therapy-form').reset();
+      document.getElementById('copay-group').style.display = 'none';
+      document.getElementById('coinsurance-group').style.display = 'none';
+      CalcWise.hideResults('therapy-results');
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inflation-Adjusted Rent Calculator - CalcWise</title>
+  <meta name="description" content="Project your future rent payments at any annual rent inflation rate. See rent at 1, 3, 5, and 10 years, total rent paid, and a 5-year renting vs. buying cost comparison.">
+  <link rel="canonical" href="https://calcwise.io/inflation-calculators/inflation-adjusted-rent-calculator/">
+  <meta property="og:title" content="Inflation-Adjusted Rent Calculator - CalcWise">
+  <meta property="og:description" content="See how rising rent will affect your budget over time. Get projected rent at 1, 3, 5, and 10 years with total costs and a buy vs. rent comparison prompt.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcwise.io/inflation-calculators/inflation-adjusted-rent-calculator/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Inflation-Adjusted Rent Calculator - CalcWise">
+  <meta name="twitter:description" content="See how rising rent will affect your budget over time with projections and a buy vs. rent cost comparison.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/"},
+      {"@type": "ListItem", "position": 2, "name": "Inflation Calculators", "item": "https://calcwise.io/inflation-calculators/"},
+      {"@type": "ListItem", "position": 3, "name": "Inflation-Adjusted Rent Calculator"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How fast does rent typically increase each year?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Historically, US rent has increased about 3-5% per year on average, though this varies greatly by city and time period. Major metropolitan areas like New York, San Francisco, and Austin have seen 6-10% annual increases in hot markets. The national average over the past decade is approximately 4-5% annually."}
+      },
+      {
+        "@type": "Question",
+        "name": "How do I calculate projected future rent?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Projected Rent = Current Monthly Rent × (1 + Annual Rent Increase Rate)^Years. For example, $1,500/month rent with 5% annual increases becomes $1,914/month in 5 years and $2,443/month in 10 years — a 63% increase over a decade."}
+      },
+      {
+        "@type": "Question",
+        "name": "Should I buy a home to escape rent inflation?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Buying can lock in a fixed mortgage payment and protect against rent inflation, but it also comes with costs like maintenance, property taxes, and opportunity cost of a down payment. The decision depends on your local market, how long you plan to stay, your financial situation, and current mortgage rates versus rent levels."}
+      },
+      {
+        "@type": "Question",
+        "name": "What is total rent paid over a period with annual increases?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Total rent paid is the sum of all monthly rent payments over the period, where each year's rent is higher than the previous due to the annual increase rate. It is calculated by summing each year's annual rent (monthly × 12) from year 1 through the end of the period."}
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="logo">
+        <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav">
+        <a href="/">Home</a>
+        <a href="/pages/finance-calculators/">Finance</a>
+        <a href="/pages/business-calculators/">Business</a>
+        <a href="/pages/investment-calculators/">Investment</a>
+        <a href="/inflation-calculators/" aria-current="page">Inflation</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav">
+      <a href="/">Home</a>
+      <a href="/pages/finance-calculators/">Finance Calculators</a>
+      <a href="/pages/business-calculators/">Business Calculators</a>
+      <a href="/pages/investment-calculators/">Investment Calculators</a>
+      <a href="/inflation-calculators/">Inflation Calculators</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <!-- Breadcrumbs -->
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li><a href="/inflation-calculators/">Inflation Calculators</a></li>
+        <li><span aria-current="page">Inflation-Adjusted Rent Calculator</span></li>
+      </ol>
+    </nav>
+
+    <div class="page-content">
+      <div class="article-content">
+        <h1>Inflation-Adjusted Rent Calculator</h1>
+        <p>Rent increases compound year over year, and what seems like a modest 4% annual increase can dramatically inflate your housing costs over a decade. This calculator projects your rent at 1, 3, 5, and 10 years, shows total rent paid over your chosen period, and provides a 5-year cost comparison to help you evaluate renting versus buying at your home price estimate.</p>
+
+        <!-- Ad Slot -->
+        <div class="ad-slot ad-slot-leaderboard"></div>
+
+        <!-- Calculator -->
+        <div class="calc-container">
+          <div class="calc-header">
+            <h2>Project Future Rent with Annual Increases</h2>
+            <p>See exactly how much your rent will cost over the next 1 to 10 years</p>
+          </div>
+          <div class="calc-body">
+            <form id="rent-form">
+              <div class="form-group">
+                <label class="form-label" for="currentRent">Current Monthly Rent</label>
+                <div class="input-prefix">
+                  <span class="prefix">$</span>
+                  <input type="number" id="currentRent" name="currentRent" class="form-input" placeholder="1800" min="1" step="50" required>
+                </div>
+              </div>
+              <div class="calc-grid calc-grid-2col">
+                <div class="form-group">
+                  <label class="form-label" for="rentInflation">Local Rent Inflation Rate <span class="form-hint">(%/yr)</span></label>
+                  <div class="input-suffix">
+                    <input type="number" id="rentInflation" name="rentInflation" class="form-input" placeholder="4" min="0.1" max="30" step="0.1" required>
+                    <span class="suffix">%</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="years">Years to Project</label>
+                  <div class="input-suffix">
+                    <input type="number" id="years" name="years" class="form-input" placeholder="10" min="1" max="30" step="1" required>
+                    <span class="suffix">yrs</span>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="homePrice">Home Purchase Price <span class="form-hint">(for buy vs. rent comparison — optional)</span></label>
+                <div class="input-prefix">
+                  <span class="prefix">$</span>
+                  <input type="number" id="homePrice" name="homePrice" class="form-input" placeholder="350000" min="0" step="5000">
+                </div>
+              </div>
+
+              <div class="calc-actions">
+                <button type="button" class="btn btn-calculate" onclick="calculateRent()">Project Rent</button>
+                <button type="button" class="btn btn-reset" onclick="resetRent()">Reset</button>
+              </div>
+            </form>
+
+            <!-- Results -->
+            <div id="results" class="calc-results hidden">
+              <div class="result-primary">
+                <div class="result-label">Total Rent Paid Over Period</div>
+                <div class="result-value" id="totalRentPaid">$0</div>
+              </div>
+              <div class="result-grid result-grid-3">
+                <div class="result-item">
+                  <div class="result-label">Rent at Year 1</div>
+                  <div class="result-value" id="rent1">$0/mo</div>
+                </div>
+                <div class="result-item">
+                  <div class="result-label">Rent at Year 5</div>
+                  <div class="result-value" id="rent5">$0/mo</div>
+                </div>
+                <div class="result-item">
+                  <div class="result-label">Rent at Year 10</div>
+                  <div class="result-value" id="rent10">$0/mo</div>
+                </div>
+              </div>
+
+              <!-- Milestone table -->
+              <div style="margin-top:1.5rem;">
+                <h3 style="margin-bottom:0.75rem; font-size:var(--text-lg);">Rent Projection Milestones</h3>
+                <div style="overflow-x:auto;">
+                  <table class="data-table">
+                    <thead>
+                      <tr>
+                        <th>Year</th>
+                        <th>Monthly Rent</th>
+                        <th>Annual Rent</th>
+                        <th>Increase vs Today</th>
+                        <th>Cumulative Total</th>
+                      </tr>
+                    </thead>
+                    <tbody id="rentTableBody"></tbody>
+                  </table>
+                </div>
+              </div>
+
+              <!-- Buy vs Rent comparison -->
+              <div id="buyRentSection" style="margin-top:1.5rem; display:none;">
+                <h3 style="margin-bottom:0.75rem; font-size:var(--text-lg);">5-Year Renting vs. Buying Cost Comparison</h3>
+                <div class="result-grid result-grid-3">
+                  <div class="result-item">
+                    <div class="result-label">5-Year Total Rent Cost</div>
+                    <div class="result-value" id="fiveYearRent">$0</div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Est. 5-Year Buying Cost</div>
+                    <div class="result-value" id="fiveYearBuy">$0</div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Buying Advantage</div>
+                    <div class="result-value" id="buyingAdvantage">$0</div>
+                  </div>
+                </div>
+                <p style="font-size:var(--text-sm); color:var(--color-gray-500); margin-top:0.5rem;">* Buying cost estimate includes mortgage interest at 7%, property tax at 1.2%/yr, maintenance at 1%/yr, and insurance at 0.5%/yr. Does not include down payment opportunity cost or home appreciation. Use as a rough guide only.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Formula Section -->
+        <section class="content-section">
+          <h2>Rent Projection Formula</h2>
+          <div class="formula-box">
+            <div class="formula-label">Formulas Used</div>
+            Projected Monthly Rent (Year N) = Current Rent × (1 + Rent Inflation Rate)^N<br><br>
+            Annual Rent (Year N) = Projected Monthly Rent × 12<br><br>
+            Total Rent Paid = Σ (Annual Rent for Year 1 through Year N)<br><br>
+            Monthly Increase = Projected Rent − Current Rent
+          </div>
+          <p>Each year's rent is compounded on the previous year, meaning increases accelerate in dollar terms over time. The total rent paid sums every year's annual cost — a figure that often surprises renters who have not calculated it explicitly. Understanding this total helps renters make informed buy versus rent decisions.</p>
+        </section>
+
+        <!-- How to Use -->
+        <section class="content-section">
+          <h2>How to Use This Calculator</h2>
+          <ol>
+            <li><strong>Enter your current monthly rent:</strong> The rent you pay right now.</li>
+            <li><strong>Set the local rent inflation rate:</strong> Check your city's historical rent increases — national average is 4–5%; hot markets can be 6–10%.</li>
+            <li><strong>Choose the projection period:</strong> Up to 30 years. 10 years is a useful planning horizon for most renters.</li>
+            <li><strong>Optionally enter a home price:</strong> If you are considering buying, enter a representative home price to see a 5-year cost comparison versus renting.</li>
+            <li><strong>Review the milestones table:</strong> See rent at 1, 3, 5, and 10 years, annual costs, and running total.</li>
+          </ol>
+        </section>
+
+        <!-- Example Scenario -->
+        <section class="content-section">
+          <h2>Example Scenario</h2>
+          <p>You currently pay $1,800/month in rent. Local rents are rising at 5% per year. Over 10 years:</p>
+          <ul>
+            <li><strong>Year 1:</strong> $1,890/month ($22,680/yr)</li>
+            <li><strong>Year 3:</strong> $2,083/month ($24,996/yr)</li>
+            <li><strong>Year 5:</strong> $2,297/month ($27,565/yr)</li>
+            <li><strong>Year 10:</strong> $2,932/month ($35,185/yr)</li>
+            <li><strong>Total rent paid over 10 years:</strong> ~$289,000 — nearly $300K with no equity built</li>
+          </ul>
+          <p>Seeing the 10-year cumulative rent total often motivates renters to explore homeownership or to negotiate better lease terms with their landlord.</p>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+          <h2>Frequently Asked Questions</h2>
+          <div class="faq-item">
+            <button class="faq-question">
+              How fast does rent typically increase each year?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>Historically, US rent has increased about 3–5% per year on average, though this varies greatly by city and time period. Major metropolitan areas like New York, San Francisco, and Austin have seen 6–10% annual increases in hot markets. The national average over the past decade is approximately 4–5% annually.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              How do I calculate projected future rent?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>Projected Rent = Current Monthly Rent × (1 + Annual Rent Increase Rate)^Years. For example, $1,500/month rent with 5% annual increases becomes $1,914/month in 5 years and $2,443/month in 10 years — a 63% increase over a decade.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              Should I buy a home to escape rent inflation?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>Buying can lock in a fixed mortgage payment and protect against rent inflation, but it also comes with costs like maintenance, property taxes, and opportunity cost of a down payment. The decision depends on your local market, how long you plan to stay, your financial situation, and current mortgage rates versus rent levels.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              What is total rent paid over a period with annual increases?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>Total rent paid is the sum of all monthly rent payments over the period, where each year's rent is higher than the previous due to the annual increase rate. It is calculated by summing each year's annual rent (monthly × 12) from year 1 through the end of the period.</p></div>
+          </div>
+        </section>
+
+        <!-- Related Calculators -->
+        <section class="related-calculators">
+          <h2>Related Calculators</h2>
+          <div class="grid grid-3">
+            <a href="/inflation-calculators/cost-increase-projection-calculator/" class="card card-link">
+              <h3>Cost Increase Projection Calculator</h3>
+              <p>Project how any recurring cost grows over time.</p>
+            </a>
+            <a href="/inflation-calculators/inflation-impact-calculator/" class="card card-link">
+              <h3>Inflation Impact Calculator</h3>
+              <p>Calculate the full purchasing power impact of inflation.</p>
+            </a>
+            <a href="/inflation-calculators/inflation-adjusted-grocery-cost-calculator/" class="card card-link">
+              <h3>Grocery Cost Inflation Calculator</h3>
+              <p>Project rising food costs for your household.</p>
+            </a>
+            <a href="/inflation-calculators/future-purchasing-power-calculator/" class="card card-link">
+              <h3>Future Purchasing Power Calculator</h3>
+              <p>See what today's rent dollars will be worth in future years.</p>
+            </a>
+            <a href="/pages/finance-calculators/budget-calculator/" class="card card-link">
+              <h3>Budget Calculator (50/30/20)</h3>
+              <p>Build a budget that accounts for rising housing costs.</p>
+            </a>
+          </div>
+        </section>
+
+        <!-- Disclaimer -->
+        <div class="disclaimer">
+          <strong>Disclaimer:</strong> This calculator is provided for informational and educational purposes only. It does not constitute financial, real estate, or housing advice. The buy vs. rent comparison is a simplified estimate only. Consult a qualified financial advisor or real estate professional for personalized guidance.
+        </div>
+
+        <!-- Ad Slot -->
+        <div class="ad-slot ad-slot-rectangle"></div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free online financial calculators to help you make smarter money decisions.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Inflation Tools</h4>
+          <a href="/inflation-calculators/inflation-impact-calculator/">Inflation Impact</a>
+          <a href="/inflation-calculators/future-purchasing-power-calculator/">Purchasing Power</a>
+          <a href="/inflation-calculators/inflation-adjusted-salary-calculator/">Salary Adjustment</a>
+          <a href="/inflation-calculators/inflation-adjusted-retirement-calculator/">Retirement Inflation</a>
+        </div>
+        <div class="footer-col">
+          <h4>Finance</h4>
+          <a href="/pages/finance-calculators/net-worth-calculator/">Net Worth</a>
+          <a href="/pages/finance-calculators/budget-calculator/">Budget (50/30/20)</a>
+          <a href="/pages/finance-calculators/emergency-fund-calculator/">Emergency Fund</a>
+          <a href="/pages/finance-calculators/retirement-savings-calculator/">Retirement Savings</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about/">About</a>
+          <a href="/contact/">Contact</a>
+          <a href="/privacy/">Privacy Policy</a>
+          <a href="/terms/">Terms of Service</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 CalcWise. All rights reserved.</span>
+        <div class="footer-links">
+          <a href="/privacy/">Privacy</a>
+          <a href="/terms/">Terms</a>
+          <a href="/contact/">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateRent() {
+      if (!CalcWise.validateForm('rent-form')) return;
+      const v = CalcWise.getFormValues('rent-form');
+      const years = Math.min(v.years, 30);
+
+      const milestones = [1, 3, 5, 10].filter(m => m <= years);
+      let totalRent = 0;
+      const rowData = [];
+
+      for (let y = 1; y <= years; y++) {
+        const monthly = CalcWise.futureValueWithInflation(v.currentRent, v.rentInflation, y);
+        const annual = monthly * 12;
+        totalRent += annual;
+        rowData.push({ year: y, monthly, annual, total: totalRent });
+      }
+
+      CalcWise.setText('totalRentPaid', CalcWise.formatCurrency(totalRent));
+
+      const getMonthly = (y) => rowData[Math.min(y, years) - 1]?.monthly || 0;
+      CalcWise.setText('rent1', CalcWise.formatCurrency(getMonthly(1)) + '/mo');
+      CalcWise.setText('rent5', CalcWise.formatCurrency(getMonthly(5)) + '/mo');
+      CalcWise.setText('rent10', CalcWise.formatCurrency(getMonthly(10)) + '/mo');
+
+      // Milestone table
+      const tbody = milestones.map(m => {
+        const r = rowData[m - 1];
+        const increase = r.monthly - v.currentRent;
+        return `<tr>
+          <td>${m} yr${m > 1 ? 's' : ''}</td>
+          <td>${CalcWise.formatCurrency(r.monthly)}/mo</td>
+          <td>${CalcWise.formatCurrency(r.annual)}/yr</td>
+          <td style="color:var(--color-error);">+${CalcWise.formatCurrency(increase)}/mo</td>
+          <td>${CalcWise.formatCurrency(r.total)}</td>
+        </tr>`;
+      }).join('');
+      document.getElementById('rentTableBody').innerHTML = tbody;
+
+      // Buy vs rent comparison
+      const homePrice = v.homePrice;
+      if (homePrice > 0) {
+        const fiveYearRent = rowData[Math.min(5, years) - 1]?.total || totalRent;
+        // Simplified buying cost: mortgage interest (~7% on 80% LTV), property tax (1.2%), maintenance (1%), insurance (0.5%)
+        const loan = homePrice * 0.8;
+        const annualInterest = loan * 0.07;
+        const annualTax = homePrice * 0.012;
+        const annualMaintenance = homePrice * 0.01;
+        const annualInsurance = homePrice * 0.005;
+        const annualBuyCost = annualInterest + annualTax + annualMaintenance + annualInsurance;
+        const fiveYearBuy = annualBuyCost * 5;
+        const advantage = fiveYearRent - fiveYearBuy;
+
+        CalcWise.setText('fiveYearRent', CalcWise.formatCurrency(fiveYearRent));
+        CalcWise.setText('fiveYearBuy', CalcWise.formatCurrency(fiveYearBuy));
+        const advEl = document.getElementById('buyingAdvantage');
+        if (advantage > 0) {
+          advEl.textContent = CalcWise.formatCurrency(advantage) + ' cheaper to buy';
+          advEl.style.color = 'var(--color-success)';
+        } else {
+          advEl.textContent = CalcWise.formatCurrency(Math.abs(advantage)) + ' cheaper to rent';
+          advEl.style.color = 'var(--color-warning)';
+        }
+        document.getElementById('buyRentSection').style.display = 'block';
+      } else {
+        document.getElementById('buyRentSection').style.display = 'none';
+      }
+
+      CalcWise.showResults('results');
+    }
+
+    function resetRent() {
+      document.getElementById('rent-form').reset();
+      document.getElementById('buyRentSection').style.display = 'none';
+      CalcWise.hideResults('results');
+    }
+  </script>
+</body>
+</html>

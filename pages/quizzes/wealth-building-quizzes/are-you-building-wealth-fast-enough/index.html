@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Are You Building Wealth Fast Enough? Quiz | CalcWise</title>
+  <meta name="description" content="Compare your net worth, savings rate, investment returns, and passive income against real benchmarks to find out if you're accelerating, on track, or behind target.">
+  <link rel="canonical" href="https://calcwise.io/quizzes/wealth-building-quizzes/are-you-building-wealth-fast-enough/">
+  <meta property="og:title" content="Are You Building Wealth Fast Enough? Quiz | CalcWise">
+  <meta property="og:description" content="8-question quiz to benchmark your wealth building pace against your age, savings rate, and investment returns. Get a personalised result and next steps.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcwise.io/quizzes/wealth-building-quizzes/are-you-building-wealth-fast-enough/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Are You Building Wealth Fast Enough? Quiz | CalcWise">
+  <meta name="twitter:description" content="8 questions to benchmark your wealth building pace. Find out if you're Accelerating, On Track, Moderate, or Behind Target.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+  <link rel="stylesheet" href="/css/quiz.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/"},
+      {"@type": "ListItem", "position": 2, "name": "Quizzes", "item": "https://calcwise.io/quizzes/"},
+      {"@type": "ListItem", "position": 3, "name": "Wealth Building Quizzes", "item": "https://calcwise.io/quizzes/wealth-building-quizzes/"},
+      {"@type": "ListItem", "position": 4, "name": "Are You Building Wealth Fast Enough?", "item": "https://calcwise.io/quizzes/wealth-building-quizzes/are-you-building-wealth-fast-enough/"}
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="32" height="32" rx="8" fill="currentColor"/>
+          <path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+        </svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/business-calculators/">Business</a>
+        <a href="/quizzes/" aria-current="page">Quizzes</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/business-calculators/">Business Calculators</a>
+      <a href="/quizzes/">Quizzes</a>
+      <a href="/about.html">About</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/quizzes/">Quizzes</a></li>
+          <li><a href="/quizzes/wealth-building-quizzes/">Wealth Building Quizzes</a></li>
+          <li><span aria-current="page">Are You Building Wealth Fast Enough?</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <h1>Are You Building Wealth Fast Enough?</h1>
+        <p class="intro">This 8-question quiz benchmarks your wealth-building pace against proven financial milestones — net worth vs. age, savings rate, investment returns, passive income, debt status, asset diversification, and more. Get an honest assessment of where you stand and a clear action plan to accelerate your progress.</p>
+
+        <div class="quiz-container" id="quiz">
+          <div class="quiz-progress">
+            <div class="quiz-progress__label">
+              <span id="progress-text">Question 1 of 8</span>
+              <span id="progress-pct">0%</span>
+            </div>
+            <div class="quiz-progress__bar">
+              <div class="quiz-progress__fill" id="progress-bar" style="width:0%"></div>
+            </div>
+          </div>
+          <div id="question-container"></div>
+          <div id="result-container" class="quiz-result hidden"></div>
+        </div>
+
+        <!-- Ad slot -->
+        <div class="ad-slot ad-slot--rectangle" aria-hidden="true" style="margin:2rem 0"></div>
+
+        <!-- FAQ -->
+        <section class="faq-section" aria-labelledby="faq-heading" style="margin-top:3rem">
+          <h2 id="faq-heading">Frequently Asked Questions</h2>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false"><span>What net worth should I have at my age?</span><svg class="faq-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M10 4v12M4 10h12"/></svg></button>
+            <div class="faq-answer"><p>A common benchmark from "The Millionaire Next Door" suggests your net worth should be at least (Age × Annual Pre-Tax Income) / 10. More practically: 1x your income by 30, 3x by 40, 6x by 50, and 8x by 60. These are guidelines, not rules — starting late and accelerating is always better than not starting.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false"><span>What is a good savings rate for building wealth?</span><svg class="faq-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M10 4v12M4 10h12"/></svg></button>
+            <div class="faq-answer"><p>Standard financial advice recommends saving 15–20% of gross income for retirement alone. Those targeting early financial independence often save 30–50%+. Even increasing your savings rate by 5% meaningfully compresses your timeline to financial freedom. The savings rate matters more than investment returns for most people.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false"><span>How does passive income factor into wealth building?</span><svg class="faq-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M10 4v12M4 10h12"/></svg></button>
+            <div class="faq-answer"><p>Passive income — dividends, rental income, royalties, interest — is the hallmark of advanced wealth building. It reduces your dependence on earned income and accelerates compounding. Even $200–$500/month in passive income dramatically changes your wealth trajectory over 10–20 years. Focus on building this stream once your debt is cleared and emergency fund is solid.</p></div>
+          </div>
+        </section>
+
+        <!-- Related Quizzes -->
+        <section aria-labelledby="related-heading" style="margin-top:3rem">
+          <h2 id="related-heading">Related Wealth Building Quizzes</h2>
+          <div class="quiz-grid" style="grid-template-columns:repeat(auto-fill,minmax(260px,1fr))">
+            <a href="/quizzes/wealth-building-quizzes/how-close-are-you-to-your-first-million/" class="quiz-card">
+              <div class="quiz-card__badge">Wealth</div>
+              <h3>How Close Are You to Your First Million?</h3>
+              <p>Get an estimated timeline to $1 million based on your current savings and investments.</p>
+              <span class="quiz-card__cta">Take quiz <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </a>
+            <a href="/quizzes/wealth-building-quizzes/is-your-money-working-hard-enough/" class="quiz-card">
+              <div class="quiz-card__badge">Wealth</div>
+              <h3>Is Your Money Working Hard Enough?</h3>
+              <p>Find out if your investments are deployed efficiently or leaving returns on the table.</p>
+              <span class="quiz-card__cta">Take quiz <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </a>
+            <a href="/quizzes/wealth-building-quizzes/what-is-your-wealth-building-style/" class="quiz-card">
+              <div class="quiz-card__badge">Wealth</div>
+              <h3>What Is Your Wealth Building Style?</h3>
+              <p>Discover your investor personality and the strategy best suited to your strengths.</p>
+              <span class="quiz-card__cta">Take quiz <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </a>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect width="32" height="32" rx="8" fill="currentColor"/>
+              <path d="M8 10h16M8 16h16M8 22h10" stroke="#1B4D3E" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators and quizzes built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Wealth Building Quizzes</h4>
+          <a href="/quizzes/wealth-building-quizzes/are-you-building-wealth-fast-enough/">Building Wealth Fast Enough?</a>
+          <a href="/quizzes/wealth-building-quizzes/what-is-your-wealth-building-style/">Your Wealth Building Style</a>
+          <a href="/quizzes/wealth-building-quizzes/how-close-are-you-to-your-first-million/">Close to First Million?</a>
+          <a href="/quizzes/wealth-building-quizzes/is-your-money-working-hard-enough/">Money Working Hard Enough?</a>
+        </div>
+        <div class="footer-col">
+          <h4>Calculators</h4>
+          <a href="/finance-calculators/wealth-milestone-calculator/">Wealth Milestone Calculator</a>
+          <a href="/finance-calculators/millionaire-timeline-calculator/">Millionaire Timeline</a>
+          <a href="/finance-calculators/net-worth-growth-calculator/">Net Worth Growth</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about.html">About</a>
+          <a href="/contact.html">Contact</a>
+          <a href="/privacy.html">Privacy Policy</a>
+          <a href="/terms.html">Terms of Use</a>
+          <a href="/disclaimer.html">Disclaimer</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/privacy.html">Privacy</a>
+          <a href="/terms.html">Terms</a>
+          <a href="/disclaimer.html">Disclaimer</a>
+          <a href="/sitemap.xml">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    document.querySelector('.mobile-menu-toggle').addEventListener('click', function() {
+      const nav = document.querySelector('.mobile-nav');
+      const isOpen = nav.classList.toggle('is-open');
+      this.setAttribute('aria-expanded', isOpen);
+      this.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+    });
+    document.querySelectorAll('.faq-question').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        const item = this.closest('.faq-item');
+        const isOpen = item.classList.toggle('is-open');
+        this.setAttribute('aria-expanded', isOpen);
+      });
+    });
+
+    // ── Quiz Engine ──
+    const questions = [
+      {
+        question: "How does your current net worth compare to the benchmark for your age group (roughly 1x income at 30, 3x at 40, 6x at 50)?",
+        options: ["Significantly above the benchmark", "Close to or at the benchmark", "Somewhat below the benchmark", "Well below the benchmark"],
+        scores: [4, 3, 2, 1],
+        explanation: "Age-based net worth benchmarks help you gauge progress. Being above benchmark at any age is a strong signal — but below benchmark simply means there's room to accelerate, not that it's too late."
+      },
+      {
+        question: "What is your current gross savings rate (total savings and investments as a % of gross income)?",
+        options: ["30% or more", "20%–29%", "10%–19%", "Less than 10%"],
+        scores: [4, 3, 2, 1],
+        explanation: "Savings rate is the single most powerful lever in wealth building. At 30%+, you can reach financial independence in under 20 years from a zero start. At under 10%, it takes 40+ years."
+      },
+      {
+        question: "What average annual return are your investments generating?",
+        options: ["8% or more", "5%–7%", "2%–4%", "Below 2% or mostly in cash"],
+        scores: [4, 3, 2, 1],
+        explanation: "The S&P 500 has averaged ~10% annually before inflation over the long run. If your portfolio is significantly underperforming, fees, asset allocation, or idle cash may be dragging returns down."
+      },
+      {
+        question: "Do you have any passive income streams (dividends, rental income, royalties, side businesses)?",
+        options: ["Yes, covering 25%+ of monthly expenses", "Yes, covering 5%–24% of monthly expenses", "Small amounts but not meaningful yet", "No passive income at all"],
+        scores: [4, 3, 2, 1],
+        explanation: "Passive income is the gateway to financial freedom. Even small streams accelerate wealth compounding significantly because you can reinvest rather than rely entirely on earned income."
+      },
+      {
+        question: "What is your current non-mortgage debt situation?",
+        options: ["Completely debt-free (non-mortgage)", "Only low-rate debt (under 5%)", "Some moderate debt (5%–10%)", "High-interest debt above 10%"],
+        scores: [4, 3, 2, 1],
+        explanation: "High-interest debt is the number one destroyer of wealth building. A guaranteed 15–25% return by paying off credit card debt beats almost any investment strategy available."
+      },
+      {
+        question: "How has your net worth trended over the past two years?",
+        options: ["Growing significantly (20%+ per year)", "Growing steadily (5%–19% per year)", "Flat or barely growing", "Declining"],
+        scores: [4, 3, 2, 1],
+        explanation: "Consistent net worth growth — even modest — compounds powerfully over time. If your net worth is flat or declining, spending, debt, or underinvestment are likely culprits worth addressing immediately."
+      },
+      {
+        question: "How diversified are your wealth-building assets?",
+        options: ["Stocks, real estate, bonds, and other assets", "Stocks and one other asset class", "Mostly one asset class", "No meaningful investment assets"],
+        scores: [4, 3, 2, 1],
+        explanation: "Diversification across asset classes reduces volatility and improves risk-adjusted returns. Concentrated portfolios (even great ones) carry unnecessary single-point-of-failure risk."
+      },
+      {
+        question: "How would you describe your progress toward major financial milestones (e.g. retirement fund target, property, financial independence)?",
+        options: ["Ahead of schedule on key milestones", "On track with my plan", "Behind but have a plan", "Haven't set or tracked milestones"],
+        scores: [4, 3, 2, 1],
+        explanation: "Defined milestones with timelines create accountability and allow course corrections early. Without them, it's easy to feel busy financially while making little structural progress toward freedom."
+      }
+    ];
+
+    const results = [
+      {
+        min: 29,
+        label: "Accelerating",
+        colorClass: "result-score--high",
+        title: "You're Accelerating — Well Ahead of Target",
+        desc: "Your savings rate, investment returns, net worth trajectory, and passive income are all firing on multiple cylinders. You're ahead of most benchmarks and on a path to significant financial freedom. The opportunity now is to optimise and compound what's already working.",
+        recs: [
+          "Explore advanced tax-optimisation strategies: Backdoor Roth IRA, HSA maximisation, tax-loss harvesting.",
+          "Consider diversifying into alternative assets — real estate syndications, private equity, or international markets.",
+          "Set a specific date-based financial independence target and model the final steps with our calculators."
+        ]
+      },
+      {
+        min: 21,
+        label: "On Track",
+        colorClass: "",
+        title: "On Track — Solid Progress",
+        desc: "Your wealth-building fundamentals are strong. You're hitting most benchmarks and your net worth is growing consistently. A few targeted upgrades could shift you from 'on track' to 'accelerating' within 12–18 months.",
+        recs: [
+          "Identify your lowest-scoring area from this quiz and focus on improving it this quarter.",
+          "If passive income is under 5% of expenses, start building a dividend portfolio or rental strategy.",
+          "Model different savings rate increases using the Wealth Milestone Calculator to see the long-term impact."
+        ]
+      },
+      {
+        min: 13,
+        label: "Moderate",
+        colorClass: "result-score--mid",
+        title: "Moderate Progress — Acceleration Needed",
+        desc: "You have some wealth-building habits in place, but meaningful gaps are slowing your trajectory. The good news: targeted changes in 2–3 areas can have a compounding effect that substantially changes your 10-year outlook.",
+        recs: [
+          "Clear any high-interest debt as your top priority — the guaranteed return beats most investments.",
+          "Increase your savings rate by just 5% through automated transfers — it becomes invisible quickly.",
+          "Review your investment allocation: if returns are under 5%, fees or cash drag are likely costing you thousands annually."
+        ]
+      },
+      {
+        min: 0,
+        label: "Behind Target",
+        colorClass: "result-score--low",
+        title: "Behind Target — Time to Recalibrate",
+        desc: "Your wealth-building pace needs a structural reset. This isn't about blame — many people in this position turn it around dramatically within 2–3 years by addressing the fundamentals. The most important step is to start with one change today.",
+        recs: [
+          "Track every dollar for 30 days to find where your income is going — this step alone changes behavior.",
+          "Open a dedicated investment account and set up even $100/month automatic investing into a low-cost index fund.",
+          "Use the Millionaire Timeline Calculator to see exactly what monthly savings amount is needed given your timeline.",
+          "Address any debt above 10% interest before investing beyond employer match."
+        ]
+      }
+    ];
+
+    const calculatorLinks = [
+      { href: "/finance-calculators/wealth-milestone-calculator/", label: "Wealth Milestone Calculator" },
+      { href: "/finance-calculators/millionaire-timeline-calculator/", label: "Millionaire Timeline" },
+      { href: "/finance-calculators/net-worth-growth-calculator/", label: "Net Worth Growth Calculator" }
+    ];
+
+    let current = 0;
+    let totalScore = 0;
+    let answered = false;
+
+    function renderQuestion() {
+      answered = false;
+      const q = questions[current];
+      const pct = Math.round((current / questions.length) * 100);
+      document.getElementById('progress-bar').style.width = pct + '%';
+      document.getElementById('progress-text').textContent = 'Question ' + (current + 1) + ' of ' + questions.length;
+      document.getElementById('progress-pct').textContent = pct + '%';
+      document.getElementById('question-container').innerHTML = `
+        <div class="quiz-question">
+          <div class="quiz-question__number">Question ${current + 1}</div>
+          <p class="quiz-question__text">${q.question}</p>
+          <ul class="quiz-options" role="list">
+            ${q.options.map((opt, i) => `
+              <li>
+                <button class="quiz-option" data-index="${i}" onclick="selectAnswer(${i})">
+                  <span class="quiz-option__indicator"></span>
+                  <span>${opt}</span>
+                </button>
+              </li>`).join('')}
+          </ul>
+          <div id="explanation" class="quiz-explanation" style="display:none"></div>
+          <div class="quiz-nav">
+            <span></span>
+            <button class="btn btn-primary" id="next-btn" onclick="nextQuestion()" disabled>
+              ${current < questions.length - 1 ? 'Next Question' : 'See Results'}
+            </button>
+          </div>
+        </div>`;
+    }
+
+    function selectAnswer(idx) {
+      if (answered) return;
+      answered = true;
+      const q = questions[current];
+      const btns = document.querySelectorAll('.quiz-option');
+      btns.forEach(function(btn) { btn.disabled = true; });
+      btns[idx].classList.add('selected');
+      totalScore += q.scores[idx];
+      const expEl = document.getElementById('explanation');
+      expEl.style.display = 'block';
+      expEl.className = 'quiz-explanation quiz-explanation--correct';
+      expEl.textContent = q.explanation;
+      document.getElementById('next-btn').disabled = false;
+    }
+
+    function nextQuestion() {
+      current++;
+      if (current < questions.length) {
+        renderQuestion();
+      } else {
+        showResult();
+      }
+    }
+
+    function showResult() {
+      document.getElementById('progress-bar').style.width = '100%';
+      document.getElementById('progress-text').textContent = 'Complete!';
+      document.getElementById('progress-pct').textContent = '100%';
+      document.getElementById('question-container').innerHTML = '';
+      const result = results.find(r => totalScore >= r.min);
+      const rc = document.getElementById('result-container');
+      rc.classList.remove('hidden');
+      rc.innerHTML = `
+        <div class="result-score ${result.colorClass}">
+          <span class="result-score__number">${totalScore}</span>
+          <span class="result-score__label">Score</span>
+        </div>
+        <div class="result-category">${result.label}</div>
+        <h2>${result.title}</h2>
+        <p>${result.desc}</p>
+        <div class="result-recommendations">
+          <h3>Recommended Next Steps</h3>
+          <ul>${result.recs.map(r => `<li>${r}</li>`).join('')}</ul>
+        </div>
+        <div class="result-actions">
+          ${calculatorLinks.map(l => `<a href="${l.href}" class="btn btn-secondary">${l.label}</a>`).join('')}
+        </div>
+        <div class="result-actions" style="margin-top:1rem">
+          <button class="btn btn-outline" onclick="restartQuiz()">Retake Quiz</button>
+        </div>`;
+    }
+
+    function restartQuiz() {
+      current = 0; totalScore = 0;
+      document.getElementById('result-container').classList.add('hidden');
+      renderQuestion();
+    }
+
+    renderQuestion();
+  </script>
+</body>
+</html>

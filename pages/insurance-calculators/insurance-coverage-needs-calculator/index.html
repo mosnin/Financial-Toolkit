@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Insurance Coverage Needs Calculator | CalcWise</title>
+  <meta name="description" content="Assess your total insurance needs across all coverage types. Enter your assets, income, family size, and debts to get recommended coverage amounts by type.">
+  <meta name="keywords" content="insurance needs calculator, coverage assessment, total insurance needs, insurance planning tool, comprehensive insurance calculator">
+  <link rel="canonical" href="https://calcwise.io/insurance-calculators/insurance-coverage-needs-calculator/">
+
+  <meta property="og:title" content="Insurance Coverage Needs Calculator | CalcWise">
+  <meta property="og:description" content="Assess your total insurance needs across all coverage types with personalized recommendations.">
+  <meta property="og:url" content="https://calcwise.io/insurance-calculators/insurance-coverage-needs-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Insurance Coverage Needs Calculator | CalcWise">
+  <meta name="twitter:description" content="Assess your total insurance needs across all coverage types.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Insurance Calculators", "item": "https://calcwise.io/insurance-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "Insurance Coverage Needs Calculator", "item": "https://calcwise.io/insurance-calculators/insurance-coverage-needs-calculator/" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What types of insurance do I need?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Most people need health insurance, auto insurance, and either homeowners or renters insurance. If you have dependents, life insurance is essential. Disability insurance protects your income, and umbrella insurance provides extra liability coverage for higher-net-worth individuals." }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I determine how much coverage I need?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Coverage needs depend on your assets, income, debts, and family size. Generally, insure assets at replacement cost, carry life insurance of 10-15x income if you have dependents, and maintain liability coverage at least equal to your net worth." }
+      },
+      {
+        "@type": "Question",
+        "name": "Am I over-insured or under-insured?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Many people are under-insured in life and disability coverage while over-insured in areas like extended warranties. Use this calculator to compare your current coverage against recommended levels to identify gaps." }
+      },
+      {
+        "@type": "Question",
+        "name": "How often should I review my insurance coverage?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Review your coverage annually and after major life events like marriage, having children, buying a home, changing jobs, or significant changes in income or assets. Your needs change as your life circumstances evolve." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/insurance-calculators/" aria-current="page">Insurance</a>
+        <a href="/business-calculators/">Business</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/insurance-calculators/">Insurance Calculators</a>
+      <a href="/business-calculators/">Business Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/insurance-calculators/">Insurance Calculators</a></li>
+          <li><span aria-current="page">Insurance Coverage Needs Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="article-content">
+          <h1>Insurance Coverage Needs Calculator</h1>
+          <p>Get a comprehensive assessment of your insurance needs across all major coverage types. Enter your assets, income, family size, and debts to receive personalized recommendations for life, home, auto, disability, and liability coverage.</p>
+
+          <div class="calc-container mt-8">
+            <div class="calc-header">
+              <h2>Assess Your Insurance Needs</h2>
+              <p>Enter your financial profile</p>
+            </div>
+            <div class="calc-body">
+              <form id="coverage-needs-form" onsubmit="return false;">
+                <div class="form-group">
+                  <label class="form-label" for="total-assets">Total Assets <span class="form-hint">(home, vehicles, savings, investments)</span></label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="total-assets" class="form-input" placeholder="500000" min="0" step="10000" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="annual-income">Annual Household Income</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="annual-income" class="form-input" placeholder="100000" min="0" step="5000" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="family-size">Family Size</label>
+                  <input type="number" id="family-size" class="form-input" placeholder="4" min="1" max="15" step="1" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="total-debts">Total Debts <span class="form-hint">(mortgage, loans, credit cards)</span></label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="total-debts" class="form-input" placeholder="250000" min="0" step="5000" required>
+                  </div>
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calculateCoverageNeeds()">Assess Needs</button>
+                  <button type="button" class="btn btn-reset" onclick="resetCoverageNeeds()">Reset</button>
+                </div>
+              </form>
+
+              <div id="coverage-needs-results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">Recommended Coverage Summary</div>
+                  <div class="result-value" style="font-size:1.25rem;">See breakdown below</div>
+                </div>
+                <div class="result-grid">
+                  <div class="result-item">
+                    <div class="result-label">Life Insurance</div>
+                    <div class="result-value" id="result-life"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Home/Property Insurance</div>
+                    <div class="result-value" id="result-home"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Disability Insurance (Monthly)</div>
+                    <div class="result-value" id="result-disability"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Liability/Umbrella Coverage</div>
+                    <div class="result-value" id="result-liability"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <section class="content-section">
+            <h2>Coverage Needs Formula</h2>
+            <p>Each coverage type is calculated based on different aspects of your financial profile:</p>
+            <div class="formula-box">
+              <div class="formula-label">Life Insurance</div>
+              10x Annual Income + Total Debts + ($40K x Dependents)
+            </div>
+            <div class="formula-box">
+              <div class="formula-label">Property Insurance</div>
+              100% of Property/Asset Value (replacement cost)
+            </div>
+            <div class="formula-box">
+              <div class="formula-label">Disability Insurance</div>
+              65% of Monthly Gross Income
+            </div>
+            <div class="formula-box">
+              <div class="formula-label">Liability Coverage</div>
+              Net Worth (Assets - Debts), minimum $1,000,000
+            </div>
+          </section>
+
+          <section class="content-section">
+            <h2>How to Use This Calculator</h2>
+            <ol>
+              <li><strong>Enter total assets</strong> - home equity, vehicles, savings, investments, etc.</li>
+              <li><strong>Enter annual income</strong> - your household's total gross annual income.</li>
+              <li><strong>Enter family size</strong> - number of people in your household.</li>
+              <li><strong>Enter total debts</strong> - mortgage, car loans, student loans, credit cards.</li>
+              <li><strong>Click "Assess Needs"</strong> to see recommended coverage by type.</li>
+            </ol>
+          </section>
+
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>A family of 4 with $500,000 in assets, $100,000 annual income, and $250,000 in debts would need approximately $1,330,000 in life insurance, $500,000 in property coverage, $5,417/month in disability benefits, and $1,000,000 in liability coverage.</p>
+          </section>
+
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">What types of insurance do I need?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>Most people need health, auto, and home/renters insurance. If you have dependents, add life insurance. Disability insurance protects income, and umbrella insurance adds extra liability protection.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">How do I determine how much coverage I need?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>Insure assets at replacement cost, carry life insurance of 10-15x income if you have dependents, and maintain liability coverage at least equal to your net worth.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">Am I over-insured or under-insured?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>Many people are under-insured in life and disability coverage while over-insured in extended warranties. Compare your current coverage against these recommendations to identify gaps.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">How often should I review my insurance coverage?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>Review annually and after major life events like marriage, having children, buying a home, or significant income changes.</p></div>
+            </div>
+          </section>
+
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/insurance-calculators/life-insurance-coverage-calculator/" class="card card-link">
+                <h3>Life Insurance Coverage</h3>
+                <p>Detailed life insurance needs analysis.</p>
+              </a>
+              <a href="/insurance-calculators/disability-insurance-calculator/" class="card card-link">
+                <h3>Disability Insurance</h3>
+                <p>Calculate your disability coverage gap.</p>
+              </a>
+              <a href="/insurance-calculators/home-insurance-cost-calculator/" class="card card-link">
+                <h3>Home Insurance Calculator</h3>
+                <p>Estimate homeowners insurance premiums.</p>
+              </a>
+              <a href="/insurance-calculators/umbrella-insurance-calculator/" class="card card-link">
+                <h3>Umbrella Insurance</h3>
+                <p>Determine umbrella policy coverage needs.</p>
+              </a>
+              <a href="/finance-calculators/debt-payoff-calculator/" class="card card-link">
+                <h3>Debt Payoff Calculator</h3>
+                <p>Plan to reduce debts and lower insurance needs.</p>
+              </a>
+              <a href="/finance-calculators/compound-interest-calculator/" class="card card-link">
+                <h3>Compound Interest</h3>
+                <p>Grow assets to build self-insurance capacity.</p>
+              </a>
+            </div>
+          </section>
+
+          <div class="disclaimer">
+            <strong>Disclaimer:</strong> This calculator provides general estimates for informational purposes only. Insurance needs are complex and highly individual. This is not insurance or financial advice. Consult a licensed insurance professional for a comprehensive review.
+          </div>
+
+          <div class="ad-slot ad-slot-leaderboard"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Real Estate</h4>
+          <a href="/real-estate-calculators/">All Real Estate Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Finance</h4>
+          <a href="/finance-calculators/">All Finance Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Insurance</h4>
+          <a href="/insurance-calculators/">All Insurance Calculators</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links"><a href="/about.html">About</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateCoverageNeeds() {
+      const assets = parseFloat(document.getElementById('total-assets').value);
+      const income = parseFloat(document.getElementById('annual-income').value);
+      const familySize = parseFloat(document.getElementById('family-size').value);
+      const debts = parseFloat(document.getElementById('total-debts').value) || 0;
+
+      if (!assets || !income || !familySize) {
+        alert('Please fill in all required fields.');
+        return;
+      }
+
+      const dependents = Math.max(0, familySize - 1);
+
+      // Life insurance: 10x income + debts + 40K per dependent
+      const lifeInsurance = (income * 10) + debts + (dependents * 40000);
+
+      // Property insurance: 100% of assets (simplified)
+      const propertyInsurance = assets;
+
+      // Disability: 65% of monthly gross income
+      const disabilityMonthly = (income / 12) * 0.65;
+
+      // Liability: max of net worth or $1M
+      const netWorth = Math.max(0, assets - debts);
+      const liabilityCoverage = Math.max(netWorth, 1000000);
+
+      const fmt = (n) => '$' + n.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+
+      document.getElementById('result-life').textContent = fmt(lifeInsurance);
+      document.getElementById('result-home').textContent = fmt(propertyInsurance);
+      document.getElementById('result-disability').textContent = fmt(disabilityMonthly);
+      document.getElementById('result-liability').textContent = fmt(liabilityCoverage);
+      document.getElementById('coverage-needs-results').classList.remove('hidden');
+    }
+
+    function resetCoverageNeeds() {
+      document.getElementById('coverage-needs-form').reset();
+      document.getElementById('coverage-needs-results').classList.add('hidden');
+    }
+
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', !expanded);
+        btn.nextElementSibling.classList.toggle('open');
+      });
+    });
+
+    document.querySelector('.mobile-menu-toggle')?.addEventListener('click', function() {
+      const nav = document.querySelector('.mobile-nav');
+      const expanded = this.getAttribute('aria-expanded') === 'true';
+      this.setAttribute('aria-expanded', !expanded);
+      nav.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>

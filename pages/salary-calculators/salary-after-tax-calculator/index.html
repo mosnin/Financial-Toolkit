@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Salary After Tax Calculator - See Your Take-Home Pay | CalcWise</title>
+  <meta name="description" content="Free salary after tax calculator to estimate your monthly, biweekly, and weekly take-home pay. Enter your annual salary, filing status, and state to see your net income.">
+  <meta name="keywords" content="salary after tax, take-home pay calculator, net salary calculator, after tax income, salary calculator">
+  <link rel="canonical" href="https://calcwise.io/salary-calculators/salary-after-tax-calculator/">
+
+  <meta property="og:title" content="Salary After Tax Calculator - See Your Take-Home Pay">
+  <meta property="og:description" content="Free salary after tax calculator to estimate your monthly, biweekly, and weekly take-home pay.">
+  <meta property="og:url" content="https://calcwise.io/salary-calculators/salary-after-tax-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Salary After Tax Calculator - See Your Take-Home Pay">
+  <meta name="twitter:description" content="Free salary after tax calculator to estimate your monthly, biweekly, and weekly take-home pay.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Salary Calculators", "item": "https://calcwise.io/salary-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "Salary After Tax Calculator", "item": "https://calcwise.io/salary-calculators/salary-after-tax-calculator/" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How much of my salary do I take home after taxes?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Most employees take home between 70-80% of their gross salary after federal income tax, state income tax, and FICA deductions. The exact amount depends on your filing status, state of residence, and deductions." }
+      },
+      {
+        "@type": "Question",
+        "name": "What taxes are deducted from my salary?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The main deductions include federal income tax (10-37% based on brackets), state income tax (0-13.3% depending on state), Social Security (6.2%), and Medicare (1.45%). Some locations also have local income taxes." }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I calculate my biweekly take-home pay?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Divide your annual after-tax salary by 26 pay periods to get your biweekly take-home pay. This accounts for the fact that there are 26 biweekly pay periods in a year." }
+      },
+      {
+        "@type": "Question",
+        "name": "Does filing status affect my take-home pay?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes, filing status significantly affects your take-home pay. Married filing jointly has wider tax brackets and a larger standard deduction, meaning less tax is withheld compared to single filers at the same income level." }
+      },
+      {
+        "@type": "Question",
+        "name": "How can I increase my take-home pay?",
+        "acceptedAnswer": { "@type": "Answer", "text": "You can increase take-home pay by maximizing pre-tax deductions like 401(k) contributions, HSA contributions, claiming all eligible allowances, and taking advantage of tax credits. Moving to a state with no income tax also helps." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/salary-calculators/" aria-current="page">Salary</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/salary-calculators/">Salary Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/salary-calculators/">Salary Calculators</a></li>
+          <li><span aria-current="page">Salary After Tax Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="article-content">
+          <h1>Salary After Tax Calculator</h1>
+          <p>Find out how much of your annual salary you actually take home after federal, state, and FICA taxes. This calculator breaks down your after-tax income into monthly, biweekly, and weekly amounts so you can plan your budget with confidence.</p>
+
+          <div class="calc-container mt-8">
+            <div class="calc-header">
+              <h2>Calculate Salary After Tax</h2>
+              <p>Enter your salary details below</p>
+            </div>
+            <div class="calc-body">
+              <form id="salary-tax-form" onsubmit="return false;">
+                <div class="form-group">
+                  <label class="form-label" for="annual-salary">Annual Salary</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="annual-salary" name="annualSalary" class="form-input" placeholder="75000" min="0" step="100" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="filing-status">Filing Status</label>
+                  <select id="filing-status" name="filingStatus" class="form-input" required>
+                    <option value="single">Single</option>
+                    <option value="married">Married Filing Jointly</option>
+                    <option value="head">Head of Household</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="state-rate">State Tax Rate</label>
+                  <div class="input-suffix">
+                    <input type="number" id="state-rate" name="stateRate" class="form-input" placeholder="5.0" min="0" max="15" step="0.01" value="5">
+                    <span class="suffix">%</span>
+                  </div>
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calculateSalaryAfterTax()">Calculate Take-Home Pay</button>
+                  <button type="button" class="btn btn-reset" onclick="resetSalaryTax()">Reset</button>
+                </div>
+              </form>
+
+              <div id="salary-tax-results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">Annual Take-Home Pay</div>
+                  <div class="result-value" id="result-annual-net"></div>
+                </div>
+                <div class="result-grid">
+                  <div class="result-item">
+                    <div class="result-label">Monthly Take-Home</div>
+                    <div class="result-value" id="result-monthly-net"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Biweekly Take-Home</div>
+                    <div class="result-value" id="result-biweekly-net"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Weekly Take-Home</div>
+                    <div class="result-value" id="result-weekly-net"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Effective Tax Rate</div>
+                    <div class="result-value" id="result-effective-rate"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <section class="content-section">
+            <h2>Salary After Tax Formula</h2>
+            <p>Your take-home pay is calculated by subtracting all applicable taxes from your gross annual salary:</p>
+            <div class="formula-box">
+              <div class="formula-label">After-Tax Salary Formula</div>
+              Take-Home Pay = Gross Salary - Federal Tax - State Tax - FICA
+            </div>
+            <p>Where <strong>Federal Tax</strong> uses progressive brackets based on filing status, <strong>State Tax</strong> is a flat percentage of gross income, and <strong>FICA</strong> is 7.65% (Social Security 6.2% + Medicare 1.45%).</p>
+          </section>
+
+          <section class="content-section">
+            <h2>How to Use This Calculator</h2>
+            <ol>
+              <li><strong>Enter your annual salary</strong> - your total gross yearly compensation before taxes.</li>
+              <li><strong>Select your filing status</strong> - single, married filing jointly, or head of household.</li>
+              <li><strong>Enter your state tax rate</strong> - use 0% for states with no income tax.</li>
+              <li><strong>Click "Calculate Take-Home Pay"</strong> to see your after-tax income broken down by period.</li>
+            </ol>
+          </section>
+
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>If you earn a $75,000 annual salary, file as single, and live in a state with a 5% income tax, your estimated annual take-home pay would be approximately $56,588. That breaks down to roughly $4,716 per month, $2,177 biweekly, or $1,088 per week.</p>
+          </section>
+
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">How much of my salary do I take home after taxes?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>Most employees take home between 70-80% of their gross salary after federal income tax, state income tax, and FICA deductions. The exact amount depends on your filing status, state of residence, and deductions.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">What taxes are deducted from my salary?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>The main deductions include federal income tax (10-37% based on brackets), state income tax (0-13.3% depending on state), Social Security (6.2%), and Medicare (1.45%). Some locations also have local income taxes.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">How do I calculate my biweekly take-home pay?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>Divide your annual after-tax salary by 26 pay periods to get your biweekly take-home pay. This accounts for the fact that there are 26 biweekly pay periods in a year.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">Does filing status affect my take-home pay?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>Yes, filing status significantly affects your take-home pay. Married filing jointly has wider tax brackets and a larger standard deduction, meaning less tax is withheld compared to single filers at the same income level.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">How can I increase my take-home pay?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>You can increase take-home pay by maximizing pre-tax deductions like 401(k) contributions, HSA contributions, claiming all eligible allowances, and taking advantage of tax credits. Moving to a state with no income tax also helps.</p></div>
+            </div>
+          </section>
+
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/salary-calculators/paycheck-calculator/" class="card card-link">
+                <h3>Paycheck Calculator</h3>
+                <p>Calculate your per-paycheck take-home pay with detailed deductions.</p>
+              </a>
+              <a href="/salary-calculators/take-home-pay-calculator/" class="card card-link">
+                <h3>Take-Home Pay Calculator</h3>
+                <p>Get a full breakdown of your net pay after all deductions.</p>
+              </a>
+              <a href="/salary-calculators/hourly-to-salary-calculator/" class="card card-link">
+                <h3>Hourly to Salary Calculator</h3>
+                <p>Convert your hourly wage to an annual salary equivalent.</p>
+              </a>
+              <a href="/salary-calculators/raise-percentage-calculator/" class="card card-link">
+                <h3>Raise Percentage Calculator</h3>
+                <p>Calculate the impact of a raise on your salary.</p>
+              </a>
+            </div>
+          </section>
+
+          <div class="disclaimer">
+            <strong>Disclaimer:</strong> This calculator provides estimates for informational purposes only. Actual take-home pay may vary based on pre-tax deductions, local taxes, and other factors. This is not tax or financial advice. Consult a qualified tax professional for personalized guidance.
+          </div>
+
+          <div class="ad-slot ad-slot-leaderboard"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Real Estate</h4>
+          <a href="/real-estate-calculators/">All Real Estate Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Salary</h4>
+          <a href="/salary-calculators/">All Salary Calculators</a>
+          <a href="/salary-calculators/paycheck-calculator/">Paycheck Calculator</a>
+          <a href="/salary-calculators/salary-after-tax-calculator/">Salary After Tax</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function fmt(n) { return '$' + n.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ','); }
+
+    function calculateSalaryAfterTax() {
+      const salary = parseFloat(document.getElementById('annual-salary').value);
+      const filingStatus = document.getElementById('filing-status').value;
+      const stateRate = parseFloat(document.getElementById('state-rate').value) || 0;
+
+      if (!salary || salary <= 0) { alert('Please enter a valid annual salary.'); return; }
+
+      const standardDeduction = filingStatus === 'married' ? 29200 : filingStatus === 'head' ? 21900 : 14600;
+      const taxableIncome = Math.max(0, salary - standardDeduction);
+
+      let brackets;
+      if (filingStatus === 'married') {
+        brackets = [[23200,0.10],[71080,0.12],[100000,0.22],[175050,0.24],[175000,0.32],[200000,0.35],[Infinity,0.37]];
+      } else if (filingStatus === 'head') {
+        brackets = [[16550,0.10],[47450,0.12],[50000,0.22],[86350,0.24],[87500,0.32],[200000,0.35],[Infinity,0.37]];
+      } else {
+        brackets = [[11600,0.10],[35550,0.12],[53090,0.22],[53665,0.24],[87500,0.32],[200000,0.35],[Infinity,0.37]];
+      }
+
+      let federalTax = 0, remaining = taxableIncome;
+      for (const [width, rate] of brackets) {
+        if (remaining <= 0) break;
+        const t = Math.min(remaining, width);
+        federalTax += t * rate;
+        remaining -= t;
+      }
+
+      const stateTax = salary * stateRate / 100;
+      const fica = salary * 0.0765;
+      const totalTax = federalTax + stateTax + fica;
+      const annualNet = salary - totalTax;
+
+      document.getElementById('result-annual-net').textContent = fmt(annualNet);
+      document.getElementById('result-monthly-net').textContent = fmt(annualNet / 12);
+      document.getElementById('result-biweekly-net').textContent = fmt(annualNet / 26);
+      document.getElementById('result-weekly-net').textContent = fmt(annualNet / 52);
+      document.getElementById('result-effective-rate').textContent = (totalTax / salary * 100).toFixed(1) + '%';
+      document.getElementById('salary-tax-results').classList.remove('hidden');
+    }
+
+    function resetSalaryTax() {
+      document.getElementById('salary-tax-form').reset();
+      document.getElementById('salary-tax-results').classList.add('hidden');
+    }
+  </script>
+</body>
+</html>

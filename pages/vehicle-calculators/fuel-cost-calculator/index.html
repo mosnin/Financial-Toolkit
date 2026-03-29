@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fuel Cost Calculator | CalcWise</title>
+  <meta name="description" content="Free fuel cost calculator to estimate your annual and monthly fuel expenses. Enter miles per year, MPG, and fuel price to calculate your cost per mile and total fuel budget.">
+  <meta name="keywords" content="fuel cost calculator, gas cost calculator, fuel expense calculator, cost per mile, annual fuel cost">
+  <link rel="canonical" href="https://calcwise.io/vehicle-calculators/fuel-cost-calculator/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Fuel Cost Calculator | CalcWise">
+  <meta property="og:description" content="Free fuel cost calculator to estimate your annual and monthly fuel expenses and cost per mile.">
+  <meta property="og:url" content="https://calcwise.io/vehicle-calculators/fuel-cost-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Fuel Cost Calculator | CalcWise">
+  <meta name="twitter:description" content="Free fuel cost calculator to estimate your annual and monthly fuel expenses and cost per mile.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <!-- BreadcrumbList Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Vehicle Calculators", "item": "https://calcwise.io/vehicle-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "Fuel Cost Calculator", "item": "https://calcwise.io/vehicle-calculators/fuel-cost-calculator/" }
+    ]
+  }
+  </script>
+
+  <!-- FAQPage Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do I calculate my annual fuel cost?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Divide your annual miles driven by your vehicle's MPG to get gallons used, then multiply by the price per gallon. For example, 15,000 miles at 25 MPG with $3.50/gallon gas costs $2,100 per year." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the average fuel cost per mile?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The average fuel cost per mile depends on gas prices and your vehicle's fuel efficiency. With gas at $3.50/gallon and a vehicle getting 25 MPG, the fuel cost per mile is about $0.14. More efficient vehicles can be under $0.10 per mile." }
+      },
+      {
+        "@type": "Question",
+        "name": "How can I reduce my fuel costs?",
+        "acceptedAnswer": { "@type": "Answer", "text": "You can reduce fuel costs by maintaining proper tire pressure, avoiding aggressive driving, using cruise control on highways, keeping up with vehicle maintenance, reducing idling, and combining trips. Switching to a more fuel-efficient vehicle also makes a significant difference." }
+      },
+      {
+        "@type": "Question",
+        "name": "How many miles does the average American drive per year?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The average American drives approximately 13,500 miles per year according to the Federal Highway Administration. This varies by state, age, and whether you commute by car." }
+      },
+      {
+        "@type": "Question",
+        "name": "Is it cheaper to drive an EV or a gas car?",
+        "acceptedAnswer": { "@type": "Answer", "text": "In most areas, driving an electric vehicle costs significantly less per mile than a gas car. The average EV costs about $0.04-$0.05 per mile in electricity, compared to $0.10-$0.20 per mile for gasoline. Use our EV Charging Cost Calculator for a detailed comparison." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/vehicle-calculators/" aria-current="page">Vehicle</a>
+        <a href="/business-calculators/">Business</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/vehicle-calculators/">Vehicle Calculators</a>
+      <a href="/business-calculators/">Business Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/vehicle-calculators/">Vehicle Calculators</a></li>
+          <li><span aria-current="page">Fuel Cost Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="article-content">
+          <h1>Fuel Cost Calculator</h1>
+          <p>Calculate your annual fuel cost, monthly fuel budget, and cost per mile based on your driving habits and vehicle fuel efficiency. This tool helps you understand and plan for one of the largest ongoing costs of vehicle ownership.</p>
+
+          <div class="calc-container mt-8">
+            <div class="calc-header">
+              <h2>Calculate Your Fuel Costs</h2>
+              <p>Enter your driving and fuel details below</p>
+            </div>
+            <div class="calc-body">
+              <form id="fuel-cost-form" onsubmit="return false;">
+                <div class="form-group">
+                  <label class="form-label" for="miles-per-year">Miles Driven Per Year</label>
+                  <input type="number" id="miles-per-year" name="milesPerYear" class="form-input" placeholder="15000" min="0" step="500" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="mpg">Fuel Efficiency (MPG)</label>
+                  <input type="number" id="mpg" name="mpg" class="form-input" placeholder="25" min="1" max="200" step="0.1" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="fuel-price">Fuel Price Per Gallon</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="fuel-price" name="fuelPrice" class="form-input" placeholder="3.50" min="0" step="0.01" required>
+                  </div>
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calculateFuelCost()">Calculate Fuel Cost</button>
+                  <button type="button" class="btn btn-reset" onclick="resetFuelCost()">Reset</button>
+                </div>
+              </form>
+
+              <div id="fuel-cost-results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">Annual Fuel Cost</div>
+                  <div class="result-value" id="result-annual"></div>
+                </div>
+                <div class="result-grid">
+                  <div class="result-item">
+                    <div class="result-label">Monthly Fuel Cost</div>
+                    <div class="result-value" id="result-monthly"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Cost Per Mile</div>
+                    <div class="result-value" id="result-per-mile"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Gallons Used Per Year</div>
+                    <div class="result-value" id="result-gallons"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Formula Section -->
+          <section class="content-section">
+            <h2>Fuel Cost Formula</h2>
+            <p>Fuel cost is calculated using a straightforward formula:</p>
+            <div class="formula-box">
+              <div class="formula-label">Annual Fuel Cost</div>
+              Annual Fuel Cost = (Miles Per Year / MPG) x Price Per Gallon
+            </div>
+            <div class="formula-box">
+              <div class="formula-label">Cost Per Mile</div>
+              Cost Per Mile = Price Per Gallon / MPG
+            </div>
+          </section>
+
+          <!-- How to Use -->
+          <section class="content-section">
+            <h2>How to Use This Fuel Cost Calculator</h2>
+            <ol>
+              <li><strong>Enter your annual miles</strong> - how many miles you drive per year (the average is about 13,500).</li>
+              <li><strong>Enter your vehicle's MPG</strong> - the combined fuel efficiency rating of your vehicle.</li>
+              <li><strong>Enter the fuel price</strong> - the current price per gallon in your area.</li>
+              <li><strong>Click "Calculate Fuel Cost"</strong> to see your annual cost, monthly cost, and cost per mile.</li>
+            </ol>
+          </section>
+
+          <!-- Example Scenario -->
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>If you drive 15,000 miles per year in a vehicle that gets 25 MPG and gas costs $3.50 per gallon, you would use 600 gallons of fuel annually. Your annual fuel cost would be $2,100 ($175 per month), and your fuel cost per mile would be $0.14.</p>
+          </section>
+
+          <!-- FAQ Section -->
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                How do I calculate my annual fuel cost?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Divide your annual miles driven by your vehicle's MPG to get gallons used, then multiply by the price per gallon. For example, 15,000 miles at 25 MPG with $3.50/gallon gas costs $2,100 per year.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What is the average fuel cost per mile?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>The average fuel cost per mile depends on gas prices and your vehicle's fuel efficiency. With gas at $3.50/gallon and a vehicle getting 25 MPG, the fuel cost per mile is about $0.14. More efficient vehicles can be under $0.10 per mile.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                How can I reduce my fuel costs?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>You can reduce fuel costs by maintaining proper tire pressure, avoiding aggressive driving, using cruise control on highways, keeping up with vehicle maintenance, reducing idling, and combining trips.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                How many miles does the average American drive per year?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>The average American drives approximately 13,500 miles per year according to the Federal Highway Administration. This varies by state, age, and whether you commute by car.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Is it cheaper to drive an EV or a gas car?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>In most areas, driving an electric vehicle costs significantly less per mile than a gas car. The average EV costs about $0.04-$0.05 per mile in electricity, compared to $0.10-$0.20 per mile for gasoline. Use our EV Charging Cost Calculator for a detailed comparison.</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Related Calculators -->
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/vehicle-calculators/ev-charging-cost-calculator/" class="card card-link">
+                <h3>EV Charging Cost Calculator</h3>
+                <p>Calculate the cost of charging an electric vehicle vs gas.</p>
+              </a>
+              <a href="/vehicle-calculators/mileage-reimbursement-calculator/" class="card card-link">
+                <h3>Mileage Reimbursement Calculator</h3>
+                <p>Calculate IRS mileage reimbursement for business driving.</p>
+              </a>
+              <a href="/vehicle-calculators/vehicle-total-cost-calculator/" class="card card-link">
+                <h3>Vehicle Total Cost Calculator</h3>
+                <p>Calculate the true total cost of owning a vehicle over time.</p>
+              </a>
+              <a href="/vehicle-calculators/car-payment-calculator/" class="card card-link">
+                <h3>Car Payment Calculator</h3>
+                <p>Estimate your monthly car payment with down payment and trade-in.</p>
+              </a>
+              <a href="/finance-calculators/savings-calculator/" class="card card-link">
+                <h3>Savings Goal Calculator</h3>
+                <p>Calculate how long to reach your savings goal.</p>
+              </a>
+            </div>
+          </section>
+
+          <!-- Disclaimer -->
+          <div class="disclaimer">
+            <strong>Disclaimer:</strong> This calculator provides estimates for informational purposes only. Actual fuel costs vary based on driving conditions, fuel prices, vehicle condition, and driving habits. This is not financial advice.
+          </div>
+
+          <!-- Ad Slot -->
+          <div class="ad-slot ad-slot-leaderboard"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Vehicle</h4>
+          <a href="/vehicle-calculators/">All Vehicle Calculators</a>
+          <a href="/vehicle-calculators/car-payment-calculator/">Car Payment</a>
+          <a href="/vehicle-calculators/fuel-cost-calculator/">Fuel Cost</a>
+        </div>
+        <div class="footer-col">
+          <h4>Finance</h4>
+          <a href="/finance-calculators/">All Finance Calculators</a>
+          <a href="/finance-calculators/loan-calculator/">Loan Calculator</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateFuelCost() {
+      if (!CalcWise.validateForm('fuel-cost-form')) return;
+
+      const miles = CalcWise.parseNumber(document.getElementById('miles-per-year').value);
+      const mpg = parseFloat(document.getElementById('mpg').value);
+      const fuelPrice = parseFloat(document.getElementById('fuel-price').value);
+
+      const gallonsPerYear = miles / mpg;
+      const annualCost = gallonsPerYear * fuelPrice;
+      const monthlyCost = annualCost / 12;
+      const costPerMile = fuelPrice / mpg;
+
+      CalcWise.setText('result-annual', CalcWise.formatCurrency(annualCost));
+      CalcWise.setText('result-monthly', CalcWise.formatCurrency(monthlyCost));
+      CalcWise.setText('result-per-mile', '$' + costPerMile.toFixed(3));
+      CalcWise.setText('result-gallons', gallonsPerYear.toFixed(0) + ' gal');
+      CalcWise.showResults('fuel-cost-results');
+    }
+
+    function resetFuelCost() {
+      document.getElementById('fuel-cost-form').reset();
+      CalcWise.hideResults('fuel-cost-results');
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Workers Compensation Settlement Calculator | CalcWise</title>
+  <meta name="description" content="Estimate your workers compensation settlement based on weekly wage, disability rating, weeks of disability, and medical costs. Free instant calculation.">
+  <meta name="keywords" content="workers compensation calculator, workers comp settlement, disability rating calculator, work injury settlement">
+  <link rel="canonical" href="https://calcwise.io/legal-calculators/workers-compensation-settlement-calculator/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Workers Compensation Settlement Calculator | CalcWise">
+  <meta property="og:description" content="Estimate your workers compensation settlement based on weekly wage, disability rating, weeks of disability, and medical costs.">
+  <meta property="og:url" content="https://calcwise.io/legal-calculators/workers-compensation-settlement-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Workers Compensation Settlement Calculator | CalcWise">
+  <meta name="twitter:description" content="Estimate your workers compensation settlement based on weekly wage, disability rating, weeks of disability, and medical costs.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <!-- BreadcrumbList Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Legal Calculators", "item": "https://calcwise.io/legal-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "Workers Compensation Settlement Calculator", "item": "https://calcwise.io/legal-calculators/workers-compensation-settlement-calculator/" }
+    ]
+  }
+  </script>
+
+  <!-- FAQPage Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How is a workers compensation settlement calculated?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Workers comp settlements are typically based on your average weekly wage, the disability rating assigned by a doctor, the number of weeks of disability benefits, and any outstanding medical costs. The formula generally calculates two-thirds of your weekly wage multiplied by the disability rating and weeks of disability, plus medical expenses." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is a disability rating in workers compensation?",
+        "acceptedAnswer": { "@type": "Answer", "text": "A disability rating is a percentage assigned by a medical professional that represents the degree of permanent impairment you have suffered from a workplace injury. A higher rating means greater impairment and typically a larger settlement." }
+      },
+      {
+        "@type": "Question",
+        "name": "How long do workers comp settlements take?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Workers compensation settlements can take anywhere from a few weeks to several months, depending on the complexity of the case, whether the employer or insurer disputes the claim, and whether you have reached maximum medical improvement." }
+      },
+      {
+        "@type": "Question",
+        "name": "Are workers compensation settlements taxable?",
+        "acceptedAnswer": { "@type": "Answer", "text": "In most cases, workers compensation benefits and settlements are not subject to federal or state income taxes. However, if you also receive Social Security disability benefits, a portion may become taxable." }
+      },
+      {
+        "@type": "Question",
+        "name": "Should I hire a lawyer for my workers comp claim?",
+        "acceptedAnswer": { "@type": "Answer", "text": "While not always required, hiring a workers compensation attorney is advisable if your claim is denied, your employer disputes your injury, you have a permanent disability, or the settlement offer seems too low. Attorneys typically work on contingency for workers comp cases." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/business-calculators/">Business</a>
+        <a href="/legal-calculators/" aria-current="page">Legal</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/business-calculators/">Business Calculators</a>
+      <a href="/legal-calculators/">Legal Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/legal-calculators/">Legal Calculators</a></li>
+          <li><span aria-current="page">Workers Compensation Settlement Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="article-content">
+          <h1>Workers Compensation Settlement Calculator</h1>
+          <p>Estimate the value of your workers compensation settlement based on your weekly wage, disability rating, duration of disability, and medical costs. This calculator uses standard workers comp formulas to help you understand what your claim may be worth.</p>
+
+          <div class="calc-container mt-8">
+            <div class="calc-header">
+              <h2>Calculate Your Workers Comp Settlement</h2>
+              <p>Enter your claim details below</p>
+            </div>
+            <div class="calc-body">
+              <form id="wc-form" onsubmit="return false;">
+                <div class="form-group">
+                  <label class="form-label" for="weekly-wage">Average Weekly Wage</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="weekly-wage" name="weeklyWage" class="form-input" placeholder="1000" min="0" step="10" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="disability-rating">Disability Rating</label>
+                  <div class="input-suffix">
+                    <input type="number" id="disability-rating" name="disabilityRating" class="form-input" placeholder="25" min="0" max="100" step="1" required>
+                    <span class="suffix">%</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="weeks-disability">Weeks of Disability</label>
+                  <input type="number" id="weeks-disability" name="weeksDisability" class="form-input" placeholder="26" min="1" max="520" step="1" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="medical-costs">Total Medical Costs</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="medical-costs" name="medicalCosts" class="form-input" placeholder="10000" min="0" step="100" required>
+                  </div>
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calculateWC()">Calculate Settlement</button>
+                  <button type="button" class="btn btn-reset" onclick="resetWC()">Reset</button>
+                </div>
+              </form>
+
+              <div id="wc-results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">Estimated Total Settlement</div>
+                  <div class="result-value" id="result-settlement"></div>
+                </div>
+                <div class="result-grid">
+                  <div class="result-item">
+                    <div class="result-label">Weekly Benefit Rate (2/3 Wage)</div>
+                    <div class="result-value" id="result-weekly-benefit"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Disability Benefits</div>
+                    <div class="result-value" id="result-disability"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Medical Costs</div>
+                    <div class="result-value" id="result-medical"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Formula Section -->
+          <section class="content-section">
+            <h2>Workers Comp Settlement Formula</h2>
+            <p>Workers compensation settlements are generally calculated using the following approach:</p>
+            <div class="formula-box">
+              <div class="formula-label">Settlement Formula</div>
+              Settlement = (2/3 x Weekly Wage x Disability Rating x Weeks) + Medical Costs
+            </div>
+            <p>The <strong>weekly benefit rate</strong> is typically two-thirds of your average weekly wage. This is multiplied by the <strong>disability rating</strong> (as a percentage) and the <strong>number of weeks</strong> of disability. Outstanding <strong>medical costs</strong> are then added to arrive at the total estimated settlement.</p>
+          </section>
+
+          <!-- How to Use -->
+          <section class="content-section">
+            <h2>How to Use This Calculator</h2>
+            <ol>
+              <li><strong>Enter your average weekly wage</strong> - your gross weekly earnings before the injury.</li>
+              <li><strong>Enter your disability rating</strong> - the percentage assigned by your treating physician.</li>
+              <li><strong>Enter weeks of disability</strong> - how many weeks you have been or expect to be disabled.</li>
+              <li><strong>Enter total medical costs</strong> - all medical expenses related to the workplace injury.</li>
+              <li><strong>Click "Calculate Settlement"</strong> to see your estimated workers comp settlement value.</li>
+            </ol>
+          </section>
+
+          <!-- Example Scenario -->
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>A worker earning $1,000 per week suffers a back injury with a 25% disability rating and is disabled for 26 weeks. Their medical bills total $10,000. The weekly benefit rate is $667 (2/3 of $1,000). Disability benefits are $667 x 0.25 x 26 = $4,333. Adding $10,000 in medical costs gives an estimated settlement of approximately $14,333.</p>
+          </section>
+
+          <!-- FAQ Section -->
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                How is a workers compensation settlement calculated?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Workers comp settlements are typically based on your average weekly wage, the disability rating assigned by a doctor, the number of weeks of disability benefits, and any outstanding medical costs. The formula generally calculates two-thirds of your weekly wage multiplied by the disability rating and weeks of disability, plus medical expenses.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What is a disability rating in workers compensation?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>A disability rating is a percentage assigned by a medical professional that represents the degree of permanent impairment you have suffered from a workplace injury. A higher rating means greater impairment and typically a larger settlement.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                How long do workers comp settlements take?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Workers compensation settlements can take anywhere from a few weeks to several months, depending on the complexity of the case, whether the employer or insurer disputes the claim, and whether you have reached maximum medical improvement.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Are workers compensation settlements taxable?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>In most cases, workers compensation benefits and settlements are not subject to federal or state income taxes. However, if you also receive Social Security disability benefits, a portion may become taxable.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Should I hire a lawyer for my workers comp claim?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>While not always required, hiring a workers compensation attorney is advisable if your claim is denied, your employer disputes your injury, you have a permanent disability, or the settlement offer seems too low. Attorneys typically work on contingency for workers comp cases.</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Related Calculators -->
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/legal-calculators/personal-injury-settlement-calculator/" class="card card-link">
+                <h3>Personal Injury Settlement Calculator</h3>
+                <p>Estimate the value of a personal injury claim.</p>
+              </a>
+              <a href="/legal-calculators/settlement-tax-calculator/" class="card card-link">
+                <h3>Settlement Tax Calculator</h3>
+                <p>Calculate taxes owed on your settlement.</p>
+              </a>
+              <a href="/legal-calculators/legal-fee-calculator/" class="card card-link">
+                <h3>Legal Fee Calculator</h3>
+                <p>Estimate attorney fees for your case.</p>
+              </a>
+            </div>
+          </section>
+
+          <!-- Disclaimer -->
+          <div class="disclaimer">
+            <strong>Important Legal Disclaimer:</strong> This calculator provides rough estimates for informational and educational purposes only. It does not constitute legal advice. Workers compensation laws vary significantly by state, and actual settlement amounts depend on many factors including state-specific benefit rates, maximum weekly limits, and the specifics of your injury. Always consult with a qualified workers compensation attorney before making any decisions about your claim.
+          </div>
+
+          <!-- Ad Slot -->
+          <div class="ad-slot ad-slot-leaderboard"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="/legal-calculators/">All Legal Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Finance</h4>
+          <a href="/finance-calculators/">All Finance Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateWC() {
+      const wage = parseFloat(document.getElementById('weekly-wage').value);
+      const rating = parseFloat(document.getElementById('disability-rating').value) / 100;
+      const weeks = parseFloat(document.getElementById('weeks-disability').value);
+      const medical = parseFloat(document.getElementById('medical-costs').value);
+
+      if (!wage || !rating || !weeks || isNaN(medical)) {
+        alert('Please fill in all fields.');
+        return;
+      }
+
+      const weeklyBenefit = wage * (2 / 3);
+      const disabilityBenefits = weeklyBenefit * rating * weeks;
+      const totalSettlement = disabilityBenefits + medical;
+
+      const fmt = (n) => '$' + n.toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 });
+
+      document.getElementById('result-settlement').textContent = fmt(Math.round(totalSettlement));
+      document.getElementById('result-weekly-benefit').textContent = fmt(Math.round(weeklyBenefit));
+      document.getElementById('result-disability').textContent = fmt(Math.round(disabilityBenefits));
+      document.getElementById('result-medical').textContent = fmt(medical);
+
+      document.getElementById('wc-results').classList.remove('hidden');
+    }
+
+    function resetWC() {
+      document.getElementById('wc-form').reset();
+      document.getElementById('wc-results').classList.add('hidden');
+    }
+  </script>
+</body>
+</html>

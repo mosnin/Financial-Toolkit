@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car Insurance Cost Estimator | CalcWise</title>
+  <meta name="description" content="Estimate your car insurance cost based on vehicle value, driver age, driving record, and coverage level. Get estimated annual and monthly premium amounts instantly.">
+  <meta name="keywords" content="car insurance calculator, auto insurance estimator, car insurance cost, vehicle insurance premium, auto insurance quote">
+  <link rel="canonical" href="https://calcwise.io/insurance-calculators/car-insurance-cost-estimator/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Car Insurance Cost Estimator | CalcWise">
+  <meta property="og:description" content="Estimate your car insurance cost based on vehicle value, driver age, driving record, and coverage level.">
+  <meta property="og:url" content="https://calcwise.io/insurance-calculators/car-insurance-cost-estimator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Car Insurance Cost Estimator | CalcWise">
+  <meta name="twitter:description" content="Estimate your car insurance cost based on vehicle value, driver age, driving record, and coverage level.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <!-- BreadcrumbList Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Insurance Calculators", "item": "https://calcwise.io/insurance-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "Car Insurance Cost Estimator", "item": "https://calcwise.io/insurance-calculators/car-insurance-cost-estimator/" }
+    ]
+  }
+  </script>
+
+  <!-- FAQPage Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How is car insurance cost calculated?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Car insurance premiums are based on several factors including the vehicle's value, the driver's age, driving record, coverage level chosen, location, and credit score. Higher-value vehicles and riskier profiles result in higher premiums." }
+      },
+      {
+        "@type": "Question",
+        "name": "What factors most affect car insurance rates?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The biggest factors are your driving record, age, vehicle value, coverage level, and location. Accidents and violations can increase premiums by 20-50%, while older drivers with clean records typically pay less." }
+      },
+      {
+        "@type": "Question",
+        "name": "How can I lower my car insurance premium?",
+        "acceptedAnswer": { "@type": "Answer", "text": "You can lower premiums by maintaining a clean driving record, increasing your deductible, bundling policies, taking defensive driving courses, and shopping around for competitive quotes from multiple insurers." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between liability and full coverage?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Liability coverage only pays for damage you cause to others. Full coverage includes liability plus comprehensive and collision coverage, which also protects your own vehicle against damage, theft, and other incidents." }
+      },
+      {
+        "@type": "Question",
+        "name": "Does age really affect car insurance rates?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes, age significantly impacts rates. Drivers under 25 and over 70 typically pay higher premiums due to statistically higher accident rates. Drivers aged 30-65 generally receive the most favorable rates." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/insurance-calculators/" aria-current="page">Insurance</a>
+        <a href="/business-calculators/">Business</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/insurance-calculators/">Insurance Calculators</a>
+      <a href="/business-calculators/">Business Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/insurance-calculators/">Insurance Calculators</a></li>
+          <li><span aria-current="page">Car Insurance Cost Estimator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="article-content">
+          <h1>Car Insurance Cost Estimator</h1>
+          <p>Estimate your car insurance premium based on your vehicle value, age, driving history, and desired coverage level. This calculator provides a quick estimate of both annual and monthly costs to help you budget for auto insurance.</p>
+
+          <div class="calc-container mt-8">
+            <div class="calc-header">
+              <h2>Estimate Your Car Insurance Cost</h2>
+              <p>Enter your details below for an instant estimate</p>
+            </div>
+            <div class="calc-body">
+              <form id="car-insurance-form" onsubmit="return false;">
+                <div class="form-group">
+                  <label class="form-label" for="vehicle-value">Vehicle Value</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="vehicle-value" class="form-input" placeholder="25000" min="1000" step="500" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="driver-age">Driver Age</label>
+                  <input type="number" id="driver-age" class="form-input" placeholder="35" min="16" max="100" step="1" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="driving-record">Driving Record</label>
+                  <select id="driving-record" class="form-input" required>
+                    <option value="">Select your record</option>
+                    <option value="clean">Clean (no accidents or violations)</option>
+                    <option value="minor">Minor (1-2 minor violations)</option>
+                    <option value="moderate">Moderate (at-fault accident or 3+ violations)</option>
+                    <option value="poor">Poor (multiple accidents or DUI)</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="coverage-level">Coverage Level</label>
+                  <select id="coverage-level" class="form-input" required>
+                    <option value="">Select coverage</option>
+                    <option value="liability">Liability Only</option>
+                    <option value="standard">Standard (Liability + Collision)</option>
+                    <option value="full">Full Coverage (Comprehensive + Collision)</option>
+                    <option value="premium">Premium (Full + Low Deductibles + Extras)</option>
+                  </select>
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calculateCarInsurance()">Estimate Premium</button>
+                  <button type="button" class="btn btn-reset" onclick="resetCarInsurance()">Reset</button>
+                </div>
+              </form>
+
+              <div id="car-insurance-results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">Estimated Annual Premium</div>
+                  <div class="result-value" id="result-annual"></div>
+                </div>
+                <div class="result-grid">
+                  <div class="result-item">
+                    <div class="result-label">Monthly Premium</div>
+                    <div class="result-value" id="result-monthly"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Daily Cost</div>
+                    <div class="result-value" id="result-daily"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Formula Section -->
+          <section class="content-section">
+            <h2>How Car Insurance Premiums Are Calculated</h2>
+            <p>Car insurance premiums are estimated using a base rate applied to the vehicle value, then adjusted by multipliers for driver age, driving record, and coverage level:</p>
+            <div class="formula-box">
+              <div class="formula-label">Premium Estimation Formula</div>
+              Annual Premium = Vehicle Value x Base Rate x Age Factor x Record Factor x Coverage Factor
+            </div>
+            <p>The <strong>base rate</strong> is typically around 3-5% of the vehicle value. The <strong>age factor</strong> adjusts for the statistical risk of different age groups. The <strong>record factor</strong> increases premiums for poor driving history. The <strong>coverage factor</strong> reflects the extent of protection chosen.</p>
+          </section>
+
+          <!-- How to Use -->
+          <section class="content-section">
+            <h2>How to Use This Calculator</h2>
+            <ol>
+              <li><strong>Enter your vehicle value</strong> - the current market value of your car.</li>
+              <li><strong>Enter your age</strong> - your current age as the primary driver.</li>
+              <li><strong>Select your driving record</strong> - choose the option that best describes your history.</li>
+              <li><strong>Select coverage level</strong> - choose between liability only, standard, full, or premium coverage.</li>
+              <li><strong>Click "Estimate Premium"</strong> to see your estimated annual and monthly costs.</li>
+            </ol>
+          </section>
+
+          <!-- Example Scenario -->
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>A 35-year-old driver with a clean driving record owns a vehicle worth $25,000 and wants full coverage. The estimated annual premium would be approximately $1,125, or about $93.75 per month. This estimate factors in the favorable age bracket and clean record, which together reduce the base rate significantly.</p>
+          </section>
+
+          <!-- FAQ Section -->
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                How is car insurance cost calculated?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Car insurance premiums are based on several factors including the vehicle's value, the driver's age, driving record, coverage level chosen, location, and credit score. Higher-value vehicles and riskier profiles result in higher premiums.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What factors most affect car insurance rates?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>The biggest factors are your driving record, age, vehicle value, coverage level, and location. Accidents and violations can increase premiums by 20-50%, while older drivers with clean records typically pay less.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                How can I lower my car insurance premium?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>You can lower premiums by maintaining a clean driving record, increasing your deductible, bundling policies, taking defensive driving courses, and shopping around for competitive quotes from multiple insurers.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What is the difference between liability and full coverage?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Liability coverage only pays for damage you cause to others. Full coverage includes liability plus comprehensive and collision coverage, which also protects your own vehicle against damage, theft, and other incidents.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Does age really affect car insurance rates?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Yes, age significantly impacts rates. Drivers under 25 and over 70 typically pay higher premiums due to statistically higher accident rates. Drivers aged 30-65 generally receive the most favorable rates.</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Related Calculators -->
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/insurance-calculators/home-insurance-cost-calculator/" class="card card-link">
+                <h3>Home Insurance Calculator</h3>
+                <p>Estimate your home insurance premium based on property value and risk factors.</p>
+              </a>
+              <a href="/insurance-calculators/insurance-deductible-calculator/" class="card card-link">
+                <h3>Insurance Deductible Calculator</h3>
+                <p>Find the optimal deductible to minimize your total insurance costs.</p>
+              </a>
+              <a href="/insurance-calculators/umbrella-insurance-calculator/" class="card card-link">
+                <h3>Umbrella Insurance Calculator</h3>
+                <p>Determine if you need umbrella coverage beyond your auto policy.</p>
+              </a>
+              <a href="/insurance-calculators/insurance-savings-comparison-calculator/" class="card card-link">
+                <h3>Insurance Savings Comparison</h3>
+                <p>Compare multiple insurance quotes to find the best value.</p>
+              </a>
+              <a href="/finance-calculators/loan-calculator/" class="card card-link">
+                <h3>Loan Calculator</h3>
+                <p>Calculate monthly payments for your auto loan.</p>
+              </a>
+            </div>
+          </section>
+
+          <!-- Disclaimer -->
+          <div class="disclaimer">
+            <strong>Disclaimer:</strong> This calculator provides estimates for informational purposes only. Actual insurance premiums vary based on your specific profile, location, insurer, and many other factors not captured here. This is not insurance advice. Contact licensed insurance providers for accurate quotes.
+          </div>
+
+          <!-- Ad Slot -->
+          <div class="ad-slot ad-slot-leaderboard"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Real Estate</h4>
+          <a href="/real-estate-calculators/">All Real Estate Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Finance</h4>
+          <a href="/finance-calculators/">All Finance Calculators</a>
+          <a href="/finance-calculators/loan-calculator/">Loan Calculator</a>
+        </div>
+        <div class="footer-col">
+          <h4>Insurance</h4>
+          <a href="/insurance-calculators/">All Insurance Calculators</a>
+          <a href="/insurance-calculators/car-insurance-cost-estimator/">Car Insurance Estimator</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateCarInsurance() {
+      const vehicleValue = parseFloat(document.getElementById('vehicle-value').value);
+      const driverAge = parseFloat(document.getElementById('driver-age').value);
+      const drivingRecord = document.getElementById('driving-record').value;
+      const coverageLevel = document.getElementById('coverage-level').value;
+
+      if (!vehicleValue || !driverAge || !drivingRecord || !coverageLevel) {
+        alert('Please fill in all fields.');
+        return;
+      }
+
+      // Base rate: ~4% of vehicle value
+      let baseRate = 0.04;
+
+      // Age factor
+      let ageFactor = 1.0;
+      if (driverAge < 21) ageFactor = 1.8;
+      else if (driverAge < 25) ageFactor = 1.5;
+      else if (driverAge < 30) ageFactor = 1.15;
+      else if (driverAge <= 65) ageFactor = 1.0;
+      else if (driverAge <= 75) ageFactor = 1.2;
+      else ageFactor = 1.5;
+
+      // Record factor
+      const recordFactors = { clean: 1.0, minor: 1.25, moderate: 1.5, poor: 2.0 };
+      const recordFactor = recordFactors[drivingRecord] || 1.0;
+
+      // Coverage factor
+      const coverageFactors = { liability: 0.6, standard: 1.0, full: 1.35, premium: 1.7 };
+      const coverageFactor = coverageFactors[coverageLevel] || 1.0;
+
+      const annualPremium = vehicleValue * baseRate * ageFactor * recordFactor * coverageFactor;
+      const monthlyPremium = annualPremium / 12;
+      const dailyCost = annualPremium / 365;
+
+      document.getElementById('result-annual').textContent = '$' + annualPremium.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+      document.getElementById('result-monthly').textContent = '$' + monthlyPremium.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+      document.getElementById('result-daily').textContent = '$' + dailyCost.toFixed(2);
+      document.getElementById('car-insurance-results').classList.remove('hidden');
+    }
+
+    function resetCarInsurance() {
+      document.getElementById('car-insurance-form').reset();
+      document.getElementById('car-insurance-results').classList.add('hidden');
+    }
+
+    // FAQ toggle
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', !expanded);
+        btn.nextElementSibling.classList.toggle('open');
+      });
+    });
+
+    // Mobile menu toggle
+    document.querySelector('.mobile-menu-toggle')?.addEventListener('click', function() {
+      const nav = document.querySelector('.mobile-nav');
+      const expanded = this.getAttribute('aria-expanded') === 'true';
+      this.setAttribute('aria-expanded', !expanded);
+      nav.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>

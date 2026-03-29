@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Child Support Calculator | CalcWise</title>
+  <meta name="description" content="Estimate monthly child support payments based on both parents' income, custody percentage, number of children, childcare costs, and health insurance.">
+  <meta name="keywords" content="child support calculator, custody support estimator, child support payment, monthly child support, child support formula">
+  <link rel="canonical" href="https://calcwise.io/legal-calculators/child-support-calculator/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Child Support Calculator | CalcWise">
+  <meta property="og:description" content="Estimate monthly child support payments based on both parents' income, custody percentage, number of children, childcare costs, and health insurance.">
+  <meta property="og:url" content="https://calcwise.io/legal-calculators/child-support-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Child Support Calculator | CalcWise">
+  <meta name="twitter:description" content="Estimate monthly child support payments based on both parents' income, custody percentage, number of children, childcare costs, and health insurance.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <!-- BreadcrumbList Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Legal Calculators", "item": "https://calcwise.io/legal-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "Child Support Calculator", "item": "https://calcwise.io/legal-calculators/child-support-calculator/" }
+    ]
+  }
+  </script>
+
+  <!-- FAQPage Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How is child support calculated?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Child support is typically calculated using the income shares model, which considers both parents' gross income, the percentage of custody each parent has, the number of children, and additional expenses like childcare and health insurance. Each state has its own specific guidelines and formulas." }
+      },
+      {
+        "@type": "Question",
+        "name": "Does custody percentage affect child support?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes, the amount of time each parent has custody significantly affects child support. The parent with less custody time typically pays support to the parent with more custody. In shared custody arrangements (close to 50/50), the higher-earning parent usually pays a reduced amount." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can child support be modified after it is set?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes, child support can be modified if there is a significant change in circumstances, such as a substantial change in either parent's income, a change in custody arrangements, changes in the child's needs, or changes in childcare or medical expenses." }
+      },
+      {
+        "@type": "Question",
+        "name": "Is child support taxable?",
+        "acceptedAnswer": { "@type": "Answer", "text": "No, child support payments are not taxable income for the receiving parent and are not tax-deductible for the paying parent. This has been the case since the Tax Cuts and Jobs Act of 2017." }
+      },
+      {
+        "@type": "Question",
+        "name": "What expenses does child support cover?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Child support is intended to cover the child's basic needs including housing, food, clothing, education, medical care, and transportation. Additional expenses like extracurricular activities, special medical needs, and private school tuition may be handled separately." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/business-calculators/">Business</a>
+        <a href="/legal-calculators/" aria-current="page">Legal</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/business-calculators/">Business Calculators</a>
+      <a href="/legal-calculators/">Legal Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/legal-calculators/">Legal Calculators</a></li>
+          <li><span aria-current="page">Child Support Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="article-content">
+          <h1>Child Support Calculator</h1>
+          <p>Estimate monthly child support payments using the income shares model. Enter both parents' income, custody arrangement, number of children, and additional expenses to get an estimated monthly child support amount. This calculator uses a simplified version of the formula used in most US states.</p>
+
+          <div class="calc-container mt-8">
+            <div class="calc-header">
+              <h2>Calculate Child Support</h2>
+              <p>Enter family details below</p>
+            </div>
+            <div class="calc-body">
+              <form id="cs-form" onsubmit="return false;">
+                <div class="form-group">
+                  <label class="form-label" for="parent1-income">Parent 1 Monthly Gross Income</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="parent1-income" name="parent1Income" class="form-input" placeholder="5000" min="0" step="100" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="parent2-income">Parent 2 Monthly Gross Income</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="parent2-income" name="parent2Income" class="form-input" placeholder="3500" min="0" step="100" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="custody-pct">Parent 1 Custody Percentage <span class="form-hint">(0-100%)</span></label>
+                  <div class="input-suffix">
+                    <input type="number" id="custody-pct" name="custodyPct" class="form-input" placeholder="70" min="0" max="100" step="1" required>
+                    <span class="suffix">%</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="num-children">Number of Children</label>
+                  <input type="number" id="num-children" name="numChildren" class="form-input" placeholder="2" min="1" max="10" step="1" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="childcare-costs">Monthly Childcare Costs</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="childcare-costs" name="childcareCosts" class="form-input" placeholder="500" min="0" step="50" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="insurance-costs">Monthly Health Insurance for Children</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="insurance-costs" name="insuranceCosts" class="form-input" placeholder="200" min="0" step="25" required>
+                  </div>
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calculateCS()">Calculate Child Support</button>
+                  <button type="button" class="btn btn-reset" onclick="resetCS()">Reset</button>
+                </div>
+              </form>
+
+              <div id="cs-results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">Estimated Monthly Child Support</div>
+                  <div class="result-value" id="result-support"></div>
+                </div>
+                <div class="result-grid">
+                  <div class="result-item">
+                    <div class="result-label">Combined Monthly Income</div>
+                    <div class="result-value" id="result-combined"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Non-Custodial Parent Share</div>
+                    <div class="result-value" id="result-share"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Base Support Obligation</div>
+                    <div class="result-value" id="result-base"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Additional Expenses Share</div>
+                    <div class="result-value" id="result-extras"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Formula Section -->
+          <section class="content-section">
+            <h2>Child Support Formula</h2>
+            <p>This calculator uses a simplified income shares model:</p>
+            <div class="formula-box">
+              <div class="formula-label">Child Support Formula</div>
+              Support = (Combined Income x Child Factor x Non-Custodial Share) + Extra Expenses Share
+            </div>
+            <p>The <strong>child factor</strong> represents the percentage of combined income typically allocated to children (approximately 17% for one child, increasing with more children). The <strong>non-custodial parent's share</strong> is based on their proportion of combined income, adjusted by custody time. <strong>Additional expenses</strong> (childcare and insurance) are split proportionally by income.</p>
+          </section>
+
+          <!-- How to Use -->
+          <section class="content-section">
+            <h2>How to Use This Calculator</h2>
+            <ol>
+              <li><strong>Enter Parent 1's monthly gross income</strong> - this is the custodial parent's income before taxes.</li>
+              <li><strong>Enter Parent 2's monthly gross income</strong> - the non-custodial parent's income before taxes.</li>
+              <li><strong>Enter custody percentage</strong> - the percentage of time Parent 1 has custody (e.g., 70% means Parent 2 has 30%).</li>
+              <li><strong>Enter number of children</strong> - how many children need support.</li>
+              <li><strong>Enter childcare and insurance costs</strong> - monthly out-of-pocket expenses for the children.</li>
+              <li><strong>Click "Calculate Child Support"</strong> to see the estimated monthly payment.</li>
+            </ol>
+          </section>
+
+          <!-- Example Scenario -->
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>Parent 1 earns $5,000/month and has 70% custody of 2 children. Parent 2 earns $3,500/month (30% custody). Childcare costs $500/month and health insurance $200/month. Parent 2's income share is about 41%. With a child factor of 25% for two children, the base obligation allocated to Parent 2 is approximately $870. Adding their share of additional expenses ($287), the estimated monthly child support is approximately $1,157.</p>
+          </section>
+
+          <!-- FAQ Section -->
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                How is child support calculated?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Child support is typically calculated using the income shares model, which considers both parents' gross income, the percentage of custody each parent has, the number of children, and additional expenses like childcare and health insurance. Each state has its own specific guidelines and formulas.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Does custody percentage affect child support?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Yes, the amount of time each parent has custody significantly affects child support. The parent with less custody time typically pays support to the parent with more custody. In shared custody arrangements (close to 50/50), the higher-earning parent usually pays a reduced amount.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Can child support be modified after it is set?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Yes, child support can be modified if there is a significant change in circumstances, such as a substantial change in either parent's income, a change in custody arrangements, changes in the child's needs, or changes in childcare or medical expenses.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Is child support taxable?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>No, child support payments are not taxable income for the receiving parent and are not tax-deductible for the paying parent. This has been the case since the Tax Cuts and Jobs Act of 2017.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What expenses does child support cover?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Child support is intended to cover the child's basic needs including housing, food, clothing, education, medical care, and transportation. Additional expenses like extracurricular activities, special medical needs, and private school tuition may be handled separately.</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Related Calculators -->
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/legal-calculators/alimony-calculator/" class="card card-link">
+                <h3>Alimony Calculator</h3>
+                <p>Estimate spousal support payments and duration.</p>
+              </a>
+              <a href="/legal-calculators/divorce-cost-calculator/" class="card card-link">
+                <h3>Divorce Cost Calculator</h3>
+                <p>Estimate the total cost of a divorce proceeding.</p>
+              </a>
+              <a href="/legal-calculators/legal-fee-calculator/" class="card card-link">
+                <h3>Legal Fee Calculator</h3>
+                <p>Estimate attorney fees for family law cases.</p>
+              </a>
+            </div>
+          </section>
+
+          <!-- Disclaimer -->
+          <div class="disclaimer">
+            <strong>Important Legal Disclaimer:</strong> This calculator provides rough estimates for informational and educational purposes only. It does not constitute legal advice. Child support guidelines vary significantly by state, and courts consider many factors beyond those included here. Actual child support orders are determined by family courts using state-specific formulas and judicial discretion. Always consult with a qualified family law attorney for advice specific to your situation.
+          </div>
+
+          <!-- Ad Slot -->
+          <div class="ad-slot ad-slot-leaderboard"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="/legal-calculators/">All Legal Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Finance</h4>
+          <a href="/finance-calculators/">All Finance Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateCS() {
+      const p1Income = parseFloat(document.getElementById('parent1-income').value);
+      const p2Income = parseFloat(document.getElementById('parent2-income').value);
+      const custodyPct = parseFloat(document.getElementById('custody-pct').value) / 100;
+      const numChildren = parseInt(document.getElementById('num-children').value);
+      const childcare = parseFloat(document.getElementById('childcare-costs').value);
+      const insurance = parseFloat(document.getElementById('insurance-costs').value);
+
+      if (!p1Income || !p2Income || isNaN(custodyPct) || !numChildren || isNaN(childcare) || isNaN(insurance)) {
+        alert('Please fill in all fields.');
+        return;
+      }
+
+      const combinedIncome = p1Income + p2Income;
+      const p2Share = p2Income / combinedIncome;
+
+      // Child factor based on number of children (percentage of combined income)
+      const childFactors = { 1: 0.17, 2: 0.25, 3: 0.29, 4: 0.31, 5: 0.34 };
+      const childFactor = childFactors[Math.min(numChildren, 5)] || 0.34;
+
+      // Base support obligation
+      const totalObligation = combinedIncome * childFactor;
+      const p2BaseObligation = totalObligation * p2Share;
+
+      // Custody adjustment: if Parent 2 has more custody, reduce payment
+      const p2CustodyPct = 1 - custodyPct;
+      const custodyAdjustment = Math.max(0, (custodyPct - 0.5) / 0.5);
+      const adjustedBase = p2BaseObligation * custodyAdjustment;
+
+      // Additional expenses share
+      const totalExtras = childcare + insurance;
+      const p2ExtrasShare = totalExtras * p2Share;
+
+      const totalSupport = Math.max(0, Math.round(adjustedBase + p2ExtrasShare));
+
+      const fmt = (n) => '$' + n.toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 });
+
+      document.getElementById('result-support').textContent = fmt(totalSupport) + '/mo';
+      document.getElementById('result-combined').textContent = fmt(combinedIncome);
+      document.getElementById('result-share').textContent = (p2Share * 100).toFixed(1) + '%';
+      document.getElementById('result-base').textContent = fmt(Math.round(adjustedBase));
+      document.getElementById('result-extras').textContent = fmt(Math.round(p2ExtrasShare));
+
+      document.getElementById('cs-results').classList.remove('hidden');
+    }
+
+    function resetCS() {
+      document.getElementById('cs-form').reset();
+      document.getElementById('cs-results').classList.add('hidden');
+    }
+  </script>
+</body>
+</html>

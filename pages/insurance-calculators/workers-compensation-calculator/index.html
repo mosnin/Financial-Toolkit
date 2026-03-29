@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Workers Compensation Calculator | CalcWise</title>
+  <meta name="description" content="Estimate workers compensation insurance premiums based on payroll, industry class code, and experience modification rate. Calculate your business's workers comp costs.">
+  <meta name="keywords" content="workers compensation calculator, workers comp premium, work comp cost estimator, workers compensation insurance, experience modifier calculator">
+  <link rel="canonical" href="https://calcwise.io/insurance-calculators/workers-compensation-calculator/">
+
+  <meta property="og:title" content="Workers Compensation Calculator | CalcWise">
+  <meta property="og:description" content="Estimate workers compensation insurance premiums for your business.">
+  <meta property="og:url" content="https://calcwise.io/insurance-calculators/workers-compensation-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Workers Compensation Calculator | CalcWise">
+  <meta name="twitter:description" content="Estimate workers compensation insurance premiums for your business.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Insurance Calculators", "item": "https://calcwise.io/insurance-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "Workers Compensation Calculator", "item": "https://calcwise.io/insurance-calculators/workers-compensation-calculator/" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How are workers compensation premiums calculated?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Workers comp premiums are calculated by multiplying the payroll (per $100) by the class code rate, then multiplying by the experience modification rate (EMR). The class code reflects the risk level of the job type, and the EMR reflects the employer's claims history." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is an experience modification rate (EMR)?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The EMR compares your actual claims history to the expected average for your industry. An EMR of 1.0 means you are average. Below 1.0 means fewer claims than average (lower premium). Above 1.0 means more claims (higher premium). New businesses start at 1.0." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is a class code in workers compensation?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Class codes categorize businesses by the type of work performed and the associated risk level. Office workers have low-risk codes with rates around $0.20-$0.50 per $100 of payroll, while construction workers may have rates of $5-$15 or more per $100." }
+      },
+      {
+        "@type": "Question",
+        "name": "Is workers compensation insurance required?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Almost every state requires businesses with employees to carry workers compensation insurance. Requirements vary by state - some exempt very small businesses or certain industries. Texas is the only state where it is purely optional for most private employers." }
+      },
+      {
+        "@type": "Question",
+        "name": "How can I lower my workers comp premium?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Implement a strong workplace safety program to reduce claims and lower your EMR over time. Properly classify employees, maintain accurate payroll records, and consider a higher deductible. Return-to-work programs also help reduce claim costs." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/insurance-calculators/" aria-current="page">Insurance</a>
+        <a href="/business-calculators/">Business</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/insurance-calculators/">Insurance Calculators</a>
+      <a href="/business-calculators/">Business Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/insurance-calculators/">Insurance Calculators</a></li>
+          <li><span aria-current="page">Workers Compensation Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="article-content">
+          <h1>Workers Compensation Calculator</h1>
+          <p>Estimate your workers compensation insurance premium based on annual payroll, industry classification, and experience modification rate. This calculator helps business owners budget for this essential coverage.</p>
+
+          <div class="calc-container mt-8">
+            <div class="calc-header">
+              <h2>Calculate Workers Comp Premium</h2>
+              <p>Enter your business payroll details</p>
+            </div>
+            <div class="calc-body">
+              <form id="workers-comp-form" onsubmit="return false;">
+                <div class="form-group">
+                  <label class="form-label" for="annual-payroll">Annual Payroll</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="annual-payroll" class="form-input" placeholder="500000" min="0" step="10000" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="industry-class">Industry Class Code</label>
+                  <select id="industry-class" class="form-input" required>
+                    <option value="">Select industry</option>
+                    <option value="0.30">Office/Clerical ($0.30/$100)</option>
+                    <option value="0.75">Professional Services ($0.75/$100)</option>
+                    <option value="1.50">Retail/Wholesale ($1.50/$100)</option>
+                    <option value="2.50">Light Manufacturing ($2.50/$100)</option>
+                    <option value="4.00">Healthcare/Nursing ($4.00/$100)</option>
+                    <option value="6.00">Heavy Manufacturing ($6.00/$100)</option>
+                    <option value="8.00">Trucking/Transport ($8.00/$100)</option>
+                    <option value="12.00">Construction/Roofing ($12.00/$100)</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="experience-mod">Experience Modification Rate (EMR)</label>
+                  <input type="number" id="experience-mod" class="form-input" placeholder="1.0" min="0.5" max="2.5" step="0.01" required>
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calculateWorkersComp()">Calculate Premium</button>
+                  <button type="button" class="btn btn-reset" onclick="resetWorkersComp()">Reset</button>
+                </div>
+              </form>
+
+              <div id="workers-comp-results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">Estimated Annual Premium</div>
+                  <div class="result-value" id="result-annual"></div>
+                </div>
+                <div class="result-grid">
+                  <div class="result-item">
+                    <div class="result-label">Monthly Premium</div>
+                    <div class="result-value" id="result-monthly"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Rate per $100 Payroll</div>
+                    <div class="result-value" id="result-rate"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Cost per Employee <span style="font-size:0.75rem;">(assuming $50K avg salary)</span></div>
+                    <div class="result-value" id="result-per-employee"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <section class="content-section">
+            <h2>Workers Compensation Premium Formula</h2>
+            <p>Workers comp premiums follow a standard industry formula:</p>
+            <div class="formula-box">
+              <div class="formula-label">Workers Comp Premium Formula</div>
+              Premium = (Payroll / $100) x Class Code Rate x Experience Modification Rate
+            </div>
+            <p>The <strong>payroll</strong> is expressed per $100 of wages. The <strong>class code rate</strong> reflects the risk of the job type. The <strong>EMR</strong> adjusts the premium based on your claims history relative to your industry average.</p>
+          </section>
+
+          <section class="content-section">
+            <h2>How to Use This Calculator</h2>
+            <ol>
+              <li><strong>Enter annual payroll</strong> - total wages for all employees.</li>
+              <li><strong>Select industry class code</strong> - the category that matches your employees' work.</li>
+              <li><strong>Enter your EMR</strong> - your experience modification rate (1.0 if new or unknown).</li>
+              <li><strong>Click "Calculate Premium"</strong> to see your estimated workers comp cost.</li>
+            </ol>
+          </section>
+
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>A retail business with $500,000 in annual payroll, a class code rate of $1.50 per $100, and an EMR of 1.0 would pay approximately $7,500 per year in workers compensation premiums. If their EMR improved to 0.85 due to a good safety record, the premium would drop to about $6,375.</p>
+          </section>
+
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">How are workers compensation premiums calculated?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>Premiums are calculated by multiplying payroll per $100 by the class code rate, then by the EMR. The class code reflects job risk, and the EMR reflects your claims history.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">What is an experience modification rate (EMR)?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>The EMR compares your claims history to the industry average. 1.0 is average, below 1.0 means fewer claims (lower premium), above 1.0 means more claims (higher premium).</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">What is a class code in workers compensation?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>Class codes categorize businesses by work type and risk. Office workers have rates around $0.20-$0.50 per $100 of payroll, while construction may be $5-$15+ per $100.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">Is workers compensation insurance required?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>Almost every state requires businesses with employees to carry workers compensation. Requirements vary by state and business size.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">How can I lower my workers comp premium?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>Implement strong safety programs, properly classify employees, maintain accurate payroll records, and establish return-to-work programs to lower your EMR over time.</p></div>
+            </div>
+          </section>
+
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/insurance-calculators/commercial-insurance-calculator/" class="card card-link">
+                <h3>Commercial Insurance Calculator</h3>
+                <p>Estimate comprehensive business insurance costs.</p>
+              </a>
+              <a href="/insurance-calculators/liability-insurance-calculator/" class="card card-link">
+                <h3>Liability Insurance Calculator</h3>
+                <p>Calculate general liability coverage and costs.</p>
+              </a>
+              <a href="/insurance-calculators/disability-insurance-calculator/" class="card card-link">
+                <h3>Disability Insurance Calculator</h3>
+                <p>Calculate disability coverage for yourself.</p>
+              </a>
+              <a href="/insurance-calculators/insurance-savings-comparison-calculator/" class="card card-link">
+                <h3>Insurance Savings Comparison</h3>
+                <p>Compare workers comp quotes from multiple insurers.</p>
+              </a>
+              <a href="/business-calculators/" class="card card-link">
+                <h3>Business Calculators</h3>
+                <p>Payroll, profit, and business planning tools.</p>
+              </a>
+            </div>
+          </section>
+
+          <div class="disclaimer">
+            <strong>Disclaimer:</strong> This calculator provides estimates for informational purposes only. Actual workers compensation premiums depend on state regulations, specific class codes, payroll audits, and insurer pricing. This is not insurance or legal advice. Consult a licensed insurance professional for accurate quotes.
+          </div>
+
+          <div class="ad-slot ad-slot-leaderboard"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Real Estate</h4>
+          <a href="/real-estate-calculators/">All Real Estate Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Finance</h4>
+          <a href="/finance-calculators/">All Finance Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Insurance</h4>
+          <a href="/insurance-calculators/">All Insurance Calculators</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links"><a href="/about.html">About</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateWorkersComp() {
+      const payroll = parseFloat(document.getElementById('annual-payroll').value);
+      const classRate = parseFloat(document.getElementById('industry-class').value);
+      const emr = parseFloat(document.getElementById('experience-mod').value);
+
+      if (!payroll || !classRate || !emr) {
+        alert('Please fill in all fields.');
+        return;
+      }
+
+      const annualPremium = (payroll / 100) * classRate * emr;
+      const monthlyPremium = annualPremium / 12;
+      const effectiveRate = classRate * emr;
+      const perEmployee = annualPremium / (payroll / 50000);
+
+      const fmt = (n) => '$' + n.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+
+      document.getElementById('result-annual').textContent = fmt(annualPremium);
+      document.getElementById('result-monthly').textContent = fmt(monthlyPremium);
+      document.getElementById('result-rate').textContent = '$' + effectiveRate.toFixed(2);
+      document.getElementById('result-per-employee').textContent = fmt(perEmployee);
+      document.getElementById('workers-comp-results').classList.remove('hidden');
+    }
+
+    function resetWorkersComp() {
+      document.getElementById('workers-comp-form').reset();
+      document.getElementById('workers-comp-results').classList.add('hidden');
+    }
+
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', !expanded);
+        btn.nextElementSibling.classList.toggle('open');
+      });
+    });
+
+    document.querySelector('.mobile-menu-toggle')?.addEventListener('click', function() {
+      const nav = document.querySelector('.mobile-nav');
+      const expanded = this.getAttribute('aria-expanded') === 'true';
+      this.setAttribute('aria-expanded', !expanded);
+      nav.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>

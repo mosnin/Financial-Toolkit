@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Credit Utilization Calculator | CalcWise</title>
+  <meta name="description" content="Calculate your credit utilization ratio and understand its impact on your credit score. Enter your total credit limit and balances for instant analysis and recommendations.">
+  <meta name="keywords" content="credit utilization calculator, credit utilization ratio, credit score impact, credit card utilization, credit limit usage">
+  <link rel="canonical" href="https://calcwise.io/credit-calculators/credit-utilization-calculator/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Credit Utilization Calculator | CalcWise">
+  <meta property="og:description" content="Calculate your credit utilization ratio and understand its impact on your credit score.">
+  <meta property="og:url" content="https://calcwise.io/credit-calculators/credit-utilization-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Credit Utilization Calculator | CalcWise">
+  <meta name="twitter:description" content="Calculate your credit utilization ratio and understand its impact on your credit score.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <!-- BreadcrumbList Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Credit Calculators", "item": "https://calcwise.io/credit-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "Credit Utilization Calculator", "item": "https://calcwise.io/credit-calculators/credit-utilization-calculator/" }
+    ]
+  }
+  </script>
+
+  <!-- FAQPage Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is a good credit utilization ratio?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Most experts recommend keeping your credit utilization below 30%, with under 10% being ideal for the best credit score impact. Using 0% can sometimes be slightly less optimal than 1-9%." }
+      },
+      {
+        "@type": "Question",
+        "name": "How does credit utilization affect my credit score?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Credit utilization accounts for approximately 30% of your FICO credit score, making it the second most important factor after payment history. Lower utilization generally leads to higher scores." }
+      },
+      {
+        "@type": "Question",
+        "name": "Is utilization calculated per card or overall?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Both matter. Credit scoring models look at your overall utilization across all cards as well as individual card utilization. It is best to keep both overall and per-card utilization low." }
+      },
+      {
+        "@type": "Question",
+        "name": "How quickly does utilization impact my score?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Credit utilization has no memory in most scoring models. Once your lower balance is reported to the bureaus (usually monthly), your score adjusts. This makes it one of the fastest ways to improve your credit score." }
+      },
+      {
+        "@type": "Question",
+        "name": "Should I close unused credit cards to improve utilization?",
+        "acceptedAnswer": { "@type": "Answer", "text": "No. Closing unused cards reduces your total available credit, which increases your utilization ratio and can hurt your score. Keep unused cards open, especially older ones, to maintain a higher total credit limit." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/credit-calculators/" aria-current="page">Credit</a>
+        <a href="/business-calculators/">Business</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/credit-calculators/">Credit Calculators</a>
+      <a href="/business-calculators/">Business Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/credit-calculators/">Credit Calculators</a></li>
+          <li><span aria-current="page">Credit Utilization Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="article-content">
+          <h1>Credit Utilization Calculator</h1>
+          <p>Credit utilization is one of the most influential factors in your credit score. This calculator shows you exactly where you stand, how your utilization impacts your score, and what you can do to optimize it.</p>
+
+          <div class="calc-container mt-8">
+            <div class="calc-header">
+              <h2>Calculate Your Credit Utilization</h2>
+              <p>Enter your total credit limits and balances</p>
+            </div>
+            <div class="calc-body">
+              <form id="util-form" onsubmit="return false;">
+                <div class="form-group">
+                  <label class="form-label" for="total-limit">Total Credit Limit</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="total-limit" name="totalLimit" class="form-input" placeholder="20000" min="1" step="100" required>
+                  </div>
+                  <span class="form-hint">Combined credit limit across all your credit cards</span>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="total-balance">Total Current Balances</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="total-balance" name="totalBalance" class="form-input" placeholder="3000" min="0" step="10" required>
+                  </div>
+                  <span class="form-hint">Combined balances across all your credit cards</span>
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calculateUtilization()">Calculate Utilization</button>
+                  <button type="button" class="btn btn-reset" onclick="resetUtilization()">Reset</button>
+                </div>
+              </form>
+
+              <div id="util-results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">Credit Utilization</div>
+                  <div class="result-value" id="result-util"></div>
+                </div>
+                <div class="result-grid">
+                  <div class="result-item">
+                    <div class="result-label">Impact on Score</div>
+                    <div class="result-value" id="result-impact"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Recommendation</div>
+                    <div class="result-value" id="result-recommendation"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Formula Section -->
+          <section class="content-section">
+            <h2>Credit Utilization Formula</h2>
+            <p>Credit utilization is calculated by dividing your total credit card balances by your total credit limits:</p>
+            <div class="formula-box">
+              <div class="formula-label">Credit Utilization Ratio</div>
+              Utilization = (Total Balances / Total Credit Limit) x 100
+            </div>
+            <p>For example, if you have $3,000 in balances across cards with a combined $20,000 limit, your utilization is 15%.</p>
+          </section>
+
+          <!-- How to Use -->
+          <section class="content-section">
+            <h2>How to Use This Calculator</h2>
+            <ol>
+              <li><strong>Add up your total credit limit</strong> - check your statements or online accounts for each card's limit and sum them.</li>
+              <li><strong>Add up your total balances</strong> - the current balance on each credit card combined.</li>
+              <li><strong>Click "Calculate Utilization"</strong> to see your ratio, score impact assessment, and personalized recommendations.</li>
+            </ol>
+          </section>
+
+          <!-- Example Scenario -->
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>Mike has three credit cards: Card A with a $10,000 limit and $1,500 balance, Card B with a $5,000 limit and $500 balance, and Card C with a $5,000 limit and $1,000 balance. His total limit is $20,000 and total balance is $3,000, giving him a 15% utilization rate. This is in the good range and has a positive effect on his credit score.</p>
+          </section>
+
+          <!-- FAQ Section -->
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What is a good credit utilization ratio?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Most experts recommend keeping your credit utilization below 30%, with under 10% being ideal for the best credit score impact. Using 0% can sometimes be slightly less optimal than 1-9%.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                How does credit utilization affect my credit score?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Credit utilization accounts for approximately 30% of your FICO credit score, making it the second most important factor after payment history. Lower utilization generally leads to higher scores.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Is utilization calculated per card or overall?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Both matter. Credit scoring models look at your overall utilization across all cards as well as individual card utilization. It is best to keep both overall and per-card utilization low.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                How quickly does utilization impact my score?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Credit utilization has no memory in most scoring models. Once your lower balance is reported to the bureaus (usually monthly), your score adjusts. This makes it one of the fastest ways to improve your credit score.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Should I close unused credit cards to improve utilization?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>No. Closing unused cards reduces your total available credit, which increases your utilization ratio and can hurt your score. Keep unused cards open, especially older ones, to maintain a higher total credit limit.</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Related Calculators -->
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/credit-calculators/credit-limit-increase-calculator/" class="card card-link">
+                <h3>Credit Limit Increase Calculator</h3>
+                <p>See how a credit limit increase would affect your utilization.</p>
+              </a>
+              <a href="/credit-calculators/credit-score-improvement-calculator/" class="card card-link">
+                <h3>Credit Score Improvement Calculator</h3>
+                <p>Get a projected score improvement and actionable tips.</p>
+              </a>
+              <a href="/credit-calculators/debt-to-income-ratio-calculator/" class="card card-link">
+                <h3>Debt-to-Income Ratio Calculator</h3>
+                <p>Calculate your DTI ratio and see how lenders view you.</p>
+              </a>
+              <a href="/credit-calculators/credit-card-interest-calculator/" class="card card-link">
+                <h3>Credit Card Interest Calculator</h3>
+                <p>Calculate the true cost of carrying a credit card balance.</p>
+              </a>
+            </div>
+          </section>
+
+          <!-- Disclaimer -->
+          <div class="disclaimer">
+            <strong>Disclaimer:</strong> This calculator provides estimates for informational purposes only. Credit scores are calculated using proprietary models that consider many factors beyond utilization. This is not financial advice. Consult a qualified financial professional for personalized guidance.
+          </div>
+
+          <!-- Ad Slot -->
+          <div class="ad-slot ad-slot-leaderboard"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Real Estate</h4>
+          <a href="/real-estate-calculators/">All Real Estate Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Finance</h4>
+          <a href="/finance-calculators/">All Finance Calculators</a>
+          <a href="/finance-calculators/loan-calculator/">Loan Calculator</a>
+        </div>
+        <div class="footer-col">
+          <h4>Credit</h4>
+          <a href="/credit-calculators/">All Credit Calculators</a>
+          <a href="/credit-calculators/credit-utilization-calculator/">Credit Utilization</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateUtilization() {
+      const limit = parseFloat(document.getElementById('total-limit').value);
+      const balance = parseFloat(document.getElementById('total-balance').value);
+
+      if (!limit || limit <= 0) {
+        alert('Please enter a valid credit limit.');
+        return;
+      }
+      if (isNaN(balance) || balance < 0) {
+        alert('Please enter a valid balance amount.');
+        return;
+      }
+
+      const utilization = (balance / limit) * 100;
+
+      let impact, recommendation;
+      if (utilization <= 1) {
+        impact = 'Minimal positive impact';
+        recommendation = 'Consider using your cards lightly (1-9%) for optimal score benefit';
+      } else if (utilization <= 10) {
+        impact = 'Excellent - very positive impact on score';
+        recommendation = 'You are in the ideal range. Maintain this low utilization';
+      } else if (utilization <= 30) {
+        impact = 'Good - positive impact on score';
+        recommendation = 'You are within the recommended range. Try to get below 10% for maximum benefit';
+      } else if (utilization <= 50) {
+        impact = 'Fair - moderate negative impact';
+        recommendation = 'Pay down balances to below 30% of your limit to improve your score';
+      } else if (utilization <= 75) {
+        impact = 'Poor - significant negative impact';
+        recommendation = 'High utilization is hurting your score. Prioritize paying down balances';
+      } else {
+        impact = 'Very poor - severe negative impact';
+        recommendation = 'Your utilization is critically high. Pay down balances or request limit increases immediately';
+      }
+
+      document.getElementById('result-util').textContent = utilization.toFixed(1) + '%';
+      document.getElementById('result-impact').textContent = impact;
+      document.getElementById('result-recommendation').textContent = recommendation;
+      document.getElementById('util-results').classList.remove('hidden');
+    }
+
+    function resetUtilization() {
+      document.getElementById('util-form').reset();
+      document.getElementById('util-results').classList.add('hidden');
+    }
+
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', !expanded);
+        btn.nextElementSibling.classList.toggle('open');
+      });
+    });
+  </script>
+</body>
+</html>

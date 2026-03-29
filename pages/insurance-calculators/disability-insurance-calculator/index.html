@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Disability Insurance Calculator | CalcWise</title>
+  <meta name="description" content="Calculate your disability insurance needs based on monthly income, existing coverage, and expenses. Find your coverage gap and recommended benefit amount.">
+  <meta name="keywords" content="disability insurance calculator, disability coverage needs, income protection calculator, disability benefit estimator, long term disability">
+  <link rel="canonical" href="https://calcwise.io/insurance-calculators/disability-insurance-calculator/">
+
+  <meta property="og:title" content="Disability Insurance Calculator | CalcWise">
+  <meta property="og:description" content="Calculate your disability insurance needs to protect your income if you cannot work.">
+  <meta property="og:url" content="https://calcwise.io/insurance-calculators/disability-insurance-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Disability Insurance Calculator | CalcWise">
+  <meta name="twitter:description" content="Calculate your disability insurance needs to protect your income.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Insurance Calculators", "item": "https://calcwise.io/insurance-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "Disability Insurance Calculator", "item": "https://calcwise.io/insurance-calculators/disability-insurance-calculator/" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How much disability insurance do I need?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Most experts recommend disability coverage that replaces 60-70% of your gross income. The coverage gap is the difference between your monthly expenses and any existing disability benefits you already have." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between short-term and long-term disability?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Short-term disability covers a few weeks to six months and typically replaces 60-70% of income. Long-term disability kicks in after short-term ends and can last years or until retirement age. Long-term disability is generally more important to have." }
+      },
+      {
+        "@type": "Question",
+        "name": "Does my employer provide disability insurance?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Many employers offer group disability insurance, often covering 50-60% of base salary. Check with your HR department. Employer-provided coverage may not be enough, and it typically ends when you leave the company." }
+      },
+      {
+        "@type": "Question",
+        "name": "How likely am I to become disabled?",
+        "acceptedAnswer": { "@type": "Answer", "text": "According to the Social Security Administration, more than 1 in 4 of today's 20-year-olds will become disabled before reaching retirement age. Disability is far more common than most people realize, making coverage important." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/insurance-calculators/" aria-current="page">Insurance</a>
+        <a href="/business-calculators/">Business</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/insurance-calculators/">Insurance Calculators</a>
+      <a href="/business-calculators/">Business Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/insurance-calculators/">Insurance Calculators</a></li>
+          <li><span aria-current="page">Disability Insurance Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="article-content">
+          <h1>Disability Insurance Calculator</h1>
+          <p>Determine how much disability insurance you need to protect your income if illness or injury prevents you from working. This calculator identifies the gap between your monthly expenses and any existing disability coverage.</p>
+
+          <div class="calc-container mt-8">
+            <div class="calc-header">
+              <h2>Calculate Disability Coverage Needs</h2>
+              <p>Enter your income and expense details</p>
+            </div>
+            <div class="calc-body">
+              <form id="disability-form" onsubmit="return false;">
+                <div class="form-group">
+                  <label class="form-label" for="monthly-income">Monthly Gross Income</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="monthly-income" class="form-input" placeholder="6000" min="0" step="100" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="existing-disability">Existing Disability Coverage <span class="form-hint">(monthly benefit)</span></label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="existing-disability" class="form-input" placeholder="0" min="0" step="100" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="monthly-expenses">Essential Monthly Expenses</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="monthly-expenses" class="form-input" placeholder="4500" min="0" step="100" required>
+                  </div>
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calculateDisability()">Calculate Coverage</button>
+                  <button type="button" class="btn btn-reset" onclick="resetDisability()">Reset</button>
+                </div>
+              </form>
+
+              <div id="disability-results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">Coverage Gap (Monthly)</div>
+                  <div class="result-value" id="result-gap"></div>
+                </div>
+                <div class="result-grid">
+                  <div class="result-item">
+                    <div class="result-label">Recommended Monthly Benefit</div>
+                    <div class="result-value" id="result-recommended"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Income Replacement Target (65%)</div>
+                    <div class="result-value" id="result-target"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <section class="content-section">
+            <h2>Disability Insurance Formula</h2>
+            <p>Disability insurance needs are calculated by identifying the gap between your expenses and existing coverage:</p>
+            <div class="formula-box">
+              <div class="formula-label">Coverage Gap Formula</div>
+              Coverage Gap = Monthly Expenses - Existing Disability Coverage
+            </div>
+            <div class="formula-box">
+              <div class="formula-label">Recommended Benefit</div>
+              Recommended Benefit = max(Coverage Gap, 65% of Gross Income - Existing Coverage)
+            </div>
+            <p>Most disability policies replace <strong>60-70% of gross income</strong>. The recommended benefit is the larger of your expense-based gap or the standard 65% income replacement minus existing coverage.</p>
+          </section>
+
+          <section class="content-section">
+            <h2>How to Use This Calculator</h2>
+            <ol>
+              <li><strong>Enter monthly gross income</strong> - your total monthly earnings before taxes.</li>
+              <li><strong>Enter existing disability coverage</strong> - any employer or personal disability benefits.</li>
+              <li><strong>Enter essential monthly expenses</strong> - housing, food, utilities, insurance, debt payments.</li>
+              <li><strong>Click "Calculate Coverage"</strong> to see your coverage gap and recommended benefit.</li>
+            </ol>
+          </section>
+
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>An individual earning $6,000 per month with $1,500 in existing employer disability coverage and $4,500 in monthly expenses has a coverage gap of $3,000. The recommended additional disability benefit would be $3,000 per month to fully cover essential expenses during a disability.</p>
+          </section>
+
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">How much disability insurance do I need?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>Most experts recommend disability coverage that replaces 60-70% of your gross income. The coverage gap is the difference between your monthly expenses and any existing disability benefits.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">What is the difference between short-term and long-term disability?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>Short-term disability covers a few weeks to six months. Long-term disability kicks in after short-term ends and can last years or until retirement age. Long-term disability is generally more important.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">Does my employer provide disability insurance?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>Many employers offer group disability insurance covering 50-60% of base salary. Check with your HR department. Employer coverage may not be enough and typically ends when you leave.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">How likely am I to become disabled?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>More than 1 in 4 of today's 20-year-olds will become disabled before reaching retirement age, according to the Social Security Administration. Disability is far more common than most people realize.</p></div>
+            </div>
+          </section>
+
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/insurance-calculators/life-insurance-coverage-calculator/" class="card card-link">
+                <h3>Life Insurance Coverage Calculator</h3>
+                <p>Calculate how much life insurance you need.</p>
+              </a>
+              <a href="/insurance-calculators/health-insurance-premium-calculator/" class="card card-link">
+                <h3>Health Insurance Premium Calculator</h3>
+                <p>Estimate health insurance costs by plan tier.</p>
+              </a>
+              <a href="/insurance-calculators/insurance-coverage-needs-calculator/" class="card card-link">
+                <h3>Insurance Coverage Needs</h3>
+                <p>Comprehensive assessment of all insurance needs.</p>
+              </a>
+              <a href="/insurance-calculators/workers-compensation-calculator/" class="card card-link">
+                <h3>Workers Compensation Calculator</h3>
+                <p>Estimate workers comp insurance premiums.</p>
+              </a>
+              <a href="/finance-calculators/debt-payoff-calculator/" class="card card-link">
+                <h3>Debt Payoff Calculator</h3>
+                <p>Plan debt reduction to lower your expense baseline.</p>
+              </a>
+            </div>
+          </section>
+
+          <div class="disclaimer">
+            <strong>Disclaimer:</strong> This calculator provides estimates for informational purposes only. Actual disability insurance needs and costs depend on your occupation, health, age, and policy terms. This is not insurance or financial advice. Consult a licensed insurance professional for guidance.
+          </div>
+
+          <div class="ad-slot ad-slot-leaderboard"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Real Estate</h4>
+          <a href="/real-estate-calculators/">All Real Estate Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Finance</h4>
+          <a href="/finance-calculators/">All Finance Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Insurance</h4>
+          <a href="/insurance-calculators/">All Insurance Calculators</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links"><a href="/about.html">About</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateDisability() {
+      const income = parseFloat(document.getElementById('monthly-income').value);
+      const existing = parseFloat(document.getElementById('existing-disability').value) || 0;
+      const expenses = parseFloat(document.getElementById('monthly-expenses').value);
+
+      if (!income || !expenses) {
+        alert('Please fill in income and expenses.');
+        return;
+      }
+
+      const coverageGap = Math.max(0, expenses - existing);
+      const incomeTarget = income * 0.65;
+      const incomeGap = Math.max(0, incomeTarget - existing);
+      const recommended = Math.max(coverageGap, incomeGap);
+
+      const fmt = (n) => '$' + n.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+
+      document.getElementById('result-gap').textContent = fmt(coverageGap);
+      document.getElementById('result-recommended').textContent = fmt(recommended);
+      document.getElementById('result-target').textContent = fmt(incomeTarget);
+      document.getElementById('disability-results').classList.remove('hidden');
+    }
+
+    function resetDisability() {
+      document.getElementById('disability-form').reset();
+      document.getElementById('disability-results').classList.add('hidden');
+    }
+
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', !expanded);
+        btn.nextElementSibling.classList.toggle('open');
+      });
+    });
+
+    document.querySelector('.mobile-menu-toggle')?.addEventListener('click', function() {
+      const nav = document.querySelector('.mobile-nav');
+      const expanded = this.getAttribute('aria-expanded') === 'true';
+      this.setAttribute('aria-expanded', !expanded);
+      nav.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>

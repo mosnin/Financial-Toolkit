@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vehicle Total Cost of Ownership Calculator | CalcWise</title>
+  <meta name="description" content="Free vehicle total cost of ownership calculator. Add up purchase price, insurance, fuel, and maintenance to see your true cost per mile, per year, and overall.">
+  <meta name="keywords" content="vehicle total cost calculator, cost of ownership calculator, true cost to own, car ownership cost, total cost per mile">
+  <link rel="canonical" href="https://calcwise.io/vehicle-calculators/vehicle-total-cost-calculator/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Vehicle Total Cost of Ownership Calculator | CalcWise">
+  <meta property="og:description" content="Free vehicle total cost of ownership calculator. See your true cost per mile, per year, and overall.">
+  <meta property="og:url" content="https://calcwise.io/vehicle-calculators/vehicle-total-cost-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Vehicle Total Cost of Ownership Calculator | CalcWise">
+  <meta name="twitter:description" content="Free vehicle total cost of ownership calculator. See your true cost per mile, per year, and overall.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <!-- BreadcrumbList Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Vehicle Calculators", "item": "https://calcwise.io/vehicle-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "Vehicle Total Cost Calculator", "item": "https://calcwise.io/vehicle-calculators/vehicle-total-cost-calculator/" }
+    ]
+  }
+  </script>
+
+  <!-- FAQPage Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the total cost of owning a car?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The total cost of owning a car includes the purchase price (or loan payments), insurance, fuel, maintenance and repairs, registration, taxes, and depreciation. AAA estimates the average cost of owning a new car is over $10,000 per year." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the average cost per mile to own a car?",
+        "acceptedAnswer": { "@type": "Answer", "text": "According to AAA, the average cost per mile to own and operate a new vehicle is roughly $0.60-$0.80 per mile, depending on the vehicle type. This includes all costs: depreciation, insurance, fuel, maintenance, fees, and financing." }
+      },
+      {
+        "@type": "Question",
+        "name": "How can I reduce my total vehicle ownership costs?",
+        "acceptedAnswer": { "@type": "Answer", "text": "You can reduce costs by buying a reliable used vehicle, shopping for competitive insurance rates, performing regular maintenance, driving fuel-efficiently, and keeping the vehicle longer to spread the purchase cost over more years." }
+      },
+      {
+        "@type": "Question",
+        "name": "Is it cheaper to own a used car or a new car?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Used cars are typically cheaper to own overall because they have already undergone the steepest depreciation. However, older vehicles may have higher maintenance costs and lower fuel efficiency. A 2-3 year old certified pre-owned vehicle often offers the best balance." }
+      },
+      {
+        "@type": "Question",
+        "name": "What maintenance costs should I budget for?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Budget for oil changes ($30-$100 each), tire replacement ($400-$800 per set), brake service ($200-$600), battery replacement ($100-$250), and general repairs. A good rule is to budget $75-$150 per month for maintenance and repairs on an average vehicle." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/vehicle-calculators/" aria-current="page">Vehicle</a>
+        <a href="/business-calculators/">Business</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/vehicle-calculators/">Vehicle Calculators</a>
+      <a href="/business-calculators/">Business Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/vehicle-calculators/">Vehicle Calculators</a></li>
+          <li><span aria-current="page">Vehicle Total Cost Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="article-content">
+          <h1>Vehicle Total Cost of Ownership Calculator</h1>
+          <p>Calculate the true total cost of owning a vehicle by factoring in purchase price, insurance, fuel, maintenance, and the number of years you plan to own it. See your cost per mile, cost per year, and the complete picture of vehicle ownership expenses.</p>
+
+          <div class="calc-container mt-8">
+            <div class="calc-header">
+              <h2>Calculate Total Cost of Ownership</h2>
+              <p>Enter your vehicle ownership costs below</p>
+            </div>
+            <div class="calc-body">
+              <form id="total-cost-form" onsubmit="return false;">
+                <div class="form-group">
+                  <label class="form-label" for="purchase-price">Vehicle Purchase Price</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="purchase-price" name="purchasePrice" class="form-input" placeholder="35000" min="0" step="100" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="annual-insurance">Annual Insurance Cost</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="annual-insurance" name="annualInsurance" class="form-input" placeholder="1800" min="0" step="50" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="annual-fuel">Annual Fuel Cost</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="annual-fuel" name="annualFuel" class="form-input" placeholder="2100" min="0" step="50" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="annual-maintenance">Annual Maintenance Cost</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="annual-maintenance" name="annualMaintenance" class="form-input" placeholder="1200" min="0" step="50" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="years-owned">Years of Ownership</label>
+                  <input type="number" id="years-owned" name="yearsOwned" class="form-input" placeholder="5" min="1" max="30" step="1" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="annual-miles">Annual Miles Driven <span class="form-hint">(for cost per mile)</span></label>
+                  <input type="number" id="annual-miles" name="annualMiles" class="form-input" placeholder="12000" min="1" step="500" required>
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calculateTotalCost()">Calculate Total Cost</button>
+                  <button type="button" class="btn btn-reset" onclick="resetTotalCost()">Reset</button>
+                </div>
+              </form>
+
+              <div id="total-cost-results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">Total Cost of Ownership</div>
+                  <div class="result-value" id="result-total-cost"></div>
+                </div>
+                <div class="result-grid">
+                  <div class="result-item">
+                    <div class="result-label">Cost Per Year</div>
+                    <div class="result-value" id="result-per-year"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Cost Per Month</div>
+                    <div class="result-value" id="result-per-month"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Cost Per Mile</div>
+                    <div class="result-value" id="result-per-mile"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Total Operating Costs</div>
+                    <div class="result-value" id="result-operating"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Formula Section -->
+          <section class="content-section">
+            <h2>Total Cost of Ownership Formula</h2>
+            <p>The total cost of ownership sums all vehicle-related expenses over the ownership period:</p>
+            <div class="formula-box">
+              <div class="formula-label">Total Cost of Ownership</div>
+              Total = Purchase Price + (Insurance + Fuel + Maintenance) x Years Owned
+            </div>
+            <div class="formula-box">
+              <div class="formula-label">Cost Per Mile</div>
+              Cost Per Mile = Total Cost / (Annual Miles x Years Owned)
+            </div>
+          </section>
+
+          <!-- How to Use -->
+          <section class="content-section">
+            <h2>How to Use This Vehicle Total Cost Calculator</h2>
+            <ol>
+              <li><strong>Enter the purchase price</strong> - the total price you paid or will pay for the vehicle.</li>
+              <li><strong>Enter annual insurance</strong> - your yearly auto insurance premium.</li>
+              <li><strong>Enter annual fuel cost</strong> - your estimated yearly fuel expense (use our Fuel Cost Calculator).</li>
+              <li><strong>Enter annual maintenance</strong> - yearly maintenance, repairs, tires, and service costs.</li>
+              <li><strong>Enter years of ownership</strong> - how long you plan to keep the vehicle.</li>
+              <li><strong>Enter annual miles</strong> - your typical yearly driving distance.</li>
+              <li><strong>Click "Calculate Total Cost"</strong> to see the complete ownership picture.</li>
+            </ol>
+          </section>
+
+          <!-- Example Scenario -->
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>Suppose you buy a $35,000 car, pay $1,800/year for insurance, $2,100/year for fuel, and $1,200/year for maintenance, and keep it for 5 years driving 12,000 miles annually. Your total cost of ownership would be $60,500 ($35,000 + $25,500 in operating costs). That works out to $12,100 per year, $1,008 per month, or about $1.01 per mile.</p>
+          </section>
+
+          <!-- FAQ Section -->
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What is the total cost of owning a car?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>The total cost of owning a car includes the purchase price (or loan payments), insurance, fuel, maintenance and repairs, registration, taxes, and depreciation. AAA estimates the average cost of owning a new car is over $10,000 per year.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What is the average cost per mile to own a car?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>According to AAA, the average cost per mile to own and operate a new vehicle is roughly $0.60-$0.80 per mile, depending on the vehicle type. This includes all costs: depreciation, insurance, fuel, maintenance, fees, and financing.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                How can I reduce my total vehicle ownership costs?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>You can reduce costs by buying a reliable used vehicle, shopping for competitive insurance rates, performing regular maintenance, driving fuel-efficiently, and keeping the vehicle longer to spread the purchase cost over more years.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Is it cheaper to own a used car or a new car?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Used cars are typically cheaper to own overall because they have already undergone the steepest depreciation. However, older vehicles may have higher maintenance costs and lower fuel efficiency. A 2-3 year old certified pre-owned vehicle often offers the best balance.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What maintenance costs should I budget for?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Budget for oil changes ($30-$100 each), tire replacement ($400-$800 per set), brake service ($200-$600), battery replacement ($100-$250), and general repairs. A good rule is to budget $75-$150 per month for maintenance and repairs on an average vehicle.</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Related Calculators -->
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/vehicle-calculators/fuel-cost-calculator/" class="card card-link">
+                <h3>Fuel Cost Calculator</h3>
+                <p>Calculate your annual and monthly fuel expenses.</p>
+              </a>
+              <a href="/vehicle-calculators/car-depreciation-calculator/" class="card card-link">
+                <h3>Car Depreciation Calculator</h3>
+                <p>Estimate how your vehicle loses value over time.</p>
+              </a>
+              <a href="/vehicle-calculators/car-insurance-savings-calculator/" class="card card-link">
+                <h3>Car Insurance Savings Calculator</h3>
+                <p>Estimate how much you could save on car insurance.</p>
+              </a>
+              <a href="/vehicle-calculators/car-payment-calculator/" class="card card-link">
+                <h3>Car Payment Calculator</h3>
+                <p>Estimate your monthly car payment with financing details.</p>
+              </a>
+              <a href="/vehicle-calculators/mileage-reimbursement-calculator/" class="card card-link">
+                <h3>Mileage Reimbursement Calculator</h3>
+                <p>Calculate IRS mileage reimbursement for business driving.</p>
+              </a>
+            </div>
+          </section>
+
+          <!-- Disclaimer -->
+          <div class="disclaimer">
+            <strong>Disclaimer:</strong> This calculator provides estimates for informational purposes only. Actual vehicle ownership costs vary based on make, model, driving habits, location, and other factors. This is not financial advice. Consult a qualified financial professional for personalized guidance.
+          </div>
+
+          <!-- Ad Slot -->
+          <div class="ad-slot ad-slot-leaderboard"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Vehicle</h4>
+          <a href="/vehicle-calculators/">All Vehicle Calculators</a>
+          <a href="/vehicle-calculators/car-payment-calculator/">Car Payment</a>
+          <a href="/vehicle-calculators/vehicle-total-cost-calculator/">Total Cost</a>
+        </div>
+        <div class="footer-col">
+          <h4>Finance</h4>
+          <a href="/finance-calculators/">All Finance Calculators</a>
+          <a href="/finance-calculators/loan-calculator/">Loan Calculator</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateTotalCost() {
+      if (!CalcWise.validateForm('total-cost-form')) return;
+
+      const price = CalcWise.parseNumber(document.getElementById('purchase-price').value);
+      const insurance = CalcWise.parseNumber(document.getElementById('annual-insurance').value);
+      const fuel = CalcWise.parseNumber(document.getElementById('annual-fuel').value);
+      const maintenance = CalcWise.parseNumber(document.getElementById('annual-maintenance').value);
+      const years = parseInt(document.getElementById('years-owned').value);
+      const annualMiles = CalcWise.parseNumber(document.getElementById('annual-miles').value);
+
+      const annualOperating = insurance + fuel + maintenance;
+      const totalOperating = annualOperating * years;
+      const totalCost = price + totalOperating;
+      const costPerYear = totalCost / years;
+      const costPerMonth = costPerYear / 12;
+      const totalMiles = annualMiles * years;
+      const costPerMile = totalCost / totalMiles;
+
+      CalcWise.setText('result-total-cost', CalcWise.formatCurrency(totalCost));
+      CalcWise.setText('result-per-year', CalcWise.formatCurrency(costPerYear));
+      CalcWise.setText('result-per-month', CalcWise.formatCurrency(costPerMonth));
+      CalcWise.setText('result-per-mile', '$' + costPerMile.toFixed(2));
+      CalcWise.setText('result-operating', CalcWise.formatCurrency(totalOperating));
+      CalcWise.showResults('total-cost-results');
+    }
+
+    function resetTotalCost() {
+      document.getElementById('total-cost-form').reset();
+      CalcWise.hideResults('total-cost-results');
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Freelance Income Calculator - Project Your Freelance Earnings | CalcWise</title>
+  <meta name="description" content="Free freelance income calculator. Estimate your gross income, net income after taxes and expenses, and effective hourly rate as a freelancer or self-employed professional.">
+  <meta name="keywords" content="freelance income calculator, freelance earnings, self-employment income, freelance tax calculator, effective hourly rate">
+  <link rel="canonical" href="https://calcwise.io/salary-calculators/freelance-income-calculator/">
+
+  <meta property="og:title" content="Freelance Income Calculator - Project Your Freelance Earnings">
+  <meta property="og:description" content="Free freelance income calculator. Estimate your gross income, net income, and effective hourly rate.">
+  <meta property="og:url" content="https://calcwise.io/salary-calculators/freelance-income-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Freelance Income Calculator - Project Your Freelance Earnings">
+  <meta name="twitter:description" content="Free freelance income calculator. Estimate your gross income, net income, and effective hourly rate.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Salary Calculators", "item": "https://calcwise.io/salary-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "Freelance Income Calculator", "item": "https://calcwise.io/salary-calculators/freelance-income-calculator/" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do I calculate my freelance income?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Multiply your hourly rate by billable hours per week, then by weeks worked per year. Subtract business expenses and estimated taxes (including self-employment tax of 15.3%) to get your net freelance income." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the self-employment tax rate?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The self-employment tax rate is 15.3%, which covers both the employer and employee portions of Social Security (12.4%) and Medicare (2.9%). You can deduct half of this tax when calculating your adjusted gross income." }
+      },
+      {
+        "@type": "Question",
+        "name": "What expenses can freelancers deduct?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Common deductible expenses include home office costs, equipment and software, internet and phone bills, professional development, travel, marketing, health insurance premiums, and retirement contributions." }
+      },
+      {
+        "@type": "Question",
+        "name": "How many billable hours should I plan for?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Most freelancers can bill 20-30 hours per week, with the remaining time spent on marketing, admin, invoicing, and business development. Planning for 25 billable hours per week is a realistic starting point." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is an effective hourly rate?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Your effective hourly rate is your net income divided by total hours worked (including non-billable time). It shows what you actually earn per hour of work after expenses and taxes, and is always lower than your billing rate." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/salary-calculators/" aria-current="page">Salary</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/salary-calculators/">Salary Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/salary-calculators/">Salary Calculators</a></li>
+          <li><span aria-current="page">Freelance Income Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="article-content">
+          <h1>Freelance Income Calculator</h1>
+          <p>Project your annual freelance income after expenses and taxes. Enter your hourly rate, billable hours, and business expenses to see your gross income, net income, and effective hourly rate as a freelancer.</p>
+
+          <div class="calc-container mt-8">
+            <div class="calc-header">
+              <h2>Calculate Freelance Income</h2>
+              <p>Enter your freelance details below</p>
+            </div>
+            <div class="calc-body">
+              <form id="freelance-form" onsubmit="return false;">
+                <div class="form-group">
+                  <label class="form-label" for="hourly-rate">Hourly Rate</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="hourly-rate" name="hourlyRate" class="form-input" placeholder="75" min="0" step="1" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="billable-hours">Billable Hours Per Week</label>
+                  <input type="number" id="billable-hours" name="billableHours" class="form-input" placeholder="25" min="1" max="80" step="0.5" value="25" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="weeks-year">Weeks Per Year</label>
+                  <input type="number" id="weeks-year" name="weeksYear" class="form-input" placeholder="48" min="1" max="52" step="1" value="48" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="annual-expenses">Annual Business Expenses</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="annual-expenses" name="annualExpenses" class="form-input" placeholder="10000" min="0" step="100" value="0">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="tax-rate">Estimated Tax Rate <span class="form-hint">(income + SE tax)</span></label>
+                  <div class="input-suffix">
+                    <input type="number" id="tax-rate" name="taxRate" class="form-input" placeholder="30" min="0" max="60" step="0.5" value="30">
+                    <span class="suffix">%</span>
+                  </div>
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calculateFreelance()">Calculate Income</button>
+                  <button type="button" class="btn btn-reset" onclick="resetFreelance()">Reset</button>
+                </div>
+              </form>
+
+              <div id="freelance-results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">Annual Net Income</div>
+                  <div class="result-value" id="result-net-income"></div>
+                </div>
+                <div class="result-grid">
+                  <div class="result-item">
+                    <div class="result-label">Gross Income</div>
+                    <div class="result-value" id="result-gross"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">After Expenses</div>
+                    <div class="result-value" id="result-after-expenses"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Estimated Taxes</div>
+                    <div class="result-value" id="result-taxes"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Monthly Net Income</div>
+                    <div class="result-value" id="result-monthly"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Effective Hourly Rate</div>
+                    <div class="result-value" id="result-effective-rate"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <section class="content-section">
+            <h2>Freelance Income Formula</h2>
+            <p>Your net freelance income is calculated as:</p>
+            <div class="formula-box">
+              <div class="formula-label">Net Freelance Income Formula</div>
+              Net Income = (Hourly Rate x Billable Hours x Weeks) - Expenses - Taxes
+            </div>
+            <p>Where taxes include both income tax and self-employment tax (15.3%). Your <strong>effective hourly rate</strong> is your net income divided by total hours worked.</p>
+          </section>
+
+          <section class="content-section">
+            <h2>How to Use This Calculator</h2>
+            <ol>
+              <li><strong>Enter your hourly rate</strong> - the rate you charge clients per hour.</li>
+              <li><strong>Enter billable hours per week</strong> - hours you can actually bill to clients.</li>
+              <li><strong>Enter weeks per year</strong> - account for vacation and downtime (typically 46-50).</li>
+              <li><strong>Enter annual business expenses</strong> - software, equipment, insurance, etc.</li>
+              <li><strong>Enter your estimated tax rate</strong> - combined income tax and self-employment tax.</li>
+              <li><strong>Click "Calculate Income"</strong> to see your complete income projection.</li>
+            </ol>
+          </section>
+
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>A freelance developer charging $75/hour, billing 25 hours/week for 48 weeks, with $10,000 in expenses and a 30% combined tax rate: Gross income is $90,000, after expenses $80,000, taxes $24,000, net income $56,000. Effective hourly rate based on 40-hour weeks is about $23.33.</p>
+          </section>
+
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">How do I calculate my freelance income?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>Multiply your hourly rate by billable hours per week, then by weeks worked per year. Subtract expenses and estimated taxes (including self-employment tax of 15.3%) to get net income.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">What is the self-employment tax rate?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>The self-employment tax rate is 15.3%, covering both employer and employee portions of Social Security (12.4%) and Medicare (2.9%).</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">What expenses can freelancers deduct?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>Common deductible expenses include home office costs, equipment, software, internet, phone, professional development, travel, marketing, and health insurance premiums.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">How many billable hours should I plan for?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>Most freelancers can bill 20-30 hours per week, with remaining time on admin, marketing, and business development. 25 billable hours is realistic.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">What is an effective hourly rate?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>Your effective hourly rate is net income divided by total hours worked (including non-billable time). It shows what you actually earn per hour after expenses and taxes.</p></div>
+            </div>
+          </section>
+
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/salary-calculators/contractor-vs-employee-calculator/" class="card card-link">
+                <h3>Contractor vs Employee Calculator</h3>
+                <p>Compare freelance 1099 income to W-2 employment.</p>
+              </a>
+              <a href="/salary-calculators/hourly-to-salary-calculator/" class="card card-link">
+                <h3>Hourly to Salary Calculator</h3>
+                <p>Convert your hourly rate to an equivalent salary.</p>
+              </a>
+              <a href="/salary-calculators/annual-income-projection-calculator/" class="card card-link">
+                <h3>Annual Income Projection</h3>
+                <p>Project your total annual income from all sources.</p>
+              </a>
+              <a href="/salary-calculators/take-home-pay-calculator/" class="card card-link">
+                <h3>Take-Home Pay Calculator</h3>
+                <p>Calculate net pay for W-2 employment comparison.</p>
+              </a>
+            </div>
+          </section>
+
+          <div class="disclaimer">
+            <strong>Disclaimer:</strong> This calculator provides estimates for informational purposes only. Actual freelance income depends on client availability, market conditions, and individual tax situations. This is not tax or financial advice. Consult a tax professional.
+          </div>
+
+          <div class="ad-slot ad-slot-leaderboard"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Real Estate</h4>
+          <a href="/real-estate-calculators/">All Real Estate Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Salary</h4>
+          <a href="/salary-calculators/">All Salary Calculators</a>
+          <a href="/salary-calculators/freelance-income-calculator/">Freelance Income</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function fmt(n) { return '$' + n.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ','); }
+
+    function calculateFreelance() {
+      const rate = parseFloat(document.getElementById('hourly-rate').value);
+      const hours = parseFloat(document.getElementById('billable-hours').value);
+      const weeks = parseFloat(document.getElementById('weeks-year').value);
+      const expenses = parseFloat(document.getElementById('annual-expenses').value) || 0;
+      const taxRate = parseFloat(document.getElementById('tax-rate').value) || 0;
+
+      if (!rate || rate <= 0) { alert('Please enter a valid hourly rate.'); return; }
+
+      const gross = rate * hours * weeks;
+      const afterExpenses = gross - expenses;
+      const taxes = afterExpenses * taxRate / 100;
+      const netIncome = afterExpenses - taxes;
+      const totalHoursYear = 40 * weeks;
+      const effectiveRate = totalHoursYear > 0 ? netIncome / totalHoursYear : 0;
+
+      document.getElementById('result-net-income').textContent = fmt(netIncome);
+      document.getElementById('result-gross').textContent = fmt(gross);
+      document.getElementById('result-after-expenses').textContent = fmt(afterExpenses);
+      document.getElementById('result-taxes').textContent = fmt(taxes);
+      document.getElementById('result-monthly').textContent = fmt(netIncome / 12);
+      document.getElementById('result-effective-rate').textContent = fmt(effectiveRate) + '/hr';
+      document.getElementById('freelance-results').classList.remove('hidden');
+    }
+
+    function resetFreelance() {
+      document.getElementById('freelance-form').reset();
+      document.getElementById('freelance-results').classList.add('hidden');
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auto Loan Calculator | CalcWise</title>
+  <meta name="description" content="Free auto loan calculator to compute your monthly payment, total interest, and total amount paid. Enter your loan amount, APR, and term in months for instant results.">
+  <meta name="keywords" content="auto loan calculator, car loan calculator, auto financing calculator, vehicle loan payment, auto loan interest">
+  <link rel="canonical" href="https://calcwise.io/vehicle-calculators/auto-loan-calculator/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Auto Loan Calculator | CalcWise">
+  <meta property="og:description" content="Free auto loan calculator to compute your monthly payment, total interest, and total amount paid.">
+  <meta property="og:url" content="https://calcwise.io/vehicle-calculators/auto-loan-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Auto Loan Calculator | CalcWise">
+  <meta name="twitter:description" content="Free auto loan calculator to compute your monthly payment, total interest, and total amount paid.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <!-- BreadcrumbList Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Vehicle Calculators", "item": "https://calcwise.io/vehicle-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "Auto Loan Calculator", "item": "https://calcwise.io/vehicle-calculators/auto-loan-calculator/" }
+    ]
+  }
+  </script>
+
+  <!-- FAQPage Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How is an auto loan payment calculated?",
+        "acceptedAnswer": { "@type": "Answer", "text": "An auto loan payment is calculated using the amortization formula: M = P[r(1+r)^n] / [(1+r)^n - 1], where P is the loan amount, r is the monthly interest rate (APR divided by 12), and n is the total number of monthly payments." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is APR on an auto loan?",
+        "acceptedAnswer": { "@type": "Answer", "text": "APR (Annual Percentage Rate) represents the yearly cost of borrowing money, expressed as a percentage. It includes the interest rate and may include certain fees. A lower APR means lower borrowing costs." }
+      },
+      {
+        "@type": "Question",
+        "name": "What auto loan term should I choose?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Common auto loan terms are 36, 48, 60, and 72 months. Shorter terms have higher monthly payments but lower total interest. Most financial experts recommend 48 to 60 months for a good balance between affordability and total cost." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I pay off my auto loan early?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Most auto loans allow early payoff, which can save you significant interest. However, some lenders charge prepayment penalties. Check your loan agreement before making extra payments." }
+      },
+      {
+        "@type": "Question",
+        "name": "How does my credit score affect my auto loan rate?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Your credit score is one of the biggest factors in determining your auto loan rate. Borrowers with excellent credit (750+) typically qualify for the lowest rates, while those with lower scores may pay several percentage points more." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/vehicle-calculators/" aria-current="page">Vehicle</a>
+        <a href="/business-calculators/">Business</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/vehicle-calculators/">Vehicle Calculators</a>
+      <a href="/business-calculators/">Business Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/vehicle-calculators/">Vehicle Calculators</a></li>
+          <li><span aria-current="page">Auto Loan Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="article-content">
+          <h1>Auto Loan Calculator</h1>
+          <p>Calculate your monthly auto loan payment, total interest paid, and total amount you will pay over the life of the loan. Simply enter your loan amount, APR, and term in months to see your results instantly.</p>
+
+          <div class="calc-container mt-8">
+            <div class="calc-header">
+              <h2>Calculate Auto Loan Payments</h2>
+              <p>Enter your auto loan details below</p>
+            </div>
+            <div class="calc-body">
+              <form id="auto-loan-form" onsubmit="return false;">
+                <div class="form-group">
+                  <label class="form-label" for="loan-amount">Loan Amount</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="loan-amount" name="loanAmount" class="form-input" placeholder="28000" min="0" step="100" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="apr">Annual Percentage Rate (APR)</label>
+                  <div class="input-suffix">
+                    <input type="number" id="apr" name="apr" class="form-input" placeholder="5.9" min="0" max="100" step="0.01" required>
+                    <span class="suffix">%</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="term-months">Loan Term <span class="form-hint">(months)</span></label>
+                  <input type="number" id="term-months" name="termMonths" class="form-input" placeholder="60" min="1" max="96" step="1" required>
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calculateAutoLoan()">Calculate Payment</button>
+                  <button type="button" class="btn btn-reset" onclick="resetAutoLoan()">Reset</button>
+                </div>
+              </form>
+
+              <div id="auto-loan-results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">Monthly Payment</div>
+                  <div class="result-value" id="result-monthly"></div>
+                </div>
+                <div class="result-grid">
+                  <div class="result-item">
+                    <div class="result-label">Total Interest</div>
+                    <div class="result-value" id="result-interest"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Total Paid</div>
+                    <div class="result-value" id="result-total"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Formula Section -->
+          <section class="content-section">
+            <h2>Auto Loan Payment Formula</h2>
+            <p>The monthly payment for a fixed-rate auto loan uses the standard amortization formula:</p>
+            <div class="formula-box">
+              <div class="formula-label">Monthly Payment Formula</div>
+              M = P [ r(1 + r)^n ] / [ (1 + r)^n - 1 ]
+            </div>
+            <p>Where <strong>M</strong> is the monthly payment, <strong>P</strong> is the loan principal, <strong>r</strong> is the monthly interest rate (APR / 12), and <strong>n</strong> is the total number of monthly payments.</p>
+          </section>
+
+          <!-- How to Use -->
+          <section class="content-section">
+            <h2>How to Use This Auto Loan Calculator</h2>
+            <ol>
+              <li><strong>Enter the loan amount</strong> - the total amount you are borrowing for the vehicle.</li>
+              <li><strong>Enter the APR</strong> - the annual percentage rate offered by your lender.</li>
+              <li><strong>Enter the loan term</strong> - the repayment period in months (e.g., 36, 48, 60, or 72).</li>
+              <li><strong>Click "Calculate Payment"</strong> to see your monthly payment, total interest, and total paid.</li>
+            </ol>
+          </section>
+
+          <!-- Example Scenario -->
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>Suppose you borrow $28,000 at 5.9% APR for 60 months. Your monthly payment would be approximately $541.05. Over the life of the loan, you would pay $4,462.77 in interest for a total of $32,462.77.</p>
+          </section>
+
+          <!-- FAQ Section -->
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                How is an auto loan payment calculated?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>An auto loan payment is calculated using the amortization formula: M = P[r(1+r)^n] / [(1+r)^n - 1], where P is the loan amount, r is the monthly interest rate (APR divided by 12), and n is the total number of monthly payments.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What is APR on an auto loan?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>APR (Annual Percentage Rate) represents the yearly cost of borrowing money, expressed as a percentage. It includes the interest rate and may include certain fees. A lower APR means lower borrowing costs.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What auto loan term should I choose?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Common auto loan terms are 36, 48, 60, and 72 months. Shorter terms have higher monthly payments but lower total interest. Most financial experts recommend 48 to 60 months for a good balance between affordability and total cost.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Can I pay off my auto loan early?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Most auto loans allow early payoff, which can save you significant interest. However, some lenders charge prepayment penalties. Check your loan agreement before making extra payments.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                How does my credit score affect my auto loan rate?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Your credit score is one of the biggest factors in determining your auto loan rate. Borrowers with excellent credit (750+) typically qualify for the lowest rates, while those with lower scores may pay several percentage points more.</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Related Calculators -->
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/vehicle-calculators/car-payment-calculator/" class="card card-link">
+                <h3>Car Payment Calculator</h3>
+                <p>Estimate your car payment with down payment and trade-in value.</p>
+              </a>
+              <a href="/vehicle-calculators/car-affordability-calculator/" class="card card-link">
+                <h3>Car Affordability Calculator</h3>
+                <p>Find out how much car you can afford based on your budget.</p>
+              </a>
+              <a href="/vehicle-calculators/lease-vs-buy-calculator/" class="card card-link">
+                <h3>Lease vs Buy Calculator</h3>
+                <p>Compare the total cost of leasing versus buying a vehicle.</p>
+              </a>
+              <a href="/vehicle-calculators/car-depreciation-calculator/" class="card card-link">
+                <h3>Car Depreciation Calculator</h3>
+                <p>Estimate how your vehicle loses value over time.</p>
+              </a>
+              <a href="/finance-calculators/loan-calculator/" class="card card-link">
+                <h3>Loan Calculator</h3>
+                <p>General-purpose loan payment calculator for any fixed-rate loan.</p>
+              </a>
+            </div>
+          </section>
+
+          <!-- Disclaimer -->
+          <div class="disclaimer">
+            <strong>Disclaimer:</strong> This calculator provides estimates for informational purposes only. Actual auto loan payments may vary based on your credit score, lender policies, fees, and other factors. This is not financial advice. Consult a qualified financial professional before making borrowing decisions.
+          </div>
+
+          <!-- Ad Slot -->
+          <div class="ad-slot ad-slot-leaderboard"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Vehicle</h4>
+          <a href="/vehicle-calculators/">All Vehicle Calculators</a>
+          <a href="/vehicle-calculators/car-payment-calculator/">Car Payment</a>
+          <a href="/vehicle-calculators/auto-loan-calculator/">Auto Loan</a>
+        </div>
+        <div class="footer-col">
+          <h4>Finance</h4>
+          <a href="/finance-calculators/">All Finance Calculators</a>
+          <a href="/finance-calculators/loan-calculator/">Loan Calculator</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateAutoLoan() {
+      if (!CalcWise.validateForm('auto-loan-form')) return;
+
+      const amount = CalcWise.parseNumber(document.getElementById('loan-amount').value);
+      const apr = parseFloat(document.getElementById('apr').value);
+      const termMonths = parseInt(document.getElementById('term-months').value);
+
+      const monthlyRate = apr / 100 / 12;
+      let monthlyPayment;
+      if (monthlyRate === 0) {
+        monthlyPayment = amount / termMonths;
+      } else {
+        monthlyPayment = amount * (monthlyRate * Math.pow(1 + monthlyRate, termMonths)) / (Math.pow(1 + monthlyRate, termMonths) - 1);
+      }
+
+      const totalPaid = monthlyPayment * termMonths;
+      const totalInterest = totalPaid - amount;
+
+      CalcWise.setText('result-monthly', CalcWise.formatCurrency(monthlyPayment));
+      CalcWise.setText('result-interest', CalcWise.formatCurrency(totalInterest));
+      CalcWise.setText('result-total', CalcWise.formatCurrency(totalPaid));
+      CalcWise.showResults('auto-loan-results');
+    }
+
+    function resetAutoLoan() {
+      document.getElementById('auto-loan-form').reset();
+      CalcWise.hideResults('auto-loan-results');
+    }
+  </script>
+</body>
+</html>

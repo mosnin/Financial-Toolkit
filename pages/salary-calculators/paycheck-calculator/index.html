@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paycheck Calculator - Calculate Your Net Pay After Taxes | CalcWise</title>
+  <meta name="description" content="Free paycheck calculator to estimate your take-home pay after federal tax, state tax, and FICA deductions. Enter your gross pay, filing status, and state to get instant results.">
+  <meta name="keywords" content="paycheck calculator, net pay calculator, take-home pay, payroll calculator, salary after taxes">
+  <link rel="canonical" href="https://calcwise.io/salary-calculators/paycheck-calculator/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Paycheck Calculator - Calculate Your Net Pay After Taxes">
+  <meta property="og:description" content="Free paycheck calculator to estimate your take-home pay after federal tax, state tax, and FICA deductions.">
+  <meta property="og:url" content="https://calcwise.io/salary-calculators/paycheck-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Paycheck Calculator - Calculate Your Net Pay After Taxes">
+  <meta name="twitter:description" content="Free paycheck calculator to estimate your take-home pay after federal tax, state tax, and FICA deductions.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <!-- BreadcrumbList Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Salary Calculators", "item": "https://calcwise.io/salary-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "Paycheck Calculator", "item": "https://calcwise.io/salary-calculators/paycheck-calculator/" }
+    ]
+  }
+  </script>
+
+  <!-- FAQPage Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How is federal income tax calculated from my paycheck?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Federal income tax is calculated using progressive tax brackets based on your filing status and taxable income after deductions and allowances. Each portion of your income is taxed at the corresponding bracket rate." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is FICA and how much is deducted?",
+        "acceptedAnswer": { "@type": "Answer", "text": "FICA stands for the Federal Insurance Contributions Act. It includes Social Security tax (6.2% up to the wage base limit) and Medicare tax (1.45% with no limit). The combined FICA rate is 7.65% for most employees." }
+      },
+      {
+        "@type": "Question",
+        "name": "Does every state have state income tax?",
+        "acceptedAnswer": { "@type": "Answer", "text": "No. Nine states have no state income tax: Alaska, Florida, Nevada, New Hampshire, South Dakota, Tennessee, Texas, Washington, and Wyoming. Residents of these states keep more of their gross pay." }
+      },
+      {
+        "@type": "Question",
+        "name": "How do allowances affect my paycheck?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Each allowance reduces your taxable income by a set amount, which lowers the federal tax withheld from your paycheck. More allowances mean less tax withheld and higher take-home pay, but you may owe taxes at filing time." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between gross pay and net pay?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Gross pay is your total earnings before any deductions. Net pay (take-home pay) is what you actually receive after federal tax, state tax, FICA, and any other deductions are subtracted from your gross pay." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/salary-calculators/" aria-current="page">Salary</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/salary-calculators/">Salary Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/salary-calculators/">Salary Calculators</a></li>
+          <li><span aria-current="page">Paycheck Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="article-content">
+          <h1>Paycheck Calculator</h1>
+          <p>Estimate your take-home pay after federal income tax, state income tax, and FICA deductions. Whether you are paid weekly, biweekly, semi-monthly, or monthly, this calculator helps you understand exactly how much of your gross pay you will keep.</p>
+
+          <div class="calc-container mt-8">
+            <div class="calc-header">
+              <h2>Calculate Your Paycheck</h2>
+              <p>Enter your pay details below</p>
+            </div>
+            <div class="calc-body">
+              <form id="paycheck-form" onsubmit="return false;">
+                <div class="form-group">
+                  <label class="form-label" for="gross-pay">Gross Pay Per Period</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="gross-pay" name="grossPay" class="form-input" placeholder="5000" min="0" step="0.01" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="pay-frequency">Pay Frequency</label>
+                  <select id="pay-frequency" name="payFrequency" class="form-input" required>
+                    <option value="weekly">Weekly (52 paychecks/year)</option>
+                    <option value="biweekly" selected>Biweekly (26 paychecks/year)</option>
+                    <option value="semimonthly">Semi-Monthly (24 paychecks/year)</option>
+                    <option value="monthly">Monthly (12 paychecks/year)</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="filing-status">Filing Status</label>
+                  <select id="filing-status" name="filingStatus" class="form-input" required>
+                    <option value="single">Single</option>
+                    <option value="married">Married Filing Jointly</option>
+                    <option value="head">Head of Household</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="allowances">Federal Allowances</label>
+                  <input type="number" id="allowances" name="allowances" class="form-input" placeholder="1" min="0" max="20" step="1" value="1">
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="state-rate">State Tax Rate</label>
+                  <div class="input-suffix">
+                    <input type="number" id="state-rate" name="stateRate" class="form-input" placeholder="5.0" min="0" max="15" step="0.01" value="5">
+                    <span class="suffix">%</span>
+                  </div>
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calculatePaycheck()">Calculate Paycheck</button>
+                  <button type="button" class="btn btn-reset" onclick="resetPaycheck()">Reset</button>
+                </div>
+              </form>
+
+              <div id="paycheck-results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">Net Pay (Take-Home)</div>
+                  <div class="result-value" id="result-net-pay"></div>
+                </div>
+                <div class="result-grid">
+                  <div class="result-item">
+                    <div class="result-label">Federal Tax</div>
+                    <div class="result-value" id="result-federal-tax"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">State Tax</div>
+                    <div class="result-value" id="result-state-tax"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">FICA (SS + Medicare)</div>
+                    <div class="result-value" id="result-fica"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Total Deductions</div>
+                    <div class="result-value" id="result-total-deductions"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Formula Section -->
+          <section class="content-section">
+            <h2>Paycheck Calculation Formula</h2>
+            <p>Your net pay is determined by subtracting all tax withholdings from your gross pay:</p>
+            <div class="formula-box">
+              <div class="formula-label">Net Pay Formula</div>
+              Net Pay = Gross Pay - Federal Tax - State Tax - FICA
+            </div>
+            <p>Where <strong>Federal Tax</strong> is based on progressive brackets after allowances, <strong>State Tax</strong> is applied at your state's rate, and <strong>FICA</strong> is 7.65% (6.2% Social Security + 1.45% Medicare).</p>
+          </section>
+
+          <!-- How to Use -->
+          <section class="content-section">
+            <h2>How to Use This Paycheck Calculator</h2>
+            <ol>
+              <li><strong>Enter your gross pay</strong> - the total amount you earn per pay period before any deductions.</li>
+              <li><strong>Select your pay frequency</strong> - how often you receive a paycheck (weekly, biweekly, semi-monthly, or monthly).</li>
+              <li><strong>Choose your filing status</strong> - single, married filing jointly, or head of household.</li>
+              <li><strong>Enter your allowances</strong> - the number of federal withholding allowances you claim.</li>
+              <li><strong>Enter your state tax rate</strong> - your state income tax rate (enter 0 for no-income-tax states).</li>
+              <li><strong>Click "Calculate Paycheck"</strong> to see your net pay and full deduction breakdown.</li>
+            </ol>
+          </section>
+
+          <!-- Example Scenario -->
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>Suppose you earn $5,000 gross pay biweekly, file as single with 1 allowance, and live in a state with a 5% income tax rate. Your estimated federal tax would be approximately $654, state tax $250, and FICA $382.50. Your net take-home pay would be approximately $3,713.50 per paycheck.</p>
+          </section>
+
+          <!-- FAQ Section -->
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                How is federal income tax calculated from my paycheck?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Federal income tax is calculated using progressive tax brackets based on your filing status and taxable income after deductions and allowances. Each portion of your income is taxed at the corresponding bracket rate.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What is FICA and how much is deducted?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>FICA stands for the Federal Insurance Contributions Act. It includes Social Security tax (6.2% up to the wage base limit) and Medicare tax (1.45% with no limit). The combined FICA rate is 7.65% for most employees.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Does every state have state income tax?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>No. Nine states have no state income tax: Alaska, Florida, Nevada, New Hampshire, South Dakota, Tennessee, Texas, Washington, and Wyoming. Residents of these states keep more of their gross pay.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                How do allowances affect my paycheck?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Each allowance reduces your taxable income by a set amount, which lowers the federal tax withheld from your paycheck. More allowances mean less tax withheld and higher take-home pay, but you may owe taxes at filing time.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What is the difference between gross pay and net pay?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Gross pay is your total earnings before any deductions. Net pay (take-home pay) is what you actually receive after federal tax, state tax, FICA, and any other deductions are subtracted from your gross pay.</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Related Calculators -->
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/salary-calculators/salary-after-tax-calculator/" class="card card-link">
+                <h3>Salary After Tax Calculator</h3>
+                <p>See your annual salary broken down into take-home pay periods.</p>
+              </a>
+              <a href="/salary-calculators/take-home-pay-calculator/" class="card card-link">
+                <h3>Take-Home Pay Calculator</h3>
+                <p>Calculate your net pay with detailed deduction breakdowns.</p>
+              </a>
+              <a href="/salary-calculators/bonus-calculator/" class="card card-link">
+                <h3>Bonus Calculator</h3>
+                <p>Find out how much of your bonus you keep after taxes.</p>
+              </a>
+              <a href="/salary-calculators/hourly-to-salary-calculator/" class="card card-link">
+                <h3>Hourly to Salary Calculator</h3>
+                <p>Convert your hourly rate to an equivalent annual salary.</p>
+              </a>
+            </div>
+          </section>
+
+          <!-- Disclaimer -->
+          <div class="disclaimer">
+            <strong>Disclaimer:</strong> This calculator provides estimates for informational purposes only. Actual paycheck amounts may vary based on additional deductions, pre-tax contributions, local taxes, and other factors. This is not tax or financial advice. Consult a qualified tax professional for personalized guidance.
+          </div>
+
+          <!-- Ad Slot -->
+          <div class="ad-slot ad-slot-leaderboard"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Real Estate</h4>
+          <a href="/real-estate-calculators/">All Real Estate Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Salary</h4>
+          <a href="/salary-calculators/">All Salary Calculators</a>
+          <a href="/salary-calculators/paycheck-calculator/">Paycheck Calculator</a>
+          <a href="/salary-calculators/salary-after-tax-calculator/">Salary After Tax</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculatePaycheck() {
+      const grossPay = parseFloat(document.getElementById('gross-pay').value);
+      const frequency = document.getElementById('pay-frequency').value;
+      const filingStatus = document.getElementById('filing-status').value;
+      const allowances = parseInt(document.getElementById('allowances').value) || 0;
+      const stateRate = parseFloat(document.getElementById('state-rate').value) || 0;
+
+      if (!grossPay || grossPay <= 0) { alert('Please enter a valid gross pay amount.'); return; }
+
+      const periodsPerYear = { weekly: 52, biweekly: 26, semimonthly: 24, monthly: 12 };
+      const periods = periodsPerYear[frequency];
+      const annualGross = grossPay * periods;
+      const standardDeduction = filingStatus === 'married' ? 29200 : filingStatus === 'head' ? 21900 : 14600;
+      const allowanceValue = allowances * 4300;
+      const taxableIncome = Math.max(0, annualGross - standardDeduction - allowanceValue);
+
+      let federalTaxAnnual = 0;
+      let brackets;
+      if (filingStatus === 'married') {
+        brackets = [[23200,0.10],[71080,0.12],[100000,0.22],[175050,0.24],[175000,0.32],[200000,0.35],[Infinity,0.37]];
+      } else if (filingStatus === 'head') {
+        brackets = [[16550,0.10],[47450,0.12],[50000,0.22],[86350,0.24],[87500,0.32],[200000,0.35],[Infinity,0.37]];
+      } else {
+        brackets = [[11600,0.10],[35550,0.12],[53090,0.22],[53665,0.24],[87500,0.32],[200000,0.35],[Infinity,0.37]];
+      }
+      let remaining = taxableIncome;
+      for (const [width, rate] of brackets) {
+        if (remaining <= 0) break;
+        const taxable = Math.min(remaining, width);
+        federalTaxAnnual += taxable * rate;
+        remaining -= taxable;
+      }
+
+      const federalTax = federalTaxAnnual / periods;
+      const stateTax = (grossPay * stateRate) / 100;
+      const fica = grossPay * 0.0765;
+      const totalDeductions = federalTax + stateTax + fica;
+      const netPay = grossPay - totalDeductions;
+
+      document.getElementById('result-net-pay').textContent = '$' + netPay.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+      document.getElementById('result-federal-tax').textContent = '$' + federalTax.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+      document.getElementById('result-state-tax').textContent = '$' + stateTax.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+      document.getElementById('result-fica').textContent = '$' + fica.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+      document.getElementById('result-total-deductions').textContent = '$' + totalDeductions.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+      document.getElementById('paycheck-results').classList.remove('hidden');
+    }
+
+    function resetPaycheck() {
+      document.getElementById('paycheck-form').reset();
+      document.getElementById('paycheck-results').classList.add('hidden');
+    }
+  </script>
+</body>
+</html>

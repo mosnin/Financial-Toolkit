@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Credit Card Interest Calculator | CalcWise</title>
+  <meta name="description" content="Calculate how much interest you pay monthly on your credit card balance. See the monthly interest charge, principal paid, and complete payoff timeline for any payment amount.">
+  <meta name="keywords" content="credit card interest calculator, credit card APR calculator, credit card payment calculator, credit card payoff, interest charges">
+  <link rel="canonical" href="https://calcwise.io/credit-calculators/credit-card-interest-calculator/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Credit Card Interest Calculator | CalcWise">
+  <meta property="og:description" content="Calculate your monthly credit card interest charges and payoff timeline.">
+  <meta property="og:url" content="https://calcwise.io/credit-calculators/credit-card-interest-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Credit Card Interest Calculator | CalcWise">
+  <meta name="twitter:description" content="Calculate your monthly credit card interest charges and payoff timeline.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <!-- BreadcrumbList Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Credit Calculators", "item": "https://calcwise.io/credit-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "Credit Card Interest Calculator", "item": "https://calcwise.io/credit-calculators/credit-card-interest-calculator/" }
+    ]
+  }
+  </script>
+
+  <!-- FAQPage Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How is credit card interest calculated?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Credit card interest is typically calculated using the average daily balance method. Your APR is divided by 365 to get a daily rate, which is applied to your average daily balance. The monthly charge is the sum of these daily charges." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between APR and interest rate?",
+        "acceptedAnswer": { "@type": "Answer", "text": "For credit cards, APR and interest rate are essentially the same thing since credit cards do not have upfront fees rolled into the rate. APR stands for Annual Percentage Rate and represents the yearly cost of borrowing." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I avoid paying interest on my credit card?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes, if you pay your full statement balance by the due date each month, you benefit from the grace period and pay no interest on purchases. Interest only applies when you carry a balance from one billing cycle to the next." }
+      },
+      {
+        "@type": "Question",
+        "name": "Why is most of my payment going to interest?",
+        "acceptedAnswer": { "@type": "Answer", "text": "When you have a large balance, the monthly interest charge can consume a significant portion of your payment, especially with high APRs. As your balance decreases, more of each payment goes toward principal. Paying more than the minimum accelerates this shift." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/credit-calculators/" aria-current="page">Credit</a>
+        <a href="/business-calculators/">Business</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/credit-calculators/">Credit Calculators</a>
+      <a href="/business-calculators/">Business Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/credit-calculators/">Credit Calculators</a></li>
+          <li><span aria-current="page">Credit Card Interest Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="article-content">
+          <h1>Credit Card Interest Calculator</h1>
+          <p>Understanding how much interest you pay each month on your credit card balance is the first step to taking control of your debt. This calculator breaks down your payment into interest and principal, and shows you exactly when you will be debt-free.</p>
+
+          <div class="calc-container mt-8">
+            <div class="calc-header">
+              <h2>Calculate Credit Card Interest</h2>
+              <p>Enter your card balance, APR, and payment amount</p>
+            </div>
+            <div class="calc-body">
+              <form id="ccinterest-form" onsubmit="return false;">
+                <div class="form-group">
+                  <label class="form-label" for="cc-balance">Current Balance</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="cc-balance" name="ccBalance" class="form-input" placeholder="5000" min="1" step="100" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="cc-apr">Annual Percentage Rate (APR)</label>
+                  <div class="input-suffix">
+                    <input type="number" id="cc-apr" name="ccApr" class="form-input" placeholder="22.99" min="0" max="40" step="0.01" required>
+                    <span class="suffix">%</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="cc-payment">Monthly Payment Amount</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="cc-payment" name="ccPayment" class="form-input" placeholder="200" min="1" step="10" required>
+                  </div>
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calculateCCInterest()">Calculate</button>
+                  <button type="button" class="btn btn-reset" onclick="resetCCInterest()">Reset</button>
+                </div>
+              </form>
+
+              <div id="ccinterest-results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">First Month Interest Charge</div>
+                  <div class="result-value" id="result-monthly-interest"></div>
+                </div>
+                <div class="result-grid">
+                  <div class="result-item">
+                    <div class="result-label">First Month Principal Paid</div>
+                    <div class="result-value" id="result-principal"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Months to Payoff</div>
+                    <div class="result-value" id="result-payoff-months"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Total Interest Paid</div>
+                    <div class="result-value" id="result-total-interest"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Total Amount Paid</div>
+                    <div class="result-value" id="result-total-paid"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Formula Section -->
+          <section class="content-section">
+            <h2>Credit Card Interest Formula</h2>
+            <p>Monthly interest on a credit card is calculated as:</p>
+            <div class="formula-box">
+              <div class="formula-label">Monthly Interest Charge</div>
+              Monthly Interest = Balance x (APR / 12)
+            </div>
+            <p>For example, a $5,000 balance at 22.99% APR generates $95.79 in monthly interest ($5,000 x 0.2299 / 12). If you pay $200, only $104.21 goes toward reducing the balance.</p>
+          </section>
+
+          <!-- How to Use -->
+          <section class="content-section">
+            <h2>How to Use This Calculator</h2>
+            <ol>
+              <li><strong>Enter your current balance</strong> - the total amount owed on your credit card.</li>
+              <li><strong>Enter your APR</strong> - found on your card statement or account details.</li>
+              <li><strong>Enter your monthly payment</strong> - the amount you plan to pay each month.</li>
+              <li><strong>Click "Calculate"</strong> to see your interest breakdown and payoff timeline.</li>
+            </ol>
+          </section>
+
+          <!-- Example Scenario -->
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>You have a $4,000 credit card balance at 19.99% APR and pay $150 per month. In the first month, $66.63 goes to interest and $83.37 goes to principal. At this rate, you would pay off the balance in about 32 months, paying a total of $788 in interest on top of the original $4,000.</p>
+          </section>
+
+          <!-- FAQ Section -->
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                How is credit card interest calculated?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Credit card interest is typically calculated using the average daily balance method. Your APR is divided by 365 to get a daily rate, which is applied to your average daily balance. The monthly charge is the sum of these daily charges.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What is the difference between APR and interest rate?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>For credit cards, APR and interest rate are essentially the same thing since credit cards do not have upfront fees rolled into the rate. APR stands for Annual Percentage Rate and represents the yearly cost of borrowing.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Can I avoid paying interest on my credit card?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Yes, if you pay your full statement balance by the due date each month, you benefit from the grace period and pay no interest on purchases. Interest only applies when you carry a balance from one billing cycle to the next.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Why is most of my payment going to interest?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>When you have a large balance, the monthly interest charge can consume a significant portion of your payment, especially with high APRs. As your balance decreases, more of each payment goes toward principal. Paying more than the minimum accelerates this shift.</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Related Calculators -->
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/credit-calculators/minimum-payment-calculator/" class="card card-link">
+                <h3>Minimum Payment Calculator</h3>
+                <p>See the true cost of making only minimum payments.</p>
+              </a>
+              <a href="/credit-calculators/balance-transfer-savings-calculator/" class="card card-link">
+                <h3>Balance Transfer Savings Calculator</h3>
+                <p>Calculate savings from transferring to a lower-rate card.</p>
+              </a>
+              <a href="/credit-calculators/credit-utilization-calculator/" class="card card-link">
+                <h3>Credit Utilization Calculator</h3>
+                <p>See how your balance affects your credit score.</p>
+              </a>
+              <a href="/credit-calculators/loan-payoff-timeline-calculator/" class="card card-link">
+                <h3>Loan Payoff Timeline Calculator</h3>
+                <p>Plan extra payments to accelerate your debt payoff.</p>
+              </a>
+            </div>
+          </section>
+
+          <!-- Disclaimer -->
+          <div class="disclaimer">
+            <strong>Disclaimer:</strong> This calculator provides estimates for informational purposes only. Actual interest charges may differ due to the average daily balance method, billing cycle variations, fees, and other factors. This is not financial advice. Consult a qualified financial professional for personalized guidance.
+          </div>
+
+          <!-- Ad Slot -->
+          <div class="ad-slot ad-slot-leaderboard"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Real Estate</h4>
+          <a href="/real-estate-calculators/">All Real Estate Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Finance</h4>
+          <a href="/finance-calculators/">All Finance Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Credit</h4>
+          <a href="/credit-calculators/">All Credit Calculators</a>
+          <a href="/credit-calculators/credit-card-interest-calculator/">CC Interest</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateCCInterest() {
+      const balance = parseFloat(document.getElementById('cc-balance').value);
+      const apr = parseFloat(document.getElementById('cc-apr').value);
+      const payment = parseFloat(document.getElementById('cc-payment').value);
+
+      if (!balance || balance <= 0) { alert('Please enter a valid balance.'); return; }
+      if (isNaN(apr) || apr < 0) { alert('Please enter a valid APR.'); return; }
+      if (!payment || payment <= 0) { alert('Please enter a valid payment amount.'); return; }
+
+      const monthlyRate = apr / 100 / 12;
+      const firstMonthInterest = balance * monthlyRate;
+
+      if (payment <= firstMonthInterest) {
+        alert('Your payment must be greater than the first month interest of $' + firstMonthInterest.toFixed(2) + ' to pay off the balance.');
+        return;
+      }
+
+      const firstMonthPrincipal = payment - firstMonthInterest;
+
+      // Calculate full payoff
+      let remaining = balance;
+      let totalPaid = 0;
+      let months = 0;
+      while (remaining > 0.50 && months < 1200) {
+        const interest = remaining * monthlyRate;
+        let pmt = payment;
+        if (pmt > remaining + interest) pmt = remaining + interest;
+        remaining = remaining + interest - pmt;
+        totalPaid += pmt;
+        months++;
+      }
+
+      const totalInterest = totalPaid - balance;
+      const fmt = (v) => '$' + v.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+
+      const years = Math.floor(months / 12);
+      const remMonths = months % 12;
+      let timeStr = months + ' months';
+      if (years > 0) timeStr += ' (' + years + (years === 1 ? ' year' : ' years') + (remMonths > 0 ? ', ' + remMonths + ' mo' : '') + ')';
+
+      document.getElementById('result-monthly-interest').textContent = fmt(firstMonthInterest);
+      document.getElementById('result-principal').textContent = fmt(firstMonthPrincipal);
+      document.getElementById('result-payoff-months').textContent = timeStr;
+      document.getElementById('result-total-interest').textContent = fmt(totalInterest);
+      document.getElementById('result-total-paid').textContent = fmt(totalPaid);
+      document.getElementById('ccinterest-results').classList.remove('hidden');
+    }
+
+    function resetCCInterest() {
+      document.getElementById('ccinterest-form').reset();
+      document.getElementById('ccinterest-results').classList.add('hidden');
+    }
+
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', !expanded);
+        btn.nextElementSibling.classList.toggle('open');
+      });
+    });
+  </script>
+</body>
+</html>

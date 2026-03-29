@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Life Insurance Coverage Calculator | CalcWise</title>
+  <meta name="description" content="Calculate how much life insurance coverage you need based on your income, debts, dependents, and existing coverage. Get a personalized coverage recommendation.">
+  <meta name="keywords" content="life insurance calculator, life insurance coverage needs, how much life insurance, life insurance estimator, coverage calculator">
+  <link rel="canonical" href="https://calcwise.io/insurance-calculators/life-insurance-coverage-calculator/">
+
+  <meta property="og:title" content="Life Insurance Coverage Calculator | CalcWise">
+  <meta property="og:description" content="Calculate how much life insurance coverage you need based on your income, debts, dependents, and existing coverage.">
+  <meta property="og:url" content="https://calcwise.io/insurance-calculators/life-insurance-coverage-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Life Insurance Coverage Calculator | CalcWise">
+  <meta name="twitter:description" content="Calculate how much life insurance coverage you need based on your income, debts, dependents, and existing coverage.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Insurance Calculators", "item": "https://calcwise.io/insurance-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "Life Insurance Coverage Calculator", "item": "https://calcwise.io/insurance-calculators/life-insurance-coverage-calculator/" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How much life insurance do I need?",
+        "acceptedAnswer": { "@type": "Answer", "text": "A common rule of thumb is 10-15 times your annual income, but the right amount depends on your debts, number of dependents, existing savings, and future financial obligations like college tuition. This calculator provides a personalized recommendation." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the income replacement method?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The income replacement method calculates coverage by multiplying your annual income by the number of years your family would need financial support. It then adds outstanding debts and subtracts existing coverage to determine the gap." }
+      },
+      {
+        "@type": "Question",
+        "name": "Should I include my spouse's income?",
+        "acceptedAnswer": { "@type": "Answer", "text": "This calculator focuses on replacing your income. If both spouses work, each should calculate their own coverage needs separately. Consider what your family would need if either income were lost." }
+      },
+      {
+        "@type": "Question",
+        "name": "How do dependents affect life insurance needs?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Each dependent increases your coverage need. The calculator adds approximately $25,000-$50,000 per dependent to account for childcare, education, and additional living expenses that would continue after your passing." }
+      },
+      {
+        "@type": "Question",
+        "name": "Should I subtract my existing employer life insurance?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes, but be cautious. Employer-provided life insurance typically ends when you leave the job. Many financial advisors recommend owning a personal policy that covers most of your needs independently of employer benefits." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/insurance-calculators/" aria-current="page">Insurance</a>
+        <a href="/business-calculators/">Business</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/insurance-calculators/">Insurance Calculators</a>
+      <a href="/business-calculators/">Business Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/insurance-calculators/">Insurance Calculators</a></li>
+          <li><span aria-current="page">Life Insurance Coverage Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="article-content">
+          <h1>Life Insurance Coverage Calculator</h1>
+          <p>Determine how much life insurance coverage you need to protect your family. This calculator uses the income replacement method, factoring in your annual income, years of replacement needed, outstanding debts, number of dependents, and any existing coverage.</p>
+
+          <div class="calc-container mt-8">
+            <div class="calc-header">
+              <h2>Calculate Your Coverage Needs</h2>
+              <p>Enter your financial details below</p>
+            </div>
+            <div class="calc-body">
+              <form id="life-insurance-form" onsubmit="return false;">
+                <div class="form-group">
+                  <label class="form-label" for="annual-income">Annual Income</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="annual-income" class="form-input" placeholder="75000" min="0" step="1000" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="years-replace">Years to Replace Income</label>
+                  <input type="number" id="years-replace" class="form-input" placeholder="20" min="1" max="50" step="1" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="total-debts">Total Outstanding Debts</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="total-debts" class="form-input" placeholder="200000" min="0" step="1000" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="num-dependents">Number of Dependents</label>
+                  <input type="number" id="num-dependents" class="form-input" placeholder="2" min="0" max="20" step="1" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="existing-coverage">Existing Life Insurance Coverage</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="existing-coverage" class="form-input" placeholder="50000" min="0" step="1000" required>
+                  </div>
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calculateLifeInsurance()">Calculate Coverage</button>
+                  <button type="button" class="btn btn-reset" onclick="resetLifeInsurance()">Reset</button>
+                </div>
+              </form>
+
+              <div id="life-insurance-results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">Recommended Coverage</div>
+                  <div class="result-value" id="result-coverage"></div>
+                </div>
+                <div class="result-grid">
+                  <div class="result-item">
+                    <div class="result-label">Income Replacement Need</div>
+                    <div class="result-value" id="result-income-need"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Debt Coverage</div>
+                    <div class="result-value" id="result-debt-coverage"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Dependent Allowance</div>
+                    <div class="result-value" id="result-dependent"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Less Existing Coverage</div>
+                    <div class="result-value" id="result-existing"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <section class="content-section">
+            <h2>Life Insurance Coverage Formula</h2>
+            <p>The recommended coverage is calculated using the income replacement method with adjustments for debts and dependents:</p>
+            <div class="formula-box">
+              <div class="formula-label">Coverage Needs Formula</div>
+              Recommended Coverage = (Annual Income x Years) + Total Debts + (Dependents x $40,000) - Existing Coverage
+            </div>
+            <p><strong>Income replacement</strong> ensures your family maintains their standard of living. <strong>Debt coverage</strong> pays off mortgages, loans, and credit cards. The <strong>dependent allowance</strong> accounts for childcare, education, and related expenses.</p>
+          </section>
+
+          <section class="content-section">
+            <h2>How to Use This Calculator</h2>
+            <ol>
+              <li><strong>Enter your annual income</strong> - your gross annual earnings.</li>
+              <li><strong>Enter years to replace</strong> - how many years your family would need income support.</li>
+              <li><strong>Enter total debts</strong> - mortgage, car loans, student loans, credit cards, etc.</li>
+              <li><strong>Enter number of dependents</strong> - children and others who rely on your income.</li>
+              <li><strong>Enter existing coverage</strong> - any life insurance you already have.</li>
+              <li><strong>Click "Calculate Coverage"</strong> to see your recommended coverage amount.</li>
+            </ol>
+          </section>
+
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>A 35-year-old earning $75,000 per year with 20 years of income replacement needed, $200,000 in debts, 2 dependents, and $50,000 in existing employer coverage would need approximately $1,730,000 in total life insurance. This breaks down as $1,500,000 for income replacement, $200,000 for debts, $80,000 for dependents, minus $50,000 existing coverage.</p>
+          </section>
+
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">How much life insurance do I need?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>A common rule of thumb is 10-15 times your annual income, but the right amount depends on your debts, dependents, existing savings, and future obligations. This calculator provides a personalized recommendation.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">What is the income replacement method?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>The income replacement method calculates coverage by multiplying your annual income by the number of years your family would need support, then adds debts and subtracts existing coverage.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">How do dependents affect life insurance needs?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>Each dependent increases your coverage need. The calculator adds approximately $40,000 per dependent to account for childcare, education, and additional living expenses.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">Should I subtract my existing employer life insurance?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>Yes, but be cautious. Employer life insurance typically ends when you leave the job. Many advisors recommend a personal policy that covers most of your needs independently.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">Should I include my spouse's income?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>This calculator focuses on replacing your income. If both spouses work, each should calculate their own coverage needs separately.</p></div>
+            </div>
+          </section>
+
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/insurance-calculators/term-vs-whole-life-calculator/" class="card card-link">
+                <h3>Term vs Whole Life Calculator</h3>
+                <p>Compare the costs of term and whole life insurance policies.</p>
+              </a>
+              <a href="/insurance-calculators/disability-insurance-calculator/" class="card card-link">
+                <h3>Disability Insurance Calculator</h3>
+                <p>Calculate disability insurance needs to protect your income.</p>
+              </a>
+              <a href="/insurance-calculators/insurance-coverage-needs-calculator/" class="card card-link">
+                <h3>Insurance Coverage Needs</h3>
+                <p>Comprehensive assessment of all your insurance needs.</p>
+              </a>
+              <a href="/insurance-calculators/insurance-policy-value-calculator/" class="card card-link">
+                <h3>Insurance Policy Value</h3>
+                <p>Analyze the value of your current insurance policy.</p>
+              </a>
+              <a href="/finance-calculators/compound-interest-calculator/" class="card card-link">
+                <h3>Compound Interest Calculator</h3>
+                <p>See how investments grow to supplement insurance planning.</p>
+              </a>
+            </div>
+          </section>
+
+          <div class="disclaimer">
+            <strong>Disclaimer:</strong> This calculator provides estimates for informational purposes only. Life insurance needs are complex and depend on many personal factors. This is not financial or insurance advice. Consult a licensed insurance professional for personalized guidance.
+          </div>
+
+          <div class="ad-slot ad-slot-leaderboard"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Real Estate</h4>
+          <a href="/real-estate-calculators/">All Real Estate Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Finance</h4>
+          <a href="/finance-calculators/">All Finance Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Insurance</h4>
+          <a href="/insurance-calculators/">All Insurance Calculators</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links"><a href="/about.html">About</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateLifeInsurance() {
+      const income = parseFloat(document.getElementById('annual-income').value);
+      const years = parseFloat(document.getElementById('years-replace').value);
+      const debts = parseFloat(document.getElementById('total-debts').value) || 0;
+      const dependents = parseFloat(document.getElementById('num-dependents').value) || 0;
+      const existing = parseFloat(document.getElementById('existing-coverage').value) || 0;
+
+      if (!income || !years) {
+        alert('Please fill in at least your income and years to replace.');
+        return;
+      }
+
+      const incomeNeed = income * years;
+      const debtCoverage = debts;
+      const dependentAllowance = dependents * 40000;
+      const totalNeed = incomeNeed + debtCoverage + dependentAllowance;
+      const recommended = Math.max(0, totalNeed - existing);
+
+      const fmt = (n) => '$' + n.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+
+      document.getElementById('result-coverage').textContent = fmt(recommended);
+      document.getElementById('result-income-need').textContent = fmt(incomeNeed);
+      document.getElementById('result-debt-coverage').textContent = fmt(debtCoverage);
+      document.getElementById('result-dependent').textContent = fmt(dependentAllowance);
+      document.getElementById('result-existing').textContent = '-' + fmt(existing);
+      document.getElementById('life-insurance-results').classList.remove('hidden');
+    }
+
+    function resetLifeInsurance() {
+      document.getElementById('life-insurance-form').reset();
+      document.getElementById('life-insurance-results').classList.add('hidden');
+    }
+
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', !expanded);
+        btn.nextElementSibling.classList.toggle('open');
+      });
+    });
+
+    document.querySelector('.mobile-menu-toggle')?.addEventListener('click', function() {
+      const nav = document.querySelector('.mobile-nav');
+      const expanded = this.getAttribute('aria-expanded') === 'true';
+      this.setAttribute('aria-expanded', !expanded);
+      nav.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>

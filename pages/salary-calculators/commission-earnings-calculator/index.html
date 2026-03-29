@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Commission Earnings Calculator - Calculate Sales Commission | CalcWise</title>
+  <meta name="description" content="Free commission earnings calculator. Calculate your total earnings from base salary and sales commission. Supports flat and tiered commission structures.">
+  <meta name="keywords" content="commission calculator, sales commission calculator, commission earnings, tiered commission, base plus commission">
+  <link rel="canonical" href="https://calcwise.io/salary-calculators/commission-earnings-calculator/">
+
+  <meta property="og:title" content="Commission Earnings Calculator - Calculate Sales Commission">
+  <meta property="og:description" content="Free commission earnings calculator. Calculate your total earnings from base salary and sales commission.">
+  <meta property="og:url" content="https://calcwise.io/salary-calculators/commission-earnings-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Commission Earnings Calculator - Calculate Sales Commission">
+  <meta name="twitter:description" content="Free commission earnings calculator. Calculate your total earnings from base salary and sales commission.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Salary Calculators", "item": "https://calcwise.io/salary-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "Commission Earnings Calculator", "item": "https://calcwise.io/salary-calculators/commission-earnings-calculator/" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How is sales commission calculated?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Sales commission is calculated by multiplying your total sales amount by the commission rate. For example, if you sell $100,000 worth of products at a 5% commission rate, your commission is $5,000." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is a tiered commission structure?",
+        "acceptedAnswer": { "@type": "Answer", "text": "A tiered commission structure pays different rates based on sales volume. For example, 5% on the first $50,000 in sales, 7% on $50,001-$100,000, and 10% on anything above $100,000. Higher tiers reward higher performance." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between base plus commission and straight commission?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Base plus commission means you earn a guaranteed base salary plus commissions on sales. Straight commission means your entire income comes from commissions with no base salary guarantee." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is a typical commission rate?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Commission rates vary widely by industry. Real estate agents typically earn 2.5-3%, SaaS sales reps earn 5-10%, insurance agents earn 5-20%, and retail salespeople may earn 1-10%. The rate depends on the product price and industry norms." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/salary-calculators/" aria-current="page">Salary</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/salary-calculators/">Salary Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/salary-calculators/">Salary Calculators</a></li>
+          <li><span aria-current="page">Commission Earnings Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="article-content">
+          <h1>Commission Earnings Calculator</h1>
+          <p>Calculate your total compensation including base salary and sales commission. Whether you earn a flat commission rate or a tiered structure, this calculator helps you project your total earnings from sales performance.</p>
+
+          <div class="calc-container mt-8">
+            <div class="calc-header">
+              <h2>Calculate Commission Earnings</h2>
+              <p>Enter your compensation details below</p>
+            </div>
+            <div class="calc-body">
+              <form id="commission-form" onsubmit="return false;">
+                <div class="form-group">
+                  <label class="form-label" for="base-salary">Base Salary (per period)</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="base-salary" name="baseSalary" class="form-input" placeholder="3000" min="0" step="100" value="0">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="sales-amount">Total Sales Amount</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="sales-amount" name="salesAmount" class="form-input" placeholder="100000" min="0" step="100" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="commission-rate">Commission Rate</label>
+                  <div class="input-suffix">
+                    <input type="number" id="commission-rate" name="commissionRate" class="form-input" placeholder="5" min="0" max="100" step="0.1" required>
+                    <span class="suffix">%</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="tier2-threshold">Tier 2 Threshold (optional)</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="tier2-threshold" name="tier2Threshold" class="form-input" placeholder="50000" min="0" step="1000">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="tier2-rate">Tier 2 Rate (optional)</label>
+                  <div class="input-suffix">
+                    <input type="number" id="tier2-rate" name="tier2Rate" class="form-input" placeholder="8" min="0" max="100" step="0.1">
+                    <span class="suffix">%</span>
+                  </div>
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calculateCommission()">Calculate Earnings</button>
+                  <button type="button" class="btn btn-reset" onclick="resetCommission()">Reset</button>
+                </div>
+              </form>
+
+              <div id="commission-results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">Total Earnings</div>
+                  <div class="result-value" id="result-total"></div>
+                </div>
+                <div class="result-grid">
+                  <div class="result-item">
+                    <div class="result-label">Base Salary</div>
+                    <div class="result-value" id="result-base"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Commission Earned</div>
+                    <div class="result-value" id="result-commission"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Effective Commission Rate</div>
+                    <div class="result-value" id="result-effective-rate"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <section class="content-section">
+            <h2>Commission Calculation Formula</h2>
+            <p>For a flat commission rate:</p>
+            <div class="formula-box">
+              <div class="formula-label">Total Earnings Formula</div>
+              Total Earnings = Base Salary + (Sales Amount x Commission Rate)
+            </div>
+            <p>For tiered commissions, sales within each tier are multiplied by that tier's rate, and the results are summed.</p>
+          </section>
+
+          <section class="content-section">
+            <h2>How to Use This Calculator</h2>
+            <ol>
+              <li><strong>Enter your base salary</strong> - your guaranteed pay per period (0 for straight commission).</li>
+              <li><strong>Enter total sales amount</strong> - the dollar value of your sales.</li>
+              <li><strong>Enter the commission rate</strong> - your percentage commission on sales.</li>
+              <li><strong>Optionally enter Tier 2 details</strong> - a threshold and higher rate for sales above that amount.</li>
+              <li><strong>Click "Calculate Earnings"</strong> to see your total compensation breakdown.</li>
+            </ol>
+          </section>
+
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>A sales rep with a $3,000 base salary sells $100,000 in products. With a flat 5% commission, they earn $5,000 in commission for total earnings of $8,000. With a tiered structure (5% on first $50,000, 8% on the rest), commission would be $6,500 for total earnings of $9,500.</p>
+          </section>
+
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">How is sales commission calculated?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>Sales commission is calculated by multiplying your total sales amount by the commission rate. For example, $100,000 in sales at 5% = $5,000 commission.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">What is a tiered commission structure?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>A tiered commission structure pays different rates based on sales volume. Higher tiers reward higher performance with increased commission percentages.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">What is the difference between base plus commission and straight commission?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>Base plus commission means you earn a guaranteed base salary plus commissions on sales. Straight commission means your entire income comes from commissions with no base salary guarantee.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">What is a typical commission rate?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>Commission rates vary widely: real estate 2.5-3%, SaaS sales 5-10%, insurance 5-20%, retail 1-10%. Rates depend on the product and industry.</p></div>
+            </div>
+          </section>
+
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/salary-calculators/bonus-calculator/" class="card card-link">
+                <h3>Bonus Calculator</h3>
+                <p>Calculate your after-tax bonus amount.</p>
+              </a>
+              <a href="/salary-calculators/paycheck-calculator/" class="card card-link">
+                <h3>Paycheck Calculator</h3>
+                <p>Estimate your per-paycheck take-home pay.</p>
+              </a>
+              <a href="/salary-calculators/annual-income-projection-calculator/" class="card card-link">
+                <h3>Annual Income Projection</h3>
+                <p>Project your total annual earnings.</p>
+              </a>
+              <a href="/salary-calculators/freelance-income-calculator/" class="card card-link">
+                <h3>Freelance Income Calculator</h3>
+                <p>Calculate freelance income and net earnings.</p>
+              </a>
+            </div>
+          </section>
+
+          <div class="disclaimer">
+            <strong>Disclaimer:</strong> This calculator provides estimates for informational purposes only. Actual commission earnings depend on your specific compensation plan, quotas, and employer policies. This is not financial advice.
+          </div>
+
+          <div class="ad-slot ad-slot-leaderboard"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Real Estate</h4>
+          <a href="/real-estate-calculators/">All Real Estate Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Salary</h4>
+          <a href="/salary-calculators/">All Salary Calculators</a>
+          <a href="/salary-calculators/commission-earnings-calculator/">Commission Calculator</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function fmt(n) { return '$' + n.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ','); }
+
+    function calculateCommission() {
+      const base = parseFloat(document.getElementById('base-salary').value) || 0;
+      const sales = parseFloat(document.getElementById('sales-amount').value);
+      const rate = parseFloat(document.getElementById('commission-rate').value);
+      const tier2Threshold = parseFloat(document.getElementById('tier2-threshold').value) || 0;
+      const tier2Rate = parseFloat(document.getElementById('tier2-rate').value) || 0;
+
+      if (!sales || sales <= 0 || !rate) { alert('Please enter valid sales amount and commission rate.'); return; }
+
+      let commission;
+      if (tier2Threshold > 0 && tier2Rate > 0 && sales > tier2Threshold) {
+        commission = (tier2Threshold * rate / 100) + ((sales - tier2Threshold) * tier2Rate / 100);
+      } else {
+        commission = sales * rate / 100;
+      }
+
+      const total = base + commission;
+      const effectiveRate = sales > 0 ? (commission / sales * 100) : 0;
+
+      document.getElementById('result-total').textContent = fmt(total);
+      document.getElementById('result-base').textContent = fmt(base);
+      document.getElementById('result-commission').textContent = fmt(commission);
+      document.getElementById('result-effective-rate').textContent = effectiveRate.toFixed(1) + '%';
+      document.getElementById('commission-results').classList.remove('hidden');
+    }
+
+    function resetCommission() {
+      document.getElementById('commission-form').reset();
+      document.getElementById('commission-results').classList.add('hidden');
+    }
+  </script>
+</body>
+</html>

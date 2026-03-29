@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Annual Income Projection Calculator - Forecast Your Yearly Earnings | CalcWise</title>
+  <meta name="description" content="Free annual income projection calculator. Estimate your total yearly income from salary, expected raises, and side income. Plan your finances with accurate projections.">
+  <meta name="keywords" content="annual income projection, income forecast calculator, yearly earnings calculator, salary projection, income planning">
+  <link rel="canonical" href="https://calcwise.io/salary-calculators/annual-income-projection-calculator/">
+
+  <meta property="og:title" content="Annual Income Projection Calculator - Forecast Your Yearly Earnings">
+  <meta property="og:description" content="Estimate your total yearly income from salary, expected raises, and side income.">
+  <meta property="og:url" content="https://calcwise.io/salary-calculators/annual-income-projection-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Annual Income Projection Calculator - Forecast Your Yearly Earnings">
+  <meta name="twitter:description" content="Estimate your total yearly income from salary, expected raises, and side income.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Salary Calculators", "item": "https://calcwise.io/salary-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "Annual Income Projection Calculator", "item": "https://calcwise.io/salary-calculators/annual-income-projection-calculator/" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do I project my annual income?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Start with your current monthly income, multiply by 12 for the base annual amount. Add expected raises (as a percentage increase at a specific month), bonuses, and any side income to get your total projected annual income." }
+      },
+      {
+        "@type": "Question",
+        "name": "Should I include side income in my projection?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes, include all income sources for an accurate projection. This includes freelance work, rental income, investment dividends, gig economy earnings, and any other regular or expected income throughout the year." }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I account for a mid-year raise?",
+        "acceptedAnswer": { "@type": "Answer", "text": "If you expect a raise partway through the year, calculate income at your current rate for months before the raise, then at the new rate for remaining months. For example, a 5% raise in July means 6 months at old rate and 6 months at new rate." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between gross and net income projection?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Gross income projection shows your total earnings before taxes and deductions. Net income projection subtracts estimated taxes and deductions. This calculator shows gross projections; use our take-home pay calculator for net estimates." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/salary-calculators/" aria-current="page">Salary</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/salary-calculators/">Salary Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/salary-calculators/">Salary Calculators</a></li>
+          <li><span aria-current="page">Annual Income Projection Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="article-content">
+          <h1>Annual Income Projection Calculator</h1>
+          <p>Forecast your total annual income including your current salary, expected raises, and side income. This calculator helps you plan your finances by projecting what you will earn over the course of the year.</p>
+
+          <div class="calc-container mt-8">
+            <div class="calc-header">
+              <h2>Project Your Annual Income</h2>
+              <p>Enter your income sources and expected changes</p>
+            </div>
+            <div class="calc-body">
+              <form id="projection-form" onsubmit="return false;">
+                <div class="form-group">
+                  <label class="form-label" for="monthly-income">Current Monthly Income</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="monthly-income" name="monthlyIncome" class="form-input" placeholder="6000" min="0" step="100" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="raise-pct">Expected Raise</label>
+                  <div class="input-suffix">
+                    <input type="number" id="raise-pct" name="raisePct" class="form-input" placeholder="5" min="0" max="100" step="0.5" value="0">
+                    <span class="suffix">%</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="raise-month">Raise Effective Month <span class="form-hint">(1-12)</span></label>
+                  <input type="number" id="raise-month" name="raiseMonth" class="form-input" placeholder="7" min="1" max="12" step="1" value="7">
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="side-income">Monthly Side Income</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="side-income" name="sideIncome" class="form-input" placeholder="500" min="0" step="50" value="0">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="bonus-amount">Expected Annual Bonus</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="bonus-amount" name="bonusAmount" class="form-input" placeholder="5000" min="0" step="500" value="0">
+                  </div>
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calculateProjection()">Project Income</button>
+                  <button type="button" class="btn btn-reset" onclick="resetProjection()">Reset</button>
+                </div>
+              </form>
+
+              <div id="projection-results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">Projected Annual Income</div>
+                  <div class="result-value" id="result-total-annual"></div>
+                </div>
+                <div class="result-grid">
+                  <div class="result-item">
+                    <div class="result-label">Primary Income</div>
+                    <div class="result-value" id="result-primary-income"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Side Income (Annual)</div>
+                    <div class="result-value" id="result-side-annual"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Bonus</div>
+                    <div class="result-value" id="result-bonus"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Avg Monthly Income</div>
+                    <div class="result-value" id="result-avg-monthly"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <section class="content-section">
+            <h2>Income Projection Formula</h2>
+            <p>Your projected annual income accounts for mid-year raises:</p>
+            <div class="formula-box">
+              <div class="formula-label">Projected Annual Income</div>
+              Total = (Monthly x Pre-Raise Months) + (Monthly x (1 + Raise%) x Post-Raise Months) + Side Income x 12 + Bonus
+            </div>
+            <p>This accounts for the fact that a raise partway through the year only affects the remaining months.</p>
+          </section>
+
+          <section class="content-section">
+            <h2>How to Use This Calculator</h2>
+            <ol>
+              <li><strong>Enter current monthly income</strong> - your gross monthly pay from your primary job.</li>
+              <li><strong>Enter expected raise percentage</strong> - the raise you anticipate (0 if none expected).</li>
+              <li><strong>Enter raise month</strong> - the month (1-12) when the raise takes effect.</li>
+              <li><strong>Enter monthly side income</strong> - freelance, rental, or other regular side income.</li>
+              <li><strong>Enter expected bonus</strong> - any annual bonus you anticipate.</li>
+              <li><strong>Click "Project Income"</strong> to see your projected annual total.</li>
+            </ol>
+          </section>
+
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>With $6,000 monthly income, a 5% raise in July (month 7), $500/month side income, and a $5,000 bonus: Primary income is $36,000 (Jan-Jun) + $37,800 (Jul-Dec at $6,300) = $73,800. Add $6,000 side income and $5,000 bonus for a total projected income of $84,800.</p>
+          </section>
+
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">How do I project my annual income?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>Start with your current monthly income, multiply by 12 for the base amount. Add expected raises, bonuses, and side income to get your total projected annual income.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">Should I include side income?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>Yes, include all income sources for accuracy: freelance work, rental income, investments, gig economy, and any other regular income.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">How do I account for a mid-year raise?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>Calculate income at your current rate for months before the raise, then at the new rate for remaining months. A raise in July means 6 months at old rate and 6 at new rate.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">What is the difference between gross and net income projection?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>Gross projection shows total earnings before taxes. Net projection subtracts taxes and deductions. This calculator shows gross; use our take-home pay calculator for net estimates.</p></div>
+            </div>
+          </section>
+
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/salary-calculators/raise-percentage-calculator/" class="card card-link">
+                <h3>Raise Percentage Calculator</h3>
+                <p>Calculate the impact of a salary raise.</p>
+              </a>
+              <a href="/salary-calculators/freelance-income-calculator/" class="card card-link">
+                <h3>Freelance Income Calculator</h3>
+                <p>Project freelance income for the year.</p>
+              </a>
+              <a href="/salary-calculators/salary-after-tax-calculator/" class="card card-link">
+                <h3>Salary After Tax Calculator</h3>
+                <p>See your projected income after taxes.</p>
+              </a>
+              <a href="/salary-calculators/commission-earnings-calculator/" class="card card-link">
+                <h3>Commission Earnings Calculator</h3>
+                <p>Project commission-based income.</p>
+              </a>
+            </div>
+          </section>
+
+          <div class="disclaimer">
+            <strong>Disclaimer:</strong> This calculator provides estimates for informational purposes only. Actual income may vary based on employment changes, market conditions, and other factors. This is not financial advice.
+          </div>
+
+          <div class="ad-slot ad-slot-leaderboard"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Real Estate</h4>
+          <a href="/real-estate-calculators/">All Real Estate Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Salary</h4>
+          <a href="/salary-calculators/">All Salary Calculators</a>
+          <a href="/salary-calculators/annual-income-projection-calculator/">Income Projection</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function fmt(n) { return '$' + n.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ','); }
+
+    function calculateProjection() {
+      const monthly = parseFloat(document.getElementById('monthly-income').value);
+      const raisePct = parseFloat(document.getElementById('raise-pct').value) || 0;
+      const raiseMonth = parseInt(document.getElementById('raise-month').value) || 7;
+      const sideIncome = parseFloat(document.getElementById('side-income').value) || 0;
+      const bonus = parseFloat(document.getElementById('bonus-amount').value) || 0;
+
+      if (!monthly || monthly <= 0) { alert('Please enter a valid monthly income.'); return; }
+
+      const preRaiseMonths = raiseMonth - 1;
+      const postRaiseMonths = 12 - preRaiseMonths;
+      const newMonthly = monthly * (1 + raisePct / 100);
+
+      const primaryIncome = (monthly * preRaiseMonths) + (newMonthly * postRaiseMonths);
+      const sideAnnual = sideIncome * 12;
+      const totalAnnual = primaryIncome + sideAnnual + bonus;
+
+      document.getElementById('result-total-annual').textContent = fmt(totalAnnual);
+      document.getElementById('result-primary-income').textContent = fmt(primaryIncome);
+      document.getElementById('result-side-annual').textContent = fmt(sideAnnual);
+      document.getElementById('result-bonus').textContent = fmt(bonus);
+      document.getElementById('result-avg-monthly').textContent = fmt(totalAnnual / 12);
+      document.getElementById('projection-results').classList.remove('hidden');
+    }
+
+    function resetProjection() {
+      document.getElementById('projection-form').reset();
+      document.getElementById('projection-results').classList.add('hidden');
+    }
+  </script>
+</body>
+</html>

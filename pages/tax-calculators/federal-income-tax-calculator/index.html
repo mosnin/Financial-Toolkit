@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Federal Income Tax Calculator | CalcWise</title>
+  <meta name="description" content="Estimate your 2024 federal income tax using current tax brackets. Enter your filing status, gross income, and deductions to see your taxable income, tax owed, effective rate, and marginal rate.">
+  <meta name="keywords" content="federal income tax calculator, tax bracket calculator, 2024 tax calculator, income tax estimator, effective tax rate">
+  <link rel="canonical" href="https://calcwise.io/tax-calculators/federal-income-tax-calculator/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Federal Income Tax Calculator - Estimate Your 2024 Federal Tax">
+  <meta property="og:description" content="Estimate your 2024 federal income tax using current tax brackets. See your taxable income, tax owed, effective rate, and marginal rate.">
+  <meta property="og:url" content="https://calcwise.io/tax-calculators/federal-income-tax-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Federal Income Tax Calculator - Estimate Your 2024 Federal Tax">
+  <meta name="twitter:description" content="Estimate your 2024 federal income tax using current tax brackets. See your taxable income, tax owed, effective rate, and marginal rate.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <!-- BreadcrumbList Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Tax Calculators", "item": "https://calcwise.io/tax-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "Federal Income Tax Calculator", "item": "https://calcwise.io/tax-calculators/federal-income-tax-calculator/" }
+    ]
+  }
+  </script>
+
+  <!-- FAQPage Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What are the 2024 federal income tax brackets?",
+        "acceptedAnswer": { "@type": "Answer", "text": "For 2024, the federal tax brackets for single filers are: 10% up to $11,600, 12% up to $47,150, 22% up to $100,525, 24% up to $191,950, 32% up to $243,725, 35% up to $609,350, and 37% above $609,350. Married filing jointly brackets are roughly double these amounts." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between marginal and effective tax rate?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Your marginal tax rate is the rate applied to your last dollar of income (your highest bracket). Your effective tax rate is the total tax divided by your total taxable income, representing the average rate you actually pay across all brackets." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the standard deduction for 2024?",
+        "acceptedAnswer": { "@type": "Answer", "text": "For 2024, the standard deduction is $14,600 for single filers, $29,200 for married filing jointly, and $21,900 for head of household." }
+      },
+      {
+        "@type": "Question",
+        "name": "Should I itemize or take the standard deduction?",
+        "acceptedAnswer": { "@type": "Answer", "text": "You should itemize if your total itemized deductions (mortgage interest, state and local taxes, charitable contributions, etc.) exceed the standard deduction for your filing status. Otherwise, the standard deduction will lower your tax bill more." }
+      },
+      {
+        "@type": "Question",
+        "name": "Does this calculator include state income taxes?",
+        "acceptedAnswer": { "@type": "Answer", "text": "No, this calculator estimates federal income tax only. State income taxes vary by state and are calculated separately. Use our State Income Tax Calculator for state-level estimates." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/business-calculators/">Business</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/business-calculators/">Business Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/tax-calculators/">Tax Calculators</a></li>
+          <li><span aria-current="page">Federal Income Tax Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="article-content">
+          <h1>Federal Income Tax Calculator</h1>
+          <p>Estimate your 2024 federal income tax based on the latest IRS tax brackets. Enter your filing status, gross income, and deductions to instantly see your taxable income, total tax owed, effective tax rate, and marginal tax rate.</p>
+
+          <div class="calc-container mt-8">
+            <div class="calc-header">
+              <h2>Estimate Your Federal Income Tax</h2>
+              <p>Enter your income details below</p>
+            </div>
+            <div class="calc-body">
+              <form id="fed-tax-form" onsubmit="return false;">
+                <div class="form-group">
+                  <label class="form-label" for="filing-status">Filing Status</label>
+                  <select id="filing-status" name="filingStatus" class="form-input" required>
+                    <option value="single">Single</option>
+                    <option value="married">Married Filing Jointly</option>
+                    <option value="head">Head of Household</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="gross-income">Gross Annual Income</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="gross-income" name="grossIncome" class="form-input" placeholder="85000" min="0" step="100" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="deductions">Deductions <span class="form-hint">(enter 0 for standard deduction)</span></label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="deductions" name="deductions" class="form-input" placeholder="0" min="0" step="100">
+                  </div>
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calculateFederalTax()">Calculate Tax</button>
+                  <button type="button" class="btn btn-reset" onclick="resetFederalTax()">Reset</button>
+                </div>
+              </form>
+
+              <div id="fed-tax-results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">Estimated Federal Tax Owed</div>
+                  <div class="result-value" id="result-tax-owed"></div>
+                </div>
+                <div class="result-grid">
+                  <div class="result-item">
+                    <div class="result-label">Taxable Income</div>
+                    <div class="result-value" id="result-taxable-income"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Effective Tax Rate</div>
+                    <div class="result-value" id="result-effective-rate"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Marginal Tax Rate</div>
+                    <div class="result-value" id="result-marginal-rate"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="ad-slot" aria-hidden="true"></div>
+
+          <!-- Formula Section -->
+          <section class="content-section">
+            <h2>How Federal Income Tax Is Calculated</h2>
+            <p>Federal income tax uses a progressive bracket system. Your income is not taxed at a single rate; instead, different portions of your income are taxed at increasing rates as you move through each bracket.</p>
+            <div class="formula-box">
+              <div class="formula-label">Tax Calculation</div>
+              Taxable Income = Gross Income - Deductions<br>
+              Tax = Sum of (Income in each bracket x Bracket rate)
+            </div>
+            <p>For example, a single filer with $100,000 in taxable income pays 10% on the first $11,600, 12% on income from $11,601 to $47,150, 22% on income from $47,151 to $100,525, and so on through each applicable bracket.</p>
+          </section>
+
+          <!-- How to Use -->
+          <section class="content-section">
+            <h2>How to Use This Calculator</h2>
+            <ol>
+              <li><strong>Select your filing status</strong> - Single, Married Filing Jointly, or Head of Household.</li>
+              <li><strong>Enter your gross annual income</strong> - your total income before any deductions.</li>
+              <li><strong>Enter your deductions</strong> - enter your itemized deductions, or leave at 0 to use the standard deduction for your filing status.</li>
+              <li><strong>Click "Calculate Tax"</strong> to see your taxable income, estimated tax, effective rate, and marginal rate.</li>
+            </ol>
+          </section>
+
+          <!-- Example Scenario -->
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>A single filer earning $85,000 per year who takes the standard deduction of $14,600 has a taxable income of $70,400. Their federal tax would be approximately $11,028, giving them an effective tax rate of about 12.97% and a marginal rate of 22%.</p>
+          </section>
+
+          <!-- FAQ Section -->
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What are the 2024 federal income tax brackets?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>For 2024, the federal tax brackets for single filers are: 10% up to $11,600, 12% up to $47,150, 22% up to $100,525, 24% up to $191,950, 32% up to $243,725, 35% up to $609,350, and 37% above $609,350. Married filing jointly brackets are roughly double these amounts.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What is the difference between marginal and effective tax rate?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Your marginal tax rate is the rate applied to your last dollar of income (your highest bracket). Your effective tax rate is the total tax divided by your total taxable income, representing the average rate you actually pay across all brackets.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What is the standard deduction for 2024?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>For 2024, the standard deduction is $14,600 for single filers, $29,200 for married filing jointly, and $21,900 for head of household.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Should I itemize or take the standard deduction?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>You should itemize if your total itemized deductions (mortgage interest, state and local taxes, charitable contributions, etc.) exceed the standard deduction for your filing status. Otherwise, the standard deduction will lower your tax bill more.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Does this calculator include state income taxes?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>No, this calculator estimates federal income tax only. State income taxes vary by state and are calculated separately. Use our State Income Tax Calculator for state-level estimates.</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Related Calculators -->
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/tax-calculators/state-income-tax-calculator/" class="card card-link">
+                <h3>State Income Tax Calculator</h3>
+                <p>Estimate your state income tax based on your state and income.</p>
+              </a>
+              <a href="/tax-calculators/capital-gains-tax-calculator/" class="card card-link">
+                <h3>Capital Gains Tax Calculator</h3>
+                <p>Calculate taxes on your investment gains.</p>
+              </a>
+              <a href="/tax-calculators/tax-refund-estimator/" class="card card-link">
+                <h3>Tax Refund Estimator</h3>
+                <p>Estimate whether you will receive a refund or owe taxes.</p>
+              </a>
+              <a href="/tax-calculators/self-employment-tax-calculator/" class="card card-link">
+                <h3>Self-Employment Tax Calculator</h3>
+                <p>Calculate Social Security and Medicare taxes for self-employed individuals.</p>
+              </a>
+              <a href="/finance-calculators/loan-calculator/" class="card card-link">
+                <h3>Loan Calculator</h3>
+                <p>Calculate monthly payments for any fixed-rate loan.</p>
+              </a>
+            </div>
+          </section>
+
+          <!-- Disclaimer -->
+          <div class="disclaimer">
+            <strong>Disclaimer:</strong> This calculator provides estimates for informational purposes only and should not be considered tax advice. Tax laws change frequently and individual circumstances vary. Consult a qualified tax professional or CPA for personalized tax guidance. CalcWise is not responsible for any errors or decisions made based on these estimates.
+          </div>
+
+          <div class="ad-slot" aria-hidden="true"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Tax</h4>
+          <a href="/tax-calculators/">All Tax Calculators</a>
+          <a href="/tax-calculators/federal-income-tax-calculator/">Federal Income Tax</a>
+          <a href="/tax-calculators/state-income-tax-calculator/">State Income Tax</a>
+        </div>
+        <div class="footer-col">
+          <h4>Finance</h4>
+          <a href="/finance-calculators/">All Finance Calculators</a>
+          <a href="/finance-calculators/loan-calculator/">Loan Calculator</a>
+          <a href="/finance-calculators/compound-interest-calculator/">Compound Interest</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    const TAX_BRACKETS_2024 = {
+      single: [
+        { min: 0, max: 11600, rate: 0.10 },
+        { min: 11600, max: 47150, rate: 0.12 },
+        { min: 47150, max: 100525, rate: 0.22 },
+        { min: 100525, max: 191950, rate: 0.24 },
+        { min: 191950, max: 243725, rate: 0.32 },
+        { min: 243725, max: 609350, rate: 0.35 },
+        { min: 609350, max: Infinity, rate: 0.37 }
+      ],
+      married: [
+        { min: 0, max: 23200, rate: 0.10 },
+        { min: 23200, max: 94300, rate: 0.12 },
+        { min: 94300, max: 201050, rate: 0.22 },
+        { min: 201050, max: 383900, rate: 0.24 },
+        { min: 383900, max: 487450, rate: 0.32 },
+        { min: 487450, max: 731200, rate: 0.35 },
+        { min: 731200, max: Infinity, rate: 0.37 }
+      ],
+      head: [
+        { min: 0, max: 16550, rate: 0.10 },
+        { min: 16550, max: 63100, rate: 0.12 },
+        { min: 63100, max: 100500, rate: 0.22 },
+        { min: 100500, max: 191950, rate: 0.24 },
+        { min: 191950, max: 243700, rate: 0.32 },
+        { min: 243700, max: 609350, rate: 0.35 },
+        { min: 609350, max: Infinity, rate: 0.37 }
+      ]
+    };
+
+    const STANDARD_DEDUCTIONS = { single: 14600, married: 29200, head: 21900 };
+
+    function calculateFederalTax() {
+      if (!CalcWise.validateForm('fed-tax-form')) return;
+
+      const status = document.getElementById('filing-status').value;
+      const gross = CalcWise.parseNumber(document.getElementById('gross-income').value);
+      let deductions = CalcWise.parseNumber(document.getElementById('deductions').value);
+
+      if (deductions === 0) deductions = STANDARD_DEDUCTIONS[status];
+
+      const taxableIncome = Math.max(0, gross - deductions);
+      const brackets = TAX_BRACKETS_2024[status];
+      let tax = 0;
+      let marginalRate = 0.10;
+
+      for (const bracket of brackets) {
+        if (taxableIncome > bracket.min) {
+          const taxableInBracket = Math.min(taxableIncome, bracket.max) - bracket.min;
+          tax += taxableInBracket * bracket.rate;
+          marginalRate = bracket.rate;
+        }
+      }
+
+      const effectiveRate = taxableIncome > 0 ? (tax / taxableIncome) * 100 : 0;
+
+      CalcWise.setText('result-tax-owed', CalcWise.formatCurrency(tax));
+      CalcWise.setText('result-taxable-income', CalcWise.formatCurrency(taxableIncome));
+      CalcWise.setText('result-effective-rate', CalcWise.formatPercent(effectiveRate));
+      CalcWise.setText('result-marginal-rate', CalcWise.formatPercent(marginalRate * 100));
+      CalcWise.showResults('fed-tax-results');
+    }
+
+    function resetFederalTax() {
+      document.getElementById('fed-tax-form').reset();
+      CalcWise.hideResults('fed-tax-results');
+    }
+  </script>
+</body>
+</html>

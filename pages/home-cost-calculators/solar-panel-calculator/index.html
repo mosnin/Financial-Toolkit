@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solar Panel Calculator - Estimate System Size, Cost & Payback | CalcWise</title>
+  <meta name="description" content="Free solar panel calculator. Enter your monthly electric bill, roof size, sun hours, and panel wattage to estimate system size, panels needed, cost, and payback period.">
+  <meta name="keywords" content="solar panel calculator, solar cost calculator, solar payback calculator, how many solar panels, solar system size">
+  <link rel="canonical" href="https://calcwise.io/home-cost-calculators/solar-panel-calculator/">
+
+  <meta property="og:title" content="Solar Panel Calculator - Estimate System Size, Cost & Payback">
+  <meta property="og:description" content="Free solar panel calculator. Estimate system size, number of panels, installation cost, and payback period.">
+  <meta property="og:url" content="https://calcwise.io/home-cost-calculators/solar-panel-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Solar Panel Calculator - Estimate System Size, Cost & Payback">
+  <meta name="twitter:description" content="Free solar panel calculator. Estimate system size, cost, and payback period for your home.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Home Cost Calculators", "item": "https://calcwise.io/home-cost-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "Solar Panel Calculator", "item": "https://calcwise.io/home-cost-calculators/solar-panel-calculator/" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How many solar panels do I need for my home?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The average US home uses about 900 kWh/month and needs a 6-8 kW system, which is 16-22 panels at 370W each. The exact number depends on your electricity usage, sun hours, panel efficiency, and roof orientation." }
+      },
+      {
+        "@type": "Question",
+        "name": "How much do solar panels cost?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Solar panel systems cost $2.50-$3.50 per watt installed before incentives. A typical 7 kW system costs $17,500-$24,500 before the federal tax credit. After the 30% federal ITC, the cost drops to $12,250-$17,150." }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does it take for solar panels to pay for themselves?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Solar panel payback period is typically 6-12 years depending on electricity rates, system cost, incentives, and sun exposure. After payback, solar provides essentially free electricity for the remaining 15-20+ years of panel life." }
+      },
+      {
+        "@type": "Question",
+        "name": "How long do solar panels last?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Solar panels typically last 25-30+ years with minimal degradation. Most manufacturers guarantee at least 80% output after 25 years. Inverters may need replacement after 10-15 years at a cost of $1,000-$3,000." }
+      },
+      {
+        "@type": "Question",
+        "name": "Do solar panels work on cloudy days?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes, solar panels still produce electricity on cloudy days, but at reduced output (10-25% of full capacity). They work best in direct sunlight. Net metering allows you to bank excess production on sunny days to offset cloudy periods." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/business-calculators/">Business</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/business-calculators/">Business Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/home-cost-calculators/">Home Cost Calculators</a></li>
+          <li><span aria-current="page">Solar Panel Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="article-content">
+          <h1>Solar Panel Calculator</h1>
+          <p>Estimate the right solar panel system for your home. Enter your monthly electric bill, available roof space, average sun hours, and panel wattage to calculate the system size needed, number of panels, total cost, and payback period.</p>
+
+          <div class="calc-container mt-8">
+            <div class="calc-header">
+              <h2>Calculate Your Solar System</h2>
+              <p>Enter your home and energy details below</p>
+            </div>
+            <div class="calc-body">
+              <form id="solar-form" onsubmit="return false;">
+                <div class="form-group">
+                  <label class="form-label" for="electric-bill">Monthly Electric Bill</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="electric-bill" class="form-input" placeholder="150" min="10" step="5" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="roof-size">Available Roof Space <span class="form-hint">(sq ft)</span></label>
+                  <input type="number" id="roof-size" class="form-input" placeholder="500" min="50" step="10" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="sun-hours">Average Peak Sun Hours <span class="form-hint">(per day)</span></label>
+                  <select id="sun-hours" class="form-input" required>
+                    <option value="">Select sun hours</option>
+                    <option value="3">3 hours (Pacific NW, Northeast)</option>
+                    <option value="4">4 hours (Mid-Atlantic, Midwest)</option>
+                    <option value="5">5 hours (Southeast, Southern Plains)</option>
+                    <option value="6">6 hours (Southwest, Southern CA)</option>
+                    <option value="7">7 hours (Desert Southwest)</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="panel-wattage">Panel Wattage</label>
+                  <select id="panel-wattage" class="form-input" required>
+                    <option value="">Select panel wattage</option>
+                    <option value="300">300W (Budget)</option>
+                    <option value="370">370W (Standard)</option>
+                    <option value="400">400W (Premium)</option>
+                    <option value="450">450W (High-Efficiency)</option>
+                  </select>
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calculateSolar()">Calculate System</button>
+                  <button type="button" class="btn btn-reset" onclick="resetSolar()">Reset</button>
+                </div>
+              </form>
+
+              <div id="solar-results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">Recommended System Size</div>
+                  <div class="result-value" id="result-size"></div>
+                </div>
+                <div class="result-grid">
+                  <div class="result-item">
+                    <div class="result-label">Panels Needed</div>
+                    <div class="result-value" id="result-panels"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Estimated Cost (after 30% ITC)</div>
+                    <div class="result-value" id="result-cost"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Payback Period</div>
+                    <div class="result-value" id="result-payback"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Annual Savings</div>
+                    <div class="result-value" id="result-savings"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <section class="content-section">
+            <h2>Solar Panel Sizing Formula</h2>
+            <p>Solar system size is calculated based on your energy consumption and available sunlight:</p>
+            <div class="formula-box">
+              <div class="formula-label">Sizing Formula</div>
+              Monthly kWh = Electric Bill / Electricity Rate ($0.14/kWh avg)
+              System Size (kW) = (Monthly kWh / 30) / Peak Sun Hours / 0.80 efficiency
+              Panels Needed = System Size (W) / Panel Wattage
+            </div>
+            <p>The 0.80 factor accounts for real-world system losses from wiring, inverter efficiency, temperature, and shading. Cost is estimated at $3.00 per watt before the 30% federal Investment Tax Credit.</p>
+          </section>
+
+          <section class="content-section">
+            <h2>How to Use This Calculator</h2>
+            <ol>
+              <li><strong>Enter your monthly electric bill</strong> - your average monthly electricity cost.</li>
+              <li><strong>Enter available roof space</strong> - usable south/west-facing roof area in square feet.</li>
+              <li><strong>Select peak sun hours</strong> - based on your geographic region.</li>
+              <li><strong>Choose panel wattage</strong> - higher wattage means fewer panels needed.</li>
+              <li><strong>Click "Calculate System"</strong> to see system size, panels, cost, and payback period.</li>
+            </ol>
+          </section>
+
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>A homeowner with a $150/month electric bill in a region with 5 peak sun hours, using 370W panels, would need approximately a 7.1 kW system (20 panels). The cost after the 30% federal tax credit would be about $14,900, with a payback period of roughly 8.3 years and annual savings of $1,800.</p>
+          </section>
+
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">How many solar panels do I need for my home?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>The average US home needs a 6-8 kW system, which is 16-22 panels at 370W each. The exact number depends on your electricity usage, sun hours, panel efficiency, and roof orientation.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">How much do solar panels cost?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>Solar systems cost $2.50-$3.50 per watt installed before incentives. A typical 7 kW system costs $17,500-$24,500 before the 30% federal tax credit, dropping to $12,250-$17,150 after.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">How long does it take for solar panels to pay for themselves?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>Payback period is typically 6-12 years depending on electricity rates, system cost, incentives, and sun exposure. After payback, solar provides essentially free electricity for 15-20+ more years.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">How long do solar panels last?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>Solar panels typically last 25-30+ years. Most manufacturers guarantee at least 80% output after 25 years. Inverters may need replacement after 10-15 years.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">Do solar panels work on cloudy days?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>Yes, solar panels still produce electricity on cloudy days at 10-25% of full capacity. Net metering lets you bank excess production on sunny days to offset cloudy periods.</p></div>
+            </div>
+          </section>
+
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/home-cost-calculators/hvac-size-calculator/" class="card card-link"><h3>HVAC Size Calculator</h3><p>Find the right HVAC system size for your home.</p></a>
+              <a href="/home-cost-calculators/insulation-cost-calculator/" class="card card-link"><h3>Insulation Cost Calculator</h3><p>Estimate insulation costs to improve efficiency.</p></a>
+              <a href="/home-cost-calculators/roofing-cost-calculator/" class="card card-link"><h3>Roofing Cost Calculator</h3><p>Estimate roofing costs before solar installation.</p></a>
+            </div>
+          </section>
+
+          <div class="disclaimer">
+            <strong>Disclaimer:</strong> This calculator provides rough estimates for informational purposes only. Actual solar costs and production vary based on roof orientation, shading, local incentives, installer pricing, and equipment choices. The 30% federal ITC may change. Consult a licensed solar installer for an accurate quote. This is not professional energy advice.
+          </div>
+
+          <div class="ad-slot ad-slot-leaderboard"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col"><h4>Real Estate</h4><a href="/real-estate-calculators/">All Real Estate Calculators</a></div>
+        <div class="footer-col"><h4>Home Costs</h4><a href="/home-cost-calculators/">All Home Cost Calculators</a></div>
+        <div class="footer-col"><h4>Company</h4><a href="/about.html">About</a></div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links"><a href="/about.html">About</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    const ELEC_RATE = 0.14;
+    const COST_PER_WATT = 3.00;
+    const ITC = 0.30;
+    const EFFICIENCY = 0.80;
+    const SQFT_PER_PANEL = 18;
+
+    function calculateSolar() {
+      const bill = parseFloat(document.getElementById('electric-bill').value);
+      const roofSqft = parseFloat(document.getElementById('roof-size').value);
+      const sunHrs = parseFloat(document.getElementById('sun-hours').value);
+      const panelW = parseFloat(document.getElementById('panel-wattage').value);
+      if (!bill || !roofSqft || !sunHrs || !panelW) { alert('Please fill in all fields.'); return; }
+
+      const monthlyKwh = bill / ELEC_RATE;
+      const dailyKwh = monthlyKwh / 30;
+      const systemKw = dailyKwh / sunHrs / EFFICIENCY;
+      const systemW = systemKw * 1000;
+      const panelsNeeded = Math.ceil(systemW / panelW);
+      const maxPanels = Math.floor(roofSqft / SQFT_PER_PANEL);
+      const actualPanels = Math.min(panelsNeeded, maxPanels);
+      const actualSystemKw = (actualPanels * panelW) / 1000;
+
+      const grossCost = actualSystemKw * 1000 * COST_PER_WATT;
+      const netCost = grossCost * (1 - ITC);
+      const annualSavings = bill * 12 * (actualPanels / panelsNeeded);
+      const payback = netCost / annualSavings;
+
+      document.getElementById('result-size').textContent = actualSystemKw.toFixed(1) + ' kW';
+      document.getElementById('result-panels').textContent = actualPanels + ' panels' + (actualPanels < panelsNeeded ? ' (roof-limited)' : '');
+      document.getElementById('result-cost').textContent = '$' + Math.round(netCost).toLocaleString();
+      document.getElementById('result-payback').textContent = payback.toFixed(1) + ' years';
+      document.getElementById('result-savings').textContent = '$' + Math.round(annualSavings).toLocaleString() + ' / year';
+      document.getElementById('solar-results').classList.remove('hidden');
+    }
+
+    function resetSolar() {
+      document.getElementById('solar-form').reset();
+      document.getElementById('solar-results').classList.add('hidden');
+    }
+  </script>
+</body>
+</html>

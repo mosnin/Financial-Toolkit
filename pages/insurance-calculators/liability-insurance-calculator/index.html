@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Liability Insurance Calculator | CalcWise</title>
+  <meta name="description" content="Calculate liability insurance needs for your business. Enter business type, revenue, and risk level to get recommended coverage amounts and estimated premiums.">
+  <meta name="keywords" content="liability insurance calculator, general liability cost, business liability insurance, liability coverage estimator, commercial liability premium">
+  <link rel="canonical" href="https://calcwise.io/insurance-calculators/liability-insurance-calculator/">
+
+  <meta property="og:title" content="Liability Insurance Calculator | CalcWise">
+  <meta property="og:description" content="Calculate liability insurance coverage and estimated premiums for your business.">
+  <meta property="og:url" content="https://calcwise.io/insurance-calculators/liability-insurance-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Liability Insurance Calculator | CalcWise">
+  <meta name="twitter:description" content="Calculate liability insurance coverage and estimated premiums for your business.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Insurance Calculators", "item": "https://calcwise.io/insurance-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "Liability Insurance Calculator", "item": "https://calcwise.io/insurance-calculators/liability-insurance-calculator/" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What does general liability insurance cover?",
+        "acceptedAnswer": { "@type": "Answer", "text": "General liability insurance covers third-party bodily injury, property damage, personal and advertising injury, and legal defense costs. It protects your business when someone is injured on your premises or by your operations." }
+      },
+      {
+        "@type": "Question",
+        "name": "How much liability insurance does a small business need?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Most small businesses need at least $1 million per occurrence and $2 million aggregate coverage. Higher-risk businesses or those with contracts requiring it may need $5 million or more. The right amount depends on your industry and exposure." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the average cost of liability insurance?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Small business general liability insurance typically costs $400-$1,500 per year for low-risk businesses. Higher-risk industries like construction or healthcare may pay $2,000-$5,000 or more annually." }
+      },
+      {
+        "@type": "Question",
+        "name": "Is liability insurance required for businesses?",
+        "acceptedAnswer": { "@type": "Answer", "text": "While not always legally required, liability insurance is effectively essential for businesses. Many clients, landlords, and contracts require proof of coverage. Operating without it exposes your personal and business assets to lawsuits." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/insurance-calculators/" aria-current="page">Insurance</a>
+        <a href="/business-calculators/">Business</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/insurance-calculators/">Insurance Calculators</a>
+      <a href="/business-calculators/">Business Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/insurance-calculators/">Insurance Calculators</a></li>
+          <li><span aria-current="page">Liability Insurance Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="article-content">
+          <h1>Liability Insurance Calculator</h1>
+          <p>Estimate your business liability insurance needs and costs. Enter your business type, annual revenue, and risk level to get recommended coverage amounts and estimated premium costs.</p>
+
+          <div class="calc-container mt-8">
+            <div class="calc-header">
+              <h2>Calculate Liability Insurance</h2>
+              <p>Enter your business details below</p>
+            </div>
+            <div class="calc-body">
+              <form id="liability-form" onsubmit="return false;">
+                <div class="form-group">
+                  <label class="form-label" for="business-type">Business Type</label>
+                  <select id="business-type" class="form-input" required>
+                    <option value="">Select business type</option>
+                    <option value="office">Office/Professional Services</option>
+                    <option value="retail">Retail/Restaurant</option>
+                    <option value="construction">Construction/Trades</option>
+                    <option value="healthcare">Healthcare/Medical</option>
+                    <option value="technology">Technology/IT</option>
+                    <option value="manufacturing">Manufacturing</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="annual-revenue">Annual Revenue</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="annual-revenue" class="form-input" placeholder="500000" min="0" step="10000" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="risk-level">Risk Level</label>
+                  <select id="risk-level" class="form-input" required>
+                    <option value="">Select risk level</option>
+                    <option value="low">Low (minimal public interaction)</option>
+                    <option value="moderate">Moderate (regular client interaction)</option>
+                    <option value="high">High (physical work, public-facing)</option>
+                  </select>
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calculateLiability()">Calculate Coverage</button>
+                  <button type="button" class="btn btn-reset" onclick="resetLiability()">Reset</button>
+                </div>
+              </form>
+
+              <div id="liability-results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">Recommended Coverage</div>
+                  <div class="result-value" id="result-coverage"></div>
+                </div>
+                <div class="result-grid">
+                  <div class="result-item">
+                    <div class="result-label">Estimated Annual Premium</div>
+                    <div class="result-value" id="result-premium"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Monthly Premium</div>
+                    <div class="result-value" id="result-monthly"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <section class="content-section">
+            <h2>Liability Insurance Premium Formula</h2>
+            <p>Liability insurance premiums are based on revenue, industry risk, and desired coverage level:</p>
+            <div class="formula-box">
+              <div class="formula-label">Premium Estimation Formula</div>
+              Annual Premium = Base Rate x (Revenue / $100K) x Industry Factor x Risk Multiplier
+            </div>
+            <p>The <strong>base rate</strong> varies by industry. <strong>Revenue</strong> is used as a proxy for exposure. The <strong>industry factor</strong> reflects historical claim rates, and the <strong>risk multiplier</strong> adjusts for your specific risk profile.</p>
+          </section>
+
+          <section class="content-section">
+            <h2>How to Use This Calculator</h2>
+            <ol>
+              <li><strong>Select your business type</strong> - the industry category that best fits your business.</li>
+              <li><strong>Enter annual revenue</strong> - your business's gross annual revenue.</li>
+              <li><strong>Select risk level</strong> - how much exposure your business has to liability claims.</li>
+              <li><strong>Click "Calculate Coverage"</strong> to see recommended coverage and estimated premium.</li>
+            </ol>
+          </section>
+
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>A professional services firm with $500,000 in annual revenue and moderate risk would need approximately $1,000,000 in liability coverage, costing around $750 per year. A construction company with the same revenue at high risk might need $2,000,000 in coverage at approximately $3,500 per year.</p>
+          </section>
+
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">What does general liability insurance cover?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>General liability insurance covers third-party bodily injury, property damage, personal and advertising injury, and legal defense costs.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">How much liability insurance does a small business need?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>Most small businesses need at least $1 million per occurrence and $2 million aggregate. Higher-risk businesses may need $5 million or more.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">What is the average cost of liability insurance?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>Small business general liability typically costs $400-$1,500 per year for low-risk businesses. Higher-risk industries may pay $2,000-$5,000 or more annually.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">Is liability insurance required for businesses?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>While not always legally required, many clients, landlords, and contracts require proof of coverage. Operating without it exposes your assets to lawsuits.</p></div>
+            </div>
+          </section>
+
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/insurance-calculators/commercial-insurance-calculator/" class="card card-link">
+                <h3>Commercial Insurance Calculator</h3>
+                <p>Estimate comprehensive business insurance costs.</p>
+              </a>
+              <a href="/insurance-calculators/umbrella-insurance-calculator/" class="card card-link">
+                <h3>Umbrella Insurance Calculator</h3>
+                <p>Determine if you need excess liability coverage.</p>
+              </a>
+              <a href="/insurance-calculators/workers-compensation-calculator/" class="card card-link">
+                <h3>Workers Compensation Calculator</h3>
+                <p>Estimate workers comp premiums for your business.</p>
+              </a>
+              <a href="/insurance-calculators/insurance-coverage-needs-calculator/" class="card card-link">
+                <h3>Insurance Coverage Needs</h3>
+                <p>Assess total insurance needs including liability.</p>
+              </a>
+              <a href="/business-calculators/" class="card card-link">
+                <h3>Business Calculators</h3>
+                <p>Revenue, profit, and business planning tools.</p>
+              </a>
+            </div>
+          </section>
+
+          <div class="disclaimer">
+            <strong>Disclaimer:</strong> This calculator provides estimates for informational purposes only. Actual liability insurance costs depend on your specific business operations, claims history, location, and insurer. This is not insurance or legal advice. Consult a licensed insurance professional for accurate quotes.
+          </div>
+
+          <div class="ad-slot ad-slot-leaderboard"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Real Estate</h4>
+          <a href="/real-estate-calculators/">All Real Estate Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Finance</h4>
+          <a href="/finance-calculators/">All Finance Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Insurance</h4>
+          <a href="/insurance-calculators/">All Insurance Calculators</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links"><a href="/about.html">About</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateLiability() {
+      const businessType = document.getElementById('business-type').value;
+      const revenue = parseFloat(document.getElementById('annual-revenue').value);
+      const riskLevel = document.getElementById('risk-level').value;
+
+      if (!businessType || !revenue || !riskLevel) {
+        alert('Please fill in all fields.');
+        return;
+      }
+
+      // Industry base rates per $100K revenue
+      const industryRates = {
+        office: 120, retail: 200, construction: 450,
+        healthcare: 350, technology: 150, manufacturing: 380
+      };
+      const riskMultipliers = { low: 0.8, moderate: 1.0, high: 1.5 };
+
+      // Recommended coverage based on revenue and risk
+      let recommendedCoverage;
+      if (revenue <= 500000) recommendedCoverage = 1000000;
+      else if (revenue <= 2000000) recommendedCoverage = 2000000;
+      else recommendedCoverage = Math.min(revenue * 2, 5000000);
+
+      if (riskLevel === 'high') recommendedCoverage = Math.min(recommendedCoverage * 1.5, 5000000);
+
+      const baseRate = industryRates[businessType] || 200;
+      const riskMult = riskMultipliers[riskLevel] || 1.0;
+      const annualPremium = baseRate * (revenue / 100000) * riskMult;
+      const monthlyPremium = annualPremium / 12;
+
+      const fmt = (n) => '$' + n.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+      const fmtD = (n) => '$' + n.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+
+      document.getElementById('result-coverage').textContent = fmt(recommendedCoverage);
+      document.getElementById('result-premium').textContent = fmtD(annualPremium);
+      document.getElementById('result-monthly').textContent = fmtD(monthlyPremium);
+      document.getElementById('liability-results').classList.remove('hidden');
+    }
+
+    function resetLiability() {
+      document.getElementById('liability-form').reset();
+      document.getElementById('liability-results').classList.add('hidden');
+    }
+
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', !expanded);
+        btn.nextElementSibling.classList.toggle('open');
+      });
+    });
+
+    document.querySelector('.mobile-menu-toggle')?.addEventListener('click', function() {
+      const nav = document.querySelector('.mobile-nav');
+      const expanded = this.getAttribute('aria-expanded') === 'true';
+      this.setAttribute('aria-expanded', !expanded);
+      nav.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>

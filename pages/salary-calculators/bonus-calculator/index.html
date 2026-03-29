@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bonus Calculator - Calculate After-Tax Bonus Amount | CalcWise</title>
+  <meta name="description" content="Free bonus calculator to estimate your after-tax bonus. Enter your bonus amount, tax rate, and filing status to see how much you keep after federal and state taxes.">
+  <meta name="keywords" content="bonus calculator, after tax bonus, bonus tax calculator, bonus withholding calculator, supplemental income tax">
+  <link rel="canonical" href="https://calcwise.io/salary-calculators/bonus-calculator/">
+
+  <meta property="og:title" content="Bonus Calculator - Calculate After-Tax Bonus Amount">
+  <meta property="og:description" content="Free bonus calculator to estimate your after-tax bonus. See how much you keep after taxes.">
+  <meta property="og:url" content="https://calcwise.io/salary-calculators/bonus-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Bonus Calculator - Calculate After-Tax Bonus Amount">
+  <meta name="twitter:description" content="Free bonus calculator to estimate your after-tax bonus. See how much you keep after taxes.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Salary Calculators", "item": "https://calcwise.io/salary-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "Bonus Calculator", "item": "https://calcwise.io/salary-calculators/bonus-calculator/" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How are bonuses taxed?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Bonuses are considered supplemental income and can be taxed using the flat percentage method (22% federal for amounts up to $1 million) or the aggregate method, where the bonus is added to your regular pay and taxed at your marginal rate." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the federal tax rate on bonuses?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The IRS allows employers to withhold a flat 22% federal tax on bonuses up to $1 million. For bonus amounts exceeding $1 million, the excess is taxed at 37%. Employers may also use the aggregate method." }
+      },
+      {
+        "@type": "Question",
+        "name": "Is FICA deducted from bonuses?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes, bonuses are subject to FICA taxes just like regular wages: 6.2% for Social Security (up to the wage base limit) and 1.45% for Medicare. The Additional Medicare Tax of 0.9% applies if total wages exceed $200,000." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I reduce taxes on my bonus?",
+        "acceptedAnswer": { "@type": "Answer", "text": "You can reduce the tax impact by contributing your bonus to a 401(k) or other pre-tax retirement account, making charitable donations, or timing income to manage your tax bracket. Consult a tax advisor for strategies." }
+      },
+      {
+        "@type": "Question",
+        "name": "Will I get some bonus taxes back at filing time?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Possibly. If too much was withheld from your bonus using the flat 22% rate, and your actual marginal rate is lower, you may receive a refund when you file your tax return. The reverse is also possible if you are in a higher bracket." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/salary-calculators/" aria-current="page">Salary</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/salary-calculators/">Salary Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/salary-calculators/">Salary Calculators</a></li>
+          <li><span aria-current="page">Bonus Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="article-content">
+          <h1>Bonus Calculator</h1>
+          <p>Calculate how much of your bonus you will take home after federal tax, state tax, and FICA deductions. Bonuses are taxed as supplemental income, and this calculator helps you understand the true value of your bonus.</p>
+
+          <div class="calc-container mt-8">
+            <div class="calc-header">
+              <h2>Calculate After-Tax Bonus</h2>
+              <p>Enter your bonus details below</p>
+            </div>
+            <div class="calc-body">
+              <form id="bonus-form" onsubmit="return false;">
+                <div class="form-group">
+                  <label class="form-label" for="bonus-amount">Bonus Amount</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="bonus-amount" name="bonusAmount" class="form-input" placeholder="10000" min="0" step="100" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="federal-rate">Federal Tax Rate</label>
+                  <div class="input-suffix">
+                    <input type="number" id="federal-rate" name="federalRate" class="form-input" placeholder="22" min="0" max="37" step="0.1" value="22">
+                    <span class="suffix">%</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="state-rate">State Tax Rate</label>
+                  <div class="input-suffix">
+                    <input type="number" id="state-rate" name="stateRate" class="form-input" placeholder="5" min="0" max="15" step="0.01" value="5">
+                    <span class="suffix">%</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="filing-status">Filing Status</label>
+                  <select id="filing-status" name="filingStatus" class="form-input">
+                    <option value="single">Single</option>
+                    <option value="married">Married Filing Jointly</option>
+                    <option value="head">Head of Household</option>
+                  </select>
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calculateBonus()">Calculate Bonus</button>
+                  <button type="button" class="btn btn-reset" onclick="resetBonus()">Reset</button>
+                </div>
+              </form>
+
+              <div id="bonus-results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">After-Tax Bonus</div>
+                  <div class="result-value" id="result-after-tax"></div>
+                </div>
+                <div class="result-grid">
+                  <div class="result-item">
+                    <div class="result-label">Federal Tax Withheld</div>
+                    <div class="result-value" id="result-federal"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">State Tax Withheld</div>
+                    <div class="result-value" id="result-state"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">FICA Withheld</div>
+                    <div class="result-value" id="result-fica"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Total Taxes</div>
+                    <div class="result-value" id="result-total-tax"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <section class="content-section">
+            <h2>Bonus Tax Formula</h2>
+            <p>Bonuses are taxed as supplemental income. Using the flat percentage method:</p>
+            <div class="formula-box">
+              <div class="formula-label">After-Tax Bonus Formula</div>
+              After-Tax Bonus = Bonus - (Bonus x Federal Rate) - (Bonus x State Rate) - (Bonus x 7.65%)
+            </div>
+            <p>The standard federal withholding rate for supplemental income is <strong>22%</strong> for bonuses up to $1 million.</p>
+          </section>
+
+          <section class="content-section">
+            <h2>How to Use This Calculator</h2>
+            <ol>
+              <li><strong>Enter the bonus amount</strong> - the gross bonus before any taxes.</li>
+              <li><strong>Enter the federal tax rate</strong> - typically 22% for bonuses (flat method).</li>
+              <li><strong>Enter your state tax rate</strong> - use 0% for no-income-tax states.</li>
+              <li><strong>Select your filing status</strong> for reference.</li>
+              <li><strong>Click "Calculate Bonus"</strong> to see your after-tax bonus amount.</li>
+            </ol>
+          </section>
+
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>If you receive a $10,000 bonus, with 22% federal tax ($2,200), 5% state tax ($500), and 7.65% FICA ($765), your total taxes would be $3,465. Your after-tax bonus would be $6,535.</p>
+          </section>
+
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">How are bonuses taxed?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>Bonuses are considered supplemental income and can be taxed using the flat percentage method (22% federal for amounts up to $1 million) or the aggregate method, where the bonus is added to your regular pay and taxed at your marginal rate.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">What is the federal tax rate on bonuses?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>The IRS allows employers to withhold a flat 22% federal tax on bonuses up to $1 million. For bonus amounts exceeding $1 million, the excess is taxed at 37%.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">Is FICA deducted from bonuses?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>Yes, bonuses are subject to FICA taxes: 6.2% for Social Security (up to the wage base limit) and 1.45% for Medicare, totaling 7.65%.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">Can I reduce taxes on my bonus?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>You can reduce the tax impact by contributing your bonus to a 401(k) or other pre-tax retirement account, making charitable donations, or timing income to manage your tax bracket.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">Will I get some bonus taxes back at filing time?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>Possibly. If too much was withheld using the flat 22% rate and your actual marginal rate is lower, you may receive a refund when filing your tax return.</p></div>
+            </div>
+          </section>
+
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/salary-calculators/paycheck-calculator/" class="card card-link">
+                <h3>Paycheck Calculator</h3>
+                <p>Calculate your regular paycheck after all deductions.</p>
+              </a>
+              <a href="/salary-calculators/commission-earnings-calculator/" class="card card-link">
+                <h3>Commission Earnings Calculator</h3>
+                <p>Calculate earnings from sales commissions.</p>
+              </a>
+              <a href="/salary-calculators/salary-after-tax-calculator/" class="card card-link">
+                <h3>Salary After Tax Calculator</h3>
+                <p>See your full salary breakdown after taxes.</p>
+              </a>
+              <a href="/salary-calculators/take-home-pay-calculator/" class="card card-link">
+                <h3>Take-Home Pay Calculator</h3>
+                <p>Get a complete net pay breakdown.</p>
+              </a>
+            </div>
+          </section>
+
+          <div class="disclaimer">
+            <strong>Disclaimer:</strong> This calculator provides estimates for informational purposes only. Actual bonus taxation may vary based on your employer's withholding method, total annual income, and other factors. This is not tax advice. Consult a tax professional.
+          </div>
+
+          <div class="ad-slot ad-slot-leaderboard"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Real Estate</h4>
+          <a href="/real-estate-calculators/">All Real Estate Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Salary</h4>
+          <a href="/salary-calculators/">All Salary Calculators</a>
+          <a href="/salary-calculators/paycheck-calculator/">Paycheck Calculator</a>
+          <a href="/salary-calculators/bonus-calculator/">Bonus Calculator</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function fmt(n) { return '$' + n.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ','); }
+
+    function calculateBonus() {
+      const bonus = parseFloat(document.getElementById('bonus-amount').value);
+      const fedRate = parseFloat(document.getElementById('federal-rate').value) || 0;
+      const stateRate = parseFloat(document.getElementById('state-rate').value) || 0;
+
+      if (!bonus || bonus <= 0) { alert('Please enter a valid bonus amount.'); return; }
+
+      const federalTax = bonus * fedRate / 100;
+      const stateTax = bonus * stateRate / 100;
+      const fica = bonus * 0.0765;
+      const totalTax = federalTax + stateTax + fica;
+      const afterTax = bonus - totalTax;
+
+      document.getElementById('result-after-tax').textContent = fmt(afterTax);
+      document.getElementById('result-federal').textContent = fmt(federalTax);
+      document.getElementById('result-state').textContent = fmt(stateTax);
+      document.getElementById('result-fica').textContent = fmt(fica);
+      document.getElementById('result-total-tax').textContent = fmt(totalTax);
+      document.getElementById('bonus-results').classList.remove('hidden');
+    }
+
+    function resetBonus() {
+      document.getElementById('bonus-form').reset();
+      document.getElementById('bonus-results').classList.add('hidden');
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Insurance Deductible Calculator | CalcWise</title>
+  <meta name="description" content="Find the optimal insurance deductible by comparing premiums at different deductible levels against expected claims. Minimize your total insurance costs.">
+  <meta name="keywords" content="insurance deductible calculator, optimal deductible, deductible comparison, insurance cost optimizer, deductible vs premium">
+  <link rel="canonical" href="https://calcwise.io/insurance-calculators/insurance-deductible-calculator/">
+
+  <meta property="og:title" content="Insurance Deductible Calculator | CalcWise">
+  <meta property="og:description" content="Find the optimal insurance deductible to minimize your total insurance costs.">
+  <meta property="og:url" content="https://calcwise.io/insurance-calculators/insurance-deductible-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Insurance Deductible Calculator | CalcWise">
+  <meta name="twitter:description" content="Find the optimal insurance deductible to minimize your total costs.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Insurance Calculators", "item": "https://calcwise.io/insurance-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "Insurance Deductible Calculator", "item": "https://calcwise.io/insurance-calculators/insurance-deductible-calculator/" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Should I choose a high or low deductible?",
+        "acceptedAnswer": { "@type": "Answer", "text": "A higher deductible lowers your premium but increases out-of-pocket costs when you file a claim. Choose a high deductible if you have emergency savings and rarely file claims. Choose a lower deductible if you want predictable costs or file claims frequently." }
+      },
+      {
+        "@type": "Question",
+        "name": "How does a deductible affect my premium?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Increasing your deductible typically reduces your premium by 10-25%. For example, going from a $500 to $1,000 deductible might save 15% on your premium. The savings diminish as the deductible increases further." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the break-even point for a higher deductible?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The break-even point is calculated by dividing the deductible difference by the annual premium savings. For example, if a higher deductible saves you $200/year but costs $500 more per claim, the break-even is 2.5 years without a claim." }
+      },
+      {
+        "@type": "Question",
+        "name": "How many claims per year should I expect?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Most homeowners file a claim every 10 years on average, while auto insurance claims occur roughly every 6-8 years. If you rarely file claims, a higher deductible usually saves money over time." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/insurance-calculators/" aria-current="page">Insurance</a>
+        <a href="/business-calculators/">Business</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/insurance-calculators/">Insurance Calculators</a>
+      <a href="/business-calculators/">Business Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/insurance-calculators/">Insurance Calculators</a></li>
+          <li><span aria-current="page">Insurance Deductible Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="article-content">
+          <h1>Insurance Deductible Calculator</h1>
+          <p>Find the optimal insurance deductible by comparing total costs at different deductible levels. Enter premiums for up to three deductible options and your expected annual claims to see which deductible minimizes your total cost.</p>
+
+          <div class="calc-container mt-8">
+            <div class="calc-header">
+              <h2>Compare Deductible Options</h2>
+              <p>Enter premiums at different deductible levels</p>
+            </div>
+            <div class="calc-body">
+              <form id="deductible-form" onsubmit="return false;">
+                <div class="form-group">
+                  <label class="form-label">Option 1</label>
+                  <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.5rem;">
+                    <div class="input-prefix">
+                      <span class="prefix">$</span>
+                      <input type="number" id="ded1" class="form-input" placeholder="Deductible: 500" min="0" step="100" required>
+                    </div>
+                    <div class="input-prefix">
+                      <span class="prefix">$</span>
+                      <input type="number" id="prem1" class="form-input" placeholder="Premium: 1200" min="0" step="50" required>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Option 2</label>
+                  <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.5rem;">
+                    <div class="input-prefix">
+                      <span class="prefix">$</span>
+                      <input type="number" id="ded2" class="form-input" placeholder="Deductible: 1000" min="0" step="100" required>
+                    </div>
+                    <div class="input-prefix">
+                      <span class="prefix">$</span>
+                      <input type="number" id="prem2" class="form-input" placeholder="Premium: 1000" min="0" step="50" required>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Option 3</label>
+                  <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.5rem;">
+                    <div class="input-prefix">
+                      <span class="prefix">$</span>
+                      <input type="number" id="ded3" class="form-input" placeholder="Deductible: 2500" min="0" step="100">
+                    </div>
+                    <div class="input-prefix">
+                      <span class="prefix">$</span>
+                      <input type="number" id="prem3" class="form-input" placeholder="Premium: 800" min="0" step="50">
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="expected-claims">Expected Claims per Year</label>
+                  <input type="number" id="expected-claims" class="form-input" placeholder="0.5" min="0" max="10" step="0.1" required>
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calculateDeductible()">Compare Options</button>
+                  <button type="button" class="btn btn-reset" onclick="resetDeductible()">Reset</button>
+                </div>
+              </form>
+
+              <div id="deductible-results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">Optimal Deductible</div>
+                  <div class="result-value" id="result-optimal"></div>
+                </div>
+                <div class="result-grid">
+                  <div class="result-item">
+                    <div class="result-label">Option 1 Total Annual Cost</div>
+                    <div class="result-value" id="result-total1"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Option 2 Total Annual Cost</div>
+                    <div class="result-value" id="result-total2"></div>
+                  </div>
+                  <div class="result-item" id="option3-result" style="display:none;">
+                    <div class="result-label">Option 3 Total Annual Cost</div>
+                    <div class="result-value" id="result-total3"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Annual Savings (Best vs Worst)</div>
+                    <div class="result-value" id="result-savings"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <section class="content-section">
+            <h2>Deductible Optimization Formula</h2>
+            <p>The total expected annual cost for each deductible option is calculated as:</p>
+            <div class="formula-box">
+              <div class="formula-label">Total Annual Cost Formula</div>
+              Total Cost = Annual Premium + (Deductible x Expected Claims per Year)
+            </div>
+            <p>The <strong>optimal deductible</strong> is the option with the lowest total expected annual cost. A higher deductible lowers your premium but increases your expected out-of-pocket cost when claims are filed.</p>
+          </section>
+
+          <section class="content-section">
+            <h2>How to Use This Calculator</h2>
+            <ol>
+              <li><strong>Enter deductible and premium</strong> for each option (at least two).</li>
+              <li><strong>Enter expected claims per year</strong> - use 0.1 for one claim per decade, 0.5 for every two years, etc.</li>
+              <li><strong>Click "Compare Options"</strong> to see total costs and the optimal choice.</li>
+            </ol>
+          </section>
+
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>Comparing a $500 deductible with $1,200/year premium versus a $1,000 deductible with $1,000/year premium, assuming 0.5 claims per year: Option 1 costs $1,200 + ($500 x 0.5) = $1,450. Option 2 costs $1,000 + ($1,000 x 0.5) = $1,500. The $500 deductible is optimal in this case, saving $50 per year.</p>
+          </section>
+
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">Should I choose a high or low deductible?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>A higher deductible lowers your premium but increases out-of-pocket costs when you file a claim. Choose high if you have savings and rarely claim; choose low for predictable costs.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">How does a deductible affect my premium?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>Increasing your deductible typically reduces your premium by 10-25%. The savings diminish as the deductible increases further.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">What is the break-even point for a higher deductible?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>Divide the deductible difference by the annual premium savings. For example, $500 more deductible saving $200/year breaks even in 2.5 years without a claim.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">How many claims per year should I expect?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>Most homeowners file a claim every 10 years on average, while auto claims occur every 6-8 years. If you rarely file claims, a higher deductible usually saves money.</p></div>
+            </div>
+          </section>
+
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/insurance-calculators/car-insurance-cost-estimator/" class="card card-link">
+                <h3>Car Insurance Cost Estimator</h3>
+                <p>Estimate auto insurance premiums with different deductibles.</p>
+              </a>
+              <a href="/insurance-calculators/home-insurance-cost-calculator/" class="card card-link">
+                <h3>Home Insurance Calculator</h3>
+                <p>Calculate home insurance costs at different deductible levels.</p>
+              </a>
+              <a href="/insurance-calculators/insurance-savings-comparison-calculator/" class="card card-link">
+                <h3>Insurance Savings Comparison</h3>
+                <p>Compare multiple insurance quotes side by side.</p>
+              </a>
+              <a href="/insurance-calculators/insurance-policy-value-calculator/" class="card card-link">
+                <h3>Insurance Policy Value</h3>
+                <p>Analyze the overall value of your insurance policy.</p>
+              </a>
+              <a href="/finance-calculators/savings-calculator/" class="card card-link">
+                <h3>Savings Calculator</h3>
+                <p>Plan an emergency fund to cover higher deductibles.</p>
+              </a>
+            </div>
+          </section>
+
+          <div class="disclaimer">
+            <strong>Disclaimer:</strong> This calculator provides estimates for informational purposes only. Actual insurance costs depend on many factors beyond deductible choice. This is not insurance or financial advice. Consult a licensed insurance professional for guidance.
+          </div>
+
+          <div class="ad-slot ad-slot-leaderboard"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Real Estate</h4>
+          <a href="/real-estate-calculators/">All Real Estate Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Finance</h4>
+          <a href="/finance-calculators/">All Finance Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Insurance</h4>
+          <a href="/insurance-calculators/">All Insurance Calculators</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links"><a href="/about.html">About</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateDeductible() {
+      const ded1 = parseFloat(document.getElementById('ded1').value);
+      const prem1 = parseFloat(document.getElementById('prem1').value);
+      const ded2 = parseFloat(document.getElementById('ded2').value);
+      const prem2 = parseFloat(document.getElementById('prem2').value);
+      const ded3 = parseFloat(document.getElementById('ded3').value);
+      const prem3 = parseFloat(document.getElementById('prem3').value);
+      const claims = parseFloat(document.getElementById('expected-claims').value);
+
+      if (isNaN(ded1) || isNaN(prem1) || isNaN(ded2) || isNaN(prem2) || isNaN(claims)) {
+        alert('Please fill in at least Options 1 and 2, and expected claims.');
+        return;
+      }
+
+      const total1 = prem1 + (ded1 * claims);
+      const total2 = prem2 + (ded2 * claims);
+
+      const options = [
+        { label: '$' + ded1.toLocaleString() + ' deductible', total: total1 },
+        { label: '$' + ded2.toLocaleString() + ' deductible', total: total2 }
+      ];
+
+      const fmt = (n) => '$' + n.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+
+      document.getElementById('result-total1').textContent = fmt(total1);
+      document.getElementById('result-total2').textContent = fmt(total2);
+
+      let hasOption3 = false;
+      if (!isNaN(ded3) && !isNaN(prem3) && ded3 > 0) {
+        const total3 = prem3 + (ded3 * claims);
+        options.push({ label: '$' + ded3.toLocaleString() + ' deductible', total: total3 });
+        document.getElementById('result-total3').textContent = fmt(total3);
+        document.getElementById('option3-result').style.display = '';
+        hasOption3 = true;
+      } else {
+        document.getElementById('option3-result').style.display = 'none';
+      }
+
+      options.sort((a, b) => a.total - b.total);
+      const savings = options[options.length - 1].total - options[0].total;
+
+      document.getElementById('result-optimal').textContent = options[0].label;
+      document.getElementById('result-savings').textContent = fmt(savings);
+      document.getElementById('deductible-results').classList.remove('hidden');
+    }
+
+    function resetDeductible() {
+      document.getElementById('deductible-form').reset();
+      document.getElementById('deductible-results').classList.add('hidden');
+    }
+
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', !expanded);
+        btn.nextElementSibling.classList.toggle('open');
+      });
+    });
+
+    document.querySelector('.mobile-menu-toggle')?.addEventListener('click', function() {
+      const nav = document.querySelector('.mobile-nav');
+      const expanded = this.getAttribute('aria-expanded') === 'true';
+      this.setAttribute('aria-expanded', !expanded);
+      nav.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>

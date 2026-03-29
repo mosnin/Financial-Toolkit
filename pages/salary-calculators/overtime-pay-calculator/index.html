@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Overtime Pay Calculator - Calculate Regular & OT Pay | CalcWise</title>
+  <meta name="description" content="Free overtime pay calculator. Calculate your regular pay, overtime pay, and total weekly earnings based on your hourly rate, regular hours, overtime hours, and OT multiplier.">
+  <meta name="keywords" content="overtime pay calculator, OT pay calculator, time and a half calculator, overtime earnings, weekly pay calculator">
+  <link rel="canonical" href="https://calcwise.io/salary-calculators/overtime-pay-calculator/">
+
+  <meta property="og:title" content="Overtime Pay Calculator - Calculate Regular & OT Pay">
+  <meta property="og:description" content="Free overtime pay calculator. Calculate your regular pay, overtime pay, and total weekly earnings.">
+  <meta property="og:url" content="https://calcwise.io/salary-calculators/overtime-pay-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Overtime Pay Calculator - Calculate Regular & OT Pay">
+  <meta name="twitter:description" content="Free overtime pay calculator. Calculate your regular pay, overtime pay, and total weekly earnings.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Salary Calculators", "item": "https://calcwise.io/salary-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "Overtime Pay Calculator", "item": "https://calcwise.io/salary-calculators/overtime-pay-calculator/" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How is overtime pay calculated?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Overtime pay is calculated by multiplying your regular hourly rate by the overtime multiplier (typically 1.5x for time-and-a-half) for each hour worked beyond the standard work period, usually 40 hours per week." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is time and a half?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Time and a half means you earn 1.5 times your regular hourly rate for overtime hours. For example, if you earn $20/hour, your overtime rate would be $30/hour. This is the most common overtime rate required by the FLSA." }
+      },
+      {
+        "@type": "Question",
+        "name": "When does overtime pay kick in?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Under the Fair Labor Standards Act (FLSA), non-exempt employees must receive overtime pay for hours worked over 40 in a workweek. Some states have daily overtime requirements (e.g., California requires OT after 8 hours in a day)." }
+      },
+      {
+        "@type": "Question",
+        "name": "Are all employees eligible for overtime?",
+        "acceptedAnswer": { "@type": "Answer", "text": "No. Exempt employees (typically salaried workers in executive, administrative, or professional roles earning above a certain threshold) are not entitled to overtime pay under the FLSA. Non-exempt employees must receive overtime." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is double time?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Double time means earning twice your regular hourly rate. Some employers or state laws require double time for hours worked beyond a certain threshold, such as working more than 12 hours in a day or on holidays." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/salary-calculators/" aria-current="page">Salary</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/salary-calculators/">Salary Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/salary-calculators/">Salary Calculators</a></li>
+          <li><span aria-current="page">Overtime Pay Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="article-content">
+          <h1>Overtime Pay Calculator</h1>
+          <p>Calculate your total weekly earnings including regular and overtime pay. Enter your hourly rate, regular hours, overtime hours, and OT multiplier to see a complete breakdown of your compensation.</p>
+
+          <div class="calc-container mt-8">
+            <div class="calc-header">
+              <h2>Calculate Overtime Pay</h2>
+              <p>Enter your work hours and rate</p>
+            </div>
+            <div class="calc-body">
+              <form id="overtime-form" onsubmit="return false;">
+                <div class="form-group">
+                  <label class="form-label" for="hourly-rate">Regular Hourly Rate</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="hourly-rate" name="hourlyRate" class="form-input" placeholder="25.00" min="0" step="0.01" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="regular-hours">Regular Hours</label>
+                  <input type="number" id="regular-hours" name="regularHours" class="form-input" placeholder="40" min="0" max="168" step="0.5" value="40" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="overtime-hours">Overtime Hours</label>
+                  <input type="number" id="overtime-hours" name="overtimeHours" class="form-input" placeholder="10" min="0" max="128" step="0.5" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="ot-multiplier">OT Multiplier</label>
+                  <select id="ot-multiplier" name="otMultiplier" class="form-input" required>
+                    <option value="1.5" selected>1.5x (Time and a Half)</option>
+                    <option value="2.0">2.0x (Double Time)</option>
+                    <option value="2.5">2.5x</option>
+                    <option value="1.25">1.25x</option>
+                  </select>
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calculateOvertime()">Calculate Pay</button>
+                  <button type="button" class="btn btn-reset" onclick="resetOvertime()">Reset</button>
+                </div>
+              </form>
+
+              <div id="overtime-results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">Total Weekly Pay</div>
+                  <div class="result-value" id="result-total"></div>
+                </div>
+                <div class="result-grid">
+                  <div class="result-item">
+                    <div class="result-label">Regular Pay</div>
+                    <div class="result-value" id="result-regular"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Overtime Pay</div>
+                    <div class="result-value" id="result-ot"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">OT Hourly Rate</div>
+                    <div class="result-value" id="result-ot-rate"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Effective Hourly Rate</div>
+                    <div class="result-value" id="result-effective"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <section class="content-section">
+            <h2>Overtime Pay Formula</h2>
+            <p>Total pay with overtime is calculated as:</p>
+            <div class="formula-box">
+              <div class="formula-label">Total Pay Formula</div>
+              Total Pay = (Hourly Rate x Regular Hours) + (Hourly Rate x OT Multiplier x OT Hours)
+            </div>
+            <p>For standard time-and-a-half: <strong>Total = (Rate x 40) + (Rate x 1.5 x OT Hours)</strong>.</p>
+          </section>
+
+          <section class="content-section">
+            <h2>How to Use This Calculator</h2>
+            <ol>
+              <li><strong>Enter your hourly rate</strong> - your standard pay per hour.</li>
+              <li><strong>Enter regular hours</strong> - hours at standard rate (typically 40).</li>
+              <li><strong>Enter overtime hours</strong> - additional hours beyond regular.</li>
+              <li><strong>Select the OT multiplier</strong> - typically 1.5x (time and a half).</li>
+              <li><strong>Click "Calculate Pay"</strong> to see your complete pay breakdown.</li>
+            </ol>
+          </section>
+
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>If you earn $25/hour, work 40 regular hours and 10 overtime hours at 1.5x, your regular pay is $1,000, your overtime pay is $375 (10 x $37.50), for a total of $1,375. Your effective hourly rate across all 50 hours is $27.50.</p>
+          </section>
+
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">How is overtime pay calculated?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>Overtime pay is calculated by multiplying your regular hourly rate by the overtime multiplier (typically 1.5x) for each hour worked beyond the standard 40-hour work week.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">What is time and a half?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>Time and a half means you earn 1.5 times your regular hourly rate for overtime hours. If you earn $20/hour, your overtime rate would be $30/hour.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">When does overtime pay kick in?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>Under the FLSA, non-exempt employees must receive overtime pay for hours worked over 40 in a workweek. Some states have daily overtime requirements as well.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">Are all employees eligible for overtime?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>No. Exempt employees (typically salaried workers in executive, administrative, or professional roles) are not entitled to overtime pay under the FLSA.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">What is double time?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>Double time means earning twice your regular hourly rate. Some employers or state laws require double time for hours beyond certain thresholds or on holidays.</p></div>
+            </div>
+          </section>
+
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/salary-calculators/hourly-to-salary-calculator/" class="card card-link">
+                <h3>Hourly to Salary Calculator</h3>
+                <p>Convert your hourly wage to an annual salary.</p>
+              </a>
+              <a href="/salary-calculators/salary-to-hourly-calculator/" class="card card-link">
+                <h3>Salary to Hourly Calculator</h3>
+                <p>Find your effective hourly rate from your salary.</p>
+              </a>
+              <a href="/salary-calculators/paycheck-calculator/" class="card card-link">
+                <h3>Paycheck Calculator</h3>
+                <p>Estimate your net pay after deductions.</p>
+              </a>
+              <a href="/salary-calculators/take-home-pay-calculator/" class="card card-link">
+                <h3>Take-Home Pay Calculator</h3>
+                <p>See your full pay breakdown after taxes.</p>
+              </a>
+            </div>
+          </section>
+
+          <div class="disclaimer">
+            <strong>Disclaimer:</strong> This calculator provides estimates for informational purposes only. Overtime laws vary by state and employment classification. Consult your employer or a labor attorney for specific overtime rules.
+          </div>
+
+          <div class="ad-slot ad-slot-leaderboard"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Real Estate</h4>
+          <a href="/real-estate-calculators/">All Real Estate Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Salary</h4>
+          <a href="/salary-calculators/">All Salary Calculators</a>
+          <a href="/salary-calculators/paycheck-calculator/">Paycheck Calculator</a>
+          <a href="/salary-calculators/overtime-pay-calculator/">Overtime Calculator</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function fmt(n) { return '$' + n.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ','); }
+
+    function calculateOvertime() {
+      const rate = parseFloat(document.getElementById('hourly-rate').value);
+      const regHours = parseFloat(document.getElementById('regular-hours').value);
+      const otHours = parseFloat(document.getElementById('overtime-hours').value);
+      const multiplier = parseFloat(document.getElementById('ot-multiplier').value);
+
+      if (!rate || rate <= 0) { alert('Please enter a valid hourly rate.'); return; }
+
+      const regularPay = rate * regHours;
+      const otRate = rate * multiplier;
+      const otPay = otRate * otHours;
+      const totalPay = regularPay + otPay;
+      const totalHours = regHours + otHours;
+      const effective = totalHours > 0 ? totalPay / totalHours : 0;
+
+      document.getElementById('result-total').textContent = fmt(totalPay);
+      document.getElementById('result-regular').textContent = fmt(regularPay);
+      document.getElementById('result-ot').textContent = fmt(otPay);
+      document.getElementById('result-ot-rate').textContent = fmt(otRate);
+      document.getElementById('result-effective').textContent = fmt(effective);
+      document.getElementById('overtime-results').classList.remove('hidden');
+    }
+
+    function resetOvertime() {
+      document.getElementById('overtime-form').reset();
+      document.getElementById('overtime-results').classList.add('hidden');
+    }
+  </script>
+</body>
+</html>

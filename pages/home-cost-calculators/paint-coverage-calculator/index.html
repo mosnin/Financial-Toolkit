@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paint Coverage Calculator - Calculate Gallons of Paint Needed | CalcWise</title>
+  <meta name="description" content="Free paint coverage calculator. Enter room dimensions, doors, windows, and number of coats to calculate wall area, gallons of paint needed, and estimated cost.">
+  <meta name="keywords" content="paint coverage calculator, paint calculator, how much paint do I need, gallons of paint, wall paint estimator">
+  <link rel="canonical" href="https://calcwise.io/home-cost-calculators/paint-coverage-calculator/">
+
+  <meta property="og:title" content="Paint Coverage Calculator - Calculate Gallons of Paint Needed">
+  <meta property="og:description" content="Free paint coverage calculator. Enter room dimensions to find out how many gallons of paint you need and the estimated cost.">
+  <meta property="og:url" content="https://calcwise.io/home-cost-calculators/paint-coverage-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Paint Coverage Calculator - Calculate Gallons of Paint Needed">
+  <meta name="twitter:description" content="Free paint coverage calculator. Enter room dimensions to find out how many gallons of paint you need.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Home Cost Calculators", "item": "https://calcwise.io/home-cost-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "Paint Coverage Calculator", "item": "https://calcwise.io/home-cost-calculators/paint-coverage-calculator/" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How much area does one gallon of paint cover?",
+        "acceptedAnswer": { "@type": "Answer", "text": "One gallon of paint typically covers 350-400 square feet of smooth wall surface per coat. Textured walls, bare drywall, or porous surfaces may reduce coverage to 250-350 square feet per gallon." }
+      },
+      {
+        "@type": "Question",
+        "name": "How many coats of paint do I need?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Most paint jobs require 2 coats for even, durable coverage. You may need 3 coats when painting light over dark colors, covering stains, or using lower-quality paint. One coat may suffice for touch-ups with matching paint." }
+      },
+      {
+        "@type": "Question",
+        "name": "Should I subtract doors and windows from my paint calculation?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes, subtracting doors and windows gives a more accurate estimate and can save you money. A standard door is about 21 square feet and a standard window is about 15 square feet." }
+      },
+      {
+        "@type": "Question",
+        "name": "How much does a gallon of paint cost?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Interior paint ranges from $25-$50 per gallon for standard quality, $35-$65 for mid-range, and $50-$100+ for premium paint. Primer costs $15-$30 per gallon. High-quality paint often requires fewer coats, saving time and money." }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need primer before painting?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Primer is recommended when painting bare drywall, covering dark colors, painting over stains, or switching between paint types. Many modern paints include primer (paint-and-primer-in-one), which can eliminate the need for a separate primer coat." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/business-calculators/">Business</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/business-calculators/">Business Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/home-cost-calculators/">Home Cost Calculators</a></li>
+          <li><span aria-current="page">Paint Coverage Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="article-content">
+          <h1>Paint Coverage Calculator</h1>
+          <p>Calculate exactly how much paint you need for your room. Enter the room dimensions, number of doors and windows, and desired coats to get the total wall area, gallons needed, and estimated paint cost.</p>
+
+          <div class="calc-container mt-8">
+            <div class="calc-header">
+              <h2>Calculate Paint Needed</h2>
+              <p>Enter your room details below</p>
+            </div>
+            <div class="calc-body">
+              <form id="paint-form" onsubmit="return false;">
+                <div class="form-group">
+                  <label class="form-label" for="room-length">Room Length <span class="form-hint">(feet)</span></label>
+                  <input type="number" id="room-length" class="form-input" placeholder="15" min="1" step="0.5" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="room-width">Room Width <span class="form-hint">(feet)</span></label>
+                  <input type="number" id="room-width" class="form-input" placeholder="12" min="1" step="0.5" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="room-height">Ceiling Height <span class="form-hint">(feet)</span></label>
+                  <input type="number" id="room-height" class="form-input" placeholder="8" min="1" step="0.5" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="num-doors">Number of Doors</label>
+                  <input type="number" id="num-doors" class="form-input" placeholder="2" min="0" step="1" value="0">
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="num-windows">Number of Windows</label>
+                  <input type="number" id="num-windows" class="form-input" placeholder="3" min="0" step="1" value="0">
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="num-coats">Number of Coats</label>
+                  <select id="num-coats" class="form-input" required>
+                    <option value="1">1 Coat</option>
+                    <option value="2" selected>2 Coats</option>
+                    <option value="3">3 Coats</option>
+                  </select>
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calculatePaint()">Calculate Paint</button>
+                  <button type="button" class="btn btn-reset" onclick="resetPaint()">Reset</button>
+                </div>
+              </form>
+
+              <div id="paint-results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">Gallons Needed</div>
+                  <div class="result-value" id="result-gallons"></div>
+                </div>
+                <div class="result-grid">
+                  <div class="result-item">
+                    <div class="result-label">Paintable Wall Area</div>
+                    <div class="result-value" id="result-area"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Estimated Paint Cost</div>
+                    <div class="result-value" id="result-cost"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <section class="content-section">
+            <h2>Paint Coverage Formula</h2>
+            <p>The paint needed is calculated by determining the total paintable wall area and dividing by coverage per gallon:</p>
+            <div class="formula-box">
+              <div class="formula-label">Paint Formula</div>
+              Wall Area = 2 x (Length + Width) x Height - (Doors x 21 sqft) - (Windows x 15 sqft)
+              Gallons = (Wall Area x Coats) / 350 sqft per gallon
+            </div>
+            <p>Standard doors are approximately 21 square feet (3ft x 7ft) and standard windows are approximately 15 square feet (3ft x 5ft). One gallon covers about 350 square feet per coat.</p>
+          </section>
+
+          <section class="content-section">
+            <h2>How to Use This Calculator</h2>
+            <ol>
+              <li><strong>Enter room length and width</strong> - in feet.</li>
+              <li><strong>Enter ceiling height</strong> - standard is 8 feet.</li>
+              <li><strong>Enter number of doors and windows</strong> - these will be subtracted from the wall area.</li>
+              <li><strong>Select number of coats</strong> - 2 coats is standard for most projects.</li>
+              <li><strong>Click "Calculate Paint"</strong> to see gallons needed, wall area, and estimated cost.</li>
+            </ol>
+          </section>
+
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>A 15 x 12 foot room with 8-foot ceilings, 2 doors, and 3 windows needs about 2.3 gallons for 2 coats. The paintable wall area is approximately 387 square feet after subtracting doors and windows. At $40 per gallon, the paint cost would be about $120.</p>
+          </section>
+
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">How much area does one gallon of paint cover?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>One gallon of paint typically covers 350-400 square feet of smooth wall surface per coat. Textured walls or porous surfaces may reduce coverage to 250-350 square feet per gallon.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">How many coats of paint do I need?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>Most paint jobs require 2 coats for even, durable coverage. You may need 3 coats when painting light over dark colors or covering stains. One coat may suffice for touch-ups with matching paint.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">Should I subtract doors and windows from my paint calculation?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>Yes, subtracting doors and windows gives a more accurate estimate. A standard door is about 21 square feet and a standard window is about 15 square feet.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">How much does a gallon of paint cost?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>Interior paint ranges from $25-$50 per gallon for standard quality, $35-$65 for mid-range, and $50-$100+ for premium paint. High-quality paint often requires fewer coats.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">Do I need primer before painting?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>Primer is recommended when painting bare drywall, covering dark colors, or switching between paint types. Many modern paints include primer, which can eliminate the need for a separate coat.</p></div>
+            </div>
+          </section>
+
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/home-cost-calculators/flooring-cost-calculator/" class="card card-link"><h3>Flooring Cost Calculator</h3><p>Estimate flooring costs by material type and area.</p></a>
+              <a href="/home-cost-calculators/home-renovation-cost-calculator/" class="card card-link"><h3>Home Renovation Cost Calculator</h3><p>Estimate overall renovation costs by project type.</p></a>
+              <a href="/home-cost-calculators/concrete-volume-calculator/" class="card card-link"><h3>Concrete Volume Calculator</h3><p>Calculate cubic yards and bags of concrete needed.</p></a>
+            </div>
+          </section>
+
+          <div class="disclaimer">
+            <strong>Disclaimer:</strong> This calculator provides estimates for informational purposes only. Actual paint coverage varies based on surface texture, paint quality, application method, and color choices. Always buy slightly more paint than calculated to account for touch-ups and waste.
+          </div>
+
+          <div class="ad-slot ad-slot-leaderboard"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col"><h4>Real Estate</h4><a href="/real-estate-calculators/">All Real Estate Calculators</a></div>
+        <div class="footer-col"><h4>Home Costs</h4><a href="/home-cost-calculators/">All Home Cost Calculators</a></div>
+        <div class="footer-col"><h4>Company</h4><a href="/about.html">About</a></div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links"><a href="/about.html">About</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    const COVERAGE_PER_GALLON = 350;
+    const DOOR_SQFT = 21;
+    const WINDOW_SQFT = 15;
+    const COST_PER_GALLON = 40;
+
+    function calculatePaint() {
+      const length = parseFloat(document.getElementById('room-length').value);
+      const width = parseFloat(document.getElementById('room-width').value);
+      const height = parseFloat(document.getElementById('room-height').value);
+      const doors = parseInt(document.getElementById('num-doors').value) || 0;
+      const windows = parseInt(document.getElementById('num-windows').value) || 0;
+      const coats = parseInt(document.getElementById('num-coats').value);
+      if (!length || !width || !height) { alert('Please enter room dimensions.'); return; }
+
+      const wallArea = 2 * (length + width) * height - (doors * DOOR_SQFT) - (windows * WINDOW_SQFT);
+      const totalArea = wallArea * coats;
+      const gallons = Math.ceil(totalArea / COVERAGE_PER_GALLON * 10) / 10;
+      const gallonsToBuy = Math.ceil(gallons);
+      const cost = gallonsToBuy * COST_PER_GALLON;
+
+      document.getElementById('result-gallons').textContent = gallons.toFixed(1) + ' gallons (' + gallonsToBuy + ' to buy)';
+      document.getElementById('result-area').textContent = Math.round(wallArea) + ' sq ft';
+      document.getElementById('result-cost').textContent = '$' + cost.toLocaleString() + ' (at $' + COST_PER_GALLON + '/gal)';
+      document.getElementById('paint-results').classList.remove('hidden');
+    }
+
+    function resetPaint() {
+      document.getElementById('paint-form').reset();
+      document.getElementById('paint-results').classList.add('hidden');
+    }
+  </script>
+</body>
+</html>

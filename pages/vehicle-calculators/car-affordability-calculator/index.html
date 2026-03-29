@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car Affordability Calculator | CalcWise</title>
+  <meta name="description" content="Free car affordability calculator to determine how much car you can afford. Enter your income, debts, and budget to find your maximum affordable car price and recommended budget.">
+  <meta name="keywords" content="car affordability calculator, how much car can I afford, car budget calculator, vehicle affordability, auto budget">
+  <link rel="canonical" href="https://calcwise.io/vehicle-calculators/car-affordability-calculator/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Car Affordability Calculator | CalcWise">
+  <meta property="og:description" content="Free car affordability calculator to determine how much car you can afford based on your income and budget.">
+  <meta property="og:url" content="https://calcwise.io/vehicle-calculators/car-affordability-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Car Affordability Calculator | CalcWise">
+  <meta name="twitter:description" content="Free car affordability calculator to determine how much car you can afford based on your income and budget.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <!-- BreadcrumbList Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Vehicle Calculators", "item": "https://calcwise.io/vehicle-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "Car Affordability Calculator", "item": "https://calcwise.io/vehicle-calculators/car-affordability-calculator/" }
+    ]
+  }
+  </script>
+
+  <!-- FAQPage Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How much car can I afford?",
+        "acceptedAnswer": { "@type": "Answer", "text": "A common rule of thumb is to spend no more than 10-15% of your monthly take-home pay on car payments. Your total vehicle expenses (payment, insurance, fuel, maintenance) should stay under 20% of your income. This calculator helps you find the right balance." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the 20/4/10 rule for car buying?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The 20/4/10 rule suggests putting at least 20% down, financing for no more than 4 years, and keeping total transportation costs under 10% of gross income. This conservative approach helps avoid being upside-down on a car loan." }
+      },
+      {
+        "@type": "Question",
+        "name": "Should I include existing debts when calculating car affordability?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Lenders look at your debt-to-income (DTI) ratio, which includes all monthly debt payments. Most lenders prefer a total DTI below 36-43%. Higher existing debts reduce how much you can afford for a car payment." }
+      },
+      {
+        "@type": "Question",
+        "name": "How does a down payment affect what I can afford?",
+        "acceptedAnswer": { "@type": "Answer", "text": "A larger down payment means you need to finance less, allowing you to either buy a more expensive vehicle within the same monthly budget or keep your monthly payments lower. It also reduces total interest paid and helps avoid negative equity." }
+      },
+      {
+        "@type": "Question",
+        "name": "What other costs should I consider beyond the car payment?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Beyond the monthly payment, budget for insurance ($100-$300/month), fuel ($150-$300/month), maintenance and repairs ($75-$150/month), registration and taxes, and potential parking costs. These can add $400-$800+ to your monthly vehicle expenses." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/vehicle-calculators/" aria-current="page">Vehicle</a>
+        <a href="/business-calculators/">Business</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/vehicle-calculators/">Vehicle Calculators</a>
+      <a href="/business-calculators/">Business Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/vehicle-calculators/">Vehicle Calculators</a></li>
+          <li><span aria-current="page">Car Affordability Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="article-content">
+          <h1>Car Affordability Calculator</h1>
+          <p>Find out how much car you can comfortably afford based on your monthly income, existing debts, desired payment, and down payment. This calculator provides the maximum affordable car price and a recommended budget to help you shop within your means.</p>
+
+          <div class="calc-container mt-8">
+            <div class="calc-header">
+              <h2>Calculate Your Car Budget</h2>
+              <p>Enter your financial details below</p>
+            </div>
+            <div class="calc-body">
+              <form id="affordability-form" onsubmit="return false;">
+                <div class="form-group">
+                  <label class="form-label" for="monthly-income">Monthly Take-Home Income</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="monthly-income" name="monthlyIncome" class="form-input" placeholder="5000" min="0" step="100" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="existing-debts">Existing Monthly Debts</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="existing-debts" name="existingDebts" class="form-input" placeholder="500" min="0" step="50">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="desired-payment">Desired Monthly Payment</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="desired-payment" name="desiredPayment" class="form-input" placeholder="400" min="0" step="25" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="down-payment">Down Payment Available</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="down-payment" name="downPayment" class="form-input" placeholder="5000" min="0" step="100">
+                  </div>
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calculateAffordability()">Calculate Affordability</button>
+                  <button type="button" class="btn btn-reset" onclick="resetAffordability()">Reset</button>
+                </div>
+              </form>
+
+              <div id="affordability-results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">Maximum Affordable Car Price</div>
+                  <div class="result-value" id="result-max-price"></div>
+                </div>
+                <div class="result-grid">
+                  <div class="result-item">
+                    <div class="result-label">Recommended Budget (Conservative)</div>
+                    <div class="result-value" id="result-recommended"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Payment as % of Income</div>
+                    <div class="result-value" id="result-pct-income"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Total DTI with Car Payment</div>
+                    <div class="result-value" id="result-dti"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Max Financed Amount</div>
+                    <div class="result-value" id="result-max-financed"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Formula Section -->
+          <section class="content-section">
+            <h2>Car Affordability Formula</h2>
+            <p>This calculator estimates your maximum car price using your desired payment, a standard interest rate, and loan term:</p>
+            <div class="formula-box">
+              <div class="formula-label">Maximum Financed Amount</div>
+              Max Financed = Payment x [(1 + r)^n - 1] / [r(1 + r)^n]
+            </div>
+            <div class="formula-box">
+              <div class="formula-label">Maximum Car Price</div>
+              Max Price = Max Financed Amount + Down Payment
+            </div>
+            <p>Where <strong>r</strong> is the assumed monthly interest rate (6.5% APR / 12) and <strong>n</strong> is 60 months. The recommended budget uses a conservative 10% of income rule.</p>
+          </section>
+
+          <!-- How to Use -->
+          <section class="content-section">
+            <h2>How to Use This Car Affordability Calculator</h2>
+            <ol>
+              <li><strong>Enter your monthly income</strong> - your take-home pay after taxes.</li>
+              <li><strong>Enter existing debts</strong> - total monthly payments for other debts (credit cards, student loans, etc.).</li>
+              <li><strong>Enter your desired payment</strong> - the monthly car payment you feel comfortable with.</li>
+              <li><strong>Enter your down payment</strong> - how much cash you can put down.</li>
+              <li><strong>Click "Calculate Affordability"</strong> to see your maximum price and budget recommendation.</li>
+            </ol>
+          </section>
+
+          <!-- Example Scenario -->
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>With a monthly income of $5,000, existing debts of $500, a desired payment of $400, and a $5,000 down payment, assuming 6.5% APR for 60 months, you could afford a car priced up to about $25,600. The conservative recommendation (10% of income = $500/month payment) would allow a car up to roughly $30,300.</p>
+          </section>
+
+          <!-- FAQ Section -->
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                How much car can I afford?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>A common rule of thumb is to spend no more than 10-15% of your monthly take-home pay on car payments. Your total vehicle expenses (payment, insurance, fuel, maintenance) should stay under 20% of your income.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What is the 20/4/10 rule for car buying?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>The 20/4/10 rule suggests putting at least 20% down, financing for no more than 4 years, and keeping total transportation costs under 10% of gross income. This conservative approach helps avoid being upside-down on a car loan.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Should I include existing debts when calculating car affordability?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Yes. Lenders look at your debt-to-income (DTI) ratio, which includes all monthly debt payments. Most lenders prefer a total DTI below 36-43%. Higher existing debts reduce how much you can afford for a car payment.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                How does a down payment affect what I can afford?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>A larger down payment means you need to finance less, allowing you to either buy a more expensive vehicle within the same monthly budget or keep your monthly payments lower. It also reduces total interest paid and helps avoid negative equity.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What other costs should I consider beyond the car payment?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Beyond the monthly payment, budget for insurance ($100-$300/month), fuel ($150-$300/month), maintenance and repairs ($75-$150/month), registration and taxes, and potential parking costs. These can add $400-$800+ to your monthly vehicle expenses.</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Related Calculators -->
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/vehicle-calculators/car-payment-calculator/" class="card card-link">
+                <h3>Car Payment Calculator</h3>
+                <p>Estimate your monthly car payment with down payment and trade-in.</p>
+              </a>
+              <a href="/vehicle-calculators/auto-loan-calculator/" class="card card-link">
+                <h3>Auto Loan Calculator</h3>
+                <p>Calculate monthly payments for any auto loan amount.</p>
+              </a>
+              <a href="/vehicle-calculators/vehicle-total-cost-calculator/" class="card card-link">
+                <h3>Vehicle Total Cost Calculator</h3>
+                <p>Calculate the true total cost of owning a vehicle over time.</p>
+              </a>
+              <a href="/vehicle-calculators/car-insurance-savings-calculator/" class="card card-link">
+                <h3>Car Insurance Savings Calculator</h3>
+                <p>Estimate how much you could save on car insurance.</p>
+              </a>
+              <a href="/finance-calculators/debt-payoff-calculator/" class="card card-link">
+                <h3>Debt Payoff Calculator</h3>
+                <p>Plan your strategy to pay off existing debts.</p>
+              </a>
+            </div>
+          </section>
+
+          <!-- Disclaimer -->
+          <div class="disclaimer">
+            <strong>Disclaimer:</strong> This calculator provides estimates for informational purposes only. Actual affordability depends on your credit score, lender terms, taxes, fees, insurance costs, and personal financial situation. This is not financial advice. Consult a qualified financial professional before making vehicle purchase decisions.
+          </div>
+
+          <!-- Ad Slot -->
+          <div class="ad-slot ad-slot-leaderboard"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Vehicle</h4>
+          <a href="/vehicle-calculators/">All Vehicle Calculators</a>
+          <a href="/vehicle-calculators/car-payment-calculator/">Car Payment</a>
+          <a href="/vehicle-calculators/car-affordability-calculator/">Car Affordability</a>
+        </div>
+        <div class="footer-col">
+          <h4>Finance</h4>
+          <a href="/finance-calculators/">All Finance Calculators</a>
+          <a href="/finance-calculators/loan-calculator/">Loan Calculator</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateAffordability() {
+      if (!CalcWise.validateForm('affordability-form')) return;
+
+      const income = CalcWise.parseNumber(document.getElementById('monthly-income').value);
+      const debts = CalcWise.parseNumber(document.getElementById('existing-debts').value) || 0;
+      const desiredPayment = CalcWise.parseNumber(document.getElementById('desired-payment').value);
+      const downPayment = CalcWise.parseNumber(document.getElementById('down-payment').value) || 0;
+
+      // Assumed loan terms: 6.5% APR, 60 months
+      const apr = 0.065;
+      const months = 60;
+      const monthlyRate = apr / 12;
+
+      // Calculate max financed from desired payment
+      const maxFinanced = desiredPayment * (Math.pow(1 + monthlyRate, months) - 1) / (monthlyRate * Math.pow(1 + monthlyRate, months));
+      const maxPrice = maxFinanced + downPayment;
+
+      // Conservative: 10% of income
+      const conservativePayment = income * 0.10;
+      const conservativeFinanced = conservativePayment * (Math.pow(1 + monthlyRate, months) - 1) / (monthlyRate * Math.pow(1 + monthlyRate, months));
+      const recommendedBudget = conservativeFinanced + downPayment;
+
+      const pctIncome = ((desiredPayment / income) * 100).toFixed(1);
+      const dti = (((debts + desiredPayment) / income) * 100).toFixed(1);
+
+      CalcWise.setText('result-max-price', CalcWise.formatCurrency(maxPrice));
+      CalcWise.setText('result-recommended', CalcWise.formatCurrency(recommendedBudget));
+      CalcWise.setText('result-pct-income', pctIncome + '%');
+      CalcWise.setText('result-dti', dti + '%');
+      CalcWise.setText('result-max-financed', CalcWise.formatCurrency(maxFinanced));
+      CalcWise.showResults('affordability-results');
+    }
+
+    function resetAffordability() {
+      document.getElementById('affordability-form').reset();
+      CalcWise.hideResults('affordability-results');
+    }
+  </script>
+</body>
+</html>

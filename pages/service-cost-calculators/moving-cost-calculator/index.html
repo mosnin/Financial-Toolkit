@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moving Cost Calculator - Estimate Your Moving Expenses | CalcWise</title>
+  <meta name="description" content="Free moving cost calculator to estimate your total moving expenses based on distance, home size, packing services, and season. Plan your move with confidence.">
+  <meta name="keywords" content="moving cost calculator, moving expenses, relocation cost, moving estimate, packing service cost">
+  <link rel="canonical" href="https://calcwise.io/service-cost-calculators/moving-cost-calculator/">
+
+  <meta property="og:title" content="Moving Cost Calculator - Estimate Your Moving Expenses | CalcWise">
+  <meta property="og:description" content="Free moving cost calculator to estimate your total moving expenses based on distance, home size, packing services, and season.">
+  <meta property="og:url" content="https://calcwise.io/service-cost-calculators/moving-cost-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Moving Cost Calculator - Estimate Your Moving Expenses | CalcWise">
+  <meta name="twitter:description" content="Free moving cost calculator to estimate your total moving expenses based on distance, home size, packing services, and season.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Service Cost Calculators", "item": "https://calcwise.io/service-cost-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "Moving Cost Calculator", "item": "https://calcwise.io/service-cost-calculators/moving-cost-calculator/" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "How much does it cost to hire movers?", "acceptedAnswer": { "@type": "Answer", "text": "The cost of hiring movers typically ranges from $800 to $2,500 for a local move and $2,000 to $8,000+ for a long-distance move, depending on distance, home size, and services needed." }},
+      { "@type": "Question", "name": "Is it cheaper to move in winter?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, moving during the off-season (October through April) is generally 20-30% cheaper than peak summer months when demand is highest." }},
+      { "@type": "Question", "name": "Does packing service add a lot to the cost?", "acceptedAnswer": { "@type": "Answer", "text": "Full packing services typically add $300 to $2,000 depending on your home size. Partial packing is a good middle ground to save money while protecting fragile items." }},
+      { "@type": "Question", "name": "How far in advance should I book movers?", "acceptedAnswer": { "@type": "Answer", "text": "Book at least 4-8 weeks in advance for local moves and 8-12 weeks for long-distance moves. During peak season, booking even earlier can secure better rates." }},
+      { "@type": "Question", "name": "What factors most affect moving costs?", "acceptedAnswer": { "@type": "Answer", "text": "The biggest factors are distance, the weight/volume of belongings (driven by home size), additional services like packing, and the time of year you move." }}
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/service-cost-calculators/" aria-current="page">Services</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/service-cost-calculators/">Service Cost Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/service-cost-calculators/">Service Cost Calculators</a></li>
+          <li><span aria-current="page">Moving Cost Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="article-content">
+          <h1>Moving Cost Calculator</h1>
+          <p>Estimate the total cost of your upcoming move based on distance, home size, packing services, and the time of year. Whether you are relocating across town or across the country, this calculator helps you budget accurately for hiring professional movers.</p>
+
+          <div class="calc-container mt-8">
+            <div class="calc-header">
+              <h2>Estimate Your Moving Cost</h2>
+              <p>Enter your move details below</p>
+            </div>
+            <div class="calc-body">
+              <form id="moving-form" onsubmit="return false;">
+                <div class="form-group">
+                  <label class="form-label" for="move-distance">Moving Distance</label>
+                  <div class="input-suffix">
+                    <input type="number" id="move-distance" class="form-input" placeholder="50" min="1" max="5000" step="1" required>
+                    <span class="suffix">miles</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="home-size">Home Size</label>
+                  <select id="home-size" class="form-input" required>
+                    <option value="">Select home size</option>
+                    <option value="studio">Studio / 1 Bedroom</option>
+                    <option value="2bed">2 Bedrooms</option>
+                    <option value="3bed">3 Bedrooms</option>
+                    <option value="4bed">4 Bedrooms</option>
+                    <option value="5bed">5+ Bedrooms</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="packing-service">Packing Service</label>
+                  <select id="packing-service" class="form-input" required>
+                    <option value="none">No Packing (Self-Pack)</option>
+                    <option value="partial">Partial Packing (Fragile Items)</option>
+                    <option value="full">Full Packing Service</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="move-season">Season</label>
+                  <select id="move-season" class="form-input" required>
+                    <option value="offpeak">Off-Peak (Oct - Apr)</option>
+                    <option value="peak">Peak Season (May - Sep)</option>
+                  </select>
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calculateMoving()">Calculate Moving Cost</button>
+                  <button type="button" class="btn btn-reset" onclick="resetMoving()">Reset</button>
+                </div>
+              </form>
+
+              <div id="moving-results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">Estimated Moving Cost</div>
+                  <div class="result-value" id="result-total-cost"></div>
+                </div>
+                <div class="result-grid">
+                  <div class="result-item">
+                    <div class="result-label">Base Moving Cost</div>
+                    <div class="result-value" id="result-base-cost"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Packing Service</div>
+                    <div class="result-value" id="result-packing-cost"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Season Adjustment</div>
+                    <div class="result-value" id="result-season-adj"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Distance Category</div>
+                    <div class="result-value" id="result-distance-cat"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">How much does it cost to hire movers?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>The cost of hiring movers typically ranges from $800 to $2,500 for a local move and $2,000 to $8,000+ for a long-distance move, depending on distance, home size, and services needed.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">Is it cheaper to move in winter?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>Yes, moving during the off-season (October through April) is generally 20-30% cheaper than peak summer months when demand is highest.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">Does packing service add a lot to the cost?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>Full packing services typically add $300 to $2,000 depending on your home size. Partial packing is a good middle ground to save money while protecting fragile items.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">How far in advance should I book movers?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>Book at least 4-8 weeks in advance for local moves and 8-12 weeks for long-distance moves. During peak season, booking even earlier can secure better rates.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">What factors most affect moving costs?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>The biggest factors are distance, the weight/volume of belongings (driven by home size), additional services like packing, and the time of year you move.</p></div>
+            </div>
+          </section>
+
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/service-cost-calculators/storage-unit-cost-calculator/" class="card card-link"><h3>Storage Unit Cost Calculator</h3><p>Estimate monthly storage unit costs based on size and features.</p></a>
+              <a href="/service-cost-calculators/cleaning-service-cost-calculator/" class="card card-link"><h3>Cleaning Service Cost Calculator</h3><p>Calculate the cost of professional cleaning services for your home.</p></a>
+              <a href="/home-cost-calculators/" class="card card-link"><h3>Home Cost Calculators</h3><p>Explore all home-related cost calculators.</p></a>
+            </div>
+          </section>
+
+          <div class="disclaimer">
+            <strong>Disclaimer:</strong> This calculator provides estimates for informational purposes only. Actual moving costs vary based on your specific belongings, location, and moving company. Get multiple quotes from licensed movers for accurate pricing.
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Service Costs</h4>
+          <a href="/service-cost-calculators/">All Service Cost Calculators</a>
+          <a href="/service-cost-calculators/moving-cost-calculator/">Moving Cost</a>
+          <a href="/service-cost-calculators/storage-unit-cost-calculator/">Storage Unit Cost</a>
+        </div>
+        <div class="footer-col">
+          <h4>More Calculators</h4>
+          <a href="/real-estate-calculators/">Real Estate</a>
+          <a href="/finance-calculators/">Finance</a>
+          <a href="/home-cost-calculators/">Home Costs</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about.html">About</a>
+          <a href="/contact.html">Contact</a>
+          <a href="/privacy.html">Privacy Policy</a>
+          <a href="/terms.html">Terms of Use</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/privacy.html">Privacy</a>
+          <a href="/terms.html">Terms</a>
+          <a href="/disclaimer.html">Disclaimer</a>
+          <a href="/sitemap.xml">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    // Mobile menu toggle
+    document.querySelector('.mobile-menu-toggle').addEventListener('click', function() {
+      const nav = document.querySelector('.mobile-nav');
+      const isOpen = nav.classList.toggle('is-open');
+      this.setAttribute('aria-expanded', isOpen);
+      this.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+    });
+    // FAQ accordion
+    document.querySelectorAll('.faq-question').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        const item = this.closest('.faq-item');
+        const isOpen = item.classList.toggle('is-open');
+        this.setAttribute('aria-expanded', isOpen);
+      });
+    });
+
+    function calculateMoving() {
+      const distance = parseFloat(document.getElementById('move-distance').value);
+      const homeSize = document.getElementById('home-size').value;
+      const packing = document.getElementById('packing-service').value;
+      const season = document.getElementById('move-season').value;
+
+      if (!distance || !homeSize) { alert('Please fill in all fields.'); return; }
+
+      // Base costs by home size (local move baseline)
+      const baseCosts = { studio: 800, '2bed': 1400, '3bed': 2200, '4bed': 3200, '5bed': 4500 };
+      let baseCost = baseCosts[homeSize] || 1400;
+
+      // Distance multiplier
+      let distCategory = 'Local (under 50 mi)';
+      if (distance > 500) { baseCost *= 2.8; distCategory = 'Long-Distance (500+ mi)'; }
+      else if (distance > 100) { baseCost *= 1.8; distCategory = 'Regional (100-500 mi)'; }
+      else if (distance > 50) { baseCost *= 1.3; distCategory = 'Short-Distance (50-100 mi)'; }
+
+      // Per-mile surcharge for long moves
+      if (distance > 100) baseCost += (distance - 100) * 0.50;
+
+      // Packing cost
+      const packingCosts = { none: 0, partial: 0, full: 0 };
+      const packingBase = { studio: 0, '2bed': 0, '3bed': 0, '4bed': 0, '5bed': 0 };
+      if (packing === 'partial') {
+        packingCosts.partial = { studio: 200, '2bed': 350, '3bed': 500, '4bed': 700, '5bed': 950 }[homeSize];
+      } else if (packing === 'full') {
+        packingCosts.full = { studio: 400, '2bed': 700, '3bed': 1100, '4bed': 1500, '5bed': 2000 }[homeSize];
+      }
+      const packingCost = packingCosts[packing] || 0;
+
+      // Season adjustment
+      const seasonMultiplier = season === 'peak' ? 1.25 : 1.0;
+      const seasonAdjustment = baseCost * (seasonMultiplier - 1);
+
+      const totalCost = (baseCost + packingCost) * seasonMultiplier;
+
+      document.getElementById('result-total-cost').textContent = '$' + Math.round(totalCost).toLocaleString();
+      document.getElementById('result-base-cost').textContent = '$' + Math.round(baseCost).toLocaleString();
+      document.getElementById('result-packing-cost').textContent = '$' + Math.round(packingCost).toLocaleString();
+      document.getElementById('result-season-adj').textContent = season === 'peak' ? '+25% ($' + Math.round(seasonAdjustment + packingCost * 0.25).toLocaleString() + ')' : 'None (Off-Peak)';
+      document.getElementById('result-distance-cat').textContent = distCategory;
+
+      document.getElementById('moving-results').classList.remove('hidden');
+    }
+
+    function resetMoving() {
+      document.getElementById('moving-form').reset();
+      document.getElementById('moving-results').classList.add('hidden');
+    }
+  </script>
+</body>
+</html>

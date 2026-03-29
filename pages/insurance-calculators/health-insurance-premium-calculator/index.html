@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Health Insurance Premium Calculator | CalcWise</title>
+  <meta name="description" content="Estimate your health insurance premium based on age, plan tier (bronze, silver, gold, platinum), and family size. Get monthly cost estimates for marketplace plans.">
+  <meta name="keywords" content="health insurance calculator, health insurance premium, marketplace plan cost, ACA plan estimator, health insurance cost by age">
+  <link rel="canonical" href="https://calcwise.io/insurance-calculators/health-insurance-premium-calculator/">
+
+  <meta property="og:title" content="Health Insurance Premium Calculator | CalcWise">
+  <meta property="og:description" content="Estimate your health insurance premium based on age, plan tier, and family size.">
+  <meta property="og:url" content="https://calcwise.io/insurance-calculators/health-insurance-premium-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Health Insurance Premium Calculator | CalcWise">
+  <meta name="twitter:description" content="Estimate your health insurance premium based on age, plan tier, and family size.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Insurance Calculators", "item": "https://calcwise.io/insurance-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "Health Insurance Premium Calculator", "item": "https://calcwise.io/insurance-calculators/health-insurance-premium-calculator/" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What are the health insurance plan tiers?",
+        "acceptedAnswer": { "@type": "Answer", "text": "ACA marketplace plans come in four tiers: Bronze (lowest premium, highest out-of-pocket costs, ~60% coverage), Silver (moderate premium and costs, ~70% coverage), Gold (higher premium, lower costs, ~80% coverage), and Platinum (highest premium, lowest out-of-pocket, ~90% coverage)." }
+      },
+      {
+        "@type": "Question",
+        "name": "How does age affect health insurance premiums?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Under the ACA, insurers can charge older adults up to 3 times more than younger adults. Premiums generally increase with age as healthcare utilization tends to rise. A 64-year-old may pay roughly 3x what a 21-year-old pays for the same plan." }
+      },
+      {
+        "@type": "Question",
+        "name": "Which health insurance tier is best for me?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Bronze plans suit healthy individuals who rarely need care and want the lowest premium. Silver plans offer a good balance and qualify for cost-sharing reductions. Gold and Platinum plans are better for those with frequent medical needs or ongoing prescriptions." }
+      },
+      {
+        "@type": "Question",
+        "name": "How does family size affect health insurance cost?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Each family member adds to the total premium. Under the ACA, families pay for up to three children under 21; additional children are not charged. Adults are each charged their own age-rated premium." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/insurance-calculators/" aria-current="page">Insurance</a>
+        <a href="/business-calculators/">Business</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/insurance-calculators/">Insurance Calculators</a>
+      <a href="/business-calculators/">Business Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/insurance-calculators/">Insurance Calculators</a></li>
+          <li><span aria-current="page">Health Insurance Premium Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="article-content">
+          <h1>Health Insurance Premium Calculator</h1>
+          <p>Estimate your monthly health insurance premium based on your age, desired plan tier, and family size. This calculator provides ballpark estimates for marketplace-style health insurance plans to help you budget for healthcare costs.</p>
+
+          <div class="calc-container mt-8">
+            <div class="calc-header">
+              <h2>Estimate Health Insurance Cost</h2>
+              <p>Enter your details below</p>
+            </div>
+            <div class="calc-body">
+              <form id="health-form" onsubmit="return false;">
+                <div class="form-group">
+                  <label class="form-label" for="h-age">Primary Member Age</label>
+                  <input type="number" id="h-age" class="form-input" placeholder="35" min="18" max="64" step="1" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="plan-tier">Plan Tier</label>
+                  <select id="plan-tier" class="form-input" required>
+                    <option value="">Select plan tier</option>
+                    <option value="bronze">Bronze (~60% coverage)</option>
+                    <option value="silver">Silver (~70% coverage)</option>
+                    <option value="gold">Gold (~80% coverage)</option>
+                    <option value="platinum">Platinum (~90% coverage)</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="family-size">Family Size <span class="form-hint">(including you)</span></label>
+                  <input type="number" id="family-size" class="form-input" placeholder="1" min="1" max="10" step="1" required>
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calculateHealth()">Estimate Premium</button>
+                  <button type="button" class="btn btn-reset" onclick="resetHealth()">Reset</button>
+                </div>
+              </form>
+
+              <div id="health-results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">Estimated Monthly Premium</div>
+                  <div class="result-value" id="result-monthly"></div>
+                </div>
+                <div class="result-grid">
+                  <div class="result-item">
+                    <div class="result-label">Annual Premium</div>
+                    <div class="result-value" id="result-annual"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Estimated Coverage Level</div>
+                    <div class="result-value" id="result-coverage-level"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <section class="content-section">
+            <h2>Health Insurance Premium Formula</h2>
+            <p>Health insurance premiums are estimated using a base rate adjusted by age, plan tier, and family size:</p>
+            <div class="formula-box">
+              <div class="formula-label">Premium Estimation Formula</div>
+              Monthly Premium = Base Rate x Age Factor x Tier Multiplier x Family Size Adjustment
+            </div>
+            <p>The <strong>base rate</strong> represents the average individual premium. The <strong>age factor</strong> reflects the ACA's 3:1 age rating ratio. The <strong>tier multiplier</strong> adjusts for the level of coverage, and the <strong>family adjustment</strong> scales for household size.</p>
+          </section>
+
+          <section class="content-section">
+            <h2>How to Use This Calculator</h2>
+            <ol>
+              <li><strong>Enter your age</strong> - the primary policyholder's age.</li>
+              <li><strong>Select a plan tier</strong> - Bronze, Silver, Gold, or Platinum.</li>
+              <li><strong>Enter family size</strong> - the total number of people on the plan.</li>
+              <li><strong>Click "Estimate Premium"</strong> to see your estimated monthly and annual costs.</li>
+            </ol>
+          </section>
+
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>A 35-year-old individual choosing a Silver plan would pay approximately $450 per month. A family of four with the same primary member on a Silver plan might pay around $1,350 per month. Upgrading to Gold would increase costs by roughly 20%, while Bronze would save about 20%.</p>
+          </section>
+
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">What are the health insurance plan tiers?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>ACA marketplace plans come in four tiers: Bronze (lowest premium, ~60% coverage), Silver (moderate, ~70%), Gold (higher premium, ~80%), and Platinum (highest premium, ~90% coverage).</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">How does age affect health insurance premiums?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>Under the ACA, insurers can charge older adults up to 3 times more than younger adults. A 64-year-old may pay roughly 3x what a 21-year-old pays for the same plan.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">Which health insurance tier is best for me?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>Bronze plans suit healthy individuals who rarely need care. Silver offers a good balance and qualifies for cost-sharing reductions. Gold and Platinum are better for frequent medical needs.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">How does family size affect health insurance cost?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>Each family member adds to the total premium. Under the ACA, families pay for up to three children under 21; additional children are not charged extra.</p></div>
+            </div>
+          </section>
+
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/insurance-calculators/insurance-deductible-calculator/" class="card card-link">
+                <h3>Insurance Deductible Calculator</h3>
+                <p>Find the optimal deductible to balance premiums and out-of-pocket costs.</p>
+              </a>
+              <a href="/insurance-calculators/disability-insurance-calculator/" class="card card-link">
+                <h3>Disability Insurance Calculator</h3>
+                <p>Calculate income protection if you cannot work due to illness.</p>
+              </a>
+              <a href="/insurance-calculators/insurance-coverage-needs-calculator/" class="card card-link">
+                <h3>Insurance Coverage Needs</h3>
+                <p>Assess your total insurance needs across all types.</p>
+              </a>
+              <a href="/insurance-calculators/insurance-savings-comparison-calculator/" class="card card-link">
+                <h3>Insurance Savings Comparison</h3>
+                <p>Compare quotes from different health insurers.</p>
+              </a>
+              <a href="/finance-calculators/savings-calculator/" class="card card-link">
+                <h3>Savings Goal Calculator</h3>
+                <p>Plan your health savings account contributions.</p>
+              </a>
+            </div>
+          </section>
+
+          <div class="disclaimer">
+            <strong>Disclaimer:</strong> This calculator provides rough estimates for informational purposes only. Actual health insurance premiums vary significantly by location, insurer, tobacco use, and available subsidies. Visit healthcare.gov or your state marketplace for accurate quotes. This is not insurance or medical advice.
+          </div>
+
+          <div class="ad-slot ad-slot-leaderboard"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Real Estate</h4>
+          <a href="/real-estate-calculators/">All Real Estate Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Finance</h4>
+          <a href="/finance-calculators/">All Finance Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Insurance</h4>
+          <a href="/insurance-calculators/">All Insurance Calculators</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links"><a href="/about.html">About</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateHealth() {
+      const age = parseFloat(document.getElementById('h-age').value);
+      const tier = document.getElementById('plan-tier').value;
+      const familySize = parseFloat(document.getElementById('family-size').value);
+
+      if (!age || !tier || !familySize) {
+        alert('Please fill in all fields.');
+        return;
+      }
+
+      // Base monthly rate for a 21-year-old individual Silver plan
+      const baseRate = 300;
+
+      // ACA age curve (3:1 ratio from age 21 to 64)
+      let ageFactor;
+      if (age <= 21) ageFactor = 1.0;
+      else if (age <= 64) ageFactor = 1.0 + ((age - 21) / (64 - 21)) * 2.0;
+      else ageFactor = 3.0;
+
+      // Tier multipliers relative to Silver
+      const tierMultipliers = { bronze: 0.8, silver: 1.0, gold: 1.2, platinum: 1.45 };
+      const tierMultiplier = tierMultipliers[tier] || 1.0;
+
+      // Tier labels
+      const tierLabels = { bronze: '~60%', silver: '~70%', gold: '~80%', platinum: '~90%' };
+
+      // Family factor: first member = 1x, spouse = 1x, children = 0.63x each (ACA child rate)
+      let familyFactor;
+      if (familySize === 1) familyFactor = 1.0;
+      else if (familySize === 2) familyFactor = 2.0;
+      else familyFactor = 2.0 + (Math.min(familySize - 2, 3) * 0.63);
+
+      const monthlyPremium = baseRate * ageFactor * tierMultiplier * familyFactor;
+      const annualPremium = monthlyPremium * 12;
+
+      const fmt = (n) => '$' + n.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+
+      document.getElementById('result-monthly').textContent = fmt(monthlyPremium);
+      document.getElementById('result-annual').textContent = fmt(annualPremium);
+      document.getElementById('result-coverage-level').textContent = tierLabels[tier];
+      document.getElementById('health-results').classList.remove('hidden');
+    }
+
+    function resetHealth() {
+      document.getElementById('health-form').reset();
+      document.getElementById('health-results').classList.add('hidden');
+    }
+
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', !expanded);
+        btn.nextElementSibling.classList.toggle('open');
+      });
+    });
+
+    document.querySelector('.mobile-menu-toggle')?.addEventListener('click', function() {
+      const nav = document.querySelector('.mobile-nav');
+      const expanded = this.getAttribute('aria-expanded') === 'true';
+      this.setAttribute('aria-expanded', !expanded);
+      nav.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>

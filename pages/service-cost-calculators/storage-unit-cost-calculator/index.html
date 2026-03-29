@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Storage Unit Cost Calculator - Estimate Monthly & Total Costs | CalcWise</title>
+  <meta name="description" content="Free storage unit cost calculator. Estimate monthly and total storage costs based on unit size, location, climate control, and rental duration.">
+  <meta name="keywords" content="storage unit cost calculator, storage rental cost, self storage pricing, climate controlled storage cost">
+  <link rel="canonical" href="https://calcwise.io/service-cost-calculators/storage-unit-cost-calculator/">
+
+  <meta property="og:title" content="Storage Unit Cost Calculator | CalcWise">
+  <meta property="og:description" content="Estimate monthly and total storage costs based on unit size, location, climate control, and duration.">
+  <meta property="og:url" content="https://calcwise.io/service-cost-calculators/storage-unit-cost-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Storage Unit Cost Calculator | CalcWise">
+  <meta name="twitter:description" content="Estimate monthly and total storage costs based on unit size, location, climate control, and duration.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Service Cost Calculators", "item": "https://calcwise.io/service-cost-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "Storage Unit Cost Calculator", "item": "https://calcwise.io/service-cost-calculators/storage-unit-cost-calculator/" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "How much does a storage unit cost per month?", "acceptedAnswer": { "@type": "Answer", "text": "Storage unit costs vary by size and location, typically ranging from $50-$90 for a 5x5 unit to $150-$400+ for a 10x20 or larger unit. Climate control adds 25-50% to the base price." }},
+      { "@type": "Question", "name": "Is climate-controlled storage worth it?", "acceptedAnswer": { "@type": "Answer", "text": "Climate control is worth it for temperature-sensitive items like electronics, wooden furniture, artwork, documents, and clothing. It protects against extreme temperatures, humidity, and mold." }},
+      { "@type": "Question", "name": "What size storage unit do I need?", "acceptedAnswer": { "@type": "Answer", "text": "A 5x5 fits a small closet worth of items, 5x10 fits a one-bedroom apartment, 10x10 fits a two-bedroom home, 10x15 fits a three-bedroom home, and 10x20 or larger fits a four-bedroom home or more." }},
+      { "@type": "Question", "name": "Do storage facilities offer discounts for longer rentals?", "acceptedAnswer": { "@type": "Answer", "text": "Many storage facilities offer discounts of 5-15% for prepaying several months in advance or signing a longer-term lease. Some also offer first-month free promotions." }},
+      { "@type": "Question", "name": "What additional fees should I expect?", "acceptedAnswer": { "@type": "Answer", "text": "Common additional fees include an administration fee ($15-$30), insurance ($10-$25/month), a lock purchase ($10-$20), and late payment fees. Always ask about total costs upfront." }}
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/service-cost-calculators/" aria-current="page">Services</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/service-cost-calculators/">Service Cost Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/service-cost-calculators/">Service Cost Calculators</a></li>
+          <li><span aria-current="page">Storage Unit Cost Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="article-content">
+          <h1>Storage Unit Cost Calculator</h1>
+          <p>Estimate the monthly and total cost of renting a storage unit. Adjust for unit size, location type, climate control, and rental duration to plan your storage budget accurately.</p>
+
+          <div class="calc-container mt-8">
+            <div class="calc-header">
+              <h2>Calculate Storage Costs</h2>
+              <p>Enter your storage needs below</p>
+            </div>
+            <div class="calc-body">
+              <form id="storage-form" onsubmit="return false;">
+                <div class="form-group">
+                  <label class="form-label" for="unit-size">Unit Size</label>
+                  <select id="unit-size" class="form-input" required>
+                    <option value="">Select unit size</option>
+                    <option value="5x5">5x5 (25 sq ft) - Closet</option>
+                    <option value="5x10">5x10 (50 sq ft) - Walk-in Closet</option>
+                    <option value="10x10">10x10 (100 sq ft) - Half Garage</option>
+                    <option value="10x15">10x15 (150 sq ft) - Large Room</option>
+                    <option value="10x20">10x20 (200 sq ft) - One-Car Garage</option>
+                    <option value="10x30">10x30 (300 sq ft) - Extra Large</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="storage-location">Location Type</label>
+                  <select id="storage-location" class="form-input" required>
+                    <option value="suburban">Suburban / Small City</option>
+                    <option value="urban">Urban / Major City</option>
+                    <option value="rural">Rural Area</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="climate-control">Climate Control</label>
+                  <select id="climate-control" class="form-input" required>
+                    <option value="no">No Climate Control</option>
+                    <option value="yes">Climate Controlled</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="rental-duration">Rental Duration <span class="form-hint">(months)</span></label>
+                  <input type="number" id="rental-duration" class="form-input" placeholder="6" min="1" max="120" step="1" required>
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calculateStorage()">Calculate Storage Cost</button>
+                  <button type="button" class="btn btn-reset" onclick="resetStorage()">Reset</button>
+                </div>
+              </form>
+
+              <div id="storage-results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">Monthly Cost</div>
+                  <div class="result-value" id="result-monthly-cost"></div>
+                </div>
+                <div class="result-grid">
+                  <div class="result-item">
+                    <div class="result-label">Total Cost</div>
+                    <div class="result-value" id="result-total-cost"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Climate Control Premium</div>
+                    <div class="result-value" id="result-climate-premium"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Cost Per Sq Ft / Month</div>
+                    <div class="result-value" id="result-per-sqft"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Duration</div>
+                    <div class="result-value" id="result-duration"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">How much does a storage unit cost per month?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>Storage unit costs vary by size and location, typically ranging from $50-$90 for a 5x5 unit to $150-$400+ for a 10x20 or larger unit. Climate control adds 25-50% to the base price.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">Is climate-controlled storage worth it?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>Climate control is worth it for temperature-sensitive items like electronics, wooden furniture, artwork, documents, and clothing. It protects against extreme temperatures, humidity, and mold.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">What size storage unit do I need?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>A 5x5 fits a small closet worth of items, 5x10 fits a one-bedroom apartment, 10x10 fits a two-bedroom home, 10x15 fits a three-bedroom home, and 10x20 or larger fits a four-bedroom home or more.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">Do storage facilities offer discounts for longer rentals?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>Many storage facilities offer discounts of 5-15% for prepaying several months in advance or signing a longer-term lease. Some also offer first-month free promotions.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">What additional fees should I expect?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>Common additional fees include an administration fee ($15-$30), insurance ($10-$25/month), a lock purchase ($10-$20), and late payment fees. Always ask about total costs upfront.</p></div>
+            </div>
+          </section>
+
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/service-cost-calculators/moving-cost-calculator/" class="card card-link"><h3>Moving Cost Calculator</h3><p>Estimate your total moving expenses.</p></a>
+              <a href="/service-cost-calculators/cleaning-service-cost-calculator/" class="card card-link"><h3>Cleaning Service Cost Calculator</h3><p>Calculate the cost of professional cleaning services.</p></a>
+              <a href="/home-cost-calculators/" class="card card-link"><h3>Home Cost Calculators</h3><p>Explore all home-related cost calculators.</p></a>
+            </div>
+          </section>
+
+          <div class="disclaimer">
+            <strong>Disclaimer:</strong> This calculator provides estimates for informational purposes only. Actual storage costs vary by provider, location, and availability. Contact local storage facilities for current pricing.
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Service Costs</h4>
+          <a href="/service-cost-calculators/">All Service Cost Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>More Calculators</h4>
+          <a href="/real-estate-calculators/">Real Estate</a>
+          <a href="/finance-calculators/">Finance</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about.html">About</a>
+          <a href="/contact.html">Contact</a>
+          <a href="/privacy.html">Privacy Policy</a>
+          <a href="/terms.html">Terms of Use</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/privacy.html">Privacy</a>
+          <a href="/terms.html">Terms</a>
+          <a href="/disclaimer.html">Disclaimer</a>
+          <a href="/sitemap.xml">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    document.querySelector('.mobile-menu-toggle').addEventListener('click', function() {
+      const nav = document.querySelector('.mobile-nav');
+      const isOpen = nav.classList.toggle('is-open');
+      this.setAttribute('aria-expanded', isOpen);
+      this.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+    });
+    document.querySelectorAll('.faq-question').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        const item = this.closest('.faq-item');
+        const isOpen = item.classList.toggle('is-open');
+        this.setAttribute('aria-expanded', isOpen);
+      });
+    });
+
+    function calculateStorage() {
+      const unitSize = document.getElementById('unit-size').value;
+      const location = document.getElementById('storage-location').value;
+      const climate = document.getElementById('climate-control').value;
+      const duration = parseInt(document.getElementById('rental-duration').value);
+
+      if (!unitSize || !duration) { alert('Please fill in all fields.'); return; }
+
+      // Base monthly costs by unit size (suburban baseline)
+      const basePrices = { '5x5': 60, '5x10': 95, '10x10': 150, '10x15': 200, '10x20': 260, '10x30': 370 };
+      const sqftMap = { '5x5': 25, '5x10': 50, '10x10': 100, '10x15': 150, '10x20': 200, '10x30': 300 };
+
+      let monthly = basePrices[unitSize];
+
+      // Location multiplier
+      const locMultipliers = { rural: 0.75, suburban: 1.0, urban: 1.45 };
+      monthly *= locMultipliers[location];
+
+      // Climate control premium
+      const climatePremium = climate === 'yes' ? monthly * 0.35 : 0;
+      monthly += climatePremium;
+
+      const totalCost = monthly * duration;
+      const perSqft = monthly / sqftMap[unitSize];
+
+      document.getElementById('result-monthly-cost').textContent = '$' + Math.round(monthly).toLocaleString();
+      document.getElementById('result-total-cost').textContent = '$' + Math.round(totalCost).toLocaleString();
+      document.getElementById('result-climate-premium').textContent = climate === 'yes' ? '+$' + Math.round(climatePremium) + '/mo' : 'None';
+      document.getElementById('result-per-sqft').textContent = '$' + perSqft.toFixed(2);
+      document.getElementById('result-duration').textContent = duration + ' month' + (duration !== 1 ? 's' : '');
+
+      document.getElementById('storage-results').classList.remove('hidden');
+    }
+
+    function resetStorage() {
+      document.getElementById('storage-form').reset();
+      document.getElementById('storage-results').classList.add('hidden');
+    }
+  </script>
+</body>
+</html>

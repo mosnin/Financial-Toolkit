@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mileage Reimbursement Calculator | CalcWise</title>
+  <meta name="description" content="Free mileage reimbursement calculator using the IRS standard mileage rate. Calculate your reimbursement amount and compare it to your actual vehicle costs.">
+  <meta name="keywords" content="mileage reimbursement calculator, IRS mileage rate, business mileage calculator, mileage deduction, standard mileage rate">
+  <link rel="canonical" href="https://calcwise.io/vehicle-calculators/mileage-reimbursement-calculator/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Mileage Reimbursement Calculator | CalcWise">
+  <meta property="og:description" content="Free mileage reimbursement calculator using the IRS standard mileage rate. Compare reimbursement to actual costs.">
+  <meta property="og:url" content="https://calcwise.io/vehicle-calculators/mileage-reimbursement-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Mileage Reimbursement Calculator | CalcWise">
+  <meta name="twitter:description" content="Free mileage reimbursement calculator using the IRS standard mileage rate. Compare reimbursement to actual costs.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <!-- BreadcrumbList Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Vehicle Calculators", "item": "https://calcwise.io/vehicle-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "Mileage Reimbursement Calculator", "item": "https://calcwise.io/vehicle-calculators/mileage-reimbursement-calculator/" }
+    ]
+  }
+  </script>
+
+  <!-- FAQPage Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the IRS standard mileage rate?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The IRS standard mileage rate for business use of a vehicle is $0.67 per mile for 2024. This rate is updated annually and covers the cost of gas, depreciation, insurance, maintenance, and other vehicle expenses." }
+      },
+      {
+        "@type": "Question",
+        "name": "How is mileage reimbursement calculated?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Mileage reimbursement is calculated by multiplying the number of business miles driven by the IRS standard mileage rate. For example, 500 miles at $0.67/mile equals $335 in reimbursement." }
+      },
+      {
+        "@type": "Question",
+        "name": "Should I use the standard mileage rate or actual expenses?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Compare both methods. The standard mileage rate is simpler but may not cover all your costs if you drive an expensive or inefficient vehicle. Actual expenses require tracking every cost but may yield a higher deduction for some drivers." }
+      },
+      {
+        "@type": "Question",
+        "name": "Is mileage reimbursement taxable?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Mileage reimbursement at or below the IRS standard rate is generally not taxable income. However, any reimbursement above the IRS rate is considered taxable income and must be reported." }
+      },
+      {
+        "@type": "Question",
+        "name": "What miles qualify for mileage reimbursement?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Business miles include driving from one work location to another, driving to meet clients, and travel to temporary work locations. Commuting from home to your regular office does not qualify." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/vehicle-calculators/" aria-current="page">Vehicle</a>
+        <a href="/business-calculators/">Business</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/vehicle-calculators/">Vehicle Calculators</a>
+      <a href="/business-calculators/">Business Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/vehicle-calculators/">Vehicle Calculators</a></li>
+          <li><span aria-current="page">Mileage Reimbursement Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="article-content">
+          <h1>Mileage Reimbursement Calculator</h1>
+          <p>Calculate your mileage reimbursement using the IRS standard mileage rate and compare it to your actual vehicle operating costs. This calculator helps employees, freelancers, and business owners determine whether the standard rate or actual expense method provides better reimbursement.</p>
+
+          <div class="calc-container mt-8">
+            <div class="calc-header">
+              <h2>Calculate Mileage Reimbursement</h2>
+              <p>Enter your mileage and cost details below</p>
+            </div>
+            <div class="calc-body">
+              <form id="mileage-form" onsubmit="return false;">
+                <div class="form-group">
+                  <label class="form-label" for="miles-driven">Miles Driven</label>
+                  <input type="number" id="miles-driven" name="milesDriven" class="form-input" placeholder="5000" min="0" step="1" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="irs-rate">IRS Standard Rate <span class="form-hint">(per mile)</span></label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="irs-rate" name="irsRate" class="form-input" placeholder="0.67" min="0" max="5" step="0.005" value="0.67" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="actual-costs">Actual Vehicle Costs <span class="form-hint">(for the same period)</span></label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="actual-costs" name="actualCosts" class="form-input" placeholder="3000" min="0" step="10">
+                  </div>
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calculateMileage()">Calculate Reimbursement</button>
+                  <button type="button" class="btn btn-reset" onclick="resetMileage()">Reset</button>
+                </div>
+              </form>
+
+              <div id="mileage-results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">IRS Reimbursement Amount</div>
+                  <div class="result-value" id="result-reimbursement"></div>
+                </div>
+                <div class="result-grid">
+                  <div class="result-item">
+                    <div class="result-label">Actual Costs</div>
+                    <div class="result-value" id="result-actual"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Difference</div>
+                    <div class="result-value" id="result-difference"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Better Method</div>
+                    <div class="result-value" id="result-better"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Actual Cost Per Mile</div>
+                    <div class="result-value" id="result-actual-per-mile"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Formula Section -->
+          <section class="content-section">
+            <h2>Mileage Reimbursement Formula</h2>
+            <p>The IRS standard mileage reimbursement is calculated as:</p>
+            <div class="formula-box">
+              <div class="formula-label">Reimbursement Amount</div>
+              Reimbursement = Miles Driven x IRS Standard Rate Per Mile
+            </div>
+            <p>For the actual expense comparison, divide your total vehicle costs by miles driven to get your actual cost per mile, then compare to the IRS rate.</p>
+          </section>
+
+          <!-- How to Use -->
+          <section class="content-section">
+            <h2>How to Use This Mileage Reimbursement Calculator</h2>
+            <ol>
+              <li><strong>Enter the miles driven</strong> - the total business miles for the period.</li>
+              <li><strong>Confirm the IRS rate</strong> - the current standard mileage rate (default is $0.67 for 2024).</li>
+              <li><strong>Enter your actual costs</strong> (optional) - your total vehicle expenses including gas, insurance, maintenance, and depreciation for the same period.</li>
+              <li><strong>Click "Calculate Reimbursement"</strong> to see your reimbursement amount and comparison to actual costs.</li>
+            </ol>
+          </section>
+
+          <!-- Example Scenario -->
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>Suppose you drove 5,000 business miles this year. At the IRS rate of $0.67/mile, your reimbursement would be $3,350. If your actual vehicle costs for the period were $3,000, the standard mileage rate gives you $350 more. In this case, the standard rate is the better method.</p>
+          </section>
+
+          <!-- FAQ Section -->
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What is the IRS standard mileage rate?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>The IRS standard mileage rate for business use of a vehicle is $0.67 per mile for 2024. This rate is updated annually and covers the cost of gas, depreciation, insurance, maintenance, and other vehicle expenses.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                How is mileage reimbursement calculated?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Mileage reimbursement is calculated by multiplying the number of business miles driven by the IRS standard mileage rate. For example, 500 miles at $0.67/mile equals $335 in reimbursement.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Should I use the standard mileage rate or actual expenses?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Compare both methods. The standard mileage rate is simpler but may not cover all your costs if you drive an expensive or inefficient vehicle. Actual expenses require tracking every cost but may yield a higher deduction for some drivers.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Is mileage reimbursement taxable?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Mileage reimbursement at or below the IRS standard rate is generally not taxable income. However, any reimbursement above the IRS rate is considered taxable income and must be reported.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What miles qualify for mileage reimbursement?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Business miles include driving from one work location to another, driving to meet clients, and travel to temporary work locations. Commuting from home to your regular office does not qualify.</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Related Calculators -->
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/vehicle-calculators/fuel-cost-calculator/" class="card card-link">
+                <h3>Fuel Cost Calculator</h3>
+                <p>Calculate your annual and monthly fuel expenses.</p>
+              </a>
+              <a href="/vehicle-calculators/vehicle-total-cost-calculator/" class="card card-link">
+                <h3>Vehicle Total Cost Calculator</h3>
+                <p>Calculate the true total cost of owning a vehicle.</p>
+              </a>
+              <a href="/vehicle-calculators/ev-charging-cost-calculator/" class="card card-link">
+                <h3>EV Charging Cost Calculator</h3>
+                <p>Calculate the cost of charging an electric vehicle.</p>
+              </a>
+              <a href="/vehicle-calculators/car-payment-calculator/" class="card card-link">
+                <h3>Car Payment Calculator</h3>
+                <p>Estimate your monthly car payment with down payment and trade-in.</p>
+              </a>
+              <a href="/business-calculators/" class="card card-link">
+                <h3>Business Calculators</h3>
+                <p>Explore all business and financial calculators.</p>
+              </a>
+            </div>
+          </section>
+
+          <!-- Disclaimer -->
+          <div class="disclaimer">
+            <strong>Disclaimer:</strong> This calculator provides estimates for informational purposes only. IRS mileage rates change annually. Consult a tax professional for advice on claiming mileage deductions and to ensure you are using the correct rate for your tax year.
+          </div>
+
+          <!-- Ad Slot -->
+          <div class="ad-slot ad-slot-leaderboard"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Vehicle</h4>
+          <a href="/vehicle-calculators/">All Vehicle Calculators</a>
+          <a href="/vehicle-calculators/car-payment-calculator/">Car Payment</a>
+          <a href="/vehicle-calculators/mileage-reimbursement-calculator/">Mileage Reimbursement</a>
+        </div>
+        <div class="footer-col">
+          <h4>Finance</h4>
+          <a href="/finance-calculators/">All Finance Calculators</a>
+          <a href="/finance-calculators/loan-calculator/">Loan Calculator</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateMileage() {
+      if (!CalcWise.validateForm('mileage-form')) return;
+
+      const miles = CalcWise.parseNumber(document.getElementById('miles-driven').value);
+      const irsRate = parseFloat(document.getElementById('irs-rate').value);
+      const actualCosts = CalcWise.parseNumber(document.getElementById('actual-costs').value) || 0;
+
+      const reimbursement = miles * irsRate;
+
+      CalcWise.setText('result-reimbursement', CalcWise.formatCurrency(reimbursement));
+
+      if (actualCosts > 0) {
+        const difference = reimbursement - actualCosts;
+        const actualPerMile = actualCosts / miles;
+        const betterMethod = difference >= 0 ? 'Standard Rate' : 'Actual Expenses';
+
+        CalcWise.setText('result-actual', CalcWise.formatCurrency(actualCosts));
+        CalcWise.setText('result-difference', CalcWise.formatCurrency(Math.abs(difference)));
+        CalcWise.setText('result-better', betterMethod);
+        CalcWise.setText('result-actual-per-mile', '$' + actualPerMile.toFixed(3));
+      } else {
+        CalcWise.setText('result-actual', 'N/A');
+        CalcWise.setText('result-difference', 'N/A');
+        CalcWise.setText('result-better', 'Enter actual costs to compare');
+        CalcWise.setText('result-actual-per-mile', 'N/A');
+      }
+
+      CalcWise.showResults('mileage-results');
+    }
+
+    function resetMileage() {
+      document.getElementById('mileage-form').reset();
+      document.getElementById('irs-rate').value = '0.67';
+      CalcWise.hideResults('mileage-results');
+    }
+  </script>
+</body>
+</html>

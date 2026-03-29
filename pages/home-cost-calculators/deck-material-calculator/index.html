@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Deck Material Calculator - Estimate Decking Materials & Cost | CalcWise</title>
+  <meta name="description" content="Free deck material calculator. Enter deck dimensions, material type, and railing length to estimate board feet, material cost, and total project cost.">
+  <meta name="keywords" content="deck material calculator, deck cost calculator, decking estimator, composite deck cost, deck building cost">
+  <link rel="canonical" href="https://calcwise.io/home-cost-calculators/deck-material-calculator/">
+
+  <meta property="og:title" content="Deck Material Calculator - Estimate Decking Materials & Cost">
+  <meta property="og:description" content="Free deck material calculator. Calculate board feet, material cost, and total estimate for your deck project.">
+  <meta property="og:url" content="https://calcwise.io/home-cost-calculators/deck-material-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Deck Material Calculator - Estimate Decking Materials & Cost">
+  <meta name="twitter:description" content="Free deck material calculator. Calculate board feet, material cost, and total estimate for your deck project.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Home Cost Calculators", "item": "https://calcwise.io/home-cost-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "Deck Material Calculator", "item": "https://calcwise.io/home-cost-calculators/deck-material-calculator/" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How much does it cost to build a deck?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Deck costs range from $15-$25 per square foot for pressure-treated wood, $25-$45 for cedar, and $35-$65 for composite decking. A typical 300-square-foot deck costs $4,500-$19,500 depending on material choice and features." }
+      },
+      {
+        "@type": "Question",
+        "name": "Which decking material is best?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Pressure-treated wood is the most affordable but requires regular maintenance. Cedar offers natural beauty and rot resistance. Composite is the most durable and lowest maintenance but costs more upfront. Choose based on your budget and maintenance preference." }
+      },
+      {
+        "@type": "Question",
+        "name": "How many board feet do I need for a deck?",
+        "acceptedAnswer": { "@type": "Answer", "text": "For decking boards, multiply the deck area by 2.5 to account for joists, substructure, and 10% waste. For a 300-square-foot deck, plan for about 750 board feet of decking material plus additional lumber for framing." }
+      },
+      {
+        "@type": "Question",
+        "name": "How much does deck railing cost?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Deck railing costs $20-$40 per linear foot for wood, $30-$60 for composite, and $50-$120+ for cable or glass railing systems. Railing can add 20-30% to total deck cost." }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need a permit to build a deck?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Most jurisdictions require a building permit for attached decks and decks over 30 inches above grade. Permit costs range from $100-$500. Check with your local building department before starting construction." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/business-calculators/">Business</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/business-calculators/">Business Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/home-cost-calculators/">Home Cost Calculators</a></li>
+          <li><span aria-current="page">Deck Material Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="article-content">
+          <h1>Deck Material Calculator</h1>
+          <p>Estimate the materials and cost for your new deck. Enter the deck dimensions, choose your material, and add railing length to get a complete estimate including board feet, material cost, and total project cost.</p>
+
+          <div class="calc-container mt-8">
+            <div class="calc-header">
+              <h2>Estimate Your Deck Materials</h2>
+              <p>Enter your deck details below</p>
+            </div>
+            <div class="calc-body">
+              <form id="deck-form" onsubmit="return false;">
+                <div class="form-group">
+                  <label class="form-label" for="deck-length">Deck Length <span class="form-hint">(feet)</span></label>
+                  <input type="number" id="deck-length" class="form-input" placeholder="20" min="1" step="1" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="deck-width">Deck Width <span class="form-hint">(feet)</span></label>
+                  <input type="number" id="deck-width" class="form-input" placeholder="15" min="1" step="1" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="deck-material">Decking Material</label>
+                  <select id="deck-material" class="form-input" required>
+                    <option value="">Select material</option>
+                    <option value="pt">Pressure-Treated Wood</option>
+                    <option value="composite">Composite</option>
+                    <option value="cedar">Cedar</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="railing-length">Railing Length <span class="form-hint">(linear feet, 0 if none)</span></label>
+                  <input type="number" id="railing-length" class="form-input" placeholder="40" min="0" step="1" value="0">
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calculateDeck()">Calculate Materials</button>
+                  <button type="button" class="btn btn-reset" onclick="resetDeck()">Reset</button>
+                </div>
+              </form>
+
+              <div id="deck-results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">Total Estimated Cost</div>
+                  <div class="result-value" id="result-total"></div>
+                </div>
+                <div class="result-grid">
+                  <div class="result-item">
+                    <div class="result-label">Board Feet (decking)</div>
+                    <div class="result-value" id="result-boardfeet"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Material Cost</div>
+                    <div class="result-value" id="result-matcost"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Railing Cost</div>
+                    <div class="result-value" id="result-railcost"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <section class="content-section">
+            <h2>Deck Material Formula</h2>
+            <p>Deck materials are estimated based on deck area with a multiplier for substructure and waste:</p>
+            <div class="formula-box">
+              <div class="formula-label">Material Formula</div>
+              Board Feet = Deck Area (sqft) x 2.5 (includes joists, substructure, 10% waste)
+              Material Cost = Deck Area x Cost per sqft + Railing Length x Railing Cost per ft
+            </div>
+            <p>Cost per square foot varies by material: pressure-treated $8-$12, composite $18-$28, cedar $14-$22. Railing costs $25-$60 per linear foot depending on material.</p>
+          </section>
+
+          <section class="content-section">
+            <h2>How to Use This Calculator</h2>
+            <ol>
+              <li><strong>Enter deck length and width</strong> - the overall dimensions of your deck in feet.</li>
+              <li><strong>Select the decking material</strong> - pressure-treated, composite, or cedar.</li>
+              <li><strong>Enter railing length</strong> - the total linear feet of railing needed (0 if no railing).</li>
+              <li><strong>Click "Calculate Materials"</strong> to see board feet, material cost, and total estimate.</li>
+            </ol>
+          </section>
+
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>A 20 x 15 foot deck (300 sq ft) using composite decking with 40 feet of railing would cost approximately $8,700. The decking material costs about $6,900 ($23/sqft), railing adds about $1,800 ($45/ft), and you would need about 750 board feet of decking material.</p>
+          </section>
+
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">How much does it cost to build a deck?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>Deck costs range from $15-$25/sqft for pressure-treated wood, $25-$45 for cedar, and $35-$65 for composite. A typical 300-square-foot deck costs $4,500-$19,500 depending on material and features.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">Which decking material is best?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>Pressure-treated wood is the most affordable but requires regular maintenance. Cedar offers natural beauty and rot resistance. Composite is the most durable and lowest maintenance but costs more upfront.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">How many board feet do I need for a deck?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>Multiply the deck area by 2.5 to account for joists, substructure, and 10% waste. For a 300-square-foot deck, plan for about 750 board feet.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">How much does deck railing cost?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>Deck railing costs $20-$40 per linear foot for wood, $30-$60 for composite, and $50-$120+ for cable or glass systems. Railing can add 20-30% to total deck cost.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">Do I need a permit to build a deck?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>Most jurisdictions require a building permit for attached decks and decks over 30 inches above grade. Permit costs range from $100-$500. Check with your local building department.</p></div>
+            </div>
+          </section>
+
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/home-cost-calculators/fence-cost-calculator/" class="card card-link"><h3>Fence Cost Calculator</h3><p>Estimate fencing costs by material and length.</p></a>
+              <a href="/home-cost-calculators/concrete-volume-calculator/" class="card card-link"><h3>Concrete Volume Calculator</h3><p>Calculate concrete volume for footings and pads.</p></a>
+              <a href="/home-cost-calculators/home-renovation-cost-calculator/" class="card card-link"><h3>Home Renovation Cost Calculator</h3><p>Estimate overall renovation costs by project type.</p></a>
+            </div>
+          </section>
+
+          <div class="disclaimer">
+            <strong>Disclaimer:</strong> This calculator provides rough estimates for informational purposes only. Actual deck costs vary based on location, design complexity, elevation, and contractor rates. Always obtain multiple quotes. This is not professional construction advice.
+          </div>
+
+          <div class="ad-slot ad-slot-leaderboard"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col"><h4>Real Estate</h4><a href="/real-estate-calculators/">All Real Estate Calculators</a></div>
+        <div class="footer-col"><h4>Home Costs</h4><a href="/home-cost-calculators/">All Home Cost Calculators</a></div>
+        <div class="footer-col"><h4>Company</h4><a href="/about.html">About</a></div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links"><a href="/about.html">About</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    const deckCostPerSqft = { pt: 10, composite: 23, cedar: 18 };
+    const railCostPerFt = { pt: 30, composite: 45, cedar: 35 };
+
+    function calculateDeck() {
+      const length = parseFloat(document.getElementById('deck-length').value);
+      const width = parseFloat(document.getElementById('deck-width').value);
+      const material = document.getElementById('deck-material').value;
+      const railing = parseFloat(document.getElementById('railing-length').value) || 0;
+      if (!length || !width || !material) { alert('Please fill in all fields.'); return; }
+
+      const area = length * width;
+      const boardFeet = Math.round(area * 2.5);
+      const matCost = area * deckCostPerSqft[material];
+      const railCost = railing * railCostPerFt[material];
+      const total = matCost + railCost;
+
+      document.getElementById('result-boardfeet').textContent = boardFeet.toLocaleString() + ' bd ft';
+      document.getElementById('result-matcost').textContent = '$' + Math.round(matCost).toLocaleString();
+      document.getElementById('result-railcost').textContent = '$' + Math.round(railCost).toLocaleString();
+      document.getElementById('result-total').textContent = '$' + Math.round(total).toLocaleString();
+      document.getElementById('deck-results').classList.remove('hidden');
+    }
+
+    function resetDeck() {
+      document.getElementById('deck-form').reset();
+      document.getElementById('deck-results').classList.add('hidden');
+    }
+  </script>
+</body>
+</html>

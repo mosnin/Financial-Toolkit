@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loan Payoff Timeline Calculator | CalcWise</title>
+  <meta name="description" content="Calculate your loan payoff date and see how extra payments can save you time and money. Enter your balance, rate, payment, and extra payment to see months saved and interest saved.">
+  <meta name="keywords" content="loan payoff calculator, extra payment calculator, loan payoff timeline, early loan payoff, pay off loan faster">
+  <link rel="canonical" href="https://calcwise.io/credit-calculators/loan-payoff-timeline-calculator/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Loan Payoff Timeline Calculator | CalcWise">
+  <meta property="og:description" content="Calculate your loan payoff date and see how extra payments save you time and money.">
+  <meta property="og:url" content="https://calcwise.io/credit-calculators/loan-payoff-timeline-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Loan Payoff Timeline Calculator | CalcWise">
+  <meta name="twitter:description" content="Calculate your loan payoff date and see how extra payments save you time and money.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <!-- BreadcrumbList Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Credit Calculators", "item": "https://calcwise.io/credit-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "Loan Payoff Timeline Calculator", "item": "https://calcwise.io/credit-calculators/loan-payoff-timeline-calculator/" }
+    ]
+  }
+  </script>
+
+  <!-- FAQPage Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How much can extra payments reduce my loan term?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Even small extra payments can have a significant impact. For example, paying an extra $100/month on a $20,000 loan at 6% could save you over 2 years and thousands in interest. The effect compounds because extra payments reduce principal, which reduces future interest." }
+      },
+      {
+        "@type": "Question",
+        "name": "Should I make extra payments or invest the money?",
+        "acceptedAnswer": { "@type": "Answer", "text": "If your loan interest rate is higher than what you could earn investing after taxes, paying off the loan is generally better. For low-rate loans (under 4-5%), investing may produce higher returns. Consider your risk tolerance and the guaranteed return of debt elimination." }
+      },
+      {
+        "@type": "Question",
+        "name": "Are there penalties for paying off a loan early?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Some loans have prepayment penalties, especially mortgages from certain lenders. Check your loan agreement or contact your lender. Federal student loans and most personal loans do not have prepayment penalties." }
+      },
+      {
+        "@type": "Question",
+        "name": "Is it better to make extra payments monthly or as a lump sum?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Monthly extra payments are generally better because they reduce your principal sooner, which means less interest accrues each month. However, any extra payment timing is better than none. A lump sum is still very effective when you have the funds." }
+      },
+      {
+        "@type": "Question",
+        "name": "Should extra payments go to principal only?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes, make sure your lender applies extra payments to principal, not to future payments. Some lenders may advance your due date instead of reducing principal unless you specify. Contact your lender to confirm how extra payments are applied." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/credit-calculators/" aria-current="page">Credit</a>
+        <a href="/business-calculators/">Business</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/credit-calculators/">Credit Calculators</a>
+      <a href="/business-calculators/">Business Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/credit-calculators/">Credit Calculators</a></li>
+          <li><span aria-current="page">Loan Payoff Timeline Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="article-content">
+          <h1>Loan Payoff Timeline Calculator</h1>
+          <p>See exactly when you will pay off your loan and how much you can save by making extra payments. This calculator compares your standard payoff timeline to an accelerated schedule, showing you the months saved and interest saved with each extra dollar you pay.</p>
+
+          <div class="calc-container mt-8">
+            <div class="calc-header">
+              <h2>Calculate Your Loan Payoff Timeline</h2>
+              <p>Enter your loan details and optional extra payment</p>
+            </div>
+            <div class="calc-body">
+              <form id="payoff-form" onsubmit="return false;">
+                <div class="form-group">
+                  <label class="form-label" for="payoff-balance">Current Loan Balance</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="payoff-balance" name="payoffBalance" class="form-input" placeholder="20000" min="1" step="100" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="payoff-rate">Annual Interest Rate</label>
+                  <div class="input-suffix">
+                    <input type="number" id="payoff-rate" name="payoffRate" class="form-input" placeholder="6.5" min="0" max="40" step="0.01" required>
+                    <span class="suffix">%</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="payoff-payment">Monthly Payment</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="payoff-payment" name="payoffPayment" class="form-input" placeholder="400" min="1" step="10" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="extra-payment">Extra Monthly Payment <span class="form-hint">(optional)</span></label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="extra-payment" name="extraPayment" class="form-input" placeholder="100" min="0" step="10" value="0">
+                  </div>
+                  <span class="form-hint">Additional amount applied to principal each month</span>
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calculatePayoff()">Calculate Payoff</button>
+                  <button type="button" class="btn btn-reset" onclick="resetPayoff()">Reset</button>
+                </div>
+              </form>
+
+              <div id="payoff-results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">Payoff Date (with extra payments)</div>
+                  <div class="result-value" id="result-payoff-date"></div>
+                </div>
+                <div class="result-grid">
+                  <div class="result-item">
+                    <div class="result-label">Standard Payoff</div>
+                    <div class="result-value" id="result-standard-months"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Accelerated Payoff</div>
+                    <div class="result-value" id="result-accel-months"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Months Saved</div>
+                    <div class="result-value" id="result-months-saved"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Interest Saved</div>
+                    <div class="result-value" id="result-interest-saved"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Formula Section -->
+          <section class="content-section">
+            <h2>Payoff Timeline Formula</h2>
+            <p>The number of months to pay off a loan is calculated using:</p>
+            <div class="formula-box">
+              <div class="formula-label">Months to Payoff</div>
+              n = -log(1 - (r x B / P)) / log(1 + r)
+            </div>
+            <p>Where <strong>n</strong> is the number of months, <strong>r</strong> is the monthly interest rate (APR / 12), <strong>B</strong> is the current balance, and <strong>P</strong> is the monthly payment. Extra payments increase the effective monthly payment, reducing the number of months and total interest paid.</p>
+          </section>
+
+          <!-- How to Use -->
+          <section class="content-section">
+            <h2>How to Use This Calculator</h2>
+            <ol>
+              <li><strong>Enter your current loan balance</strong> - the remaining amount you owe.</li>
+              <li><strong>Enter your annual interest rate</strong> - found on your loan statement.</li>
+              <li><strong>Enter your monthly payment</strong> - your regular monthly payment amount.</li>
+              <li><strong>Enter an extra payment amount</strong> (optional) - any additional amount you can pay each month.</li>
+              <li><strong>Click "Calculate Payoff"</strong> to see your payoff timeline and savings from extra payments.</li>
+            </ol>
+          </section>
+
+          <!-- Example Scenario -->
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>You have a $20,000 car loan at 6.5% with a $400 monthly payment. Without extra payments, you would pay it off in about 58 months (4 years, 10 months) with $3,135 in total interest. By adding just $100 extra per month, you would pay it off in 44 months (3 years, 8 months), saving 14 months and about $823 in interest.</p>
+          </section>
+
+          <!-- FAQ Section -->
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                How much can extra payments reduce my loan term?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Even small extra payments can have a significant impact. For example, paying an extra $100/month on a $20,000 loan at 6% could save you over 2 years and thousands in interest. The effect compounds because extra payments reduce principal, which reduces future interest.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Should I make extra payments or invest the money?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>If your loan interest rate is higher than what you could earn investing after taxes, paying off the loan is generally better. For low-rate loans (under 4-5%), investing may produce higher returns. Consider your risk tolerance and the guaranteed return of debt elimination.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Are there penalties for paying off a loan early?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Some loans have prepayment penalties, especially mortgages from certain lenders. Check your loan agreement or contact your lender. Federal student loans and most personal loans do not have prepayment penalties.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Is it better to make extra payments monthly or as a lump sum?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Monthly extra payments are generally better because they reduce your principal sooner, which means less interest accrues each month. However, any extra payment timing is better than none. A lump sum is still very effective when you have the funds.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Should extra payments go to principal only?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Yes, make sure your lender applies extra payments to principal, not to future payments. Some lenders may advance your due date instead of reducing principal unless you specify. Contact your lender to confirm how extra payments are applied.</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Related Calculators -->
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/finance-calculators/loan-calculator/" class="card card-link">
+                <h3>Loan Calculator</h3>
+                <p>Calculate monthly payments for any fixed-rate loan.</p>
+              </a>
+              <a href="/credit-calculators/debt-consolidation-calculator/" class="card card-link">
+                <h3>Debt Consolidation Calculator</h3>
+                <p>See if consolidating can improve your payoff timeline.</p>
+              </a>
+              <a href="/credit-calculators/minimum-payment-calculator/" class="card card-link">
+                <h3>Minimum Payment Calculator</h3>
+                <p>See the cost of making only minimum payments.</p>
+              </a>
+              <a href="/credit-calculators/credit-card-interest-calculator/" class="card card-link">
+                <h3>Credit Card Interest Calculator</h3>
+                <p>Break down your credit card payment into interest and principal.</p>
+              </a>
+            </div>
+          </section>
+
+          <!-- Disclaimer -->
+          <div class="disclaimer">
+            <strong>Disclaimer:</strong> This calculator provides estimates for informational purposes only. Actual payoff timelines may vary based on payment timing, interest calculation methods, and loan terms. Check your loan for prepayment penalties before making extra payments. This is not financial advice. Consult a qualified financial professional for personalized guidance.
+          </div>
+
+          <!-- Ad Slot -->
+          <div class="ad-slot ad-slot-leaderboard"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Real Estate</h4>
+          <a href="/real-estate-calculators/">All Real Estate Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Finance</h4>
+          <a href="/finance-calculators/">All Finance Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Credit</h4>
+          <a href="/credit-calculators/">All Credit Calculators</a>
+          <a href="/credit-calculators/loan-payoff-timeline-calculator/">Loan Payoff</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function simulatePayoff(balance, monthlyRate, payment) {
+      let remaining = balance;
+      let totalPaid = 0;
+      let months = 0;
+      while (remaining > 0.50 && months < 1200) {
+        const interest = remaining * monthlyRate;
+        let pmt = payment;
+        if (pmt > remaining + interest) pmt = remaining + interest;
+        remaining = remaining + interest - pmt;
+        totalPaid += pmt;
+        months++;
+      }
+      return { months: months, totalPaid: totalPaid, totalInterest: totalPaid - balance };
+    }
+
+    function calculatePayoff() {
+      const balance = parseFloat(document.getElementById('payoff-balance').value);
+      const rate = parseFloat(document.getElementById('payoff-rate').value);
+      const payment = parseFloat(document.getElementById('payoff-payment').value);
+      const extra = parseFloat(document.getElementById('extra-payment').value) || 0;
+
+      if (!balance || balance <= 0) { alert('Please enter a valid balance.'); return; }
+      if (isNaN(rate) || rate < 0) { alert('Please enter a valid interest rate.'); return; }
+      if (!payment || payment <= 0) { alert('Please enter a valid monthly payment.'); return; }
+
+      const monthlyRate = rate / 100 / 12;
+      const firstMonthInterest = balance * monthlyRate;
+
+      if (payment <= firstMonthInterest) {
+        alert('Your payment must exceed the monthly interest of $' + firstMonthInterest.toFixed(2) + '.');
+        return;
+      }
+
+      const standard = simulatePayoff(balance, monthlyRate, payment);
+      const accelerated = simulatePayoff(balance, monthlyRate, payment + extra);
+
+      const monthsSaved = standard.months - accelerated.months;
+      const interestSaved = standard.totalInterest - accelerated.totalInterest;
+
+      // Calculate payoff date
+      const now = new Date();
+      const payoffDate = new Date(now.getFullYear(), now.getMonth() + accelerated.months, 1);
+      const dateStr = payoffDate.toLocaleDateString('en-US', { year: 'numeric', month: 'long' });
+
+      const fmtMonths = (m) => {
+        const y = Math.floor(m / 12);
+        const rem = m % 12;
+        let s = m + ' months';
+        if (y > 0) s += ' (' + y + (y === 1 ? ' yr' : ' yrs') + (rem > 0 ? ', ' + rem + ' mo' : '') + ')';
+        return s;
+      };
+
+      const fmt = (v) => '$' + v.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+
+      document.getElementById('result-payoff-date').textContent = dateStr;
+      document.getElementById('result-standard-months').textContent = fmtMonths(standard.months);
+      document.getElementById('result-accel-months').textContent = fmtMonths(accelerated.months);
+      document.getElementById('result-months-saved').textContent = monthsSaved + (monthsSaved === 1 ? ' month' : ' months');
+      document.getElementById('result-interest-saved').textContent = fmt(interestSaved);
+      document.getElementById('payoff-results').classList.remove('hidden');
+    }
+
+    function resetPayoff() {
+      document.getElementById('payoff-form').reset();
+      document.getElementById('payoff-results').classList.add('hidden');
+    }
+
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', !expanded);
+        btn.nextElementSibling.classList.toggle('open');
+      });
+    });
+  </script>
+</body>
+</html>

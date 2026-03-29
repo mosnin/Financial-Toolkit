@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Retirement Income Estimator - Project Your Retirement Nest Egg | CalcWise</title>
+  <meta name="description" content="Free retirement income estimator. Calculate your projected retirement nest egg and monthly retirement income based on current savings, contributions, years to retirement, and expected returns.">
+  <meta name="keywords" content="retirement income estimator, retirement calculator, nest egg calculator, retirement savings projection, monthly retirement income">
+  <link rel="canonical" href="https://calcwise.io/salary-calculators/retirement-income-estimator/">
+
+  <meta property="og:title" content="Retirement Income Estimator - Project Your Retirement Nest Egg">
+  <meta property="og:description" content="Calculate your projected retirement nest egg and monthly retirement income based on your savings plan.">
+  <meta property="og:url" content="https://calcwise.io/salary-calculators/retirement-income-estimator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Retirement Income Estimator - Project Your Retirement Nest Egg">
+  <meta name="twitter:description" content="Calculate your projected retirement nest egg and monthly retirement income based on your savings plan.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Salary Calculators", "item": "https://calcwise.io/salary-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "Retirement Income Estimator", "item": "https://calcwise.io/salary-calculators/retirement-income-estimator/" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How much do I need to save for retirement?",
+        "acceptedAnswer": { "@type": "Answer", "text": "A common guideline is to save 10-15 times your annual salary by retirement. Using the 4% rule, a $1 million nest egg can provide about $40,000 per year ($3,333/month) in retirement income. Your specific needs depend on lifestyle and expenses." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the 4% withdrawal rule?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The 4% rule suggests you can withdraw 4% of your retirement savings annually without running out of money over a 30-year retirement. For example, a $1 million nest egg supports $40,000 annual withdrawals. This rule assumes a balanced portfolio." }
+      },
+      {
+        "@type": "Question",
+        "name": "What rate of return should I expect?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Historically, a diversified stock portfolio has returned about 7-10% annually before inflation. A balanced portfolio of stocks and bonds typically returns 5-8%. Use a conservative 6-7% for planning purposes to account for inflation and market variations." }
+      },
+      {
+        "@type": "Question",
+        "name": "How does compound interest help retirement savings?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Compound interest means your investment returns earn their own returns. Starting early is powerful: saving $500/month from age 25 at 7% return yields about $1.2 million by 65, while starting at 35 yields only about $567,000 - less than half." }
+      },
+      {
+        "@type": "Question",
+        "name": "Should I contribute to a 401(k) or IRA?",
+        "acceptedAnswer": { "@type": "Answer", "text": "If your employer offers a 401(k) match, contribute at least enough to get the full match - it is free money. After that, consider maxing out a Roth IRA for tax-free growth, then return to maximizing your 401(k) contributions." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/salary-calculators/" aria-current="page">Salary</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/salary-calculators/">Salary Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/salary-calculators/">Salary Calculators</a></li>
+          <li><span aria-current="page">Retirement Income Estimator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="article-content">
+          <h1>Retirement Income Estimator</h1>
+          <p>Estimate your retirement nest egg and monthly income based on your current savings, monthly contributions, years until retirement, and expected investment returns. See how compound growth builds your retirement fund over time.</p>
+
+          <div class="calc-container mt-8">
+            <div class="calc-header">
+              <h2>Estimate Retirement Income</h2>
+              <p>Enter your savings details below</p>
+            </div>
+            <div class="calc-body">
+              <form id="retirement-form" onsubmit="return false;">
+                <div class="form-group">
+                  <label class="form-label" for="current-savings">Current Retirement Savings</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="current-savings" name="currentSavings" class="form-input" placeholder="50000" min="0" step="1000" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="monthly-contribution">Monthly Contribution</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="monthly-contribution" name="monthlyContribution" class="form-input" placeholder="500" min="0" step="50" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="years-to-retire">Years Until Retirement</label>
+                  <input type="number" id="years-to-retire" name="yearsToRetire" class="form-input" placeholder="25" min="1" max="60" step="1" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="expected-return">Expected Annual Return</label>
+                  <div class="input-suffix">
+                    <input type="number" id="expected-return" name="expectedReturn" class="form-input" placeholder="7" min="0" max="20" step="0.1" value="7">
+                    <span class="suffix">%</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="withdrawal-rate">Withdrawal Rate <span class="form-hint">(typically 4%)</span></label>
+                  <div class="input-suffix">
+                    <input type="number" id="withdrawal-rate" name="withdrawalRate" class="form-input" placeholder="4" min="1" max="10" step="0.1" value="4">
+                    <span class="suffix">%</span>
+                  </div>
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calculateRetirement()">Estimate Retirement</button>
+                  <button type="button" class="btn btn-reset" onclick="resetRetirement()">Reset</button>
+                </div>
+              </form>
+
+              <div id="retirement-results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">Projected Nest Egg</div>
+                  <div class="result-value" id="result-nest-egg"></div>
+                </div>
+                <div class="result-grid">
+                  <div class="result-item">
+                    <div class="result-label">Monthly Retirement Income</div>
+                    <div class="result-value" id="result-monthly-income"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Annual Retirement Income</div>
+                    <div class="result-value" id="result-annual-income"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Total Contributions</div>
+                    <div class="result-value" id="result-total-contributions"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Investment Growth</div>
+                    <div class="result-value" id="result-growth"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <section class="content-section">
+            <h2>Retirement Savings Formula</h2>
+            <p>Your retirement nest egg grows through compound interest on both your initial savings and monthly contributions:</p>
+            <div class="formula-box">
+              <div class="formula-label">Future Value Formula</div>
+              FV = PV(1+r)^n + PMT[((1+r)^n - 1) / r]
+            </div>
+            <p>Where <strong>PV</strong> is current savings, <strong>r</strong> is monthly return rate, <strong>n</strong> is total months, and <strong>PMT</strong> is monthly contribution. Monthly retirement income uses the <strong>4% rule</strong>: Nest Egg x 4% / 12.</p>
+          </section>
+
+          <section class="content-section">
+            <h2>How to Use This Calculator</h2>
+            <ol>
+              <li><strong>Enter current savings</strong> - your total retirement savings to date.</li>
+              <li><strong>Enter monthly contribution</strong> - how much you save each month for retirement.</li>
+              <li><strong>Enter years until retirement</strong> - how many years until you plan to retire.</li>
+              <li><strong>Enter expected annual return</strong> - your projected investment return (6-8% is typical).</li>
+              <li><strong>Enter withdrawal rate</strong> - typically 4% for a 30-year retirement.</li>
+              <li><strong>Click "Estimate Retirement"</strong> to see your projected nest egg and income.</li>
+            </ol>
+          </section>
+
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>With $50,000 in current savings, $500/month contributions, 25 years to retirement, and a 7% return, your nest egg would grow to approximately $556,000. Using the 4% rule, this provides about $22,240 annually or $1,853 monthly in retirement income.</p>
+          </section>
+
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">How much do I need to save for retirement?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>A common guideline is 10-15 times your annual salary. Using the 4% rule, a $1 million nest egg provides about $40,000/year in retirement income.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">What is the 4% withdrawal rule?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>The 4% rule suggests withdrawing 4% of savings annually for a 30-year retirement without running out. A $1 million nest egg supports $40,000 annual withdrawals.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">What rate of return should I expect?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>A diversified stock portfolio has historically returned 7-10% annually. A balanced portfolio typically returns 5-8%. Use 6-7% for conservative planning.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">How does compound interest help retirement savings?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>Compound interest means returns earn their own returns. Starting at 25 vs 35 with $500/month at 7% yields $1.2M vs $567K by age 65 - starting early more than doubles your savings.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">Should I contribute to a 401(k) or IRA?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>First contribute enough to get your full 401(k) match. Then consider maxing a Roth IRA for tax-free growth, then return to maximizing 401(k) contributions.</p></div>
+            </div>
+          </section>
+
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/salary-calculators/take-home-pay-calculator/" class="card card-link">
+                <h3>Take-Home Pay Calculator</h3>
+                <p>See how retirement contributions affect your paycheck.</p>
+              </a>
+              <a href="/finance-calculators/compound-interest-calculator/" class="card card-link">
+                <h3>Compound Interest Calculator</h3>
+                <p>See how compound growth builds wealth over time.</p>
+              </a>
+              <a href="/salary-calculators/salary-after-tax-calculator/" class="card card-link">
+                <h3>Salary After Tax Calculator</h3>
+                <p>Calculate your current take-home pay.</p>
+              </a>
+              <a href="/salary-calculators/job-offer-comparison-calculator/" class="card card-link">
+                <h3>Job Offer Comparison</h3>
+                <p>Compare 401(k) match and benefits between offers.</p>
+              </a>
+              <a href="/salary-calculators/annual-income-projection-calculator/" class="card card-link">
+                <h3>Annual Income Projection</h3>
+                <p>Project your total annual income.</p>
+              </a>
+            </div>
+          </section>
+
+          <div class="disclaimer">
+            <strong>Disclaimer:</strong> This calculator provides estimates for informational purposes only. Investment returns are not guaranteed and past performance does not predict future results. This is not financial or investment advice. Consult a qualified financial advisor for retirement planning.
+          </div>
+
+          <div class="ad-slot ad-slot-leaderboard"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Real Estate</h4>
+          <a href="/real-estate-calculators/">All Real Estate Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Salary</h4>
+          <a href="/salary-calculators/">All Salary Calculators</a>
+          <a href="/salary-calculators/retirement-income-estimator/">Retirement Estimator</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function fmt(n) { return '$' + n.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ','); }
+
+    function calculateRetirement() {
+      const savings = parseFloat(document.getElementById('current-savings').value) || 0;
+      const monthly = parseFloat(document.getElementById('monthly-contribution').value) || 0;
+      const years = parseFloat(document.getElementById('years-to-retire').value);
+      const annualReturn = parseFloat(document.getElementById('expected-return').value) || 0;
+      const withdrawalRate = parseFloat(document.getElementById('withdrawal-rate').value) || 4;
+
+      if (!years || years <= 0) { alert('Please enter valid years until retirement.'); return; }
+
+      const monthlyRate = annualReturn / 100 / 12;
+      const totalMonths = years * 12;
+      const totalContributions = savings + (monthly * totalMonths);
+
+      let nestEgg;
+      if (monthlyRate === 0) {
+        nestEgg = savings + (monthly * totalMonths);
+      } else {
+        nestEgg = savings * Math.pow(1 + monthlyRate, totalMonths) +
+                  monthly * ((Math.pow(1 + monthlyRate, totalMonths) - 1) / monthlyRate);
+      }
+
+      const annualIncome = nestEgg * withdrawalRate / 100;
+      const monthlyIncome = annualIncome / 12;
+      const growth = nestEgg - totalContributions;
+
+      document.getElementById('result-nest-egg').textContent = fmt(nestEgg);
+      document.getElementById('result-monthly-income').textContent = fmt(monthlyIncome);
+      document.getElementById('result-annual-income').textContent = fmt(annualIncome);
+      document.getElementById('result-total-contributions').textContent = fmt(totalContributions);
+      document.getElementById('result-growth').textContent = fmt(growth);
+      document.getElementById('retirement-results').classList.remove('hidden');
+    }
+
+    function resetRetirement() {
+      document.getElementById('retirement-form').reset();
+      document.getElementById('retirement-results').classList.add('hidden');
+    }
+  </script>
+</body>
+</html>

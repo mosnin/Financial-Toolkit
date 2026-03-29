@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minimum Payment Calculator | CalcWise</title>
+  <meta name="description" content="See the true cost of making only minimum payments on your credit card. Calculate months to payoff, total interest paid, and total amount paid over the life of your debt.">
+  <meta name="keywords" content="minimum payment calculator, credit card minimum payment, payoff calculator, credit card interest, minimum payment cost">
+  <link rel="canonical" href="https://calcwise.io/credit-calculators/minimum-payment-calculator/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Minimum Payment Calculator | CalcWise">
+  <meta property="og:description" content="See the true cost of making only minimum payments on your credit card debt.">
+  <meta property="og:url" content="https://calcwise.io/credit-calculators/minimum-payment-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Minimum Payment Calculator | CalcWise">
+  <meta name="twitter:description" content="See the true cost of making only minimum payments on your credit card debt.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <!-- BreadcrumbList Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Credit Calculators", "item": "https://calcwise.io/credit-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "Minimum Payment Calculator", "item": "https://calcwise.io/credit-calculators/minimum-payment-calculator/" }
+    ]
+  }
+  </script>
+
+  <!-- FAQPage Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How is the minimum payment calculated?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Most credit card issuers calculate minimum payments as either a percentage of the balance (typically 1-3%) or a flat dollar amount (usually $25-35), whichever is greater. Some also add any fees and accrued interest to the minimum." }
+      },
+      {
+        "@type": "Question",
+        "name": "Why does paying only the minimum take so long?",
+        "acceptedAnswer": { "@type": "Answer", "text": "When you pay only the minimum, most of your payment goes toward interest rather than reducing the principal. As the balance slowly decreases, the minimum payment also decreases, creating a cycle that can take decades to resolve." }
+      },
+      {
+        "@type": "Question",
+        "name": "How much more should I pay above the minimum?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Even small amounts above the minimum can dramatically reduce payoff time. Paying double the minimum or adding a fixed extra amount each month can cut years off your payoff timeline and save thousands in interest." }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens if I miss a minimum payment?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Missing a minimum payment can result in late fees, a penalty APR (often 29.99%), and a negative mark on your credit report that stays for 7 years. Always make at least the minimum payment on time." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/credit-calculators/" aria-current="page">Credit</a>
+        <a href="/business-calculators/">Business</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/credit-calculators/">Credit Calculators</a>
+      <a href="/business-calculators/">Business Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/credit-calculators/">Credit Calculators</a></li>
+          <li><span aria-current="page">Minimum Payment Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="article-content">
+          <h1>Minimum Payment Calculator</h1>
+          <p>Making only minimum payments on your credit card can cost you thousands in interest and take decades to pay off. Use this calculator to see the true cost of minimum payments and why paying more can save you significant money and time.</p>
+
+          <div class="calc-container mt-8">
+            <div class="calc-header">
+              <h2>Calculate Minimum Payment Costs</h2>
+              <p>Enter your credit card details below</p>
+            </div>
+            <div class="calc-body">
+              <form id="minpay-form" onsubmit="return false;">
+                <div class="form-group">
+                  <label class="form-label" for="balance">Current Balance</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="balance" name="balance" class="form-input" placeholder="5000" min="1" step="100" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="apr">Annual Percentage Rate (APR)</label>
+                  <div class="input-suffix">
+                    <input type="number" id="apr" name="apr" class="form-input" placeholder="22.99" min="0" max="40" step="0.01" required>
+                    <span class="suffix">%</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="min-pay-pct">Minimum Payment Percentage</label>
+                  <div class="input-suffix">
+                    <input type="number" id="min-pay-pct" name="minPayPct" class="form-input" placeholder="2" min="1" max="10" step="0.5" required>
+                    <span class="suffix">%</span>
+                  </div>
+                  <span class="form-hint">Typically 1-3% of balance, or a flat minimum (e.g., $25)</span>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="min-pay-flat">Flat Minimum Payment Floor</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="min-pay-flat" name="minPayFlat" class="form-input" placeholder="25" min="0" step="5" value="25">
+                  </div>
+                  <span class="form-hint">Minimum dollar amount required (whichever is greater)</span>
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calculateMinPayment()">Calculate</button>
+                  <button type="button" class="btn btn-reset" onclick="resetMinPayment()">Reset</button>
+                </div>
+              </form>
+
+              <div id="minpay-results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">Months to Payoff</div>
+                  <div class="result-value" id="result-months"></div>
+                </div>
+                <div class="result-grid">
+                  <div class="result-item">
+                    <div class="result-label">Total Interest Paid</div>
+                    <div class="result-value" id="result-interest"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Total Amount Paid</div>
+                    <div class="result-value" id="result-total"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Formula Section -->
+          <section class="content-section">
+            <h2>How Minimum Payments Work</h2>
+            <p>Credit card minimum payments are typically calculated as:</p>
+            <div class="formula-box">
+              <div class="formula-label">Minimum Payment Calculation</div>
+              Minimum Payment = MAX(Balance x Minimum %, Flat Minimum Floor)
+            </div>
+            <p>Each month, interest accrues on the remaining balance at the monthly rate (APR / 12). The minimum payment first covers the interest charge, and only the remainder reduces your principal balance. As the balance decreases, the minimum payment shrinks, extending the payoff timeline dramatically.</p>
+          </section>
+
+          <!-- How to Use -->
+          <section class="content-section">
+            <h2>How to Use This Calculator</h2>
+            <ol>
+              <li><strong>Enter your current balance</strong> - the total amount you owe on the card.</li>
+              <li><strong>Enter your APR</strong> - found on your credit card statement or account details.</li>
+              <li><strong>Enter the minimum payment percentage</strong> - typically 1-3% of balance.</li>
+              <li><strong>Enter the flat minimum floor</strong> - the minimum dollar amount required (usually $25).</li>
+              <li><strong>Click "Calculate"</strong> to see how long payoff will take and the true cost.</li>
+            </ol>
+          </section>
+
+          <!-- Example Scenario -->
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>You have a $5,000 balance at 22.99% APR with a 2% minimum payment (floor of $25). Making only the minimum each month, it would take over 27 years to pay off the balance. You would pay approximately $8,400 in interest alone, bringing the total cost to over $13,400 for what was originally a $5,000 balance.</p>
+          </section>
+
+          <!-- FAQ Section -->
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                How is the minimum payment calculated?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Most credit card issuers calculate minimum payments as either a percentage of the balance (typically 1-3%) or a flat dollar amount (usually $25-35), whichever is greater. Some also add any fees and accrued interest to the minimum.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Why does paying only the minimum take so long?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>When you pay only the minimum, most of your payment goes toward interest rather than reducing the principal. As the balance slowly decreases, the minimum payment also decreases, creating a cycle that can take decades to resolve.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                How much more should I pay above the minimum?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Even small amounts above the minimum can dramatically reduce payoff time. Paying double the minimum or adding a fixed extra amount each month can cut years off your payoff timeline and save thousands in interest.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What happens if I miss a minimum payment?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Missing a minimum payment can result in late fees, a penalty APR (often 29.99%), and a negative mark on your credit report that stays for 7 years. Always make at least the minimum payment on time.</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Related Calculators -->
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/credit-calculators/credit-card-interest-calculator/" class="card card-link">
+                <h3>Credit Card Interest Calculator</h3>
+                <p>Calculate monthly interest and payoff timelines for any payment amount.</p>
+              </a>
+              <a href="/credit-calculators/balance-transfer-savings-calculator/" class="card card-link">
+                <h3>Balance Transfer Savings Calculator</h3>
+                <p>See how much you could save by transferring to a lower rate card.</p>
+              </a>
+              <a href="/credit-calculators/debt-consolidation-calculator/" class="card card-link">
+                <h3>Debt Consolidation Calculator</h3>
+                <p>Compare your current payments to a consolidated loan.</p>
+              </a>
+              <a href="/credit-calculators/loan-payoff-timeline-calculator/" class="card card-link">
+                <h3>Loan Payoff Timeline Calculator</h3>
+                <p>See how extra payments can accelerate your loan payoff.</p>
+              </a>
+            </div>
+          </section>
+
+          <!-- Disclaimer -->
+          <div class="disclaimer">
+            <strong>Disclaimer:</strong> This calculator provides estimates for informational purposes only. Actual minimum payment calculations vary by card issuer. Results do not account for future charges, fees, or APR changes. This is not financial advice. Consult a qualified financial professional for personalized guidance.
+          </div>
+
+          <!-- Ad Slot -->
+          <div class="ad-slot ad-slot-leaderboard"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Real Estate</h4>
+          <a href="/real-estate-calculators/">All Real Estate Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Finance</h4>
+          <a href="/finance-calculators/">All Finance Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Credit</h4>
+          <a href="/credit-calculators/">All Credit Calculators</a>
+          <a href="/credit-calculators/minimum-payment-calculator/">Minimum Payment</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateMinPayment() {
+      const balance = parseFloat(document.getElementById('balance').value);
+      const apr = parseFloat(document.getElementById('apr').value);
+      const minPct = parseFloat(document.getElementById('min-pay-pct').value) / 100;
+      const minFlat = parseFloat(document.getElementById('min-pay-flat').value) || 25;
+
+      if (!balance || balance <= 0) { alert('Please enter a valid balance.'); return; }
+      if (isNaN(apr) || apr < 0) { alert('Please enter a valid APR.'); return; }
+      if (!minPct || minPct <= 0) { alert('Please enter a valid minimum payment percentage.'); return; }
+
+      const monthlyRate = apr / 100 / 12;
+      let remaining = balance;
+      let totalPaid = 0;
+      let months = 0;
+      const maxMonths = 1200; // 100 years cap
+
+      while (remaining > 0.50 && months < maxMonths) {
+        const interest = remaining * monthlyRate;
+        let payment = Math.max(remaining * minPct, minFlat);
+        if (payment > remaining + interest) payment = remaining + interest;
+        remaining = remaining + interest - payment;
+        totalPaid += payment;
+        months++;
+      }
+
+      if (remaining > 0) totalPaid += remaining;
+      const totalInterest = totalPaid - balance;
+
+      const years = Math.floor(months / 12);
+      const remainingMonths = months % 12;
+      let timeStr = '';
+      if (years > 0) timeStr += years + (years === 1 ? ' year' : ' years');
+      if (remainingMonths > 0) timeStr += (years > 0 ? ', ' : '') + remainingMonths + (remainingMonths === 1 ? ' month' : ' months');
+
+      document.getElementById('result-months').textContent = months + ' months (' + timeStr + ')';
+      document.getElementById('result-interest').textContent = '$' + totalInterest.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+      document.getElementById('result-total').textContent = '$' + totalPaid.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+      document.getElementById('minpay-results').classList.remove('hidden');
+    }
+
+    function resetMinPayment() {
+      document.getElementById('minpay-form').reset();
+      document.getElementById('minpay-results').classList.add('hidden');
+    }
+
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', !expanded);
+        btn.nextElementSibling.classList.toggle('open');
+      });
+    });
+  </script>
+</body>
+</html>

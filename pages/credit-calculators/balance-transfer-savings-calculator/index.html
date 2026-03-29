@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Balance Transfer Savings Calculator | CalcWise</title>
+  <meta name="description" content="Calculate how much you could save with a balance transfer. Enter your current balance, APR, transfer offer details, and see your total savings and breakeven point.">
+  <meta name="keywords" content="balance transfer calculator, balance transfer savings, credit card transfer, 0 APR transfer, balance transfer fee calculator">
+  <link rel="canonical" href="https://calcwise.io/credit-calculators/balance-transfer-savings-calculator/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Balance Transfer Savings Calculator | CalcWise">
+  <meta property="og:description" content="Calculate how much you could save with a balance transfer credit card offer.">
+  <meta property="og:url" content="https://calcwise.io/credit-calculators/balance-transfer-savings-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Balance Transfer Savings Calculator | CalcWise">
+  <meta name="twitter:description" content="Calculate how much you could save with a balance transfer credit card offer.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <!-- BreadcrumbList Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Credit Calculators", "item": "https://calcwise.io/credit-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "Balance Transfer Savings Calculator", "item": "https://calcwise.io/credit-calculators/balance-transfer-savings-calculator/" }
+    ]
+  }
+  </script>
+
+  <!-- FAQPage Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is a balance transfer?",
+        "acceptedAnswer": { "@type": "Answer", "text": "A balance transfer moves existing credit card debt to a new card, typically one offering a promotional 0% or low APR period. This lets you pay down principal faster during the promo period instead of paying high interest charges." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is a typical balance transfer fee?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Most balance transfer cards charge a fee of 3-5% of the transferred amount. On a $5,000 transfer, that is $150-$250. Some cards occasionally offer no-fee transfers, though these are less common." }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens when the promotional period ends?",
+        "acceptedAnswer": { "@type": "Answer", "text": "When the promo period expires, the remaining balance will accrue interest at the card's regular APR, which is often 17-27%. It is important to plan to pay off as much as possible during the promotional period." }
+      },
+      {
+        "@type": "Question",
+        "name": "Does a balance transfer affect my credit score?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Opening a new card creates a hard inquiry (small temporary dip). However, the increased available credit can lower your utilization ratio, potentially improving your score. Closing the old card could hurt your score by reducing available credit." }
+      },
+      {
+        "@type": "Question",
+        "name": "How long are typical promotional periods?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Promotional 0% APR periods typically last 12-21 months. The length depends on the card issuer and your creditworthiness. Longer promotional periods give you more time to pay down the balance interest-free." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/credit-calculators/" aria-current="page">Credit</a>
+        <a href="/business-calculators/">Business</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/credit-calculators/">Credit Calculators</a>
+      <a href="/business-calculators/">Business Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/credit-calculators/">Credit Calculators</a></li>
+          <li><span aria-current="page">Balance Transfer Savings Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="article-content">
+          <h1>Balance Transfer Savings Calculator</h1>
+          <p>A balance transfer can save you hundreds or even thousands in interest charges. Enter your current card details and the transfer offer to see your savings during the promotional period, total savings after fees, and how quickly the transfer fee pays for itself.</p>
+
+          <div class="calc-container mt-8">
+            <div class="calc-header">
+              <h2>Calculate Your Transfer Savings</h2>
+              <p>Enter your current card and transfer offer details</p>
+            </div>
+            <div class="calc-body">
+              <form id="transfer-form" onsubmit="return false;">
+                <div class="form-group">
+                  <label class="form-label" for="current-balance">Current Balance</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="current-balance" name="currentBalance" class="form-input" placeholder="5000" min="1" step="100" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="current-apr">Current APR</label>
+                  <div class="input-suffix">
+                    <input type="number" id="current-apr" name="currentApr" class="form-input" placeholder="22.99" min="0" max="40" step="0.01" required>
+                    <span class="suffix">%</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="transfer-apr">Transfer Promotional APR</label>
+                  <div class="input-suffix">
+                    <input type="number" id="transfer-apr" name="transferApr" class="form-input" placeholder="0" min="0" max="30" step="0.01" required>
+                    <span class="suffix">%</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="transfer-fee">Balance Transfer Fee</label>
+                  <div class="input-suffix">
+                    <input type="number" id="transfer-fee" name="transferFee" class="form-input" placeholder="3" min="0" max="10" step="0.5" required>
+                    <span class="suffix">%</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="promo-period">Promotional Period <span class="form-hint">(months)</span></label>
+                  <input type="number" id="promo-period" name="promoPeriod" class="form-input" placeholder="18" min="1" max="24" step="1" required>
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calculateTransfer()">Calculate Savings</button>
+                  <button type="button" class="btn btn-reset" onclick="resetTransfer()">Reset</button>
+                </div>
+              </form>
+
+              <div id="transfer-results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">Total Savings (After Fees)</div>
+                  <div class="result-value" id="result-total-savings"></div>
+                </div>
+                <div class="result-grid">
+                  <div class="result-item">
+                    <div class="result-label">Interest Saved During Promo</div>
+                    <div class="result-value" id="result-promo-savings"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Transfer Fee Cost</div>
+                    <div class="result-value" id="result-fee-cost"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Breakeven Point</div>
+                    <div class="result-value" id="result-breakeven"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Formula Section -->
+          <section class="content-section">
+            <h2>Balance Transfer Savings Formula</h2>
+            <p>The savings from a balance transfer are calculated by comparing interest costs:</p>
+            <div class="formula-box">
+              <div class="formula-label">Savings Calculation</div>
+              Interest Saved = (Current APR - Transfer APR) / 12 x Balance x Promo Months<br>
+              Net Savings = Interest Saved - (Balance x Transfer Fee %)
+            </div>
+            <p>The breakeven point is the month at which the cumulative interest savings exceed the transfer fee. After that point, every month of the promo period is pure savings.</p>
+          </section>
+
+          <!-- How to Use -->
+          <section class="content-section">
+            <h2>How to Use This Calculator</h2>
+            <ol>
+              <li><strong>Enter your current balance</strong> - the amount you plan to transfer.</li>
+              <li><strong>Enter your current APR</strong> - the interest rate on your existing card.</li>
+              <li><strong>Enter the promotional APR</strong> - the rate offered on the new card (often 0%).</li>
+              <li><strong>Enter the transfer fee percentage</strong> - typically 3-5%.</li>
+              <li><strong>Enter the promotional period</strong> - how many months the low rate lasts.</li>
+              <li><strong>Click "Calculate Savings"</strong> to see your net savings and breakeven point.</li>
+            </ol>
+          </section>
+
+          <!-- Example Scenario -->
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>You have a $7,000 balance at 24.99% APR. A new card offers 0% APR for 18 months with a 3% transfer fee ($210). During the promo period, you would save approximately $2,624 in interest. After subtracting the $210 fee, your net savings are $2,414. The transfer fee is recouped within the first 2 months.</p>
+          </section>
+
+          <!-- FAQ Section -->
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What is a balance transfer?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>A balance transfer moves existing credit card debt to a new card, typically one offering a promotional 0% or low APR period. This lets you pay down principal faster during the promo period instead of paying high interest charges.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What is a typical balance transfer fee?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Most balance transfer cards charge a fee of 3-5% of the transferred amount. On a $5,000 transfer, that is $150-$250. Some cards occasionally offer no-fee transfers, though these are less common.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What happens when the promotional period ends?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>When the promo period expires, the remaining balance will accrue interest at the card's regular APR, which is often 17-27%. It is important to plan to pay off as much as possible during the promotional period.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Does a balance transfer affect my credit score?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Opening a new card creates a hard inquiry (small temporary dip). However, the increased available credit can lower your utilization ratio, potentially improving your score. Closing the old card could hurt your score by reducing available credit.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                How long are typical promotional periods?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Promotional 0% APR periods typically last 12-21 months. The length depends on the card issuer and your creditworthiness. Longer promotional periods give you more time to pay down the balance interest-free.</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Related Calculators -->
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/credit-calculators/credit-card-interest-calculator/" class="card card-link">
+                <h3>Credit Card Interest Calculator</h3>
+                <p>Calculate the interest cost of carrying a balance on your card.</p>
+              </a>
+              <a href="/credit-calculators/debt-consolidation-calculator/" class="card card-link">
+                <h3>Debt Consolidation Calculator</h3>
+                <p>Compare consolidation options for multiple debts.</p>
+              </a>
+              <a href="/credit-calculators/minimum-payment-calculator/" class="card card-link">
+                <h3>Minimum Payment Calculator</h3>
+                <p>See the true cost of only making minimum payments.</p>
+              </a>
+              <a href="/credit-calculators/credit-utilization-calculator/" class="card card-link">
+                <h3>Credit Utilization Calculator</h3>
+                <p>Check how the transfer affects your utilization ratio.</p>
+              </a>
+            </div>
+          </section>
+
+          <!-- Disclaimer -->
+          <div class="disclaimer">
+            <strong>Disclaimer:</strong> This calculator provides estimates for informational purposes only. Actual savings depend on the specific card terms, your payment amounts, and whether you pay off the balance before the promo period ends. This is not financial advice. Consult a qualified financial professional before making balance transfer decisions.
+          </div>
+
+          <!-- Ad Slot -->
+          <div class="ad-slot ad-slot-leaderboard"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Real Estate</h4>
+          <a href="/real-estate-calculators/">All Real Estate Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Finance</h4>
+          <a href="/finance-calculators/">All Finance Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Credit</h4>
+          <a href="/credit-calculators/">All Credit Calculators</a>
+          <a href="/credit-calculators/balance-transfer-savings-calculator/">Balance Transfer</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateTransfer() {
+      const balance = parseFloat(document.getElementById('current-balance').value);
+      const currentApr = parseFloat(document.getElementById('current-apr').value);
+      const transferApr = parseFloat(document.getElementById('transfer-apr').value);
+      const transferFee = parseFloat(document.getElementById('transfer-fee').value);
+      const promoPeriod = parseInt(document.getElementById('promo-period').value);
+
+      if (!balance || balance <= 0) { alert('Please enter a valid balance.'); return; }
+      if (isNaN(currentApr) || currentApr < 0) { alert('Please enter a valid current APR.'); return; }
+      if (isNaN(transferApr) || transferApr < 0) { alert('Please enter a valid transfer APR.'); return; }
+      if (isNaN(transferFee) || transferFee < 0) { alert('Please enter a valid transfer fee.'); return; }
+      if (!promoPeriod || promoPeriod <= 0) { alert('Please enter a valid promo period.'); return; }
+
+      const currentMonthlyRate = currentApr / 100 / 12;
+      const transferMonthlyRate = transferApr / 100 / 12;
+
+      // Interest on current card during promo period (assuming balance stays ~same, simple estimate)
+      const currentInterestDuringPromo = balance * currentMonthlyRate * promoPeriod;
+      const transferInterestDuringPromo = balance * transferMonthlyRate * promoPeriod;
+      const interestSaved = currentInterestDuringPromo - transferInterestDuringPromo;
+
+      const feeCost = balance * (transferFee / 100);
+      const totalSavings = interestSaved - feeCost;
+
+      // Breakeven: month where cumulative savings exceed fee
+      const monthlySavings = (currentMonthlyRate - transferMonthlyRate) * balance;
+      let breakeven;
+      if (monthlySavings <= 0) {
+        breakeven = 'N/A - no monthly savings';
+      } else {
+        const breakevenMonths = Math.ceil(feeCost / monthlySavings);
+        breakeven = breakevenMonths <= promoPeriod ? 'Month ' + breakevenMonths : 'Does not break even during promo';
+      }
+
+      const fmt = (v) => '$' + v.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+
+      document.getElementById('result-total-savings').textContent = fmt(totalSavings);
+      document.getElementById('result-promo-savings').textContent = fmt(interestSaved);
+      document.getElementById('result-fee-cost').textContent = fmt(feeCost);
+      document.getElementById('result-breakeven').textContent = breakeven;
+      document.getElementById('transfer-results').classList.remove('hidden');
+    }
+
+    function resetTransfer() {
+      document.getElementById('transfer-form').reset();
+      document.getElementById('transfer-results').classList.add('hidden');
+    }
+
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', !expanded);
+        btn.nextElementSibling.classList.toggle('open');
+      });
+    });
+  </script>
+</body>
+</html>

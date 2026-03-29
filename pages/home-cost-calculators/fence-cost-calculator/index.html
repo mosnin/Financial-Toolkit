@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fence Cost Calculator - Estimate Fencing Installation Costs | CalcWise</title>
+  <meta name="description" content="Free fence cost calculator. Enter fence length, height, material type, and number of gates to estimate material cost, labor cost, and total fencing project cost.">
+  <meta name="keywords" content="fence cost calculator, fencing cost estimator, fence installation cost, wood fence cost, vinyl fence cost">
+  <link rel="canonical" href="https://calcwise.io/home-cost-calculators/fence-cost-calculator/">
+
+  <meta property="og:title" content="Fence Cost Calculator - Estimate Fencing Installation Costs">
+  <meta property="og:description" content="Free fence cost calculator. Estimate material, labor, and total costs for wood, vinyl, or chain-link fencing.">
+  <meta property="og:url" content="https://calcwise.io/home-cost-calculators/fence-cost-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Fence Cost Calculator - Estimate Fencing Installation Costs">
+  <meta name="twitter:description" content="Free fence cost calculator. Estimate material, labor, and total costs for wood, vinyl, or chain-link fencing.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Home Cost Calculators", "item": "https://calcwise.io/home-cost-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "Fence Cost Calculator", "item": "https://calcwise.io/home-cost-calculators/fence-cost-calculator/" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How much does a fence cost per foot?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Fence costs per linear foot installed: chain-link $10-$20, wood privacy $20-$40, vinyl $25-$50. Costs vary by fence height, material quality, terrain, and labor rates. Gates add $150-$600 each depending on size and style." }
+      },
+      {
+        "@type": "Question",
+        "name": "Which fence material lasts the longest?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Vinyl fencing lasts 20-30+ years with virtually no maintenance. Chain-link lasts 15-20 years. Wood fencing lasts 10-20 years depending on wood type and maintenance. Cedar and redwood outlast pine and spruce." }
+      },
+      {
+        "@type": "Question",
+        "name": "How tall should my fence be?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Privacy fences are typically 6 feet tall. Decorative or front yard fences are usually 3-4 feet. Pool fences must meet local code requirements, typically 4-5 feet minimum. Always check local zoning regulations for maximum height restrictions." }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need a permit to build a fence?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Many municipalities require permits for fences over 4-6 feet tall. Some HOAs have additional restrictions on material, color, and height. Check with your local building department and HOA before starting construction." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/business-calculators/">Business</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/business-calculators/">Business Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/home-cost-calculators/">Home Cost Calculators</a></li>
+          <li><span aria-current="page">Fence Cost Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="article-content">
+          <h1>Fence Cost Calculator</h1>
+          <p>Estimate the total cost of your fencing project. Enter fence length, height, material, and the number of gates to get a detailed breakdown of material costs, labor costs, and total project cost.</p>
+
+          <div class="calc-container mt-8">
+            <div class="calc-header">
+              <h2>Estimate Your Fence Cost</h2>
+              <p>Enter your fence details below</p>
+            </div>
+            <div class="calc-body">
+              <form id="fence-form" onsubmit="return false;">
+                <div class="form-group">
+                  <label class="form-label" for="fence-length">Fence Length <span class="form-hint">(linear feet)</span></label>
+                  <input type="number" id="fence-length" class="form-input" placeholder="200" min="1" step="1" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="fence-height">Fence Height <span class="form-hint">(feet)</span></label>
+                  <select id="fence-height" class="form-input" required>
+                    <option value="">Select height</option>
+                    <option value="4">4 feet</option>
+                    <option value="5">5 feet</option>
+                    <option value="6">6 feet</option>
+                    <option value="8">8 feet</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="fence-material">Material</label>
+                  <select id="fence-material" class="form-input" required>
+                    <option value="">Select material</option>
+                    <option value="wood">Wood (Privacy)</option>
+                    <option value="vinyl">Vinyl</option>
+                    <option value="chainlink">Chain-Link</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="num-gates">Number of Gates</label>
+                  <input type="number" id="num-gates" class="form-input" placeholder="1" min="0" step="1" value="1">
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calculateFence()">Calculate Cost</button>
+                  <button type="button" class="btn btn-reset" onclick="resetFence()">Reset</button>
+                </div>
+              </form>
+
+              <div id="fence-results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">Total Estimated Cost</div>
+                  <div class="result-value" id="result-total"></div>
+                </div>
+                <div class="result-grid">
+                  <div class="result-item">
+                    <div class="result-label">Material Cost</div>
+                    <div class="result-value" id="result-material"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Labor Cost</div>
+                    <div class="result-value" id="result-labor"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Gate Cost</div>
+                    <div class="result-value" id="result-gates"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <section class="content-section">
+            <h2>Fence Cost Formula</h2>
+            <p>Fence costs are estimated using per-linear-foot rates adjusted for height and material:</p>
+            <div class="formula-box">
+              <div class="formula-label">Cost Formula</div>
+              Total = (Length x Material Cost/ft x Height Factor) + (Length x Labor/ft) + (Gates x Gate Cost)
+            </div>
+            <p>Material costs per linear foot at 6ft height: wood $12-$18, vinyl $18-$28, chain-link $7-$12. Labor adds $8-$15 per foot. Each gate adds $200-$500 depending on material and size.</p>
+          </section>
+
+          <section class="content-section">
+            <h2>How to Use This Calculator</h2>
+            <ol>
+              <li><strong>Enter the fence length</strong> - total linear feet of fencing needed.</li>
+              <li><strong>Select the fence height</strong> - typically 4, 5, 6, or 8 feet.</li>
+              <li><strong>Choose the material</strong> - wood, vinyl, or chain-link.</li>
+              <li><strong>Enter number of gates</strong> - standard walk-through gates.</li>
+              <li><strong>Click "Calculate Cost"</strong> to see material, labor, gate, and total costs.</li>
+            </ol>
+          </section>
+
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>A 200-foot wood privacy fence at 6 feet tall with 2 gates would cost approximately $7,800. Material costs come to about $3,000, labor is about $4,000, and two gates add about $800. This averages to roughly $39 per linear foot installed.</p>
+          </section>
+
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">How much does a fence cost per foot?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>Fence costs per linear foot installed: chain-link $10-$20, wood privacy $20-$40, vinyl $25-$50. Gates add $150-$600 each depending on size and style.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">Which fence material lasts the longest?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>Vinyl fencing lasts 20-30+ years with virtually no maintenance. Chain-link lasts 15-20 years. Wood lasts 10-20 years depending on wood type and maintenance.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">How tall should my fence be?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>Privacy fences are typically 6 feet tall. Decorative fences are 3-4 feet. Pool fences must meet local code, typically 4-5 feet minimum. Check local zoning for maximum height restrictions.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">Do I need a permit to build a fence?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>Many municipalities require permits for fences over 4-6 feet tall. Some HOAs have additional restrictions. Check with your local building department and HOA before starting.</p></div>
+            </div>
+          </section>
+
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/home-cost-calculators/deck-material-calculator/" class="card card-link"><h3>Deck Material Calculator</h3><p>Calculate decking materials and costs.</p></a>
+              <a href="/home-cost-calculators/concrete-volume-calculator/" class="card card-link"><h3>Concrete Volume Calculator</h3><p>Calculate concrete for fence post footings.</p></a>
+              <a href="/home-cost-calculators/paint-coverage-calculator/" class="card card-link"><h3>Paint Coverage Calculator</h3><p>Estimate paint needed for fence staining.</p></a>
+            </div>
+          </section>
+
+          <div class="disclaimer">
+            <strong>Disclaimer:</strong> This calculator provides rough estimates for informational purposes only. Actual fence costs vary based on terrain, soil conditions, local material prices, and contractor rates. Always obtain multiple quotes and check local regulations. This is not professional construction advice.
+          </div>
+
+          <div class="ad-slot ad-slot-leaderboard"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col"><h4>Real Estate</h4><a href="/real-estate-calculators/">All Real Estate Calculators</a></div>
+        <div class="footer-col"><h4>Home Costs</h4><a href="/home-cost-calculators/">All Home Cost Calculators</a></div>
+        <div class="footer-col"><h4>Company</h4><a href="/about.html">About</a></div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links"><a href="/about.html">About</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    const matPerFt = { wood: 15, vinyl: 23, chainlink: 9 };
+    const laborPerFt = { wood: 12, vinyl: 10, chainlink: 8 };
+    const gateCost = { wood: 400, vinyl: 500, chainlink: 250 };
+    const heightFactor = { '4': 0.7, '5': 0.85, '6': 1.0, '8': 1.35 };
+
+    function calculateFence() {
+      const length = parseFloat(document.getElementById('fence-length').value);
+      const height = document.getElementById('fence-height').value;
+      const material = document.getElementById('fence-material').value;
+      const gates = parseInt(document.getElementById('num-gates').value) || 0;
+      if (!length || !height || !material) { alert('Please fill in all fields.'); return; }
+
+      const hf = heightFactor[height];
+      const matCost = length * matPerFt[material] * hf;
+      const labCost = length * laborPerFt[material];
+      const gCost = gates * gateCost[material];
+      const total = matCost + labCost + gCost;
+
+      document.getElementById('result-material').textContent = '$' + Math.round(matCost).toLocaleString();
+      document.getElementById('result-labor').textContent = '$' + Math.round(labCost).toLocaleString();
+      document.getElementById('result-gates').textContent = '$' + Math.round(gCost).toLocaleString();
+      document.getElementById('result-total').textContent = '$' + Math.round(total).toLocaleString();
+      document.getElementById('fence-results').classList.remove('hidden');
+    }
+
+    function resetFence() {
+      document.getElementById('fence-form').reset();
+      document.getElementById('fence-results').classList.add('hidden');
+    }
+  </script>
+</body>
+</html>

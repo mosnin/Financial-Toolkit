@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Commercial Insurance Calculator | CalcWise</title>
+  <meta name="description" content="Estimate commercial business insurance costs including general liability, property, and workers comp. Enter business details to get premium estimates by coverage type.">
+  <meta name="keywords" content="commercial insurance calculator, business insurance cost, BOP calculator, commercial insurance estimator, business insurance premium">
+  <link rel="canonical" href="https://calcwise.io/insurance-calculators/commercial-insurance-calculator/">
+
+  <meta property="og:title" content="Commercial Insurance Calculator | CalcWise">
+  <meta property="og:description" content="Estimate comprehensive business insurance costs by coverage type.">
+  <meta property="og:url" content="https://calcwise.io/insurance-calculators/commercial-insurance-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Commercial Insurance Calculator | CalcWise">
+  <meta name="twitter:description" content="Estimate comprehensive business insurance costs by coverage type.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Insurance Calculators", "item": "https://calcwise.io/insurance-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "Commercial Insurance Calculator", "item": "https://calcwise.io/insurance-calculators/commercial-insurance-calculator/" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What types of commercial insurance does a business need?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Most businesses need general liability, commercial property, workers compensation, and business interruption insurance. Depending on the industry, you may also need professional liability (E&O), commercial auto, cyber liability, and product liability coverage." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is a Business Owner's Policy (BOP)?",
+        "acceptedAnswer": { "@type": "Answer", "text": "A BOP bundles general liability and commercial property insurance at a discounted rate. It is designed for small to mid-sized businesses and typically costs 15-20% less than purchasing these coverages separately." }
+      },
+      {
+        "@type": "Question",
+        "name": "How much does commercial insurance cost?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Small business insurance costs vary widely: general liability ($400-$1,500/year), commercial property ($500-$3,000/year), workers comp ($700-$5,000+/year), and professional liability ($500-$3,000/year). Total costs depend on industry, size, and risk level." }
+      },
+      {
+        "@type": "Question",
+        "name": "What factors affect commercial insurance premiums?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Key factors include industry/business type, annual revenue, number of employees, business assets, claims history, location, and coverage limits chosen. Higher-risk industries and larger businesses pay more." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/insurance-calculators/" aria-current="page">Insurance</a>
+        <a href="/business-calculators/">Business</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/insurance-calculators/">Insurance Calculators</a>
+      <a href="/business-calculators/">Business Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/insurance-calculators/">Insurance Calculators</a></li>
+          <li><span aria-current="page">Commercial Insurance Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="article-content">
+          <h1>Commercial Insurance Calculator</h1>
+          <p>Estimate your business insurance costs across multiple coverage types. Enter your business type, annual revenue, number of employees, and total assets to get estimated premiums for general liability, commercial property, workers compensation, and more.</p>
+
+          <div class="calc-container mt-8">
+            <div class="calc-header">
+              <h2>Estimate Business Insurance Costs</h2>
+              <p>Enter your business details below</p>
+            </div>
+            <div class="calc-body">
+              <form id="commercial-form" onsubmit="return false;">
+                <div class="form-group">
+                  <label class="form-label" for="biz-type">Business Type</label>
+                  <select id="biz-type" class="form-input" required>
+                    <option value="">Select business type</option>
+                    <option value="office">Office/Professional Services</option>
+                    <option value="retail">Retail/Restaurant</option>
+                    <option value="construction">Construction/Trades</option>
+                    <option value="healthcare">Healthcare</option>
+                    <option value="technology">Technology</option>
+                    <option value="manufacturing">Manufacturing</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="biz-revenue">Annual Revenue</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="biz-revenue" class="form-input" placeholder="1000000" min="0" step="50000" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="biz-employees">Number of Employees</label>
+                  <input type="number" id="biz-employees" class="form-input" placeholder="10" min="1" max="10000" step="1" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="biz-assets">Business Assets <span class="form-hint">(equipment, inventory, property)</span></label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="biz-assets" class="form-input" placeholder="250000" min="0" step="10000" required>
+                  </div>
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calculateCommercial()">Estimate Premiums</button>
+                  <button type="button" class="btn btn-reset" onclick="resetCommercial()">Reset</button>
+                </div>
+              </form>
+
+              <div id="commercial-results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">Estimated Total Annual Premium</div>
+                  <div class="result-value" id="result-total"></div>
+                </div>
+                <div class="result-grid">
+                  <div class="result-item">
+                    <div class="result-label">General Liability</div>
+                    <div class="result-value" id="result-gl"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Commercial Property</div>
+                    <div class="result-value" id="result-property"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Workers Compensation</div>
+                    <div class="result-value" id="result-wc"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Monthly Total</div>
+                    <div class="result-value" id="result-monthly"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <section class="content-section">
+            <h2>Commercial Insurance Premium Formula</h2>
+            <p>Business insurance premiums are estimated separately for each coverage type:</p>
+            <div class="formula-box">
+              <div class="formula-label">General Liability</div>
+              GL Premium = (Revenue / $100K) x Industry Rate
+            </div>
+            <div class="formula-box">
+              <div class="formula-label">Commercial Property</div>
+              Property Premium = (Asset Value / $1K) x Property Rate
+            </div>
+            <div class="formula-box">
+              <div class="formula-label">Workers Compensation</div>
+              WC Premium = (Employees x Avg Salary / $100) x Class Rate
+            </div>
+          </section>
+
+          <section class="content-section">
+            <h2>How to Use This Calculator</h2>
+            <ol>
+              <li><strong>Select your business type</strong> - industry category that best fits.</li>
+              <li><strong>Enter annual revenue</strong> - gross annual revenue.</li>
+              <li><strong>Enter number of employees</strong> - total headcount.</li>
+              <li><strong>Enter business assets</strong> - equipment, inventory, and property value.</li>
+              <li><strong>Click "Estimate Premiums"</strong> to see costs broken down by coverage type.</li>
+            </ol>
+          </section>
+
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>A retail business with $1,000,000 in revenue, 10 employees, and $250,000 in assets would pay approximately $2,000 for general liability, $875 for commercial property, and $3,750 for workers compensation - totaling about $6,625 per year or $552 per month.</p>
+          </section>
+
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">What types of commercial insurance does a business need?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>Most businesses need general liability, commercial property, workers compensation, and business interruption insurance. Some also need professional liability, commercial auto, and cyber liability.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">What is a Business Owner's Policy (BOP)?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>A BOP bundles general liability and commercial property insurance at a 15-20% discount compared to purchasing them separately. It is designed for small to mid-sized businesses.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">How much does commercial insurance cost?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>Costs vary widely: general liability ($400-$1,500/year), commercial property ($500-$3,000/year), workers comp ($700-$5,000+/year). Total depends on industry, size, and risk.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">What factors affect commercial insurance premiums?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>Key factors include industry type, revenue, employees, assets, claims history, location, and coverage limits. Higher-risk industries and larger businesses pay more.</p></div>
+            </div>
+          </section>
+
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/insurance-calculators/liability-insurance-calculator/" class="card card-link">
+                <h3>Liability Insurance Calculator</h3>
+                <p>Detailed general liability coverage analysis.</p>
+              </a>
+              <a href="/insurance-calculators/workers-compensation-calculator/" class="card card-link">
+                <h3>Workers Compensation Calculator</h3>
+                <p>Detailed workers comp premium calculation.</p>
+              </a>
+              <a href="/insurance-calculators/umbrella-insurance-calculator/" class="card card-link">
+                <h3>Umbrella Insurance Calculator</h3>
+                <p>Determine excess liability coverage needs.</p>
+              </a>
+              <a href="/insurance-calculators/insurance-savings-comparison-calculator/" class="card card-link">
+                <h3>Insurance Savings Comparison</h3>
+                <p>Compare business insurance quotes.</p>
+              </a>
+              <a href="/business-calculators/" class="card card-link">
+                <h3>Business Calculators</h3>
+                <p>Revenue, profit, and planning tools for your business.</p>
+              </a>
+            </div>
+          </section>
+
+          <div class="disclaimer">
+            <strong>Disclaimer:</strong> This calculator provides rough estimates for informational purposes only. Actual commercial insurance costs vary significantly based on specific business operations, location, claims history, and insurer. This is not insurance or business advice. Consult a licensed commercial insurance broker for accurate quotes.
+          </div>
+
+          <div class="ad-slot ad-slot-leaderboard"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Real Estate</h4>
+          <a href="/real-estate-calculators/">All Real Estate Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Finance</h4>
+          <a href="/finance-calculators/">All Finance Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Insurance</h4>
+          <a href="/insurance-calculators/">All Insurance Calculators</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links"><a href="/about.html">About</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateCommercial() {
+      const bizType = document.getElementById('biz-type').value;
+      const revenue = parseFloat(document.getElementById('biz-revenue').value);
+      const employees = parseFloat(document.getElementById('biz-employees').value);
+      const assets = parseFloat(document.getElementById('biz-assets').value);
+
+      if (!bizType || !revenue || !employees || isNaN(assets)) {
+        alert('Please fill in all fields.');
+        return;
+      }
+
+      // GL rates per $100K revenue by industry
+      const glRates = {
+        office: 120, retail: 200, construction: 450,
+        healthcare: 350, technology: 150, manufacturing: 380
+      };
+
+      // Property rate per $1K of assets
+      const propRates = {
+        office: 2.50, retail: 3.50, construction: 4.00,
+        healthcare: 3.00, technology: 2.00, manufacturing: 4.50
+      };
+
+      // WC rate per $100 payroll (assumes avg $50K salary)
+      const wcRates = {
+        office: 0.30, retail: 1.50, construction: 8.00,
+        healthcare: 4.00, technology: 0.75, manufacturing: 6.00
+      };
+
+      const glPremium = (revenue / 100000) * (glRates[bizType] || 200);
+      const propPremium = (assets / 1000) * (propRates[bizType] || 3.00);
+      const avgPayroll = employees * 50000;
+      const wcPremium = (avgPayroll / 100) * (wcRates[bizType] || 1.50);
+      const totalPremium = glPremium + propPremium + wcPremium;
+      const monthlyTotal = totalPremium / 12;
+
+      const fmt = (n) => '$' + n.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+
+      document.getElementById('result-gl').textContent = fmt(glPremium) + '/yr';
+      document.getElementById('result-property').textContent = fmt(propPremium) + '/yr';
+      document.getElementById('result-wc').textContent = fmt(wcPremium) + '/yr';
+      document.getElementById('result-total').textContent = fmt(totalPremium) + '/yr';
+      document.getElementById('result-monthly').textContent = fmt(monthlyTotal);
+      document.getElementById('commercial-results').classList.remove('hidden');
+    }
+
+    function resetCommercial() {
+      document.getElementById('commercial-form').reset();
+      document.getElementById('commercial-results').classList.add('hidden');
+    }
+
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', !expanded);
+        btn.nextElementSibling.classList.toggle('open');
+      });
+    });
+
+    document.querySelector('.mobile-menu-toggle')?.addEventListener('click', function() {
+      const nav = document.querySelector('.mobile-nav');
+      const expanded = this.getAttribute('aria-expanded') === 'true';
+      this.setAttribute('aria-expanded', !expanded);
+      nav.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loan Approval Probability Calculator | CalcWise</title>
+  <meta name="description" content="Estimate your loan approval chances based on credit score, income, debt-to-income ratio, and loan amount. Get personalized suggestions to improve your approval odds.">
+  <meta name="keywords" content="loan approval calculator, loan approval probability, loan qualification, credit score loan approval, loan eligibility">
+  <link rel="canonical" href="https://calcwise.io/credit-calculators/loan-approval-probability-calculator/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Loan Approval Probability Calculator | CalcWise">
+  <meta property="og:description" content="Estimate your loan approval chances and get personalized suggestions to improve your odds.">
+  <meta property="og:url" content="https://calcwise.io/credit-calculators/loan-approval-probability-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Loan Approval Probability Calculator | CalcWise">
+  <meta name="twitter:description" content="Estimate your loan approval chances and get personalized suggestions to improve your odds.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <!-- BreadcrumbList Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Credit Calculators", "item": "https://calcwise.io/credit-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "Loan Approval Probability Calculator", "item": "https://calcwise.io/credit-calculators/loan-approval-probability-calculator/" }
+    ]
+  }
+  </script>
+
+  <!-- FAQPage Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What credit score do I need to get approved for a loan?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Most conventional lenders require a minimum score of 620-640. Scores above 740 qualify for the best rates. Some lenders offer loans for scores as low as 580, but with higher interest rates and stricter terms." }
+      },
+      {
+        "@type": "Question",
+        "name": "What DTI ratio do lenders prefer?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Most lenders prefer a DTI ratio below 36%, with the maximum typically being 43% for qualified mortgages. Some lenders may accept higher DTIs for borrowers with excellent credit scores or significant assets." }
+      },
+      {
+        "@type": "Question",
+        "name": "Does applying for a loan hurt my credit score?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Each loan application results in a hard inquiry, which can lower your score by 5-10 points temporarily. However, multiple inquiries for the same type of loan within 14-45 days are typically counted as a single inquiry." }
+      },
+      {
+        "@type": "Question",
+        "name": "How can I improve my loan approval chances?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Improve your credit score by paying bills on time and reducing balances. Lower your DTI by paying off debts or increasing income. Consider a co-signer, provide collateral, or apply for a smaller loan amount." }
+      },
+      {
+        "@type": "Question",
+        "name": "What other factors do lenders consider?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Beyond credit score and DTI, lenders evaluate employment stability, income consistency, collateral value, existing relationship with the lender, loan purpose, and your overall financial reserves." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/credit-calculators/" aria-current="page">Credit</a>
+        <a href="/business-calculators/">Business</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/credit-calculators/">Credit Calculators</a>
+      <a href="/business-calculators/">Business Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/credit-calculators/">Credit Calculators</a></li>
+          <li><span aria-current="page">Loan Approval Probability Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="article-content">
+          <h1>Loan Approval Probability Calculator</h1>
+          <p>Before you apply for a loan, get an estimate of your approval likelihood. This calculator evaluates your credit score, income, debt-to-income ratio, and requested loan amount to assess your chances and provide suggestions for improving your application.</p>
+
+          <div class="calc-container mt-8">
+            <div class="calc-header">
+              <h2>Estimate Your Approval Chances</h2>
+              <p>Enter your financial details below</p>
+            </div>
+            <div class="calc-body">
+              <form id="approval-form" onsubmit="return false;">
+                <div class="form-group">
+                  <label class="form-label" for="credit-score">Credit Score</label>
+                  <input type="number" id="credit-score" name="creditScore" class="form-input" placeholder="700" min="300" max="850" step="1" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="annual-income">Annual Income</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="annual-income" name="annualIncome" class="form-input" placeholder="65000" min="0" step="1000" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="dti-ratio">Debt-to-Income Ratio</label>
+                  <div class="input-suffix">
+                    <input type="number" id="dti-ratio" name="dtiRatio" class="form-input" placeholder="30" min="0" max="100" step="1" required>
+                    <span class="suffix">%</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="loan-amount">Requested Loan Amount</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="loan-amount" name="loanAmount" class="form-input" placeholder="25000" min="0" step="1000" required>
+                  </div>
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calculateApproval()">Estimate Approval</button>
+                  <button type="button" class="btn btn-reset" onclick="resetApproval()">Reset</button>
+                </div>
+              </form>
+
+              <div id="approval-results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">Approval Likelihood</div>
+                  <div class="result-value" id="result-likelihood"></div>
+                </div>
+                <div class="result-grid">
+                  <div class="result-item">
+                    <div class="result-label">Assessment</div>
+                    <div class="result-value" id="result-assessment"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Suggested Improvements</div>
+                    <div class="result-value" id="result-suggestions" style="font-size: 0.9rem; text-align: left;"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Formula Section -->
+          <section class="content-section">
+            <h2>How Approval Probability Is Estimated</h2>
+            <p>This calculator uses a weighted scoring model based on the primary factors lenders evaluate:</p>
+            <div class="formula-box">
+              <div class="formula-label">Key Approval Factors</div>
+              Credit Score (40%) + DTI Ratio (30%) + Income-to-Loan Ratio (20%) + Overall Profile (10%)
+            </div>
+            <p>Each factor is scored and combined to produce an overall approval likelihood estimate. This is a simplified model; actual lender decisions involve additional criteria and proprietary underwriting algorithms.</p>
+          </section>
+
+          <!-- How to Use -->
+          <section class="content-section">
+            <h2>How to Use This Calculator</h2>
+            <ol>
+              <li><strong>Enter your credit score</strong> - your current FICO or VantageScore.</li>
+              <li><strong>Enter your annual income</strong> - your total yearly earnings before taxes.</li>
+              <li><strong>Enter your DTI ratio</strong> - your debt-to-income percentage (use our DTI calculator if unsure).</li>
+              <li><strong>Enter the loan amount</strong> - how much you plan to borrow.</li>
+              <li><strong>Click "Estimate Approval"</strong> to see your likelihood and improvement suggestions.</li>
+            </ol>
+          </section>
+
+          <!-- Example Scenario -->
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>Linda has a credit score of 710, earns $72,000 annually, has a DTI of 28%, and wants a $20,000 personal loan. With her strong credit profile and manageable loan-to-income ratio, her estimated approval probability is high. If she wanted to borrow $50,000 instead, the probability would decrease due to the higher loan-to-income ratio.</p>
+          </section>
+
+          <!-- FAQ Section -->
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What credit score do I need to get approved for a loan?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Most conventional lenders require a minimum score of 620-640. Scores above 740 qualify for the best rates. Some lenders offer loans for scores as low as 580, but with higher interest rates and stricter terms.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What DTI ratio do lenders prefer?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Most lenders prefer a DTI ratio below 36%, with the maximum typically being 43% for qualified mortgages. Some lenders may accept higher DTIs for borrowers with excellent credit scores or significant assets.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Does applying for a loan hurt my credit score?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Each loan application results in a hard inquiry, which can lower your score by 5-10 points temporarily. However, multiple inquiries for the same type of loan within 14-45 days are typically counted as a single inquiry.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                How can I improve my loan approval chances?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Improve your credit score by paying bills on time and reducing balances. Lower your DTI by paying off debts or increasing income. Consider a co-signer, provide collateral, or apply for a smaller loan amount.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What other factors do lenders consider?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Beyond credit score and DTI, lenders evaluate employment stability, income consistency, collateral value, existing relationship with the lender, loan purpose, and your overall financial reserves.</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Related Calculators -->
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/credit-calculators/debt-to-income-ratio-calculator/" class="card card-link">
+                <h3>Debt-to-Income Ratio Calculator</h3>
+                <p>Calculate your DTI ratio to understand your borrowing capacity.</p>
+              </a>
+              <a href="/credit-calculators/credit-score-improvement-calculator/" class="card card-link">
+                <h3>Credit Score Improvement Calculator</h3>
+                <p>See how you can improve your credit score before applying.</p>
+              </a>
+              <a href="/finance-calculators/loan-calculator/" class="card card-link">
+                <h3>Loan Calculator</h3>
+                <p>Calculate monthly payments for any fixed-rate loan.</p>
+              </a>
+              <a href="/credit-calculators/debt-consolidation-calculator/" class="card card-link">
+                <h3>Debt Consolidation Calculator</h3>
+                <p>See if consolidating your debts could improve your profile.</p>
+              </a>
+            </div>
+          </section>
+
+          <!-- Disclaimer -->
+          <div class="disclaimer">
+            <strong>Disclaimer:</strong> This calculator provides estimates for informational purposes only. Actual loan approval decisions are made by lenders using proprietary underwriting criteria and may differ significantly from these estimates. This is not financial advice. Consult a qualified financial professional before applying for credit.
+          </div>
+
+          <!-- Ad Slot -->
+          <div class="ad-slot ad-slot-leaderboard"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Real Estate</h4>
+          <a href="/real-estate-calculators/">All Real Estate Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Finance</h4>
+          <a href="/finance-calculators/">All Finance Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Credit</h4>
+          <a href="/credit-calculators/">All Credit Calculators</a>
+          <a href="/credit-calculators/loan-approval-probability-calculator/">Loan Approval</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateApproval() {
+      const score = parseInt(document.getElementById('credit-score').value);
+      const income = parseFloat(document.getElementById('annual-income').value);
+      const dti = parseFloat(document.getElementById('dti-ratio').value);
+      const loanAmt = parseFloat(document.getElementById('loan-amount').value);
+
+      if (!score || score < 300 || score > 850) { alert('Please enter a valid credit score (300-850).'); return; }
+      if (!income || income <= 0) { alert('Please enter a valid income.'); return; }
+      if (isNaN(dti) || dti < 0 || dti > 100) { alert('Please enter a valid DTI ratio.'); return; }
+      if (!loanAmt || loanAmt <= 0) { alert('Please enter a valid loan amount.'); return; }
+
+      // Score component (40%)
+      let scorePoints = 0;
+      if (score >= 750) scorePoints = 40;
+      else if (score >= 700) scorePoints = 34;
+      else if (score >= 670) scorePoints = 28;
+      else if (score >= 620) scorePoints = 20;
+      else if (score >= 580) scorePoints = 12;
+      else scorePoints = 5;
+
+      // DTI component (30%)
+      let dtiPoints = 0;
+      if (dti <= 20) dtiPoints = 30;
+      else if (dti <= 30) dtiPoints = 25;
+      else if (dti <= 36) dtiPoints = 20;
+      else if (dti <= 43) dtiPoints = 12;
+      else if (dti <= 50) dtiPoints = 6;
+      else dtiPoints = 2;
+
+      // Loan-to-income ratio (20%)
+      const loanToIncome = loanAmt / income;
+      let ltiPoints = 0;
+      if (loanToIncome <= 0.5) ltiPoints = 20;
+      else if (loanToIncome <= 1) ltiPoints = 16;
+      else if (loanToIncome <= 2) ltiPoints = 12;
+      else if (loanToIncome <= 3) ltiPoints = 8;
+      else if (loanToIncome <= 5) ltiPoints = 4;
+      else ltiPoints = 1;
+
+      // Profile bonus (10%)
+      let profilePoints = 5;
+      if (score >= 700 && dti <= 36) profilePoints = 10;
+      else if (score >= 670 && dti <= 43) profilePoints = 7;
+
+      const totalScore = scorePoints + dtiPoints + ltiPoints + profilePoints;
+
+      let likelihood, assessment;
+      if (totalScore >= 85) { likelihood = 'Very High (90%+)'; assessment = 'Excellent profile - you should qualify for competitive rates'; }
+      else if (totalScore >= 70) { likelihood = 'High (70-89%)'; assessment = 'Strong profile - good chances of approval with favorable terms'; }
+      else if (totalScore >= 55) { likelihood = 'Moderate (50-69%)'; assessment = 'Decent profile - approval possible but may not get the best rates'; }
+      else if (totalScore >= 40) { likelihood = 'Low (30-49%)'; assessment = 'Some challenges - consider improving your profile before applying'; }
+      else { likelihood = 'Very Low (<30%)'; assessment = 'Significant hurdles - focus on improving credit and reducing debt first'; }
+
+      let suggestions = [];
+      if (score < 670) suggestions.push('Improve credit score above 670 for better odds');
+      if (dti > 36) suggestions.push('Reduce DTI below 36% by paying down debts');
+      if (loanToIncome > 2) suggestions.push('Consider a smaller loan amount relative to income');
+      if (score < 740) suggestions.push('A score above 740 unlocks the best rates');
+      if (suggestions.length === 0) suggestions.push('Your profile is strong - shop around for the best rate');
+
+      document.getElementById('result-likelihood').textContent = likelihood;
+      document.getElementById('result-assessment').textContent = assessment;
+      document.getElementById('result-suggestions').innerHTML = suggestions.map(s => '&#8226; ' + s).join('<br>');
+      document.getElementById('approval-results').classList.remove('hidden');
+    }
+
+    function resetApproval() {
+      document.getElementById('approval-form').reset();
+      document.getElementById('approval-results').classList.add('hidden');
+    }
+
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', !expanded);
+        btn.nextElementSibling.classList.toggle('open');
+      });
+    });
+  </script>
+</body>
+</html>

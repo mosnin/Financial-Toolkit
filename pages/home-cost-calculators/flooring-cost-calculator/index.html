@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flooring Cost Calculator - Estimate Flooring Installation Costs | CalcWise</title>
+  <meta name="description" content="Free flooring cost calculator. Enter area, material type, and installation preferences to estimate material cost, labor cost, and total flooring project cost.">
+  <meta name="keywords" content="flooring cost calculator, hardwood flooring cost, laminate flooring cost, tile flooring cost, carpet cost calculator">
+  <link rel="canonical" href="https://calcwise.io/home-cost-calculators/flooring-cost-calculator/">
+
+  <meta property="og:title" content="Flooring Cost Calculator - Estimate Flooring Installation Costs">
+  <meta property="og:description" content="Free flooring cost calculator. Estimate material, labor, and total costs for hardwood, laminate, tile, or carpet.">
+  <meta property="og:url" content="https://calcwise.io/home-cost-calculators/flooring-cost-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Flooring Cost Calculator - Estimate Flooring Installation Costs">
+  <meta name="twitter:description" content="Free flooring cost calculator. Estimate material, labor, and total costs for hardwood, laminate, tile, or carpet.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Home Cost Calculators", "item": "https://calcwise.io/home-cost-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "Flooring Cost Calculator", "item": "https://calcwise.io/home-cost-calculators/flooring-cost-calculator/" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How much does new flooring cost per square foot?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Flooring costs per square foot including installation: carpet $3-$8, laminate $4-$10, hardwood $8-$18, and tile $7-$20. Prices vary by material quality, subfloor condition, and labor rates in your area." }
+      },
+      {
+        "@type": "Question",
+        "name": "Which flooring material is the most affordable?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Carpet and laminate are generally the most affordable options at $3-$10 per square foot installed. However, consider long-term value: hardwood and tile last much longer and can increase home value." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I install flooring myself to save money?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes, DIY installation can save 50-70% on labor costs. Laminate and click-lock vinyl are the easiest for DIY. Hardwood and tile typically require more skill and specialized tools. Poor installation can void warranties." }
+      },
+      {
+        "@type": "Question",
+        "name": "How much extra flooring should I order for waste?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Order 10% extra for standard installations and 15-20% extra for diagonal or complex layouts. This accounts for cutting waste, pattern matching, and having spare material for future repairs." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/business-calculators/">Business</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/business-calculators/">Business Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/home-cost-calculators/">Home Cost Calculators</a></li>
+          <li><span aria-current="page">Flooring Cost Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="article-content">
+          <h1>Flooring Cost Calculator</h1>
+          <p>Estimate the total cost of your flooring project including materials and labor. Choose from hardwood, laminate, tile, or carpet and get a detailed cost breakdown to help you budget for your new floors.</p>
+
+          <div class="calc-container mt-8">
+            <div class="calc-header">
+              <h2>Estimate Your Flooring Cost</h2>
+              <p>Enter your flooring details below</p>
+            </div>
+            <div class="calc-body">
+              <form id="flooring-form" onsubmit="return false;">
+                <div class="form-group">
+                  <label class="form-label" for="floor-area">Area <span class="form-hint">(sq ft)</span></label>
+                  <input type="number" id="floor-area" class="form-input" placeholder="500" min="1" step="1" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="floor-material">Material</label>
+                  <select id="floor-material" class="form-input" required>
+                    <option value="">Select material</option>
+                    <option value="hardwood">Hardwood</option>
+                    <option value="laminate">Laminate</option>
+                    <option value="tile">Tile (Ceramic/Porcelain)</option>
+                    <option value="carpet">Carpet</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="installation">Installation</label>
+                  <select id="installation" class="form-input" required>
+                    <option value="">Select installation type</option>
+                    <option value="diy">DIY (materials only)</option>
+                    <option value="professional">Professional Installation</option>
+                  </select>
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calculateFlooring()">Calculate Cost</button>
+                  <button type="button" class="btn btn-reset" onclick="resetFlooring()">Reset</button>
+                </div>
+              </form>
+
+              <div id="flooring-results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">Total Estimated Cost</div>
+                  <div class="result-value" id="result-total"></div>
+                </div>
+                <div class="result-grid">
+                  <div class="result-item">
+                    <div class="result-label">Material Cost</div>
+                    <div class="result-value" id="result-material"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Labor Cost</div>
+                    <div class="result-value" id="result-labor"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Cost per Sq Ft</div>
+                    <div class="result-value" id="result-persqft"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <section class="content-section">
+            <h2>Flooring Cost Formula</h2>
+            <p>Flooring costs are calculated by combining material and installation costs per square foot:</p>
+            <div class="formula-box">
+              <div class="formula-label">Cost Formula</div>
+              Total Cost = Area x (Material Cost/sqft + Labor Cost/sqft)
+            </div>
+            <p>Material costs per sqft: hardwood $6-$12, laminate $2-$5, tile $4-$10, carpet $2-$5. Professional labor adds $3-$8 per sqft depending on material complexity.</p>
+          </section>
+
+          <section class="content-section">
+            <h2>How to Use This Calculator</h2>
+            <ol>
+              <li><strong>Enter the floor area</strong> - the total square footage to be covered.</li>
+              <li><strong>Select the material</strong> - hardwood, laminate, tile, or carpet.</li>
+              <li><strong>Choose installation type</strong> - DIY for materials only or professional for full service.</li>
+              <li><strong>Click "Calculate Cost"</strong> to see your material cost, labor cost, and total.</li>
+            </ol>
+          </section>
+
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>Installing hardwood flooring in a 500-square-foot living room with professional installation would cost approximately $6,500. Material costs come to about $4,500 ($9/sqft) and labor costs are about $2,000 ($4/sqft).</p>
+          </section>
+
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">How much does new flooring cost per square foot?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>Flooring costs per square foot including installation: carpet $3-$8, laminate $4-$10, hardwood $8-$18, and tile $7-$20. Prices vary by material quality, subfloor condition, and labor rates.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">Which flooring material is the most affordable?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>Carpet and laminate are generally the most affordable options at $3-$10 per square foot installed. However, hardwood and tile last much longer and can increase home value.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">Can I install flooring myself to save money?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>Yes, DIY installation can save 50-70% on labor costs. Laminate and click-lock vinyl are the easiest for DIY. Hardwood and tile require more skill and specialized tools.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">How much extra flooring should I order for waste?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>Order 10% extra for standard installations and 15-20% extra for diagonal or complex layouts. This accounts for cutting waste, pattern matching, and having spare material for future repairs.</p></div>
+            </div>
+          </section>
+
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/home-cost-calculators/home-renovation-cost-calculator/" class="card card-link"><h3>Home Renovation Cost Calculator</h3><p>Estimate overall renovation costs by project type.</p></a>
+              <a href="/home-cost-calculators/kitchen-remodel-cost-calculator/" class="card card-link"><h3>Kitchen Remodel Cost Calculator</h3><p>Estimate kitchen renovation costs by size and scope.</p></a>
+              <a href="/home-cost-calculators/paint-coverage-calculator/" class="card card-link"><h3>Paint Coverage Calculator</h3><p>Calculate paint needed for your room walls.</p></a>
+            </div>
+          </section>
+
+          <div class="disclaimer">
+            <strong>Disclaimer:</strong> This calculator provides rough estimates for informational purposes only. Actual flooring costs vary based on location, material grade, subfloor condition, and contractor rates. Always obtain multiple quotes. This is not professional construction advice.
+          </div>
+
+          <div class="ad-slot ad-slot-leaderboard"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col"><h4>Real Estate</h4><a href="/real-estate-calculators/">All Real Estate Calculators</a></div>
+        <div class="footer-col"><h4>Home Costs</h4><a href="/home-cost-calculators/">All Home Cost Calculators</a></div>
+        <div class="footer-col"><h4>Company</h4><a href="/about.html">About</a></div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links"><a href="/about.html">About</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    const matCosts = { hardwood: 9, laminate: 3.50, tile: 7, carpet: 3.50 };
+    const laborCosts = { hardwood: 4, laminate: 3, tile: 6, carpet: 2 };
+
+    function calculateFlooring() {
+      const area = parseFloat(document.getElementById('floor-area').value);
+      const material = document.getElementById('floor-material').value;
+      const install = document.getElementById('installation').value;
+      if (!area || !material || !install) { alert('Please fill in all fields.'); return; }
+
+      const matTotal = area * matCosts[material];
+      const labTotal = install === 'professional' ? area * laborCosts[material] : 0;
+      const total = matTotal + labTotal;
+      const perSqft = total / area;
+
+      document.getElementById('result-material').textContent = '$' + Math.round(matTotal).toLocaleString();
+      document.getElementById('result-labor').textContent = install === 'professional' ? '$' + Math.round(labTotal).toLocaleString() : '$0 (DIY)';
+      document.getElementById('result-total').textContent = '$' + Math.round(total).toLocaleString();
+      document.getElementById('result-persqft').textContent = '$' + perSqft.toFixed(2) + ' / sq ft';
+      document.getElementById('flooring-results').classList.remove('hidden');
+    }
+
+    function resetFlooring() {
+      document.getElementById('flooring-form').reset();
+      document.getElementById('flooring-results').classList.add('hidden');
+    }
+  </script>
+</body>
+</html>

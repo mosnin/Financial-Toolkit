@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Term vs Whole Life Insurance Calculator | CalcWise</title>
+  <meta name="description" content="Compare term life and whole life insurance costs. Enter your age, coverage amount, and term length to see premium differences and total cost comparison over time.">
+  <meta name="keywords" content="term vs whole life calculator, life insurance comparison, term life cost, whole life premium, insurance comparison calculator">
+  <link rel="canonical" href="https://calcwise.io/insurance-calculators/term-vs-whole-life-calculator/">
+
+  <meta property="og:title" content="Term vs Whole Life Insurance Calculator | CalcWise">
+  <meta property="og:description" content="Compare term life and whole life insurance costs side by side.">
+  <meta property="og:url" content="https://calcwise.io/insurance-calculators/term-vs-whole-life-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Term vs Whole Life Insurance Calculator | CalcWise">
+  <meta name="twitter:description" content="Compare term life and whole life insurance costs side by side.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Insurance Calculators", "item": "https://calcwise.io/insurance-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "Term vs Whole Life Calculator", "item": "https://calcwise.io/insurance-calculators/term-vs-whole-life-calculator/" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the difference between term and whole life insurance?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Term life insurance provides coverage for a specific period (10-30 years) at lower premiums. Whole life insurance provides lifetime coverage with a cash value component but costs significantly more. Term is pure protection while whole life combines insurance with a savings element." }
+      },
+      {
+        "@type": "Question",
+        "name": "Why is whole life insurance so much more expensive?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Whole life costs more because it provides lifetime coverage (term expires), builds cash value over time, and guarantees a death benefit. Typically, whole life premiums are 5-15 times higher than term life for the same coverage amount." }
+      },
+      {
+        "@type": "Question",
+        "name": "Is term or whole life insurance better?",
+        "acceptedAnswer": { "@type": "Answer", "text": "For most people, term life insurance offers the best value for pure death benefit protection. Whole life may make sense for estate planning, leaving a guaranteed inheritance, or as a forced savings vehicle. Many financial advisors recommend buying term and investing the difference." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I convert term life insurance to whole life?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Many term policies include a conversion option that allows you to convert to a whole life or permanent policy without a medical exam. This can be valuable if your health changes during the term period." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/insurance-calculators/" aria-current="page">Insurance</a>
+        <a href="/business-calculators/">Business</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/insurance-calculators/">Insurance Calculators</a>
+      <a href="/business-calculators/">Business Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/insurance-calculators/">Insurance Calculators</a></li>
+          <li><span aria-current="page">Term vs Whole Life Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="article-content">
+          <h1>Term vs Whole Life Insurance Calculator</h1>
+          <p>Compare the costs of term life insurance versus whole life insurance side by side. Enter your age, desired coverage amount, and term length to see estimated premiums and total cost over time for each type of policy.</p>
+
+          <div class="calc-container mt-8">
+            <div class="calc-header">
+              <h2>Compare Term vs Whole Life</h2>
+              <p>Enter your details below</p>
+            </div>
+            <div class="calc-body">
+              <form id="term-whole-form" onsubmit="return false;">
+                <div class="form-group">
+                  <label class="form-label" for="applicant-age">Your Age</label>
+                  <input type="number" id="applicant-age" class="form-input" placeholder="35" min="18" max="75" step="1" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="coverage-amount">Coverage Amount</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="coverage-amount" class="form-input" placeholder="500000" min="50000" step="50000" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="term-length">Term Length <span class="form-hint">(years)</span></label>
+                  <select id="term-length" class="form-input" required>
+                    <option value="">Select term</option>
+                    <option value="10">10 Years</option>
+                    <option value="15">15 Years</option>
+                    <option value="20">20 Years</option>
+                    <option value="25">25 Years</option>
+                    <option value="30">30 Years</option>
+                  </select>
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calculateTermVsWhole()">Compare Policies</button>
+                  <button type="button" class="btn btn-reset" onclick="resetTermVsWhole()">Reset</button>
+                </div>
+              </form>
+
+              <div id="term-whole-results" class="calc-results hidden">
+                <div class="result-grid">
+                  <div class="result-item">
+                    <div class="result-label">Term Monthly Premium</div>
+                    <div class="result-value" id="result-term-monthly"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Whole Life Monthly Premium</div>
+                    <div class="result-value" id="result-whole-monthly"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Term Total Cost (over term)</div>
+                    <div class="result-value" id="result-term-total"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Whole Life Total Cost (over term)</div>
+                    <div class="result-value" id="result-whole-total"></div>
+                  </div>
+                </div>
+                <div class="result-primary">
+                  <div class="result-label">Monthly Savings with Term</div>
+                  <div class="result-value" id="result-savings"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <section class="content-section">
+            <h2>Premium Estimation Formula</h2>
+            <p>Term and whole life premiums are estimated based on age and coverage amount:</p>
+            <div class="formula-box">
+              <div class="formula-label">Term Life Premium</div>
+              Annual Term Premium = (Coverage / 1,000) x Base Rate x Age Factor x Term Factor
+            </div>
+            <div class="formula-box">
+              <div class="formula-label">Whole Life Premium</div>
+              Annual Whole Life Premium = (Coverage / 1,000) x Base Rate x Age Factor x Whole Life Multiplier
+            </div>
+            <p>Whole life premiums are typically <strong>5-15 times higher</strong> than comparable term premiums because they include lifetime coverage and a cash value savings component.</p>
+          </section>
+
+          <section class="content-section">
+            <h2>How to Use This Calculator</h2>
+            <ol>
+              <li><strong>Enter your age</strong> - younger applicants receive lower rates.</li>
+              <li><strong>Enter coverage amount</strong> - the death benefit you want.</li>
+              <li><strong>Select term length</strong> - how long you need coverage (for the term policy comparison).</li>
+              <li><strong>Click "Compare Policies"</strong> to see side-by-side premiums and total costs.</li>
+            </ol>
+          </section>
+
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>A 35-year-old seeking $500,000 in coverage for 20 years might pay approximately $30 per month for term life versus $350 per month for whole life. Over 20 years, term would cost about $7,200 total while whole life would cost about $84,000 - a difference of $76,800. Investing the monthly savings from term could potentially build significant wealth.</p>
+          </section>
+
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">What is the difference between term and whole life insurance?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>Term life provides coverage for a specific period at lower premiums. Whole life provides lifetime coverage with cash value but costs significantly more. Term is pure protection while whole life combines insurance with savings.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">Why is whole life insurance so much more expensive?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>Whole life costs more because it provides lifetime coverage, builds cash value, and guarantees a death benefit. Premiums are typically 5-15 times higher than term life for the same coverage amount.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">Is term or whole life insurance better?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>For most people, term life offers the best value for pure protection. Whole life may make sense for estate planning or guaranteed inheritance. Many advisors recommend buying term and investing the difference.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">Can I convert term life insurance to whole life?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>Many term policies include a conversion option allowing you to convert to whole life without a medical exam. This can be valuable if your health changes during the term period.</p></div>
+            </div>
+          </section>
+
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/insurance-calculators/life-insurance-coverage-calculator/" class="card card-link">
+                <h3>Life Insurance Coverage Calculator</h3>
+                <p>Determine how much life insurance coverage you need.</p>
+              </a>
+              <a href="/insurance-calculators/insurance-policy-value-calculator/" class="card card-link">
+                <h3>Insurance Policy Value</h3>
+                <p>Analyze the effective value of your insurance policy.</p>
+              </a>
+              <a href="/insurance-calculators/insurance-savings-comparison-calculator/" class="card card-link">
+                <h3>Insurance Savings Comparison</h3>
+                <p>Compare multiple insurance quotes side by side.</p>
+              </a>
+              <a href="/insurance-calculators/disability-insurance-calculator/" class="card card-link">
+                <h3>Disability Insurance Calculator</h3>
+                <p>Calculate your disability insurance needs.</p>
+              </a>
+              <a href="/finance-calculators/compound-interest-calculator/" class="card card-link">
+                <h3>Compound Interest Calculator</h3>
+                <p>See what investing the premium difference could grow to.</p>
+              </a>
+            </div>
+          </section>
+
+          <div class="disclaimer">
+            <strong>Disclaimer:</strong> This calculator provides estimates for informational purposes only. Actual premiums vary by insurer, health status, and underwriting. This is not insurance or financial advice. Consult a licensed insurance professional for personalized quotes.
+          </div>
+
+          <div class="ad-slot ad-slot-leaderboard"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Real Estate</h4>
+          <a href="/real-estate-calculators/">All Real Estate Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Finance</h4>
+          <a href="/finance-calculators/">All Finance Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Insurance</h4>
+          <a href="/insurance-calculators/">All Insurance Calculators</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links"><a href="/about.html">About</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateTermVsWhole() {
+      const age = parseFloat(document.getElementById('applicant-age').value);
+      const coverage = parseFloat(document.getElementById('coverage-amount').value);
+      const termLength = parseFloat(document.getElementById('term-length').value);
+
+      if (!age || !coverage || !termLength) {
+        alert('Please fill in all fields.');
+        return;
+      }
+
+      // Term life base rate per $1,000 (annual)
+      let termBaseRate = 0.15;
+      // Age factor for term
+      if (age < 30) termBaseRate = 0.10;
+      else if (age < 40) termBaseRate = 0.15;
+      else if (age < 50) termBaseRate = 0.30;
+      else if (age < 60) termBaseRate = 0.60;
+      else termBaseRate = 1.20;
+
+      // Term length factor
+      const termFactors = { 10: 0.8, 15: 0.9, 20: 1.0, 25: 1.15, 30: 1.3 };
+      const termFactor = termFactors[termLength] || 1.0;
+
+      const termAnnual = (coverage / 1000) * termBaseRate * termFactor;
+      const termMonthly = termAnnual / 12;
+      const termTotal = termAnnual * termLength;
+
+      // Whole life: typically 8-12x term cost
+      const wholeLifeMultiplier = 8 + (age - 25) * 0.1;
+      const wholeAnnual = (coverage / 1000) * termBaseRate * Math.max(wholeLifeMultiplier, 6);
+      const wholeMonthly = wholeAnnual / 12;
+      const wholeTotal = wholeAnnual * termLength;
+
+      const monthlySavings = wholeMonthly - termMonthly;
+
+      const fmt = (n) => '$' + n.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+
+      document.getElementById('result-term-monthly').textContent = fmt(termMonthly);
+      document.getElementById('result-whole-monthly').textContent = fmt(wholeMonthly);
+      document.getElementById('result-term-total').textContent = fmt(termTotal);
+      document.getElementById('result-whole-total').textContent = fmt(wholeTotal);
+      document.getElementById('result-savings').textContent = fmt(monthlySavings) + '/mo';
+      document.getElementById('term-whole-results').classList.remove('hidden');
+    }
+
+    function resetTermVsWhole() {
+      document.getElementById('term-whole-form').reset();
+      document.getElementById('term-whole-results').classList.add('hidden');
+    }
+
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', !expanded);
+        btn.nextElementSibling.classList.toggle('open');
+      });
+    });
+
+    document.querySelector('.mobile-menu-toggle')?.addEventListener('click', function() {
+      const nav = document.querySelector('.mobile-nav');
+      const expanded = this.getAttribute('aria-expanded') === 'true';
+      this.setAttribute('aria-expanded', !expanded);
+      nav.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>

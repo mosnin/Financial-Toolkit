@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car Payment Calculator | CalcWise</title>
+  <meta name="description" content="Free car payment calculator to estimate your monthly auto payment, total interest, and total cost. Factor in down payment, trade-in value, interest rate, and loan term.">
+  <meta name="keywords" content="car payment calculator, auto payment calculator, monthly car payment, vehicle payment estimator, car loan payment">
+  <link rel="canonical" href="https://calcwise.io/vehicle-calculators/car-payment-calculator/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Car Payment Calculator | CalcWise">
+  <meta property="og:description" content="Free car payment calculator to estimate your monthly auto payment, total interest, and total cost.">
+  <meta property="og:url" content="https://calcwise.io/vehicle-calculators/car-payment-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Car Payment Calculator | CalcWise">
+  <meta name="twitter:description" content="Free car payment calculator to estimate your monthly auto payment, total interest, and total cost.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <!-- BreadcrumbList Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Vehicle Calculators", "item": "https://calcwise.io/vehicle-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "Car Payment Calculator", "item": "https://calcwise.io/vehicle-calculators/car-payment-calculator/" }
+    ]
+  }
+  </script>
+
+  <!-- FAQPage Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How is a car payment calculated?",
+        "acceptedAnswer": { "@type": "Answer", "text": "A car payment is calculated using the loan amortization formula. The financed amount (vehicle price minus down payment and trade-in) is used with the interest rate and loan term to determine a fixed monthly payment that covers both principal and interest." }
+      },
+      {
+        "@type": "Question",
+        "name": "Does a larger down payment reduce my monthly payment?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. A larger down payment reduces the amount you need to finance, which directly lowers your monthly payment and the total interest you pay over the life of the loan." }
+      },
+      {
+        "@type": "Question",
+        "name": "How does trade-in value affect my car payment?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Your trade-in value is subtracted from the vehicle price, reducing the loan amount. This works the same way as a down payment, lowering both your monthly payment and total interest paid." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is a good interest rate for a car loan?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Interest rates vary based on credit score, loan term, and whether the vehicle is new or used. As of 2026, rates for new cars typically range from 4% to 8% for borrowers with good credit. Used car rates are generally 1-2% higher." }
+      },
+      {
+        "@type": "Question",
+        "name": "Should I choose a longer loan term for lower payments?",
+        "acceptedAnswer": { "@type": "Answer", "text": "A longer loan term lowers monthly payments but significantly increases total interest paid. A 72-month loan may seem attractive, but you could pay thousands more in interest compared to a 48-month term. Choose the shortest term you can comfortably afford." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/vehicle-calculators/" aria-current="page">Vehicle</a>
+        <a href="/business-calculators/">Business</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/vehicle-calculators/">Vehicle Calculators</a>
+      <a href="/business-calculators/">Business Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/vehicle-calculators/">Vehicle Calculators</a></li>
+          <li><span aria-current="page">Car Payment Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="article-content">
+          <h1>Car Payment Calculator</h1>
+          <p>Estimate your monthly car payment by entering the vehicle price, down payment, trade-in value, interest rate, and loan term. This calculator shows you exactly what you will pay each month, how much goes to interest, and the total cost of financing your vehicle.</p>
+
+          <div class="calc-container mt-8">
+            <div class="calc-header">
+              <h2>Calculate Your Car Payment</h2>
+              <p>Enter your vehicle and loan details below</p>
+            </div>
+            <div class="calc-body">
+              <form id="car-payment-form" onsubmit="return false;">
+                <div class="form-group">
+                  <label class="form-label" for="vehicle-price">Vehicle Price</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="vehicle-price" name="vehiclePrice" class="form-input" placeholder="35000" min="0" step="100" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="down-payment">Down Payment</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="down-payment" name="downPayment" class="form-input" placeholder="5000" min="0" step="100">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="trade-in">Trade-In Value</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="trade-in" name="tradeIn" class="form-input" placeholder="3000" min="0" step="100">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="interest-rate">Interest Rate (APR)</label>
+                  <div class="input-suffix">
+                    <input type="number" id="interest-rate" name="interestRate" class="form-input" placeholder="6.5" min="0" max="100" step="0.01" required>
+                    <span class="suffix">%</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="loan-term">Loan Term <span class="form-hint">(months)</span></label>
+                  <input type="number" id="loan-term" name="loanTerm" class="form-input" placeholder="60" min="1" max="96" step="1" required>
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calculateCarPayment()">Calculate Payment</button>
+                  <button type="button" class="btn btn-reset" onclick="resetCarPayment()">Reset</button>
+                </div>
+              </form>
+
+              <div id="car-payment-results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">Monthly Payment</div>
+                  <div class="result-value" id="result-monthly"></div>
+                </div>
+                <div class="result-grid">
+                  <div class="result-item">
+                    <div class="result-label">Total Interest</div>
+                    <div class="result-value" id="result-interest"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Total Cost</div>
+                    <div class="result-value" id="result-total"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Financed Amount</div>
+                    <div class="result-value" id="result-financed"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Formula Section -->
+          <section class="content-section">
+            <h2>Car Payment Formula</h2>
+            <p>The monthly car payment is calculated using the standard amortization formula applied to the financed amount:</p>
+            <div class="formula-box">
+              <div class="formula-label">Financed Amount</div>
+              Financed = Vehicle Price - Down Payment - Trade-In Value
+            </div>
+            <div class="formula-box">
+              <div class="formula-label">Monthly Payment Formula</div>
+              M = F [ r(1 + r)^n ] / [ (1 + r)^n - 1 ]
+            </div>
+            <p>Where <strong>M</strong> is the monthly payment, <strong>F</strong> is the financed amount, <strong>r</strong> is the monthly interest rate (APR / 12), and <strong>n</strong> is the number of monthly payments.</p>
+          </section>
+
+          <!-- How to Use -->
+          <section class="content-section">
+            <h2>How to Use This Car Payment Calculator</h2>
+            <ol>
+              <li><strong>Enter the vehicle price</strong> - the sticker or negotiated price of the car.</li>
+              <li><strong>Enter your down payment</strong> - cash you will pay upfront.</li>
+              <li><strong>Enter your trade-in value</strong> - the value of a vehicle you are trading in (if any).</li>
+              <li><strong>Enter the interest rate</strong> - the annual percentage rate (APR) offered by your lender.</li>
+              <li><strong>Enter the loan term</strong> - the number of months for repayment (e.g., 36, 48, 60, or 72).</li>
+              <li><strong>Click "Calculate Payment"</strong> to see your monthly payment, total interest, and total cost.</li>
+            </ol>
+          </section>
+
+          <!-- Example Scenario -->
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>Suppose you are buying a $35,000 car with a $5,000 down payment and a $3,000 trade-in. You secure a 6.5% APR loan for 60 months. The financed amount is $27,000. Your monthly payment would be approximately $528.28. Over 60 months, you would pay $4,697 in interest for a total cost of $36,697.</p>
+          </section>
+
+          <!-- FAQ Section -->
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                How is a car payment calculated?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>A car payment is calculated using the loan amortization formula. The financed amount (vehicle price minus down payment and trade-in) is used with the interest rate and loan term to determine a fixed monthly payment that covers both principal and interest.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Does a larger down payment reduce my monthly payment?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Yes. A larger down payment reduces the amount you need to finance, which directly lowers your monthly payment and the total interest you pay over the life of the loan.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                How does trade-in value affect my car payment?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Your trade-in value is subtracted from the vehicle price, reducing the loan amount. This works the same way as a down payment, lowering both your monthly payment and total interest paid.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What is a good interest rate for a car loan?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Interest rates vary based on credit score, loan term, and whether the vehicle is new or used. Rates for new cars typically range from 4% to 8% for borrowers with good credit. Used car rates are generally 1-2% higher.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Should I choose a longer loan term for lower payments?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>A longer loan term lowers monthly payments but significantly increases total interest paid. A 72-month loan may seem attractive, but you could pay thousands more in interest compared to a 48-month term. Choose the shortest term you can comfortably afford.</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Related Calculators -->
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/vehicle-calculators/auto-loan-calculator/" class="card card-link">
+                <h3>Auto Loan Calculator</h3>
+                <p>Calculate monthly payments for any auto loan amount and term.</p>
+              </a>
+              <a href="/vehicle-calculators/lease-vs-buy-calculator/" class="card card-link">
+                <h3>Lease vs Buy Calculator</h3>
+                <p>Compare the total cost of leasing versus buying a vehicle.</p>
+              </a>
+              <a href="/vehicle-calculators/car-affordability-calculator/" class="card card-link">
+                <h3>Car Affordability Calculator</h3>
+                <p>Find out how much car you can afford based on your budget.</p>
+              </a>
+              <a href="/vehicle-calculators/vehicle-total-cost-calculator/" class="card card-link">
+                <h3>Vehicle Total Cost Calculator</h3>
+                <p>Calculate the true total cost of owning a vehicle over time.</p>
+              </a>
+              <a href="/finance-calculators/loan-calculator/" class="card card-link">
+                <h3>Loan Calculator</h3>
+                <p>General-purpose loan payment calculator for any fixed-rate loan.</p>
+              </a>
+            </div>
+          </section>
+
+          <!-- Disclaimer -->
+          <div class="disclaimer">
+            <strong>Disclaimer:</strong> This calculator provides estimates for informational purposes only. Actual car payments may vary based on taxes, fees, dealer charges, credit score, and lender terms. This is not financial advice. Consult a qualified financial professional before making vehicle financing decisions.
+          </div>
+
+          <!-- Ad Slot -->
+          <div class="ad-slot ad-slot-leaderboard"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Vehicle</h4>
+          <a href="/vehicle-calculators/">All Vehicle Calculators</a>
+          <a href="/vehicle-calculators/car-payment-calculator/">Car Payment</a>
+          <a href="/vehicle-calculators/auto-loan-calculator/">Auto Loan</a>
+        </div>
+        <div class="footer-col">
+          <h4>Finance</h4>
+          <a href="/finance-calculators/">All Finance Calculators</a>
+          <a href="/finance-calculators/loan-calculator/">Loan Calculator</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateCarPayment() {
+      if (!CalcWise.validateForm('car-payment-form')) return;
+
+      const price = CalcWise.parseNumber(document.getElementById('vehicle-price').value);
+      const down = CalcWise.parseNumber(document.getElementById('down-payment').value) || 0;
+      const tradeIn = CalcWise.parseNumber(document.getElementById('trade-in').value) || 0;
+      const rate = parseFloat(document.getElementById('interest-rate').value);
+      const termMonths = parseInt(document.getElementById('loan-term').value);
+
+      const financed = price - down - tradeIn;
+      if (financed <= 0) {
+        alert('Your down payment and trade-in exceed the vehicle price.');
+        return;
+      }
+
+      const monthlyRate = rate / 100 / 12;
+      let monthlyPayment;
+      if (monthlyRate === 0) {
+        monthlyPayment = financed / termMonths;
+      } else {
+        monthlyPayment = financed * (monthlyRate * Math.pow(1 + monthlyRate, termMonths)) / (Math.pow(1 + monthlyRate, termMonths) - 1);
+      }
+
+      const totalPaid = monthlyPayment * termMonths;
+      const totalInterest = totalPaid - financed;
+      const totalCost = totalPaid + down + tradeIn;
+
+      CalcWise.setText('result-monthly', CalcWise.formatCurrency(monthlyPayment));
+      CalcWise.setText('result-interest', CalcWise.formatCurrency(totalInterest));
+      CalcWise.setText('result-total', CalcWise.formatCurrency(totalCost));
+      CalcWise.setText('result-financed', CalcWise.formatCurrency(financed));
+      CalcWise.showResults('car-payment-results');
+    }
+
+    function resetCarPayment() {
+      document.getElementById('car-payment-form').reset();
+      CalcWise.hideResults('car-payment-results');
+    }
+  </script>
+</body>
+</html>

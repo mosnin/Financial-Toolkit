@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alimony Calculator | CalcWise</title>
+  <meta name="description" content="Estimate monthly alimony (spousal support) payments and duration based on both spouses' income, marriage duration, and state guidelines. Free instant calculation.">
+  <meta name="keywords" content="alimony calculator, spousal support calculator, alimony estimator, spousal maintenance calculator, divorce alimony">
+  <link rel="canonical" href="https://calcwise.io/legal-calculators/alimony-calculator/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Alimony Calculator | CalcWise">
+  <meta property="og:description" content="Estimate monthly alimony payments and duration based on both spouses' income, marriage duration, and state guidelines.">
+  <meta property="og:url" content="https://calcwise.io/legal-calculators/alimony-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Alimony Calculator | CalcWise">
+  <meta name="twitter:description" content="Estimate monthly alimony payments and duration based on both spouses' income, marriage duration, and state guidelines.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <!-- BreadcrumbList Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Legal Calculators", "item": "https://calcwise.io/legal-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "Alimony Calculator", "item": "https://calcwise.io/legal-calculators/alimony-calculator/" }
+    ]
+  }
+  </script>
+
+  <!-- FAQPage Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How is alimony calculated?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Alimony calculations vary by state but generally consider the income difference between spouses, the length of the marriage, each spouse's earning capacity, age, health, and standard of living during the marriage. Many states use a formula based on a percentage of the income difference." }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does alimony last?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Alimony duration depends on the length of the marriage. A common guideline is that alimony lasts for roughly one-third to one-half the length of the marriage. Short marriages (under 10 years) may have temporary alimony, while very long marriages (20+ years) may result in permanent alimony in some states." }
+      },
+      {
+        "@type": "Question",
+        "name": "Is alimony taxable?",
+        "acceptedAnswer": { "@type": "Answer", "text": "For divorce agreements executed after December 31, 2018, alimony is no longer tax-deductible for the payer and is not considered taxable income for the recipient under federal tax law. Agreements from before that date may follow the old rules where alimony was deductible for the payer and taxable for the recipient." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can alimony be modified?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes, alimony can usually be modified if there is a significant change in circumstances, such as a major change in either spouse's income, retirement, remarriage of the recipient, or cohabitation with a new partner. The process requires filing a motion with the court." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between alimony and child support?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Alimony (spousal support) is paid from one spouse to the other to maintain their standard of living after divorce. Child support is paid specifically for the financial needs of the children. They are separate obligations calculated using different formulas and guidelines." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/business-calculators/">Business</a>
+        <a href="/legal-calculators/" aria-current="page">Legal</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/business-calculators/">Business Calculators</a>
+      <a href="/legal-calculators/">Legal Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/legal-calculators/">Legal Calculators</a></li>
+          <li><span aria-current="page">Alimony Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="article-content">
+          <h1>Alimony Calculator</h1>
+          <p>Estimate monthly alimony (spousal support) payments and the expected duration of support. This calculator uses common alimony formulas based on the income difference between spouses and the length of the marriage to provide a general estimate.</p>
+
+          <div class="calc-container mt-8">
+            <div class="calc-header">
+              <h2>Calculate Alimony</h2>
+              <p>Enter spouse details below</p>
+            </div>
+            <div class="calc-body">
+              <form id="alimony-form" onsubmit="return false;">
+                <div class="form-group">
+                  <label class="form-label" for="higher-income">Higher Earner Monthly Gross Income</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="higher-income" name="higherIncome" class="form-input" placeholder="10000" min="0" step="100" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="lower-income">Lower Earner Monthly Gross Income</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="lower-income" name="lowerIncome" class="form-input" placeholder="3000" min="0" step="100" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="marriage-years">Marriage Duration <span class="form-hint">(years)</span></label>
+                  <input type="number" id="marriage-years" name="marriageYears" class="form-input" placeholder="12" min="1" max="60" step="1" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="state">State</label>
+                  <select id="state" name="state" class="form-input" required>
+                    <option value="">Select state...</option>
+                    <option value="general">General / National Average</option>
+                    <option value="california">California</option>
+                    <option value="new-york">New York</option>
+                    <option value="texas">Texas</option>
+                    <option value="florida">Florida</option>
+                    <option value="illinois">Illinois</option>
+                    <option value="pennsylvania">Pennsylvania</option>
+                    <option value="massachusetts">Massachusetts</option>
+                    <option value="other">Other State (General Formula)</option>
+                  </select>
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calculateAlimony()">Calculate Alimony</button>
+                  <button type="button" class="btn btn-reset" onclick="resetAlimony()">Reset</button>
+                </div>
+              </form>
+
+              <div id="alimony-results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">Estimated Monthly Alimony</div>
+                  <div class="result-value" id="result-monthly"></div>
+                </div>
+                <div class="result-grid">
+                  <div class="result-item">
+                    <div class="result-label">Estimated Duration</div>
+                    <div class="result-value" id="result-duration"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Income Difference</div>
+                    <div class="result-value" id="result-difference"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Total Estimated Alimony</div>
+                    <div class="result-value" id="result-total"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Annual Alimony</div>
+                    <div class="result-value" id="result-annual"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Formula Section -->
+          <section class="content-section">
+            <h2>Alimony Formula</h2>
+            <p>Most states use a variation of the following general approach:</p>
+            <div class="formula-box">
+              <div class="formula-label">Common Alimony Formula</div>
+              Monthly Alimony = (Higher Income - Lower Income) x Support Percentage (30-40%)
+              <br>Duration = Marriage Years x Duration Factor (typically 0.3 to 0.5)
+            </div>
+            <p>The <strong>support percentage</strong> varies by state (commonly 30-40% of the income difference). The <strong>duration</strong> is often tied to the length of the marriage, with longer marriages resulting in longer support periods. Some states like New York use specific statutory formulas.</p>
+          </section>
+
+          <!-- How to Use -->
+          <section class="content-section">
+            <h2>How to Use This Calculator</h2>
+            <ol>
+              <li><strong>Enter the higher earner's monthly income</strong> - the gross monthly income of the spouse who earns more.</li>
+              <li><strong>Enter the lower earner's monthly income</strong> - the gross monthly income of the spouse who earns less.</li>
+              <li><strong>Enter the marriage duration</strong> - how many years you were married.</li>
+              <li><strong>Select your state</strong> - different states have different alimony guidelines.</li>
+              <li><strong>Click "Calculate Alimony"</strong> to see the estimated monthly payment and duration.</li>
+            </ol>
+          </section>
+
+          <!-- Example Scenario -->
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>One spouse earns $10,000/month and the other earns $3,000/month after a 12-year marriage. The income difference is $7,000. Using a general formula of 33% of the income difference, the estimated monthly alimony would be approximately $2,310. With a duration factor of 0.4, alimony might last about 5 years, totaling approximately $138,600 over the full period.</p>
+          </section>
+
+          <!-- FAQ Section -->
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                How is alimony calculated?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Alimony calculations vary by state but generally consider the income difference between spouses, the length of the marriage, each spouse's earning capacity, age, health, and standard of living during the marriage. Many states use a formula based on a percentage of the income difference.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                How long does alimony last?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Alimony duration depends on the length of the marriage. A common guideline is that alimony lasts for roughly one-third to one-half the length of the marriage. Short marriages (under 10 years) may have temporary alimony, while very long marriages (20+ years) may result in permanent alimony in some states.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Is alimony taxable?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>For divorce agreements executed after December 31, 2018, alimony is no longer tax-deductible for the payer and is not considered taxable income for the recipient under federal tax law. Agreements from before that date may follow the old rules.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Can alimony be modified?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Yes, alimony can usually be modified if there is a significant change in circumstances, such as a major change in either spouse's income, retirement, remarriage of the recipient, or cohabitation with a new partner.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What is the difference between alimony and child support?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Alimony (spousal support) is paid from one spouse to the other to maintain their standard of living after divorce. Child support is paid specifically for the financial needs of the children. They are separate obligations calculated using different formulas.</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Related Calculators -->
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/legal-calculators/child-support-calculator/" class="card card-link">
+                <h3>Child Support Calculator</h3>
+                <p>Estimate monthly child support payments.</p>
+              </a>
+              <a href="/legal-calculators/divorce-cost-calculator/" class="card card-link">
+                <h3>Divorce Cost Calculator</h3>
+                <p>Estimate the total cost of divorce proceedings.</p>
+              </a>
+              <a href="/legal-calculators/settlement-tax-calculator/" class="card card-link">
+                <h3>Settlement Tax Calculator</h3>
+                <p>Calculate taxes on settlement amounts.</p>
+              </a>
+            </div>
+          </section>
+
+          <!-- Disclaimer -->
+          <div class="disclaimer">
+            <strong>Important Legal Disclaimer:</strong> This calculator provides rough estimates for informational and educational purposes only. It does not constitute legal advice. Alimony laws vary significantly by state, and courts consider many factors beyond income and marriage duration, including each spouse's age, health, earning capacity, and contributions to the marriage. Always consult with a qualified family law attorney for advice specific to your situation.
+          </div>
+
+          <!-- Ad Slot -->
+          <div class="ad-slot ad-slot-leaderboard"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="/legal-calculators/">All Legal Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Finance</h4>
+          <a href="/finance-calculators/">All Finance Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateAlimony() {
+      const higherIncome = parseFloat(document.getElementById('higher-income').value);
+      const lowerIncome = parseFloat(document.getElementById('lower-income').value);
+      const years = parseFloat(document.getElementById('marriage-years').value);
+      const state = document.getElementById('state').value;
+
+      if (!higherIncome || isNaN(lowerIncome) || !years || !state) {
+        alert('Please fill in all fields.');
+        return;
+      }
+
+      const difference = higherIncome - lowerIncome;
+      if (difference <= 0) {
+        alert('The higher earner income must be greater than the lower earner income.');
+        return;
+      }
+
+      // State-specific percentage factors
+      const stateFactors = {
+        'california': { pct: 0.35, durFactor: 0.5 },
+        'new-york': { pct: 0.33, durFactor: 0.4 },
+        'texas': { pct: 0.30, durFactor: 0.3 },
+        'florida': { pct: 0.33, durFactor: 0.4 },
+        'illinois': { pct: 0.33, durFactor: 0.42 },
+        'pennsylvania': { pct: 0.33, durFactor: 0.4 },
+        'massachusetts': { pct: 0.35, durFactor: 0.5 },
+        'general': { pct: 0.33, durFactor: 0.4 },
+        'other': { pct: 0.33, durFactor: 0.4 }
+      };
+
+      const factors = stateFactors[state] || stateFactors['general'];
+      const monthlyAlimony = Math.round(difference * factors.pct);
+      const durationYears = Math.max(1, Math.round(years * factors.durFactor));
+      const durationMonths = durationYears * 12;
+      const totalAlimony = monthlyAlimony * durationMonths;
+      const annualAlimony = monthlyAlimony * 12;
+
+      const fmt = (n) => '$' + n.toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 });
+
+      document.getElementById('result-monthly').textContent = fmt(monthlyAlimony) + '/mo';
+      document.getElementById('result-duration').textContent = durationYears + ' year' + (durationYears !== 1 ? 's' : '');
+      document.getElementById('result-difference').textContent = fmt(difference) + '/mo';
+      document.getElementById('result-total').textContent = fmt(totalAlimony);
+      document.getElementById('result-annual').textContent = fmt(annualAlimony);
+
+      document.getElementById('alimony-results').classList.remove('hidden');
+    }
+
+    function resetAlimony() {
+      document.getElementById('alimony-form').reset();
+      document.getElementById('alimony-results').classList.add('hidden');
+    }
+  </script>
+</body>
+</html>

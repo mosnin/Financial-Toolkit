@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Renters Insurance Calculator | CalcWise</title>
+  <meta name="description" content="Calculate your renters insurance premium based on personal property value, liability coverage, and deductible. Get estimated annual and monthly costs instantly.">
+  <meta name="keywords" content="renters insurance calculator, renter insurance cost, tenant insurance estimator, renters insurance premium, apartment insurance calculator">
+  <link rel="canonical" href="https://calcwise.io/insurance-calculators/renters-insurance-calculator/">
+
+  <meta property="og:title" content="Renters Insurance Calculator | CalcWise">
+  <meta property="og:description" content="Calculate your renters insurance premium based on personal property value, liability coverage, and deductible.">
+  <meta property="og:url" content="https://calcwise.io/insurance-calculators/renters-insurance-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Renters Insurance Calculator | CalcWise">
+  <meta name="twitter:description" content="Calculate your renters insurance premium based on personal property value, liability coverage, and deductible.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Insurance Calculators", "item": "https://calcwise.io/insurance-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "Renters Insurance Calculator", "item": "https://calcwise.io/insurance-calculators/renters-insurance-calculator/" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How much does renters insurance typically cost?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Renters insurance typically costs between $15-$30 per month, or $180-$360 annually. The exact cost depends on your personal property value, liability coverage amount, deductible, and location." }
+      },
+      {
+        "@type": "Question",
+        "name": "What does renters insurance cover?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Renters insurance covers personal property (furniture, electronics, clothing), liability if someone is injured in your rental, and additional living expenses if your rental becomes uninhabitable. It does not cover the building structure itself." }
+      },
+      {
+        "@type": "Question",
+        "name": "How much personal property coverage do I need?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Create a home inventory of your belongings and estimate their total replacement cost. Most renters have $20,000-$50,000 in personal property. Include electronics, furniture, clothing, kitchen items, and valuables." }
+      },
+      {
+        "@type": "Question",
+        "name": "Is renters insurance required?",
+        "acceptedAnswer": { "@type": "Answer", "text": "While not legally required in most places, many landlords require tenants to carry renters insurance as part of the lease agreement. Even if not required, it is highly recommended to protect your personal belongings." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/insurance-calculators/" aria-current="page">Insurance</a>
+        <a href="/business-calculators/">Business</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/insurance-calculators/">Insurance Calculators</a>
+      <a href="/business-calculators/">Business Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/insurance-calculators/">Insurance Calculators</a></li>
+          <li><span aria-current="page">Renters Insurance Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="article-content">
+          <h1>Renters Insurance Calculator</h1>
+          <p>Estimate your renters insurance premium based on the value of your personal property, desired liability coverage, and deductible amount. Renters insurance is one of the most affordable insurance products available, and this calculator helps you plan for the cost.</p>
+
+          <div class="calc-container mt-8">
+            <div class="calc-header">
+              <h2>Calculate Renters Insurance Cost</h2>
+              <p>Enter your coverage needs below</p>
+            </div>
+            <div class="calc-body">
+              <form id="renters-form" onsubmit="return false;">
+                <div class="form-group">
+                  <label class="form-label" for="property-value">Personal Property Value</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="property-value" class="form-input" placeholder="30000" min="5000" step="1000" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="liability-coverage">Liability Coverage</label>
+                  <select id="liability-coverage" class="form-input" required>
+                    <option value="">Select liability amount</option>
+                    <option value="100000">$100,000</option>
+                    <option value="300000">$300,000</option>
+                    <option value="500000">$500,000</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="renters-deductible">Deductible</label>
+                  <select id="renters-deductible" class="form-input" required>
+                    <option value="">Select deductible</option>
+                    <option value="250">$250</option>
+                    <option value="500">$500</option>
+                    <option value="1000">$1,000</option>
+                    <option value="2000">$2,000</option>
+                  </select>
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calculateRenters()">Calculate Premium</button>
+                  <button type="button" class="btn btn-reset" onclick="resetRenters()">Reset</button>
+                </div>
+              </form>
+
+              <div id="renters-results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">Estimated Annual Premium</div>
+                  <div class="result-value" id="result-annual"></div>
+                </div>
+                <div class="result-grid">
+                  <div class="result-item">
+                    <div class="result-label">Monthly Premium</div>
+                    <div class="result-value" id="result-monthly"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Daily Cost</div>
+                    <div class="result-value" id="result-daily"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <section class="content-section">
+            <h2>Renters Insurance Premium Formula</h2>
+            <p>Renters insurance premiums are based on the amount of personal property coverage, liability limits, and your chosen deductible:</p>
+            <div class="formula-box">
+              <div class="formula-label">Premium Estimation Formula</div>
+              Annual Premium = Base Rate + (Property Value / 1,000 x Rate) + Liability Adder - Deductible Discount
+            </div>
+            <p>The <strong>base rate</strong> covers standard coverage minimums. Additional <strong>personal property value</strong> increases the premium proportionally. Higher <strong>liability limits</strong> add a modest cost, and a higher <strong>deductible</strong> provides a discount.</p>
+          </section>
+
+          <section class="content-section">
+            <h2>How to Use This Calculator</h2>
+            <ol>
+              <li><strong>Enter personal property value</strong> - the total replacement cost of all your belongings.</li>
+              <li><strong>Select liability coverage</strong> - the amount of liability protection you want.</li>
+              <li><strong>Select your deductible</strong> - the amount you would pay out of pocket per claim.</li>
+              <li><strong>Click "Calculate Premium"</strong> to see your estimated annual and monthly costs.</li>
+            </ol>
+          </section>
+
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>A renter with $30,000 in personal property who selects $100,000 in liability coverage and a $500 deductible would pay approximately $216 per year, or about $18 per month. This affordable coverage protects against theft, fire, water damage, and personal liability.</p>
+          </section>
+
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">How much does renters insurance typically cost?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>Renters insurance typically costs between $15-$30 per month, or $180-$360 annually. The exact cost depends on your personal property value, liability coverage, deductible, and location.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">What does renters insurance cover?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>Renters insurance covers personal property, liability if someone is injured in your rental, and additional living expenses if your rental becomes uninhabitable. It does not cover the building structure.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">How much personal property coverage do I need?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>Create a home inventory of your belongings and estimate their total replacement cost. Most renters have $20,000-$50,000 in personal property including electronics, furniture, clothing, and kitchen items.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">Is renters insurance required?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>While not legally required in most places, many landlords require renters insurance as part of the lease. Even if not required, it is highly recommended to protect your personal belongings.</p></div>
+            </div>
+          </section>
+
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/insurance-calculators/home-insurance-cost-calculator/" class="card card-link">
+                <h3>Home Insurance Calculator</h3>
+                <p>Estimate homeowners insurance premiums for property owners.</p>
+              </a>
+              <a href="/insurance-calculators/insurance-coverage-needs-calculator/" class="card card-link">
+                <h3>Insurance Coverage Needs</h3>
+                <p>Assess your total insurance needs across all types.</p>
+              </a>
+              <a href="/insurance-calculators/liability-insurance-calculator/" class="card card-link">
+                <h3>Liability Insurance Calculator</h3>
+                <p>Calculate liability insurance coverage and costs.</p>
+              </a>
+              <a href="/insurance-calculators/insurance-deductible-calculator/" class="card card-link">
+                <h3>Insurance Deductible Calculator</h3>
+                <p>Find the optimal deductible for your insurance policy.</p>
+              </a>
+              <a href="/finance-calculators/savings-calculator/" class="card card-link">
+                <h3>Savings Goal Calculator</h3>
+                <p>Calculate how to save for your emergency fund.</p>
+              </a>
+            </div>
+          </section>
+
+          <div class="disclaimer">
+            <strong>Disclaimer:</strong> This calculator provides estimates for informational purposes only. Actual renters insurance premiums vary based on location, insurer, and individual factors. This is not insurance advice. Contact licensed insurance providers for accurate quotes.
+          </div>
+
+          <div class="ad-slot ad-slot-leaderboard"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Real Estate</h4>
+          <a href="/real-estate-calculators/">All Real Estate Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Finance</h4>
+          <a href="/finance-calculators/">All Finance Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Insurance</h4>
+          <a href="/insurance-calculators/">All Insurance Calculators</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links"><a href="/about.html">About</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateRenters() {
+      const propertyValue = parseFloat(document.getElementById('property-value').value);
+      const liabilityCoverage = parseFloat(document.getElementById('liability-coverage').value);
+      const deductible = parseFloat(document.getElementById('renters-deductible').value);
+
+      if (!propertyValue || !liabilityCoverage || !deductible) {
+        alert('Please fill in all fields.');
+        return;
+      }
+
+      // Base rate $120/year for basic coverage
+      let basePremium = 120;
+      // Property rate: ~$3.50 per $1,000 of property value
+      basePremium += (propertyValue / 1000) * 3.50;
+      // Liability adder
+      if (liabilityCoverage >= 300000) basePremium += 25;
+      if (liabilityCoverage >= 500000) basePremium += 35;
+      // Deductible discount
+      const deductibleDiscounts = { 250: 1.1, 500: 1.0, 1000: 0.9, 2000: 0.8 };
+      basePremium *= (deductibleDiscounts[deductible] || 1.0);
+
+      const annualPremium = basePremium;
+      const monthlyPremium = annualPremium / 12;
+      const dailyCost = annualPremium / 365;
+
+      document.getElementById('result-annual').textContent = '$' + annualPremium.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+      document.getElementById('result-monthly').textContent = '$' + monthlyPremium.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+      document.getElementById('result-daily').textContent = '$' + dailyCost.toFixed(2);
+      document.getElementById('renters-results').classList.remove('hidden');
+    }
+
+    function resetRenters() {
+      document.getElementById('renters-form').reset();
+      document.getElementById('renters-results').classList.add('hidden');
+    }
+
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', !expanded);
+        btn.nextElementSibling.classList.toggle('open');
+      });
+    });
+
+    document.querySelector('.mobile-menu-toggle')?.addEventListener('click', function() {
+      const nav = document.querySelector('.mobile-nav');
+      const expanded = this.getAttribute('aria-expanded') === 'true';
+      this.setAttribute('aria-expanded', !expanded);
+      nav.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>

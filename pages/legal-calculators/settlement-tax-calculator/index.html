@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Settlement Tax Calculator | CalcWise</title>
+  <meta name="description" content="Calculate the taxable portion of your legal settlement, estimated tax owed, and net amount after taxes based on settlement type, amount, and attorney fees.">
+  <meta name="keywords" content="settlement tax calculator, taxable settlement, lawsuit tax calculator, settlement after tax, legal settlement taxes">
+  <link rel="canonical" href="https://calcwise.io/legal-calculators/settlement-tax-calculator/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Settlement Tax Calculator | CalcWise">
+  <meta property="og:description" content="Calculate the taxable portion of your legal settlement, estimated tax owed, and net amount after taxes.">
+  <meta property="og:url" content="https://calcwise.io/legal-calculators/settlement-tax-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Settlement Tax Calculator | CalcWise">
+  <meta name="twitter:description" content="Calculate the taxable portion of your legal settlement, estimated tax owed, and net amount after taxes.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <!-- BreadcrumbList Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Legal Calculators", "item": "https://calcwise.io/legal-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "Settlement Tax Calculator", "item": "https://calcwise.io/legal-calculators/settlement-tax-calculator/" }
+    ]
+  }
+  </script>
+
+  <!-- FAQPage Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Are legal settlements taxable?",
+        "acceptedAnswer": { "@type": "Answer", "text": "It depends on the type of settlement. Physical personal injury settlements are generally tax-free under IRS Section 104. However, employment settlements (lost wages, discrimination), punitive damages, property damage beyond basis, and interest on settlements are typically taxable as ordinary income." }
+      },
+      {
+        "@type": "Question",
+        "name": "Are personal injury settlements taxable?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Settlements for physical injuries or physical sickness are generally not taxable under federal law. However, the portion allocated to punitive damages, emotional distress (not from physical injury), or lost wages may be taxable. Medical expense deductions previously taken must also be considered." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I deduct attorney fees from my settlement?",
+        "acceptedAnswer": { "@type": "Answer", "text": "For employment-related settlements, attorney fees may be deductible as an above-the-line deduction. For other types of settlements, attorney fees are generally not deductible. However, you still owe taxes on the full settlement amount even though you only receive the portion after attorney fees." }
+      },
+      {
+        "@type": "Question",
+        "name": "How are employment settlements taxed?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Employment settlements for lost wages, discrimination, wrongful termination, or harassment are generally taxable as ordinary income. The employer portion of FICA taxes may also apply. Emotional distress damages in employment cases are taxable unless they stem from a physical injury." }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need to report a settlement on my tax return?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes, you should report all settlements on your tax return. Even non-taxable personal injury settlements should be documented. The payer will typically issue a 1099 form for the settlement amount. Consult a tax professional to ensure proper reporting and to take advantage of any applicable exclusions." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/business-calculators/">Business</a>
+        <a href="/legal-calculators/" aria-current="page">Legal</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/business-calculators/">Business Calculators</a>
+      <a href="/legal-calculators/">Legal Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/legal-calculators/">Legal Calculators</a></li>
+          <li><span aria-current="page">Settlement Tax Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="article-content">
+          <h1>Settlement Tax Calculator</h1>
+          <p>Estimate how much of your legal settlement is taxable and what you can expect to keep after taxes. Different types of settlements have very different tax treatments under IRS rules. This calculator helps you understand the tax implications of personal injury, employment, and property settlements.</p>
+
+          <div class="calc-container mt-8">
+            <div class="calc-header">
+              <h2>Calculate Settlement Taxes</h2>
+              <p>Enter your settlement details below</p>
+            </div>
+            <div class="calc-body">
+              <form id="st-form" onsubmit="return false;">
+                <div class="form-group">
+                  <label class="form-label" for="settlement-amount">Total Settlement Amount</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="settlement-amount" name="settlementAmount" class="form-input" placeholder="100000" min="0" step="1000" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="settlement-type">Settlement Type</label>
+                  <select id="settlement-type" name="settlementType" class="form-input" required>
+                    <option value="">Select type...</option>
+                    <option value="personal-injury">Personal Injury (Physical)</option>
+                    <option value="employment">Employment (Lost Wages / Discrimination)</option>
+                    <option value="property">Property Damage</option>
+                    <option value="emotional">Emotional Distress (Non-Physical)</option>
+                    <option value="punitive">Punitive Damages</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="attorney-fees">Attorney Fees</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="attorney-fees" name="attorneyFees" class="form-input" placeholder="33000" min="0" step="1000" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="tax-rate">Estimated Tax Rate <span class="form-hint">(federal + state)</span></label>
+                  <div class="input-suffix">
+                    <input type="number" id="tax-rate" name="taxRate" class="form-input" placeholder="30" min="0" max="60" step="1" required>
+                    <span class="suffix">%</span>
+                  </div>
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calculateSettlementTax()">Calculate Taxes</button>
+                  <button type="button" class="btn btn-reset" onclick="resetSettlementTax()">Reset</button>
+                </div>
+              </form>
+
+              <div id="st-results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">Net Amount After Taxes &amp; Fees</div>
+                  <div class="result-value" id="result-net"></div>
+                </div>
+                <div class="result-grid">
+                  <div class="result-item">
+                    <div class="result-label">Taxable Portion</div>
+                    <div class="result-value" id="result-taxable"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Estimated Tax Owed</div>
+                    <div class="result-value" id="result-tax"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Attorney Fees</div>
+                    <div class="result-value" id="result-fees"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Tax-Free Portion</div>
+                    <div class="result-value" id="result-taxfree"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Formula Section -->
+          <section class="content-section">
+            <h2>Settlement Tax Formula</h2>
+            <p>The tax treatment of your settlement depends on its type:</p>
+            <div class="formula-box">
+              <div class="formula-label">Settlement Tax Calculation</div>
+              Taxable Portion = Settlement Amount x Taxable Percentage (varies by type)
+              <br>Tax Owed = Taxable Portion x Combined Tax Rate
+              <br>Net = Settlement - Attorney Fees - Tax Owed
+            </div>
+            <p><strong>Personal injury</strong> (physical) settlements are generally 100% tax-free. <strong>Employment</strong> settlements are typically 100% taxable. <strong>Property</strong> settlements are taxable to the extent they exceed your basis (cost) in the property. <strong>Punitive damages</strong> and <strong>emotional distress</strong> (non-physical) damages are fully taxable.</p>
+          </section>
+
+          <!-- How to Use -->
+          <section class="content-section">
+            <h2>How to Use This Calculator</h2>
+            <ol>
+              <li><strong>Enter the total settlement amount</strong> - the gross amount before attorney fees and taxes.</li>
+              <li><strong>Select the settlement type</strong> - this determines what percentage is taxable.</li>
+              <li><strong>Enter attorney fees</strong> - the amount paid to your attorney (contingency or hourly).</li>
+              <li><strong>Enter your estimated tax rate</strong> - combine federal and state rates (typically 25-40% for most people).</li>
+              <li><strong>Click "Calculate Taxes"</strong> to see the taxable portion, estimated tax, and your net amount.</li>
+            </ol>
+          </section>
+
+          <!-- Example Scenario -->
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>You receive a $100,000 employment discrimination settlement with $33,000 in attorney fees (33% contingency). Since employment settlements are fully taxable, at a 30% combined tax rate you would owe approximately $30,000 in taxes. After paying $33,000 in attorney fees and $30,000 in taxes, your net amount would be approximately $37,000. Note: for employment cases, attorney fees may be deductible, which could reduce the taxable amount.</p>
+          </section>
+
+          <!-- FAQ Section -->
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Are legal settlements taxable?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>It depends on the type of settlement. Physical personal injury settlements are generally tax-free under IRS Section 104. However, employment settlements, punitive damages, property damage beyond basis, and interest on settlements are typically taxable as ordinary income.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Are personal injury settlements taxable?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Settlements for physical injuries or physical sickness are generally not taxable under federal law. However, the portion allocated to punitive damages, emotional distress (not from physical injury), or lost wages may be taxable.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Can I deduct attorney fees from my settlement?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>For employment-related settlements, attorney fees may be deductible as an above-the-line deduction. For other types of settlements, attorney fees are generally not deductible. You may still owe taxes on the full settlement amount even though you only receive the portion after attorney fees.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                How are employment settlements taxed?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Employment settlements for lost wages, discrimination, wrongful termination, or harassment are generally taxable as ordinary income. The employer portion of FICA taxes may also apply.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Do I need to report a settlement on my tax return?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Yes, you should report all settlements on your tax return. Even non-taxable personal injury settlements should be documented. The payer will typically issue a 1099 form. Consult a tax professional to ensure proper reporting.</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Related Calculators -->
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/legal-calculators/personal-injury-settlement-calculator/" class="card card-link">
+                <h3>Personal Injury Settlement Calculator</h3>
+                <p>Estimate the value of a personal injury claim.</p>
+              </a>
+              <a href="/legal-calculators/lawsuit-settlement-estimator/" class="card card-link">
+                <h3>Lawsuit Settlement Estimator</h3>
+                <p>Estimate settlement ranges for various case types.</p>
+              </a>
+              <a href="/legal-calculators/workers-compensation-settlement-calculator/" class="card card-link">
+                <h3>Workers Comp Settlement Calculator</h3>
+                <p>Estimate workers compensation settlement value.</p>
+              </a>
+            </div>
+          </section>
+
+          <!-- Disclaimer -->
+          <div class="disclaimer">
+            <strong>Important Legal and Tax Disclaimer:</strong> This calculator provides rough estimates for informational and educational purposes only. It does not constitute legal or tax advice. Tax treatment of settlements is complex and depends on many factors including the specific language of the settlement agreement, how the settlement is structured, and applicable IRS rules. Tax laws change frequently. Always consult with a qualified tax professional and/or attorney before making decisions about your settlement and its tax implications.
+          </div>
+
+          <!-- Ad Slot -->
+          <div class="ad-slot ad-slot-leaderboard"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="/legal-calculators/">All Legal Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Finance</h4>
+          <a href="/finance-calculators/">All Finance Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateSettlementTax() {
+      const amount = parseFloat(document.getElementById('settlement-amount').value);
+      const type = document.getElementById('settlement-type').value;
+      const attorneyFees = parseFloat(document.getElementById('attorney-fees').value);
+      const taxRate = parseFloat(document.getElementById('tax-rate').value) / 100;
+
+      if (!amount || !type || isNaN(attorneyFees) || isNaN(taxRate)) {
+        alert('Please fill in all fields.');
+        return;
+      }
+
+      // Taxable percentage by settlement type
+      const taxablePercentages = {
+        'personal-injury': 0,        // Physical injury - generally tax-free
+        'employment': 1.0,            // Fully taxable
+        'property': 0.5,              // Partially taxable (depends on basis)
+        'emotional': 1.0,             // Non-physical emotional distress - taxable
+        'punitive': 1.0               // Fully taxable
+      };
+
+      const taxablePct = taxablePercentages[type];
+      const taxableAmount = amount * taxablePct;
+      const taxFreeAmount = amount - taxableAmount;
+      const taxOwed = Math.round(taxableAmount * taxRate);
+      const netAmount = amount - attorneyFees - taxOwed;
+
+      const fmt = (n) => '$' + Math.abs(n).toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 });
+
+      document.getElementById('result-net').textContent = (netAmount < 0 ? '-' : '') + fmt(netAmount);
+      document.getElementById('result-taxable').textContent = fmt(taxableAmount);
+      document.getElementById('result-tax').textContent = fmt(taxOwed);
+      document.getElementById('result-fees').textContent = fmt(attorneyFees);
+      document.getElementById('result-taxfree').textContent = fmt(taxFreeAmount);
+
+      document.getElementById('st-results').classList.remove('hidden');
+    }
+
+    function resetSettlementTax() {
+      document.getElementById('st-form').reset();
+      document.getElementById('st-results').classList.add('hidden');
+    }
+  </script>
+</body>
+</html>

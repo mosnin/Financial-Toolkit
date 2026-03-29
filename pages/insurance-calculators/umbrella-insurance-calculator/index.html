@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Umbrella Insurance Calculator | CalcWise</title>
+  <meta name="description" content="Determine if you need umbrella insurance and how much coverage. Enter your net worth, assets, and existing liability limits to get a personalized recommendation.">
+  <meta name="keywords" content="umbrella insurance calculator, umbrella policy coverage, excess liability insurance, umbrella insurance cost, personal umbrella policy">
+  <link rel="canonical" href="https://calcwise.io/insurance-calculators/umbrella-insurance-calculator/">
+
+  <meta property="og:title" content="Umbrella Insurance Calculator | CalcWise">
+  <meta property="og:description" content="Determine if you need umbrella insurance and how much coverage is right for you.">
+  <meta property="og:url" content="https://calcwise.io/insurance-calculators/umbrella-insurance-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Umbrella Insurance Calculator | CalcWise">
+  <meta name="twitter:description" content="Determine if you need umbrella insurance and how much coverage.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Insurance Calculators", "item": "https://calcwise.io/insurance-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "Umbrella Insurance Calculator", "item": "https://calcwise.io/insurance-calculators/umbrella-insurance-calculator/" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is umbrella insurance?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Umbrella insurance provides extra liability coverage beyond the limits of your home, auto, and other policies. It kicks in when your underlying policy limits are exhausted, protecting your assets from large lawsuits and claims." }
+      },
+      {
+        "@type": "Question",
+        "name": "Who needs umbrella insurance?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Anyone with significant assets, a high-risk profile (pool, trampoline, teenage drivers), rental properties, or a public-facing career should consider umbrella insurance. Generally, if your net worth exceeds your liability limits, you need an umbrella policy." }
+      },
+      {
+        "@type": "Question",
+        "name": "How much does umbrella insurance cost?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Umbrella insurance is very affordable relative to the coverage it provides. A $1 million umbrella policy typically costs $150-$300 per year. Each additional million usually adds $75-$100 per year." }
+      },
+      {
+        "@type": "Question",
+        "name": "How much umbrella coverage do I need?",
+        "acceptedAnswer": { "@type": "Answer", "text": "At minimum, your umbrella coverage should equal your net worth. Many financial advisors recommend coverage of at least $1 million, with higher amounts for higher net worth individuals. Consider future earnings and assets as well." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/insurance-calculators/" aria-current="page">Insurance</a>
+        <a href="/business-calculators/">Business</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/insurance-calculators/">Insurance Calculators</a>
+      <a href="/business-calculators/">Business Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/insurance-calculators/">Insurance Calculators</a></li>
+          <li><span aria-current="page">Umbrella Insurance Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="article-content">
+          <h1>Umbrella Insurance Calculator</h1>
+          <p>Determine whether you need an umbrella insurance policy and how much coverage is appropriate. Enter your net worth, total assets, and current liability limits to receive a personalized umbrella coverage recommendation.</p>
+
+          <div class="calc-container mt-8">
+            <div class="calc-header">
+              <h2>Calculate Umbrella Coverage Needs</h2>
+              <p>Enter your financial details</p>
+            </div>
+            <div class="calc-body">
+              <form id="umbrella-form" onsubmit="return false;">
+                <div class="form-group">
+                  <label class="form-label" for="net-worth">Net Worth</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="net-worth" class="form-input" placeholder="750000" min="0" step="50000" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="total-assets">Total Assets <span class="form-hint">(home, vehicles, savings, investments)</span></label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="total-assets" class="form-input" placeholder="1000000" min="0" step="50000" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="existing-liability">Current Liability Limits <span class="form-hint">(combined auto + home)</span></label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="existing-liability" class="form-input" placeholder="500000" min="0" step="50000" required>
+                  </div>
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calculateUmbrella()">Calculate Coverage</button>
+                  <button type="button" class="btn btn-reset" onclick="resetUmbrella()">Reset</button>
+                </div>
+              </form>
+
+              <div id="umbrella-results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">Recommended Umbrella Coverage</div>
+                  <div class="result-value" id="result-coverage"></div>
+                </div>
+                <div class="result-grid">
+                  <div class="result-item">
+                    <div class="result-label">Coverage Gap</div>
+                    <div class="result-value" id="result-gap"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Estimated Annual Premium</div>
+                    <div class="result-value" id="result-premium"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Cost per $1M Coverage</div>
+                    <div class="result-value" id="result-per-million"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <section class="content-section">
+            <h2>Umbrella Coverage Formula</h2>
+            <p>Umbrella coverage needs are based on the gap between your assets at risk and existing liability protection:</p>
+            <div class="formula-box">
+              <div class="formula-label">Coverage Gap Formula</div>
+              Coverage Gap = Net Worth - Existing Liability Limits
+            </div>
+            <div class="formula-box">
+              <div class="formula-label">Recommended Coverage</div>
+              Umbrella Coverage = Coverage Gap rounded up to nearest $1,000,000 (minimum $1M)
+            </div>
+            <p>Umbrella policies are sold in <strong>$1 million increments</strong>. The first $1M typically costs $150-$300/year, with each additional $1M costing roughly $75-$100/year more.</p>
+          </section>
+
+          <section class="content-section">
+            <h2>How to Use This Calculator</h2>
+            <ol>
+              <li><strong>Enter your net worth</strong> - total assets minus total debts.</li>
+              <li><strong>Enter total assets</strong> - everything you own including home equity, vehicles, investments.</li>
+              <li><strong>Enter existing liability limits</strong> - combined liability from your current auto and home policies.</li>
+              <li><strong>Click "Calculate Coverage"</strong> to see your recommended umbrella policy amount.</li>
+            </ol>
+          </section>
+
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>An individual with a $750,000 net worth, $1,000,000 in total assets, and $500,000 in existing liability coverage has a gap of $250,000. The recommended umbrella coverage would be $1,000,000 (minimum policy size), costing approximately $200 per year. This provides substantial protection for just over $16 per month.</p>
+          </section>
+
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">What is umbrella insurance?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>Umbrella insurance provides extra liability coverage beyond your home and auto policy limits. It protects your assets from large lawsuits and claims.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">Who needs umbrella insurance?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>Anyone with significant assets, high-risk features (pool, teenage drivers), rental properties, or a public-facing career. If your net worth exceeds your liability limits, you need umbrella coverage.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">How much does umbrella insurance cost?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>A $1 million umbrella policy typically costs $150-$300 per year. Each additional million adds about $75-$100 per year. It is one of the most affordable insurance products available.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">How much umbrella coverage do I need?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>At minimum, your umbrella coverage should equal your net worth. Many advisors recommend at least $1 million, with more for higher net worth individuals.</p></div>
+            </div>
+          </section>
+
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/insurance-calculators/liability-insurance-calculator/" class="card card-link">
+                <h3>Liability Insurance Calculator</h3>
+                <p>Calculate business liability coverage needs.</p>
+              </a>
+              <a href="/insurance-calculators/home-insurance-cost-calculator/" class="card card-link">
+                <h3>Home Insurance Calculator</h3>
+                <p>Estimate homeowners insurance with liability coverage.</p>
+              </a>
+              <a href="/insurance-calculators/car-insurance-cost-estimator/" class="card card-link">
+                <h3>Car Insurance Estimator</h3>
+                <p>Estimate auto insurance with different liability limits.</p>
+              </a>
+              <a href="/insurance-calculators/insurance-coverage-needs-calculator/" class="card card-link">
+                <h3>Insurance Coverage Needs</h3>
+                <p>Complete insurance needs assessment.</p>
+              </a>
+              <a href="/finance-calculators/compound-interest-calculator/" class="card card-link">
+                <h3>Compound Interest Calculator</h3>
+                <p>Project future asset growth to plan coverage needs.</p>
+              </a>
+            </div>
+          </section>
+
+          <div class="disclaimer">
+            <strong>Disclaimer:</strong> This calculator provides estimates for informational purposes only. Actual umbrella insurance needs and costs vary by insurer and individual circumstances. This is not insurance or financial advice. Consult a licensed insurance professional for personalized guidance.
+          </div>
+
+          <div class="ad-slot ad-slot-leaderboard"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Real Estate</h4>
+          <a href="/real-estate-calculators/">All Real Estate Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Finance</h4>
+          <a href="/finance-calculators/">All Finance Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Insurance</h4>
+          <a href="/insurance-calculators/">All Insurance Calculators</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links"><a href="/about.html">About</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateUmbrella() {
+      const netWorth = parseFloat(document.getElementById('net-worth').value);
+      const totalAssets = parseFloat(document.getElementById('total-assets').value);
+      const existingLiability = parseFloat(document.getElementById('existing-liability').value);
+
+      if (isNaN(netWorth) || isNaN(totalAssets) || isNaN(existingLiability)) {
+        alert('Please fill in all fields.');
+        return;
+      }
+
+      const coverageGap = Math.max(0, netWorth - existingLiability);
+      // Round up to nearest $1M, minimum $1M
+      const recommendedCoverage = Math.max(1000000, Math.ceil(coverageGap / 1000000) * 1000000);
+
+      // Estimate premium: $200 for first $1M, $75 for each additional $1M
+      const millions = recommendedCoverage / 1000000;
+      const estimatedPremium = 200 + Math.max(0, (millions - 1) * 75);
+      const perMillion = estimatedPremium / millions;
+
+      const fmt = (n) => '$' + n.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+
+      document.getElementById('result-coverage').textContent = fmt(recommendedCoverage);
+      document.getElementById('result-gap').textContent = fmt(coverageGap);
+      document.getElementById('result-premium').textContent = fmt(estimatedPremium) + '/year';
+      document.getElementById('result-per-million').textContent = '$' + perMillion.toFixed(0) + '/year';
+      document.getElementById('umbrella-results').classList.remove('hidden');
+    }
+
+    function resetUmbrella() {
+      document.getElementById('umbrella-form').reset();
+      document.getElementById('umbrella-results').classList.add('hidden');
+    }
+
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', !expanded);
+        btn.nextElementSibling.classList.toggle('open');
+      });
+    });
+
+    document.querySelector('.mobile-menu-toggle')?.addEventListener('click', function() {
+      const nav = document.querySelector('.mobile-nav');
+      const expanded = this.getAttribute('aria-expanded') === 'true';
+      this.setAttribute('aria-expanded', !expanded);
+      nav.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>

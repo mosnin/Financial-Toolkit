@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Take-Home Pay Calculator - Net Pay Breakdown After Deductions | CalcWise</title>
+  <meta name="description" content="Free take-home pay calculator. Calculate your net pay after federal tax, state tax, FICA, and pre-tax deductions like 401(k) and health insurance. See a complete pay breakdown.">
+  <meta name="keywords" content="take-home pay calculator, net pay calculator, payroll deductions, after tax pay, net income calculator">
+  <link rel="canonical" href="https://calcwise.io/salary-calculators/take-home-pay-calculator/">
+
+  <meta property="og:title" content="Take-Home Pay Calculator - Net Pay Breakdown After Deductions">
+  <meta property="og:description" content="Free take-home pay calculator. Calculate your net pay after all taxes and deductions.">
+  <meta property="og:url" content="https://calcwise.io/salary-calculators/take-home-pay-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Take-Home Pay Calculator - Net Pay Breakdown After Deductions">
+  <meta name="twitter:description" content="Free take-home pay calculator. Calculate your net pay after all taxes and deductions.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Salary Calculators", "item": "https://calcwise.io/salary-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "Take-Home Pay Calculator", "item": "https://calcwise.io/salary-calculators/take-home-pay-calculator/" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is take-home pay?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Take-home pay (net pay) is the amount of money you receive in your paycheck after all deductions are subtracted from your gross pay. Deductions include federal tax, state tax, FICA, health insurance, 401(k) contributions, and other withholdings." }
+      },
+      {
+        "@type": "Question",
+        "name": "What pre-tax deductions reduce my taxable income?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Common pre-tax deductions include 401(k) contributions, health insurance premiums, HSA contributions, FSA contributions, and commuter benefits. These reduce your taxable income, lowering your federal and state tax." }
+      },
+      {
+        "@type": "Question",
+        "name": "How much of my salary do I actually take home?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Most employees take home 65-80% of their gross salary, depending on tax rates, filing status, state of residence, and pre-tax deductions. Higher earners typically have a lower take-home percentage due to higher tax brackets." }
+      },
+      {
+        "@type": "Question",
+        "name": "Does 401(k) contribution reduce my take-home pay?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes, 401(k) contributions reduce your take-home pay, but they also reduce your taxable income. A $500 monthly contribution reduces your paycheck by $500 but saves you money on taxes, so the net reduction to take-home pay is less than $500." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/salary-calculators/" aria-current="page">Salary</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/salary-calculators/">Salary Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/salary-calculators/">Salary Calculators</a></li>
+          <li><span aria-current="page">Take-Home Pay Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="article-content">
+          <h1>Take-Home Pay Calculator</h1>
+          <p>Calculate your net pay after all deductions including federal tax, state tax, FICA, and pre-tax contributions like 401(k) and health insurance. Get a complete breakdown of where every dollar of your salary goes.</p>
+
+          <div class="calc-container mt-8">
+            <div class="calc-header">
+              <h2>Calculate Take-Home Pay</h2>
+              <p>Enter your salary and deduction details</p>
+            </div>
+            <div class="calc-body">
+              <form id="takehome-form" onsubmit="return false;">
+                <div class="form-group">
+                  <label class="form-label" for="gross-salary">Annual Gross Salary</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="gross-salary" name="grossSalary" class="form-input" placeholder="80000" min="0" step="100" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="pretax-deductions">Pre-Tax Deductions (annual) <span class="form-hint">(401k, health ins, HSA)</span></label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="pretax-deductions" name="pretaxDeductions" class="form-input" placeholder="6000" min="0" step="100" value="0">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="filing-status">Filing Status</label>
+                  <select id="filing-status" name="filingStatus" class="form-input" required>
+                    <option value="single">Single</option>
+                    <option value="married">Married Filing Jointly</option>
+                    <option value="head">Head of Household</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="state-rate">State Tax Rate</label>
+                  <div class="input-suffix">
+                    <input type="number" id="state-rate" name="stateRate" class="form-input" placeholder="5" min="0" max="15" step="0.01" value="5">
+                    <span class="suffix">%</span>
+                  </div>
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calculateTakeHome()">Calculate Take-Home Pay</button>
+                  <button type="button" class="btn btn-reset" onclick="resetTakeHome()">Reset</button>
+                </div>
+              </form>
+
+              <div id="takehome-results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">Annual Take-Home Pay</div>
+                  <div class="result-value" id="result-annual-net"></div>
+                </div>
+                <div class="result-grid">
+                  <div class="result-item">
+                    <div class="result-label">Monthly Take-Home</div>
+                    <div class="result-value" id="result-monthly-net"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Federal Tax</div>
+                    <div class="result-value" id="result-federal"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">State Tax</div>
+                    <div class="result-value" id="result-state"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">FICA</div>
+                    <div class="result-value" id="result-fica"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Pre-Tax Deductions</div>
+                    <div class="result-value" id="result-pretax"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Effective Tax Rate</div>
+                    <div class="result-value" id="result-effective-rate"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <section class="content-section">
+            <h2>Take-Home Pay Formula</h2>
+            <p>Your take-home pay accounts for pre-tax deductions before calculating taxes:</p>
+            <div class="formula-box">
+              <div class="formula-label">Net Pay Formula</div>
+              Net Pay = Gross Salary - Pre-Tax Deductions - Federal Tax - State Tax - FICA
+            </div>
+            <p>Pre-tax deductions reduce your taxable income, so you pay less in federal and state taxes. FICA is calculated on gross pay before pre-tax deductions.</p>
+          </section>
+
+          <section class="content-section">
+            <h2>How to Use This Calculator</h2>
+            <ol>
+              <li><strong>Enter your annual gross salary</strong> - total compensation before any deductions.</li>
+              <li><strong>Enter pre-tax deductions</strong> - annual 401(k), health insurance, HSA, and FSA contributions.</li>
+              <li><strong>Select your filing status</strong> - single, married filing jointly, or head of household.</li>
+              <li><strong>Enter your state tax rate</strong> - use 0% for no-income-tax states.</li>
+              <li><strong>Click "Calculate Take-Home Pay"</strong> to see your complete pay breakdown.</li>
+            </ol>
+          </section>
+
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>With an $80,000 salary, $6,000 in pre-tax deductions (401k + health insurance), filing as single in a 5% state tax state, your taxable income is $74,000. After approximately $8,600 in federal tax, $4,000 state tax, and $6,120 FICA, your take-home pay would be approximately $55,280 annually or $4,607 per month.</p>
+          </section>
+
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">What is take-home pay?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>Take-home pay is the amount you receive after all deductions including federal tax, state tax, FICA, health insurance, and retirement contributions are subtracted from your gross pay.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">What pre-tax deductions reduce my taxable income?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>Common pre-tax deductions include 401(k) contributions, health insurance premiums, HSA contributions, FSA contributions, and commuter benefits.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">How much of my salary do I actually take home?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>Most employees take home 65-80% of their gross salary, depending on tax rates, filing status, state, and pre-tax deductions.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">Does 401(k) contribution reduce my take-home pay?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>Yes, but it also reduces your taxable income. A $500 monthly contribution reduces your paycheck by $500 but saves you on taxes, so the net reduction is less than $500.</p></div>
+            </div>
+          </section>
+
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/salary-calculators/paycheck-calculator/" class="card card-link">
+                <h3>Paycheck Calculator</h3>
+                <p>Calculate your per-paycheck net pay.</p>
+              </a>
+              <a href="/salary-calculators/salary-after-tax-calculator/" class="card card-link">
+                <h3>Salary After Tax Calculator</h3>
+                <p>See after-tax income by pay period.</p>
+              </a>
+              <a href="/salary-calculators/bonus-calculator/" class="card card-link">
+                <h3>Bonus Calculator</h3>
+                <p>Calculate your after-tax bonus.</p>
+              </a>
+              <a href="/salary-calculators/retirement-income-estimator/" class="card card-link">
+                <h3>Retirement Income Estimator</h3>
+                <p>See how your 401(k) builds over time.</p>
+              </a>
+              <a href="/salary-calculators/freelance-income-calculator/" class="card card-link">
+                <h3>Freelance Income Calculator</h3>
+                <p>Calculate freelance net income after taxes.</p>
+              </a>
+            </div>
+          </section>
+
+          <div class="disclaimer">
+            <strong>Disclaimer:</strong> This calculator provides estimates for informational purposes only. Actual take-home pay may vary based on local taxes, additional deductions, and other factors. This is not tax or financial advice. Consult a qualified professional.
+          </div>
+
+          <div class="ad-slot ad-slot-leaderboard"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Real Estate</h4>
+          <a href="/real-estate-calculators/">All Real Estate Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Salary</h4>
+          <a href="/salary-calculators/">All Salary Calculators</a>
+          <a href="/salary-calculators/take-home-pay-calculator/">Take-Home Pay</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function fmt(n) { return '$' + n.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ','); }
+
+    function calculateTakeHome() {
+      const gross = parseFloat(document.getElementById('gross-salary').value);
+      const pretax = parseFloat(document.getElementById('pretax-deductions').value) || 0;
+      const filingStatus = document.getElementById('filing-status').value;
+      const stateRate = parseFloat(document.getElementById('state-rate').value) || 0;
+
+      if (!gross || gross <= 0) { alert('Please enter a valid gross salary.'); return; }
+
+      const taxableGross = gross - pretax;
+      const standardDeduction = filingStatus === 'married' ? 29200 : filingStatus === 'head' ? 21900 : 14600;
+      const taxableIncome = Math.max(0, taxableGross - standardDeduction);
+
+      let brackets;
+      if (filingStatus === 'married') {
+        brackets = [[23200,0.10],[71080,0.12],[100000,0.22],[175050,0.24],[175000,0.32],[200000,0.35],[Infinity,0.37]];
+      } else if (filingStatus === 'head') {
+        brackets = [[16550,0.10],[47450,0.12],[50000,0.22],[86350,0.24],[87500,0.32],[200000,0.35],[Infinity,0.37]];
+      } else {
+        brackets = [[11600,0.10],[35550,0.12],[53090,0.22],[53665,0.24],[87500,0.32],[200000,0.35],[Infinity,0.37]];
+      }
+
+      let federalTax = 0, remaining = taxableIncome;
+      for (const [width, rate] of brackets) {
+        if (remaining <= 0) break;
+        federalTax += Math.min(remaining, width) * rate;
+        remaining -= width;
+      }
+
+      const stateTax = taxableGross * stateRate / 100;
+      const fica = gross * 0.0765;
+      const totalDeductions = pretax + federalTax + stateTax + fica;
+      const netPay = gross - totalDeductions;
+      const effectiveRate = ((federalTax + stateTax + fica) / gross * 100);
+
+      document.getElementById('result-annual-net').textContent = fmt(netPay);
+      document.getElementById('result-monthly-net').textContent = fmt(netPay / 12);
+      document.getElementById('result-federal').textContent = fmt(federalTax);
+      document.getElementById('result-state').textContent = fmt(stateTax);
+      document.getElementById('result-fica').textContent = fmt(fica);
+      document.getElementById('result-pretax').textContent = fmt(pretax);
+      document.getElementById('result-effective-rate').textContent = effectiveRate.toFixed(1) + '%';
+      document.getElementById('takehome-results').classList.remove('hidden');
+    }
+
+    function resetTakeHome() {
+      document.getElementById('takehome-form').reset();
+      document.getElementById('takehome-results').classList.add('hidden');
+    }
+  </script>
+</body>
+</html>

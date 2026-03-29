@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Legal Fee Calculator | CalcWise</title>
+  <meta name="description" content="Estimate total attorney fees and retainer costs based on case type, complexity, hourly rate, and estimated hours. Free legal cost estimator.">
+  <meta name="keywords" content="legal fee calculator, attorney fee estimator, lawyer cost calculator, retainer calculator, legal cost estimator">
+  <link rel="canonical" href="https://calcwise.io/legal-calculators/legal-fee-calculator/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Legal Fee Calculator | CalcWise">
+  <meta property="og:description" content="Estimate total attorney fees and retainer costs based on case type, complexity, hourly rate, and estimated hours.">
+  <meta property="og:url" content="https://calcwise.io/legal-calculators/legal-fee-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Legal Fee Calculator | CalcWise">
+  <meta name="twitter:description" content="Estimate total attorney fees and retainer costs based on case type, complexity, hourly rate, and estimated hours.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <!-- BreadcrumbList Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Legal Calculators", "item": "https://calcwise.io/legal-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "Legal Fee Calculator", "item": "https://calcwise.io/legal-calculators/legal-fee-calculator/" }
+    ]
+  }
+  </script>
+
+  <!-- FAQPage Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How much do lawyers charge per hour?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Attorney hourly rates vary widely based on experience, location, and specialization. Rates typically range from $150-$300 per hour for less experienced attorneys in smaller markets, to $300-$500 for experienced attorneys, and $500-$1,000+ for top-tier attorneys at large firms in major cities." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is a legal retainer?",
+        "acceptedAnswer": { "@type": "Answer", "text": "A legal retainer is an upfront payment made to an attorney to secure their services. It acts as a deposit that the attorney draws from as they work on your case. Retainers typically range from a few thousand dollars to tens of thousands, depending on the case type and expected complexity." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between hourly fees and contingency fees?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Hourly fees are charged for each hour of work regardless of outcome. Contingency fees mean the attorney only gets paid if you win, typically taking 25-40% of the settlement. Contingency is common in personal injury cases, while hourly is typical for family law, criminal defense, and business litigation." }
+      },
+      {
+        "@type": "Question",
+        "name": "What other costs are there besides attorney fees?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Additional costs can include court filing fees ($200-$500), process server fees ($50-$150), expert witness fees ($1,000-$10,000+), deposition costs, document copying, travel expenses, paralegal time, and administrative costs. These are often billed separately from attorney time." }
+      },
+      {
+        "@type": "Question",
+        "name": "How can I reduce my legal fees?",
+        "acceptedAnswer": { "@type": "Answer", "text": "You can reduce legal fees by being organized and prepared for meetings, doing your own legwork where possible, communicating efficiently (batch your questions), using a less expensive attorney for simpler tasks, negotiating fee structures, and considering mediation or settlement early to avoid prolonged litigation." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/business-calculators/">Business</a>
+        <a href="/legal-calculators/" aria-current="page">Legal</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/business-calculators/">Business Calculators</a>
+      <a href="/legal-calculators/">Legal Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/legal-calculators/">Legal Calculators</a></li>
+          <li><span aria-current="page">Legal Fee Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="article-content">
+          <h1>Legal Fee Calculator</h1>
+          <p>Estimate total attorney fees and retainer requirements for your legal case. Whether you need a family law attorney, criminal defense lawyer, or business litigator, this calculator helps you budget for legal representation based on case type, complexity, and your attorney's hourly rate.</p>
+
+          <div class="calc-container mt-8">
+            <div class="calc-header">
+              <h2>Estimate Legal Fees</h2>
+              <p>Enter your case details below</p>
+            </div>
+            <div class="calc-body">
+              <form id="lf-form" onsubmit="return false;">
+                <div class="form-group">
+                  <label class="form-label" for="case-type">Case Type</label>
+                  <select id="case-type" name="caseType" class="form-input" required>
+                    <option value="">Select case type...</option>
+                    <option value="family">Family Law (Divorce, Custody)</option>
+                    <option value="criminal">Criminal Defense</option>
+                    <option value="personal-injury">Personal Injury</option>
+                    <option value="business">Business Litigation</option>
+                    <option value="estate">Estate / Probate</option>
+                    <option value="real-estate">Real Estate</option>
+                    <option value="employment">Employment Law</option>
+                    <option value="immigration">Immigration</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="case-complexity">Case Complexity</label>
+                  <select id="case-complexity" name="caseComplexity" class="form-input" required>
+                    <option value="">Select complexity...</option>
+                    <option value="simple">Simple (Straightforward, minimal disputes)</option>
+                    <option value="moderate">Moderate (Some complexity or disputes)</option>
+                    <option value="complex">Complex (Multiple issues, discovery needed)</option>
+                    <option value="highly-complex">Highly Complex (Trial likely, extensive discovery)</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="attorney-rate">Attorney Hourly Rate</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="attorney-rate" name="attorneyRate" class="form-input" placeholder="300" min="50" max="1500" step="10" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="estimated-hours">Estimated Hours</label>
+                  <input type="number" id="estimated-hours" name="estimatedHours" class="form-input" placeholder="25" min="1" max="1000" step="1" required>
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calculateLegalFees()">Calculate Fees</button>
+                  <button type="button" class="btn btn-reset" onclick="resetLegalFees()">Reset</button>
+                </div>
+              </form>
+
+              <div id="lf-results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">Total Estimated Legal Fees</div>
+                  <div class="result-value" id="result-total"></div>
+                </div>
+                <div class="result-grid">
+                  <div class="result-item">
+                    <div class="result-label">Attorney Fees</div>
+                    <div class="result-value" id="result-attorney"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Estimated Retainer</div>
+                    <div class="result-value" id="result-retainer"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Court &amp; Filing Fees (est.)</div>
+                    <div class="result-value" id="result-court"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Other Costs (est.)</div>
+                    <div class="result-value" id="result-other"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Formula Section -->
+          <section class="content-section">
+            <h2>Legal Fee Calculation</h2>
+            <p>Total legal fees are calculated by combining attorney time with additional costs:</p>
+            <div class="formula-box">
+              <div class="formula-label">Total Legal Fees</div>
+              Total = (Hourly Rate x Estimated Hours) + Court Fees + Other Costs
+            </div>
+            <p><strong>Attorney fees</strong> are the largest component, calculated by multiplying the hourly rate by estimated hours. <strong>Court and filing fees</strong> vary by case type and jurisdiction. <strong>Other costs</strong> may include paralegal time, document preparation, expert witnesses, and administrative expenses. The <strong>retainer</strong> is typically an upfront portion of the estimated total fees.</p>
+          </section>
+
+          <!-- How to Use -->
+          <section class="content-section">
+            <h2>How to Use This Calculator</h2>
+            <ol>
+              <li><strong>Select your case type</strong> - the area of law affects typical costs and additional fees.</li>
+              <li><strong>Select the complexity level</strong> - more complex cases require more attorney time and resources.</li>
+              <li><strong>Enter the attorney hourly rate</strong> - ask potential attorneys for their rate or use averages for your area.</li>
+              <li><strong>Enter estimated hours</strong> - your attorney can help estimate this, or use our suggested ranges.</li>
+              <li><strong>Click "Calculate Fees"</strong> to see the total estimated cost and retainer amount.</li>
+            </ol>
+          </section>
+
+          <!-- Example Scenario -->
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>A moderate-complexity family law case (contested divorce) with an attorney charging $300/hour for an estimated 40 hours would have attorney fees of $12,000. Adding approximately $400 in court filing fees and $1,500 in other costs brings the total estimate to $13,900. A typical retainer for this case would be around $5,000 to $7,000.</p>
+          </section>
+
+          <!-- FAQ Section -->
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                How much do lawyers charge per hour?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Attorney hourly rates vary widely based on experience, location, and specialization. Rates typically range from $150-$300 per hour for less experienced attorneys in smaller markets, to $300-$500 for experienced attorneys, and $500-$1,000+ for top-tier attorneys at large firms in major cities.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What is a legal retainer?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>A legal retainer is an upfront payment made to an attorney to secure their services. It acts as a deposit that the attorney draws from as they work on your case. Retainers typically range from a few thousand dollars to tens of thousands, depending on the case type and expected complexity.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What is the difference between hourly fees and contingency fees?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Hourly fees are charged for each hour of work regardless of outcome. Contingency fees mean the attorney only gets paid if you win, typically taking 25-40% of the settlement. Contingency is common in personal injury cases, while hourly is typical for family law, criminal defense, and business litigation.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What other costs are there besides attorney fees?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Additional costs can include court filing fees ($200-$500), process server fees ($50-$150), expert witness fees ($1,000-$10,000+), deposition costs, document copying, travel expenses, paralegal time, and administrative costs.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                How can I reduce my legal fees?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>You can reduce legal fees by being organized and prepared for meetings, doing your own legwork where possible, communicating efficiently, negotiating fee structures, and considering mediation or settlement early to avoid prolonged litigation.</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Related Calculators -->
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/legal-calculators/divorce-cost-calculator/" class="card card-link">
+                <h3>Divorce Cost Calculator</h3>
+                <p>Estimate total divorce costs including attorney fees.</p>
+              </a>
+              <a href="/legal-calculators/small-claims-court-calculator/" class="card card-link">
+                <h3>Small Claims Court Calculator</h3>
+                <p>Calculate the cost of filing a small claims case.</p>
+              </a>
+              <a href="/legal-calculators/personal-injury-settlement-calculator/" class="card card-link">
+                <h3>Personal Injury Settlement Calculator</h3>
+                <p>Estimate the value of a personal injury claim.</p>
+              </a>
+            </div>
+          </section>
+
+          <!-- Disclaimer -->
+          <div class="disclaimer">
+            <strong>Important Legal Disclaimer:</strong> This calculator provides rough estimates for informational and educational purposes only. It does not constitute legal advice. Actual legal fees vary significantly based on the attorney, law firm, location, specific case circumstances, and how the case progresses. Always discuss fees, billing practices, and retainer requirements directly with your attorney before engaging their services.
+          </div>
+
+          <!-- Ad Slot -->
+          <div class="ad-slot ad-slot-leaderboard"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="/legal-calculators/">All Legal Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Finance</h4>
+          <a href="/finance-calculators/">All Finance Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateLegalFees() {
+      const caseType = document.getElementById('case-type').value;
+      const complexity = document.getElementById('case-complexity').value;
+      const rate = parseFloat(document.getElementById('attorney-rate').value);
+      const hours = parseFloat(document.getElementById('estimated-hours').value);
+
+      if (!caseType || !complexity || !rate || !hours) {
+        alert('Please fill in all fields.');
+        return;
+      }
+
+      const attorneyFees = rate * hours;
+
+      // Court filing fees by case type
+      const courtFees = {
+        'family': 400, 'criminal': 300, 'personal-injury': 350,
+        'business': 500, 'estate': 350, 'real-estate': 300,
+        'employment': 400, 'immigration': 700, 'other': 350
+      };
+      const court = courtFees[caseType] || 350;
+
+      // Other costs by complexity
+      const otherCosts = {
+        'simple': 500, 'moderate': 1500, 'complex': 3500, 'highly-complex': 7000
+      };
+      const other = otherCosts[complexity] || 1500;
+
+      const total = attorneyFees + court + other;
+
+      // Retainer is typically 25-50% of estimated attorney fees
+      const retainerPct = { 'simple': 0.3, 'moderate': 0.35, 'complex': 0.4, 'highly-complex': 0.5 };
+      const retainer = Math.round(attorneyFees * (retainerPct[complexity] || 0.35));
+
+      const fmt = (n) => '$' + n.toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 });
+
+      document.getElementById('result-total').textContent = fmt(Math.round(total));
+      document.getElementById('result-attorney').textContent = fmt(Math.round(attorneyFees));
+      document.getElementById('result-retainer').textContent = fmt(retainer);
+      document.getElementById('result-court').textContent = fmt(court);
+      document.getElementById('result-other').textContent = fmt(other);
+
+      document.getElementById('lf-results').classList.remove('hidden');
+    }
+
+    function resetLegalFees() {
+      document.getElementById('lf-form').reset();
+      document.getElementById('lf-results').classList.add('hidden');
+    }
+  </script>
+</body>
+</html>

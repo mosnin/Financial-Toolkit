@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Debt Consolidation Calculator | CalcWise</title>
+  <meta name="description" content="Compare your current debt payments to a consolidated loan. Enter multiple debts to see potential monthly savings, total interest savings, and payoff time differences.">
+  <meta name="keywords" content="debt consolidation calculator, consolidate debt, debt consolidation savings, combine debts, debt consolidation loan">
+  <link rel="canonical" href="https://calcwise.io/credit-calculators/debt-consolidation-calculator/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Debt Consolidation Calculator | CalcWise">
+  <meta property="og:description" content="Compare your current debt payments to a consolidated loan and see your potential savings.">
+  <meta property="og:url" content="https://calcwise.io/credit-calculators/debt-consolidation-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Debt Consolidation Calculator | CalcWise">
+  <meta name="twitter:description" content="Compare your current debt payments to a consolidated loan and see your potential savings.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <!-- BreadcrumbList Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Credit Calculators", "item": "https://calcwise.io/credit-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "Debt Consolidation Calculator", "item": "https://calcwise.io/credit-calculators/debt-consolidation-calculator/" }
+    ]
+  }
+  </script>
+
+  <!-- FAQPage Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is debt consolidation?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Debt consolidation combines multiple debts into a single loan with one monthly payment, ideally at a lower interest rate. This can simplify payments, reduce interest costs, and help you pay off debt faster." }
+      },
+      {
+        "@type": "Question",
+        "name": "When does debt consolidation make sense?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Consolidation makes sense when you can get a lower interest rate than your current weighted average rate, when you want to simplify multiple payments, or when you need a structured payoff timeline. It works best for those with good enough credit to qualify for competitive rates." }
+      },
+      {
+        "@type": "Question",
+        "name": "Does debt consolidation hurt your credit score?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Initially, applying for a consolidation loan may cause a small temporary dip from the hard inquiry. However, consolidation often improves your credit over time by reducing utilization on revolving accounts and establishing consistent payment history." }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the different ways to consolidate debt?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Common methods include personal consolidation loans, balance transfer credit cards, home equity loans or HELOCs, and debt management plans through credit counseling agencies. Each has different requirements, rates, and trade-offs." }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the risks of debt consolidation?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Risks include extending your payoff timeline and paying more total interest, accumulating new debt on freed-up credit cards, fees that offset savings, and potentially putting assets at risk if using secured loans like a HELOC." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/credit-calculators/" aria-current="page">Credit</a>
+        <a href="/business-calculators/">Business</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/credit-calculators/">Credit Calculators</a>
+      <a href="/business-calculators/">Business Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/credit-calculators/">Credit Calculators</a></li>
+          <li><span aria-current="page">Debt Consolidation Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="article-content">
+          <h1>Debt Consolidation Calculator</h1>
+          <p>Considering consolidating your debts into a single loan? This calculator lets you enter multiple debts and compare your current total payments and interest to what you would pay with a consolidation loan, so you can see the real savings.</p>
+
+          <div class="calc-container mt-8">
+            <div class="calc-header">
+              <h2>Compare Current Debts vs. Consolidation</h2>
+              <p>Add your debts and enter the consolidation loan rate</p>
+            </div>
+            <div class="calc-body">
+              <form id="consolidation-form" onsubmit="return false;">
+                <div id="debts-container">
+                  <div class="debt-entry" data-index="0" style="border: 1px solid var(--color-gray-200); border-radius: var(--radius-md); padding: 1rem; margin-bottom: 1rem;">
+                    <strong>Debt 1</strong>
+                    <div class="form-group" style="margin-top: 0.5rem;">
+                      <label class="form-label">Balance</label>
+                      <div class="input-prefix">
+                        <span class="prefix">$</span>
+                        <input type="number" class="form-input debt-balance" placeholder="5000" min="0" step="100" required>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label">Interest Rate (APR)</label>
+                      <div class="input-suffix">
+                        <input type="number" class="form-input debt-rate" placeholder="22" min="0" max="40" step="0.01" required>
+                        <span class="suffix">%</span>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label">Monthly Payment</label>
+                      <div class="input-prefix">
+                        <span class="prefix">$</span>
+                        <input type="number" class="form-input debt-payment" placeholder="150" min="0" step="10" required>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <button type="button" class="btn btn-reset" onclick="addDebt()" style="margin-bottom: 1.5rem;">+ Add Another Debt</button>
+
+                <div class="form-group">
+                  <label class="form-label" for="consol-rate">Consolidation Loan Rate (APR)</label>
+                  <div class="input-suffix">
+                    <input type="number" id="consol-rate" name="consolRate" class="form-input" placeholder="10" min="0" max="40" step="0.01" required>
+                    <span class="suffix">%</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="consol-term">Consolidation Loan Term <span class="form-hint">(years)</span></label>
+                  <input type="number" id="consol-term" name="consolTerm" class="form-input" placeholder="5" min="1" max="30" step="1" required>
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calculateConsolidation()">Compare</button>
+                  <button type="button" class="btn btn-reset" onclick="resetConsolidation()">Reset</button>
+                </div>
+              </form>
+
+              <div id="consolidation-results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">Monthly Savings with Consolidation</div>
+                  <div class="result-value" id="result-monthly-savings"></div>
+                </div>
+                <div class="result-grid">
+                  <div class="result-item">
+                    <div class="result-label">Current Total Monthly Payment</div>
+                    <div class="result-value" id="result-current-payment"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Consolidated Monthly Payment</div>
+                    <div class="result-value" id="result-consol-payment"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Total Interest Savings</div>
+                    <div class="result-value" id="result-interest-savings"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Consolidation Payoff Time</div>
+                    <div class="result-value" id="result-payoff-time"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Formula Section -->
+          <section class="content-section">
+            <h2>How the Comparison Works</h2>
+            <p>This calculator compares two scenarios:</p>
+            <div class="formula-box">
+              <div class="formula-label">Consolidation Loan Payment Formula</div>
+              M = P [ r(1 + r)^n ] / [ (1 + r)^n - 1 ]
+            </div>
+            <p>Where <strong>M</strong> is the monthly payment, <strong>P</strong> is the total consolidated balance, <strong>r</strong> is the monthly interest rate of the consolidation loan, and <strong>n</strong> is the total number of payments. The calculator compares the consolidation payment and total interest to your current combined payments and interest across all debts.</p>
+          </section>
+
+          <!-- How to Use -->
+          <section class="content-section">
+            <h2>How to Use This Calculator</h2>
+            <ol>
+              <li><strong>Enter each debt</strong> - add the balance, interest rate, and monthly payment for each debt you want to consolidate.</li>
+              <li><strong>Click "+ Add Another Debt"</strong> to add more debts.</li>
+              <li><strong>Enter the consolidation loan details</strong> - the interest rate and term you expect for the new loan.</li>
+              <li><strong>Click "Compare"</strong> to see the monthly savings, interest savings, and payoff timeline.</li>
+            </ol>
+          </section>
+
+          <!-- Example Scenario -->
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>Tom has three debts: a $5,000 credit card at 22% ($150/mo), a $3,000 card at 18% ($90/mo), and a $2,000 personal loan at 15% ($80/mo). His total payment is $320/mo. By consolidating all $10,000 at 10% over 5 years, his new payment would be about $212/mo, saving $108/mo and potentially thousands in total interest.</p>
+          </section>
+
+          <!-- FAQ Section -->
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What is debt consolidation?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Debt consolidation combines multiple debts into a single loan with one monthly payment, ideally at a lower interest rate. This can simplify payments, reduce interest costs, and help you pay off debt faster.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                When does debt consolidation make sense?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Consolidation makes sense when you can get a lower interest rate than your current weighted average rate, when you want to simplify multiple payments, or when you need a structured payoff timeline. It works best for those with good enough credit to qualify for competitive rates.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Does debt consolidation hurt your credit score?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Initially, applying for a consolidation loan may cause a small temporary dip from the hard inquiry. However, consolidation often improves your credit over time by reducing utilization on revolving accounts and establishing consistent payment history.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What are the different ways to consolidate debt?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Common methods include personal consolidation loans, balance transfer credit cards, home equity loans or HELOCs, and debt management plans through credit counseling agencies. Each has different requirements, rates, and trade-offs.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What are the risks of debt consolidation?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Risks include extending your payoff timeline and paying more total interest, accumulating new debt on freed-up credit cards, fees that offset savings, and potentially putting assets at risk if using secured loans like a HELOC.</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Related Calculators -->
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/credit-calculators/balance-transfer-savings-calculator/" class="card card-link">
+                <h3>Balance Transfer Savings Calculator</h3>
+                <p>See how much a balance transfer could save you.</p>
+              </a>
+              <a href="/credit-calculators/minimum-payment-calculator/" class="card card-link">
+                <h3>Minimum Payment Calculator</h3>
+                <p>See the true cost of making only minimum payments.</p>
+              </a>
+              <a href="/credit-calculators/loan-payoff-timeline-calculator/" class="card card-link">
+                <h3>Loan Payoff Timeline Calculator</h3>
+                <p>Calculate when you will be debt-free with extra payments.</p>
+              </a>
+              <a href="/credit-calculators/debt-to-income-ratio-calculator/" class="card card-link">
+                <h3>Debt-to-Income Ratio Calculator</h3>
+                <p>See how consolidation could improve your DTI ratio.</p>
+              </a>
+            </div>
+          </section>
+
+          <!-- Disclaimer -->
+          <div class="disclaimer">
+            <strong>Disclaimer:</strong> This calculator provides estimates for informational purposes only. Actual consolidation loan rates, terms, and fees may vary based on your creditworthiness and lender. This does not account for origination fees or other loan costs. This is not financial advice. Consult a qualified financial professional before making debt consolidation decisions.
+          </div>
+
+          <!-- Ad Slot -->
+          <div class="ad-slot ad-slot-leaderboard"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Real Estate</h4>
+          <a href="/real-estate-calculators/">All Real Estate Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Finance</h4>
+          <a href="/finance-calculators/">All Finance Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Credit</h4>
+          <a href="/credit-calculators/">All Credit Calculators</a>
+          <a href="/credit-calculators/debt-consolidation-calculator/">Debt Consolidation</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    let debtCount = 1;
+
+    function addDebt() {
+      debtCount++;
+      const container = document.getElementById('debts-container');
+      const div = document.createElement('div');
+      div.className = 'debt-entry';
+      div.setAttribute('data-index', debtCount - 1);
+      div.style.cssText = 'border: 1px solid var(--color-gray-200); border-radius: var(--radius-md); padding: 1rem; margin-bottom: 1rem;';
+      div.innerHTML = '<strong>Debt ' + debtCount + '</strong>' +
+        '<div class="form-group" style="margin-top: 0.5rem;"><label class="form-label">Balance</label><div class="input-prefix"><span class="prefix">$</span><input type="number" class="form-input debt-balance" placeholder="3000" min="0" step="100" required></div></div>' +
+        '<div class="form-group"><label class="form-label">Interest Rate (APR)</label><div class="input-suffix"><input type="number" class="form-input debt-rate" placeholder="18" min="0" max="40" step="0.01" required><span class="suffix">%</span></div></div>' +
+        '<div class="form-group"><label class="form-label">Monthly Payment</label><div class="input-prefix"><span class="prefix">$</span><input type="number" class="form-input debt-payment" placeholder="90" min="0" step="10" required></div></div>';
+      container.appendChild(div);
+    }
+
+    function calculateConsolidation() {
+      const balances = document.querySelectorAll('.debt-balance');
+      const rates = document.querySelectorAll('.debt-rate');
+      const payments = document.querySelectorAll('.debt-payment');
+      const consolRate = parseFloat(document.getElementById('consol-rate').value);
+      const consolTerm = parseInt(document.getElementById('consol-term').value);
+
+      if (isNaN(consolRate) || consolRate < 0) { alert('Please enter a valid consolidation rate.'); return; }
+      if (!consolTerm || consolTerm <= 0) { alert('Please enter a valid loan term.'); return; }
+
+      let totalBalance = 0;
+      let totalCurrentPayment = 0;
+      let totalCurrentInterest = 0;
+
+      for (let i = 0; i < balances.length; i++) {
+        const bal = parseFloat(balances[i].value);
+        const rate = parseFloat(rates[i].value);
+        const pmt = parseFloat(payments[i].value);
+        if (!bal || !pmt || isNaN(rate)) { alert('Please fill in all debt fields.'); return; }
+
+        totalBalance += bal;
+        totalCurrentPayment += pmt;
+
+        // Calculate total interest for this debt
+        let remaining = bal;
+        let monthlyRate = rate / 100 / 12;
+        let totalPaid = 0;
+        let months = 0;
+        while (remaining > 0.50 && months < 600) {
+          const interest = remaining * monthlyRate;
+          let payment = pmt;
+          if (payment > remaining + interest) payment = remaining + interest;
+          remaining = remaining + interest - payment;
+          totalPaid += payment;
+          months++;
+        }
+        totalCurrentInterest += (totalPaid - bal);
+      }
+
+      // Calculate consolidation loan
+      const r = consolRate / 100 / 12;
+      const n = consolTerm * 12;
+      let consolPayment;
+      if (r === 0) {
+        consolPayment = totalBalance / n;
+      } else {
+        consolPayment = totalBalance * (r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1);
+      }
+      const consolTotalPaid = consolPayment * n;
+      const consolTotalInterest = consolTotalPaid - totalBalance;
+
+      const monthlySavings = totalCurrentPayment - consolPayment;
+      const interestSavings = totalCurrentInterest - consolTotalInterest;
+
+      const fmt = (v) => '$' + v.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+
+      document.getElementById('result-monthly-savings').textContent = fmt(monthlySavings) + '/mo';
+      document.getElementById('result-current-payment').textContent = fmt(totalCurrentPayment) + '/mo';
+      document.getElementById('result-consol-payment').textContent = fmt(consolPayment) + '/mo';
+      document.getElementById('result-interest-savings').textContent = fmt(interestSavings);
+      document.getElementById('result-payoff-time').textContent = consolTerm + (consolTerm === 1 ? ' year' : ' years') + ' (' + n + ' months)';
+      document.getElementById('consolidation-results').classList.remove('hidden');
+    }
+
+    function resetConsolidation() {
+      document.getElementById('debts-container').innerHTML = '<div class="debt-entry" data-index="0" style="border: 1px solid var(--color-gray-200); border-radius: var(--radius-md); padding: 1rem; margin-bottom: 1rem;"><strong>Debt 1</strong><div class="form-group" style="margin-top: 0.5rem;"><label class="form-label">Balance</label><div class="input-prefix"><span class="prefix">$</span><input type="number" class="form-input debt-balance" placeholder="5000" min="0" step="100" required></div></div><div class="form-group"><label class="form-label">Interest Rate (APR)</label><div class="input-suffix"><input type="number" class="form-input debt-rate" placeholder="22" min="0" max="40" step="0.01" required><span class="suffix">%</span></div></div><div class="form-group"><label class="form-label">Monthly Payment</label><div class="input-prefix"><span class="prefix">$</span><input type="number" class="form-input debt-payment" placeholder="150" min="0" step="10" required></div></div></div>';
+      debtCount = 1;
+      document.getElementById('consol-rate').value = '';
+      document.getElementById('consol-term').value = '';
+      document.getElementById('consolidation-results').classList.add('hidden');
+    }
+
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', !expanded);
+        btn.nextElementSibling.classList.toggle('open');
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car Depreciation Calculator | CalcWise</title>
+  <meta name="description" content="Free car depreciation calculator to estimate your vehicle's current value, annual depreciation, and depreciation curve based on purchase price, age, and mileage.">
+  <meta name="keywords" content="car depreciation calculator, vehicle depreciation, car value calculator, auto depreciation, vehicle value estimator">
+  <link rel="canonical" href="https://calcwise.io/vehicle-calculators/car-depreciation-calculator/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Car Depreciation Calculator | CalcWise">
+  <meta property="og:description" content="Free car depreciation calculator to estimate your vehicle's current value and annual depreciation.">
+  <meta property="og:url" content="https://calcwise.io/vehicle-calculators/car-depreciation-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Car Depreciation Calculator | CalcWise">
+  <meta name="twitter:description" content="Free car depreciation calculator to estimate your vehicle's current value and annual depreciation.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <!-- BreadcrumbList Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Vehicle Calculators", "item": "https://calcwise.io/vehicle-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "Car Depreciation Calculator", "item": "https://calcwise.io/vehicle-calculators/car-depreciation-calculator/" }
+    ]
+  }
+  </script>
+
+  <!-- FAQPage Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How much does a car depreciate per year?",
+        "acceptedAnswer": { "@type": "Answer", "text": "On average, a new car loses about 20% of its value in the first year and roughly 15% per year for the next four years. After five years, a typical car is worth about 40% of its original purchase price." }
+      },
+      {
+        "@type": "Question",
+        "name": "Does mileage affect car depreciation?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes, higher mileage accelerates depreciation. The average driver puts about 12,000-15,000 miles per year on a car. Vehicles with significantly higher mileage depreciate faster due to increased wear and reduced remaining useful life." }
+      },
+      {
+        "@type": "Question",
+        "name": "Which cars depreciate the least?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Trucks, SUVs, and certain luxury brands tend to hold value better. Toyota, Lexus, and Porsche vehicles typically have the slowest depreciation rates. Electric vehicles from premium brands are also improving in value retention." }
+      },
+      {
+        "@type": "Question",
+        "name": "How is car depreciation calculated?",
+        "acceptedAnswer": { "@type": "Answer", "text": "This calculator uses a declining balance method with an average annual depreciation rate of about 15-20%. It also applies a mileage adjustment factor for vehicles driven more or less than the average 12,000 miles per year." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I reduce my car's depreciation?",
+        "acceptedAnswer": { "@type": "Answer", "text": "You can slow depreciation by keeping mileage low, maintaining the vehicle well, keeping it garaged, choosing popular colors and trim levels, and keeping detailed service records." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/vehicle-calculators/" aria-current="page">Vehicle</a>
+        <a href="/business-calculators/">Business</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/vehicle-calculators/">Vehicle Calculators</a>
+      <a href="/business-calculators/">Business Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/vehicle-calculators/">Vehicle Calculators</a></li>
+          <li><span aria-current="page">Car Depreciation Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="article-content">
+          <h1>Car Depreciation Calculator</h1>
+          <p>Estimate your vehicle's current value and see how it depreciates over time. Enter the original purchase price, vehicle age, and annual mileage to calculate the current estimated value, annual depreciation amount, and projected depreciation curve.</p>
+
+          <div class="calc-container mt-8">
+            <div class="calc-header">
+              <h2>Calculate Vehicle Depreciation</h2>
+              <p>Enter your vehicle details below</p>
+            </div>
+            <div class="calc-body">
+              <form id="depreciation-form" onsubmit="return false;">
+                <div class="form-group">
+                  <label class="form-label" for="purchase-price">Original Purchase Price</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="purchase-price" name="purchasePrice" class="form-input" placeholder="35000" min="0" step="100" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="vehicle-age">Vehicle Age <span class="form-hint">(years)</span></label>
+                  <input type="number" id="vehicle-age" name="vehicleAge" class="form-input" placeholder="3" min="0" max="30" step="1" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="annual-mileage">Annual Mileage</label>
+                  <input type="number" id="annual-mileage" name="annualMileage" class="form-input" placeholder="12000" min="0" step="500" required>
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calculateDepreciation()">Calculate Depreciation</button>
+                  <button type="button" class="btn btn-reset" onclick="resetDepreciation()">Reset</button>
+                </div>
+              </form>
+
+              <div id="depreciation-results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">Estimated Current Value</div>
+                  <div class="result-value" id="result-current-value"></div>
+                </div>
+                <div class="result-grid">
+                  <div class="result-item">
+                    <div class="result-label">Total Depreciation</div>
+                    <div class="result-value" id="result-total-depreciation"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Average Annual Depreciation</div>
+                    <div class="result-value" id="result-annual-depreciation"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Depreciation Percentage</div>
+                    <div class="result-value" id="result-depreciation-pct"></div>
+                  </div>
+                </div>
+                <div class="result-details mt-4">
+                  <h3>Depreciation Curve (Year by Year)</h3>
+                  <div id="depreciation-curve" style="overflow-x:auto;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Formula Section -->
+          <section class="content-section">
+            <h2>Car Depreciation Formula</h2>
+            <p>This calculator uses a declining balance depreciation model with a mileage adjustment:</p>
+            <div class="formula-box">
+              <div class="formula-label">Depreciation Formula</div>
+              Value = Purchase Price x (1 - Depreciation Rate) ^ Years x Mileage Factor
+            </div>
+            <p>The first year uses a 20% depreciation rate, and subsequent years use 15%. A <strong>mileage factor</strong> adjusts the value based on whether the vehicle is driven more or less than the average 12,000 miles per year.</p>
+          </section>
+
+          <!-- How to Use -->
+          <section class="content-section">
+            <h2>How to Use This Car Depreciation Calculator</h2>
+            <ol>
+              <li><strong>Enter the original purchase price</strong> - the price you paid when the vehicle was new.</li>
+              <li><strong>Enter the vehicle age</strong> - how many years old the vehicle is.</li>
+              <li><strong>Enter your annual mileage</strong> - how many miles you drive per year.</li>
+              <li><strong>Click "Calculate Depreciation"</strong> to see the current value, total depreciation, and year-by-year curve.</li>
+            </ol>
+          </section>
+
+          <!-- Example Scenario -->
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>Suppose you purchased a car for $35,000 three years ago and drive about 12,000 miles per year. After the first year the car would be worth roughly $28,000 (20% loss). After three years of 15% annual depreciation, the estimated current value would be approximately $20,230, representing a total depreciation of about $14,770.</p>
+          </section>
+
+          <!-- FAQ Section -->
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                How much does a car depreciate per year?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>On average, a new car loses about 20% of its value in the first year and roughly 15% per year for the next four years. After five years, a typical car is worth about 40% of its original purchase price.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Does mileage affect car depreciation?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Yes, higher mileage accelerates depreciation. The average driver puts about 12,000-15,000 miles per year on a car. Vehicles with significantly higher mileage depreciate faster due to increased wear and reduced remaining useful life.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Which cars depreciate the least?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Trucks, SUVs, and certain luxury brands tend to hold value better. Toyota, Lexus, and Porsche vehicles typically have the slowest depreciation rates. Electric vehicles from premium brands are also improving in value retention.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                How is car depreciation calculated?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>This calculator uses a declining balance method with an average annual depreciation rate of about 15-20%. It also applies a mileage adjustment factor for vehicles driven more or less than the average 12,000 miles per year.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Can I reduce my car's depreciation?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>You can slow depreciation by keeping mileage low, maintaining the vehicle well, keeping it garaged, choosing popular colors and trim levels, and keeping detailed service records.</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Related Calculators -->
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/vehicle-calculators/vehicle-total-cost-calculator/" class="card card-link">
+                <h3>Vehicle Total Cost Calculator</h3>
+                <p>Calculate the true total cost of owning a vehicle over time.</p>
+              </a>
+              <a href="/vehicle-calculators/lease-vs-buy-calculator/" class="card card-link">
+                <h3>Lease vs Buy Calculator</h3>
+                <p>Compare the total cost of leasing versus buying a vehicle.</p>
+              </a>
+              <a href="/vehicle-calculators/car-payment-calculator/" class="card card-link">
+                <h3>Car Payment Calculator</h3>
+                <p>Estimate your monthly car payment with down payment and trade-in.</p>
+              </a>
+              <a href="/vehicle-calculators/car-affordability-calculator/" class="card card-link">
+                <h3>Car Affordability Calculator</h3>
+                <p>Find out how much car you can afford based on your budget.</p>
+              </a>
+              <a href="/finance-calculators/compound-interest-calculator/" class="card card-link">
+                <h3>Compound Interest Calculator</h3>
+                <p>See how your money grows with compound interest over time.</p>
+              </a>
+            </div>
+          </section>
+
+          <!-- Disclaimer -->
+          <div class="disclaimer">
+            <strong>Disclaimer:</strong> This calculator provides rough estimates for informational purposes only. Actual vehicle depreciation varies significantly based on make, model, condition, market demand, location, and other factors. This is not financial advice. Consult a professional appraiser for an accurate vehicle valuation.
+          </div>
+
+          <!-- Ad Slot -->
+          <div class="ad-slot ad-slot-leaderboard"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Vehicle</h4>
+          <a href="/vehicle-calculators/">All Vehicle Calculators</a>
+          <a href="/vehicle-calculators/car-payment-calculator/">Car Payment</a>
+          <a href="/vehicle-calculators/auto-loan-calculator/">Auto Loan</a>
+        </div>
+        <div class="footer-col">
+          <h4>Finance</h4>
+          <a href="/finance-calculators/">All Finance Calculators</a>
+          <a href="/finance-calculators/loan-calculator/">Loan Calculator</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateDepreciation() {
+      if (!CalcWise.validateForm('depreciation-form')) return;
+
+      const price = CalcWise.parseNumber(document.getElementById('purchase-price').value);
+      const age = parseInt(document.getElementById('vehicle-age').value);
+      const mileage = CalcWise.parseNumber(document.getElementById('annual-mileage').value);
+
+      const avgMileage = 12000;
+      const mileageFactor = 1 - ((mileage - avgMileage) / avgMileage) * 0.05;
+
+      let values = [price];
+      let currentValue = price;
+
+      for (let y = 1; y <= Math.max(age, 10); y++) {
+        const rate = y === 1 ? 0.20 : 0.15;
+        currentValue = currentValue * (1 - rate) * (y <= age ? mileageFactor : 1);
+        currentValue = Math.max(currentValue, 0);
+        values.push(Math.round(currentValue));
+      }
+
+      const estimatedValue = values[age] || 0;
+      const totalDepreciation = price - estimatedValue;
+      const annualDepreciation = age > 0 ? totalDepreciation / age : 0;
+      const depreciationPct = ((totalDepreciation / price) * 100).toFixed(1);
+
+      CalcWise.setText('result-current-value', CalcWise.formatCurrency(estimatedValue));
+      CalcWise.setText('result-total-depreciation', CalcWise.formatCurrency(totalDepreciation));
+      CalcWise.setText('result-annual-depreciation', CalcWise.formatCurrency(annualDepreciation));
+      CalcWise.setText('result-depreciation-pct', depreciationPct + '%');
+
+      // Build depreciation curve table
+      let tableHTML = '<table style="width:100%;border-collapse:collapse;margin-top:0.5rem;"><thead><tr style="border-bottom:2px solid var(--color-gray-200);"><th style="text-align:left;padding:0.5rem;">Year</th><th style="text-align:right;padding:0.5rem;">Estimated Value</th><th style="text-align:right;padding:0.5rem;">Depreciation</th></tr></thead><tbody>';
+      const displayYears = Math.max(age, 10);
+      for (let y = 0; y <= displayYears; y++) {
+        const highlight = y === age ? 'background:var(--color-primary-50);font-weight:600;' : '';
+        const dep = y === 0 ? '-' : CalcWise.formatCurrency(values[y - 1] - values[y]);
+        tableHTML += '<tr style="border-bottom:1px solid var(--color-gray-100);' + highlight + '"><td style="padding:0.5rem;">' + y + '</td><td style="text-align:right;padding:0.5rem;">' + CalcWise.formatCurrency(values[y]) + '</td><td style="text-align:right;padding:0.5rem;">' + dep + '</td></tr>';
+      }
+      tableHTML += '</tbody></table>';
+      document.getElementById('depreciation-curve').innerHTML = tableHTML;
+
+      CalcWise.showResults('depreciation-results');
+    }
+
+    function resetDepreciation() {
+      document.getElementById('depreciation-form').reset();
+      CalcWise.hideResults('depreciation-results');
+    }
+  </script>
+</body>
+</html>

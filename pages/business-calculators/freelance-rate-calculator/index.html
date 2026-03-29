@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Freelance Hourly Rate Calculator | CalcWise</title>
+  <meta name="description" content="Calculate your ideal freelance hourly rate based on desired income, billable hours, expenses, and taxes. Get day rates and monthly revenue targets.">
+  <link rel="canonical" href="https://calcwise.com/pages/business-calculators/freelance-rate-calculator/">
+  <meta property="og:title" content="Freelance Hourly Rate Calculator | CalcWise">
+  <meta property="og:description" content="Calculate your ideal freelance hourly rate based on desired income, billable hours, expenses, and taxes.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcwise.com/pages/business-calculators/freelance-rate-calculator/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Freelance Hourly Rate Calculator | CalcWise">
+  <meta name="twitter:description" content="Calculate your ideal freelance hourly rate based on desired income, billable hours, expenses, and taxes.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.com/"},
+      {"@type": "ListItem", "position": 2, "name": "Business Calculators", "item": "https://calcwise.com/pages/business-calculators/"},
+      {"@type": "ListItem", "position": 3, "name": "Freelance Rate Calculator"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do I calculate my freelance hourly rate?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Add your desired annual income, business expenses, and estimated taxes together. Then divide by the total number of billable hours per year (billable hours per week times weeks worked per year)."}
+      },
+      {
+        "@type": "Question",
+        "name": "How many billable hours should I plan for?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Most freelancers bill 20-30 hours per week, even if they work 40+. The remainder goes to marketing, admin, and professional development. A common estimate is 25 billable hours per week."}
+      },
+      {
+        "@type": "Question",
+        "name": "Should I charge hourly or project-based rates?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Both have merits. Hourly rates are simpler and protect against scope creep, while project-based pricing can be more profitable as you get faster. Many freelancers use their hourly rate to estimate project costs."}
+      },
+      {
+        "@type": "Question",
+        "name": "What taxes do freelancers pay?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Freelancers in the US pay self-employment tax (15.3%) plus income tax. The combined effective rate often falls between 25-40% depending on income level and deductions."}
+      },
+      {
+        "@type": "Question",
+        "name": "How often should I raise my freelance rates?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Review your rates annually at minimum. Consider raising rates when your skills improve, demand increases, or costs of living go up. A 5-10% annual increase is common."}
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="logo">
+        <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav">
+        <a href="/">Home</a>
+        <a href="/pages/business-calculators/" aria-current="page">Business</a>
+        <a href="/pages/financial-calculators/">Financial</a>
+        <a href="/pages/tax-calculators/">Tax</a>
+        <a href="/pages/investment-calculators/">Investment</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav">
+      <a href="/">Home</a>
+      <a href="/pages/business-calculators/">Business Calculators</a>
+      <a href="/pages/financial-calculators/">Financial Calculators</a>
+      <a href="/pages/tax-calculators/">Tax Calculators</a>
+      <a href="/pages/investment-calculators/">Investment Calculators</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/pages/business-calculators/">Business Calculators</a></li>
+          <li><span aria-current="page">Freelance Rate Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="calc-page-layout">
+          <div class="calc-page-main">
+            <h1>Freelance Hourly Rate Calculator</h1>
+            <p class="subtitle" style="font-size:var(--text-lg);color:var(--color-gray-600);margin-bottom:var(--space-8);line-height:var(--leading-relaxed);">Determine the minimum hourly rate you need to charge as a freelancer to meet your income goals after accounting for taxes, expenses, and non-billable time.</p>
+
+            <div class="calc-container">
+              <div class="calc-header">
+                <h2>Freelance Rate Calculator</h2>
+                <p>Find your ideal hourly and day rate</p>
+              </div>
+              <div class="calc-body">
+                <form id="freelance-form" onsubmit="return false;">
+                  <div class="form-group">
+                    <label class="form-label" for="desired-income">Desired Annual Income (take-home)</label>
+                    <div class="input-prefix">
+                      <span class="prefix">$</span>
+                      <input type="number" id="desired-income" name="desiredIncome" class="form-input" placeholder="80000" min="0" step="1" required>
+                    </div>
+                  </div>
+
+                  <div class="calc-grid calc-grid-2col">
+                    <div class="form-group">
+                      <label class="form-label" for="billable-hours">Billable Hours / Week</label>
+                      <input type="number" id="billable-hours" name="billableHours" class="form-input" placeholder="25" min="1" max="80" step="1" required>
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label" for="weeks-per-year">Weeks Worked / Year</label>
+                      <input type="number" id="weeks-per-year" name="weeksPerYear" class="form-input" placeholder="48" min="1" max="52" step="1" required>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="business-expenses">Annual Business Expenses</label>
+                    <div class="input-prefix">
+                      <span class="prefix">$</span>
+                      <input type="number" id="business-expenses" name="businessExpenses" class="form-input" placeholder="12000" min="0" step="1">
+                    </div>
+                    <span class="form-hint" style="display:block;margin-top:var(--space-1);">Software, equipment, insurance, office costs, etc.</span>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="tax-rate">Estimated Tax Rate <span class="form-hint">(%)</span></label>
+                    <div class="input-suffix">
+                      <input type="number" id="tax-rate" name="taxRate" class="form-input" placeholder="30" min="0" max="60" step="0.1" required>
+                      <span class="suffix">%</span>
+                    </div>
+                    <span class="form-hint" style="display:block;margin-top:var(--space-1);">Include self-employment + income tax</span>
+                  </div>
+
+                  <div class="calc-actions">
+                    <button type="button" class="btn btn-calculate btn-full" onclick="calculateRate()">Calculate Rate</button>
+                    <button type="button" class="btn btn-reset" onclick="resetForm()">Reset</button>
+                  </div>
+                </form>
+
+                <div id="results" class="calc-results hidden">
+                  <div class="result-primary">
+                    <div class="result-label">Minimum Hourly Rate</div>
+                    <div class="result-value" id="result-hourly">$0.00</div>
+                  </div>
+                  <div class="result-grid result-grid-3">
+                    <div class="result-item">
+                      <div class="result-label">Day Rate (8hrs)</div>
+                      <div class="result-value" id="result-day">$0.00</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Monthly Target</div>
+                      <div class="result-value" id="result-monthly">$0.00</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Annual Revenue Needed</div>
+                      <div class="result-value" id="result-annual">$0.00</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="ad-slot ad-slot-leaderboard"></div>
+
+            <section class="content-section">
+              <h2>Freelance Rate Formula</h2>
+              <div class="formula-box">
+                <div class="formula-label">Annual Revenue Needed</div>
+                Revenue = (Desired Income + Expenses) / (1 - Tax Rate)
+              </div>
+              <div class="formula-box">
+                <div class="formula-label">Hourly Rate</div>
+                Hourly Rate = Annual Revenue / (Billable Hours/Week x Weeks/Year)
+              </div>
+              <div class="formula-box">
+                <div class="formula-label">Day Rate</div>
+                Day Rate = Hourly Rate x 8
+              </div>
+            </section>
+
+            <section class="content-section">
+              <h2>How to Use This Calculator</h2>
+              <ol>
+                <li>Enter your <strong>desired annual take-home income</strong> (what you want to earn after taxes and expenses).</li>
+                <li>Set your <strong>billable hours per week</strong>. Be realistic -- most freelancers bill 20-30 hours per week.</li>
+                <li>Enter the number of <strong>weeks you will work</strong> per year (accounting for vacation and holidays).</li>
+                <li>Add your estimated <strong>annual business expenses</strong> (tools, software, insurance, etc.).</li>
+                <li>Set your estimated <strong>combined tax rate</strong> (self-employment + income tax).</li>
+                <li>Click <strong>Calculate Rate</strong> to see your minimum hourly rate, day rate, and monthly revenue target.</li>
+              </ol>
+            </section>
+
+            <section class="content-section">
+              <h2>Example Scenario</h2>
+              <p>A freelance web developer wants to take home $80,000 per year. They estimate 25 billable hours per week, 48 working weeks, $12,000 in annual expenses, and a 30% tax rate.</p>
+              <ul>
+                <li>Annual Revenue Needed: ($80,000 + $12,000) / (1 - 0.30) = <strong>$131,429</strong></li>
+                <li>Total Billable Hours: 25 x 48 = <strong>1,200 hours</strong></li>
+                <li>Minimum Hourly Rate: $131,429 / 1,200 = <strong>$109.52/hr</strong></li>
+                <li>Day Rate: $109.52 x 8 = <strong>$876.19/day</strong></li>
+                <li>Monthly Target: $131,429 / 12 = <strong>$10,952/month</strong></li>
+              </ul>
+            </section>
+
+            <section class="faq-section">
+              <h2>Frequently Asked Questions</h2>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  How do I calculate my freelance hourly rate?
+                  <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                </button>
+                <div class="faq-answer">
+                  <p>Add your desired annual income, business expenses, and estimated taxes together. Then divide by the total number of billable hours per year (billable hours per week times weeks worked per year).</p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  How many billable hours should I plan for?
+                  <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                </button>
+                <div class="faq-answer">
+                  <p>Most freelancers bill 20-30 hours per week, even if they work 40+. The remainder goes to marketing, admin, and professional development. A common estimate is 25 billable hours per week.</p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  Should I charge hourly or project-based rates?
+                  <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                </button>
+                <div class="faq-answer">
+                  <p>Both have merits. Hourly rates are simpler and protect against scope creep, while project-based pricing can be more profitable as you get faster. Many freelancers use their hourly rate to estimate project costs.</p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  What taxes do freelancers pay?
+                  <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                </button>
+                <div class="faq-answer">
+                  <p>Freelancers in the US pay self-employment tax (15.3%) plus income tax. The combined effective rate often falls between 25-40% depending on income level and deductions.</p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  How often should I raise my freelance rates?
+                  <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                </button>
+                <div class="faq-answer">
+                  <p>Review your rates annually at minimum. Consider raising rates when your skills improve, demand increases, or costs of living go up. A 5-10% annual increase is common for established freelancers.</p>
+                </div>
+              </div>
+            </section>
+
+            <section class="related-calculators">
+              <h2>Related Calculators</h2>
+              <div class="grid grid-3">
+                <a href="/pages/business-calculators/commission-calculator/" class="card card-link">
+                  <h3>Commission Calculator</h3>
+                  <p>Calculate sales commissions with flat or tiered rate structures.</p>
+                </a>
+                <a href="/pages/business-calculators/pricing-calculator/" class="card card-link">
+                  <h3>Pricing Calculator</h3>
+                  <p>Determine optimal product pricing based on costs and margins.</p>
+                </a>
+                <a href="/pages/business-calculators/cash-runway-calculator/" class="card card-link">
+                  <h3>Cash Runway Calculator</h3>
+                  <p>Find out how long your cash will last at current burn rates.</p>
+                </a>
+                <a href="/pages/business-calculators/revenue-growth-calculator/" class="card card-link">
+                  <h3>Revenue Growth Calculator</h3>
+                  <p>Track and project your revenue growth rate.</p>
+                </a>
+              </div>
+            </section>
+
+            <div class="disclaimer">
+              <strong>Disclaimer:</strong> This calculator is for informational and educational purposes only. Results are estimates. Actual taxes, expenses, and billable utilization will vary. Consult a tax professional for advice specific to your situation.
+            </div>
+          </div>
+
+          <aside class="calc-page-sidebar">
+            <div class="ad-slot ad-slot-rectangle"></div>
+            <div class="sidebar-card">
+              <h3>Business Calculators</h3>
+              <a href="/pages/business-calculators/commission-calculator/">Commission Calculator</a>
+              <a href="/pages/business-calculators/sales-tax-calculator/">Sales Tax Calculator</a>
+              <a href="/pages/business-calculators/pricing-calculator/">Pricing Calculator</a>
+              <a href="/pages/business-calculators/revenue-growth-calculator/">Revenue Growth Calculator</a>
+              <a href="/pages/business-calculators/cash-runway-calculator/">Cash Runway Calculator</a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free online calculators for business, finance, tax, and investment decisions.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Calculators</h4>
+          <a href="/pages/business-calculators/">Business</a>
+          <a href="/pages/financial-calculators/">Financial</a>
+          <a href="/pages/tax-calculators/">Tax</a>
+          <a href="/pages/investment-calculators/">Investment</a>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <a href="/about/">About</a>
+          <a href="/blog/">Blog</a>
+          <a href="/contact/">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="/privacy/">Privacy Policy</a>
+          <a href="/terms/">Terms of Service</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/privacy/">Privacy</a>
+          <a href="/terms/">Terms</a>
+          <a href="/contact/">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateRate() {
+      const desiredIncome = CalcWise.parseNumber(document.getElementById('desired-income').value);
+      const billableHours = CalcWise.parseNumber(document.getElementById('billable-hours').value);
+      const weeksPerYear = CalcWise.parseNumber(document.getElementById('weeks-per-year').value);
+      const expenses = CalcWise.parseNumber(document.getElementById('business-expenses').value);
+      const taxRate = CalcWise.parseNumber(document.getElementById('tax-rate').value) / 100;
+
+      if (desiredIncome <= 0 || billableHours <= 0 || weeksPerYear <= 0) {
+        alert('Please fill in all required fields with valid values.');
+        return;
+      }
+
+      if (taxRate >= 1) {
+        alert('Tax rate must be less than 100%.');
+        return;
+      }
+
+      const annualRevenue = (desiredIncome + expenses) / (1 - taxRate);
+      const totalBillableHours = billableHours * weeksPerYear;
+      const hourlyRate = annualRevenue / totalBillableHours;
+      const dayRate = hourlyRate * 8;
+      const monthlyTarget = annualRevenue / 12;
+
+      CalcWise.setText('result-hourly', CalcWise.formatCurrency(hourlyRate));
+      CalcWise.setText('result-day', CalcWise.formatCurrency(dayRate));
+      CalcWise.setText('result-monthly', CalcWise.formatCurrency(monthlyTarget));
+      CalcWise.setText('result-annual', CalcWise.formatCurrency(annualRevenue));
+      CalcWise.showResults('results');
+    }
+
+    function resetForm() {
+      document.getElementById('freelance-form').reset();
+      CalcWise.hideResults('results');
+    }
+  </script>
+</body>
+</html>

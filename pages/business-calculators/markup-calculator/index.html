@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Markup Calculator - CalcWise</title>
+  <meta name="description" content="Calculate markup amount, markup percentage, and profit margin from cost and selling price. Free online markup calculator with instant results.">
+  <link rel="canonical" href="https://calcwise.io/business-calculators/markup-calculator/">
+
+  <meta property="og:title" content="Markup Calculator - CalcWise">
+  <meta property="og:description" content="Calculate markup amount, markup percentage, and profit margin from cost and selling price.">
+  <meta property="og:url" content="https://calcwise.io/business-calculators/markup-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Markup Calculator - CalcWise">
+  <meta name="twitter:description" content="Calculate markup amount, markup percentage, and profit margin from cost and selling price.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Business Calculators", "item": "https://calcwise.io/business-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "Markup Calculator", "item": "https://calcwise.io/business-calculators/markup-calculator/" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is markup?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Markup is the amount added to the cost of a product to determine the selling price. It is expressed as a percentage of cost: Markup % = ((Selling Price - Cost) / Cost) x 100." }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I calculate selling price from cost and markup?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Selling Price = Cost x (1 + Markup % / 100). For example, if an item costs $50 and you want a 60% markup, the selling price is $50 x 1.60 = $80." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is a typical markup percentage?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Markup varies widely by industry. Retail clothing often uses 50-100% markup, restaurants 200-300%, and electronics 5-20%. The right markup depends on your costs, competition, and target market." }
+      },
+      {
+        "@type": "Question",
+        "name": "How does markup differ from margin?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Markup is based on cost, while margin is based on selling price. A 100% markup equals a 50% margin. Markup is always a larger number than margin for the same transaction." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/business-calculators/" aria-current="page">Business</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/business-calculators/" aria-current="page">Business Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container page-content">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/business-calculators/">Business Calculators</a></li>
+          <li><span aria-current="page">Markup Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="calc-page-layout">
+        <div class="calc-page-main">
+          <h1>Markup Calculator</h1>
+          <p class="mt-4 mb-8" style="font-size:var(--text-lg); color:var(--color-gray-600); max-width:700px; line-height:var(--leading-relaxed);">Calculate the markup amount, markup percentage, and profit margin for your products. Enter your cost and either a selling price or a desired markup percentage to see the full breakdown.</p>
+
+          <div class="calc-container">
+            <div class="calc-header">
+              <h2>Calculate Markup</h2>
+              <p>Enter cost and selling price or desired markup</p>
+            </div>
+            <div class="calc-body">
+              <form id="markupForm" novalidate>
+                <div class="form-group">
+                  <label class="form-label" for="calcMode">Calculation Mode</label>
+                  <select id="calcMode" name="calcMode" class="form-select" onchange="toggleMode()">
+                    <option value="fromPrice">I know the selling price</option>
+                    <option value="fromMarkup">I know the desired markup %</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="cost">Cost <span class="form-hint">Your cost per unit</span></label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="cost" name="cost" class="form-input" placeholder="50" min="0" step="0.01" required>
+                  </div>
+                  <span class="form-error">Please enter a valid cost.</span>
+                </div>
+                <div class="form-group" id="priceGroup">
+                  <label class="form-label" for="sellingPrice">Selling Price</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="sellingPrice" name="sellingPrice" class="form-input" placeholder="80" min="0" step="0.01">
+                  </div>
+                </div>
+                <div class="form-group hidden" id="markupPctGroup">
+                  <label class="form-label" for="desiredMarkup">Desired Markup %</label>
+                  <div class="input-suffix">
+                    <input type="number" id="desiredMarkup" name="desiredMarkup" class="form-input" placeholder="60" min="0" step="0.01">
+                    <span class="suffix">%</span>
+                  </div>
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calculateMarkup()">Calculate Markup</button>
+                  <button type="button" class="btn btn-reset" onclick="resetForm()">Reset</button>
+                </div>
+              </form>
+
+              <div id="results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">Markup Percentage</div>
+                  <div class="result-value" id="resultMarkupPct">0%</div>
+                </div>
+                <div class="result-grid result-grid-3">
+                  <div class="result-item">
+                    <div class="result-label">Markup Amount</div>
+                    <div class="result-value" id="resultMarkupAmt">$0</div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Selling Price</div>
+                    <div class="result-value" id="resultSellingPrice">$0</div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Profit Margin</div>
+                    <div class="result-value" id="resultMargin">0%</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="disclaimer">
+            <strong>Disclaimer:</strong> This calculator provides estimates for educational purposes only. Actual pricing should consider market conditions, competition, and other business factors. Consult a financial professional for pricing strategy decisions.
+          </div>
+
+          <div class="ad-slot ad-slot-leaderboard"></div>
+
+          <section class="content-section">
+            <h2>Markup Formulas</h2>
+            <p>These are the core formulas used to compute markup and related metrics.</p>
+            <div class="formula-box">
+              <div class="formula-label">Markup %</div>
+              Markup % = ((Selling Price - Cost) / Cost) x 100
+            </div>
+            <div class="formula-box">
+              <div class="formula-label">Selling Price from Markup %</div>
+              Selling Price = Cost x (1 + Markup % / 100)
+            </div>
+            <div class="formula-box">
+              <div class="formula-label">Profit Margin %</div>
+              Profit Margin = ((Selling Price - Cost) / Selling Price) x 100
+            </div>
+          </section>
+
+          <section class="content-section">
+            <h2>How to Use This Calculator</h2>
+            <ol>
+              <li><strong>Select your calculation mode</strong> -- choose whether you know the selling price or the desired markup percentage.</li>
+              <li><strong>Enter your cost</strong> -- the amount you pay for the product or service.</li>
+              <li><strong>Enter the selling price or markup %</strong> -- depending on your chosen mode.</li>
+              <li><strong>Click "Calculate Markup"</strong> to see the markup amount, markup percentage, and equivalent profit margin.</li>
+            </ol>
+          </section>
+
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>You purchase a product for <strong>$50</strong> and sell it for <strong>$80</strong>.</p>
+            <ul>
+              <li><strong>Markup Amount:</strong> $80 - $50 = $30</li>
+              <li><strong>Markup %:</strong> ($30 / $50) x 100 = 60%</li>
+              <li><strong>Profit Margin:</strong> ($30 / $80) x 100 = 37.5%</li>
+            </ul>
+            <p>Alternatively, if you want a 60% markup on a $50 item, the selling price would be $50 x 1.60 = $80.</p>
+          </section>
+
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What is markup?
+                <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+              </button>
+              <div class="faq-answer"><p>Markup is the amount added to the cost of a product to determine the selling price. It is expressed as a percentage of cost: Markup % = ((Selling Price - Cost) / Cost) x 100.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                How do I calculate selling price from cost and markup?
+                <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+              </button>
+              <div class="faq-answer"><p>Selling Price = Cost x (1 + Markup % / 100). For example, if an item costs $50 and you want a 60% markup, the selling price is $50 x 1.60 = $80.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What is a typical markup percentage?
+                <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+              </button>
+              <div class="faq-answer"><p>Markup varies widely by industry. Retail clothing often uses 50-100% markup, restaurants 200-300%, and electronics 5-20%. The right markup depends on your costs, competition, and target market.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                How does markup differ from margin?
+                <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+              </button>
+              <div class="faq-answer"><p>Markup is based on cost, while margin is based on selling price. A 100% markup equals a 50% margin. Markup is always a larger number than margin for the same transaction.</p></div>
+            </div>
+          </section>
+
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/business-calculators/profit-margin-calculator/" class="card card-link">
+                <h3>Profit Margin Calculator</h3>
+                <p>Calculate gross profit and margin from revenue and COGS.</p>
+              </a>
+              <a href="/business-calculators/break-even-calculator/" class="card card-link">
+                <h3>Break-Even Calculator</h3>
+                <p>Determine how many units to sell to cover your costs.</p>
+              </a>
+              <a href="/business-calculators/roi-calculator/" class="card card-link">
+                <h3>ROI Calculator</h3>
+                <p>Calculate return on investment and annualized ROI.</p>
+              </a>
+              <a href="/business-calculators/cac-calculator/" class="card card-link">
+                <h3>CAC Calculator</h3>
+                <p>Find your customer acquisition cost.</p>
+              </a>
+            </div>
+          </section>
+        </div>
+
+        <aside class="calc-page-sidebar">
+          <div class="sidebar-card">
+            <h3>Business Calculators</h3>
+            <a href="/business-calculators/profit-margin-calculator/">Profit Margin</a>
+            <a href="/business-calculators/markup-calculator/">Markup</a>
+            <a href="/business-calculators/break-even-calculator/">Break-Even</a>
+            <a href="/business-calculators/roi-calculator/">ROI</a>
+            <a href="/business-calculators/burn-rate-calculator/">Burn Rate</a>
+            <a href="/business-calculators/cac-calculator/">Customer Acquisition Cost</a>
+            <a href="/business-calculators/ltv-calculator/">Customer Lifetime Value</a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col"><h4>Real Estate</h4><a href="/real-estate-calculators/">All Real Estate</a></div>
+        <div class="footer-col"><h4>Finance</h4><a href="/finance-calculators/">All Finance</a></div>
+        <div class="footer-col"><h4>Business</h4><a href="/business-calculators/">All Business</a></div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/about.html">About</a>
+          <a href="/contact.html">Contact</a>
+          <a href="/privacy.html">Privacy</a>
+          <a href="/terms.html">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function toggleMode() {
+      const mode = document.getElementById('calcMode').value;
+      document.getElementById('priceGroup').classList.toggle('hidden', mode === 'fromMarkup');
+      document.getElementById('markupPctGroup').classList.toggle('hidden', mode === 'fromPrice');
+    }
+
+    function calculateMarkup() {
+      const cost = CalcWise.parseNumber(document.getElementById('cost').value);
+      if (cost <= 0) { alert('Cost must be greater than zero.'); return; }
+
+      const mode = document.getElementById('calcMode').value;
+      let sellingPrice, markupAmount, markupPct, marginPct;
+
+      if (mode === 'fromPrice') {
+        sellingPrice = CalcWise.parseNumber(document.getElementById('sellingPrice').value);
+        if (sellingPrice <= 0) { alert('Selling price must be greater than zero.'); return; }
+        markupAmount = sellingPrice - cost;
+        markupPct = CalcWise.markup(cost, sellingPrice);
+        marginPct = CalcWise.profitMargin(sellingPrice, cost);
+      } else {
+        markupPct = CalcWise.parseNumber(document.getElementById('desiredMarkup').value);
+        sellingPrice = cost * (1 + markupPct / 100);
+        markupAmount = sellingPrice - cost;
+        marginPct = CalcWise.profitMargin(sellingPrice, cost);
+      }
+
+      CalcWise.setText('resultMarkupPct', CalcWise.formatPercent(markupPct));
+      CalcWise.setText('resultMarkupAmt', CalcWise.formatCurrency(markupAmount));
+      CalcWise.setText('resultSellingPrice', CalcWise.formatCurrency(sellingPrice));
+      CalcWise.setText('resultMargin', CalcWise.formatPercent(marginPct));
+      CalcWise.showResults('results');
+    }
+
+    function resetForm() {
+      document.getElementById('markupForm').reset();
+      CalcWise.hideResults('results');
+      toggleMode();
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,217 @@
+/* ============================================
+   CalcWise Print Stylesheet
+   Clean, professional output for printed results
+   ============================================ */
+
+@media print {
+  /* --- Reset & Base --- */
+  *,
+  *::before,
+  *::after {
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  body {
+    font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+    font-size: 11pt;
+    line-height: 1.5;
+    color: #111827;
+    background: #fff !important;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* --- Hide non-essential elements --- */
+  header,
+  nav,
+  .site-header,
+  .site-nav,
+  .mobile-nav,
+  .mobile-menu-toggle,
+  footer,
+  .site-footer,
+  .ad,
+  .ads,
+  .advertisement,
+  [class*="ad-"],
+  .sidebar,
+  .cta-section,
+  .newsletter-signup,
+  .search-box,
+  .breadcrumb,
+  .social-share,
+  .related-calculators,
+  .faq-section,
+  .cookie-banner,
+  .chat-widget,
+  .back-to-top,
+  .btn-print,
+  button[onclick*="print"],
+  .no-print {
+    display: none !important;
+  }
+
+  /* --- Page settings --- */
+  @page {
+    margin: 0.75in;
+    size: letter;
+  }
+
+  /* --- Branding --- */
+  .calculator-page::before {
+    content: 'CalcWise.com';
+    display: block;
+    font-size: 16pt;
+    font-weight: 700;
+    color: #1B4D3E;
+    border-bottom: 2.5pt solid #1B4D3E;
+    padding-bottom: 6pt;
+    margin-bottom: 18pt;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* --- Typography --- */
+  h1, h2, h3, h4 {
+    color: #1F2937;
+    page-break-after: avoid;
+    orphans: 3;
+    widows: 3;
+  }
+
+  h1 { font-size: 18pt; margin-bottom: 6pt; }
+  h2 { font-size: 14pt; margin-top: 14pt; margin-bottom: 4pt; }
+  h3 { font-size: 12pt; }
+
+  p, li {
+    orphans: 3;
+    widows: 3;
+  }
+
+  a {
+    color: #111827;
+    text-decoration: none;
+  }
+
+  /* --- Calculator Results --- */
+  .results-section,
+  .calculator-results {
+    border: 1pt solid #D1D5DB;
+    border-radius: 0;
+    padding: 12pt;
+    margin-bottom: 14pt;
+    page-break-inside: avoid;
+  }
+
+  .result-card,
+  .result-item {
+    border: 1pt solid #E5E7EB;
+    padding: 8pt 10pt;
+    margin-bottom: 6pt;
+    page-break-inside: avoid;
+  }
+
+  .result-value {
+    font-size: 14pt;
+    font-weight: 700;
+    color: #1B4D3E;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .result-label {
+    font-size: 9pt;
+    color: #6B7280;
+    text-transform: uppercase;
+    letter-spacing: 0.5pt;
+  }
+
+  /* --- Tables (Amortization, Comparisons) --- */
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 9pt;
+    page-break-inside: auto;
+    margin-bottom: 12pt;
+  }
+
+  thead {
+    display: table-header-group;
+  }
+
+  tr {
+    page-break-inside: avoid;
+  }
+
+  th, td {
+    border: 0.5pt solid #D1D5DB;
+    padding: 3pt 6pt;
+    text-align: right;
+  }
+
+  th {
+    background: #F3F4F6 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 8pt;
+    letter-spacing: 0.3pt;
+    color: #374151;
+  }
+
+  th:first-child,
+  td:first-child {
+    text-align: left;
+  }
+
+  tbody tr:nth-child(even) {
+    background: #F9FAFB !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* --- Charts --- */
+  .chart-container {
+    page-break-inside: avoid;
+    max-width: 4in;
+    margin: 8pt auto;
+  }
+
+  .chart-container canvas {
+    max-width: 100%;
+    height: auto !important;
+  }
+
+  .chart-legend {
+    font-size: 9pt;
+  }
+
+  /* --- Form inputs: show values as text --- */
+  .form-group label {
+    font-size: 9pt;
+    color: #6B7280;
+  }
+
+  input, select, textarea {
+    border: none !important;
+    background: transparent !important;
+    padding: 0 !important;
+    font-size: 11pt;
+    font-weight: 600;
+    color: #111827;
+  }
+
+  /* --- Footer timestamp --- */
+  .calculator-page::after {
+    content: 'Printed from CalcWise.com';
+    display: block;
+    font-size: 8pt;
+    color: #9CA3AF;
+    border-top: 0.5pt solid #E5E7EB;
+    padding-top: 6pt;
+    margin-top: 24pt;
+    text-align: center;
+  }
+}

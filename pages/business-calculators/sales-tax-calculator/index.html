@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sales Tax Calculator | CalcWise</title>
+  <meta name="description" content="Calculate sales tax on any purchase. Enter item price and tax rate to find tax amount and total price. Includes reverse tax calculation to find pre-tax price.">
+  <link rel="canonical" href="https://calcwise.com/pages/business-calculators/sales-tax-calculator/">
+  <meta property="og:title" content="Sales Tax Calculator | CalcWise">
+  <meta property="og:description" content="Calculate sales tax on any purchase. Enter item price and tax rate to find tax amount and total price. Includes reverse tax calculation.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcwise.com/pages/business-calculators/sales-tax-calculator/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Sales Tax Calculator | CalcWise">
+  <meta name="twitter:description" content="Calculate sales tax on any purchase. Enter item price and tax rate to find tax amount and total price.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.com/"},
+      {"@type": "ListItem", "position": 2, "name": "Business Calculators", "item": "https://calcwise.com/pages/business-calculators/"},
+      {"@type": "ListItem", "position": 3, "name": "Sales Tax Calculator"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do I calculate sales tax?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Multiply the item price by the tax rate (as a decimal). For example, a $50 item with 8% tax: $50 x 0.08 = $4.00 in tax, making the total $54.00."}
+      },
+      {
+        "@type": "Question",
+        "name": "How do I find the pre-tax price from a total?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Divide the total price by (1 + tax rate as a decimal). For example, $54 total with 8% tax: $54 / 1.08 = $50.00 pre-tax price."}
+      },
+      {
+        "@type": "Question",
+        "name": "What is the average sales tax rate in the US?",
+        "acceptedAnswer": {"@type": "Answer", "text": "The average combined state and local sales tax rate in the US is approximately 7.12%. Rates vary from 0% (in states like Oregon) to over 10% in some localities."}
+      },
+      {
+        "@type": "Question",
+        "name": "Are all items subject to sales tax?",
+        "acceptedAnswer": {"@type": "Answer", "text": "No. Many states exempt essential items like groceries, prescription medications, and clothing from sales tax. Exemptions vary significantly by state."}
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="logo">
+        <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav">
+        <a href="/">Home</a>
+        <a href="/pages/business-calculators/" aria-current="page">Business</a>
+        <a href="/pages/financial-calculators/">Financial</a>
+        <a href="/pages/tax-calculators/">Tax</a>
+        <a href="/pages/investment-calculators/">Investment</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav">
+      <a href="/">Home</a>
+      <a href="/pages/business-calculators/">Business Calculators</a>
+      <a href="/pages/financial-calculators/">Financial Calculators</a>
+      <a href="/pages/tax-calculators/">Tax Calculators</a>
+      <a href="/pages/investment-calculators/">Investment Calculators</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/pages/business-calculators/">Business Calculators</a></li>
+          <li><span aria-current="page">Sales Tax Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="calc-page-layout">
+          <div class="calc-page-main">
+            <h1>Sales Tax Calculator</h1>
+            <p class="subtitle" style="font-size:var(--text-lg);color:var(--color-gray-600);margin-bottom:var(--space-8);line-height:var(--leading-relaxed);">Quickly calculate sales tax, total price, or find the pre-tax price from a tax-inclusive amount. Works for any tax rate in any jurisdiction.</p>
+
+            <!-- Calculator -->
+            <div class="calc-container">
+              <div class="calc-header">
+                <h2>Sales Tax Calculator</h2>
+                <p>Calculate tax amount and total price</p>
+              </div>
+              <div class="calc-body">
+                <form id="tax-form" onsubmit="return false;">
+                  <div class="form-group">
+                    <label class="form-label" for="calc-mode">Calculation Mode</label>
+                    <select id="calc-mode" class="form-select" onchange="updateLabels()">
+                      <option value="add">Add tax to price</option>
+                      <option value="reverse">Find pre-tax price (reverse)</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="item-price" id="price-label">Item Price (before tax)</label>
+                    <div class="input-prefix">
+                      <span class="prefix">$</span>
+                      <input type="number" id="item-price" name="itemPrice" class="form-input" placeholder="49.99" min="0" step="0.01" required>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="tax-rate">Tax Rate <span class="form-hint">(%)</span></label>
+                    <div class="input-suffix">
+                      <input type="number" id="tax-rate" name="taxRate" class="form-input" placeholder="8.25" min="0" max="100" step="0.001" required>
+                      <span class="suffix">%</span>
+                    </div>
+                  </div>
+
+                  <div class="calc-actions">
+                    <button type="button" class="btn btn-calculate btn-full" onclick="calculateTax()">Calculate Tax</button>
+                    <button type="button" class="btn btn-reset" onclick="resetForm()">Reset</button>
+                  </div>
+                </form>
+
+                <!-- Results -->
+                <div id="results" class="calc-results hidden">
+                  <div class="result-primary">
+                    <div class="result-label">Tax Amount</div>
+                    <div class="result-value" id="result-tax">$0.00</div>
+                  </div>
+                  <div class="result-grid">
+                    <div class="result-item">
+                      <div class="result-label">Pre-Tax Price</div>
+                      <div class="result-value" id="result-pretax">$0.00</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Total Price</div>
+                      <div class="result-value" id="result-total">$0.00</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="ad-slot ad-slot-leaderboard"></div>
+
+            <!-- Formula Section -->
+            <section class="content-section">
+              <h2>Sales Tax Formulas</h2>
+              <div class="formula-box">
+                <div class="formula-label">Add Tax to Price</div>
+                Tax Amount = Price x (Tax Rate / 100)<br>
+                Total Price = Price + Tax Amount
+              </div>
+              <div class="formula-box">
+                <div class="formula-label">Reverse (Find Pre-Tax Price)</div>
+                Pre-Tax Price = Total Price / (1 + Tax Rate / 100)<br>
+                Tax Amount = Total Price - Pre-Tax Price
+              </div>
+            </section>
+
+            <!-- How to Use -->
+            <section class="content-section">
+              <h2>How to Use This Calculator</h2>
+              <ol>
+                <li>Choose your <strong>calculation mode</strong>: add tax to a price, or reverse-calculate the pre-tax price from a total.</li>
+                <li>Enter the <strong>item price</strong> or total price depending on the mode.</li>
+                <li>Enter the applicable <strong>tax rate</strong> as a percentage.</li>
+                <li>Click <strong>Calculate Tax</strong> to see the tax amount, pre-tax price, and total.</li>
+              </ol>
+            </section>
+
+            <!-- Example Scenario -->
+            <section class="content-section">
+              <h2>Example Scenario</h2>
+              <p>You are purchasing a laptop priced at $999.99 in a jurisdiction with a combined sales tax rate of 8.25%.</p>
+              <ul>
+                <li>Tax Amount: $999.99 x 0.0825 = <strong>$82.50</strong></li>
+                <li>Total Price: $999.99 + $82.50 = <strong>$1,082.49</strong></li>
+              </ul>
+              <p>Reverse calculation: If you paid $1,082.49 total and the tax rate was 8.25%:</p>
+              <ul>
+                <li>Pre-Tax Price: $1,082.49 / 1.0825 = <strong>$999.99</strong></li>
+              </ul>
+            </section>
+
+            <!-- FAQ Section -->
+            <section class="faq-section">
+              <h2>Frequently Asked Questions</h2>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  How do I calculate sales tax?
+                  <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                </button>
+                <div class="faq-answer">
+                  <p>Multiply the item price by the tax rate (as a decimal). For example, a $50 item with 8% tax: $50 x 0.08 = $4.00 in tax, making the total $54.00.</p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  How do I find the pre-tax price from a total?
+                  <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                </button>
+                <div class="faq-answer">
+                  <p>Divide the total price by (1 + tax rate as a decimal). For example, $54 total with 8% tax: $54 / 1.08 = $50.00 pre-tax price.</p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  What is the average sales tax rate in the US?
+                  <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                </button>
+                <div class="faq-answer">
+                  <p>The average combined state and local sales tax rate in the US is approximately 7.12%. Rates vary from 0% (in states like Oregon, Montana, Delaware, New Hampshire) to over 10% in some localities.</p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  Are all items subject to sales tax?
+                  <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                </button>
+                <div class="faq-answer">
+                  <p>No. Many states exempt essential items like groceries, prescription medications, and clothing from sales tax. Exemptions vary significantly by state and locality.</p>
+                </div>
+              </div>
+            </section>
+
+            <!-- Related Calculators -->
+            <section class="related-calculators">
+              <h2>Related Calculators</h2>
+              <div class="grid grid-3">
+                <a href="/pages/business-calculators/commission-calculator/" class="card card-link">
+                  <h3>Commission Calculator</h3>
+                  <p>Calculate sales commissions with flat or tiered rate structures.</p>
+                </a>
+                <a href="/pages/business-calculators/pricing-calculator/" class="card card-link">
+                  <h3>Pricing Calculator</h3>
+                  <p>Determine optimal product pricing based on costs and margins.</p>
+                </a>
+                <a href="/pages/business-calculators/revenue-growth-calculator/" class="card card-link">
+                  <h3>Revenue Growth Calculator</h3>
+                  <p>Track and project your revenue growth rate.</p>
+                </a>
+                <a href="/pages/business-calculators/freelance-rate-calculator/" class="card card-link">
+                  <h3>Freelance Rate Calculator</h3>
+                  <p>Find the right hourly rate for your freelance work.</p>
+                </a>
+              </div>
+            </section>
+
+            <div class="disclaimer">
+              <strong>Disclaimer:</strong> This calculator is for informational and educational purposes only. Tax rates vary by location and may change. Always verify the current tax rate for your specific jurisdiction. This tool does not constitute tax advice.
+            </div>
+          </div>
+
+          <aside class="calc-page-sidebar">
+            <div class="ad-slot ad-slot-rectangle"></div>
+            <div class="sidebar-card">
+              <h3>Business Calculators</h3>
+              <a href="/pages/business-calculators/commission-calculator/">Commission Calculator</a>
+              <a href="/pages/business-calculators/freelance-rate-calculator/">Freelance Rate Calculator</a>
+              <a href="/pages/business-calculators/pricing-calculator/">Pricing Calculator</a>
+              <a href="/pages/business-calculators/revenue-growth-calculator/">Revenue Growth Calculator</a>
+              <a href="/pages/business-calculators/cash-runway-calculator/">Cash Runway Calculator</a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free online calculators for business, finance, tax, and investment decisions.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Calculators</h4>
+          <a href="/pages/business-calculators/">Business</a>
+          <a href="/pages/financial-calculators/">Financial</a>
+          <a href="/pages/tax-calculators/">Tax</a>
+          <a href="/pages/investment-calculators/">Investment</a>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <a href="/about/">About</a>
+          <a href="/blog/">Blog</a>
+          <a href="/contact/">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="/privacy/">Privacy Policy</a>
+          <a href="/terms/">Terms of Service</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/privacy/">Privacy</a>
+          <a href="/terms/">Terms</a>
+          <a href="/contact/">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function updateLabels() {
+      const mode = document.getElementById('calc-mode').value;
+      const label = document.getElementById('price-label');
+      if (mode === 'reverse') {
+        label.textContent = 'Total Price (tax included)';
+      } else {
+        label.textContent = 'Item Price (before tax)';
+      }
+    }
+
+    function calculateTax() {
+      const mode = document.getElementById('calc-mode').value;
+      const price = CalcWise.parseNumber(document.getElementById('item-price').value);
+      const taxRate = CalcWise.parseNumber(document.getElementById('tax-rate').value);
+
+      if (price <= 0) {
+        alert('Please enter a valid price.');
+        return;
+      }
+      if (taxRate < 0) {
+        alert('Please enter a valid tax rate.');
+        return;
+      }
+
+      let preTax, taxAmount, total;
+
+      if (mode === 'reverse') {
+        total = price;
+        preTax = total / (1 + taxRate / 100);
+        taxAmount = total - preTax;
+      } else {
+        preTax = price;
+        taxAmount = preTax * (taxRate / 100);
+        total = preTax + taxAmount;
+      }
+
+      CalcWise.setText('result-tax', CalcWise.formatCurrency(taxAmount));
+      CalcWise.setText('result-pretax', CalcWise.formatCurrency(preTax));
+      CalcWise.setText('result-total', CalcWise.formatCurrency(total));
+      CalcWise.showResults('results');
+    }
+
+    function resetForm() {
+      document.getElementById('tax-form').reset();
+      updateLabels();
+      CalcWise.hideResults('results');
+    }
+  </script>
+</body>
+</html>

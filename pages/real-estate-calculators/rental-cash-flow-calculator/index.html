@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rental Cash Flow Calculator - Rental Property Income Analysis | CalcWise</title>
+    <meta name="description" content="Calculate monthly and annual cash flow from rental properties. Factor in mortgage, taxes, insurance, maintenance, vacancy, and management fees.">
+    <link rel="canonical" href="https://calcwise.com/real-estate-calculators/rental-cash-flow-calculator/">
+    <meta property="og:title" content="Rental Cash Flow Calculator | CalcWise">
+    <meta property="og:description" content="Calculate monthly and annual cash flow from rental properties including all expenses.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://calcwise.com/real-estate-calculators/rental-cash-flow-calculator/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Rental Cash Flow Calculator | CalcWise">
+    <meta name="twitter:description" content="Analyze your rental property cash flow with a detailed expense breakdown.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/design-system.css">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.com/"},
+            {"@type": "ListItem", "position": 2, "name": "Real Estate Calculators", "item": "https://calcwise.com/real-estate-calculators/"},
+            {"@type": "ListItem", "position": 3, "name": "Rental Cash Flow Calculator"}
+        ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {"@type": "Question", "name": "What is considered positive cash flow for a rental property?", "acceptedAnswer": {"@type": "Answer", "text": "Any amount above zero is technically positive cash flow. However, most investors target at least $100-$200 per unit per month to provide a buffer for unexpected expenses."}},
+            {"@type": "Question", "name": "What vacancy rate should I use?", "acceptedAnswer": {"@type": "Answer", "text": "A common rule of thumb is 5-10% for residential properties. Check local market data for more accurate rates. Higher vacancy rates should be used for properties in less desirable areas or with higher tenant turnover."}},
+            {"@type": "Question", "name": "What is cash-on-cash return?", "acceptedAnswer": {"@type": "Answer", "text": "Cash-on-cash return measures the annual pre-tax cash flow relative to the total cash invested. It helps investors understand the return they are getting on their actual out-of-pocket investment."}},
+            {"@type": "Question", "name": "Should I include capital expenditures in the cash flow analysis?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Setting aside funds for capital expenditures (roof, HVAC, appliances) is important. Many investors budget 5-10% of gross rent for capital reserves in addition to regular maintenance."}},
+            {"@type": "Question", "name": "How does property management fee affect cash flow?", "acceptedAnswer": {"@type": "Answer", "text": "Property management typically costs 8-12% of collected rent. While it reduces cash flow, it can save time and provide professional tenant screening, maintenance coordination, and legal compliance."}}
+        ]
+    }
+    </script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="/" class="logo">
+                <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+                CalcWise
+            </a>
+            <nav class="main-nav">
+                <a href="/real-estate-calculators/">Real Estate</a>
+                <a href="/finance-calculators/">Finance</a>
+                <a href="/business-calculators/">Business</a>
+                <a href="/tax-calculators/">Tax</a>
+            </nav>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+            </button>
+        </div>
+        <nav class="mobile-nav">
+            <a href="/real-estate-calculators/">Real Estate Calculators</a>
+            <a href="/finance-calculators/">Finance Calculators</a>
+            <a href="/business-calculators/">Business Calculators</a>
+            <a href="/tax-calculators/">Tax Calculators</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <nav class="breadcrumbs" aria-label="Breadcrumb">
+                <ol>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/real-estate-calculators/">Real Estate Calculators</a></li>
+                    <li><span aria-current="page">Rental Cash Flow Calculator</span></li>
+                </ol>
+            </nav>
+
+            <div class="page-content">
+                <div class="calc-page-layout">
+                    <div class="calc-page-main">
+                        <h1>Rental Cash Flow Calculator</h1>
+                        <p class="subtitle" style="color: var(--color-gray-600); font-size: var(--text-lg); line-height: var(--leading-relaxed); margin-bottom: var(--space-8);">
+                            Determine whether a rental property will generate positive cash flow. Factor in all expenses including mortgage, taxes, insurance, vacancy, and management fees.
+                        </p>
+
+                        <div class="calc-container">
+                            <div class="calc-header">
+                                <h2>Rental Property Cash Flow</h2>
+                                <p>Enter income and expenses to see your net cash flow</p>
+                            </div>
+                            <div class="calc-body">
+                                <form id="cashflow-form">
+                                    <div class="calc-grid calc-grid-2col">
+                                        <div class="form-group">
+                                            <label class="form-label" for="monthly-rent">Monthly Rent</label>
+                                            <div class="input-prefix">
+                                                <span class="prefix">$</span>
+                                                <input type="number" id="monthly-rent" name="monthlyRent" class="form-input" placeholder="2,000" min="0" step="50" required>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label" for="mortgage-payment">Monthly Mortgage Payment</label>
+                                            <div class="input-prefix">
+                                                <span class="prefix">$</span>
+                                                <input type="number" id="mortgage-payment" name="mortgagePayment" class="form-input" placeholder="1,200" min="0" step="50" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="calc-grid calc-grid-2col">
+                                        <div class="form-group">
+                                            <label class="form-label" for="property-tax">Monthly Property Tax</label>
+                                            <div class="input-prefix">
+                                                <span class="prefix">$</span>
+                                                <input type="number" id="property-tax" name="propertyTax" class="form-input" placeholder="300" min="0" step="10" required>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label" for="insurance">Monthly Insurance</label>
+                                            <div class="input-prefix">
+                                                <span class="prefix">$</span>
+                                                <input type="number" id="insurance" name="insurance" class="form-input" placeholder="100" min="0" step="10" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="calc-grid calc-grid-2col">
+                                        <div class="form-group">
+                                            <label class="form-label" for="maintenance">Monthly Maintenance</label>
+                                            <div class="input-prefix">
+                                                <span class="prefix">$</span>
+                                                <input type="number" id="maintenance" name="maintenance" class="form-input" placeholder="150" min="0" step="10" required>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label" for="vacancy-rate">Vacancy Rate</label>
+                                            <div class="input-suffix">
+                                                <input type="number" id="vacancy-rate" name="vacancyRate" class="form-input" placeholder="5" min="0" max="100" step="0.5" required>
+                                                <span class="suffix">%</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label" for="management-fee">Property Management Fee</label>
+                                        <div class="input-suffix">
+                                            <input type="number" id="management-fee" name="managementFee" class="form-input" placeholder="10" min="0" max="100" step="0.5" required>
+                                            <span class="suffix">%</span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label" for="total-cash-invested">Total Cash Invested <span class="form-hint">(for cash-on-cash return)</span></label>
+                                        <div class="input-prefix">
+                                            <span class="prefix">$</span>
+                                            <input type="number" id="total-cash-invested" name="totalCashInvested" class="form-input" placeholder="80,000" min="0" step="1000">
+                                        </div>
+                                    </div>
+                                    <div class="calc-actions">
+                                        <button type="button" class="btn btn-calculate btn-full" onclick="calculateCashFlow()">Calculate Cash Flow</button>
+                                        <button type="reset" class="btn btn-reset">Reset</button>
+                                    </div>
+                                </form>
+
+                                <div id="results" class="calc-results hidden">
+                                    <div class="result-primary">
+                                        <div class="result-label">Monthly Cash Flow</div>
+                                        <div class="result-value" id="result-monthly-cf">$0</div>
+                                    </div>
+                                    <div class="result-grid result-grid-3">
+                                        <div class="result-item">
+                                            <div class="result-label">Annual Cash Flow</div>
+                                            <div class="result-value" id="result-annual-cf">$0</div>
+                                        </div>
+                                        <div class="result-item">
+                                            <div class="result-label">Cash-on-Cash Return</div>
+                                            <div class="result-value" id="result-coc">0%</div>
+                                        </div>
+                                        <div class="result-item">
+                                            <div class="result-label">Total Monthly Expenses</div>
+                                            <div class="result-value" id="result-total-expenses">$0</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="ad-slot ad-slot-leaderboard"></div>
+
+                        <section class="content-section">
+                            <h2>Cash Flow Formula</h2>
+                            <div class="formula-box">
+                                <div class="formula-label">Monthly Cash Flow</div>
+                                Effective Rent = Monthly Rent x (1 - Vacancy Rate / 100)
+Management Cost = Effective Rent x (Management Fee / 100)
+
+Monthly Cash Flow = Effective Rent - Mortgage - Taxes
+                    - Insurance - Maintenance - Management Cost
+
+Cash-on-Cash Return = (Annual Cash Flow / Total Cash Invested) x 100
+                            </div>
+                            <p>Effective rent accounts for vacancy by reducing gross rent proportionally. The management fee is calculated on collected rent, not gross potential rent.</p>
+                        </section>
+
+                        <section class="content-section">
+                            <h2>How to Use This Calculator</h2>
+                            <ol>
+                                <li><strong>Enter monthly rent</strong> -- the gross monthly rent you charge or expect to charge.</li>
+                                <li><strong>Enter your monthly mortgage payment</strong> -- principal and interest only (PITI can be split out).</li>
+                                <li><strong>Enter monthly property tax and insurance</strong> -- if escrowed, separate them from mortgage.</li>
+                                <li><strong>Enter monthly maintenance estimate</strong> -- a common guideline is 1% of property value per year, divided by 12.</li>
+                                <li><strong>Set the vacancy rate</strong> -- 5% is typical for strong rental markets.</li>
+                                <li><strong>Set the management fee percentage</strong> -- 8-12% if using a property manager, 0% if self-managing.</li>
+                                <li><strong>Enter total cash invested</strong> (optional) -- for cash-on-cash return calculation.</li>
+                            </ol>
+                        </section>
+
+                        <section class="content-section">
+                            <h2>Example Scenario</h2>
+                            <h3>Single-Family Rental Property</h3>
+                            <p>Monthly rent: $2,000. Mortgage: $1,200. Property tax: $300/month. Insurance: $100/month. Maintenance: $150/month. Vacancy rate: 5%. Management fee: 10%. Total cash invested: $80,000.</p>
+                            <p>Effective rent = $2,000 x 0.95 = $1,900. Management cost = $1,900 x 0.10 = $190. Total expenses = $1,200 + $300 + $100 + $150 + $190 = $1,940.</p>
+                            <p>Monthly cash flow = $1,900 - $1,940 = <strong>-$40</strong> (slight negative cash flow). Annual = -$480. Cash-on-cash return = -0.60%.</p>
+                            <p>This property barely breaks even. Raising rent to $2,200 would yield $105/month positive cash flow and a 1.58% cash-on-cash return.</p>
+                        </section>
+
+                        <section class="faq-section">
+                            <h2>Frequently Asked Questions</h2>
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">
+                                    What is considered positive cash flow for a rental property?
+                                    <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                                </button>
+                                <div class="faq-answer"><p>Any amount above zero is technically positive cash flow. However, most investors target at least $100-$200 per unit per month to provide a buffer for unexpected expenses.</p></div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">
+                                    What vacancy rate should I use?
+                                    <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                                </button>
+                                <div class="faq-answer"><p>A common rule of thumb is 5-10% for residential properties. Check local market data for more accurate rates. Higher vacancy rates should be used for properties in less desirable areas or with higher tenant turnover.</p></div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">
+                                    What is cash-on-cash return?
+                                    <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                                </button>
+                                <div class="faq-answer"><p>Cash-on-cash return measures the annual pre-tax cash flow relative to the total cash invested. It helps investors understand the return they are getting on their actual out-of-pocket investment.</p></div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">
+                                    Should I include capital expenditures in the cash flow analysis?
+                                    <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                                </button>
+                                <div class="faq-answer"><p>Yes. Setting aside funds for capital expenditures (roof, HVAC, appliances) is important. Many investors budget 5-10% of gross rent for capital reserves in addition to regular maintenance.</p></div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">
+                                    How does property management fee affect cash flow?
+                                    <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                                </button>
+                                <div class="faq-answer"><p>Property management typically costs 8-12% of collected rent. While it reduces cash flow, it can save time and provide professional tenant screening, maintenance coordination, and legal compliance.</p></div>
+                            </div>
+                        </section>
+
+                        <section class="related-calculators">
+                            <h2>Related Calculators</h2>
+                            <div class="grid grid-3">
+                                <a href="/real-estate-calculators/cap-rate-calculator/" class="card card-link">
+                                    <div class="card-icon">%</div>
+                                    <h3>Cap Rate Calculator</h3>
+                                    <p>Calculate the capitalization rate for investment properties.</p>
+                                </a>
+                                <a href="/real-estate-calculators/rental-property-roi-calculator/" class="card card-link">
+                                    <div class="card-icon">%</div>
+                                    <h3>Rental Property ROI</h3>
+                                    <p>Calculate total return on investment including appreciation.</p>
+                                </a>
+                                <a href="/real-estate-calculators/airbnb-income-calculator/" class="card card-link">
+                                    <div class="card-icon">$</div>
+                                    <h3>Airbnb Income Calculator</h3>
+                                    <p>Estimate short-term rental income and profit.</p>
+                                </a>
+                                <a href="/real-estate-calculators/amortization-calculator/" class="card card-link">
+                                    <div class="card-icon">T</div>
+                                    <h3>Amortization Calculator</h3>
+                                    <p>Generate a complete loan amortization schedule.</p>
+                                </a>
+                            </div>
+                        </section>
+
+                        <div class="disclaimer">
+                            <strong>Disclaimer:</strong> This calculator is for informational and educational purposes only. Results are estimates and do not account for all possible expenses. Consult a qualified financial advisor before making investment decisions.
+                        </div>
+
+                        <div class="ad-slot ad-slot-leaderboard"></div>
+                    </div>
+
+                    <aside class="calc-page-sidebar">
+                        <div class="sidebar-card">
+                            <h3>Real Estate Tools</h3>
+                            <a href="/real-estate-calculators/amortization-calculator/">Amortization Calculator</a>
+                            <a href="/real-estate-calculators/cap-rate-calculator/">Cap Rate Calculator</a>
+                            <a href="/real-estate-calculators/rental-property-roi-calculator/">Rental Property ROI</a>
+                            <a href="/real-estate-calculators/airbnb-income-calculator/">Airbnb Income Calculator</a>
+                            <a href="/real-estate-calculators/house-flip-calculator/">House Flip Calculator</a>
+                            <a href="/real-estate-calculators/commission-calculator/">Commission Calculator</a>
+                        </div>
+                        <div class="ad-slot ad-slot-rectangle"></div>
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="/" class="logo">
+                        <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+                        CalcWise
+                    </a>
+                    <p>Free, accurate financial calculators for everyone. Make smarter money decisions with CalcWise.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Real Estate</h4>
+                    <a href="/real-estate-calculators/amortization-calculator/">Amortization</a>
+                    <a href="/real-estate-calculators/cap-rate-calculator/">Cap Rate</a>
+                    <a href="/real-estate-calculators/rental-cash-flow-calculator/">Rental Cash Flow</a>
+                    <a href="/real-estate-calculators/commission-calculator/">Commission</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Finance</h4>
+                    <a href="/finance-calculators/loan-calculator/">Loan Calculator</a>
+                    <a href="/finance-calculators/compound-interest-calculator/">Compound Interest</a>
+                    <a href="/finance-calculators/savings-calculator/">Savings Calculator</a>
+                    <a href="/finance-calculators/debt-payoff-calculator/">Debt Payoff</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <a href="/about/">About</a>
+                    <a href="/contact/">Contact</a>
+                    <a href="/privacy/">Privacy Policy</a>
+                    <a href="/terms/">Terms of Use</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; 2026 CalcWise. All rights reserved.</span>
+                <div class="footer-links">
+                    <a href="/privacy/">Privacy</a>
+                    <a href="/terms/">Terms</a>
+                    <a href="/sitemap.xml">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/calculator-engine.js"></script>
+    <script src="/js/search-index.js"></script>
+    <script>
+    function calculateCashFlow() {
+        if (!CalcWise.validateForm('cashflow-form')) return;
+
+        const v = CalcWise.getFormValues('cashflow-form');
+        const effectiveRent = v.monthlyRent * (1 - v.vacancyRate / 100);
+        const managementCost = effectiveRent * (v.managementFee / 100);
+        const totalExpenses = v.mortgagePayment + v.propertyTax + v.insurance + v.maintenance + managementCost;
+        const monthlyCF = effectiveRent - totalExpenses;
+        const annualCF = monthlyCF * 12;
+        const cashInvested = v.totalCashInvested || 0;
+        const cocReturn = cashInvested > 0 ? (annualCF / cashInvested) * 100 : 0;
+
+        CalcWise.setText('result-monthly-cf', CalcWise.formatCurrency(monthlyCF));
+        CalcWise.setText('result-annual-cf', CalcWise.formatCurrency(annualCF, 0));
+        CalcWise.setText('result-coc', CalcWise.formatPercent(cocReturn));
+        CalcWise.setText('result-total-expenses', CalcWise.formatCurrency(totalExpenses));
+
+        const primaryEl = document.getElementById('result-monthly-cf');
+        if (primaryEl) {
+            primaryEl.style.color = monthlyCF >= 0 ? 'var(--color-success)' : 'var(--color-error)';
+        }
+
+        CalcWise.showResults('results');
+    }
+
+    document.getElementById('cashflow-form').addEventListener('reset', function() {
+        setTimeout(() => CalcWise.hideResults('results'), 0);
+    });
+    </script>
+</body>
+</html>

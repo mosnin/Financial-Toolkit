@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Break-Even Calculator - CalcWise</title>
+  <meta name="description" content="Calculate your break-even point in units and revenue. Enter fixed costs, price per unit, and variable costs to find your contribution margin and break-even analysis.">
+  <link rel="canonical" href="https://calcwise.io/business-calculators/break-even-calculator/">
+
+  <meta property="og:title" content="Break-Even Calculator - CalcWise">
+  <meta property="og:description" content="Calculate your break-even point in units and revenue. Free break-even analysis tool.">
+  <meta property="og:url" content="https://calcwise.io/business-calculators/break-even-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Break-Even Calculator - CalcWise">
+  <meta name="twitter:description" content="Calculate your break-even point in units and revenue. Free break-even analysis tool.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Business Calculators", "item": "https://calcwise.io/business-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "Break-Even Calculator", "item": "https://calcwise.io/business-calculators/break-even-calculator/" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the break-even point?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The break-even point is the number of units you must sell so that total revenue equals total costs (fixed + variable). At this point, profit is zero -- you neither gain nor lose money." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is contribution margin?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Contribution margin is the difference between the selling price per unit and the variable cost per unit. It represents how much each unit sold contributes toward covering fixed costs and generating profit." }
+      },
+      {
+        "@type": "Question",
+        "name": "Why is break-even analysis important?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Break-even analysis helps businesses set realistic sales targets, evaluate pricing strategies, understand the impact of cost changes, and assess the viability of new products or ventures." }
+      },
+      {
+        "@type": "Question",
+        "name": "How do fixed and variable costs differ?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Fixed costs remain constant regardless of production volume (rent, salaries, insurance). Variable costs change proportionally with production (materials, direct labor, shipping per unit)." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can the break-even point be infinite?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. If the variable cost per unit equals or exceeds the selling price per unit, the contribution margin is zero or negative, meaning you can never cover fixed costs no matter how many units you sell." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/business-calculators/" aria-current="page">Business</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/business-calculators/" aria-current="page">Business Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container page-content">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/business-calculators/">Business Calculators</a></li>
+          <li><span aria-current="page">Break-Even Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="calc-page-layout">
+        <div class="calc-page-main">
+          <h1>Break-Even Calculator</h1>
+          <p class="mt-4 mb-8" style="font-size:var(--text-lg); color:var(--color-gray-600); max-width:700px; line-height:var(--leading-relaxed);">Determine how many units you need to sell to cover your costs. Enter your fixed costs, selling price per unit, and variable cost per unit to calculate your break-even point and contribution margin.</p>
+
+          <div class="calc-container">
+            <div class="calc-header">
+              <h2>Break-Even Analysis</h2>
+              <p>Enter your costs and pricing</p>
+            </div>
+            <div class="calc-body">
+              <form id="breakEvenForm" novalidate>
+                <div class="form-group">
+                  <label class="form-label" for="fixedCosts">Fixed Costs <span class="form-hint">Rent, salaries, insurance, etc.</span></label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="fixedCosts" name="fixedCosts" class="form-input" placeholder="50000" min="0" step="0.01" required>
+                  </div>
+                  <span class="form-error">Please enter valid fixed costs.</span>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="pricePerUnit">Price Per Unit <span class="form-hint">Selling price of one unit</span></label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="pricePerUnit" name="pricePerUnit" class="form-input" placeholder="25" min="0" step="0.01" required>
+                  </div>
+                  <span class="form-error">Please enter a valid price per unit.</span>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="variableCost">Variable Cost Per Unit <span class="form-hint">Materials, labor per unit</span></label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="variableCost" name="variableCost" class="form-input" placeholder="10" min="0" step="0.01" required>
+                  </div>
+                  <span class="form-error">Please enter a valid variable cost.</span>
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calculateBreakEven()">Calculate Break-Even</button>
+                  <button type="button" class="btn btn-reset" onclick="resetForm()">Reset</button>
+                </div>
+              </form>
+
+              <div id="results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">Break-Even Point</div>
+                  <div class="result-value" id="resultUnits">0 units</div>
+                </div>
+                <div class="result-grid result-grid-3">
+                  <div class="result-item">
+                    <div class="result-label">Break-Even Revenue</div>
+                    <div class="result-value" id="resultRevenue">$0</div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Contribution Margin</div>
+                    <div class="result-value" id="resultContribution">$0</div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Contribution Margin %</div>
+                    <div class="result-value" id="resultContributionPct">0%</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="disclaimer">
+            <strong>Disclaimer:</strong> This calculator provides estimates for educational purposes. Real-world break-even analysis may involve additional complexities such as mixed costs, multiple products, and changing variable costs at scale. Consult a financial professional for detailed analysis.
+          </div>
+
+          <div class="ad-slot ad-slot-leaderboard"></div>
+
+          <section class="content-section">
+            <h2>Break-Even Formulas</h2>
+            <p>Understanding the math behind break-even analysis will help you make better pricing and cost decisions.</p>
+            <div class="formula-box">
+              <div class="formula-label">Contribution Margin</div>
+              Contribution Margin = Price Per Unit - Variable Cost Per Unit
+            </div>
+            <div class="formula-box">
+              <div class="formula-label">Break-Even Units</div>
+              Break-Even Units = Fixed Costs / Contribution Margin
+            </div>
+            <div class="formula-box">
+              <div class="formula-label">Break-Even Revenue</div>
+              Break-Even Revenue = Break-Even Units x Price Per Unit
+            </div>
+          </section>
+
+          <section class="content-section">
+            <h2>How to Use This Calculator</h2>
+            <ol>
+              <li><strong>Enter your total fixed costs</strong> -- all expenses that stay the same regardless of production volume (rent, salaries, insurance).</li>
+              <li><strong>Enter your price per unit</strong> -- the selling price for each unit of your product or service.</li>
+              <li><strong>Enter your variable cost per unit</strong> -- costs that change with each unit produced (materials, direct labor, shipping).</li>
+              <li><strong>Click "Calculate Break-Even"</strong> to see how many units you need to sell and the corresponding revenue target.</li>
+            </ol>
+          </section>
+
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>A bakery has <strong>$5,000 in monthly fixed costs</strong> (rent, utilities, staff salaries). Each cake sells for <strong>$25</strong> and costs <strong>$10 in ingredients and labor</strong>.</p>
+            <ul>
+              <li><strong>Contribution Margin:</strong> $25 - $10 = $15 per cake</li>
+              <li><strong>Break-Even Units:</strong> $5,000 / $15 = 334 cakes per month</li>
+              <li><strong>Break-Even Revenue:</strong> 334 x $25 = $8,350</li>
+            </ul>
+            <p>The bakery must sell at least 334 cakes per month to cover all costs. Every cake sold beyond that contributes $15 to profit.</p>
+          </section>
+
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">What is the break-even point?<svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg></button>
+              <div class="faq-answer"><p>The break-even point is the number of units you must sell so that total revenue equals total costs (fixed + variable). At this point, profit is zero -- you neither gain nor lose money.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">What is contribution margin?<svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg></button>
+              <div class="faq-answer"><p>Contribution margin is the difference between the selling price per unit and the variable cost per unit. It represents how much each unit sold contributes toward covering fixed costs and generating profit.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">Why is break-even analysis important?<svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg></button>
+              <div class="faq-answer"><p>Break-even analysis helps businesses set realistic sales targets, evaluate pricing strategies, understand the impact of cost changes, and assess the viability of new products or ventures.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">How do fixed and variable costs differ?<svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg></button>
+              <div class="faq-answer"><p>Fixed costs remain constant regardless of production volume (rent, salaries, insurance). Variable costs change proportionally with production (materials, direct labor, shipping per unit).</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">Can the break-even point be infinite?<svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg></button>
+              <div class="faq-answer"><p>Yes. If the variable cost per unit equals or exceeds the selling price per unit, the contribution margin is zero or negative, meaning you can never cover fixed costs no matter how many units you sell.</p></div>
+            </div>
+          </section>
+
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/business-calculators/profit-margin-calculator/" class="card card-link"><h3>Profit Margin Calculator</h3><p>Calculate gross profit and margin from revenue and COGS.</p></a>
+              <a href="/business-calculators/markup-calculator/" class="card card-link"><h3>Markup Calculator</h3><p>Calculate markup percentage and amount from cost and selling price.</p></a>
+              <a href="/business-calculators/roi-calculator/" class="card card-link"><h3>ROI Calculator</h3><p>Calculate return on investment and annualized ROI.</p></a>
+              <a href="/business-calculators/burn-rate-calculator/" class="card card-link"><h3>Burn Rate Calculator</h3><p>Calculate your startup burn rate and cash runway.</p></a>
+            </div>
+          </section>
+        </div>
+
+        <aside class="calc-page-sidebar">
+          <div class="sidebar-card">
+            <h3>Business Calculators</h3>
+            <a href="/business-calculators/profit-margin-calculator/">Profit Margin</a>
+            <a href="/business-calculators/markup-calculator/">Markup</a>
+            <a href="/business-calculators/break-even-calculator/">Break-Even</a>
+            <a href="/business-calculators/roi-calculator/">ROI</a>
+            <a href="/business-calculators/burn-rate-calculator/">Burn Rate</a>
+            <a href="/business-calculators/cac-calculator/">Customer Acquisition Cost</a>
+            <a href="/business-calculators/ltv-calculator/">Customer Lifetime Value</a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col"><h4>Real Estate</h4><a href="/real-estate-calculators/">All Real Estate</a></div>
+        <div class="footer-col"><h4>Finance</h4><a href="/finance-calculators/">All Finance</a></div>
+        <div class="footer-col"><h4>Business</h4><a href="/business-calculators/">All Business</a></div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/about.html">About</a>
+          <a href="/contact.html">Contact</a>
+          <a href="/privacy.html">Privacy</a>
+          <a href="/terms.html">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateBreakEven() {
+      if (!CalcWise.validateForm('breakEvenForm')) return;
+
+      const fixedCosts = CalcWise.parseNumber(document.getElementById('fixedCosts').value);
+      const price = CalcWise.parseNumber(document.getElementById('pricePerUnit').value);
+      const variableCost = CalcWise.parseNumber(document.getElementById('variableCost').value);
+
+      if (price <= 0) { alert('Price per unit must be greater than zero.'); return; }
+
+      const contributionMargin = price - variableCost;
+
+      if (contributionMargin <= 0) {
+        CalcWise.setText('resultUnits', 'N/A');
+        CalcWise.setText('resultRevenue', 'N/A');
+        CalcWise.setText('resultContribution', CalcWise.formatCurrency(contributionMargin));
+        CalcWise.setText('resultContributionPct', CalcWise.formatPercent((contributionMargin / price) * 100));
+        CalcWise.showResults('results');
+        return;
+      }
+
+      const result = CalcWise.breakEven(fixedCosts, price, variableCost);
+      const contributionPct = (contributionMargin / price) * 100;
+
+      CalcWise.setText('resultUnits', CalcWise.formatNumber(result.units) + ' units');
+      CalcWise.setText('resultRevenue', CalcWise.formatCurrency(result.revenue));
+      CalcWise.setText('resultContribution', CalcWise.formatCurrency(contributionMargin) + '/unit');
+      CalcWise.setText('resultContributionPct', CalcWise.formatPercent(contributionPct));
+      CalcWise.showResults('results');
+    }
+
+    function resetForm() {
+      document.getElementById('breakEvenForm').reset();
+      CalcWise.hideResults('results');
+    }
+  </script>
+</body>
+</html>

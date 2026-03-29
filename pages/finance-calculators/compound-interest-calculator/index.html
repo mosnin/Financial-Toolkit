@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Compound Interest Calculator - See Your Money Grow | CalcWise</title>
+  <meta name="description" content="Free compound interest calculator with monthly contributions. See how your money grows with compound interest over time. Choose daily, monthly, quarterly, or annual compounding.">
+  <meta name="keywords" content="compound interest calculator, compound interest, savings growth, investment calculator, interest compounding">
+  <link rel="canonical" href="https://calcwise.io/finance-calculators/compound-interest-calculator/">
+
+  <meta property="og:title" content="Compound Interest Calculator - See Your Money Grow">
+  <meta property="og:description" content="Free compound interest calculator with monthly contributions. See how your savings grow with the power of compounding.">
+  <meta property="og:url" content="https://calcwise.io/finance-calculators/compound-interest-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Compound Interest Calculator - See Your Money Grow">
+  <meta name="twitter:description" content="Free compound interest calculator with monthly contributions. See how your savings grow with the power of compounding.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Finance Calculators", "item": "https://calcwise.io/finance-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "Compound Interest Calculator", "item": "https://calcwise.io/finance-calculators/compound-interest-calculator/" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is compound interest?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Compound interest is interest calculated on both the initial principal and the accumulated interest from previous periods. This creates a snowball effect where your money grows exponentially over time, often called 'interest on interest.'" }
+      },
+      {
+        "@type": "Question",
+        "name": "How does compounding frequency affect my returns?",
+        "acceptedAnswer": { "@type": "Answer", "text": "More frequent compounding (daily vs. annually) means interest is calculated and added to your balance more often, resulting in slightly higher returns. The difference is most noticeable with larger balances and higher interest rates." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the Rule of 72?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The Rule of 72 is a quick way to estimate how long it takes to double your money. Divide 72 by the annual interest rate to get the approximate number of years. For example, at 6% interest, your money doubles in about 12 years (72 / 6 = 12)." }
+      },
+      {
+        "@type": "Question",
+        "name": "Why are regular contributions so powerful with compound interest?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Regular contributions amplify compound interest because each new deposit starts earning interest immediately. Over decades, even small monthly contributions can result in hundreds of thousands of dollars due to the compounding effect on both the principal and contributions." }
+      },
+      {
+        "@type": "Question",
+        "name": "Does compound interest apply to debt as well?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes, compound interest also applies to debt like credit cards and some loans. This means unpaid interest gets added to your balance, and you end up paying interest on interest, which can cause debt to grow rapidly if not managed." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/" aria-current="page">Finance</a>
+        <a href="/business-calculators/">Business</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/business-calculators/">Business Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/finance-calculators/">Finance Calculators</a></li>
+          <li><span aria-current="page">Compound Interest Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="article-content">
+          <h1>Compound Interest Calculator</h1>
+          <p>Discover the power of compound interest with this calculator. Enter your initial deposit, monthly contribution, interest rate, time horizon, and compounding frequency to see your future value, total contributions, and interest earned.</p>
+
+          <div class="calc-container mt-8">
+            <div class="calc-header">
+              <h2>Calculate Compound Interest</h2>
+              <p>See how your money grows over time</p>
+            </div>
+            <div class="calc-body">
+              <form id="compound-form" onsubmit="return false;">
+                <div class="form-group">
+                  <label class="form-label" for="initial-deposit">Initial Deposit</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="initial-deposit" name="initialDeposit" class="form-input" placeholder="5000" min="0" step="100" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="monthly-contribution">Monthly Contribution</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="monthly-contribution" name="monthlyContribution" class="form-input" placeholder="200" min="0" step="10">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="annual-rate">Annual Interest Rate</label>
+                  <div class="input-suffix">
+                    <input type="number" id="annual-rate" name="annualRate" class="form-input" placeholder="7" min="0" max="100" step="0.01" required>
+                    <span class="suffix">%</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="years">Number of Years</label>
+                  <input type="number" id="years" name="years" class="form-input" placeholder="20" min="1" max="100" step="1" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="compound-freq">Compound Frequency</label>
+                  <select id="compound-freq" name="compoundFreq" class="form-select">
+                    <option value="365">Daily</option>
+                    <option value="12" selected>Monthly</option>
+                    <option value="4">Quarterly</option>
+                    <option value="1">Annually</option>
+                  </select>
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calculateCompound()">Calculate</button>
+                  <button type="button" class="btn btn-reset" onclick="resetCompound()">Reset</button>
+                </div>
+              </form>
+
+              <div id="compound-results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">Future Value</div>
+                  <div class="result-value" id="result-future-value"></div>
+                </div>
+                <div class="result-grid">
+                  <div class="result-item">
+                    <div class="result-label">Total Contributions</div>
+                    <div class="result-value" id="result-contributions"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Interest Earned</div>
+                    <div class="result-value" id="result-compound-interest"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <section class="content-section">
+            <h2>Compound Interest Formula</h2>
+            <p>Compound interest is calculated using the following formula for the future value of an investment with regular contributions:</p>
+            <div class="formula-box">
+              <div class="formula-label">Compound Interest Formula</div>
+              A = P(1 + r/n)^(nt) + PMT x [((1 + r/n)^(nt) - 1) / (r/n)]
+            </div>
+            <p>Where <strong>A</strong> is the future value, <strong>P</strong> is the initial principal, <strong>r</strong> is the annual interest rate (decimal), <strong>n</strong> is the number of compounding periods per year, <strong>t</strong> is the number of years, and <strong>PMT</strong> is the regular contribution amount.</p>
+          </section>
+
+          <section class="content-section">
+            <h2>How to Use This Calculator</h2>
+            <ol>
+              <li><strong>Enter your initial deposit</strong> - the lump sum you start with.</li>
+              <li><strong>Enter your monthly contribution</strong> - the amount you add each month (can be $0).</li>
+              <li><strong>Enter the annual interest rate</strong> - the expected annual return rate.</li>
+              <li><strong>Enter the number of years</strong> - your investment time horizon.</li>
+              <li><strong>Choose a compounding frequency</strong> - how often interest is calculated and added.</li>
+              <li><strong>Click "Calculate"</strong> to see your projected future value.</li>
+            </ol>
+          </section>
+
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>If you invest $5,000 initially and add $200 per month at a 7% annual return compounded monthly for 20 years, your investment would grow to approximately $109,466. Of that, $53,000 would be your contributions and $56,466 would be interest earned - demonstrating the incredible power of compound interest over time.</p>
+          </section>
+
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What is compound interest?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Compound interest is interest calculated on both the initial principal and the accumulated interest from previous periods. This creates a snowball effect where your money grows exponentially over time, often called "interest on interest."</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                How does compounding frequency affect my returns?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>More frequent compounding (daily vs. annually) means interest is calculated and added to your balance more often, resulting in slightly higher returns. The difference is most noticeable with larger balances and higher interest rates.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What is the Rule of 72?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>The Rule of 72 is a quick way to estimate how long it takes to double your money. Divide 72 by the annual interest rate to get the approximate number of years. For example, at 6% interest, your money doubles in about 12 years (72 / 6 = 12).</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Why are regular contributions so powerful with compound interest?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Regular contributions amplify compound interest because each new deposit starts earning interest immediately. Over decades, even small monthly contributions can result in hundreds of thousands of dollars due to the compounding effect.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Does compound interest apply to debt as well?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Yes, compound interest also applies to debt like credit cards and some loans. Unpaid interest gets added to your balance, and you end up paying interest on interest, which can cause debt to grow rapidly if not managed.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/finance-calculators/interest-calculator/" class="card card-link">
+                <h3>Simple Interest Calculator</h3>
+                <p>Calculate interest using the simple I = Prt formula.</p>
+              </a>
+              <a href="/finance-calculators/savings-calculator/" class="card card-link">
+                <h3>Savings Goal Calculator</h3>
+                <p>Find out how long to reach your savings target.</p>
+              </a>
+              <a href="/finance-calculators/investment-return-calculator/" class="card card-link">
+                <h3>Investment Return Calculator</h3>
+                <p>Project the future value of your investments.</p>
+              </a>
+              <a href="/finance-calculators/loan-calculator/" class="card card-link">
+                <h3>Loan Calculator</h3>
+                <p>Calculate monthly payments for any fixed-rate loan.</p>
+              </a>
+            </div>
+          </section>
+
+          <div class="disclaimer">
+            <strong>Disclaimer:</strong> This calculator provides estimates for informational purposes only. Actual returns may vary based on market conditions, fees, taxes, and other factors. Past performance does not guarantee future results. This is not financial advice. Consult a qualified financial professional before making investment decisions.
+          </div>
+
+          <div class="ad-slot ad-slot-leaderboard"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Real Estate</h4>
+          <a href="/real-estate-calculators/">All Real Estate Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Finance</h4>
+          <a href="/finance-calculators/">All Finance Calculators</a>
+          <a href="/finance-calculators/loan-calculator/">Loan Calculator</a>
+          <a href="/finance-calculators/compound-interest-calculator/">Compound Interest</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateCompound() {
+      if (!CalcWise.validateForm('compound-form')) return;
+
+      const principal = CalcWise.parseNumber(document.getElementById('initial-deposit').value);
+      const monthly = CalcWise.parseNumber(document.getElementById('monthly-contribution').value);
+      const rate = parseFloat(document.getElementById('annual-rate').value);
+      const years = parseFloat(document.getElementById('years').value);
+      const freq = parseInt(document.getElementById('compound-freq').value);
+
+      const result = CalcWise.compoundInterest(principal, rate, years, freq, monthly);
+
+      CalcWise.setText('result-future-value', CalcWise.formatCurrency(result.futureValue));
+      CalcWise.setText('result-contributions', CalcWise.formatCurrency(result.totalContributions));
+      CalcWise.setText('result-compound-interest', CalcWise.formatCurrency(result.interestEarned));
+      CalcWise.showResults('compound-results');
+    }
+
+    function resetCompound() {
+      document.getElementById('compound-form').reset();
+      CalcWise.hideResults('compound-results');
+    }
+  </script>
+</body>
+</html>

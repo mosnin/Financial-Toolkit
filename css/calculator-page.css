@@ -1,0 +1,393 @@
+/* ============================================
+   CalcWise Calculator Page Styles
+   Styles specific to individual calculator pages
+   ============================================ */
+
+/* --- Chart Containers --- */
+.chart-container {
+  position: relative;
+  width: 100%;
+  min-height: 280px;
+  max-width: 520px;
+  margin: var(--space-6, 1.5rem) auto;
+  padding: var(--space-4, 1rem);
+  background: var(--color-white, #FFFFFF);
+  border: 1px solid var(--color-gray-200, #E5E7EB);
+  border-radius: 12px;
+}
+
+.chart-container canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.chart-container--wide {
+  max-width: 100%;
+}
+
+.chart-container--compact {
+  min-height: 200px;
+  max-width: 360px;
+}
+
+/* --- Chart Legend --- */
+.chart-legend {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-3, 0.75rem) var(--space-5, 1.25rem);
+  margin-top: var(--space-4, 1rem);
+  padding-top: var(--space-3, 0.75rem);
+  border-top: 1px solid var(--color-gray-100, #F3F4F6);
+}
+
+.chart-legend-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2, 0.5rem);
+  font-size: var(--text-sm, 0.875rem);
+  color: var(--color-gray-700, #374151);
+}
+
+.chart-legend-swatch {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+
+.chart-legend-label {
+  white-space: nowrap;
+}
+
+/* --- Amortization Table --- */
+.amortization-table-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: var(--space-6, 1.5rem) 0;
+  border: 1px solid var(--color-gray-200, #E5E7EB);
+  border-radius: 8px;
+}
+
+.amortization-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--text-sm, 0.875rem);
+  font-variant-numeric: tabular-nums;
+}
+
+.amortization-table thead {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.amortization-table th {
+  background: var(--color-gray-50, #F9FAFB);
+  color: var(--color-gray-600, #4B5563);
+  font-weight: var(--font-semibold, 600);
+  font-size: var(--text-xs, 0.75rem);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: var(--space-3, 0.75rem) var(--space-4, 1rem);
+  text-align: right;
+  border-bottom: 2px solid var(--color-gray-200, #E5E7EB);
+  white-space: nowrap;
+}
+
+.amortization-table th:first-child {
+  text-align: left;
+}
+
+.amortization-table td {
+  padding: var(--space-2, 0.5rem) var(--space-4, 1rem);
+  text-align: right;
+  color: var(--color-gray-800, #1F2937);
+  border-bottom: 1px solid var(--color-gray-100, #F3F4F6);
+}
+
+.amortization-table td:first-child {
+  text-align: left;
+  color: var(--color-gray-500, #6B7280);
+}
+
+.amortization-table tbody tr:hover {
+  background: var(--color-primary-50, #E8F5F0);
+}
+
+.amortization-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Highlight yearly summary rows */
+.amortization-table tr.year-summary {
+  background: var(--color-gray-50, #F9FAFB);
+  font-weight: var(--font-semibold, 600);
+}
+
+/* --- Comparison Table --- */
+.comparison-table-wrapper {
+  overflow-x: auto;
+  margin: var(--space-6, 1.5rem) 0;
+  border: 1px solid var(--color-gray-200, #E5E7EB);
+  border-radius: 8px;
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--text-sm, 0.875rem);
+}
+
+.comparison-table th {
+  background: var(--color-primary, #1B4D3E);
+  color: var(--color-white, #FFFFFF);
+  font-weight: var(--font-semibold, 600);
+  font-size: var(--text-sm, 0.875rem);
+  padding: var(--space-3, 0.75rem) var(--space-4, 1rem);
+  text-align: center;
+  border-right: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.comparison-table th:first-child {
+  text-align: left;
+}
+
+.comparison-table th:last-child {
+  border-right: none;
+}
+
+.comparison-table td {
+  padding: var(--space-3, 0.75rem) var(--space-4, 1rem);
+  text-align: center;
+  border-bottom: 1px solid var(--color-gray-100, #F3F4F6);
+  border-right: 1px solid var(--color-gray-100, #F3F4F6);
+}
+
+.comparison-table td:first-child {
+  text-align: left;
+  font-weight: var(--font-medium, 500);
+  color: var(--color-gray-700, #374151);
+}
+
+.comparison-table td:last-child {
+  border-right: none;
+}
+
+.comparison-table tbody tr:hover {
+  background: var(--color-primary-50, #E8F5F0);
+}
+
+/* Highlighted "best" column */
+.comparison-table .col-highlight {
+  background: var(--color-primary-50, #E8F5F0);
+}
+
+.comparison-table th.col-highlight {
+  background: var(--color-primary-light, #2A7A5F);
+}
+
+/* --- Print Button --- */
+.btn-print {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2, 0.5rem);
+  padding: var(--space-2, 0.5rem) var(--space-4, 1rem);
+  font-size: var(--text-sm, 0.875rem);
+  font-weight: var(--font-medium, 500);
+  color: var(--color-gray-600, #4B5563);
+  background: var(--color-white, #FFFFFF);
+  border: 1px solid var(--color-gray-300, #D1D5DB);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.btn-print:hover {
+  color: var(--color-primary, #1B4D3E);
+  border-color: var(--color-primary-light, #2A7A5F);
+  background: var(--color-primary-50, #E8F5F0);
+}
+
+.btn-print::before {
+  content: '';
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor' stroke-width='2'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/* --- Tab / Toggle Controls --- */
+.calc-tabs {
+  display: flex;
+  gap: 0;
+  margin-bottom: var(--space-6, 1.5rem);
+  border: 1px solid var(--color-gray-200, #E5E7EB);
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--color-gray-50, #F9FAFB);
+}
+
+.calc-tab {
+  flex: 1;
+  padding: var(--space-3, 0.75rem) var(--space-4, 1rem);
+  font-size: var(--text-sm, 0.875rem);
+  font-weight: var(--font-medium, 500);
+  color: var(--color-gray-500, #6B7280);
+  background: transparent;
+  border: none;
+  border-right: 1px solid var(--color-gray-200, #E5E7EB);
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+.calc-tab:last-child {
+  border-right: none;
+}
+
+.calc-tab:hover {
+  color: var(--color-primary, #1B4D3E);
+  background: var(--color-white, #FFFFFF);
+}
+
+.calc-tab.is-active {
+  color: var(--color-white, #FFFFFF);
+  background: var(--color-primary, #1B4D3E);
+  font-weight: var(--font-semibold, 600);
+}
+
+/* Toggle switch (two-option mode) */
+.calc-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3, 0.75rem);
+  margin-bottom: var(--space-6, 1.5rem);
+}
+
+.calc-toggle-label {
+  font-size: var(--text-sm, 0.875rem);
+  color: var(--color-gray-600, #4B5563);
+  cursor: pointer;
+}
+
+.calc-toggle-label.is-active {
+  color: var(--color-primary, #1B4D3E);
+  font-weight: var(--font-semibold, 600);
+}
+
+.calc-toggle-track {
+  position: relative;
+  width: 44px;
+  height: 24px;
+  background: var(--color-gray-300, #D1D5DB);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.calc-toggle-track.is-active {
+  background: var(--color-primary, #1B4D3E);
+}
+
+.calc-toggle-track::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 20px;
+  height: 20px;
+  background: var(--color-white, #FFFFFF);
+  border-radius: 50%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease;
+}
+
+.calc-toggle-track.is-active::after {
+  transform: translateX(20px);
+}
+
+/* Tab content panels */
+.calc-tab-panel {
+  display: none;
+}
+
+.calc-tab-panel.is-active {
+  display: block;
+}
+
+/* --- Result Reveal Animation --- */
+.results-section {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.results-section.is-visible,
+.results-section:not(.hidden) {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered reveal for result cards */
+.result-card {
+  opacity: 0;
+  transform: translateY(8px);
+  animation: calcReveal 0.35s ease forwards;
+}
+
+.result-card:nth-child(1) { animation-delay: 0.05s; }
+.result-card:nth-child(2) { animation-delay: 0.1s; }
+.result-card:nth-child(3) { animation-delay: 0.15s; }
+.result-card:nth-child(4) { animation-delay: 0.2s; }
+.result-card:nth-child(5) { animation-delay: 0.25s; }
+.result-card:nth-child(6) { animation-delay: 0.3s; }
+
+@keyframes calcReveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --- Responsive --- */
+@media (max-width: 640px) {
+  .chart-container {
+    padding: var(--space-3, 0.75rem);
+    min-height: 220px;
+  }
+
+  .chart-legend {
+    gap: var(--space-2, 0.5rem) var(--space-4, 1rem);
+    font-size: var(--text-xs, 0.75rem);
+  }
+
+  .amortization-table th,
+  .amortization-table td {
+    padding: var(--space-2, 0.5rem) var(--space-3, 0.75rem);
+    font-size: var(--text-xs, 0.75rem);
+  }
+
+  .comparison-table th,
+  .comparison-table td {
+    padding: var(--space-2, 0.5rem) var(--space-3, 0.75rem);
+    font-size: var(--text-xs, 0.75rem);
+  }
+
+  .calc-tabs {
+    flex-direction: column;
+  }
+
+  .calc-tab {
+    border-right: none;
+    border-bottom: 1px solid var(--color-gray-200, #E5E7EB);
+  }
+
+  .calc-tab:last-child {
+    border-bottom: none;
+  }
+}

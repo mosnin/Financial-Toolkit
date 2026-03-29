@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Affordability Calculator - How Much House Can You Afford? | CalcWise</title>
+  <meta name="description" content="Find out how much house you can afford based on your income, debts, down payment, and interest rate. Get your maximum home price and monthly payment instantly.">
+  <link rel="canonical" href="https://calcwise.com/real-estate-calculators/affordability-calculator/">
+  <meta property="og:title" content="Home Affordability Calculator | CalcWise">
+  <meta property="og:description" content="Find out how much house you can afford based on your income, debts, and down payment.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcwise.com/real-estate-calculators/affordability-calculator/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Home Affordability Calculator | CalcWise">
+  <meta name="twitter:description" content="Find out how much house you can afford based on your income, debts, and down payment.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.com/"},
+      {"@type": "ListItem", "position": 2, "name": "Real Estate Calculators", "item": "https://calcwise.com/real-estate-calculators/"},
+      {"@type": "ListItem", "position": 3, "name": "Affordability Calculator"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type": "Question", "name": "What is the 28/36 rule for home affordability?", "acceptedAnswer": {"@type": "Answer", "text": "The 28/36 rule is a guideline used by lenders. It states that your monthly housing costs should not exceed 28% of your gross monthly income (front-end ratio), and your total monthly debt payments including housing should not exceed 36% of your gross monthly income (back-end ratio). This calculator uses the 36% back-end ratio to determine your maximum affordable home price."}},
+      {"@type": "Question", "name": "How does my debt-to-income ratio affect what I can afford?", "acceptedAnswer": {"@type": "Answer", "text": "Your debt-to-income (DTI) ratio is one of the most important factors lenders consider. A lower DTI means more of your income is available for mortgage payments, allowing you to qualify for a larger loan. Most conventional lenders prefer a total DTI of 36% or less, though some loan programs allow up to 43% or even 50%."}},
+      {"@type": "Question", "name": "Does this calculator account for property taxes and insurance?", "acceptedAnswer": {"@type": "Answer", "text": "This calculator estimates the maximum home price based on your ability to make mortgage principal and interest payments. Your actual affordable price may be lower when factoring in property taxes (typically 0.5-2.5% of home value annually), homeowners insurance, HOA fees, and PMI. Plan for these additional costs to get a complete picture."}},
+      {"@type": "Question", "name": "How much down payment do I need?", "acceptedAnswer": {"@type": "Answer", "text": "The minimum down payment depends on your loan type. Conventional loans typically require 3-5%, FHA loans require 3.5%, and VA and USDA loans may require 0% down. However, putting 20% down avoids private mortgage insurance (PMI) and reduces your monthly payment significantly."}},
+      {"@type": "Question", "name": "Should I buy the most expensive home I qualify for?", "acceptedAnswer": {"@type": "Answer", "text": "Financial experts generally recommend buying less than your maximum qualification. Just because you can qualify for a certain amount does not mean it is comfortable. Leave room in your budget for savings, emergencies, maintenance, and lifestyle expenses. A good rule of thumb is to aim for a home that costs no more than 3-4 times your annual income."}}
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="logo">
+        <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/" aria-current="page">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/business-calculators/">Business</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/business-calculators/">Business Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main class="container page-content">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li><a href="/real-estate-calculators/">Real Estate Calculators</a></li>
+        <li><span aria-current="page">Affordability Calculator</span></li>
+      </ol>
+    </nav>
+
+    <div class="article-content">
+      <h1>Home Affordability Calculator</h1>
+      <p>Determine how much house you can afford based on your income, existing debts, and down payment. This calculator uses standard lending guidelines to estimate your maximum home price and monthly payment so you can shop with confidence.</p>
+
+      <div class="ad-slot" aria-hidden="true"></div>
+
+      <div class="calc-container">
+        <div class="calc-header">
+          <h2>How Much House Can You Afford?</h2>
+          <p>Enter your financial details below</p>
+        </div>
+        <div class="calc-body">
+          <form id="afford-form">
+            <div class="form-group">
+              <label class="form-label" for="annual-income">Annual Gross Income</label>
+              <div class="input-prefix">
+                <span class="prefix">$</span>
+                <input type="number" id="annual-income" name="annualIncome" class="form-input" placeholder="85,000" required min="0" step="1000">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="monthly-debts">Monthly Debt Payments <span class="form-hint">(car, student loans, credit cards)</span></label>
+              <div class="input-prefix">
+                <span class="prefix">$</span>
+                <input type="number" id="monthly-debts" name="monthlyDebts" class="form-input" placeholder="500" required min="0" step="50">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="down-payment-amount">Down Payment</label>
+              <div class="input-prefix">
+                <span class="prefix">$</span>
+                <input type="number" id="down-payment-amount" name="downPayment" class="form-input" placeholder="60,000" required min="0" step="1000">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="interest-rate">Interest Rate <span class="form-hint">(annual %)</span></label>
+              <div class="input-suffix">
+                <input type="number" id="interest-rate" name="interestRate" class="form-input" placeholder="6.5" required min="0" max="25" step="0.125">
+                <span class="suffix">%</span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="loan-term">Loan Term</label>
+              <select id="loan-term" name="loanTerm" class="form-select">
+                <option value="30">30 Years</option>
+                <option value="15">15 Years</option>
+                <option value="20">20 Years</option>
+              </select>
+            </div>
+            <div class="calc-actions">
+              <button type="button" class="btn btn-calculate btn-full" onclick="calculateAffordability()">Calculate Affordability</button>
+              <button type="reset" class="btn btn-reset">Reset</button>
+            </div>
+          </form>
+
+          <div id="afford-results" class="calc-results hidden">
+            <div class="result-primary">
+              <div class="result-label">Maximum Home Price</div>
+              <div class="result-value" id="result-max-price"></div>
+            </div>
+            <div class="result-grid result-grid-3">
+              <div class="result-item">
+                <div class="result-label">Max Monthly Payment</div>
+                <div class="result-value" id="result-max-payment"></div>
+              </div>
+              <div class="result-item">
+                <div class="result-label">Max Loan Amount</div>
+                <div class="result-value" id="result-max-loan"></div>
+              </div>
+              <div class="result-item">
+                <div class="result-label">Debt-to-Income Ratio</div>
+                <div class="result-value" id="result-dti"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ad-slot" aria-hidden="true"></div>
+
+      <section class="content-section">
+        <h2>How the Formula Works</h2>
+        <p>This calculator uses the standard debt-to-income (DTI) ratio method that lenders apply when qualifying borrowers. The maximum total DTI is typically 36% of gross monthly income.</p>
+        <div class="formula-box">
+          <div class="formula-label">Affordability Calculation</div>
+          Max Monthly Housing Payment = (Gross Monthly Income x 0.36) - Monthly Debts
+          Max Loan = Reverse of: M = P[r(1+r)^n] / [(1+r)^n - 1]
+          Max Home Price = Max Loan + Down Payment
+        </div>
+        <p>First, we determine the maximum monthly payment you can afford by taking 36% of your gross monthly income and subtracting your existing debt payments. Then, we reverse the mortgage payment formula to find the maximum loan principal that payment can support. Finally, we add your down payment to get the maximum home price.</p>
+      </section>
+
+      <section class="content-section">
+        <h2>How to Use This Calculator</h2>
+        <ol>
+          <li>Enter your total annual gross income (before taxes).</li>
+          <li>Enter the sum of all your recurring monthly debt payments, including car loans, student loans, credit card minimums, and personal loans.</li>
+          <li>Enter the amount you have available for a down payment.</li>
+          <li>Set the expected interest rate and desired loan term.</li>
+          <li>Click "Calculate Affordability" to see your maximum home price and monthly payment.</li>
+        </ol>
+      </section>
+
+      <section class="content-section">
+        <h2>Example Scenario</h2>
+        <p>Consider a household earning <strong>$90,000 per year</strong> ($7,500/month gross) with <strong>$400/month</strong> in existing debts, a <strong>$50,000 down payment</strong>, at a <strong>6.5% rate</strong> on a <strong>30-year loan</strong>. The maximum total debt payment at 36% DTI would be $2,700/month, leaving $2,300/month for the mortgage. Working backward through the mortgage formula, that supports a loan of about <strong>$364,000</strong>, giving a maximum home price of approximately <strong>$414,000</strong>.</p>
+      </section>
+
+      <section class="faq-section">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            What is the 28/36 rule for home affordability?
+            <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>The 28/36 rule is a guideline used by lenders. It states that your monthly housing costs should not exceed 28% of your gross monthly income (front-end ratio), and your total monthly debt payments including housing should not exceed 36% of your gross monthly income (back-end ratio). This calculator uses the 36% back-end ratio to determine your maximum affordable home price.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            How does my debt-to-income ratio affect what I can afford?
+            <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Your debt-to-income (DTI) ratio is one of the most important factors lenders consider. A lower DTI means more of your income is available for mortgage payments, allowing you to qualify for a larger loan. Most conventional lenders prefer a total DTI of 36% or less, though some loan programs allow up to 43% or even 50%.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Does this calculator account for property taxes and insurance?
+            <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>This calculator estimates the maximum home price based on your ability to make mortgage principal and interest payments. Your actual affordable price may be lower when factoring in property taxes (typically 0.5-2.5% of home value annually), homeowners insurance, HOA fees, and PMI. Plan for these additional costs to get a complete picture.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            How much down payment do I need?
+            <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>The minimum down payment depends on your loan type. Conventional loans typically require 3-5%, FHA loans require 3.5%, and VA and USDA loans may require 0% down. However, putting 20% down avoids private mortgage insurance (PMI) and reduces your monthly payment significantly.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Should I buy the most expensive home I qualify for?
+            <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Financial experts generally recommend buying less than your maximum qualification. Just because you can qualify for a certain amount does not mean it is comfortable. Leave room in your budget for savings, emergencies, maintenance, and lifestyle expenses. A good rule of thumb is to aim for a home that costs no more than 3-4 times your annual income.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="related-calculators">
+        <h2>Related Calculators</h2>
+        <div class="grid grid-3">
+          <a href="/real-estate-calculators/mortgage-calculator/" class="card card-link">
+            <h3>Mortgage Calculator</h3>
+            <p>Calculate your exact monthly mortgage payment.</p>
+          </a>
+          <a href="/real-estate-calculators/down-payment-calculator/" class="card card-link">
+            <h3>Down Payment Calculator</h3>
+            <p>Plan your down payment savings and estimate PMI costs.</p>
+          </a>
+          <a href="/real-estate-calculators/rent-vs-buy-calculator/" class="card card-link">
+            <h3>Rent vs Buy Calculator</h3>
+            <p>Compare the costs of renting versus buying a home.</p>
+          </a>
+          <a href="/real-estate-calculators/closing-cost-calculator/" class="card card-link">
+            <h3>Closing Cost Calculator</h3>
+            <p>Estimate the fees and costs you will pay at closing.</p>
+          </a>
+        </div>
+      </section>
+
+      <div class="disclaimer">
+        <strong>Disclaimer:</strong> This calculator provides estimates for informational purposes only. Actual affordability depends on your complete financial situation, credit score, loan type, and lender requirements. This tool does not constitute financial advice. Consult with a qualified mortgage professional before making purchasing decisions.
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free, accurate financial calculators to help you make smarter money decisions.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Real Estate</h4>
+          <a href="/real-estate-calculators/mortgage-calculator/">Mortgage Calculator</a>
+          <a href="/real-estate-calculators/affordability-calculator/">Affordability Calculator</a>
+          <a href="/real-estate-calculators/refinance-calculator/">Refinance Calculator</a>
+          <a href="/real-estate-calculators/rent-vs-buy-calculator/">Rent vs Buy Calculator</a>
+        </div>
+        <div class="footer-col">
+          <h4>Finance</h4>
+          <a href="/finance-calculators/">All Finance Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about.html">About</a>
+          <a href="/contact.html">Contact</a>
+          <a href="/privacy.html">Privacy Policy</a>
+          <a href="/terms.html">Terms of Service</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 CalcWise. All rights reserved.</span>
+        <div class="footer-links">
+          <a href="/privacy.html">Privacy</a>
+          <a href="/terms.html">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateAffordability() {
+      if (!CalcWise.validateForm('afford-form')) return;
+
+      const v = CalcWise.getFormValues('afford-form');
+      const monthlyIncome = v.annualIncome / 12;
+      const maxTotalDebt = monthlyIncome * 0.36;
+      const maxMortgagePayment = maxTotalDebt - v.monthlyDebts;
+
+      if (maxMortgagePayment <= 0) {
+        CalcWise.setText('result-max-price', '$0');
+        CalcWise.setText('result-max-payment', '$0');
+        CalcWise.setText('result-max-loan', '$0');
+        CalcWise.setText('result-dti', 'Too High');
+        CalcWise.showResults('afford-results');
+        return;
+      }
+
+      // Reverse the mortgage formula to find max principal
+      const monthlyRate = v.interestRate / 100 / 12;
+      const n = v.loanTerm * 12;
+      let maxLoan;
+
+      if (monthlyRate === 0) {
+        maxLoan = maxMortgagePayment * n;
+      } else {
+        maxLoan = maxMortgagePayment * (Math.pow(1 + monthlyRate, n) - 1) / (monthlyRate * Math.pow(1 + monthlyRate, n));
+      }
+
+      const maxHomePrice = maxLoan + v.downPayment;
+      const currentDTI = ((v.monthlyDebts + maxMortgagePayment) / monthlyIncome) * 100;
+
+      CalcWise.setText('result-max-price', CalcWise.formatCurrency(maxHomePrice));
+      CalcWise.setText('result-max-payment', CalcWise.formatCurrency(maxMortgagePayment));
+      CalcWise.setText('result-max-loan', CalcWise.formatCurrency(maxLoan));
+      CalcWise.setText('result-dti', currentDTI.toFixed(1) + '%');
+
+      CalcWise.showResults('afford-results');
+    }
+  </script>
+</body>
+</html>

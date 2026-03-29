@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>50/30/20 Budget Calculator - CalcWise</title>
+  <meta name="description" content="Use the 50/30/20 budget rule to plan your monthly spending. Allocate your after-tax income to needs, wants, and savings with our free calculator.">
+  <link rel="canonical" href="https://calcwise.com/pages/finance-calculators/budget-calculator/">
+  <meta property="og:title" content="50/30/20 Budget Calculator - CalcWise">
+  <meta property="og:description" content="Plan your monthly budget using the 50/30/20 rule. Free calculator with suggested category breakdowns.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcwise.com/pages/finance-calculators/budget-calculator/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="50/30/20 Budget Calculator - CalcWise">
+  <meta name="twitter:description" content="Plan your monthly budget using the 50/30/20 rule. Free calculator with suggested category breakdowns.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.com/"},
+      {"@type": "ListItem", "position": 2, "name": "Finance Calculators", "item": "https://calcwise.com/pages/finance-calculators/"},
+      {"@type": "ListItem", "position": 3, "name": "50/30/20 Budget Calculator"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the 50/30/20 budget rule?",
+        "acceptedAnswer": {"@type": "Answer", "text": "The 50/30/20 rule is a simple budgeting framework where you allocate 50% of your after-tax income to needs, 30% to wants, and 20% to savings and debt repayment. It was popularized by Senator Elizabeth Warren in her book 'All Your Worth.'"}
+      },
+      {
+        "@type": "Question",
+        "name": "What counts as a need vs. a want?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Needs are essential expenses you cannot avoid, such as housing, utilities, groceries, insurance, and minimum debt payments. Wants are non-essential expenses that improve your quality of life, like dining out, entertainment, subscriptions, and vacations."}
+      },
+      {
+        "@type": "Question",
+        "name": "Should I use gross or net income?",
+        "acceptedAnswer": {"@type": "Answer", "text": "You should use your net (after-tax) income. This is your take-home pay after all taxes and mandatory deductions have been removed from your paycheck."}
+      },
+      {
+        "@type": "Question",
+        "name": "What if I cannot keep my needs under 50%?",
+        "acceptedAnswer": {"@type": "Answer", "text": "If your needs exceed 50%, consider ways to reduce fixed costs such as refinancing loans, finding cheaper housing, or reducing utility costs. The 50/30/20 rule is a guideline, not a strict rule. Adjust the percentages to fit your situation while prioritizing savings."}
+      },
+      {
+        "@type": "Question",
+        "name": "What falls under the 20% savings category?",
+        "acceptedAnswer": {"@type": "Answer", "text": "The savings category includes emergency fund contributions, retirement savings (401k, IRA), extra debt payments beyond minimums, investment contributions, and saving for specific financial goals."}
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="logo">
+        <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav">
+        <a href="/">Home</a>
+        <a href="/pages/finance-calculators/" aria-current="page">Finance</a>
+        <a href="/pages/business-calculators/">Business</a>
+        <a href="/pages/investment-calculators/">Investment</a>
+        <a href="/pages/tax-calculators/">Tax</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav">
+      <a href="/">Home</a>
+      <a href="/pages/finance-calculators/">Finance Calculators</a>
+      <a href="/pages/business-calculators/">Business Calculators</a>
+      <a href="/pages/investment-calculators/">Investment Calculators</a>
+      <a href="/pages/tax-calculators/">Tax Calculators</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <!-- Breadcrumbs -->
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li><a href="/pages/finance-calculators/">Finance Calculators</a></li>
+        <li><span aria-current="page">50/30/20 Budget Calculator</span></li>
+      </ol>
+    </nav>
+
+    <div class="page-content">
+      <div class="article-content">
+        <h1>50/30/20 Budget Calculator</h1>
+        <p>The 50/30/20 rule is one of the simplest budgeting methods. Enter your monthly after-tax income to see exactly how much you should allocate to needs, wants, and savings, along with suggested spending breakdowns for each category.</p>
+
+        <!-- Ad Slot -->
+        <div class="ad-slot ad-slot-leaderboard"></div>
+
+        <!-- Calculator -->
+        <div class="calc-container">
+          <div class="calc-header">
+            <h2>Plan Your Monthly Budget</h2>
+            <p>Enter your monthly take-home pay to get started</p>
+          </div>
+          <div class="calc-body">
+            <form id="budget-form">
+              <div class="form-group">
+                <label class="form-label" for="monthlyIncome">Monthly Income (After Tax)</label>
+                <div class="input-prefix">
+                  <span class="prefix">$</span>
+                  <input type="number" id="monthlyIncome" name="monthlyIncome" class="form-input" placeholder="5000" min="0" step="100" required>
+                </div>
+              </div>
+
+              <div class="calc-actions">
+                <button type="button" class="btn btn-calculate" onclick="calculateBudget()">Calculate Budget</button>
+                <button type="button" class="btn btn-reset" onclick="resetBudget()">Reset</button>
+              </div>
+            </form>
+
+            <!-- Results -->
+            <div id="results" class="calc-results hidden">
+              <div class="result-primary">
+                <div class="result-label">Monthly Income</div>
+                <div class="result-value" id="incomeResult">$0</div>
+              </div>
+              <div class="result-grid result-grid-3">
+                <div class="result-item">
+                  <div class="result-label">Needs (50%)</div>
+                  <div class="result-value" id="needsResult" style="color: var(--color-info);">$0</div>
+                </div>
+                <div class="result-item">
+                  <div class="result-label">Wants (30%)</div>
+                  <div class="result-value" id="wantsResult" style="color: var(--color-accent-dark);">$0</div>
+                </div>
+                <div class="result-item">
+                  <div class="result-label">Savings (20%)</div>
+                  <div class="result-value" id="savingsResult" style="color: var(--color-success);">$0</div>
+                </div>
+              </div>
+
+              <div style="margin-top: var(--space-6);">
+                <h3 style="font-size: var(--text-base); margin-bottom: var(--space-4);">Suggested Breakdowns</h3>
+                <div id="breakdownDetails"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Formula Section -->
+        <section class="content-section">
+          <h2>The 50/30/20 Formula</h2>
+          <div class="formula-box">
+            <div class="formula-label">Formula</div>
+            Needs  = Monthly Income x 0.50<br>
+            Wants  = Monthly Income x 0.30<br>
+            Savings = Monthly Income x 0.20
+          </div>
+          <p>This budgeting method was popularized by Senator Elizabeth Warren. It provides a straightforward framework for managing your money without tracking every single expense. The simplicity of three broad categories makes it easy to follow consistently.</p>
+        </section>
+
+        <!-- How to Use -->
+        <section class="content-section">
+          <h2>How to Use This Calculator</h2>
+          <ol>
+            <li><strong>Enter your monthly after-tax income:</strong> This is your take-home pay after taxes, health insurance, and other mandatory deductions.</li>
+            <li><strong>Click "Calculate Budget":</strong> The calculator will split your income into the three categories and provide suggested allocations.</li>
+            <li><strong>Review the breakdowns:</strong> Each category includes suggested sub-categories to help you plan specific spending.</li>
+            <li><strong>Adjust as needed:</strong> Use the results as a starting point and adjust based on your personal circumstances and goals.</li>
+          </ol>
+        </section>
+
+        <!-- Example Scenario -->
+        <section class="content-section">
+          <h2>Example Scenario</h2>
+          <p>Alex earns $5,000 per month after taxes. Using the 50/30/20 rule:</p>
+          <ul>
+            <li><strong>Needs (50% = $2,500):</strong> Rent ($1,400), groceries ($400), utilities ($200), insurance ($250), transportation ($250)</li>
+            <li><strong>Wants (30% = $1,500):</strong> Dining out ($300), entertainment ($200), subscriptions ($100), hobbies ($200), shopping ($400), travel savings ($300)</li>
+            <li><strong>Savings (20% = $1,000):</strong> 401k contribution ($500), emergency fund ($300), extra debt payment ($200)</li>
+          </ul>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+          <h2>Frequently Asked Questions</h2>
+          <div class="faq-item">
+            <button class="faq-question">
+              What is the 50/30/20 budget rule?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>The 50/30/20 rule is a simple budgeting framework where you allocate 50% of your after-tax income to needs, 30% to wants, and 20% to savings and debt repayment. It was popularized by Senator Elizabeth Warren.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              What counts as a need vs. a want?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>Needs are essential expenses you cannot avoid, such as housing, utilities, groceries, insurance, and minimum debt payments. Wants are non-essential expenses like dining out, entertainment, subscriptions, and vacations.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              Should I use gross or net income?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>You should use your net (after-tax) income. This is your take-home pay after all taxes and mandatory deductions have been removed from your paycheck.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              What if I cannot keep my needs under 50%?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>If your needs exceed 50%, consider ways to reduce fixed costs such as refinancing loans, finding cheaper housing, or reducing utility costs. The 50/30/20 rule is a guideline. Adjust the percentages to fit your situation while prioritizing savings.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              What falls under the 20% savings category?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>The savings category includes emergency fund contributions, retirement savings (401k, IRA), extra debt payments beyond minimums, investment contributions, and saving for specific financial goals.</p></div>
+          </div>
+        </section>
+
+        <!-- Related Calculators -->
+        <section class="related-calculators">
+          <h2>Related Calculators</h2>
+          <div class="grid grid-3">
+            <a href="/pages/finance-calculators/net-worth-calculator/" class="card card-link">
+              <h3>Net Worth Calculator</h3>
+              <p>Calculate your total net worth from assets and liabilities.</p>
+            </a>
+            <a href="/pages/finance-calculators/emergency-fund-calculator/" class="card card-link">
+              <h3>Emergency Fund Calculator</h3>
+              <p>Determine how much you need in your emergency fund.</p>
+            </a>
+            <a href="/pages/finance-calculators/salary-to-hourly-calculator/" class="card card-link">
+              <h3>Salary to Hourly Calculator</h3>
+              <p>Convert your annual salary to an hourly rate.</p>
+            </a>
+            <a href="/pages/finance-calculators/retirement-savings-calculator/" class="card card-link">
+              <h3>Retirement Savings Calculator</h3>
+              <p>Project your retirement savings and plan for the future.</p>
+            </a>
+            <a href="/pages/finance-calculators/inflation-calculator/" class="card card-link">
+              <h3>Inflation Calculator</h3>
+              <p>See how inflation affects your purchasing power.</p>
+            </a>
+          </div>
+        </section>
+
+        <!-- Disclaimer -->
+        <div class="disclaimer">
+          <strong>Disclaimer:</strong> This calculator is provided for informational and educational purposes only. It does not constitute financial advice. The 50/30/20 rule is a general guideline and may not be appropriate for all financial situations. Consult a qualified financial advisor for personalized guidance.
+        </div>
+
+        <!-- Ad Slot -->
+        <div class="ad-slot ad-slot-rectangle"></div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free online financial calculators to help you make smarter money decisions.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Finance</h4>
+          <a href="/pages/finance-calculators/net-worth-calculator/">Net Worth</a>
+          <a href="/pages/finance-calculators/budget-calculator/">Budget (50/30/20)</a>
+          <a href="/pages/finance-calculators/emergency-fund-calculator/">Emergency Fund</a>
+          <a href="/pages/finance-calculators/retirement-savings-calculator/">Retirement Savings</a>
+        </div>
+        <div class="footer-col">
+          <h4>Tools</h4>
+          <a href="/pages/finance-calculators/inflation-calculator/">Inflation</a>
+          <a href="/pages/finance-calculators/salary-to-hourly-calculator/">Salary to Hourly</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about/">About</a>
+          <a href="/contact/">Contact</a>
+          <a href="/privacy/">Privacy Policy</a>
+          <a href="/terms/">Terms of Service</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 CalcWise. All rights reserved.</span>
+        <div class="footer-links">
+          <a href="/privacy/">Privacy</a>
+          <a href="/terms/">Terms</a>
+          <a href="/contact/">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateBudget() {
+      if (!CalcWise.validateForm('budget-form')) return;
+      const v = CalcWise.getFormValues('budget-form');
+      const income = v.monthlyIncome;
+
+      const needs = income * 0.50;
+      const wants = income * 0.30;
+      const savings = income * 0.20;
+
+      CalcWise.setText('incomeResult', CalcWise.formatCurrency(income, 0));
+      CalcWise.setText('needsResult', CalcWise.formatCurrency(needs, 0));
+      CalcWise.setText('wantsResult', CalcWise.formatCurrency(wants, 0));
+      CalcWise.setText('savingsResult', CalcWise.formatCurrency(savings, 0));
+
+      const needsBreakdown = [
+        { name: 'Housing (rent/mortgage)', pct: 0.55, amount: needs * 0.55 },
+        { name: 'Groceries', pct: 0.16, amount: needs * 0.16 },
+        { name: 'Utilities', pct: 0.08, amount: needs * 0.08 },
+        { name: 'Insurance', pct: 0.10, amount: needs * 0.10 },
+        { name: 'Transportation', pct: 0.11, amount: needs * 0.11 }
+      ];
+      const wantsBreakdown = [
+        { name: 'Dining out', pct: 0.20, amount: wants * 0.20 },
+        { name: 'Entertainment', pct: 0.15, amount: wants * 0.15 },
+        { name: 'Subscriptions', pct: 0.10, amount: wants * 0.10 },
+        { name: 'Shopping & hobbies', pct: 0.30, amount: wants * 0.30 },
+        { name: 'Travel & leisure', pct: 0.25, amount: wants * 0.25 }
+      ];
+      const savingsBreakdown = [
+        { name: 'Retirement (401k/IRA)', pct: 0.50, amount: savings * 0.50 },
+        { name: 'Emergency fund', pct: 0.25, amount: savings * 0.25 },
+        { name: 'Extra debt payments', pct: 0.15, amount: savings * 0.15 },
+        { name: 'Goals & investing', pct: 0.10, amount: savings * 0.10 }
+      ];
+
+      function buildTable(title, color, items) {
+        let html = '<div style="margin-bottom: var(--space-4);">';
+        html += '<h4 style="font-size: var(--text-sm); color: ' + color + '; margin-bottom: var(--space-2);">' + title + '</h4>';
+        html += '<div class="table-container"><table class="data-table"><thead><tr><th>Category</th><th>Amount</th></tr></thead><tbody>';
+        items.forEach(item => {
+          html += '<tr><td>' + item.name + '</td><td>' + CalcWise.formatCurrency(item.amount, 0) + '</td></tr>';
+        });
+        html += '</tbody></table></div></div>';
+        return html;
+      }
+
+      CalcWise.setHtml('breakdownDetails',
+        buildTable('Needs (50%)', 'var(--color-info)', needsBreakdown) +
+        buildTable('Wants (30%)', 'var(--color-accent-dark)', wantsBreakdown) +
+        buildTable('Savings (20%)', 'var(--color-success)', savingsBreakdown)
+      );
+
+      CalcWise.showResults('results');
+    }
+
+    function resetBudget() {
+      document.getElementById('budget-form').reset();
+      CalcWise.hideResults('results');
+    }
+  </script>
+</body>
+</html>

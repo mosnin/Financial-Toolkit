@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loan Calculator - Calculate Monthly Payments & Total Interest | CalcWise</title>
+  <meta name="description" content="Free loan calculator to find your monthly payment, total interest, and total cost for any loan. Enter your loan amount, interest rate, and term to get instant results.">
+  <meta name="keywords" content="loan calculator, monthly payment calculator, loan interest calculator, loan amortization, personal loan calculator">
+  <link rel="canonical" href="https://calcwise.io/finance-calculators/loan-calculator/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Loan Calculator - Calculate Monthly Payments & Total Interest">
+  <meta property="og:description" content="Free loan calculator to find your monthly payment, total interest, and total cost for any loan.">
+  <meta property="og:url" content="https://calcwise.io/finance-calculators/loan-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Loan Calculator - Calculate Monthly Payments & Total Interest">
+  <meta name="twitter:description" content="Free loan calculator to find your monthly payment, total interest, and total cost for any loan.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <!-- BreadcrumbList Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Finance Calculators", "item": "https://calcwise.io/finance-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "Loan Calculator", "item": "https://calcwise.io/finance-calculators/loan-calculator/" }
+    ]
+  }
+  </script>
+
+  <!-- FAQPage Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How is a monthly loan payment calculated?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Monthly loan payments are calculated using the amortization formula: M = P[r(1+r)^n] / [(1+r)^n - 1], where P is the principal, r is the monthly interest rate, and n is the total number of payments." }
+      },
+      {
+        "@type": "Question",
+        "name": "What factors affect my monthly loan payment?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Three main factors determine your payment: the loan amount (principal), the annual interest rate, and the loan term (length). A larger principal or higher rate increases payments, while a longer term lowers monthly payments but increases total interest." }
+      },
+      {
+        "@type": "Question",
+        "name": "Should I choose a shorter or longer loan term?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Shorter terms mean higher monthly payments but significantly less total interest paid. Longer terms reduce monthly payments but cost more overall. Choose based on what you can comfortably afford each month while minimizing total cost." }
+      },
+      {
+        "@type": "Question",
+        "name": "Does this calculator work for all types of loans?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes, this calculator works for any fixed-rate loan including personal loans, auto loans, student loans, and mortgages. It assumes a fixed interest rate and equal monthly payments over the life of the loan." }
+      },
+      {
+        "@type": "Question",
+        "name": "How can I reduce the total interest I pay on a loan?",
+        "acceptedAnswer": { "@type": "Answer", "text": "You can reduce total interest by choosing a shorter loan term, making extra payments toward principal, refinancing at a lower rate, or making a larger down payment to reduce the amount borrowed." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/" aria-current="page">Finance</a>
+        <a href="/business-calculators/">Business</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/business-calculators/">Business Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/finance-calculators/">Finance Calculators</a></li>
+          <li><span aria-current="page">Loan Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="article-content">
+          <h1>Loan Calculator</h1>
+          <p>Calculate your monthly loan payment, total interest, and total cost for any fixed-rate loan. Whether you are considering a personal loan, auto loan, or student loan, this calculator helps you understand exactly what you will pay over the life of the loan.</p>
+
+          <div class="calc-container mt-8">
+            <div class="calc-header">
+              <h2>Calculate Loan Payments</h2>
+              <p>Enter your loan details below</p>
+            </div>
+            <div class="calc-body">
+              <form id="loan-form" onsubmit="return false;">
+                <div class="form-group">
+                  <label class="form-label" for="loan-amount">Loan Amount</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="loan-amount" name="loanAmount" class="form-input" placeholder="25000" min="0" step="100" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="interest-rate">Annual Interest Rate</label>
+                  <div class="input-suffix">
+                    <input type="number" id="interest-rate" name="interestRate" class="form-input" placeholder="6.5" min="0" max="100" step="0.01" required>
+                    <span class="suffix">%</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="loan-term">Loan Term <span class="form-hint">(years)</span></label>
+                  <input type="number" id="loan-term" name="loanTerm" class="form-input" placeholder="5" min="1" max="50" step="1" required>
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calculateLoan()">Calculate Payment</button>
+                  <button type="button" class="btn btn-reset" onclick="resetLoan()">Reset</button>
+                </div>
+              </form>
+
+              <div id="loan-results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">Monthly Payment</div>
+                  <div class="result-value" id="result-monthly"></div>
+                </div>
+                <div class="result-grid">
+                  <div class="result-item">
+                    <div class="result-label">Total Interest</div>
+                    <div class="result-value" id="result-interest"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Total Cost</div>
+                    <div class="result-value" id="result-total"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Formula Section -->
+          <section class="content-section">
+            <h2>Loan Payment Formula</h2>
+            <p>The monthly payment for a fixed-rate loan is calculated using the standard amortization formula:</p>
+            <div class="formula-box">
+              <div class="formula-label">Monthly Payment Formula</div>
+              M = P [ r(1 + r)^n ] / [ (1 + r)^n - 1 ]
+            </div>
+            <p>Where <strong>M</strong> is the monthly payment, <strong>P</strong> is the principal (loan amount), <strong>r</strong> is the monthly interest rate (annual rate divided by 12), and <strong>n</strong> is the total number of payments (years multiplied by 12).</p>
+          </section>
+
+          <!-- How to Use -->
+          <section class="content-section">
+            <h2>How to Use This Loan Calculator</h2>
+            <ol>
+              <li><strong>Enter the loan amount</strong> - the total amount you plan to borrow.</li>
+              <li><strong>Enter the annual interest rate</strong> - the yearly interest rate quoted by the lender.</li>
+              <li><strong>Enter the loan term</strong> - how many years you will take to repay the loan.</li>
+              <li><strong>Click "Calculate Payment"</strong> to see your monthly payment, total interest, and total cost.</li>
+            </ol>
+          </section>
+
+          <!-- Example Scenario -->
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>Suppose you take out a $25,000 personal loan at 6.5% annual interest for 5 years. Your monthly payment would be approximately $489.15. Over the life of the loan, you would pay $4,349.08 in interest for a total cost of $29,349.08.</p>
+          </section>
+
+          <!-- FAQ Section -->
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                How is a monthly loan payment calculated?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Monthly loan payments are calculated using the amortization formula: M = P[r(1+r)^n] / [(1+r)^n - 1], where P is the principal, r is the monthly interest rate, and n is the total number of payments. This ensures each payment covers both interest and principal.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What factors affect my monthly loan payment?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Three main factors determine your payment: the loan amount (principal), the annual interest rate, and the loan term (length). A larger principal or higher rate increases payments, while a longer term lowers monthly payments but increases total interest.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Should I choose a shorter or longer loan term?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Shorter terms mean higher monthly payments but significantly less total interest paid. Longer terms reduce monthly payments but cost more overall. Choose based on what you can comfortably afford each month while minimizing total cost.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Does this calculator work for all types of loans?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Yes, this calculator works for any fixed-rate loan including personal loans, auto loans, student loans, and mortgages. It assumes a fixed interest rate and equal monthly payments over the life of the loan.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                How can I reduce the total interest I pay on a loan?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>You can reduce total interest by choosing a shorter loan term, making extra payments toward principal, refinancing at a lower rate, or making a larger down payment to reduce the amount borrowed.</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Related Calculators -->
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/finance-calculators/interest-calculator/" class="card card-link">
+                <h3>Simple Interest Calculator</h3>
+                <p>Calculate interest earned on a principal amount over time.</p>
+              </a>
+              <a href="/finance-calculators/compound-interest-calculator/" class="card card-link">
+                <h3>Compound Interest Calculator</h3>
+                <p>See how compound interest grows your money over time.</p>
+              </a>
+              <a href="/finance-calculators/debt-payoff-calculator/" class="card card-link">
+                <h3>Debt Payoff Calculator</h3>
+                <p>Find out how long it will take to pay off your debt.</p>
+              </a>
+              <a href="/finance-calculators/credit-card-payoff-calculator/" class="card card-link">
+                <h3>Credit Card Payoff Calculator</h3>
+                <p>Plan your credit card payoff strategy.</p>
+              </a>
+              <a href="/finance-calculators/savings-calculator/" class="card card-link">
+                <h3>Savings Goal Calculator</h3>
+                <p>Calculate how long to reach your savings goal.</p>
+              </a>
+            </div>
+          </section>
+
+          <!-- Disclaimer -->
+          <div class="disclaimer">
+            <strong>Disclaimer:</strong> This calculator provides estimates for informational purposes only. Actual loan terms, rates, and payments may vary based on your creditworthiness, lender policies, and other factors. This is not financial advice. Consult a qualified financial professional before making borrowing decisions.
+          </div>
+
+          <!-- Ad Slot -->
+          <div class="ad-slot ad-slot-leaderboard"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Real Estate</h4>
+          <a href="/real-estate-calculators/">All Real Estate Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Finance</h4>
+          <a href="/finance-calculators/">All Finance Calculators</a>
+          <a href="/finance-calculators/loan-calculator/">Loan Calculator</a>
+          <a href="/finance-calculators/compound-interest-calculator/">Compound Interest</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateLoan() {
+      if (!CalcWise.validateForm('loan-form')) return;
+
+      const amount = CalcWise.parseNumber(document.getElementById('loan-amount').value);
+      const rate = parseFloat(document.getElementById('interest-rate').value);
+      const term = parseFloat(document.getElementById('loan-term').value);
+
+      const result = CalcWise.loanCalculation(amount, rate, term);
+
+      CalcWise.setText('result-monthly', CalcWise.formatCurrency(result.monthlyPayment));
+      CalcWise.setText('result-interest', CalcWise.formatCurrency(result.totalInterest));
+      CalcWise.setText('result-total', CalcWise.formatCurrency(result.totalPayments));
+      CalcWise.showResults('loan-results');
+    }
+
+    function resetLoan() {
+      document.getElementById('loan-form').reset();
+      CalcWise.hideResults('loan-results');
+    }
+  </script>
+</body>
+</html>

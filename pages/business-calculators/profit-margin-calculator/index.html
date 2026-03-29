@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profit Margin Calculator - CalcWise</title>
+  <meta name="description" content="Calculate gross profit, profit margin percentage, and markup percentage from revenue and cost of goods sold. Free and instant results.">
+  <link rel="canonical" href="https://calcwise.io/business-calculators/profit-margin-calculator/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Profit Margin Calculator - CalcWise">
+  <meta property="og:description" content="Calculate gross profit, profit margin percentage, and markup percentage from revenue and cost of goods sold.">
+  <meta property="og:url" content="https://calcwise.io/business-calculators/profit-margin-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Profit Margin Calculator - CalcWise">
+  <meta name="twitter:description" content="Calculate gross profit, profit margin percentage, and markup percentage from revenue and cost of goods sold.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <!-- Schema.org BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Business Calculators", "item": "https://calcwise.io/business-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "Profit Margin Calculator", "item": "https://calcwise.io/business-calculators/profit-margin-calculator/" }
+    ]
+  }
+  </script>
+
+  <!-- FAQPage Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is profit margin?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Profit margin is the percentage of revenue that remains as profit after subtracting the cost of goods sold. It is calculated as (Revenue - COGS) / Revenue x 100." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between profit margin and markup?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Profit margin is calculated based on the selling price (revenue), while markup is calculated based on the cost. A 50% markup results in a 33.3% profit margin." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is a good profit margin?",
+        "acceptedAnswer": { "@type": "Answer", "text": "A good profit margin varies by industry. Generally, 5% is considered low, 10% is average, and 20% or higher is considered good. Software companies often exceed 60%, while grocery stores may operate at 2-3%." }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I improve my profit margin?",
+        "acceptedAnswer": { "@type": "Answer", "text": "You can improve profit margin by increasing prices, reducing cost of goods sold through better supplier negotiations, improving operational efficiency, or shifting your product mix toward higher-margin items." }
+      },
+      {
+        "@type": "Question",
+        "name": "Is gross profit margin the same as net profit margin?",
+        "acceptedAnswer": { "@type": "Answer", "text": "No. Gross profit margin only accounts for cost of goods sold, while net profit margin includes all expenses such as operating costs, taxes, and interest. Net profit margin is always lower than gross profit margin." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/business-calculators/" aria-current="page">Business</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/business-calculators/" aria-current="page">Business Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container page-content">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/business-calculators/">Business Calculators</a></li>
+          <li><span aria-current="page">Profit Margin Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="calc-page-layout">
+        <div class="calc-page-main">
+          <h1>Profit Margin Calculator</h1>
+          <p class="mt-4 mb-8" style="font-size:var(--text-lg); color:var(--color-gray-600); max-width:700px; line-height:var(--leading-relaxed);">Calculate your gross profit, profit margin percentage, and markup percentage by entering your revenue and cost of goods sold. Understand the profitability of your products and services instantly.</p>
+
+          <div class="calc-container">
+            <div class="calc-header">
+              <h2>Calculate Profit Margin</h2>
+              <p>Enter your revenue and cost of goods sold</p>
+            </div>
+            <div class="calc-body">
+              <form id="profitMarginForm" novalidate>
+                <div class="form-group">
+                  <label class="form-label" for="revenue">Revenue (Sales) <span class="form-hint">Total income from sales</span></label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="revenue" name="revenue" class="form-input" placeholder="100000" min="0" step="0.01" required>
+                  </div>
+                  <span class="form-error">Please enter a valid revenue amount.</span>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="cogs">Cost of Goods Sold (COGS) <span class="form-hint">Direct costs of producing goods</span></label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="cogs" name="cogs" class="form-input" placeholder="60000" min="0" step="0.01" required>
+                  </div>
+                  <span class="form-error">Please enter a valid cost amount.</span>
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calculateProfitMargin()">Calculate Profit Margin</button>
+                  <button type="button" class="btn btn-reset" onclick="resetForm()">Reset</button>
+                </div>
+              </form>
+
+              <div id="results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">Profit Margin</div>
+                  <div class="result-value" id="resultMargin">0%</div>
+                </div>
+                <div class="result-grid result-grid-3">
+                  <div class="result-item">
+                    <div class="result-label">Gross Profit</div>
+                    <div class="result-value" id="resultProfit">$0</div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Markup %</div>
+                    <div class="result-value" id="resultMarkup">0%</div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Cost Ratio</div>
+                    <div class="result-value" id="resultCostRatio">0%</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="disclaimer">
+            <strong>Disclaimer:</strong> This calculator provides estimates for educational purposes only. Actual profitability depends on additional factors such as operating expenses, taxes, and market conditions. Consult a financial professional for business decisions.
+          </div>
+
+          <div class="ad-slot ad-slot-leaderboard"></div>
+
+          <!-- Formula Section -->
+          <section class="content-section">
+            <h2>Profit Margin Formulas</h2>
+            <p>Understanding the formulas behind profit margin calculations helps you better analyze your business finances.</p>
+            <div class="formula-box">
+              <div class="formula-label">Gross Profit</div>
+              Gross Profit = Revenue - Cost of Goods Sold
+            </div>
+            <div class="formula-box">
+              <div class="formula-label">Profit Margin %</div>
+              Profit Margin = (Gross Profit / Revenue) x 100
+            </div>
+            <div class="formula-box">
+              <div class="formula-label">Markup %</div>
+              Markup = (Gross Profit / COGS) x 100
+            </div>
+          </section>
+
+          <!-- How to Use -->
+          <section class="content-section">
+            <h2>How to Use This Calculator</h2>
+            <ol>
+              <li><strong>Enter your revenue</strong> -- the total income from sales of your product or service.</li>
+              <li><strong>Enter your cost of goods sold (COGS)</strong> -- the direct costs attributable to the production of the goods sold, including materials and direct labor.</li>
+              <li><strong>Click "Calculate Profit Margin"</strong> to see your gross profit, profit margin percentage, and markup percentage.</li>
+              <li><strong>Analyze the results</strong> to understand your pricing efficiency and compare against industry benchmarks.</li>
+            </ol>
+          </section>
+
+          <!-- Example Scenario -->
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>Suppose your business generates <strong>$250,000 in revenue</strong> and your cost of goods sold is <strong>$150,000</strong>.</p>
+            <ul>
+              <li><strong>Gross Profit:</strong> $250,000 - $150,000 = $100,000</li>
+              <li><strong>Profit Margin:</strong> ($100,000 / $250,000) x 100 = 40%</li>
+              <li><strong>Markup:</strong> ($100,000 / $150,000) x 100 = 66.67%</li>
+            </ul>
+            <p>This means for every dollar of revenue, you keep 40 cents as gross profit. Your markup over cost is about 66.67%.</p>
+          </section>
+
+          <!-- FAQ Section -->
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What is profit margin?
+                <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Profit margin is the percentage of revenue that remains as profit after subtracting the cost of goods sold. It is calculated as (Revenue - COGS) / Revenue x 100.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What is the difference between profit margin and markup?
+                <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Profit margin is calculated based on the selling price (revenue), while markup is calculated based on the cost. A 50% markup results in a 33.3% profit margin.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What is a good profit margin?
+                <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>A good profit margin varies by industry. Generally, 5% is considered low, 10% is average, and 20% or higher is considered good. Software companies often exceed 60%, while grocery stores may operate at 2-3%.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                How do I improve my profit margin?
+                <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>You can improve profit margin by increasing prices, reducing cost of goods sold through better supplier negotiations, improving operational efficiency, or shifting your product mix toward higher-margin items.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Is gross profit margin the same as net profit margin?
+                <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>No. Gross profit margin only accounts for cost of goods sold, while net profit margin includes all expenses such as operating costs, taxes, and interest. Net profit margin is always lower than gross profit margin.</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Related Calculators -->
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/business-calculators/markup-calculator/" class="card card-link">
+                <h3>Markup Calculator</h3>
+                <p>Calculate markup percentage and amount from cost and selling price.</p>
+              </a>
+              <a href="/business-calculators/break-even-calculator/" class="card card-link">
+                <h3>Break-Even Calculator</h3>
+                <p>Find out how many units you need to sell to cover your costs.</p>
+              </a>
+              <a href="/business-calculators/roi-calculator/" class="card card-link">
+                <h3>ROI Calculator</h3>
+                <p>Calculate return on investment and annualized ROI.</p>
+              </a>
+              <a href="/business-calculators/ltv-calculator/" class="card card-link">
+                <h3>LTV Calculator</h3>
+                <p>Estimate customer lifetime value for your business.</p>
+              </a>
+              <a href="/business-calculators/burn-rate-calculator/" class="card card-link">
+                <h3>Burn Rate Calculator</h3>
+                <p>Calculate your startup burn rate and cash runway.</p>
+              </a>
+            </div>
+          </section>
+        </div>
+
+        <aside class="calc-page-sidebar">
+          <div class="sidebar-card">
+            <h3>Business Calculators</h3>
+            <a href="/business-calculators/profit-margin-calculator/">Profit Margin</a>
+            <a href="/business-calculators/markup-calculator/">Markup</a>
+            <a href="/business-calculators/break-even-calculator/">Break-Even</a>
+            <a href="/business-calculators/roi-calculator/">ROI</a>
+            <a href="/business-calculators/burn-rate-calculator/">Burn Rate</a>
+            <a href="/business-calculators/cac-calculator/">Customer Acquisition Cost</a>
+            <a href="/business-calculators/ltv-calculator/">Customer Lifetime Value</a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Real Estate</h4>
+          <a href="/real-estate-calculators/">All Real Estate</a>
+        </div>
+        <div class="footer-col">
+          <h4>Finance</h4>
+          <a href="/finance-calculators/">All Finance</a>
+        </div>
+        <div class="footer-col">
+          <h4>Business</h4>
+          <a href="/business-calculators/">All Business</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/about.html">About</a>
+          <a href="/contact.html">Contact</a>
+          <a href="/privacy.html">Privacy</a>
+          <a href="/terms.html">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateProfitMargin() {
+      if (!CalcWise.validateForm('profitMarginForm')) return;
+
+      const revenue = CalcWise.parseNumber(document.getElementById('revenue').value);
+      const cogs = CalcWise.parseNumber(document.getElementById('cogs').value);
+
+      if (revenue <= 0) { alert('Revenue must be greater than zero.'); return; }
+
+      const grossProfit = revenue - cogs;
+      const margin = CalcWise.profitMargin(revenue, cogs);
+      const markupPct = CalcWise.markup(cogs, revenue);
+      const costRatio = (cogs / revenue) * 100;
+
+      CalcWise.setText('resultMargin', CalcWise.formatPercent(margin));
+      CalcWise.setText('resultProfit', CalcWise.formatCurrency(grossProfit));
+      CalcWise.setText('resultMarkup', CalcWise.formatPercent(markupPct));
+      CalcWise.setText('resultCostRatio', CalcWise.formatPercent(costRatio));
+      CalcWise.showResults('results');
+    }
+
+    function resetForm() {
+      document.getElementById('profitMarginForm').reset();
+      CalcWise.hideResults('results');
+    }
+  </script>
+</body>
+</html>

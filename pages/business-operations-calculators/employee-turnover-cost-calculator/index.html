@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employee Turnover Cost Calculator - Measure Replacement Costs | CalcWise</title>
+  <meta name="description" content="Free employee turnover cost calculator. Estimate the total cost of losing and replacing an employee including recruiting, training, and productivity loss.">
+  <meta name="keywords" content="employee turnover cost, replacement cost calculator, recruiting cost, training cost, attrition calculator">
+  <link rel="canonical" href="https://calcwise.io/business-operations-calculators/employee-turnover-cost-calculator/">
+
+  <meta property="og:title" content="Employee Turnover Cost Calculator - Measure Replacement Costs">
+  <meta property="og:description" content="Estimate the total cost of losing and replacing an employee including recruiting, training, and productivity loss.">
+  <meta property="og:url" content="https://calcwise.io/business-operations-calculators/employee-turnover-cost-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Employee Turnover Cost Calculator - Measure Replacement Costs">
+  <meta name="twitter:description" content="Estimate the total cost of losing and replacing an employee including recruiting, training, and productivity loss.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Business Operations Calculators", "item": "https://calcwise.io/business-operations-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "Employee Turnover Cost Calculator", "item": "https://calcwise.io/business-operations-calculators/employee-turnover-cost-calculator/" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How much does employee turnover really cost?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Employee turnover typically costs between 50% and 200% of the departing employee's annual salary. For senior or specialized roles, costs can be even higher due to longer ramp-up times and harder-to-fill positions." }
+      },
+      {
+        "@type": "Question",
+        "name": "What costs are included in employee turnover?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Turnover costs include recruiting and hiring expenses, onboarding and training costs, lost productivity during the vacancy and ramp-up period, management time spent on the transition, and potential impact on team morale." }
+      },
+      {
+        "@type": "Question",
+        "name": "How can I reduce employee turnover?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Strategies include competitive compensation, career development opportunities, positive workplace culture, regular feedback and recognition, flexible work arrangements, and addressing issues early through stay interviews." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is a normal employee turnover rate?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Average annual turnover rates vary by industry, but generally range from 10% to 20%. Technology and retail sectors often see higher rates, while government and education tend to be lower." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/business-operations-calculators/" aria-current="page">Business Operations</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/business-operations-calculators/">Business Operations Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/business-operations-calculators/">Business Operations Calculators</a></li>
+          <li><span aria-current="page">Employee Turnover Cost Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="article-content">
+          <h1>Employee Turnover Cost Calculator</h1>
+          <p>Understand the true cost of employee turnover to your organization. This calculator factors in recruiting, training, and lost productivity to show the full financial impact of replacing an employee.</p>
+
+          <div class="calc-container mt-8">
+            <div class="calc-header">
+              <h2>Calculate Turnover Cost</h2>
+              <p>Enter employee and replacement details</p>
+            </div>
+            <div class="calc-body">
+              <form id="turnover-form" onsubmit="return false;">
+                <div class="form-group">
+                  <label class="form-label" for="salary">Employee Annual Salary</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="salary" class="form-input" placeholder="75000" min="0" step="1000" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="recruiting-cost">Recruiting Cost</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="recruiting-cost" class="form-input" placeholder="5000" min="0" step="100" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="training-weeks">Training Time <span class="form-hint">(weeks)</span></label>
+                  <input type="number" id="training-weeks" class="form-input" placeholder="8" min="0" step="1" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="productivity-loss">Productivity Loss During Training <span class="form-hint">(%)</span></label>
+                  <div class="input-suffix">
+                    <input type="number" id="productivity-loss" class="form-input" placeholder="50" min="0" max="100" step="5" required>
+                    <span class="suffix">%</span>
+                  </div>
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calculateTurnover()">Calculate Turnover Cost</button>
+                  <button type="button" class="btn btn-reset" onclick="resetTurnover()">Reset</button>
+                </div>
+              </form>
+
+              <div id="turnover-results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">Total Turnover Cost Per Employee</div>
+                  <div class="result-value" id="result-total-cost"></div>
+                </div>
+                <div class="result-grid">
+                  <div class="result-item">
+                    <div class="result-label">Recruiting Cost</div>
+                    <div class="result-value" id="result-recruiting"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Productivity Loss Cost</div>
+                    <div class="result-value" id="result-productivity"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Cost as % of Salary</div>
+                    <div class="result-value" id="result-salary-pct"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <section class="content-section">
+            <h2>Turnover Cost Formula</h2>
+            <p>The total turnover cost per employee includes direct and indirect expenses:</p>
+            <div class="formula-box">
+              <div class="formula-label">Turnover Cost Formula</div>
+              Total Cost = Recruiting Cost + (Weekly Salary x Training Weeks x Productivity Loss %)
+            </div>
+            <p>Where <strong>Weekly Salary</strong> is the annual salary divided by 52, and <strong>Productivity Loss %</strong> represents the reduced output during the training period.</p>
+          </section>
+
+          <section class="content-section">
+            <h2>How to Use This Calculator</h2>
+            <ol>
+              <li><strong>Enter annual salary</strong> - the departing employee's yearly compensation.</li>
+              <li><strong>Enter recruiting cost</strong> - job postings, recruiter fees, interview time, and onboarding.</li>
+              <li><strong>Enter training time</strong> - weeks needed for the new hire to reach full productivity.</li>
+              <li><strong>Enter productivity loss</strong> - estimated percentage of reduced output during training.</li>
+            </ol>
+          </section>
+
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>An employee earning $75,000/year leaves. Recruiting costs $5,000, training takes 8 weeks, and the new hire operates at 50% productivity during that time. Weekly salary is $1,442. Productivity loss cost = $1,442 x 8 x 0.50 = $5,769. Total turnover cost = $5,000 + $5,769 = $10,769, about 14.4% of annual salary.</p>
+          </section>
+
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">How much does employee turnover really cost?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>Employee turnover typically costs between 50% and 200% of the departing employee's annual salary. For senior or specialized roles, costs can be even higher.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">What costs are included in employee turnover?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>Turnover costs include recruiting and hiring expenses, onboarding and training costs, lost productivity during the vacancy and ramp-up period, management time, and potential impact on team morale.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">How can I reduce employee turnover?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>Strategies include competitive compensation, career development opportunities, positive workplace culture, regular feedback and recognition, and flexible work arrangements.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">What is a normal employee turnover rate?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>Average annual turnover rates vary by industry, generally ranging from 10% to 20%. Technology and retail sectors often see higher rates.</p></div>
+            </div>
+          </section>
+
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/business-operations-calculators/employee-productivity-calculator/" class="card card-link">
+                <h3>Employee Productivity Calculator</h3>
+                <p>Measure revenue per employee and per hour worked.</p>
+              </a>
+              <a href="/business-operations-calculators/revenue-per-employee-calculator/" class="card card-link">
+                <h3>Revenue Per Employee Calculator</h3>
+                <p>Calculate and benchmark revenue generated per employee.</p>
+              </a>
+              <a href="/business-operations-calculators/operating-margin-calculator/" class="card card-link">
+                <h3>Operating Margin Calculator</h3>
+                <p>Determine your operating income and margin percentage.</p>
+              </a>
+            </div>
+          </section>
+
+          <div class="disclaimer">
+            <strong>Disclaimer:</strong> This calculator provides estimates for informational purposes only. Actual turnover costs vary significantly based on role, industry, and company-specific factors. Consult HR professionals for detailed analysis.
+          </div>
+
+          <div class="ad-slot ad-slot-leaderboard"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col"><h4>Real Estate</h4><a href="/real-estate-calculators/">All Real Estate Calculators</a></div>
+        <div class="footer-col"><h4>Business Operations</h4><a href="/business-operations-calculators/">All Business Operations Calculators</a></div>
+        <div class="footer-col"><h4>Company</h4><a href="/about.html">About</a></div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links"><a href="/about.html">About</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateTurnover() {
+      const salary = parseFloat(document.getElementById('salary').value);
+      const recruitingCost = parseFloat(document.getElementById('recruiting-cost').value);
+      const trainingWeeks = parseFloat(document.getElementById('training-weeks').value);
+      const productivityLoss = parseFloat(document.getElementById('productivity-loss').value) / 100;
+
+      if (isNaN(salary) || isNaN(recruitingCost) || isNaN(trainingWeeks) || isNaN(productivityLoss)) return;
+
+      const weeklySalary = salary / 52;
+      const productivityCost = weeklySalary * trainingWeeks * productivityLoss;
+      const totalCost = recruitingCost + productivityCost;
+      const salaryPct = (totalCost / salary) * 100;
+
+      document.getElementById('result-total-cost').textContent = '$' + totalCost.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2});
+      document.getElementById('result-recruiting').textContent = '$' + recruitingCost.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2});
+      document.getElementById('result-productivity').textContent = '$' + productivityCost.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2});
+      document.getElementById('result-salary-pct').textContent = salaryPct.toFixed(1) + '%';
+      document.getElementById('turnover-results').classList.remove('hidden');
+    }
+
+    function resetTurnover() {
+      document.getElementById('turnover-form').reset();
+      document.getElementById('turnover-results').classList.add('hidden');
+    }
+  </script>
+</body>
+</html>

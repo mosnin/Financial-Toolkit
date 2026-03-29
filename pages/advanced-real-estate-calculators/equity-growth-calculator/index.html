@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Equity Growth Calculator - Project Home Equity Over Time | CalcWise</title>
+  <meta name="description" content="Free equity growth calculator. Project how your home equity grows through appreciation and principal payments over time.">
+  <meta name="keywords" content="equity growth calculator, home equity projection, property equity, home value growth, equity over time">
+  <link rel="canonical" href="https://calcwise.io/advanced-real-estate-calculators/equity-growth-calculator/">
+
+  <meta property="og:title" content="Equity Growth Calculator - Project Home Equity Over Time">
+  <meta property="og:description" content="Free equity growth calculator. Project how your home equity grows through appreciation and principal payments.">
+  <meta property="og:url" content="https://calcwise.io/advanced-real-estate-calculators/equity-growth-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Equity Growth Calculator - Project Home Equity Over Time">
+  <meta name="twitter:description" content="Free equity growth calculator. Project how your home equity grows through appreciation and principal payments.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Advanced Real Estate Calculators", "item": "https://calcwise.io/advanced-real-estate-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "Equity Growth Calculator", "item": "https://calcwise.io/advanced-real-estate-calculators/equity-growth-calculator/" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is home equity?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Home equity is the difference between your property's current market value and the remaining balance on your mortgage. It represents your ownership stake in the property." }
+      },
+      {
+        "@type": "Question",
+        "name": "How does appreciation build equity?",
+        "acceptedAnswer": { "@type": "Answer", "text": "When your home increases in value due to market appreciation, your equity grows even without making extra payments. For example, a 3% annual appreciation on a $300,000 home adds $9,000 in equity the first year." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I access my home equity?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes, through home equity loans, HELOCs, or cash-out refinancing. Most lenders allow you to borrow up to 80-85% of your equity." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is a typical home appreciation rate?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Historically, U.S. home values have appreciated about 3-5% per year on average, though this varies greatly by location and market conditions." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/advanced-real-estate-calculators/" aria-current="page">Advanced Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/business-calculators/">Business</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/advanced-real-estate-calculators/">Advanced Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/business-calculators/">Business Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/advanced-real-estate-calculators/">Advanced Real Estate Calculators</a></li>
+          <li><span aria-current="page">Equity Growth Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="article-content">
+          <h1>Equity Growth Calculator</h1>
+          <p>Project how your home equity will grow over time through property appreciation and principal payments. See your equity position year by year to plan for future financial decisions.</p>
+
+          <div class="calc-container mt-8">
+            <div class="calc-header">
+              <h2>Project Your Equity Growth</h2>
+              <p>Enter your property and loan details</p>
+            </div>
+            <div class="calc-body">
+              <form id="equity-form" onsubmit="return false;">
+                <div class="form-group">
+                  <label class="form-label" for="home-value">Current Home Value</label>
+                  <div class="input-prefix"><span class="prefix">$</span>
+                    <input type="number" id="home-value" class="form-input" placeholder="350000" min="0" step="1000" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="loan-balance">Current Loan Balance</label>
+                  <div class="input-prefix"><span class="prefix">$</span>
+                    <input type="number" id="loan-balance" class="form-input" placeholder="280000" min="0" step="1000" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="appreciation-rate">Annual Appreciation Rate</label>
+                  <div class="input-suffix">
+                    <input type="number" id="appreciation-rate" class="form-input" placeholder="3.5" min="0" max="20" step="0.1" required>
+                    <span class="suffix">%</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="annual-principal">Annual Principal Payments</label>
+                  <div class="input-prefix"><span class="prefix">$</span>
+                    <input type="number" id="annual-principal" class="form-input" placeholder="8000" min="0" step="500" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="years">Years to Project</label>
+                  <input type="number" id="years" class="form-input" placeholder="10" min="1" max="30" step="1" required>
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calculateEquity()">Calculate Equity Growth</button>
+                  <button type="button" class="btn btn-reset" onclick="resetEquity()">Reset</button>
+                </div>
+              </form>
+
+              <div id="equity-results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">Projected Equity</div>
+                  <div class="result-value" id="result-equity"></div>
+                </div>
+                <div class="result-grid">
+                  <div class="result-item">
+                    <div class="result-label">Future Home Value</div>
+                    <div class="result-value" id="result-future-value"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Remaining Loan Balance</div>
+                    <div class="result-value" id="result-remaining"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Equity from Appreciation</div>
+                    <div class="result-value" id="result-appreciation-equity"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Equity from Payments</div>
+                    <div class="result-value" id="result-payment-equity"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <section class="content-section">
+            <h2>Equity Growth Formula</h2>
+            <p>Home equity grows through two channels: appreciation and principal reduction.</p>
+            <div class="formula-box">
+              <div class="formula-label">Equity Calculation</div>
+              Equity = (Home Value x (1 + r)^n) - (Loan Balance - Total Principal Paid)
+            </div>
+            <p>Where <strong>r</strong> is the annual appreciation rate and <strong>n</strong> is the number of years.</p>
+          </section>
+
+          <section class="content-section">
+            <h2>How to Use This Calculator</h2>
+            <ol>
+              <li><strong>Enter your current home value</strong> - the estimated market value today.</li>
+              <li><strong>Enter your loan balance</strong> - the remaining mortgage principal.</li>
+              <li><strong>Enter the appreciation rate</strong> - expected annual home value increase.</li>
+              <li><strong>Enter annual principal payments</strong> - the amount of principal paid each year.</li>
+              <li><strong>Enter years to project</strong> - how far into the future to calculate.</li>
+              <li><strong>Click "Calculate Equity Growth"</strong> to see your projected equity.</li>
+            </ol>
+          </section>
+
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>A $350,000 home with a $280,000 loan balance, 3.5% appreciation, and $8,000 in annual principal payments would have approximately $227,000 in equity after 10 years. The home would be worth about $493,000 with a remaining balance of $200,000.</p>
+          </section>
+
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">What is home equity?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>Home equity is the difference between your property's current market value and the remaining balance on your mortgage. It represents your ownership stake in the property.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">How does appreciation build equity?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>When your home increases in value due to market appreciation, your equity grows even without making extra payments. For example, a 3% annual appreciation on a $300,000 home adds $9,000 in equity the first year.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">Can I access my home equity?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>Yes, through home equity loans, HELOCs, or cash-out refinancing. Most lenders allow you to borrow up to 80-85% of your equity.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">What is a typical home appreciation rate?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>Historically, U.S. home values have appreciated about 3-5% per year on average, though this varies greatly by location and market conditions.</p></div>
+            </div>
+          </section>
+
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/advanced-real-estate-calculators/property-appreciation-calculator/" class="card card-link"><h3>Property Appreciation Calculator</h3><p>Estimate future property value based on appreciation rate.</p></a>
+              <a href="/advanced-real-estate-calculators/loan-to-value-ratio-calculator/" class="card card-link"><h3>Loan-to-Value Ratio Calculator</h3><p>Calculate your current LTV and equity position.</p></a>
+              <a href="/advanced-real-estate-calculators/real-estate-leverage-calculator/" class="card card-link"><h3>Real Estate Leverage Calculator</h3><p>Compare leveraged vs all-cash returns.</p></a>
+            </div>
+          </section>
+
+          <div class="disclaimer"><strong>Disclaimer:</strong> This calculator provides estimates for informational purposes only. Actual appreciation rates are unpredictable and past performance does not guarantee future results. This is not financial advice.</div>
+          <div class="ad-slot ad-slot-leaderboard"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>CalcWise</a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col"><h4>Real Estate</h4><a href="/real-estate-calculators/">All Real Estate Calculators</a><a href="/advanced-real-estate-calculators/">Advanced Real Estate</a></div>
+        <div class="footer-col"><h4>Finance</h4><a href="/finance-calculators/">All Finance Calculators</a></div>
+        <div class="footer-col"><h4>Company</h4><a href="/about.html">About</a></div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2026 CalcWise. All rights reserved.</p><div class="footer-links"><a href="/about.html">About</a></div></div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateEquity() {
+      const homeValue = parseFloat(document.getElementById('home-value').value);
+      const loanBalance = parseFloat(document.getElementById('loan-balance').value);
+      const rate = parseFloat(document.getElementById('appreciation-rate').value) / 100;
+      const annualPrincipal = parseFloat(document.getElementById('annual-principal').value);
+      const years = parseInt(document.getElementById('years').value);
+
+      if (!homeValue || !loanBalance || isNaN(rate) || !annualPrincipal || !years) { alert('Please fill in all fields.'); return; }
+
+      const futureValue = homeValue * Math.pow(1 + rate, years);
+      const remainingBalance = Math.max(0, loanBalance - (annualPrincipal * years));
+      const totalEquity = futureValue - remainingBalance;
+      const appreciationEquity = futureValue - homeValue;
+      const paymentEquity = Math.min(loanBalance, annualPrincipal * years);
+
+      document.getElementById('result-equity').textContent = '$' + totalEquity.toLocaleString('en-US', { maximumFractionDigits: 0 });
+      document.getElementById('result-future-value').textContent = '$' + futureValue.toLocaleString('en-US', { maximumFractionDigits: 0 });
+      document.getElementById('result-remaining').textContent = '$' + remainingBalance.toLocaleString('en-US', { maximumFractionDigits: 0 });
+      document.getElementById('result-appreciation-equity').textContent = '$' + appreciationEquity.toLocaleString('en-US', { maximumFractionDigits: 0 });
+      document.getElementById('result-payment-equity').textContent = '$' + paymentEquity.toLocaleString('en-US', { maximumFractionDigits: 0 });
+      document.getElementById('equity-results').classList.remove('hidden');
+    }
+
+    function resetEquity() {
+      document.getElementById('equity-form').reset();
+      document.getElementById('equity-results').classList.add('hidden');
+    }
+  </script>
+</body>
+</html>

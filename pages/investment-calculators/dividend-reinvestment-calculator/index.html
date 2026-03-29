@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dividend Reinvestment Calculator | CalcWise</title>
+  <meta name="description" content="Calculate how reinvesting dividends grows your portfolio over time. Compare future value with and without dividend reinvestment using our free DRIP calculator.">
+  <meta name="keywords" content="dividend reinvestment calculator, DRIP calculator, dividend growth, reinvest dividends, compound dividends">
+  <link rel="canonical" href="https://calcwise.io/investment-calculators/dividend-reinvestment-calculator/">
+
+  <meta property="og:title" content="Dividend Reinvestment Calculator | CalcWise">
+  <meta property="og:description" content="Calculate how reinvesting dividends grows your portfolio over time. Compare future value with and without reinvestment.">
+  <meta property="og:url" content="https://calcwise.io/investment-calculators/dividend-reinvestment-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Dividend Reinvestment Calculator | CalcWise">
+  <meta name="twitter:description" content="Calculate how reinvesting dividends grows your portfolio over time.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Investment Calculators", "item": "https://calcwise.io/investment-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "Dividend Reinvestment Calculator", "item": "https://calcwise.io/investment-calculators/dividend-reinvestment-calculator/" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is dividend reinvestment (DRIP)?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Dividend reinvestment, or DRIP, is the automatic use of dividend payments to purchase additional shares of the same stock or fund, compounding your returns over time." }
+      },
+      {
+        "@type": "Question",
+        "name": "How much difference does reinvesting dividends make?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Reinvesting dividends can significantly increase long-term returns. Over 20-30 years, reinvested dividends can account for 40% or more of total portfolio growth due to compounding." }
+      },
+      {
+        "@type": "Question",
+        "name": "Are reinvested dividends taxed?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes, in taxable accounts, dividends are taxed in the year they are received regardless of whether they are reinvested. In tax-advantaged accounts like IRAs, dividends grow tax-deferred." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is dividend growth rate?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The dividend growth rate is the annualized percentage increase in a company's dividend payment over time. Companies with consistent dividend growth are often considered more stable investments." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/investment-calculators/" aria-current="page">Investments</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/investment-calculators/">Investment Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/investment-calculators/">Investment Calculators</a></li>
+          <li><span aria-current="page">Dividend Reinvestment Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="article-content">
+          <h1>Dividend Reinvestment Calculator</h1>
+          <p>See the power of reinvesting dividends over time. This DRIP calculator compares your portfolio's future value with and without dividend reinvestment, showing how compounding can dramatically grow your wealth.</p>
+
+          <div class="calc-container mt-8">
+            <div class="calc-header">
+              <h2>Calculate Dividend Reinvestment Growth</h2>
+              <p>Enter your investment details below</p>
+            </div>
+            <div class="calc-body">
+              <form id="drip-form" onsubmit="return false;">
+                <div class="form-group">
+                  <label class="form-label" for="initial-investment">Initial Investment</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="initial-investment" class="form-input" placeholder="10000" min="1" step="100" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="dividend-yield">Annual Dividend Yield</label>
+                  <div class="input-suffix">
+                    <input type="number" id="dividend-yield" class="form-input" placeholder="3.5" min="0.01" max="100" step="0.01" required>
+                    <span class="suffix">%</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="growth-rate">Annual Dividend Growth Rate</label>
+                  <div class="input-suffix">
+                    <input type="number" id="growth-rate" class="form-input" placeholder="5" min="0" max="100" step="0.1" required>
+                    <span class="suffix">%</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="drip-years">Investment Period <span class="form-hint">(years)</span></label>
+                  <input type="number" id="drip-years" class="form-input" placeholder="20" min="1" max="50" step="1" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="reinvest-toggle">Reinvest Dividends?</label>
+                  <select id="reinvest-toggle" class="form-input">
+                    <option value="both">Compare Both</option>
+                    <option value="yes">Yes - Reinvest</option>
+                    <option value="no">No - Take Cash</option>
+                  </select>
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calculateDRIP()">Calculate Growth</button>
+                  <button type="button" class="btn btn-reset" onclick="resetDRIP()">Reset</button>
+                </div>
+              </form>
+
+              <div id="drip-results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">Future Value (With Reinvestment)</div>
+                  <div class="result-value" id="result-with-reinvest"></div>
+                </div>
+                <div class="result-grid">
+                  <div class="result-item">
+                    <div class="result-label">Future Value (Without Reinvestment)</div>
+                    <div class="result-value" id="result-without-reinvest"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Reinvestment Benefit</div>
+                    <div class="result-value" id="result-benefit"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Total Dividends Earned</div>
+                    <div class="result-value" id="result-total-dividends"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <section class="content-section">
+            <h2>Dividend Reinvestment Formula</h2>
+            <p>With reinvestment, the future value is calculated by compounding both the investment appreciation and reinvested dividends:</p>
+            <div class="formula-box">
+              <div class="formula-label">With Reinvestment</div>
+              FV = P x (1 + Yield + Growth)^n
+            </div>
+            <p>Without reinvestment, the portfolio grows only by the capital appreciation (dividend growth rate), and dividends are received as cash:</p>
+            <div class="formula-box">
+              <div class="formula-label">Without Reinvestment</div>
+              FV = P x (1 + Growth)^n + cumulative dividends received
+            </div>
+          </section>
+
+          <section class="content-section">
+            <h2>How to Use This Dividend Reinvestment Calculator</h2>
+            <ol>
+              <li><strong>Enter the initial investment</strong> - the amount you are investing today.</li>
+              <li><strong>Enter the annual dividend yield</strong> - the current dividend yield percentage.</li>
+              <li><strong>Enter the dividend growth rate</strong> - the expected annual increase in dividend payments.</li>
+              <li><strong>Enter the investment period</strong> - how many years you plan to hold the investment.</li>
+              <li><strong>Choose reinvestment option</strong> - compare both scenarios or select one.</li>
+              <li><strong>Click "Calculate Growth"</strong> to see projected future values.</li>
+            </ol>
+          </section>
+
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>An investor puts $10,000 into a stock with a 3.5% dividend yield and 5% annual dividend growth over 20 years. With reinvestment, the portfolio could grow to approximately $46,610, versus $33,066 without reinvestment (assuming stock price grows with dividends). The reinvestment benefit would be approximately $13,544.</p>
+          </section>
+
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What is dividend reinvestment (DRIP)?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Dividend reinvestment, or DRIP, is the automatic use of dividend payments to purchase additional shares of the same stock or fund, compounding your returns over time.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                How much difference does reinvesting dividends make?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Reinvesting dividends can significantly increase long-term returns. Over 20-30 years, reinvested dividends can account for 40% or more of total portfolio growth due to compounding.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Are reinvested dividends taxed?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Yes, in taxable accounts, dividends are taxed in the year they are received regardless of whether they are reinvested. In tax-advantaged accounts like IRAs, dividends grow tax-deferred.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What is dividend growth rate?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>The dividend growth rate is the annualized percentage increase in a company's dividend payment over time. Companies with consistent dividend growth are often considered more stable investments.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/investment-calculators/dividend-yield-calculator/" class="card card-link">
+                <h3>Dividend Yield Calculator</h3>
+                <p>Calculate the dividend yield percentage of any stock.</p>
+              </a>
+              <a href="/investment-calculators/cagr-calculator/" class="card card-link">
+                <h3>CAGR Calculator</h3>
+                <p>Calculate the compound annual growth rate of your investments.</p>
+              </a>
+              <a href="/investment-calculators/dollar-cost-averaging-calculator/" class="card card-link">
+                <h3>Dollar Cost Averaging Calculator</h3>
+                <p>See how regular investing smooths out market volatility.</p>
+              </a>
+              <a href="/investment-calculators/etf-return-calculator/" class="card card-link">
+                <h3>ETF Return Calculator</h3>
+                <p>Project ETF returns including contributions and expense ratios.</p>
+              </a>
+            </div>
+          </section>
+
+          <div class="disclaimer">
+            <strong>Disclaimer:</strong> This calculator provides estimates for informational purposes only. Actual investment returns will vary based on market conditions, individual stock performance, and other factors. Past performance does not guarantee future results. This is not financial advice. Consult a qualified financial professional before making investment decisions.
+          </div>
+
+          <div class="ad-slot ad-slot-leaderboard"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Real Estate</h4>
+          <a href="/real-estate-calculators/">All Real Estate Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Investments</h4>
+          <a href="/investment-calculators/">All Investment Calculators</a>
+          <a href="/investment-calculators/dividend-yield-calculator/">Dividend Yield</a>
+          <a href="/investment-calculators/cagr-calculator/">CAGR Calculator</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateDRIP() {
+      const initial = parseFloat(document.getElementById('initial-investment').value);
+      const yieldRate = parseFloat(document.getElementById('dividend-yield').value) / 100;
+      const growthRate = parseFloat(document.getElementById('growth-rate').value) / 100;
+      const years = parseInt(document.getElementById('drip-years').value);
+
+      if (!initial || !yieldRate || years < 1) {
+        alert('Please enter valid values for all fields.');
+        return;
+      }
+
+      // With reinvestment: dividends compound with growth
+      let valueWithReinvest = initial;
+      let totalDividendsReinvested = 0;
+      let currentYield = yieldRate;
+
+      for (let i = 0; i < years; i++) {
+        const dividend = valueWithReinvest * currentYield;
+        totalDividendsReinvested += dividend;
+        valueWithReinvest = (valueWithReinvest + dividend) * (1 + growthRate);
+        currentYield = yieldRate; // yield on cost increases but we simplify
+      }
+
+      // Without reinvestment: only capital appreciation, dividends taken as cash
+      let valueWithoutReinvest = initial;
+      let totalDividendsCash = 0;
+      for (let i = 0; i < years; i++) {
+        const dividend = valueWithoutReinvest * yieldRate;
+        totalDividendsCash += dividend;
+        valueWithoutReinvest = valueWithoutReinvest * (1 + growthRate);
+      }
+      const totalWithout = valueWithoutReinvest + totalDividendsCash;
+
+      const benefit = valueWithReinvest - totalWithout;
+
+      document.getElementById('result-with-reinvest').textContent = '$' + valueWithReinvest.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2});
+      document.getElementById('result-without-reinvest').textContent = '$' + totalWithout.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2});
+      document.getElementById('result-benefit').textContent = '$' + benefit.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2});
+      document.getElementById('result-total-dividends').textContent = '$' + totalDividendsReinvested.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2});
+      document.getElementById('drip-results').classList.remove('hidden');
+    }
+
+    function resetDRIP() {
+      document.getElementById('drip-form').reset();
+      document.getElementById('drip-results').classList.add('hidden');
+    }
+  </script>
+</body>
+</html>

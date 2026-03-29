@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>College Tuition Cost Calculator - Project Future Tuition Costs | CalcWise</title>
+  <meta name="description" content="Free college tuition cost calculator to project future tuition expenses based on current rates and inflation. Plan ahead and estimate your 4-year total cost.">
+  <meta name="keywords" content="college tuition calculator, tuition cost projector, future tuition estimate, college cost calculator, tuition inflation calculator">
+  <link rel="canonical" href="https://calcwise.io/education-calculators/college-tuition-cost-calculator/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="College Tuition Cost Calculator - Project Future Tuition Costs">
+  <meta property="og:description" content="Free college tuition cost calculator to project future tuition expenses based on current rates and inflation.">
+  <meta property="og:url" content="https://calcwise.io/education-calculators/college-tuition-cost-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="College Tuition Cost Calculator - Project Future Tuition Costs">
+  <meta name="twitter:description" content="Free college tuition cost calculator to project future tuition expenses based on current rates and inflation.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <!-- BreadcrumbList Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Education Calculators", "item": "https://calcwise.io/education-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "College Tuition Cost Calculator", "item": "https://calcwise.io/education-calculators/college-tuition-cost-calculator/" }
+    ]
+  }
+  </script>
+
+  <!-- FAQPage Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How much does college tuition increase each year?",
+        "acceptedAnswer": { "@type": "Answer", "text": "College tuition has historically increased at an average rate of 3-8% per year, depending on the institution type. Public universities tend to increase at a lower rate than private colleges. Using an inflation rate of 5% is a reasonable middle estimate for planning purposes." }
+      },
+      {
+        "@type": "Question",
+        "name": "How is projected tuition calculated?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Projected tuition is calculated using the compound growth formula: Future Tuition = Current Tuition x (1 + Inflation Rate)^Years. This accounts for the compounding effect of annual tuition increases over time." }
+      },
+      {
+        "@type": "Question",
+        "name": "Should I include room and board in tuition estimates?",
+        "acceptedAnswer": { "@type": "Answer", "text": "This calculator focuses on tuition costs only. Room, board, books, and other expenses should be calculated separately. The total cost of attendance is typically 40-60% higher than tuition alone." }
+      },
+      {
+        "@type": "Question",
+        "name": "How can I reduce future college tuition costs?",
+        "acceptedAnswer": { "@type": "Answer", "text": "You can reduce costs by starting a 529 savings plan early, applying for scholarships and grants, considering community college for the first two years, attending in-state public universities, and taking AP or dual-enrollment courses in high school." }
+      },
+      {
+        "@type": "Question",
+        "name": "Does this calculator account for financial aid?",
+        "acceptedAnswer": { "@type": "Answer", "text": "No, this calculator projects the sticker price of tuition before any financial aid. Actual out-of-pocket costs may be significantly lower after scholarships, grants, and other forms of aid are applied." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/education-calculators/" aria-current="page">Education</a>
+        <a href="/healthcare-calculators/">Healthcare</a>
+        <a href="/business-calculators/">Business</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/education-calculators/">Education Calculators</a>
+      <a href="/healthcare-calculators/">Healthcare Calculators</a>
+      <a href="/business-calculators/">Business Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/education-calculators/">Education Calculators</a></li>
+          <li><span aria-current="page">College Tuition Cost Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="article-content">
+          <h1>College Tuition Cost Calculator</h1>
+          <p>Project the future cost of college tuition based on current rates and expected inflation. Whether your child is starting kindergarten or high school, this calculator helps you estimate what tuition will cost when enrollment day arrives and plan your 4-year total investment.</p>
+
+          <div class="calc-container mt-8">
+            <div class="calc-header">
+              <h2>Project Future Tuition Costs</h2>
+              <p>Enter current tuition details and inflation assumptions</p>
+            </div>
+            <div class="calc-body">
+              <form id="tuition-form" onsubmit="return false;">
+                <div class="form-group">
+                  <label class="form-label" for="current-tuition">Current Annual Tuition</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="current-tuition" name="currentTuition" class="form-input" placeholder="25000" min="0" step="100" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="years-until">Years Until Enrollment</label>
+                  <input type="number" id="years-until" name="yearsUntil" class="form-input" placeholder="5" min="0" max="30" step="1" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="inflation-rate">Expected Annual Tuition Inflation Rate</label>
+                  <div class="input-suffix">
+                    <input type="number" id="inflation-rate" name="inflationRate" class="form-input" placeholder="5" min="0" max="20" step="0.1" required>
+                    <span class="suffix">%</span>
+                  </div>
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calculateTuition()">Calculate Projected Cost</button>
+                  <button type="button" class="btn btn-reset" onclick="resetTuition()">Reset</button>
+                </div>
+              </form>
+
+              <div id="tuition-results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">Projected Annual Tuition at Enrollment</div>
+                  <div class="result-value" id="result-projected"></div>
+                </div>
+                <div class="result-grid">
+                  <div class="result-item">
+                    <div class="result-label">Projected 4-Year Total</div>
+                    <div class="result-value" id="result-four-year"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Tuition Increase from Today</div>
+                    <div class="result-value" id="result-increase"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Formula Section -->
+          <section class="content-section">
+            <h2>Tuition Projection Formula</h2>
+            <p>Future tuition is projected using the compound growth formula:</p>
+            <div class="formula-box">
+              <div class="formula-label">Projected Tuition Formula</div>
+              Future Tuition = Current Tuition x (1 + r)^n
+            </div>
+            <p>Where <strong>r</strong> is the annual tuition inflation rate (as a decimal) and <strong>n</strong> is the number of years until enrollment. The 4-year total sums each year's projected tuition, accounting for continued inflation during the college years.</p>
+          </section>
+
+          <!-- How to Use -->
+          <section class="content-section">
+            <h2>How to Use This Calculator</h2>
+            <ol>
+              <li><strong>Enter the current annual tuition</strong> - look up the current published tuition for your target school.</li>
+              <li><strong>Enter years until enrollment</strong> - how many years before the student begins college.</li>
+              <li><strong>Enter the expected inflation rate</strong> - the average annual tuition increase you expect (5% is a common estimate).</li>
+              <li><strong>Click "Calculate Projected Cost"</strong> to see the estimated tuition at enrollment and the full 4-year total.</li>
+            </ol>
+          </section>
+
+          <!-- Example Scenario -->
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>Suppose current annual tuition is $25,000 and your child will enroll in 8 years, with an expected tuition inflation rate of 5% per year. At enrollment, annual tuition would be approximately $36,932. The projected 4-year total (with continued 5% increases each year) would be approximately $159,398.</p>
+          </section>
+
+          <!-- FAQ Section -->
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                How much does college tuition increase each year?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>College tuition has historically increased at an average rate of 3-8% per year, depending on the institution type. Public universities tend to increase at a lower rate than private colleges. Using an inflation rate of 5% is a reasonable middle estimate for planning purposes.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                How is projected tuition calculated?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Projected tuition is calculated using the compound growth formula: Future Tuition = Current Tuition x (1 + Inflation Rate)^Years. This accounts for the compounding effect of annual tuition increases over time.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Should I include room and board in tuition estimates?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>This calculator focuses on tuition costs only. Room, board, books, and other expenses should be calculated separately. The total cost of attendance is typically 40-60% higher than tuition alone.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                How can I reduce future college tuition costs?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>You can reduce costs by starting a 529 savings plan early, applying for scholarships and grants, considering community college for the first two years, attending in-state public universities, and taking AP or dual-enrollment courses in high school.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Does this calculator account for financial aid?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>No, this calculator projects the sticker price of tuition before any financial aid. Actual out-of-pocket costs may be significantly lower after scholarships, grants, and other forms of aid are applied.</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Related Calculators -->
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/education-calculators/student-loan-interest-savings-calculator/" class="card card-link">
+                <h3>Student Loan Interest Savings</h3>
+                <p>Calculate how much you can save by making extra payments on student loans.</p>
+              </a>
+              <a href="/education-calculators/scholarship-savings-calculator/" class="card card-link">
+                <h3>Scholarship Savings Calculator</h3>
+                <p>See the total impact of scholarships on your education costs.</p>
+              </a>
+              <a href="/education-calculators/college-affordability-calculator/" class="card card-link">
+                <h3>College Affordability Calculator</h3>
+                <p>Determine if a college is financially within reach for your family.</p>
+              </a>
+            </div>
+          </section>
+
+          <!-- Disclaimer -->
+          <div class="disclaimer">
+            <strong>Disclaimer:</strong> This calculator provides estimates for informational purposes only. Actual tuition costs may vary significantly based on the institution, state policies, and market conditions. This is not financial advice. Consult a qualified financial advisor for education planning decisions.
+          </div>
+
+          <!-- Ad Slot -->
+          <div class="ad-slot ad-slot-leaderboard"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Education</h4>
+          <a href="/education-calculators/">All Education Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Healthcare</h4>
+          <a href="/healthcare-calculators/">All Healthcare Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateTuition() {
+      const currentTuition = parseFloat(document.getElementById('current-tuition').value);
+      const years = parseFloat(document.getElementById('years-until').value);
+      const rate = parseFloat(document.getElementById('inflation-rate').value) / 100;
+
+      if (!currentTuition || years < 0 || !rate) { alert('Please fill in all fields.'); return; }
+
+      const projectedAnnual = currentTuition * Math.pow(1 + rate, years);
+      let fourYearTotal = 0;
+      for (let i = 0; i < 4; i++) {
+        fourYearTotal += currentTuition * Math.pow(1 + rate, years + i);
+      }
+      const increase = projectedAnnual - currentTuition;
+
+      document.getElementById('result-projected').textContent = '$' + projectedAnnual.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2});
+      document.getElementById('result-four-year').textContent = '$' + fourYearTotal.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2});
+      document.getElementById('result-increase').textContent = '$' + increase.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2});
+      document.getElementById('tuition-results').classList.remove('hidden');
+    }
+
+    function resetTuition() {
+      document.getElementById('tuition-form').reset();
+      document.getElementById('tuition-results').classList.add('hidden');
+    }
+  </script>
+</body>
+</html>

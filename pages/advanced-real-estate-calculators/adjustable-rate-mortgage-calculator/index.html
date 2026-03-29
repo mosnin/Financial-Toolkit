@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adjustable Rate Mortgage Calculator - Compare ARM vs Fixed Rate | CalcWise</title>
+  <meta name="description" content="Free ARM calculator. Compare adjustable rate mortgage payments to fixed-rate options. See initial payments, worst-case scenarios, and rate adjustment impacts.">
+  <meta name="keywords" content="ARM calculator, adjustable rate mortgage, ARM vs fixed rate, mortgage rate comparison, variable rate mortgage">
+  <link rel="canonical" href="https://calcwise.io/advanced-real-estate-calculators/adjustable-rate-mortgage-calculator/">
+
+  <meta property="og:title" content="Adjustable Rate Mortgage Calculator - Compare ARM vs Fixed Rate">
+  <meta property="og:description" content="Free ARM calculator. Compare adjustable rate mortgage payments to fixed-rate options.">
+  <meta property="og:url" content="https://calcwise.io/advanced-real-estate-calculators/adjustable-rate-mortgage-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Adjustable Rate Mortgage Calculator - Compare ARM vs Fixed Rate">
+  <meta name="twitter:description" content="Free ARM calculator. Compare adjustable rate mortgage payments to fixed-rate options.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Advanced Real Estate Calculators", "item": "https://calcwise.io/advanced-real-estate-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "Adjustable Rate Mortgage Calculator", "item": "https://calcwise.io/advanced-real-estate-calculators/adjustable-rate-mortgage-calculator/" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is an adjustable rate mortgage?",
+        "acceptedAnswer": { "@type": "Answer", "text": "An ARM has an interest rate that changes periodically after an initial fixed-rate period. Common structures include 5/1, 7/1, and 10/1 ARMs where the first number is the fixed period in years." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is a rate cap on an ARM?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Rate caps limit how much your interest rate can increase per adjustment period and over the life of the loan. A typical cap structure is 2/2/5, meaning 2% per adjustment, 2% per year, and 5% lifetime cap." }
+      },
+      {
+        "@type": "Question",
+        "name": "When is an ARM better than a fixed-rate mortgage?",
+        "acceptedAnswer": { "@type": "Answer", "text": "ARMs can be beneficial if you plan to sell or refinance before the fixed period ends, if rates are expected to drop, or if the initial rate savings are significant enough to justify the risk." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the index rate for an ARM?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The index rate is a benchmark rate (like SOFR or Treasury rate) that the lender uses plus a margin to determine your adjusted rate. When the index rises, your rate rises; when it falls, your rate may decrease." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/advanced-real-estate-calculators/" aria-current="page">Advanced Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/business-calculators/">Business</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/advanced-real-estate-calculators/">Advanced Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/business-calculators/">Business Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/advanced-real-estate-calculators/">Advanced Real Estate Calculators</a></li>
+          <li><span aria-current="page">Adjustable Rate Mortgage Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="article-content">
+          <h1>Adjustable Rate Mortgage Calculator</h1>
+          <p>Compare adjustable rate mortgage (ARM) payments against fixed-rate alternatives. Enter your loan details including initial rate, adjustment period, rate cap, and index rate to see your initial payment, worst-case payment, and how it compares to a fixed-rate mortgage.</p>
+
+          <div class="calc-container mt-8">
+            <div class="calc-header">
+              <h2>Calculate ARM Payments</h2>
+              <p>Enter your ARM loan details below</p>
+            </div>
+            <div class="calc-body">
+              <form id="arm-form" onsubmit="return false;">
+                <div class="form-group">
+                  <label class="form-label" for="loan-amount">Loan Amount</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="loan-amount" class="form-input" placeholder="300000" min="0" step="1000" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="initial-rate">Initial ARM Rate</label>
+                  <div class="input-suffix">
+                    <input type="number" id="initial-rate" class="form-input" placeholder="5.0" min="0" max="20" step="0.01" required>
+                    <span class="suffix">%</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="adjustment-period">Adjustment Period <span class="form-hint">(years)</span></label>
+                  <input type="number" id="adjustment-period" class="form-input" placeholder="5" min="1" max="10" step="1" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="rate-cap">Lifetime Rate Cap</label>
+                  <div class="input-suffix">
+                    <input type="number" id="rate-cap" class="form-input" placeholder="5.0" min="0" max="15" step="0.1" required>
+                    <span class="suffix">%</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="fixed-rate">Comparable Fixed Rate</label>
+                  <div class="input-suffix">
+                    <input type="number" id="fixed-rate" class="form-input" placeholder="6.5" min="0" max="20" step="0.01" required>
+                    <span class="suffix">%</span>
+                  </div>
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calculateARM()">Calculate ARM</button>
+                  <button type="button" class="btn btn-reset" onclick="resetARM()">Reset</button>
+                </div>
+              </form>
+
+              <div id="arm-results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">Initial Monthly Payment</div>
+                  <div class="result-value" id="result-initial"></div>
+                </div>
+                <div class="result-grid">
+                  <div class="result-item">
+                    <div class="result-label">Worst-Case Payment</div>
+                    <div class="result-value" id="result-worst"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Fixed-Rate Payment</div>
+                    <div class="result-value" id="result-fixed"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Initial Savings vs Fixed</div>
+                    <div class="result-value" id="result-savings"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <section class="content-section">
+            <h2>ARM Payment Formula</h2>
+            <p>ARM payments use the standard amortization formula at the current rate:</p>
+            <div class="formula-box">
+              <div class="formula-label">Monthly Payment</div>
+              M = P [ r(1+r)^n ] / [ (1+r)^n - 1 ]
+            </div>
+            <p>Where <strong>P</strong> is the loan balance, <strong>r</strong> is the current monthly rate, and <strong>n</strong> is remaining payments. The worst-case payment uses the initial rate plus the lifetime cap.</p>
+          </section>
+
+          <section class="content-section">
+            <h2>How to Use This Calculator</h2>
+            <ol>
+              <li><strong>Enter the loan amount</strong> - the total mortgage amount.</li>
+              <li><strong>Enter the initial ARM rate</strong> - the starting interest rate for the fixed period.</li>
+              <li><strong>Enter the adjustment period</strong> - how many years before the rate first adjusts.</li>
+              <li><strong>Enter the lifetime rate cap</strong> - the maximum the rate can increase over the loan life.</li>
+              <li><strong>Enter a comparable fixed rate</strong> - for side-by-side comparison.</li>
+              <li><strong>Click "Calculate ARM"</strong> to compare payments.</li>
+            </ol>
+          </section>
+
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>A $300,000 loan with a 5/1 ARM at 5.0% initial rate and a 5% lifetime cap would have an initial monthly payment of about $1,610. If the rate hits the cap at 10.0%, the worst-case payment rises to approximately $2,633. A comparable 6.5% fixed-rate mortgage would cost $1,896/month, meaning the ARM saves $286/month initially but risks costing $737/month more at the cap.</p>
+          </section>
+
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What is an adjustable rate mortgage?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>An ARM has an interest rate that changes periodically after an initial fixed-rate period. Common structures include 5/1, 7/1, and 10/1 ARMs where the first number is the fixed period in years.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What is a rate cap on an ARM?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Rate caps limit how much your interest rate can increase per adjustment period and over the life of the loan. A typical cap structure is 2/2/5, meaning 2% per adjustment, 2% per year, and 5% lifetime cap.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                When is an ARM better than a fixed-rate mortgage?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>ARMs can be beneficial if you plan to sell or refinance before the fixed period ends, if rates are expected to drop, or if the initial rate savings are significant enough to justify the risk.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What is the index rate for an ARM?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>The index rate is a benchmark rate (like SOFR or Treasury rate) that the lender uses plus a margin to determine your adjusted rate. When the index rises, your rate rises; when it falls, your rate may decrease.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/advanced-real-estate-calculators/mortgage-preapproval-calculator/" class="card card-link">
+                <h3>Mortgage Preapproval Calculator</h3>
+                <p>Estimate how much home you can afford.</p>
+              </a>
+              <a href="/advanced-real-estate-calculators/loan-to-value-ratio-calculator/" class="card card-link">
+                <h3>Loan-to-Value Ratio Calculator</h3>
+                <p>Calculate your LTV and PMI requirements.</p>
+              </a>
+              <a href="/advanced-real-estate-calculators/equity-growth-calculator/" class="card card-link">
+                <h3>Equity Growth Calculator</h3>
+                <p>Track your home equity over time.</p>
+              </a>
+            </div>
+          </section>
+
+          <div class="disclaimer">
+            <strong>Disclaimer:</strong> This calculator provides estimates for informational purposes only. ARM terms, rates, and adjustments vary by lender. This is not financial advice. Consult a mortgage professional before making decisions.
+          </div>
+
+          <div class="ad-slot ad-slot-leaderboard"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Real Estate</h4>
+          <a href="/real-estate-calculators/">All Real Estate Calculators</a>
+          <a href="/advanced-real-estate-calculators/">Advanced Real Estate</a>
+        </div>
+        <div class="footer-col">
+          <h4>Finance</h4>
+          <a href="/finance-calculators/">All Finance Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calcPayment(principal, annualRate, years) {
+      const r = annualRate / 100 / 12;
+      const n = years * 12;
+      if (r === 0) return principal / n;
+      return principal * (r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1);
+    }
+
+    function calculateARM() {
+      const amount = parseFloat(document.getElementById('loan-amount').value);
+      const initialRate = parseFloat(document.getElementById('initial-rate').value);
+      const adjustPeriod = parseFloat(document.getElementById('adjustment-period').value);
+      const rateCap = parseFloat(document.getElementById('rate-cap').value);
+      const fixedRate = parseFloat(document.getElementById('fixed-rate').value);
+
+      if (!amount || !initialRate || !adjustPeriod || !rateCap || !fixedRate) { alert('Please fill in all fields.'); return; }
+
+      const initialPayment = calcPayment(amount, initialRate, 30);
+      const worstRate = initialRate + rateCap;
+      const worstPayment = calcPayment(amount, worstRate, 30);
+      const fixedPayment = calcPayment(amount, fixedRate, 30);
+      const savings = fixedPayment - initialPayment;
+
+      document.getElementById('result-initial').textContent = '$' + initialPayment.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+      document.getElementById('result-worst').textContent = '$' + worstPayment.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+      document.getElementById('result-fixed').textContent = '$' + fixedPayment.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+      document.getElementById('result-savings').textContent = '$' + savings.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + '/mo';
+      document.getElementById('arm-results').classList.remove('hidden');
+    }
+
+    function resetARM() {
+      document.getElementById('arm-form').reset();
+      document.getElementById('arm-results').classList.add('hidden');
+    }
+  </script>
+</body>
+</html>

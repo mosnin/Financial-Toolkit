@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GPA Projection Calculator - Calculate Required GPA for Target | CalcWise</title>
+  <meta name="description" content="Free GPA projection calculator to determine what GPA you need in remaining courses to reach your target cumulative GPA. Plan your academic path to success.">
+  <meta name="keywords" content="GPA calculator, GPA projection, target GPA calculator, required GPA calculator, cumulative GPA planner">
+  <link rel="canonical" href="https://calcwise.io/education-calculators/gpa-projection-calculator/">
+
+  <meta property="og:title" content="GPA Projection Calculator - Calculate Required GPA for Target">
+  <meta property="og:description" content="Free GPA projection calculator to determine what GPA you need in remaining courses to reach your target.">
+  <meta property="og:url" content="https://calcwise.io/education-calculators/gpa-projection-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="GPA Projection Calculator - Calculate Required GPA for Target">
+  <meta name="twitter:description" content="Free GPA projection calculator to determine what GPA you need in remaining courses to reach your target.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Education Calculators", "item": "https://calcwise.io/education-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "GPA Projection Calculator", "item": "https://calcwise.io/education-calculators/gpa-projection-calculator/" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How is cumulative GPA calculated?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Cumulative GPA is calculated by dividing the total quality points (GPA x credit hours for each course) by the total credit hours attempted. For example, if you have a 3.2 GPA over 60 credits, your total quality points are 192." }
+      },
+      {
+        "@type": "Question",
+        "name": "Is it possible to raise my GPA significantly in one semester?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The more credits you have already completed, the harder it is to change your GPA significantly. Early in your college career, a single strong semester can make a big difference. Later on, GPA changes more slowly because existing credits carry more weight." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is a good GPA for graduate school?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Most graduate programs prefer a GPA of 3.0 or higher, with competitive programs often expecting 3.5+. However, requirements vary by program, and other factors like test scores, research experience, and recommendations also matter." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I achieve a 4.0 GPA in remaining courses?",
+        "acceptedAnswer": { "@type": "Answer", "text": "A 4.0 in remaining courses means earning an A in every class. If the calculator shows you need above a 4.0, your target GPA is mathematically impossible with the remaining credits. Consider adjusting your target or taking additional courses." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/education-calculators/" aria-current="page">Education</a>
+        <a href="/healthcare-calculators/">Healthcare</a>
+        <a href="/business-calculators/">Business</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/education-calculators/">Education Calculators</a>
+      <a href="/healthcare-calculators/">Healthcare Calculators</a>
+      <a href="/business-calculators/">Business Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/education-calculators/">Education Calculators</a></li>
+          <li><span aria-current="page">GPA Projection Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="article-content">
+          <h1>GPA Projection Calculator</h1>
+          <p>Find out what GPA you need to earn in your remaining courses to reach your target cumulative GPA. Whether you are aiming for honors, graduate school admission, or a personal milestone, this calculator shows you exactly what it takes.</p>
+
+          <div class="calc-container mt-8">
+            <div class="calc-header">
+              <h2>Calculate Required GPA</h2>
+              <p>Enter your current academic standing and goal</p>
+            </div>
+            <div class="calc-body">
+              <form id="gpa-form" onsubmit="return false;">
+                <div class="form-group">
+                  <label class="form-label" for="current-gpa">Current Cumulative GPA</label>
+                  <input type="number" id="current-gpa" name="currentGpa" class="form-input" placeholder="3.20" min="0" max="4.0" step="0.01" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="credits-completed">Credits Completed</label>
+                  <input type="number" id="credits-completed" name="creditsCompleted" class="form-input" placeholder="60" min="0" step="1" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="target-gpa">Target Cumulative GPA</label>
+                  <input type="number" id="target-gpa" name="targetGpa" class="form-input" placeholder="3.50" min="0" max="4.0" step="0.01" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="remaining-credits">Remaining Credits</label>
+                  <input type="number" id="remaining-credits" name="remainingCredits" class="form-input" placeholder="60" min="1" step="1" required>
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calculateGPA()">Calculate Required GPA</button>
+                  <button type="button" class="btn btn-reset" onclick="resetGPA()">Reset</button>
+                </div>
+              </form>
+
+              <div id="gpa-results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">Required GPA in Remaining Courses</div>
+                  <div class="result-value" id="result-required-gpa"></div>
+                </div>
+                <div class="result-grid">
+                  <div class="result-item">
+                    <div class="result-label">Feasibility</div>
+                    <div class="result-value" id="result-feasibility"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Total Credits at Graduation</div>
+                    <div class="result-value" id="result-total-credits"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <section class="content-section">
+            <h2>GPA Projection Formula</h2>
+            <p>The required GPA for remaining courses is derived from the weighted average formula:</p>
+            <div class="formula-box">
+              <div class="formula-label">Required GPA Formula</div>
+              Required GPA = (Target GPA x Total Credits - Current GPA x Completed Credits) / Remaining Credits
+            </div>
+            <p>Where <strong>Total Credits</strong> = Completed Credits + Remaining Credits. If the result exceeds 4.0, the target is not achievable with the given remaining credits.</p>
+          </section>
+
+          <section class="content-section">
+            <h2>How to Use This Calculator</h2>
+            <ol>
+              <li><strong>Enter your current cumulative GPA</strong> - found on your transcript or student portal.</li>
+              <li><strong>Enter credits completed</strong> - total credit hours you have already earned.</li>
+              <li><strong>Enter your target GPA</strong> - the cumulative GPA you want to achieve.</li>
+              <li><strong>Enter remaining credits</strong> - how many credit hours you have left before graduation.</li>
+              <li><strong>Click "Calculate Required GPA"</strong> to see the GPA needed in your remaining courses.</li>
+            </ol>
+          </section>
+
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>A student with a 3.2 GPA after 60 credits wants to graduate with a 3.5 GPA and has 60 credits remaining. The required GPA for remaining courses is: (3.5 x 120 - 3.2 x 60) / 60 = (420 - 192) / 60 = 3.80. The student needs a 3.80 GPA in remaining courses, which is challenging but achievable.</p>
+          </section>
+
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                How is cumulative GPA calculated?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Cumulative GPA is calculated by dividing the total quality points (GPA x credit hours for each course) by the total credit hours attempted. For example, if you have a 3.2 GPA over 60 credits, your total quality points are 192.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Is it possible to raise my GPA significantly in one semester?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>The more credits you have already completed, the harder it is to change your GPA significantly. Early in your college career, a single strong semester can make a big difference. Later on, GPA changes more slowly because existing credits carry more weight.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What is a good GPA for graduate school?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Most graduate programs prefer a GPA of 3.0 or higher, with competitive programs often expecting 3.5+. However, requirements vary by program, and other factors like test scores, research experience, and recommendations also matter.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Can I achieve a 4.0 GPA in remaining courses?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>A 4.0 in remaining courses means earning an A in every class. If the calculator shows you need above a 4.0, your target GPA is mathematically impossible with the remaining credits. Consider adjusting your target or taking additional courses.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/education-calculators/study-hours-planner-calculator/" class="card card-link">
+                <h3>Study Hours Planner</h3>
+                <p>Plan your weekly study schedule based on course load and difficulty.</p>
+              </a>
+              <a href="/education-calculators/graduation-timeline-calculator/" class="card card-link">
+                <h3>Graduation Timeline Calculator</h3>
+                <p>Estimate when you will graduate based on your course plan.</p>
+              </a>
+              <a href="/education-calculators/college-affordability-calculator/" class="card card-link">
+                <h3>College Affordability Calculator</h3>
+                <p>Determine if a college is financially within reach.</p>
+              </a>
+            </div>
+          </section>
+
+          <div class="disclaimer">
+            <strong>Disclaimer:</strong> This calculator provides estimates for informational purposes only. GPA calculations may vary by institution. Some schools use different grading scales or weight honors courses differently. Consult your academic advisor for official GPA projections.
+          </div>
+
+          <div class="ad-slot ad-slot-leaderboard"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Education</h4>
+          <a href="/education-calculators/">All Education Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Healthcare</h4>
+          <a href="/healthcare-calculators/">All Healthcare Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateGPA() {
+      const currentGpa = parseFloat(document.getElementById('current-gpa').value);
+      const creditsCompleted = parseFloat(document.getElementById('credits-completed').value);
+      const targetGpa = parseFloat(document.getElementById('target-gpa').value);
+      const remainingCredits = parseFloat(document.getElementById('remaining-credits').value);
+
+      if (isNaN(currentGpa) || isNaN(creditsCompleted) || isNaN(targetGpa) || isNaN(remainingCredits)) {
+        alert('Please fill in all fields.'); return;
+      }
+
+      const totalCredits = creditsCompleted + remainingCredits;
+      const requiredGpa = (targetGpa * totalCredits - currentGpa * creditsCompleted) / remainingCredits;
+
+      let feasibility;
+      if (requiredGpa > 4.0) feasibility = 'Not achievable (requires above 4.0)';
+      else if (requiredGpa >= 3.7) feasibility = 'Very challenging';
+      else if (requiredGpa >= 3.0) feasibility = 'Achievable with strong effort';
+      else if (requiredGpa >= 0) feasibility = 'Readily achievable';
+      else feasibility = 'Already exceeding target';
+
+      document.getElementById('result-required-gpa').textContent = requiredGpa.toFixed(2);
+      document.getElementById('result-feasibility').textContent = feasibility;
+      document.getElementById('result-total-credits').textContent = totalCredits;
+      document.getElementById('gpa-results').classList.remove('hidden');
+    }
+
+    function resetGPA() {
+      document.getElementById('gpa-form').reset();
+      document.getElementById('gpa-results').classList.add('hidden');
+    }
+  </script>
+</body>
+</html>

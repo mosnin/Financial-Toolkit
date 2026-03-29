@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Revenue Per Employee Calculator - Benchmark Workforce Efficiency | CalcWise</title>
+  <meta name="description" content="Free revenue per employee calculator. Calculate how much revenue each employee generates and compare against industry benchmarks.">
+  <meta name="keywords" content="revenue per employee, workforce efficiency, employee revenue ratio, industry benchmark, productivity metric">
+  <link rel="canonical" href="https://calcwise.io/business-operations-calculators/revenue-per-employee-calculator/">
+
+  <meta property="og:title" content="Revenue Per Employee Calculator - Benchmark Workforce Efficiency">
+  <meta property="og:description" content="Calculate how much revenue each employee generates and compare against industry benchmarks.">
+  <meta property="og:url" content="https://calcwise.io/business-operations-calculators/revenue-per-employee-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Revenue Per Employee Calculator - Benchmark Workforce Efficiency">
+  <meta name="twitter:description" content="Calculate how much revenue each employee generates and compare against industry benchmarks.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Business Operations Calculators", "item": "https://calcwise.io/business-operations-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "Revenue Per Employee Calculator", "item": "https://calcwise.io/business-operations-calculators/revenue-per-employee-calculator/" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is revenue per employee?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Revenue per employee is a productivity metric calculated by dividing total company revenue by the number of employees. It measures how efficiently a company uses its workforce to generate revenue." }
+      },
+      {
+        "@type": "Question",
+        "name": "What are typical revenue per employee benchmarks?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Benchmarks vary by industry: Technology/SaaS $200K-$800K, Professional Services $100K-$300K, Retail $100K-$200K, Manufacturing $150K-$400K, Healthcare $80K-$200K per employee." }
+      },
+      {
+        "@type": "Question",
+        "name": "Why does revenue per employee matter?",
+        "acceptedAnswer": { "@type": "Answer", "text": "It helps investors, managers, and analysts evaluate how efficiently a company operates. Higher ratios generally indicate better operational efficiency, though context and industry norms matter." }
+      },
+      {
+        "@type": "Question",
+        "name": "How can a company improve revenue per employee?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Companies can improve this metric by investing in automation, optimizing processes, upskilling employees, focusing on higher-margin products or services, and being strategic about headcount growth." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/business-operations-calculators/" aria-current="page">Business Operations</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/business-operations-calculators/">Business Operations Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/business-operations-calculators/">Business Operations Calculators</a></li>
+          <li><span aria-current="page">Revenue Per Employee Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="article-content">
+          <h1>Revenue Per Employee Calculator</h1>
+          <p>Calculate your company's revenue per employee and see how it compares to typical industry benchmarks. This key efficiency metric helps you understand workforce productivity and plan hiring decisions.</p>
+
+          <div class="calc-container mt-8">
+            <div class="calc-header">
+              <h2>Calculate Revenue Per Employee</h2>
+              <p>Enter your company details below</p>
+            </div>
+            <div class="calc-body">
+              <form id="rpe-form" onsubmit="return false;">
+                <div class="form-group">
+                  <label class="form-label" for="total-revenue">Total Annual Revenue</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="total-revenue" class="form-input" placeholder="10000000" min="0" step="1000" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="total-employees">Total Employees <span class="form-hint">(FTEs)</span></label>
+                  <input type="number" id="total-employees" class="form-input" placeholder="50" min="1" step="1" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="industry">Industry <span class="form-hint">(for comparison)</span></label>
+                  <select id="industry" class="form-input">
+                    <option value="tech">Technology / SaaS</option>
+                    <option value="professional">Professional Services</option>
+                    <option value="retail">Retail</option>
+                    <option value="manufacturing">Manufacturing</option>
+                    <option value="healthcare">Healthcare</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calculateRPE()">Calculate</button>
+                  <button type="button" class="btn btn-reset" onclick="resetRPE()">Reset</button>
+                </div>
+              </form>
+
+              <div id="rpe-results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">Revenue Per Employee</div>
+                  <div class="result-value" id="result-rpe"></div>
+                </div>
+                <div class="result-grid">
+                  <div class="result-item">
+                    <div class="result-label">Industry Benchmark</div>
+                    <div class="result-value" id="result-benchmark"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Comparison</div>
+                    <div class="result-value" id="result-comparison"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <section class="content-section">
+            <h2>Revenue Per Employee Formula</h2>
+            <div class="formula-box">
+              <div class="formula-label">Revenue Per Employee</div>
+              Revenue Per Employee = Total Annual Revenue / Total Number of Employees
+            </div>
+          </section>
+
+          <section class="content-section">
+            <h2>How to Use This Calculator</h2>
+            <ol>
+              <li><strong>Enter total annual revenue</strong> - your company's gross revenue for the year.</li>
+              <li><strong>Enter total employees</strong> - full-time equivalent headcount.</li>
+              <li><strong>Select your industry</strong> - for benchmark comparison.</li>
+              <li><strong>Click "Calculate"</strong> to see your revenue per employee and industry comparison.</li>
+            </ol>
+          </section>
+
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>A SaaS company with $10,000,000 in annual revenue and 50 employees has a revenue per employee of $200,000. The technology industry benchmark is $200K-$800K, placing this company at the lower end, suggesting room for growth or efficiency improvements.</p>
+          </section>
+
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">What is revenue per employee?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>Revenue per employee is a productivity metric calculated by dividing total company revenue by the number of employees. It measures how efficiently a company uses its workforce.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">What are typical revenue per employee benchmarks?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>Technology/SaaS: $200K-$800K, Professional Services: $100K-$300K, Retail: $100K-$200K, Manufacturing: $150K-$400K, Healthcare: $80K-$200K per employee.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">Why does revenue per employee matter?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>It helps evaluate operational efficiency. Higher ratios generally indicate better productivity, though context and industry norms must be considered.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">How can a company improve revenue per employee?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>Invest in automation, optimize processes, upskill employees, focus on higher-margin products, and be strategic about headcount growth.</p></div>
+            </div>
+          </section>
+
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/business-operations-calculators/employee-productivity-calculator/" class="card card-link">
+                <h3>Employee Productivity Calculator</h3>
+                <p>Measure revenue per employee and revenue per hour worked.</p>
+              </a>
+              <a href="/business-operations-calculators/gross-profit-calculator/" class="card card-link">
+                <h3>Gross Profit Calculator</h3>
+                <p>Calculate gross profit and gross margin percentage.</p>
+              </a>
+              <a href="/business-operations-calculators/business-growth-rate-calculator/" class="card card-link">
+                <h3>Business Growth Rate Calculator</h3>
+                <p>Calculate period-over-period revenue growth rates.</p>
+              </a>
+            </div>
+          </section>
+
+          <div class="disclaimer">
+            <strong>Disclaimer:</strong> This calculator provides estimates for informational purposes only. Industry benchmarks are approximate averages and vary by company size, geography, and business model. This is not professional business advice.
+          </div>
+
+          <div class="ad-slot ad-slot-leaderboard"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col"><h4>Real Estate</h4><a href="/real-estate-calculators/">All Real Estate Calculators</a></div>
+        <div class="footer-col"><h4>Business Operations</h4><a href="/business-operations-calculators/">All Business Operations Calculators</a></div>
+        <div class="footer-col"><h4>Company</h4><a href="/about.html">About</a></div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links"><a href="/about.html">About</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    const benchmarks = {
+      tech: { low: 200000, high: 800000, label: '$200K - $800K' },
+      professional: { low: 100000, high: 300000, label: '$100K - $300K' },
+      retail: { low: 100000, high: 200000, label: '$100K - $200K' },
+      manufacturing: { low: 150000, high: 400000, label: '$150K - $400K' },
+      healthcare: { low: 80000, high: 200000, label: '$80K - $200K' },
+      other: { low: 100000, high: 300000, label: '$100K - $300K' }
+    };
+
+    function calculateRPE() {
+      const revenue = parseFloat(document.getElementById('total-revenue').value);
+      const employees = parseFloat(document.getElementById('total-employees').value);
+      const industry = document.getElementById('industry').value;
+
+      if (isNaN(revenue) || isNaN(employees) || employees === 0) return;
+
+      const rpe = revenue / employees;
+      const bench = benchmarks[industry];
+      let comparison = '';
+      if (rpe < bench.low) comparison = 'Below industry average';
+      else if (rpe > bench.high) comparison = 'Above industry average';
+      else comparison = 'Within industry range';
+
+      document.getElementById('result-rpe').textContent = '$' + rpe.toLocaleString(undefined, {minimumFractionDigits: 0, maximumFractionDigits: 0});
+      document.getElementById('result-benchmark').textContent = bench.label;
+      document.getElementById('result-comparison').textContent = comparison;
+      document.getElementById('rpe-results').classList.remove('hidden');
+    }
+
+    function resetRPE() {
+      document.getElementById('rpe-form').reset();
+      document.getElementById('rpe-results').classList.add('hidden');
+    }
+  </script>
+</body>
+</html>

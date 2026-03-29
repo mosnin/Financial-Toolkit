@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Retirement Age Calculator - When Can You Retire? | CalcWise</title>
+  <meta name="description" content="Free retirement age calculator to determine when you can retire based on your current savings, monthly contributions, target nest egg, and expected returns.">
+  <meta name="keywords" content="retirement age calculator, when can I retire, retirement planning, retirement savings calculator, retirement goal">
+  <link rel="canonical" href="https://calcwise.io/retirement-calculators/retirement-age-calculator/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Retirement Age Calculator - When Can You Retire?">
+  <meta property="og:description" content="Free retirement age calculator to determine when you can retire based on your savings, contributions, and expected returns.">
+  <meta property="og:url" content="https://calcwise.io/retirement-calculators/retirement-age-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Retirement Age Calculator - When Can You Retire?">
+  <meta name="twitter:description" content="Free retirement age calculator to determine when you can retire based on your savings, contributions, and expected returns.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <!-- BreadcrumbList Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Retirement Calculators", "item": "https://calcwise.io/retirement-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "Retirement Age Calculator", "item": "https://calcwise.io/retirement-calculators/retirement-age-calculator/" }
+    ]
+  }
+  </script>
+
+  <!-- FAQPage Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How does the retirement age calculator work?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The calculator uses compound growth formulas to project your current savings plus monthly contributions at your expected annual return rate. It determines how many years until your portfolio reaches your target nest egg, then adds that to your current age to find your retirement age." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is a good target nest egg for retirement?",
+        "acceptedAnswer": { "@type": "Answer", "text": "A common guideline is to save 25 times your desired annual retirement income. For example, if you want $60,000 per year in retirement, aim for a $1.5 million nest egg. This follows the 4% withdrawal rule." }
+      },
+      {
+        "@type": "Question",
+        "name": "What annual return should I assume?",
+        "acceptedAnswer": { "@type": "Answer", "text": "A diversified stock and bond portfolio has historically returned 6-8% annually after inflation. Conservative investors might use 5-6%, while more aggressive portfolios might assume 7-9%. Lower assumptions provide a safer margin." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I retire before 65?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes, early retirement is possible with aggressive saving. The key factors are your savings rate, investment returns, and desired lifestyle expenses. Many people in the FIRE movement retire in their 40s or 50s by saving 50% or more of their income." }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I speed up my retirement timeline?",
+        "acceptedAnswer": { "@type": "Answer", "text": "You can retire sooner by increasing monthly contributions, reducing your target nest egg by lowering planned expenses, optimizing investment returns, or finding additional income sources. Even small increases in savings rate can shave years off your timeline." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/retirement-calculators/" aria-current="page">Retirement</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/retirement-calculators/">Retirement Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/retirement-calculators/">Retirement Calculators</a></li>
+          <li><span aria-current="page">Retirement Age Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="article-content">
+          <h1>Retirement Age Calculator</h1>
+          <p>Find out when you can retire based on your current savings, monthly contributions, desired nest egg, and expected investment returns. This calculator projects your portfolio growth over time to pinpoint your retirement age.</p>
+
+          <div class="calc-container mt-8">
+            <div class="calc-header">
+              <h2>Calculate Your Retirement Age</h2>
+              <p>Enter your financial details below</p>
+            </div>
+            <div class="calc-body">
+              <form id="retirement-age-form" onsubmit="return false;">
+                <div class="form-group">
+                  <label class="form-label" for="current-age">Current Age</label>
+                  <input type="number" id="current-age" class="form-input" placeholder="30" min="18" max="80" step="1" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="current-savings">Current Savings</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="current-savings" class="form-input" placeholder="50000" min="0" step="100" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="monthly-contribution">Monthly Contribution</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="monthly-contribution" class="form-input" placeholder="1000" min="0" step="50" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="target-nest-egg">Target Nest Egg</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="target-nest-egg" class="form-input" placeholder="1500000" min="1000" step="1000" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="annual-return">Expected Annual Return</label>
+                  <div class="input-suffix">
+                    <input type="number" id="annual-return" class="form-input" placeholder="7" min="0" max="20" step="0.1" required>
+                    <span class="suffix">%</span>
+                  </div>
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calculateRetirementAge()">Calculate Retirement Age</button>
+                  <button type="button" class="btn btn-reset" onclick="resetCalc()">Reset</button>
+                </div>
+              </form>
+
+              <div id="calc-results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">Estimated Retirement Age</div>
+                  <div class="result-value" id="result-retirement-age"></div>
+                </div>
+                <div class="result-grid">
+                  <div class="result-item">
+                    <div class="result-label">Years Remaining</div>
+                    <div class="result-value" id="result-years-remaining"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Final Portfolio Value</div>
+                    <div class="result-value" id="result-final-value"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Formula Section -->
+          <section class="content-section">
+            <h2>Retirement Age Formula</h2>
+            <p>The calculator uses the future value of a series formula to project your savings growth:</p>
+            <div class="formula-box">
+              <div class="formula-label">Future Value Formula</div>
+              FV = PV(1 + r)^n + PMT[((1 + r)^n - 1) / r]
+            </div>
+            <p>Where <strong>FV</strong> is the future value (target nest egg), <strong>PV</strong> is the present value (current savings), <strong>r</strong> is the monthly return rate, <strong>n</strong> is the number of months, and <strong>PMT</strong> is the monthly contribution. The calculator solves for <strong>n</strong> to find when FV reaches your target.</p>
+          </section>
+
+          <!-- How to Use -->
+          <section class="content-section">
+            <h2>How to Use This Retirement Age Calculator</h2>
+            <ol>
+              <li><strong>Enter your current age</strong> - your age today.</li>
+              <li><strong>Enter your current savings</strong> - the total amount you have saved for retirement right now.</li>
+              <li><strong>Enter your monthly contribution</strong> - how much you add to retirement savings each month.</li>
+              <li><strong>Enter your target nest egg</strong> - the total amount you want to accumulate before retiring.</li>
+              <li><strong>Enter your expected annual return</strong> - the average annual investment return you expect.</li>
+              <li><strong>Click "Calculate Retirement Age"</strong> to see when you can retire.</li>
+            </ol>
+          </section>
+
+          <!-- Example Scenario -->
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>A 30-year-old with $50,000 in savings contributing $1,000 per month and expecting a 7% annual return wants to accumulate $1,500,000. The calculator determines they could reach their goal at approximately age 55, giving them about 25 years of saving and investing ahead.</p>
+          </section>
+
+          <!-- FAQ Section -->
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                How does the retirement age calculator work?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>The calculator uses compound growth formulas to project your current savings plus monthly contributions at your expected annual return rate. It determines how many years until your portfolio reaches your target nest egg, then adds that to your current age to find your retirement age.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What is a good target nest egg for retirement?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>A common guideline is to save 25 times your desired annual retirement income. For example, if you want $60,000 per year in retirement, aim for a $1.5 million nest egg. This follows the 4% withdrawal rule.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What annual return should I assume?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>A diversified stock and bond portfolio has historically returned 6-8% annually after inflation. Conservative investors might use 5-6%, while more aggressive portfolios might assume 7-9%. Lower assumptions provide a safer margin.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Can I retire before 65?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Yes, early retirement is possible with aggressive saving. The key factors are your savings rate, investment returns, and desired lifestyle expenses. Many people in the FIRE movement retire in their 40s or 50s by saving 50% or more of their income.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                How do I speed up my retirement timeline?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>You can retire sooner by increasing monthly contributions, reducing your target nest egg by lowering planned expenses, optimizing investment returns, or finding additional income sources. Even small increases in savings rate can shave years off your timeline.</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Related Calculators -->
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/retirement-calculators/early-retirement-calculator/" class="card card-link">
+                <h3>Early Retirement Calculator</h3>
+                <p>See if you can retire early and how long your savings will last.</p>
+              </a>
+              <a href="/retirement-calculators/retirement-savings-gap-calculator/" class="card card-link">
+                <h3>Retirement Savings Gap Calculator</h3>
+                <p>Find out how much more you need to save for retirement.</p>
+              </a>
+              <a href="/retirement-calculators/retirement-nest-egg-calculator/" class="card card-link">
+                <h3>Retirement Nest Egg Calculator</h3>
+                <p>Calculate the total nest egg you need for retirement.</p>
+              </a>
+            </div>
+          </section>
+
+          <!-- Disclaimer -->
+          <div class="disclaimer">
+            <strong>Disclaimer:</strong> This calculator provides estimates for informational purposes only. Actual investment returns vary and are not guaranteed. This is not financial advice. Consult a qualified financial advisor before making retirement planning decisions.
+          </div>
+
+          <!-- Ad Slot -->
+          <div class="ad-slot ad-slot-leaderboard"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Real Estate</h4>
+          <a href="/real-estate-calculators/">All Real Estate Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Retirement</h4>
+          <a href="/retirement-calculators/">All Retirement Calculators</a>
+          <a href="/retirement-calculators/retirement-age-calculator/">Retirement Age</a>
+          <a href="/retirement-calculators/401k-match-calculator/">401(k) Match</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateRetirementAge() {
+      const currentAge = parseFloat(document.getElementById('current-age').value);
+      const currentSavings = parseFloat(document.getElementById('current-savings').value);
+      const monthlyContrib = parseFloat(document.getElementById('monthly-contribution').value);
+      const targetNestEgg = parseFloat(document.getElementById('target-nest-egg').value);
+      const annualReturn = parseFloat(document.getElementById('annual-return').value) / 100;
+
+      if (!currentAge || !targetNestEgg || annualReturn < 0) return;
+
+      const monthlyRate = annualReturn / 12;
+      let balance = currentSavings || 0;
+      let months = 0;
+      const maxMonths = 12 * 80;
+
+      while (balance < targetNestEgg && months < maxMonths) {
+        balance = balance * (1 + monthlyRate) + monthlyContrib;
+        months++;
+      }
+
+      const yearsToRetire = months / 12;
+      const retirementAge = currentAge + yearsToRetire;
+
+      document.getElementById('result-retirement-age').textContent = Math.round(retirementAge * 10) / 10;
+      document.getElementById('result-years-remaining').textContent = Math.round(yearsToRetire * 10) / 10 + ' years';
+      document.getElementById('result-final-value').textContent = '$' + balance.toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 });
+      document.getElementById('calc-results').classList.remove('hidden');
+    }
+
+    function resetCalc() {
+      document.getElementById('retirement-age-form').reset();
+      document.getElementById('calc-results').classList.add('hidden');
+    }
+  </script>
+</body>
+</html>

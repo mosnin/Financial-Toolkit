@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dividend Yield Calculator | CalcWise</title>
+  <meta name="description" content="Calculate dividend yield percentage and effective yield from stock price and annual dividends. Free online dividend yield calculator with instant results.">
+  <meta name="keywords" content="dividend yield calculator, stock dividend calculator, dividend percentage, effective yield, annual dividend">
+  <link rel="canonical" href="https://calcwise.io/investment-calculators/dividend-yield-calculator/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Dividend Yield Calculator | CalcWise">
+  <meta property="og:description" content="Calculate dividend yield percentage and effective yield from stock price and annual dividends.">
+  <meta property="og:url" content="https://calcwise.io/investment-calculators/dividend-yield-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Dividend Yield Calculator | CalcWise">
+  <meta name="twitter:description" content="Calculate dividend yield percentage and effective yield from stock price and annual dividends.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <!-- BreadcrumbList Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Investment Calculators", "item": "https://calcwise.io/investment-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "Dividend Yield Calculator", "item": "https://calcwise.io/investment-calculators/dividend-yield-calculator/" }
+    ]
+  }
+  </script>
+
+  <!-- FAQPage Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is dividend yield?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Dividend yield is the annual dividend payment divided by the stock price, expressed as a percentage. It shows how much income you earn per dollar invested in a stock." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is a good dividend yield?",
+        "acceptedAnswer": { "@type": "Answer", "text": "A good dividend yield typically ranges from 2% to 6%. Yields below 2% may not provide enough income, while yields above 6% could signal financial trouble or an unsustainable payout." }
+      },
+      {
+        "@type": "Question",
+        "name": "How is effective yield different from dividend yield?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Effective yield accounts for the compounding effect of reinvesting dividends. It assumes quarterly dividend payments are reinvested, resulting in a slightly higher return than the simple dividend yield." }
+      },
+      {
+        "@type": "Question",
+        "name": "Does dividend yield change over time?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes, dividend yield changes whenever the stock price or dividend amount changes. A rising stock price lowers the yield, while a falling price increases it, assuming the dividend stays the same." }
+      },
+      {
+        "@type": "Question",
+        "name": "Should I invest only in high-yield dividend stocks?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Not necessarily. Very high yields can indicate risk. A balanced approach considers dividend growth, payout ratio, and company fundamentals alongside yield. Diversification across yield levels is generally recommended." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/investment-calculators/" aria-current="page">Investments</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/investment-calculators/">Investment Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/investment-calculators/">Investment Calculators</a></li>
+          <li><span aria-current="page">Dividend Yield Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="article-content">
+          <h1>Dividend Yield Calculator</h1>
+          <p>Calculate the dividend yield and effective yield of any stock. Enter the current stock price and the annual dividend per share to see how much income your investment generates as a percentage of its price.</p>
+
+          <div class="calc-container mt-8">
+            <div class="calc-header">
+              <h2>Calculate Dividend Yield</h2>
+              <p>Enter stock price and annual dividend details below</p>
+            </div>
+            <div class="calc-body">
+              <form id="dividend-yield-form" onsubmit="return false;">
+                <div class="form-group">
+                  <label class="form-label" for="stock-price">Current Stock Price</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="stock-price" class="form-input" placeholder="150.00" min="0.01" step="0.01" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="annual-dividend">Annual Dividend Per Share</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="annual-dividend" class="form-input" placeholder="3.50" min="0.01" step="0.01" required>
+                  </div>
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calculateDividendYield()">Calculate Yield</button>
+                  <button type="button" class="btn btn-reset" onclick="resetDividendYield()">Reset</button>
+                </div>
+              </form>
+
+              <div id="dividend-yield-results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">Dividend Yield</div>
+                  <div class="result-value" id="result-yield"></div>
+                </div>
+                <div class="result-grid">
+                  <div class="result-item">
+                    <div class="result-label">Effective Yield (Quarterly Compounding)</div>
+                    <div class="result-value" id="result-effective-yield"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Quarterly Dividend</div>
+                    <div class="result-value" id="result-quarterly"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Formula Section -->
+          <section class="content-section">
+            <h2>Dividend Yield Formula</h2>
+            <p>The dividend yield is calculated by dividing the annual dividend per share by the current stock price:</p>
+            <div class="formula-box">
+              <div class="formula-label">Dividend Yield Formula</div>
+              Dividend Yield = (Annual Dividend Per Share / Current Stock Price) x 100
+            </div>
+            <p>The <strong>effective yield</strong> accounts for quarterly compounding when dividends are reinvested:</p>
+            <div class="formula-box">
+              <div class="formula-label">Effective Yield Formula</div>
+              Effective Yield = (1 + Yield/4)^4 - 1
+            </div>
+          </section>
+
+          <!-- How to Use -->
+          <section class="content-section">
+            <h2>How to Use This Dividend Yield Calculator</h2>
+            <ol>
+              <li><strong>Enter the current stock price</strong> - the market price per share of the stock.</li>
+              <li><strong>Enter the annual dividend per share</strong> - the total dividend paid per share over a year.</li>
+              <li><strong>Click "Calculate Yield"</strong> to see the dividend yield percentage and effective yield.</li>
+            </ol>
+          </section>
+
+          <!-- Example Scenario -->
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>Suppose a stock trades at $150.00 per share and pays an annual dividend of $3.50 per share. The dividend yield would be 2.33%. If dividends are reinvested quarterly, the effective yield would be approximately 2.35%, reflecting the compounding benefit.</p>
+          </section>
+
+          <!-- FAQ Section -->
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What is dividend yield?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Dividend yield is the annual dividend payment divided by the stock price, expressed as a percentage. It shows how much income you earn per dollar invested in a stock.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What is a good dividend yield?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>A good dividend yield typically ranges from 2% to 6%. Yields below 2% may not provide enough income, while yields above 6% could signal financial trouble or an unsustainable payout.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                How is effective yield different from dividend yield?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Effective yield accounts for the compounding effect of reinvesting dividends. It assumes quarterly dividend payments are reinvested, resulting in a slightly higher return than the simple dividend yield.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Does dividend yield change over time?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Yes, dividend yield changes whenever the stock price or dividend amount changes. A rising stock price lowers the yield, while a falling price increases it, assuming the dividend stays the same.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Should I invest only in high-yield dividend stocks?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Not necessarily. Very high yields can indicate risk. A balanced approach considers dividend growth, payout ratio, and company fundamentals alongside yield. Diversification across yield levels is generally recommended.</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Related Calculators -->
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/investment-calculators/dividend-reinvestment-calculator/" class="card card-link">
+                <h3>Dividend Reinvestment Calculator</h3>
+                <p>See how reinvesting dividends grows your portfolio over time.</p>
+              </a>
+              <a href="/investment-calculators/annualized-return-calculator/" class="card card-link">
+                <h3>Annualized Return Calculator</h3>
+                <p>Calculate the annualized return on any investment.</p>
+              </a>
+              <a href="/investment-calculators/portfolio-allocation-calculator/" class="card card-link">
+                <h3>Portfolio Allocation Calculator</h3>
+                <p>Determine optimal dollar amounts for your target allocation.</p>
+              </a>
+              <a href="/investment-calculators/etf-return-calculator/" class="card card-link">
+                <h3>ETF Return Calculator</h3>
+                <p>Project ETF returns including contributions and expense ratios.</p>
+              </a>
+            </div>
+          </section>
+
+          <!-- Disclaimer -->
+          <div class="disclaimer">
+            <strong>Disclaimer:</strong> This calculator provides estimates for informational purposes only. Actual dividend yields and returns may vary. Past dividends do not guarantee future payments. This is not financial advice. Consult a qualified financial professional before making investment decisions.
+          </div>
+
+          <!-- Ad Slot -->
+          <div class="ad-slot ad-slot-leaderboard"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Real Estate</h4>
+          <a href="/real-estate-calculators/">All Real Estate Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Investments</h4>
+          <a href="/investment-calculators/">All Investment Calculators</a>
+          <a href="/investment-calculators/dividend-yield-calculator/">Dividend Yield</a>
+          <a href="/investment-calculators/cagr-calculator/">CAGR Calculator</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateDividendYield() {
+      const price = parseFloat(document.getElementById('stock-price').value);
+      const dividend = parseFloat(document.getElementById('annual-dividend').value);
+
+      if (!price || !dividend || price <= 0 || dividend <= 0) {
+        alert('Please enter valid positive values for both fields.');
+        return;
+      }
+
+      const dividendYield = (dividend / price) * 100;
+      const effectiveYield = (Math.pow(1 + (dividendYield / 100) / 4, 4) - 1) * 100;
+      const quarterlyDividend = dividend / 4;
+
+      document.getElementById('result-yield').textContent = dividendYield.toFixed(2) + '%';
+      document.getElementById('result-effective-yield').textContent = effectiveYield.toFixed(2) + '%';
+      document.getElementById('result-quarterly').textContent = '$' + quarterlyDividend.toFixed(2);
+      document.getElementById('dividend-yield-results').classList.remove('hidden');
+    }
+
+    function resetDividendYield() {
+      document.getElementById('dividend-yield-form').reset();
+      document.getElementById('dividend-yield-results').classList.add('hidden');
+    }
+  </script>
+</body>
+</html>

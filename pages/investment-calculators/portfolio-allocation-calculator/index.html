@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Allocation Calculator | CalcWise</title>
+  <meta name="description" content="Calculate target portfolio allocations and dollar amounts for stocks, bonds, cash, and real estate. Free portfolio allocation calculator with rebalancing needs.">
+  <meta name="keywords" content="portfolio allocation calculator, asset allocation, portfolio rebalancing, investment allocation, target allocation">
+  <link rel="canonical" href="https://calcwise.io/investment-calculators/portfolio-allocation-calculator/">
+
+  <meta property="og:title" content="Portfolio Allocation Calculator | CalcWise">
+  <meta property="og:description" content="Calculate target portfolio allocations and dollar amounts for stocks, bonds, cash, and real estate.">
+  <meta property="og:url" content="https://calcwise.io/investment-calculators/portfolio-allocation-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Portfolio Allocation Calculator | CalcWise">
+  <meta name="twitter:description" content="Calculate target portfolio allocations and dollar amounts for stocks, bonds, cash, and real estate.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Investment Calculators", "item": "https://calcwise.io/investment-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "Portfolio Allocation Calculator", "item": "https://calcwise.io/investment-calculators/portfolio-allocation-calculator/" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is portfolio allocation?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Portfolio allocation is the process of dividing your investment portfolio among different asset classes such as stocks, bonds, cash, and real estate to balance risk and reward according to your goals." }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I determine my ideal allocation?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Your ideal allocation depends on your age, risk tolerance, time horizon, and financial goals. A common rule of thumb is to subtract your age from 110 to get your stock allocation percentage." }
+      },
+      {
+        "@type": "Question",
+        "name": "How often should I rebalance my portfolio?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Most financial advisors recommend rebalancing annually or when any asset class drifts more than 5% from its target allocation. Over-frequent rebalancing can increase transaction costs." }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens if my allocations do not add up to 100%?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Your target allocations should total 100%. If they do not, the calculator will alert you so you can adjust your percentages accordingly before calculating dollar amounts." }
+      },
+      {
+        "@type": "Question",
+        "name": "Should I include real estate in my portfolio?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Real estate can provide diversification, income, and inflation protection. Many advisors recommend a 5-20% allocation to real estate through REITs or direct investment, depending on your overall strategy." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/investment-calculators/" aria-current="page">Investments</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/investment-calculators/">Investment Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/investment-calculators/">Investment Calculators</a></li>
+          <li><span aria-current="page">Portfolio Allocation Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="article-content">
+          <h1>Portfolio Allocation Calculator</h1>
+          <p>Determine the exact dollar amounts for each asset class based on your total portfolio value and target allocations. This calculator helps you see how your portfolio should be divided among stocks, bonds, cash, and real estate, and identifies rebalancing needs.</p>
+
+          <div class="calc-container mt-8">
+            <div class="calc-header">
+              <h2>Calculate Portfolio Allocation</h2>
+              <p>Enter your portfolio value and target allocations</p>
+            </div>
+            <div class="calc-body">
+              <form id="allocation-form" onsubmit="return false;">
+                <div class="form-group">
+                  <label class="form-label" for="total-portfolio">Total Portfolio Value</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="total-portfolio" class="form-input" placeholder="500000" min="1" step="100" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="stocks-pct">Stocks Allocation</label>
+                  <div class="input-suffix">
+                    <input type="number" id="stocks-pct" class="form-input" placeholder="60" min="0" max="100" step="1" required>
+                    <span class="suffix">%</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="bonds-pct">Bonds Allocation</label>
+                  <div class="input-suffix">
+                    <input type="number" id="bonds-pct" class="form-input" placeholder="25" min="0" max="100" step="1" required>
+                    <span class="suffix">%</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="realestate-pct">Real Estate Allocation</label>
+                  <div class="input-suffix">
+                    <input type="number" id="realestate-pct" class="form-input" placeholder="10" min="0" max="100" step="1" required>
+                    <span class="suffix">%</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="cash-pct">Cash Allocation</label>
+                  <div class="input-suffix">
+                    <input type="number" id="cash-pct" class="form-input" placeholder="5" min="0" max="100" step="1" required>
+                    <span class="suffix">%</span>
+                  </div>
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calculateAllocation()">Calculate Allocation</button>
+                  <button type="button" class="btn btn-reset" onclick="resetAllocation()">Reset</button>
+                </div>
+              </form>
+
+              <div id="allocation-results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">Total Allocated</div>
+                  <div class="result-value" id="result-total-allocated"></div>
+                </div>
+                <div class="result-grid">
+                  <div class="result-item">
+                    <div class="result-label">Stocks</div>
+                    <div class="result-value" id="result-stocks"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Bonds</div>
+                    <div class="result-value" id="result-bonds"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Real Estate</div>
+                    <div class="result-value" id="result-realestate"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Cash</div>
+                    <div class="result-value" id="result-cash"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <section class="content-section">
+            <h2>Portfolio Allocation Formula</h2>
+            <p>The dollar amount for each asset class is calculated by multiplying the total portfolio value by the target percentage:</p>
+            <div class="formula-box">
+              <div class="formula-label">Allocation Formula</div>
+              Dollar Amount = Total Portfolio Value x (Target Allocation % / 100)
+            </div>
+          </section>
+
+          <section class="content-section">
+            <h2>How to Use This Portfolio Allocation Calculator</h2>
+            <ol>
+              <li><strong>Enter your total portfolio value</strong> - the combined value of all your investments.</li>
+              <li><strong>Enter target allocation percentages</strong> for stocks, bonds, real estate, and cash.</li>
+              <li><strong>Ensure allocations total 100%</strong> for accurate results.</li>
+              <li><strong>Click "Calculate Allocation"</strong> to see the dollar amount for each asset class.</li>
+            </ol>
+          </section>
+
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>With a $500,000 portfolio and a target allocation of 60% stocks, 25% bonds, 10% real estate, and 5% cash, you should have $300,000 in stocks, $125,000 in bonds, $50,000 in real estate, and $25,000 in cash.</p>
+          </section>
+
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What is portfolio allocation?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Portfolio allocation is the process of dividing your investment portfolio among different asset classes such as stocks, bonds, cash, and real estate to balance risk and reward according to your goals.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                How do I determine my ideal allocation?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Your ideal allocation depends on your age, risk tolerance, time horizon, and financial goals. A common rule of thumb is to subtract your age from 110 to get your stock allocation percentage.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                How often should I rebalance my portfolio?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Most financial advisors recommend rebalancing annually or when any asset class drifts more than 5% from its target allocation. Over-frequent rebalancing can increase transaction costs.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What happens if my allocations do not add up to 100%?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Your target allocations should total 100%. If they do not, the calculator will alert you so you can adjust your percentages accordingly before calculating dollar amounts.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Should I include real estate in my portfolio?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Real estate can provide diversification, income, and inflation protection. Many advisors recommend a 5-20% allocation to real estate through REITs or direct investment, depending on your overall strategy.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/investment-calculators/asset-allocation-rebalancing-calculator/" class="card card-link">
+                <h3>Asset Allocation Rebalancing Calculator</h3>
+                <p>Calculate exact trades needed to rebalance your portfolio.</p>
+              </a>
+              <a href="/investment-calculators/risk-tolerance-calculator/" class="card card-link">
+                <h3>Risk Tolerance Calculator</h3>
+                <p>Determine your risk profile and recommended allocation.</p>
+              </a>
+              <a href="/investment-calculators/investment-diversification-calculator/" class="card card-link">
+                <h3>Investment Diversification Calculator</h3>
+                <p>Measure how well diversified your portfolio is.</p>
+              </a>
+              <a href="/investment-calculators/portfolio-volatility-calculator/" class="card card-link">
+                <h3>Portfolio Volatility Calculator</h3>
+                <p>Estimate your portfolio's expected return and volatility.</p>
+              </a>
+            </div>
+          </section>
+
+          <div class="disclaimer">
+            <strong>Disclaimer:</strong> This calculator provides estimates for informational purposes only. Actual portfolio performance will vary based on market conditions. This is not financial advice. Consult a qualified financial professional before making investment decisions.
+          </div>
+
+          <div class="ad-slot ad-slot-leaderboard"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Real Estate</h4>
+          <a href="/real-estate-calculators/">All Real Estate Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Investments</h4>
+          <a href="/investment-calculators/">All Investment Calculators</a>
+          <a href="/investment-calculators/dividend-yield-calculator/">Dividend Yield</a>
+          <a href="/investment-calculators/cagr-calculator/">CAGR Calculator</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateAllocation() {
+      const total = parseFloat(document.getElementById('total-portfolio').value);
+      const stocks = parseFloat(document.getElementById('stocks-pct').value) || 0;
+      const bonds = parseFloat(document.getElementById('bonds-pct').value) || 0;
+      const realestate = parseFloat(document.getElementById('realestate-pct').value) || 0;
+      const cash = parseFloat(document.getElementById('cash-pct').value) || 0;
+
+      if (!total || total <= 0) {
+        alert('Please enter a valid portfolio value.');
+        return;
+      }
+
+      const sum = stocks + bonds + realestate + cash;
+      if (Math.abs(sum - 100) > 0.01) {
+        alert('Target allocations must total 100%. Currently: ' + sum.toFixed(1) + '%');
+        return;
+      }
+
+      const fmt = (v) => '$' + v.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2});
+
+      document.getElementById('result-total-allocated').textContent = fmt(total);
+      document.getElementById('result-stocks').textContent = fmt(total * stocks / 100) + ' (' + stocks + '%)';
+      document.getElementById('result-bonds').textContent = fmt(total * bonds / 100) + ' (' + bonds + '%)';
+      document.getElementById('result-realestate').textContent = fmt(total * realestate / 100) + ' (' + realestate + '%)';
+      document.getElementById('result-cash').textContent = fmt(total * cash / 100) + ' (' + cash + '%)';
+      document.getElementById('allocation-results').classList.remove('hidden');
+    }
+
+    function resetAllocation() {
+      document.getElementById('allocation-form').reset();
+      document.getElementById('allocation-results').classList.add('hidden');
+    }
+  </script>
+</body>
+</html>

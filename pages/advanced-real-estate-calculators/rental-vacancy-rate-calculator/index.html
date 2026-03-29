@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rental Vacancy Rate Calculator - Calculate Vacancy & Income Loss | CalcWise</title>
+  <meta name="description" content="Free rental vacancy rate calculator. Calculate your property vacancy rate and estimate income loss from unoccupied units.">
+  <meta name="keywords" content="vacancy rate calculator, rental vacancy, income loss calculator, rental property vacancy, occupancy rate">
+  <link rel="canonical" href="https://calcwise.io/advanced-real-estate-calculators/rental-vacancy-rate-calculator/">
+
+  <meta property="og:title" content="Rental Vacancy Rate Calculator - Calculate Vacancy & Income Loss">
+  <meta property="og:description" content="Free rental vacancy rate calculator. Calculate vacancy rate and estimate income loss from unoccupied units.">
+  <meta property="og:url" content="https://calcwise.io/advanced-real-estate-calculators/rental-vacancy-rate-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Rental Vacancy Rate Calculator - Calculate Vacancy & Income Loss">
+  <meta name="twitter:description" content="Free rental vacancy rate calculator. Calculate vacancy rate and estimate income loss.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Advanced Real Estate Calculators", "item": "https://calcwise.io/advanced-real-estate-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "Rental Vacancy Rate Calculator", "item": "https://calcwise.io/advanced-real-estate-calculators/rental-vacancy-rate-calculator/" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is a good vacancy rate for rental property?",
+        "acceptedAnswer": { "@type": "Answer", "text": "A vacancy rate below 5-7% is generally considered healthy. Rates above 10% may indicate pricing issues, poor location, or property condition problems." }
+      },
+      {
+        "@type": "Question",
+        "name": "How is vacancy rate calculated?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Vacancy rate is the number of vacant units divided by total units, multiplied by 100. It can also be calculated based on time: vacant days divided by total days in the period." }
+      },
+      {
+        "@type": "Question",
+        "name": "How does vacancy affect rental income?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Each vacant unit represents lost rental income. A 10% vacancy rate on a property generating $10,000/month in potential rent means $1,000/month in lost income." }
+      },
+      {
+        "@type": "Question",
+        "name": "How can I reduce my vacancy rate?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Reduce vacancy by pricing competitively, maintaining the property well, responding quickly to tenant needs, marketing effectively, and offering lease renewals to good tenants." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/advanced-real-estate-calculators/" aria-current="page">Advanced Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/business-calculators/">Business</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/advanced-real-estate-calculators/">Advanced Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/business-calculators/">Business Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/advanced-real-estate-calculators/">Advanced Real Estate Calculators</a></li>
+          <li><span aria-current="page">Rental Vacancy Rate Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="article-content">
+          <h1>Rental Vacancy Rate Calculator</h1>
+          <p>Calculate the vacancy rate for your rental property and estimate the income loss from unoccupied units. Understanding vacancy helps you budget accurately and identify potential issues with your rental strategy.</p>
+
+          <div class="calc-container mt-8">
+            <div class="calc-header">
+              <h2>Calculate Vacancy Rate</h2>
+              <p>Enter your rental property details</p>
+            </div>
+            <div class="calc-body">
+              <form id="vacancy-form" onsubmit="return false;">
+                <div class="form-group">
+                  <label class="form-label" for="total-units">Total Units</label>
+                  <input type="number" id="total-units" class="form-input" placeholder="10" min="1" step="1" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="occupied-units">Occupied Units</label>
+                  <input type="number" id="occupied-units" class="form-input" placeholder="9" min="0" step="1" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="avg-rent">Average Monthly Rent per Unit</label>
+                  <div class="input-prefix"><span class="prefix">$</span>
+                    <input type="number" id="avg-rent" class="form-input" placeholder="1200" min="0" step="50" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="time-period">Time Period <span class="form-hint">(months)</span></label>
+                  <input type="number" id="time-period" class="form-input" placeholder="12" min="1" max="120" step="1" required>
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calculateVacancy()">Calculate Vacancy</button>
+                  <button type="button" class="btn btn-reset" onclick="resetVacancy()">Reset</button>
+                </div>
+              </form>
+
+              <div id="vacancy-results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">Vacancy Rate</div>
+                  <div class="result-value" id="result-vacancy"></div>
+                </div>
+                <div class="result-grid">
+                  <div class="result-item">
+                    <div class="result-label">Monthly Income Loss</div>
+                    <div class="result-value" id="result-monthly-loss"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Total Period Income Loss</div>
+                    <div class="result-value" id="result-total-loss"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Occupancy Rate</div>
+                    <div class="result-value" id="result-occupancy"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <section class="content-section">
+            <h2>Vacancy Rate Formula</h2>
+            <div class="formula-box">
+              <div class="formula-label">Vacancy Rate</div>
+              Vacancy Rate = (Vacant Units / Total Units) x 100
+            </div>
+            <p>Income loss is calculated by multiplying the number of vacant units by the average rent per unit over the time period.</p>
+          </section>
+
+          <section class="content-section">
+            <h2>How to Use This Calculator</h2>
+            <ol>
+              <li><strong>Enter total units</strong> - the number of rental units in your property.</li>
+              <li><strong>Enter occupied units</strong> - the number of currently rented units.</li>
+              <li><strong>Enter average monthly rent</strong> - the average rent per unit.</li>
+              <li><strong>Enter the time period</strong> - how many months to calculate loss over.</li>
+              <li><strong>Click "Calculate Vacancy"</strong> to see your vacancy rate and income loss.</li>
+            </ol>
+          </section>
+
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>A 10-unit property with 9 occupied units and $1,200 average rent has a 10% vacancy rate. The monthly income loss is $1,200 from the one vacant unit, totaling $14,400 over a 12-month period.</p>
+          </section>
+
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">What is a good vacancy rate for rental property?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>A vacancy rate below 5-7% is generally considered healthy. Rates above 10% may indicate pricing issues, poor location, or property condition problems.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">How is vacancy rate calculated?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>Vacancy rate is the number of vacant units divided by total units, multiplied by 100. It can also be calculated based on time: vacant days divided by total days in the period.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">How does vacancy affect rental income?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>Each vacant unit represents lost rental income. A 10% vacancy rate on a property generating $10,000/month in potential rent means $1,000/month in lost income.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">How can I reduce my vacancy rate?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>Reduce vacancy by pricing competitively, maintaining the property well, responding quickly to tenant needs, marketing effectively, and offering lease renewals to good tenants.</p></div>
+            </div>
+          </section>
+
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/advanced-real-estate-calculators/rental-expense-ratio-calculator/" class="card card-link"><h3>Rental Expense Ratio Calculator</h3><p>Calculate your expense ratio and NOI.</p></a>
+              <a href="/advanced-real-estate-calculators/real-estate-yield-calculator/" class="card card-link"><h3>Real Estate Yield Calculator</h3><p>Calculate gross and net rental yields.</p></a>
+              <a href="/advanced-real-estate-calculators/property-management-cost-calculator/" class="card card-link"><h3>Property Management Cost Calculator</h3><p>Estimate property management fees.</p></a>
+            </div>
+          </section>
+
+          <div class="disclaimer"><strong>Disclaimer:</strong> This calculator provides estimates for informational purposes only. Actual vacancy rates and income losses vary based on market conditions, property management, and location. This is not financial advice.</div>
+          <div class="ad-slot ad-slot-leaderboard"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>CalcWise</a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col"><h4>Real Estate</h4><a href="/real-estate-calculators/">All Real Estate Calculators</a><a href="/advanced-real-estate-calculators/">Advanced Real Estate</a></div>
+        <div class="footer-col"><h4>Finance</h4><a href="/finance-calculators/">All Finance Calculators</a></div>
+        <div class="footer-col"><h4>Company</h4><a href="/about.html">About</a></div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2026 CalcWise. All rights reserved.</p><div class="footer-links"><a href="/about.html">About</a></div></div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateVacancy() {
+      const totalUnits = parseInt(document.getElementById('total-units').value);
+      const occupiedUnits = parseInt(document.getElementById('occupied-units').value);
+      const avgRent = parseFloat(document.getElementById('avg-rent').value);
+      const period = parseInt(document.getElementById('time-period').value);
+
+      if (!totalUnits || isNaN(occupiedUnits) || !avgRent || !period) { alert('Please fill in all fields.'); return; }
+      if (occupiedUnits > totalUnits) { alert('Occupied units cannot exceed total units.'); return; }
+
+      const vacantUnits = totalUnits - occupiedUnits;
+      const vacancyRate = (vacantUnits / totalUnits) * 100;
+      const monthlyLoss = vacantUnits * avgRent;
+      const totalLoss = monthlyLoss * period;
+      const occupancyRate = (occupiedUnits / totalUnits) * 100;
+
+      document.getElementById('result-vacancy').textContent = vacancyRate.toFixed(1) + '%';
+      document.getElementById('result-monthly-loss').textContent = '$' + monthlyLoss.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+      document.getElementById('result-total-loss').textContent = '$' + totalLoss.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+      document.getElementById('result-occupancy').textContent = occupancyRate.toFixed(1) + '%';
+      document.getElementById('vacancy-results').classList.remove('hidden');
+    }
+
+    function resetVacancy() {
+      document.getElementById('vacancy-form').reset();
+      document.getElementById('vacancy-results').classList.add('hidden');
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Down Payment Calculator – Plan Your Home Down Payment | CalcWise</title>
+  <meta name="description" content="Calculate how much you need for a down payment, how long it will take to save, and whether you'll need PMI. Free down payment planning calculator.">
+  <link rel="canonical" href="https://calcwise.io/real-estate-calculators/down-payment-calculator/">
+  <meta property="og:title" content="Down Payment Calculator | CalcWise">
+  <meta property="og:description" content="Plan your home down payment. Calculate savings timeline, PMI costs, and loan amounts.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://calcwise.io/"},{"@type":"ListItem","position":2,"name":"Real Estate Calculators","item":"https://calcwise.io/real-estate-calculators/"},{"@type":"ListItem","position":3,"name":"Down Payment Calculator"}]}</script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How much should my down payment be?","acceptedAnswer":{"@type":"Answer","text":"20% is the traditional target to avoid PMI. However, many loan programs allow 3–10% down. FHA loans require 3.5%, VA and USDA loans may require zero down. The right amount depends on your financial situation and goals."}},{"@type":"Question","name":"What is PMI and how do I avoid it?","acceptedAnswer":{"@type":"Answer","text":"Private Mortgage Insurance (PMI) is required when your down payment is less than 20% on a conventional loan. It typically costs 0.5–1.5% of the loan annually. You can avoid it by putting 20% down, using a piggyback loan, or choosing VA/USDA loans."}},{"@type":"Question","name":"Is it better to put 20% down or invest the difference?","acceptedAnswer":{"@type":"Answer","text":"It depends on your interest rate and expected investment returns. If your mortgage rate is 7% and you expect 8% investment returns, investing may be better. But 20% down eliminates PMI and reduces your monthly payment significantly."}},{"@type":"Question","name":"Can I use gifts for a down payment?","acceptedAnswer":{"@type":"Answer","text":"Yes. Most loan programs allow gift funds for down payments, but may require documentation confirming it's a gift (not a loan) and the source of funds."}}]}</script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/" aria-current="page">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/business-calculators/">Business</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/business-calculators/">Business Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/real-estate-calculators/">Real Estate Calculators</a></li>
+          <li><span aria-current="page">Down Payment Calculator</span></li>
+        </ol>
+      </nav>
+      <div class="page-content">
+        <div class="calc-page-layout">
+          <div class="calc-main">
+            <h1>Down Payment Calculator</h1>
+            <p class="mt-4 mb-6" style="color:var(--color-gray-600);font-size:var(--text-lg);line-height:var(--leading-relaxed);">
+              Figure out exactly how much you need for a down payment, how long it will take to save it, and whether you can avoid PMI. This calculator helps you plan your path to homeownership.
+            </p>
+
+            <div class="calc-container">
+              <div class="calc-header">
+                <h2>Plan Your Down Payment</h2>
+                <p>Enter your target home price and savings details</p>
+              </div>
+              <div class="calc-body">
+                <form id="dp-form" novalidate>
+                  <div class="calc-grid calc-grid-2col">
+                    <div class="form-group">
+                      <label class="form-label" for="home-price-dp">Target Home Price</label>
+                      <div class="input-prefix">
+                        <span class="prefix">$</span>
+                        <input type="number" id="home-price-dp" name="homePrice" class="form-input" value="400000" min="50000" step="5000" required>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label" for="dp-percent">Down Payment Percentage</label>
+                      <div class="input-suffix">
+                        <input type="number" id="dp-percent" name="dpPercent" class="form-input" value="20" min="3" max="100" step="0.5" required>
+                        <span class="suffix">%</span>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label" for="current-savings">Current Savings</label>
+                      <div class="input-prefix">
+                        <span class="prefix">$</span>
+                        <input type="number" id="current-savings" name="currentSavings" class="form-input" value="30000" min="0" step="1000">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label" for="monthly-savings">Monthly Savings Amount</label>
+                      <div class="input-prefix">
+                        <span class="prefix">$</span>
+                        <input type="number" id="monthly-savings" name="monthlySavings" class="form-input" value="1500" min="100" step="100">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label" for="savings-rate">Savings Account APY</label>
+                      <div class="input-suffix">
+                        <input type="number" id="savings-rate" name="savingsRate" class="form-input" value="4.5" min="0" max="20" step="0.1">
+                        <span class="suffix">%</span>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label" for="loan-type-dp">Loan Type</label>
+                      <select id="loan-type-dp" name="loanType" class="form-select">
+                        <option value="conventional">Conventional (3–20% down)</option>
+                        <option value="fha">FHA (3.5% minimum)</option>
+                        <option value="va">VA Loan (0% down eligible)</option>
+                        <option value="usda">USDA Loan (0% down eligible)</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="calc-actions">
+                    <button type="button" class="btn btn-calculate" onclick="calculateDownPayment()">Calculate</button>
+                    <button type="reset" class="btn btn-reset" onclick="document.getElementById('dp-results').classList.add('hidden')">Reset</button>
+                  </div>
+                </form>
+                <div id="dp-results" class="calc-results hidden">
+                  <div class="result-primary">
+                    <div class="result-label">Down Payment Needed</div>
+                    <div class="result-value" id="dp-amount">$0</div>
+                  </div>
+                  <div class="result-grid">
+                    <div class="result-item">
+                      <div class="result-label">Months to Save</div>
+                      <div class="result-value" id="months-to-save" style="font-size:var(--text-2xl)">—</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Loan Amount</div>
+                      <div class="result-value" id="loan-amount-dp" style="font-size:var(--text-2xl)">$0</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Savings Gap</div>
+                      <div class="result-value" id="savings-gap" style="font-size:var(--text-2xl)">$0</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">PMI Required</div>
+                      <div class="result-value" id="pmi-required" style="font-size:var(--text-2xl)">—</div>
+                    </div>
+                  </div>
+                  <div id="pmi-details" class="alert alert-warning mt-4 hidden">
+                    <span>⚠️</span>
+                    <span id="pmi-message"></span>
+                  </div>
+                  <div id="no-pmi-message" class="alert alert-success mt-4 hidden">
+                    <span>✓</span>
+                    <span>With 20%+ down, you avoid PMI and save significantly each month.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <section class="content-section">
+              <h2>Understanding Down Payments</h2>
+              <p>Your down payment is the upfront cash you pay toward the purchase price. The remainder is financed through your mortgage. Larger down payments mean:</p>
+              <ul>
+                <li>Lower monthly mortgage payments</li>
+                <li>Less interest paid over the life of the loan</li>
+                <li>No PMI requirement (at 20%+)</li>
+                <li>More home equity from day one</li>
+                <li>Stronger offer position in competitive markets</li>
+              </ul>
+              <h3>Minimum Down Payments by Loan Type</h3>
+              <ul>
+                <li><strong>Conventional:</strong> 3% minimum (but 20% to avoid PMI)</li>
+                <li><strong>FHA:</strong> 3.5% (with 580+ credit score) or 10% (500–579)</li>
+                <li><strong>VA:</strong> 0% for qualifying veterans and active-duty service members</li>
+                <li><strong>USDA:</strong> 0% for qualifying rural and suburban properties</li>
+              </ul>
+            </section>
+
+            <section class="content-section">
+              <h2>Example Scenario</h2>
+              <p>Jessica is targeting a $400,000 home and wants to put 20% down ($80,000) to avoid PMI. She currently has $30,000 saved and can save $1,500/month in a 4.5% APY high-yield savings account.</p>
+              <ul>
+                <li>Down payment needed: $80,000</li>
+                <li>Savings gap: $50,000</li>
+                <li>With $1,500/month + 4.5% interest: approximately <strong>31 months</strong></li>
+                <li>Loan amount: $320,000</li>
+                <li>PMI avoided: saves roughly $133/month</li>
+              </ul>
+            </section>
+
+            <section class="faq-section">
+              <h2>Frequently Asked Questions</h2>
+              <div class="faq-item">
+                <button class="faq-question">How much should my down payment be? <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+                <div class="faq-answer"><p>20% is the traditional target to avoid PMI. However, many loan programs allow 3–10% down. FHA loans require 3.5%. VA and USDA loans may require zero down. The right amount depends on your financial situation, savings timeline, and goals.</p></div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question">What is PMI and how do I avoid it? <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+                <div class="faq-answer"><p>Private Mortgage Insurance protects the lender if you default. It costs 0.5–1.5% of the loan annually. You avoid it by putting 20%+ down, using a piggyback loan (80/10/10), or qualifying for VA/USDA loans. PMI is cancelable once you reach 20% equity.</p></div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question">Is 20% down always better? <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+                <div class="faq-answer"><p>Not always. In high-appreciation markets, buying sooner with less down may build more wealth than waiting to save 20%. Consider PMI costs, opportunity cost of the cash, and local market conditions when deciding.</p></div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question">Can I use gift money for a down payment? <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+                <div class="faq-answer"><p>Yes. Most loan programs allow gift funds, but lenders require a gift letter confirming the money doesn't need to be repaid. FHA allows 100% gift funds; conventional loans may require some of your own funds depending on down payment size.</p></div>
+              </div>
+            </section>
+
+            <section class="related-calculators">
+              <h2>Related Calculators</h2>
+              <div class="calculator-list">
+                <a href="/real-estate-calculators/mortgage-calculator/" class="card card-link"><div class="card-icon">🏠</div><h3>Mortgage Calculator</h3><p>See your monthly payment with your chosen down payment amount.</p></a>
+                <a href="/real-estate-calculators/affordability-calculator/" class="card card-link"><div class="card-icon">🏡</div><h3>Affordability Calculator</h3><p>Find out the maximum home price you can qualify for.</p></a>
+                <a href="/real-estate-calculators/closing-cost-calculator/" class="card card-link"><div class="card-icon">📋</div><h3>Closing Cost Calculator</h3><p>Don't forget to budget for closing costs beyond your down payment.</p></a>
+                <a href="/finance-calculators/savings-calculator/" class="card card-link"><div class="card-icon">💰</div><h3>Savings Calculator</h3><p>Model your savings growth to reach your down payment goal faster.</p></a>
+              </div>
+            </section>
+          </div>
+          <aside class="calc-page-sidebar">
+            <div class="sidebar-card">
+              <h3>Real Estate Tools</h3>
+              <a href="/real-estate-calculators/mortgage-calculator/">Mortgage Calculator</a>
+              <a href="/real-estate-calculators/affordability-calculator/">Affordability Calculator</a>
+              <a href="/real-estate-calculators/closing-cost-calculator/">Closing Cost Calculator</a>
+              <a href="/real-estate-calculators/refinance-calculator/">Refinance Calculator</a>
+              <a href="/real-estate-calculators/amortization-calculator/">Amortization Calculator</a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" style="color:white"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="white"/><path d="M8 10h16M8 16h16M8 22h10" stroke="#1B4D3E" stroke-width="2.5" stroke-linecap="round"/></svg>CalcWise</a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col"><h4>Real Estate</h4><a href="/real-estate-calculators/mortgage-calculator/">Mortgage Calculator</a><a href="/real-estate-calculators/">View All</a></div>
+        <div class="footer-col"><h4>Finance</h4><a href="/finance-calculators/savings-calculator/">Savings Calculator</a><a href="/finance-calculators/">View All</a></div>
+        <div class="footer-col"><h4>Company</h4><a href="/about.html">About</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a></div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2026 CalcWise. All rights reserved.</p><div class="footer-links"><a href="/privacy.html">Privacy</a><a href="/sitemap.xml">Sitemap</a></div></div>
+    </div>
+  </footer>
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+  function calculateDownPayment() {
+    const homePrice = parseFloat(document.getElementById('home-price-dp').value) || 0;
+    const dpPercent = parseFloat(document.getElementById('dp-percent').value) || 0;
+    const currentSavings = parseFloat(document.getElementById('current-savings').value) || 0;
+    const monthlySavings = parseFloat(document.getElementById('monthly-savings').value) || 0;
+    const savingsRate = parseFloat(document.getElementById('savings-rate').value) || 0;
+    const loanType = document.getElementById('loan-type-dp').value;
+
+    const dpAmount = homePrice * (dpPercent / 100);
+    const loanAmount = homePrice - dpAmount;
+    const gap = Math.max(0, dpAmount - currentSavings);
+
+    // Calculate months to save with compound interest
+    let months = 0;
+    if (gap > 0 && monthlySavings > 0) {
+      const monthlyRate = savingsRate / 100 / 12;
+      if (monthlyRate === 0) {
+        months = Math.ceil(gap / monthlySavings);
+      } else {
+        let balance = currentSavings;
+        while (balance < dpAmount && months < 600) {
+          balance = balance * (1 + monthlyRate) + monthlySavings;
+          months++;
+        }
+      }
+    } else if (gap <= 0) {
+      months = 0;
+    }
+
+    // PMI logic
+    const pmiRequired = dpPercent < 20 && loanType === 'conventional';
+    const pmiAnnual = pmiRequired ? loanAmount * 0.01 : 0;
+    const pmiMonthly = pmiAnnual / 12;
+
+    CalcWise.setText('dp-amount', CalcWise.formatCurrency(dpAmount));
+    CalcWise.setText('loan-amount-dp', CalcWise.formatCurrency(loanAmount));
+    CalcWise.setText('savings-gap', CalcWise.formatCurrency(gap));
+
+    const pmiEl = document.getElementById('pmi-required');
+    if (loanType === 'va' || loanType === 'usda') {
+      pmiEl.textContent = 'Not Required';
+      pmiEl.style.color = 'var(--color-success)';
+    } else if (pmiRequired) {
+      pmiEl.textContent = '~' + CalcWise.formatCurrency(pmiMonthly) + '/mo';
+      pmiEl.style.color = 'var(--color-warning)';
+    } else {
+      pmiEl.textContent = 'Not Required';
+      pmiEl.style.color = 'var(--color-success)';
+    }
+
+    if (gap <= 0) {
+      CalcWise.setText('months-to-save', 'Ready Now!');
+    } else {
+      const yr = Math.floor(months / 12);
+      const mo = months % 12;
+      CalcWise.setText('months-to-save', yr > 0 ? `${yr}y ${mo}m` : `${months} mo`);
+    }
+
+    document.getElementById('pmi-details').classList.toggle('hidden', !pmiRequired);
+    document.getElementById('no-pmi-message').classList.toggle('hidden', pmiRequired || loanType === 'va' || loanType === 'usda');
+
+    if (pmiRequired) {
+      CalcWise.setText('pmi-message', `With ${dpPercent}% down on a conventional loan, you'll pay approximately ${CalcWise.formatCurrency(pmiMonthly)}/month in PMI (~${CalcWise.formatCurrency(pmiAnnual)}/year). PMI is cancelable when you reach 20% equity.`);
+    }
+
+    CalcWise.showResults('dp-results');
+  }
+  </script>
+</body>
+</html>

@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pension Payout Calculator - Estimate Your Pension Benefits | CalcWise</title>
+  <meta name="description" content="Free pension payout calculator to estimate your monthly and annual pension based on years of service, final average salary, and multiplier. Compare lump sum vs annuity options.">
+  <meta name="keywords" content="pension payout calculator, pension benefit calculator, defined benefit pension, pension annuity, lump sum pension">
+  <link rel="canonical" href="https://calcwise.io/retirement-calculators/pension-payout-calculator/">
+
+  <meta property="og:title" content="Pension Payout Calculator - Estimate Your Pension Benefits">
+  <meta property="og:description" content="Estimate your monthly pension, annual pension, and lump sum equivalent based on your service and salary.">
+  <meta property="og:url" content="https://calcwise.io/retirement-calculators/pension-payout-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Pension Payout Calculator - Estimate Your Pension Benefits">
+  <meta name="twitter:description" content="Estimate your monthly pension, annual pension, and lump sum equivalent based on your service and salary.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Retirement Calculators", "item": "https://calcwise.io/retirement-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "Pension Payout Calculator", "item": "https://calcwise.io/retirement-calculators/pension-payout-calculator/" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How is a pension benefit calculated?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Most defined benefit pensions use the formula: Years of Service x Final Average Salary x Multiplier. For example, 25 years x $80,000 x 2% = $40,000 per year. The multiplier varies by employer, typically between 1% and 2.5%." }
+      },
+      {
+        "@type": "Question",
+        "name": "Should I take the lump sum or monthly payments?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Monthly payments provide guaranteed lifetime income. A lump sum gives you more control but requires disciplined investing. Consider your health, other income sources, and investment ability. Many financial advisors recommend the monthly annuity for most retirees." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is a survivor benefit?",
+        "acceptedAnswer": { "@type": "Answer", "text": "A survivor benefit continues paying a portion of your pension to your spouse after you pass away. Choosing a survivor benefit typically reduces your monthly payment by 5-15%, but provides financial protection for your spouse." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is final average salary?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Final average salary is typically the average of your highest 3 to 5 consecutive years of earnings. Some plans use the last 3 years before retirement. This figure is a key component of your pension calculation." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I increase my pension benefit?",
+        "acceptedAnswer": { "@type": "Answer", "text": "You can increase your pension by working more years (adding to your service credit), increasing your salary in your final years, and understanding your plan's specific rules about overtime, bonuses, or buyback of service credits." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/retirement-calculators/" aria-current="page">Retirement</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/retirement-calculators/">Retirement Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/retirement-calculators/">Retirement Calculators</a></li>
+          <li><span aria-current="page">Pension Payout Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="article-content">
+          <h1>Pension Payout Calculator</h1>
+          <p>Estimate your defined benefit pension payout based on your years of service, final average salary, and plan multiplier. Compare monthly payments with and without survivor benefits, and see the lump sum equivalent.</p>
+
+          <div class="calc-container mt-8">
+            <div class="calc-header">
+              <h2>Calculate Your Pension Payout</h2>
+              <p>Enter your pension details below</p>
+            </div>
+            <div class="calc-body">
+              <form id="pension-form" onsubmit="return false;">
+                <div class="form-group">
+                  <label class="form-label" for="years-service">Years of Service</label>
+                  <input type="number" id="years-service" class="form-input" placeholder="25" min="1" max="50" step="1" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="final-salary">Final Average Salary</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="final-salary" class="form-input" placeholder="80000" min="0" step="1000" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="multiplier">Multiplier</label>
+                  <div class="input-suffix">
+                    <input type="number" id="multiplier" class="form-input" placeholder="2.0" min="0.5" max="4" step="0.1" required>
+                    <span class="suffix">%</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="survivor-option">Survivor Benefit Option</label>
+                  <select id="survivor-option" class="form-input" required>
+                    <option value="0">No Survivor Benefit (100% payout)</option>
+                    <option value="0.05">50% Survivor Benefit (~5% reduction)</option>
+                    <option value="0.10">75% Survivor Benefit (~10% reduction)</option>
+                    <option value="0.15">100% Survivor Benefit (~15% reduction)</option>
+                  </select>
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calculatePension()">Calculate Pension</button>
+                  <button type="button" class="btn btn-reset" onclick="resetCalc()">Reset</button>
+                </div>
+              </form>
+
+              <div id="calc-results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">Monthly Pension</div>
+                  <div class="result-value" id="result-monthly"></div>
+                </div>
+                <div class="result-grid">
+                  <div class="result-item">
+                    <div class="result-label">Annual Pension</div>
+                    <div class="result-value" id="result-annual"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Lump Sum Equivalent</div>
+                    <div class="result-value" id="result-lump-sum"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <section class="content-section">
+            <h2>Pension Benefit Formula</h2>
+            <p>Most defined benefit pensions use a straightforward formula:</p>
+            <div class="formula-box">
+              <div class="formula-label">Pension Formula</div>
+              Annual Pension = Years of Service x Final Average Salary x Multiplier %
+            </div>
+            <p>The <strong>multiplier</strong> varies by employer, typically ranging from 1% to 2.5%. The <strong>lump sum equivalent</strong> is estimated using a present value calculation assuming a 5% discount rate over 20 years of payments.</p>
+          </section>
+
+          <section class="content-section">
+            <h2>How to Use This Pension Payout Calculator</h2>
+            <ol>
+              <li><strong>Enter your years of service</strong> - the total years you will have worked under the pension plan.</li>
+              <li><strong>Enter your final average salary</strong> - typically the average of your highest 3-5 years.</li>
+              <li><strong>Enter the multiplier</strong> - your plan's benefit multiplier percentage.</li>
+              <li><strong>Choose a survivor benefit option</strong> - this reduces your monthly payment but protects your spouse.</li>
+              <li><strong>Click "Calculate Pension"</strong> to see your estimated monthly and annual pension.</li>
+            </ol>
+          </section>
+
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>An employee with 25 years of service, a final average salary of $80,000, and a 2% multiplier would receive an annual pension of $40,000 ($3,333 per month). Choosing a 50% survivor benefit would reduce the monthly pension by about 5%, to approximately $3,167 per month. The lump sum equivalent would be roughly $498,500.</p>
+          </section>
+
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                How is a pension benefit calculated?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Most defined benefit pensions use the formula: Years of Service x Final Average Salary x Multiplier. For example, 25 years x $80,000 x 2% = $40,000 per year. The multiplier varies by employer, typically between 1% and 2.5%.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Should I take the lump sum or monthly payments?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Monthly payments provide guaranteed lifetime income. A lump sum gives you more control but requires disciplined investing. Consider your health, other income sources, and investment ability. Many financial advisors recommend the monthly annuity for most retirees.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What is a survivor benefit?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>A survivor benefit continues paying a portion of your pension to your spouse after you pass away. Choosing a survivor benefit typically reduces your monthly payment by 5-15%, but provides financial protection for your spouse.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What is final average salary?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Final average salary is typically the average of your highest 3 to 5 consecutive years of earnings. Some plans use the last 3 years before retirement. This figure is a key component of your pension calculation.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Can I increase my pension benefit?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>You can increase your pension by working more years (adding to your service credit), increasing your salary in your final years, and understanding your plan's specific rules about overtime, bonuses, or buyback of service credits.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/retirement-calculators/social-security-estimator/" class="card card-link">
+                <h3>Social Security Estimator</h3>
+                <p>Estimate your Social Security benefits at different claiming ages.</p>
+              </a>
+              <a href="/retirement-calculators/retirement-income-replacement-calculator/" class="card card-link">
+                <h3>Income Replacement Calculator</h3>
+                <p>Calculate your total retirement income replacement ratio.</p>
+              </a>
+              <a href="/retirement-calculators/retirement-tax-impact-calculator/" class="card card-link">
+                <h3>Retirement Tax Impact Calculator</h3>
+                <p>Estimate taxes on your pension and other retirement income.</p>
+              </a>
+            </div>
+          </section>
+
+          <div class="disclaimer">
+            <strong>Disclaimer:</strong> This calculator provides estimates for informational purposes only. Actual pension benefits depend on your specific plan provisions. Contact your pension plan administrator for exact figures. This is not financial advice.
+          </div>
+
+          <div class="ad-slot ad-slot-leaderboard"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Real Estate</h4>
+          <a href="/real-estate-calculators/">All Real Estate Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Retirement</h4>
+          <a href="/retirement-calculators/">All Retirement Calculators</a>
+          <a href="/retirement-calculators/retirement-age-calculator/">Retirement Age</a>
+          <a href="/retirement-calculators/401k-match-calculator/">401(k) Match</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculatePension() {
+      const years = parseFloat(document.getElementById('years-service').value);
+      const salary = parseFloat(document.getElementById('final-salary').value);
+      const multiplier = parseFloat(document.getElementById('multiplier').value) / 100;
+      const survivorReduction = parseFloat(document.getElementById('survivor-option').value);
+
+      if (!years || !salary || !multiplier) return;
+
+      const annualPension = years * salary * multiplier;
+      const adjustedAnnual = annualPension * (1 - survivorReduction);
+      const monthlyPension = adjustedAnnual / 12;
+
+      // Lump sum equivalent using present value of annuity (5% discount, 20 years)
+      const discountRate = 0.05;
+      const paymentYears = 20;
+      const pvFactor = (1 - Math.pow(1 + discountRate, -paymentYears)) / discountRate;
+      const lumpSum = adjustedAnnual * pvFactor;
+
+      const fmt = (v) => '$' + Math.round(v).toLocaleString('en-US');
+      document.getElementById('result-monthly').textContent = fmt(monthlyPension);
+      document.getElementById('result-annual').textContent = fmt(adjustedAnnual);
+      document.getElementById('result-lump-sum').textContent = fmt(lumpSum);
+      document.getElementById('calc-results').classList.remove('hidden');
+    }
+
+    function resetCalc() {
+      document.getElementById('pension-form').reset();
+      document.getElementById('calc-results').classList.add('hidden');
+    }
+  </script>
+</body>
+</html>

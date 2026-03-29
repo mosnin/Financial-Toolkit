@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inventory Holding Cost Calculator - Calculate Carrying Costs | CalcWise</title>
+  <meta name="description" content="Free inventory holding cost calculator. Determine your annual carrying costs including storage, insurance, and obsolescence per unit of inventory.">
+  <meta name="keywords" content="inventory holding cost, carrying cost calculator, storage cost, inventory management, warehouse cost">
+  <link rel="canonical" href="https://calcwise.io/business-operations-calculators/inventory-holding-cost-calculator/">
+
+  <meta property="og:title" content="Inventory Holding Cost Calculator - Calculate Carrying Costs">
+  <meta property="og:description" content="Free inventory holding cost calculator. Determine your annual carrying costs including storage, insurance, and obsolescence.">
+  <meta property="og:url" content="https://calcwise.io/business-operations-calculators/inventory-holding-cost-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Inventory Holding Cost Calculator - Calculate Carrying Costs">
+  <meta name="twitter:description" content="Free inventory holding cost calculator. Determine your annual carrying costs including storage, insurance, and obsolescence.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Business Operations Calculators", "item": "https://calcwise.io/business-operations-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "Inventory Holding Cost Calculator", "item": "https://calcwise.io/business-operations-calculators/inventory-holding-cost-calculator/" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is inventory holding cost?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Inventory holding cost (also called carrying cost) is the total cost of storing unsold goods. It includes warehousing, insurance, depreciation, obsolescence, and the opportunity cost of capital tied up in inventory." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is a typical holding cost percentage?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Holding costs typically range from 20% to 30% of inventory value per year. This varies by industry, product type, and storage requirements." }
+      },
+      {
+        "@type": "Question",
+        "name": "How can I reduce inventory holding costs?",
+        "acceptedAnswer": { "@type": "Answer", "text": "You can reduce holding costs by implementing just-in-time inventory, improving demand forecasting, negotiating better storage rates, reducing lead times, and regularly clearing obsolete stock." }
+      },
+      {
+        "@type": "Question",
+        "name": "What components make up holding costs?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Holding costs include storage and warehousing costs, insurance premiums, obsolescence and spoilage, opportunity cost of capital, handling and labor costs, and inventory shrinkage." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/business-operations-calculators/" aria-current="page">Business Operations</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/business-operations-calculators/">Business Operations Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/business-operations-calculators/">Business Operations Calculators</a></li>
+          <li><span aria-current="page">Inventory Holding Cost Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="article-content">
+          <h1>Inventory Holding Cost Calculator</h1>
+          <p>Calculate the true cost of holding inventory in your warehouse. Factor in storage costs, insurance, and obsolescence to understand how much your unsold goods really cost you each year.</p>
+
+          <div class="calc-container mt-8">
+            <div class="calc-header">
+              <h2>Calculate Holding Costs</h2>
+              <p>Enter your inventory details below</p>
+            </div>
+            <div class="calc-body">
+              <form id="holding-form" onsubmit="return false;">
+                <div class="form-group">
+                  <label class="form-label" for="avg-inventory">Average Inventory Value</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="avg-inventory" class="form-input" placeholder="500000" min="0" step="100" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="storage-cost">Storage Cost Rate <span class="form-hint">(% of inventory value)</span></label>
+                  <div class="input-suffix">
+                    <input type="number" id="storage-cost" class="form-input" placeholder="10" min="0" max="100" step="0.1" required>
+                    <span class="suffix">%</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="insurance-cost">Annual Insurance Cost</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="insurance-cost" class="form-input" placeholder="5000" min="0" step="100" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="obsolescence-rate">Obsolescence Rate <span class="form-hint">(% of inventory value)</span></label>
+                  <div class="input-suffix">
+                    <input type="number" id="obsolescence-rate" class="form-input" placeholder="3" min="0" max="100" step="0.1" required>
+                    <span class="suffix">%</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="total-units">Total Units in Inventory</label>
+                  <input type="number" id="total-units" class="form-input" placeholder="10000" min="1" step="1" required>
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calculateHolding()">Calculate Holding Cost</button>
+                  <button type="button" class="btn btn-reset" onclick="resetHolding()">Reset</button>
+                </div>
+              </form>
+
+              <div id="holding-results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">Annual Holding Cost</div>
+                  <div class="result-value" id="result-annual"></div>
+                </div>
+                <div class="result-grid">
+                  <div class="result-item">
+                    <div class="result-label">Cost Per Unit</div>
+                    <div class="result-value" id="result-per-unit"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Holding Cost as % of Value</div>
+                    <div class="result-value" id="result-pct"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <section class="content-section">
+            <h2>Holding Cost Formula</h2>
+            <p>The annual inventory holding cost is calculated as:</p>
+            <div class="formula-box">
+              <div class="formula-label">Holding Cost Formula</div>
+              Annual Holding Cost = (Inventory Value x Storage %) + Insurance + (Inventory Value x Obsolescence %)
+            </div>
+            <p>The <strong>cost per unit</strong> is found by dividing the total annual holding cost by the number of units in inventory.</p>
+          </section>
+
+          <section class="content-section">
+            <h2>How to Use This Calculator</h2>
+            <ol>
+              <li><strong>Enter average inventory value</strong> - the average dollar value of goods held in stock.</li>
+              <li><strong>Enter storage cost rate</strong> - warehousing and storage as a percentage of inventory value.</li>
+              <li><strong>Enter annual insurance cost</strong> - yearly insurance premium for your inventory.</li>
+              <li><strong>Enter obsolescence rate</strong> - estimated percentage of inventory that becomes obsolete annually.</li>
+              <li><strong>Enter total units</strong> - the number of units in your inventory for per-unit cost calculation.</li>
+            </ol>
+          </section>
+
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>A company holds $500,000 worth of inventory with a 10% storage cost rate, $5,000 in annual insurance, and a 3% obsolescence rate across 10,000 units. Annual holding cost = ($500,000 x 10%) + $5,000 + ($500,000 x 3%) = $50,000 + $5,000 + $15,000 = $70,000. That is $7.00 per unit per year.</p>
+          </section>
+
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">What is inventory holding cost?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>Inventory holding cost (also called carrying cost) is the total cost of storing unsold goods. It includes warehousing, insurance, depreciation, obsolescence, and the opportunity cost of capital tied up in inventory.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">What is a typical holding cost percentage?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>Holding costs typically range from 20% to 30% of inventory value per year. This varies by industry, product type, and storage requirements.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">How can I reduce inventory holding costs?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>You can reduce holding costs by implementing just-in-time inventory, improving demand forecasting, negotiating better storage rates, reducing lead times, and regularly clearing obsolete stock.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">What components make up holding costs?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>Holding costs include storage and warehousing costs, insurance premiums, obsolescence and spoilage, opportunity cost of capital, handling and labor costs, and inventory shrinkage.</p></div>
+            </div>
+          </section>
+
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/business-operations-calculators/inventory-reorder-point-calculator/" class="card card-link">
+                <h3>Inventory Reorder Point Calculator</h3>
+                <p>Determine when to reorder stock based on demand and lead time.</p>
+              </a>
+              <a href="/business-operations-calculators/cash-conversion-cycle-calculator/" class="card card-link">
+                <h3>Cash Conversion Cycle Calculator</h3>
+                <p>Measure how quickly your business converts inventory to cash.</p>
+              </a>
+              <a href="/business-operations-calculators/working-capital-calculator/" class="card card-link">
+                <h3>Working Capital Calculator</h3>
+                <p>Assess your short-term financial health and liquidity.</p>
+              </a>
+            </div>
+          </section>
+
+          <div class="disclaimer">
+            <strong>Disclaimer:</strong> This calculator provides estimates for informational purposes only. Actual holding costs may vary based on your specific warehouse, product, and operational conditions. Consult a supply chain professional for detailed analysis.
+          </div>
+
+          <div class="ad-slot ad-slot-leaderboard"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Real Estate</h4>
+          <a href="/real-estate-calculators/">All Real Estate Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Business Operations</h4>
+          <a href="/business-operations-calculators/">All Business Operations Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links"><a href="/about.html">About</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateHolding() {
+      const avgValue = parseFloat(document.getElementById('avg-inventory').value);
+      const storageRate = parseFloat(document.getElementById('storage-cost').value) / 100;
+      const insurance = parseFloat(document.getElementById('insurance-cost').value);
+      const obsolescenceRate = parseFloat(document.getElementById('obsolescence-rate').value) / 100;
+      const totalUnits = parseFloat(document.getElementById('total-units').value);
+
+      if (isNaN(avgValue) || isNaN(storageRate) || isNaN(insurance) || isNaN(obsolescenceRate) || isNaN(totalUnits)) return;
+
+      const annualCost = (avgValue * storageRate) + insurance + (avgValue * obsolescenceRate);
+      const costPerUnit = annualCost / totalUnits;
+      const holdingPct = (annualCost / avgValue) * 100;
+
+      document.getElementById('result-annual').textContent = '$' + annualCost.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2});
+      document.getElementById('result-per-unit').textContent = '$' + costPerUnit.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2});
+      document.getElementById('result-pct').textContent = holdingPct.toFixed(1) + '%';
+      document.getElementById('holding-results').classList.remove('hidden');
+    }
+
+    function resetHolding() {
+      document.getElementById('holding-form').reset();
+      document.getElementById('holding-results').classList.add('hidden');
+    }
+  </script>
+</body>
+</html>

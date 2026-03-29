@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RMD Calculator - Required Minimum Distribution Calculator | CalcWise</title>
+  <meta name="description" content="Free RMD calculator to determine your required minimum distribution from retirement accounts. Calculate your annual RMD based on account balance and age.">
+  <meta name="keywords" content="RMD calculator, required minimum distribution, IRA RMD, 401k RMD, retirement distribution calculator">
+  <link rel="canonical" href="https://calcwise.io/retirement-calculators/rmd-calculator/">
+
+  <meta property="og:title" content="RMD Calculator - Required Minimum Distribution Calculator">
+  <meta property="og:description" content="Calculate your required minimum distribution from retirement accounts based on your balance and age.">
+  <meta property="og:url" content="https://calcwise.io/retirement-calculators/rmd-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="RMD Calculator - Required Minimum Distribution Calculator">
+  <meta name="twitter:description" content="Calculate your required minimum distribution from retirement accounts based on your balance and age.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Retirement Calculators", "item": "https://calcwise.io/retirement-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "RMD Calculator", "item": "https://calcwise.io/retirement-calculators/rmd-calculator/" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is a Required Minimum Distribution?",
+        "acceptedAnswer": { "@type": "Answer", "text": "A Required Minimum Distribution (RMD) is the minimum amount you must withdraw annually from tax-deferred retirement accounts like traditional IRAs and 401(k)s starting at age 73 (under SECURE 2.0 Act). Failure to take your RMD results in a 25% penalty on the amount not withdrawn." }
+      },
+      {
+        "@type": "Question",
+        "name": "When do I have to start taking RMDs?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Under the SECURE 2.0 Act, RMDs must begin at age 73 for those born between 1951-1959, and age 75 for those born in 1960 or later. You must take your first RMD by April 1 of the year following the year you reach the applicable age." }
+      },
+      {
+        "@type": "Question",
+        "name": "How is the RMD calculated?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The RMD is calculated by dividing your account balance as of December 31 of the prior year by the IRS Uniform Lifetime Table distribution period for your age. For example, at age 75, the distribution period is 24.6, so a $500,000 balance would require an RMD of about $20,325." }
+      },
+      {
+        "@type": "Question",
+        "name": "Do Roth IRAs require RMDs?",
+        "acceptedAnswer": { "@type": "Answer", "text": "No, Roth IRAs do not require RMDs during the account owner's lifetime. However, Roth 401(k) accounts were previously subject to RMDs, but starting in 2024, they are also exempt from RMDs thanks to the SECURE 2.0 Act." }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens if I do not take my RMD?",
+        "acceptedAnswer": { "@type": "Answer", "text": "If you fail to take your full RMD by the deadline, you face a 25% excise tax on the amount not withdrawn (reduced from 50% under the SECURE 2.0 Act). This penalty can be reduced to 10% if corrected within two years." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/retirement-calculators/" aria-current="page">Retirement</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/retirement-calculators/">Retirement Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/retirement-calculators/">Retirement Calculators</a></li>
+          <li><span aria-current="page">RMD Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="article-content">
+          <h1>RMD Calculator</h1>
+          <p>Calculate your Required Minimum Distribution from traditional IRAs, 401(k)s, and other tax-deferred retirement accounts. Understand how much you must withdraw each year to avoid IRS penalties.</p>
+
+          <div class="calc-container mt-8">
+            <div class="calc-header">
+              <h2>Calculate Your RMD</h2>
+              <p>Enter your account details below</p>
+            </div>
+            <div class="calc-body">
+              <form id="rmd-form" onsubmit="return false;">
+                <div class="form-group">
+                  <label class="form-label" for="account-balance">Account Balance (Dec 31 prior year)</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="account-balance" class="form-input" placeholder="500000" min="0" step="1000" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="your-age">Your Age This Year</label>
+                  <input type="number" id="your-age" class="form-input" placeholder="75" min="72" max="120" step="1" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="account-type">Account Type</label>
+                  <select id="account-type" class="form-input" required>
+                    <option value="traditional-ira">Traditional IRA</option>
+                    <option value="401k">401(k)</option>
+                    <option value="403b">403(b)</option>
+                    <option value="sep-ira">SEP IRA</option>
+                    <option value="simple-ira">SIMPLE IRA</option>
+                  </select>
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calculateRMD()">Calculate RMD</button>
+                  <button type="button" class="btn btn-reset" onclick="resetCalc()">Reset</button>
+                </div>
+              </form>
+
+              <div id="calc-results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">Required Minimum Distribution</div>
+                  <div class="result-value" id="result-rmd"></div>
+                </div>
+                <div class="result-grid">
+                  <div class="result-item">
+                    <div class="result-label">Monthly Equivalent</div>
+                    <div class="result-value" id="result-monthly"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Distribution Period</div>
+                    <div class="result-value" id="result-period"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <section class="content-section">
+            <h2>RMD Formula</h2>
+            <p>The IRS requires you to divide your account balance by a life expectancy factor:</p>
+            <div class="formula-box">
+              <div class="formula-label">RMD Formula</div>
+              RMD = Account Balance / Distribution Period (from IRS Uniform Lifetime Table)
+            </div>
+            <p>The <strong>distribution period</strong> decreases as you age, meaning you must withdraw a larger percentage each year. The IRS Uniform Lifetime Table provides the factor for each age starting at 72.</p>
+          </section>
+
+          <section class="content-section">
+            <h2>How to Use This RMD Calculator</h2>
+            <ol>
+              <li><strong>Enter your account balance</strong> - the total value as of December 31 of the previous year.</li>
+              <li><strong>Enter your age</strong> - your age during the current distribution year.</li>
+              <li><strong>Select the account type</strong> - the type of retirement account.</li>
+              <li><strong>Click "Calculate RMD"</strong> to see your required minimum distribution amount.</li>
+            </ol>
+          </section>
+
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>A 75-year-old with a traditional IRA balance of $500,000 as of December 31 would use a distribution period of 24.6 years. Their RMD would be $500,000 / 24.6 = $20,325 for the year, or approximately $1,694 per month.</p>
+          </section>
+
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What is a Required Minimum Distribution?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>A Required Minimum Distribution (RMD) is the minimum amount you must withdraw annually from tax-deferred retirement accounts like traditional IRAs and 401(k)s starting at age 73. Failure to take your RMD results in a 25% penalty on the amount not withdrawn.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                When do I have to start taking RMDs?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Under the SECURE 2.0 Act, RMDs must begin at age 73 for those born between 1951-1959, and age 75 for those born in 1960 or later. You must take your first RMD by April 1 of the year following the year you reach the applicable age.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                How is the RMD calculated?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>The RMD is calculated by dividing your account balance as of December 31 of the prior year by the IRS Uniform Lifetime Table distribution period for your age.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Do Roth IRAs require RMDs?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>No, Roth IRAs do not require RMDs during the account owner's lifetime. Roth 401(k) accounts are also now exempt from RMDs starting in 2024 thanks to the SECURE 2.0 Act.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What happens if I do not take my RMD?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>If you fail to take your full RMD by the deadline, you face a 25% excise tax on the amount not withdrawn. This penalty can be reduced to 10% if corrected within two years.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/retirement-calculators/retirement-withdrawal-rate-calculator/" class="card card-link">
+                <h3>Withdrawal Rate Calculator</h3>
+                <p>Determine a sustainable withdrawal rate for your retirement portfolio.</p>
+              </a>
+              <a href="/retirement-calculators/retirement-tax-impact-calculator/" class="card card-link">
+                <h3>Retirement Tax Impact Calculator</h3>
+                <p>Estimate taxes on your retirement withdrawals and income.</p>
+              </a>
+              <a href="/retirement-calculators/retirement-contribution-limit-calculator/" class="card card-link">
+                <h3>Contribution Limit Calculator</h3>
+                <p>Find out the maximum you can contribute to retirement accounts.</p>
+              </a>
+            </div>
+          </section>
+
+          <div class="disclaimer">
+            <strong>Disclaimer:</strong> This calculator provides estimates based on the IRS Uniform Lifetime Table for informational purposes only. Actual RMD amounts may differ based on your specific situation. Consult a tax advisor for personalized guidance. This is not financial or tax advice.
+          </div>
+
+          <div class="ad-slot ad-slot-leaderboard"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Real Estate</h4>
+          <a href="/real-estate-calculators/">All Real Estate Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Retirement</h4>
+          <a href="/retirement-calculators/">All Retirement Calculators</a>
+          <a href="/retirement-calculators/retirement-age-calculator/">Retirement Age</a>
+          <a href="/retirement-calculators/401k-match-calculator/">401(k) Match</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    // IRS Uniform Lifetime Table (2024)
+    const uniformTable = {
+      72: 27.4, 73: 26.5, 74: 25.5, 75: 24.6, 76: 23.7, 77: 22.9, 78: 22.0, 79: 21.1,
+      80: 20.2, 81: 19.4, 82: 18.5, 83: 17.7, 84: 16.8, 85: 16.0, 86: 15.2, 87: 14.4,
+      88: 13.7, 89: 12.9, 90: 12.2, 91: 11.5, 92: 10.8, 93: 10.1, 94: 9.5, 95: 8.9,
+      96: 8.4, 97: 7.8, 98: 7.3, 99: 6.8, 100: 6.4, 101: 6.0, 102: 5.6, 103: 5.2,
+      104: 4.9, 105: 4.6, 106: 4.3, 107: 4.1, 108: 3.9, 109: 3.7, 110: 3.5, 111: 3.4,
+      112: 3.3, 113: 3.1, 114: 3.0, 115: 2.9, 116: 2.8, 117: 2.7, 118: 2.5, 119: 2.3, 120: 2.0
+    };
+
+    function calculateRMD() {
+      const balance = parseFloat(document.getElementById('account-balance').value);
+      const age = parseInt(document.getElementById('your-age').value);
+
+      if (!balance || !age) return;
+
+      const period = uniformTable[age] || uniformTable[Math.min(age, 120)];
+      if (!period) return;
+
+      const rmd = balance / period;
+      const monthly = rmd / 12;
+
+      const fmt = (v) => '$' + Math.round(v).toLocaleString('en-US');
+      document.getElementById('result-rmd').textContent = fmt(rmd);
+      document.getElementById('result-monthly').textContent = fmt(monthly) + '/mo';
+      document.getElementById('result-period').textContent = period + ' years';
+      document.getElementById('calc-results').classList.remove('hidden');
+    }
+
+    function resetCalc() {
+      document.getElementById('rmd-form').reset();
+      document.getElementById('calc-results').classList.add('hidden');
+    }
+  </script>
+</body>
+</html>

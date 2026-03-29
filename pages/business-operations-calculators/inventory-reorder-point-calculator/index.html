@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inventory Reorder Point Calculator - Optimize Stock Levels | CalcWise</title>
+  <meta name="description" content="Free inventory reorder point calculator. Determine when to reorder stock based on daily demand, lead time, and safety stock to avoid stockouts.">
+  <meta name="keywords" content="reorder point calculator, inventory management, safety stock, lead time demand, reorder quantity">
+  <link rel="canonical" href="https://calcwise.io/business-operations-calculators/inventory-reorder-point-calculator/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Inventory Reorder Point Calculator - Optimize Stock Levels">
+  <meta property="og:description" content="Free inventory reorder point calculator. Determine when to reorder stock based on daily demand, lead time, and safety stock.">
+  <meta property="og:url" content="https://calcwise.io/business-operations-calculators/inventory-reorder-point-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Inventory Reorder Point Calculator - Optimize Stock Levels">
+  <meta name="twitter:description" content="Free inventory reorder point calculator. Determine when to reorder stock based on daily demand, lead time, and safety stock.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <!-- BreadcrumbList Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Business Operations Calculators", "item": "https://calcwise.io/business-operations-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "Inventory Reorder Point Calculator", "item": "https://calcwise.io/business-operations-calculators/inventory-reorder-point-calculator/" }
+    ]
+  }
+  </script>
+
+  <!-- FAQPage Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is a reorder point?",
+        "acceptedAnswer": { "@type": "Answer", "text": "A reorder point is the inventory level at which a new order should be placed to replenish stock before it runs out. It accounts for lead time demand and safety stock to prevent stockouts." }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I determine my safety stock level?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Safety stock is extra inventory kept to guard against variability in demand or supply. It is typically calculated based on demand variability, lead time variability, and your desired service level." }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens if I set the reorder point too low?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Setting the reorder point too low increases the risk of stockouts, which can lead to lost sales, backorders, and dissatisfied customers." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is lead time in inventory management?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Lead time is the total time from placing an order with a supplier to receiving the goods. It includes order processing, manufacturing, shipping, and receiving time." }
+      },
+      {
+        "@type": "Question",
+        "name": "How often should I recalculate my reorder point?",
+        "acceptedAnswer": { "@type": "Answer", "text": "You should recalculate reorder points whenever there are significant changes in demand patterns, supplier lead times, or business conditions. Many businesses review them quarterly or monthly." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/business-operations-calculators/" aria-current="page">Business Operations</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/business-operations-calculators/">Business Operations Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/business-operations-calculators/">Business Operations Calculators</a></li>
+          <li><span aria-current="page">Inventory Reorder Point Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="article-content">
+          <h1>Inventory Reorder Point Calculator</h1>
+          <p>Calculate the optimal reorder point for your inventory to ensure you never run out of stock. This calculator factors in daily demand, supplier lead time, and safety stock to tell you exactly when to place your next order.</p>
+
+          <div class="calc-container mt-8">
+            <div class="calc-header">
+              <h2>Calculate Reorder Point</h2>
+              <p>Enter your inventory parameters below</p>
+            </div>
+            <div class="calc-body">
+              <form id="rop-form" onsubmit="return false;">
+                <div class="form-group">
+                  <label class="form-label" for="daily-demand">Average Daily Demand <span class="form-hint">(units per day)</span></label>
+                  <input type="number" id="daily-demand" class="form-input" placeholder="50" min="0" step="1" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="lead-time">Lead Time <span class="form-hint">(days)</span></label>
+                  <input type="number" id="lead-time" class="form-input" placeholder="7" min="0" step="1" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="safety-stock">Safety Stock <span class="form-hint">(units)</span></label>
+                  <input type="number" id="safety-stock" class="form-input" placeholder="100" min="0" step="1" required>
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calculateROP()">Calculate Reorder Point</button>
+                  <button type="button" class="btn btn-reset" onclick="resetROP()">Reset</button>
+                </div>
+              </form>
+
+              <div id="rop-results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">Reorder Point</div>
+                  <div class="result-value" id="result-rop"></div>
+                </div>
+                <div class="result-grid">
+                  <div class="result-item">
+                    <div class="result-label">Lead Time Demand</div>
+                    <div class="result-value" id="result-ltd"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Reorder Quantity (EOQ Estimate)</div>
+                    <div class="result-value" id="result-roq"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Formula Section -->
+          <section class="content-section">
+            <h2>Reorder Point Formula</h2>
+            <p>The reorder point is calculated using the following formula:</p>
+            <div class="formula-box">
+              <div class="formula-label">Reorder Point Formula</div>
+              ROP = (Daily Demand x Lead Time) + Safety Stock
+            </div>
+            <p>Where <strong>Daily Demand</strong> is the average number of units sold per day, <strong>Lead Time</strong> is the number of days between placing and receiving an order, and <strong>Safety Stock</strong> is the buffer inventory to protect against variability.</p>
+          </section>
+
+          <!-- How to Use -->
+          <section class="content-section">
+            <h2>How to Use This Calculator</h2>
+            <ol>
+              <li><strong>Enter average daily demand</strong> - the typical number of units you sell or use each day.</li>
+              <li><strong>Enter lead time</strong> - how many days it takes from ordering to receiving inventory.</li>
+              <li><strong>Enter safety stock</strong> - extra units you want to keep as a buffer.</li>
+              <li><strong>Click "Calculate Reorder Point"</strong> to see when you should place your next order.</li>
+            </ol>
+          </section>
+
+          <!-- Example Scenario -->
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>A retailer sells an average of 50 units per day. Their supplier takes 7 days to deliver, and they maintain a safety stock of 100 units. The reorder point would be (50 x 7) + 100 = 450 units. When inventory drops to 450 units, it is time to reorder.</p>
+          </section>
+
+          <!-- FAQ Section -->
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What is a reorder point?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>A reorder point is the inventory level at which a new order should be placed to replenish stock before it runs out. It accounts for lead time demand and safety stock to prevent stockouts.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                How do I determine my safety stock level?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Safety stock is extra inventory kept to guard against variability in demand or supply. It is typically calculated based on demand variability, lead time variability, and your desired service level.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What happens if I set the reorder point too low?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Setting the reorder point too low increases the risk of stockouts, which can lead to lost sales, backorders, and dissatisfied customers.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What is lead time in inventory management?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Lead time is the total time from placing an order with a supplier to receiving the goods. It includes order processing, manufacturing, shipping, and receiving time.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                How often should I recalculate my reorder point?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>You should recalculate reorder points whenever there are significant changes in demand patterns, supplier lead times, or business conditions. Many businesses review them quarterly or monthly.</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Related Calculators -->
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/business-operations-calculators/inventory-holding-cost-calculator/" class="card card-link">
+                <h3>Inventory Holding Cost Calculator</h3>
+                <p>Calculate the total cost of holding inventory including storage, insurance, and obsolescence.</p>
+              </a>
+              <a href="/business-operations-calculators/working-capital-calculator/" class="card card-link">
+                <h3>Working Capital Calculator</h3>
+                <p>Determine your working capital and current ratio for operational health.</p>
+              </a>
+              <a href="/business-operations-calculators/cash-conversion-cycle-calculator/" class="card card-link">
+                <h3>Cash Conversion Cycle Calculator</h3>
+                <p>Measure how quickly your business converts inventory to cash.</p>
+              </a>
+            </div>
+          </section>
+
+          <!-- Disclaimer -->
+          <div class="disclaimer">
+            <strong>Disclaimer:</strong> This calculator provides estimates for informational purposes only. Actual reorder points may vary based on demand variability, supplier reliability, and other factors. This is not professional supply chain advice. Consult a qualified operations professional for your specific situation.
+          </div>
+
+          <!-- Ad Slot -->
+          <div class="ad-slot ad-slot-leaderboard"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Real Estate</h4>
+          <a href="/real-estate-calculators/">All Real Estate Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Business Operations</h4>
+          <a href="/business-operations-calculators/">All Business Operations Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateROP() {
+      const demand = parseFloat(document.getElementById('daily-demand').value);
+      const leadTime = parseFloat(document.getElementById('lead-time').value);
+      const safetyStock = parseFloat(document.getElementById('safety-stock').value);
+
+      if (isNaN(demand) || isNaN(leadTime) || isNaN(safetyStock)) return;
+
+      const leadTimeDemand = demand * leadTime;
+      const rop = leadTimeDemand + safetyStock;
+      const roq = Math.round(demand * leadTime * 2);
+
+      document.getElementById('result-rop').textContent = Math.round(rop).toLocaleString() + ' units';
+      document.getElementById('result-ltd').textContent = Math.round(leadTimeDemand).toLocaleString() + ' units';
+      document.getElementById('result-roq').textContent = roq.toLocaleString() + ' units';
+      document.getElementById('rop-results').classList.remove('hidden');
+    }
+
+    function resetROP() {
+      document.getElementById('rop-form').reset();
+      document.getElementById('rop-results').classList.add('hidden');
+    }
+  </script>
+</body>
+</html>

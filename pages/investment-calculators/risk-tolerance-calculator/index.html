@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Risk Tolerance Calculator | CalcWise</title>
+  <meta name="description" content="Determine your investment risk tolerance profile and get recommended portfolio allocations. Free risk assessment questionnaire with personalized results.">
+  <meta name="keywords" content="risk tolerance calculator, investment risk assessment, risk profile, portfolio recommendation, risk questionnaire">
+  <link rel="canonical" href="https://calcwise.io/investment-calculators/risk-tolerance-calculator/">
+
+  <meta property="og:title" content="Risk Tolerance Calculator | CalcWise">
+  <meta property="og:description" content="Determine your investment risk tolerance profile and get recommended portfolio allocations.">
+  <meta property="og:url" content="https://calcwise.io/investment-calculators/risk-tolerance-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Risk Tolerance Calculator | CalcWise">
+  <meta name="twitter:description" content="Determine your investment risk tolerance profile and get recommended portfolio allocations.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Investment Calculators", "item": "https://calcwise.io/investment-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "Risk Tolerance Calculator", "item": "https://calcwise.io/investment-calculators/risk-tolerance-calculator/" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is risk tolerance?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Risk tolerance is your ability and willingness to endure fluctuations in the value of your investments. It is influenced by your financial situation, time horizon, investment goals, and emotional comfort with market volatility." }
+      },
+      {
+        "@type": "Question",
+        "name": "How does age affect risk tolerance?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Generally, younger investors can take on more risk because they have more time to recover from market downturns. As you approach retirement, a more conservative allocation helps protect your savings." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can my risk tolerance change over time?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes, risk tolerance often changes as your financial situation, goals, and life circumstances evolve. It is a good idea to reassess your risk tolerance every few years or after major life events." }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the different risk profiles?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Common risk profiles include Conservative (low risk, stable returns), Moderately Conservative, Moderate (balanced approach), Moderately Aggressive, and Aggressive (high risk, higher potential returns)." }
+      },
+      {
+        "@type": "Question",
+        "name": "Should I invest based solely on my risk tolerance?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Risk tolerance is one important factor, but you should also consider your financial goals, time horizon, income stability, and overall financial plan. A financial advisor can help you develop a comprehensive strategy." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/investment-calculators/" aria-current="page">Investments</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/investment-calculators/">Investment Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/investment-calculators/">Investment Calculators</a></li>
+          <li><span aria-current="page">Risk Tolerance Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="article-content">
+          <h1>Risk Tolerance Calculator</h1>
+          <p>Answer a few questions about your financial situation, time horizon, and comfort with market volatility to determine your risk profile and get a recommended portfolio allocation tailored to your needs.</p>
+
+          <div class="calc-container mt-8">
+            <div class="calc-header">
+              <h2>Assess Your Risk Tolerance</h2>
+              <p>Answer the questions below to determine your risk profile</p>
+            </div>
+            <div class="calc-body">
+              <form id="risk-form" onsubmit="return false;">
+                <div class="form-group">
+                  <label class="form-label" for="age">Your Age</label>
+                  <input type="number" id="age" class="form-input" placeholder="35" min="18" max="100" step="1" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="income">Annual Income</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="income" class="form-input" placeholder="75000" min="0" step="1000" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="time-horizon">Investment Time Horizon <span class="form-hint">(years)</span></label>
+                  <input type="number" id="time-horizon" class="form-input" placeholder="20" min="1" max="50" step="1" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="q1">If your portfolio dropped 20% in one month, you would:</label>
+                  <select id="q1" class="form-input" required>
+                    <option value="">Select an answer</option>
+                    <option value="1">Sell everything immediately</option>
+                    <option value="2">Sell some investments</option>
+                    <option value="3">Hold and wait for recovery</option>
+                    <option value="4">Buy a little more</option>
+                    <option value="5">Buy aggressively at lower prices</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="q2">How important is stability of returns vs. growth potential?</label>
+                  <select id="q2" class="form-input" required>
+                    <option value="">Select an answer</option>
+                    <option value="1">Stability is most important</option>
+                    <option value="2">Mostly stability with some growth</option>
+                    <option value="3">Equal balance of both</option>
+                    <option value="4">Mostly growth with some stability</option>
+                    <option value="5">Growth is most important</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="q3">How comfortable are you with investments that can fluctuate widely?</label>
+                  <select id="q3" class="form-input" required>
+                    <option value="">Select an answer</option>
+                    <option value="1">Very uncomfortable</option>
+                    <option value="2">Somewhat uncomfortable</option>
+                    <option value="3">Neutral</option>
+                    <option value="4">Somewhat comfortable</option>
+                    <option value="5">Very comfortable</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="q4">How would you describe your investment knowledge?</label>
+                  <select id="q4" class="form-input" required>
+                    <option value="">Select an answer</option>
+                    <option value="1">Beginner</option>
+                    <option value="2">Basic understanding</option>
+                    <option value="3">Moderate knowledge</option>
+                    <option value="4">Advanced knowledge</option>
+                    <option value="5">Expert level</option>
+                  </select>
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calculateRisk()">Get Risk Profile</button>
+                  <button type="button" class="btn btn-reset" onclick="resetRisk()">Reset</button>
+                </div>
+              </form>
+
+              <div id="risk-results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">Your Risk Profile</div>
+                  <div class="result-value" id="result-profile"></div>
+                </div>
+                <div class="result-grid">
+                  <div class="result-item">
+                    <div class="result-label">Risk Score</div>
+                    <div class="result-value" id="result-score"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Recommended Stocks</div>
+                    <div class="result-value" id="result-rec-stocks"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Recommended Bonds</div>
+                    <div class="result-value" id="result-rec-bonds"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Recommended Cash</div>
+                    <div class="result-value" id="result-rec-cash"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <section class="content-section">
+            <h2>How Risk Tolerance is Assessed</h2>
+            <p>Your risk tolerance score is determined by combining several factors:</p>
+            <div class="formula-box">
+              <div class="formula-label">Risk Score Calculation</div>
+              Score = Age Factor + Time Horizon Factor + Comfort Questions Average (weighted)
+            </div>
+            <p>The score maps to a risk profile (Conservative to Aggressive) that suggests an appropriate asset allocation split between stocks, bonds, and cash.</p>
+          </section>
+
+          <section class="content-section">
+            <h2>How to Use This Risk Tolerance Calculator</h2>
+            <ol>
+              <li><strong>Enter your age</strong> - younger investors generally have higher risk capacity.</li>
+              <li><strong>Enter your annual income</strong> - higher income can support more risk.</li>
+              <li><strong>Enter your time horizon</strong> - how many years until you need the money.</li>
+              <li><strong>Answer each question honestly</strong> - your emotional comfort matters.</li>
+              <li><strong>Click "Get Risk Profile"</strong> to see your assessment and recommended allocation.</li>
+            </ol>
+          </section>
+
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>A 35-year-old with a $75,000 income, 20-year time horizon, and moderate comfort with volatility might receive a "Moderate" risk profile with a recommended allocation of 60% stocks, 30% bonds, and 10% cash.</p>
+          </section>
+
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What is risk tolerance?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Risk tolerance is your ability and willingness to endure fluctuations in the value of your investments. It is influenced by your financial situation, time horizon, investment goals, and emotional comfort with market volatility.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                How does age affect risk tolerance?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Generally, younger investors can take on more risk because they have more time to recover from market downturns. As you approach retirement, a more conservative allocation helps protect your savings.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Can my risk tolerance change over time?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Yes, risk tolerance often changes as your financial situation, goals, and life circumstances evolve. It is a good idea to reassess your risk tolerance every few years or after major life events.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What are the different risk profiles?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Common risk profiles include Conservative (low risk, stable returns), Moderately Conservative, Moderate (balanced approach), Moderately Aggressive, and Aggressive (high risk, higher potential returns).</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Should I invest based solely on my risk tolerance?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Risk tolerance is one important factor, but you should also consider your financial goals, time horizon, income stability, and overall financial plan. A financial advisor can help you develop a comprehensive strategy.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/investment-calculators/portfolio-allocation-calculator/" class="card card-link">
+                <h3>Portfolio Allocation Calculator</h3>
+                <p>Calculate dollar amounts for your target allocation.</p>
+              </a>
+              <a href="/investment-calculators/asset-allocation-rebalancing-calculator/" class="card card-link">
+                <h3>Asset Allocation Rebalancing Calculator</h3>
+                <p>Determine trades needed to rebalance your portfolio.</p>
+              </a>
+              <a href="/investment-calculators/portfolio-volatility-calculator/" class="card card-link">
+                <h3>Portfolio Volatility Calculator</h3>
+                <p>Estimate your portfolio's expected return and risk.</p>
+              </a>
+              <a href="/investment-calculators/investment-diversification-calculator/" class="card card-link">
+                <h3>Investment Diversification Calculator</h3>
+                <p>Measure how well diversified your portfolio is.</p>
+              </a>
+            </div>
+          </section>
+
+          <div class="disclaimer">
+            <strong>Disclaimer:</strong> This calculator provides a general risk assessment for informational purposes only. It should not replace professional financial advice. Your actual risk tolerance may differ based on factors not captured here. Consult a qualified financial professional before making investment decisions.
+          </div>
+
+          <div class="ad-slot ad-slot-leaderboard"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Real Estate</h4>
+          <a href="/real-estate-calculators/">All Real Estate Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Investments</h4>
+          <a href="/investment-calculators/">All Investment Calculators</a>
+          <a href="/investment-calculators/dividend-yield-calculator/">Dividend Yield</a>
+          <a href="/investment-calculators/cagr-calculator/">CAGR Calculator</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateRisk() {
+      const age = parseInt(document.getElementById('age').value);
+      const income = parseFloat(document.getElementById('income').value);
+      const horizon = parseInt(document.getElementById('time-horizon').value);
+      const q1 = parseInt(document.getElementById('q1').value);
+      const q2 = parseInt(document.getElementById('q2').value);
+      const q3 = parseInt(document.getElementById('q3').value);
+      const q4 = parseInt(document.getElementById('q4').value);
+
+      if (!age || !income || !horizon || !q1 || !q2 || !q3 || !q4) {
+        alert('Please fill in all fields and answer all questions.');
+        return;
+      }
+
+      // Age factor: younger = higher score (1-5)
+      let ageFactor = age < 30 ? 5 : age < 40 ? 4 : age < 50 ? 3 : age < 60 ? 2 : 1;
+
+      // Time horizon factor (1-5)
+      let horizonFactor = horizon >= 20 ? 5 : horizon >= 15 ? 4 : horizon >= 10 ? 3 : horizon >= 5 ? 2 : 1;
+
+      // Average of questionnaire answers
+      const qAvg = (q1 + q2 + q3 + q4) / 4;
+
+      // Weighted score: 25% age, 25% horizon, 50% questionnaire
+      const score = (ageFactor * 0.25 + horizonFactor * 0.25 + qAvg * 0.50);
+
+      let profile, stocks, bonds, cash;
+      if (score >= 4.2) {
+        profile = 'Aggressive';
+        stocks = 85; bonds = 10; cash = 5;
+      } else if (score >= 3.4) {
+        profile = 'Moderately Aggressive';
+        stocks = 70; bonds = 20; cash = 10;
+      } else if (score >= 2.6) {
+        profile = 'Moderate';
+        stocks = 60; bonds = 30; cash = 10;
+      } else if (score >= 1.8) {
+        profile = 'Moderately Conservative';
+        stocks = 40; bonds = 40; cash = 20;
+      } else {
+        profile = 'Conservative';
+        stocks = 20; bonds = 50; cash = 30;
+      }
+
+      document.getElementById('result-profile').textContent = profile;
+      document.getElementById('result-score').textContent = score.toFixed(1) + ' / 5.0';
+      document.getElementById('result-rec-stocks').textContent = stocks + '%';
+      document.getElementById('result-rec-bonds').textContent = bonds + '%';
+      document.getElementById('result-rec-cash').textContent = cash + '%';
+      document.getElementById('risk-results').classList.remove('hidden');
+    }
+
+    function resetRisk() {
+      document.getElementById('risk-form').reset();
+      document.getElementById('risk-results').classList.add('hidden');
+    }
+  </script>
+</body>
+</html>

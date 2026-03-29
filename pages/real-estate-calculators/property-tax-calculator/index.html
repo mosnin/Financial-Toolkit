@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Property Tax Calculator – Estimate Annual Property Taxes | CalcWise</title>
+  <meta name="description" content="Calculate your annual property tax based on home value and local tax rate. See monthly tax cost and effective tax rate with our free property tax calculator.">
+  <link rel="canonical" href="https://calcwise.io/real-estate-calculators/property-tax-calculator/">
+  <meta property="og:title" content="Property Tax Calculator | CalcWise">
+  <meta property="og:description" content="Estimate your annual property tax instantly. Free and easy to use.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://calcwise.io/"},{"@type":"ListItem","position":2,"name":"Real Estate Calculators","item":"https://calcwise.io/real-estate-calculators/"},{"@type":"ListItem","position":3,"name":"Property Tax Calculator"}]}</script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How is property tax calculated?","acceptedAnswer":{"@type":"Answer","text":"Property tax is calculated by multiplying your property's assessed value by the local mill rate (tax rate). For example, a $400,000 home with a 1.25% tax rate has an annual tax of $5,000."}},{"@type":"Question","name":"What is the average property tax rate in the US?","acceptedAnswer":{"@type":"Answer","text":"The average effective property tax rate in the US is about 1.1%. Rates vary widely—from 0.27% in Hawaii to over 2.4% in New Jersey."}},{"@type":"Question","name":"Can I lower my property tax?","acceptedAnswer":{"@type":"Answer","text":"Yes. You can appeal your assessment if you believe your home is overvalued, and many states offer exemptions for homeowners, seniors, veterans, and disabled individuals."}},{"@type":"Question","name":"Is property tax included in my mortgage payment?","acceptedAnswer":{"@type":"Answer","text":"Often yes. Most lenders collect property taxes monthly as part of your PITI payment and hold them in an escrow account, paying the tax bill when it's due."}}]}</script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/" aria-current="page">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/business-calculators/">Business</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/business-calculators/">Business Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/real-estate-calculators/">Real Estate Calculators</a></li>
+          <li><span aria-current="page">Property Tax Calculator</span></li>
+        </ol>
+      </nav>
+      <div class="page-content">
+        <div class="calc-page-layout">
+          <div class="calc-main">
+            <h1>Property Tax Calculator</h1>
+            <p class="mt-4 mb-6" style="color:var(--color-gray-600);font-size:var(--text-lg);line-height:var(--leading-relaxed);">
+              Estimate your annual and monthly property taxes based on your home's assessed value and your local tax rate. Use this to budget accurately for homeownership costs.
+            </p>
+            <div class="calc-container">
+              <div class="calc-header">
+                <h2>Calculate Property Tax</h2>
+                <p>Enter your home value and local tax rate</p>
+              </div>
+              <div class="calc-body">
+                <form id="prop-tax-form" novalidate>
+                  <div class="calc-grid calc-grid-2col">
+                    <div class="form-group">
+                      <label class="form-label" for="home-value">Assessed Home Value</label>
+                      <div class="input-prefix">
+                        <span class="prefix">$</span>
+                        <input type="number" id="home-value" name="homeValue" class="form-input" value="400000" min="10000" step="1000" required>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label" for="tax-rate">Annual Property Tax Rate <span class="form-hint">(%)</span></label>
+                      <div class="input-suffix">
+                        <input type="number" id="tax-rate" name="taxRate" class="form-input" value="1.25" min="0.1" max="5" step="0.01" required>
+                        <span class="suffix">%</span>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label" for="assessment-ratio">Assessment Ratio <span class="form-hint">(%)</span></label>
+                      <div class="input-suffix">
+                        <input type="number" id="assessment-ratio" name="assessmentRatio" class="form-input" value="100" min="10" max="100" step="1">
+                        <span class="suffix">%</span>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label" for="exemption">Homestead Exemption</label>
+                      <div class="input-prefix">
+                        <span class="prefix">$</span>
+                        <input type="number" id="exemption" name="exemption" class="form-input" value="0" min="0" step="500">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="calc-actions">
+                    <button type="button" class="btn btn-calculate" onclick="calculatePropertyTax()">Calculate Property Tax</button>
+                    <button type="reset" class="btn btn-reset" onclick="document.getElementById('prop-tax-results').classList.add('hidden')">Reset</button>
+                  </div>
+                </form>
+                <div id="prop-tax-results" class="calc-results hidden">
+                  <div class="result-primary">
+                    <div class="result-label">Annual Property Tax</div>
+                    <div class="result-value" id="annual-tax-result">$0</div>
+                  </div>
+                  <div class="result-grid">
+                    <div class="result-item">
+                      <div class="result-label">Monthly Tax</div>
+                      <div class="result-value" id="monthly-tax" style="font-size:var(--text-2xl)">$0</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Effective Rate</div>
+                      <div class="result-value" id="effective-rate" style="font-size:var(--text-2xl)">0%</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Taxable Value</div>
+                      <div class="result-value" id="taxable-value" style="font-size:var(--text-2xl)">$0</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Daily Tax Cost</div>
+                      <div class="result-value" id="daily-tax" style="font-size:var(--text-2xl)">$0</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <section class="content-section">
+              <h2>Property Tax Formula</h2>
+              <p>Property taxes are calculated using assessed value, the assessment ratio, and the mill rate:</p>
+              <div class="formula-box">
+                <div class="formula-label">Formula</div>
+                Assessed Value = Market Value × Assessment Ratio<br>
+                Taxable Value = Assessed Value − Exemptions<br>
+                Annual Tax = Taxable Value × Tax Rate
+              </div>
+              <p>Many jurisdictions don't tax 100% of market value — they apply an assessment ratio (often 70–100%). If your state has a 90% assessment ratio on a $400,000 home, the assessed value is $360,000.</p>
+            </section>
+
+            <section class="content-section">
+              <h2>Example</h2>
+              <p>A home worth $400,000 in a county with a 1.25% tax rate and a $25,000 homestead exemption:</p>
+              <ul>
+                <li>Taxable value: $400,000 − $25,000 = $375,000</li>
+                <li>Annual tax: $375,000 × 1.25% = <strong>$4,687.50</strong></li>
+                <li>Monthly: $390.63</li>
+              </ul>
+            </section>
+
+            <section class="faq-section">
+              <h2>Frequently Asked Questions</h2>
+              <div class="faq-item">
+                <button class="faq-question">How is property tax calculated? <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+                <div class="faq-answer"><p>Property tax equals your home's assessed value multiplied by the local tax rate (mill rate). Assessed value may be 70–100% of market value depending on your jurisdiction, and exemptions reduce the taxable portion.</p></div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question">What is the average property tax rate? <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+                <div class="faq-answer"><p>The average effective property tax rate in the US is about 1.1%. Rates range from 0.27% in Hawaii to over 2.4% in New Jersey. Local rates within states also vary significantly by county and city.</p></div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question">Can I lower my property tax? <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+                <div class="faq-answer"><p>Yes. You can appeal your property's assessed value if you believe it's too high. Many jurisdictions also offer exemptions for primary residences (homestead), seniors, veterans, and disabled individuals that reduce your taxable value.</p></div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question">Is property tax included in my mortgage payment? <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+                <div class="faq-answer"><p>Most lenders collect 1/12 of your annual property tax each month as part of your mortgage payment (PITI: principal, interest, taxes, insurance). These funds are held in escrow and paid to the taxing authority when due.</p></div>
+              </div>
+            </section>
+
+            <section class="related-calculators">
+              <h2>Related Calculators</h2>
+              <div class="calculator-list">
+                <a href="/real-estate-calculators/mortgage-calculator/" class="card card-link"><div class="card-icon">🏠</div><h3>Mortgage Calculator</h3><p>Calculate your monthly payment including taxes and insurance.</p></a>
+                <a href="/real-estate-calculators/affordability-calculator/" class="card card-link"><div class="card-icon">🏡</div><h3>Affordability Calculator</h3><p>See how much home you can afford based on income and debts.</p></a>
+                <a href="/real-estate-calculators/closing-cost-calculator/" class="card card-link"><div class="card-icon">📋</div><h3>Closing Cost Calculator</h3><p>Estimate all the fees you'll pay when purchasing a home.</p></a>
+              </div>
+            </section>
+          </div>
+          <aside class="calc-page-sidebar">
+            <div class="sidebar-card">
+              <h3>Real Estate Tools</h3>
+              <a href="/real-estate-calculators/mortgage-calculator/">Mortgage Calculator</a>
+              <a href="/real-estate-calculators/affordability-calculator/">Affordability Calculator</a>
+              <a href="/real-estate-calculators/closing-cost-calculator/">Closing Cost Calculator</a>
+              <a href="/real-estate-calculators/amortization-calculator/">Amortization Calculator</a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" style="color:white"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="white"/><path d="M8 10h16M8 16h16M8 22h10" stroke="#1B4D3E" stroke-width="2.5" stroke-linecap="round"/></svg>CalcWise</a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col"><h4>Real Estate</h4><a href="/real-estate-calculators/mortgage-calculator/">Mortgage Calculator</a><a href="/real-estate-calculators/">View All</a></div>
+        <div class="footer-col"><h4>Finance</h4><a href="/finance-calculators/loan-calculator/">Loan Calculator</a><a href="/finance-calculators/">View All</a></div>
+        <div class="footer-col"><h4>Company</h4><a href="/about.html">About</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a></div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2026 CalcWise. All rights reserved.</p><div class="footer-links"><a href="/privacy.html">Privacy</a><a href="/sitemap.xml">Sitemap</a></div></div>
+    </div>
+  </footer>
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+  function calculatePropertyTax() {
+    const homeValue = parseFloat(document.getElementById('home-value').value) || 0;
+    const taxRate = parseFloat(document.getElementById('tax-rate').value) || 0;
+    const assessmentRatio = parseFloat(document.getElementById('assessment-ratio').value) || 100;
+    const exemption = parseFloat(document.getElementById('exemption').value) || 0;
+
+    const assessedValue = homeValue * (assessmentRatio / 100);
+    const taxableValue = Math.max(0, assessedValue - exemption);
+    const annualTax = taxableValue * (taxRate / 100);
+    const monthlyTax = annualTax / 12;
+    const dailyTax = annualTax / 365;
+    const effectiveRate = homeValue > 0 ? (annualTax / homeValue) * 100 : 0;
+
+    CalcWise.setText('annual-tax-result', CalcWise.formatCurrency(annualTax));
+    CalcWise.setText('monthly-tax', CalcWise.formatCurrency(monthlyTax));
+    CalcWise.setText('effective-rate', effectiveRate.toFixed(3) + '%');
+    CalcWise.setText('taxable-value', CalcWise.formatCurrency(taxableValue));
+    CalcWise.setText('daily-tax', CalcWise.formatCurrency(dailyTax, 2));
+    CalcWise.showResults('prop-tax-results');
+  }
+  </script>
+</body>
+</html>

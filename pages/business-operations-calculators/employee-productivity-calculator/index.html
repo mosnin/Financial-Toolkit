@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employee Productivity Calculator - Revenue Per Employee & Hour | CalcWise</title>
+  <meta name="description" content="Free employee productivity calculator. Measure revenue per employee and revenue per hour to benchmark workforce efficiency and output.">
+  <meta name="keywords" content="employee productivity calculator, revenue per employee, revenue per hour, workforce efficiency, labor productivity">
+  <link rel="canonical" href="https://calcwise.io/business-operations-calculators/employee-productivity-calculator/">
+
+  <meta property="og:title" content="Employee Productivity Calculator - Revenue Per Employee & Hour">
+  <meta property="og:description" content="Measure revenue per employee and revenue per hour to benchmark workforce efficiency.">
+  <meta property="og:url" content="https://calcwise.io/business-operations-calculators/employee-productivity-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Employee Productivity Calculator - Revenue Per Employee & Hour">
+  <meta name="twitter:description" content="Measure revenue per employee and revenue per hour to benchmark workforce efficiency.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Business Operations Calculators", "item": "https://calcwise.io/business-operations-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "Employee Productivity Calculator", "item": "https://calcwise.io/business-operations-calculators/employee-productivity-calculator/" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do you measure employee productivity?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Employee productivity is commonly measured as revenue per employee or revenue per hour worked. These metrics show how efficiently your workforce generates income for the business." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is a good revenue per employee ratio?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Good revenue per employee varies widely by industry. Technology companies might see $200,000-$500,000+, while retail or hospitality might range from $50,000-$150,000 per employee." }
+      },
+      {
+        "@type": "Question",
+        "name": "How can I improve employee productivity?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Improve productivity through better tools and technology, streamlined processes, training and development, clear goals and metrics, reducing unnecessary meetings, and fostering employee engagement." }
+      },
+      {
+        "@type": "Question",
+        "name": "Should I include part-time employees in the calculation?",
+        "acceptedAnswer": { "@type": "Answer", "text": "For accurate results, convert part-time employees to full-time equivalents (FTEs). Two half-time employees would count as one FTE. This gives a more meaningful productivity comparison." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/business-operations-calculators/" aria-current="page">Business Operations</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/business-operations-calculators/">Business Operations Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/business-operations-calculators/">Business Operations Calculators</a></li>
+          <li><span aria-current="page">Employee Productivity Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="article-content">
+          <h1>Employee Productivity Calculator</h1>
+          <p>Measure your workforce efficiency by calculating revenue per employee and revenue per hour worked. Use these key metrics to benchmark your team's performance and identify opportunities for improvement.</p>
+
+          <div class="calc-container mt-8">
+            <div class="calc-header">
+              <h2>Calculate Employee Productivity</h2>
+              <p>Enter your business metrics below</p>
+            </div>
+            <div class="calc-body">
+              <form id="productivity-form" onsubmit="return false;">
+                <div class="form-group">
+                  <label class="form-label" for="revenue">Total Revenue <span class="form-hint">(annual)</span></label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="revenue" class="form-input" placeholder="5000000" min="0" step="1000" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="num-employees">Number of Employees <span class="form-hint">(FTEs)</span></label>
+                  <input type="number" id="num-employees" class="form-input" placeholder="25" min="1" step="1" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="hours-worked">Total Hours Worked <span class="form-hint">(annual, all employees)</span></label>
+                  <input type="number" id="hours-worked" class="form-input" placeholder="52000" min="1" step="100" required>
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calculateProductivity()">Calculate Productivity</button>
+                  <button type="button" class="btn btn-reset" onclick="resetProductivity()">Reset</button>
+                </div>
+              </form>
+
+              <div id="productivity-results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">Revenue Per Employee</div>
+                  <div class="result-value" id="result-per-employee"></div>
+                </div>
+                <div class="result-grid">
+                  <div class="result-item">
+                    <div class="result-label">Revenue Per Hour</div>
+                    <div class="result-value" id="result-per-hour"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Avg Hours Per Employee</div>
+                    <div class="result-value" id="result-avg-hours"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <section class="content-section">
+            <h2>Employee Productivity Formulas</h2>
+            <p>Productivity is measured using two key ratios:</p>
+            <div class="formula-box">
+              <div class="formula-label">Revenue Per Employee</div>
+              Revenue Per Employee = Total Revenue / Number of Employees
+            </div>
+            <div class="formula-box">
+              <div class="formula-label">Revenue Per Hour</div>
+              Revenue Per Hour = Total Revenue / Total Hours Worked
+            </div>
+          </section>
+
+          <section class="content-section">
+            <h2>How to Use This Calculator</h2>
+            <ol>
+              <li><strong>Enter total annual revenue</strong> - the gross revenue your business generated.</li>
+              <li><strong>Enter number of employees</strong> - full-time equivalent headcount.</li>
+              <li><strong>Enter total hours worked</strong> - combined annual hours for all employees.</li>
+              <li><strong>Click "Calculate Productivity"</strong> to see your per-employee and per-hour metrics.</li>
+            </ol>
+          </section>
+
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>A company generates $5,000,000 in annual revenue with 25 employees working a combined 52,000 hours. Revenue per employee = $200,000 and revenue per hour = $96.15. These figures can be compared against industry benchmarks to assess performance.</p>
+          </section>
+
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">How do you measure employee productivity?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>Employee productivity is commonly measured as revenue per employee or revenue per hour worked. These metrics show how efficiently your workforce generates income.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">What is a good revenue per employee ratio?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>It varies by industry. Technology companies might see $200,000-$500,000+, while retail or hospitality might range from $50,000-$150,000 per employee.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">How can I improve employee productivity?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>Improve productivity through better tools and technology, streamlined processes, training, clear goals, reducing unnecessary meetings, and fostering engagement.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">Should I include part-time employees?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>Convert part-time employees to full-time equivalents (FTEs) for accurate results. Two half-time employees would count as one FTE.</p></div>
+            </div>
+          </section>
+
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/business-operations-calculators/revenue-per-employee-calculator/" class="card card-link">
+                <h3>Revenue Per Employee Calculator</h3>
+                <p>Calculate and compare revenue per employee against industry benchmarks.</p>
+              </a>
+              <a href="/business-operations-calculators/employee-turnover-cost-calculator/" class="card card-link">
+                <h3>Employee Turnover Cost Calculator</h3>
+                <p>Estimate the full cost of losing and replacing employees.</p>
+              </a>
+              <a href="/business-operations-calculators/gross-profit-calculator/" class="card card-link">
+                <h3>Gross Profit Calculator</h3>
+                <p>Calculate your gross profit and gross margin percentage.</p>
+              </a>
+            </div>
+          </section>
+
+          <div class="disclaimer">
+            <strong>Disclaimer:</strong> This calculator provides estimates for informational purposes only. Productivity metrics should be interpreted in context of your industry, business model, and operational factors. This is not professional business advice.
+          </div>
+
+          <div class="ad-slot ad-slot-leaderboard"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col"><h4>Real Estate</h4><a href="/real-estate-calculators/">All Real Estate Calculators</a></div>
+        <div class="footer-col"><h4>Business Operations</h4><a href="/business-operations-calculators/">All Business Operations Calculators</a></div>
+        <div class="footer-col"><h4>Company</h4><a href="/about.html">About</a></div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links"><a href="/about.html">About</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateProductivity() {
+      const revenue = parseFloat(document.getElementById('revenue').value);
+      const employees = parseFloat(document.getElementById('num-employees').value);
+      const hours = parseFloat(document.getElementById('hours-worked').value);
+
+      if (isNaN(revenue) || isNaN(employees) || isNaN(hours) || employees === 0 || hours === 0) return;
+
+      const perEmployee = revenue / employees;
+      const perHour = revenue / hours;
+      const avgHours = hours / employees;
+
+      document.getElementById('result-per-employee').textContent = '$' + perEmployee.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2});
+      document.getElementById('result-per-hour').textContent = '$' + perHour.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2});
+      document.getElementById('result-avg-hours').textContent = avgHours.toLocaleString(undefined, {maximumFractionDigits: 0}) + ' hrs';
+      document.getElementById('productivity-results').classList.remove('hidden');
+    }
+
+    function resetProductivity() {
+      document.getElementById('productivity-form').reset();
+      document.getElementById('productivity-results').classList.add('hidden');
+    }
+  </script>
+</body>
+</html>

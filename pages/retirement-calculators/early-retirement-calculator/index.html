@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Early Retirement Calculator - Can You Retire Early? | CalcWise</title>
+  <meta name="description" content="Free early retirement calculator to determine if your savings can support an early retirement. Factor in expenses, investment returns, and inflation to check feasibility.">
+  <meta name="keywords" content="early retirement calculator, FIRE calculator, retire early, financial independence, early retirement planning">
+  <link rel="canonical" href="https://calcwise.io/retirement-calculators/early-retirement-calculator/">
+
+  <meta property="og:title" content="Early Retirement Calculator - Can You Retire Early?">
+  <meta property="og:description" content="Determine if your savings can support an early retirement. Factor in expenses, returns, and inflation.">
+  <meta property="og:url" content="https://calcwise.io/retirement-calculators/early-retirement-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Early Retirement Calculator - Can You Retire Early?">
+  <meta name="twitter:description" content="Determine if your savings can support an early retirement. Factor in expenses, returns, and inflation.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Retirement Calculators", "item": "https://calcwise.io/retirement-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "Early Retirement Calculator", "item": "https://calcwise.io/retirement-calculators/early-retirement-calculator/" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How much do I need to retire early?",
+        "acceptedAnswer": { "@type": "Answer", "text": "A common rule is 25 times your annual expenses (the 4% rule). If you spend $50,000 per year, you need $1.25 million. For earlier retirement, you may want 30-33 times expenses to account for a longer retirement period and inflation." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the FIRE movement?",
+        "acceptedAnswer": { "@type": "Answer", "text": "FIRE (Financial Independence, Retire Early) is a movement focused on extreme saving and investing to achieve financial independence decades before traditional retirement age. FIRE adherents typically save 50-70% of income and aim to retire in their 30s or 40s." }
+      },
+      {
+        "@type": "Question",
+        "name": "How does inflation affect early retirement?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Inflation erodes purchasing power over time. At 3% inflation, $50,000 today will have the buying power of about $33,500 in 15 years. Early retirees face more years of inflation, making it crucial to factor into planning and invest in assets that outpace inflation." }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the risks of retiring early?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Key risks include sequence of returns risk (market downturns early in retirement), healthcare costs before Medicare eligibility at 65, longer exposure to inflation, and underestimating longevity. Building a buffer and having flexible spending helps mitigate these risks." }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I access retirement funds before 59.5?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Options include Roth IRA contribution withdrawals (tax and penalty free), the Rule of 55 for 401(k) plans, 72(t) Substantially Equal Periodic Payments (SEPP), and taxable brokerage accounts. Planning your account types is essential for early retirement." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/retirement-calculators/" aria-current="page">Retirement</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/retirement-calculators/">Retirement Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/retirement-calculators/">Retirement Calculators</a></li>
+          <li><span aria-current="page">Early Retirement Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="article-content">
+          <h1>Early Retirement Calculator</h1>
+          <p>Determine if your current savings can support an early retirement. This calculator factors in your annual expenses, expected investment returns, and inflation to show how many years your money will last and whether you face a shortfall or surplus.</p>
+
+          <div class="calc-container mt-8">
+            <div class="calc-header">
+              <h2>Can You Retire Early?</h2>
+              <p>Enter your financial details below</p>
+            </div>
+            <div class="calc-body">
+              <form id="early-retirement-form" onsubmit="return false;">
+                <div class="form-group">
+                  <label class="form-label" for="current-age">Current Age</label>
+                  <input type="number" id="current-age" class="form-input" placeholder="40" min="18" max="75" step="1" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="current-savings">Current Savings</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="current-savings" class="form-input" placeholder="800000" min="0" step="1000" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="annual-expenses">Annual Expenses in Retirement</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="annual-expenses" class="form-input" placeholder="50000" min="1000" step="1000" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="annual-return">Expected Annual Return</label>
+                  <div class="input-suffix">
+                    <input type="number" id="annual-return" class="form-input" placeholder="7" min="0" max="20" step="0.1" required>
+                    <span class="suffix">%</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="inflation-rate">Expected Inflation Rate</label>
+                  <div class="input-suffix">
+                    <input type="number" id="inflation-rate" class="form-input" placeholder="3" min="0" max="15" step="0.1" required>
+                    <span class="suffix">%</span>
+                  </div>
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calculateEarlyRetirement()">Check Feasibility</button>
+                  <button type="button" class="btn btn-reset" onclick="resetCalc()">Reset</button>
+                </div>
+              </form>
+
+              <div id="calc-results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">Feasibility</div>
+                  <div class="result-value" id="result-feasibility"></div>
+                </div>
+                <div class="result-grid">
+                  <div class="result-item">
+                    <div class="result-label">Years Covered</div>
+                    <div class="result-value" id="result-years-covered"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Money Lasts Until Age</div>
+                    <div class="result-value" id="result-lasts-until"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Shortfall / Surplus at 90</div>
+                    <div class="result-value" id="result-shortfall"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <section class="content-section">
+            <h2>Early Retirement Formula</h2>
+            <p>The calculator simulates year-by-year portfolio drawdown with inflation-adjusted expenses:</p>
+            <div class="formula-box">
+              <div class="formula-label">Annual Simulation</div>
+              Balance(n+1) = Balance(n) x (1 + return) - Expenses x (1 + inflation)^n
+            </div>
+            <p>Each year, your portfolio grows by the expected return rate while you withdraw expenses that increase with inflation. The simulation continues until the balance reaches zero or you reach age 90.</p>
+          </section>
+
+          <section class="content-section">
+            <h2>How to Use This Early Retirement Calculator</h2>
+            <ol>
+              <li><strong>Enter your current age</strong> - the age at which you want to retire.</li>
+              <li><strong>Enter your current savings</strong> - total invested assets available for retirement.</li>
+              <li><strong>Enter annual expenses</strong> - your expected yearly spending in retirement.</li>
+              <li><strong>Enter expected annual return</strong> - your projected portfolio growth rate.</li>
+              <li><strong>Enter expected inflation</strong> - the annual rate at which prices increase.</li>
+              <li><strong>Click "Check Feasibility"</strong> to see if early retirement is viable for you.</li>
+            </ol>
+          </section>
+
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>A 40-year-old with $800,000 in savings, $50,000 in annual expenses, 7% expected returns, and 3% inflation would see their real return at about 4%. With a 4% real withdrawal rate, the portfolio could sustain roughly 30+ years of withdrawals, lasting well past age 70 and potentially to 90 depending on market performance.</p>
+          </section>
+
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                How much do I need to retire early?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>A common rule is 25 times your annual expenses (the 4% rule). If you spend $50,000 per year, you need $1.25 million. For earlier retirement, you may want 30-33 times expenses to account for a longer retirement period and inflation.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What is the FIRE movement?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>FIRE (Financial Independence, Retire Early) is a movement focused on extreme saving and investing to achieve financial independence decades before traditional retirement age. FIRE adherents typically save 50-70% of income and aim to retire in their 30s or 40s.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                How does inflation affect early retirement?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Inflation erodes purchasing power over time. At 3% inflation, $50,000 today will have the buying power of about $33,500 in 15 years. Early retirees face more years of inflation, making it crucial to factor into planning.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What are the risks of retiring early?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Key risks include sequence of returns risk, healthcare costs before Medicare at 65, longer exposure to inflation, and underestimating longevity. Building a buffer and having flexible spending helps mitigate these risks.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                How do I access retirement funds before 59.5?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Options include Roth IRA contribution withdrawals (tax and penalty free), the Rule of 55 for 401(k) plans, 72(t) SEPP payments, and taxable brokerage accounts. Planning your account types is essential for early retirement.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/retirement-calculators/retirement-age-calculator/" class="card card-link">
+                <h3>Retirement Age Calculator</h3>
+                <p>Find out when you can retire based on savings and goals.</p>
+              </a>
+              <a href="/retirement-calculators/retirement-withdrawal-rate-calculator/" class="card card-link">
+                <h3>Withdrawal Rate Calculator</h3>
+                <p>Determine a sustainable withdrawal rate for your portfolio.</p>
+              </a>
+              <a href="/retirement-calculators/retirement-healthcare-cost-estimator/" class="card card-link">
+                <h3>Healthcare Cost Estimator</h3>
+                <p>Estimate healthcare costs in early retirement before Medicare.</p>
+              </a>
+            </div>
+          </section>
+
+          <div class="disclaimer">
+            <strong>Disclaimer:</strong> This calculator provides estimates for informational purposes only. Actual investment returns and inflation rates are unpredictable. This is not financial advice. Consult a qualified financial advisor before making early retirement decisions.
+          </div>
+
+          <div class="ad-slot ad-slot-leaderboard"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Real Estate</h4>
+          <a href="/real-estate-calculators/">All Real Estate Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Retirement</h4>
+          <a href="/retirement-calculators/">All Retirement Calculators</a>
+          <a href="/retirement-calculators/retirement-age-calculator/">Retirement Age</a>
+          <a href="/retirement-calculators/401k-match-calculator/">401(k) Match</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateEarlyRetirement() {
+      const currentAge = parseInt(document.getElementById('current-age').value);
+      const savings = parseFloat(document.getElementById('current-savings').value);
+      const expenses = parseFloat(document.getElementById('annual-expenses').value);
+      const annualReturn = parseFloat(document.getElementById('annual-return').value) / 100;
+      const inflation = parseFloat(document.getElementById('inflation-rate').value) / 100;
+
+      if (!currentAge || !savings || !expenses) return;
+
+      let balance = savings;
+      let year = 0;
+      const targetAge = 90;
+      const maxYears = targetAge - currentAge;
+
+      while (balance > 0 && year < maxYears) {
+        balance = balance * (1 + annualReturn) - expenses * Math.pow(1 + inflation, year);
+        year++;
+        if (balance < 0) break;
+      }
+
+      const yearsCovered = balance > 0 ? maxYears : year;
+      const lastsUntilAge = currentAge + yearsCovered;
+      const feasible = balance > 0;
+
+      const fmt = (v) => '$' + Math.round(Math.abs(v)).toLocaleString('en-US');
+
+      document.getElementById('result-feasibility').textContent = feasible ? 'Feasible' : 'Not Feasible';
+      document.getElementById('result-feasibility').style.color = feasible ? '#059669' : '#DC2626';
+      document.getElementById('result-years-covered').textContent = yearsCovered + ' years';
+      document.getElementById('result-lasts-until').textContent = 'Age ' + lastsUntilAge;
+      document.getElementById('result-shortfall').textContent = (balance >= 0 ? '+' : '-') + fmt(balance);
+      document.getElementById('result-shortfall').style.color = balance >= 0 ? '#059669' : '#DC2626';
+      document.getElementById('calc-results').classList.remove('hidden');
+    }
+
+    function resetCalc() {
+      document.getElementById('early-retirement-form').reset();
+      document.getElementById('calc-results').classList.add('hidden');
+    }
+  </script>
+</body>
+</html>

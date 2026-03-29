@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loan-to-Value Ratio Calculator - Calculate LTV & PMI | CalcWise</title>
+  <meta name="description" content="Free LTV calculator. Enter your loan amount and property value to calculate your loan-to-value ratio, determine PMI requirements, and see your equity position.">
+  <meta name="keywords" content="LTV calculator, loan to value ratio, PMI calculator, home equity, mortgage LTV">
+  <link rel="canonical" href="https://calcwise.io/advanced-real-estate-calculators/loan-to-value-ratio-calculator/">
+
+  <meta property="og:title" content="Loan-to-Value Ratio Calculator - Calculate LTV & PMI">
+  <meta property="og:description" content="Free LTV calculator. Calculate your loan-to-value ratio and PMI requirements.">
+  <meta property="og:url" content="https://calcwise.io/advanced-real-estate-calculators/loan-to-value-ratio-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Loan-to-Value Ratio Calculator - Calculate LTV & PMI">
+  <meta name="twitter:description" content="Free LTV calculator. Calculate your loan-to-value ratio and PMI requirements.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Advanced Real Estate Calculators", "item": "https://calcwise.io/advanced-real-estate-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "Loan-to-Value Ratio Calculator", "item": "https://calcwise.io/advanced-real-estate-calculators/loan-to-value-ratio-calculator/" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is a loan-to-value ratio?",
+        "acceptedAnswer": { "@type": "Answer", "text": "LTV is the ratio of your mortgage loan amount to the appraised value of the property, expressed as a percentage. An LTV of 80% means you borrowed 80% of the home's value." }
+      },
+      {
+        "@type": "Question",
+        "name": "What LTV requires PMI?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Private mortgage insurance is typically required when the LTV exceeds 80%, meaning you put less than 20% down. PMI can be removed once your LTV drops to 78-80%." }
+      },
+      {
+        "@type": "Question",
+        "name": "How does LTV affect my interest rate?",
+        "acceptedAnswer": { "@type": "Answer", "text": "A lower LTV generally qualifies you for better interest rates because the lender has less risk. Borrowers with LTV below 80% typically get the best rates." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can my LTV change over time?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Your LTV decreases as you pay down principal and as your home appreciates in value. You can request a new appraisal to reflect increased home value and potentially remove PMI." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/advanced-real-estate-calculators/" aria-current="page">Advanced Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/business-calculators/">Business</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/advanced-real-estate-calculators/">Advanced Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/business-calculators/">Business Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/advanced-real-estate-calculators/">Advanced Real Estate Calculators</a></li>
+          <li><span aria-current="page">Loan-to-Value Ratio Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="article-content">
+          <h1>Loan-to-Value Ratio Calculator</h1>
+          <p>Calculate your loan-to-value (LTV) ratio to understand your equity position and determine whether private mortgage insurance (PMI) is required. Simply enter your loan amount and property value.</p>
+
+          <div class="calc-container mt-8">
+            <div class="calc-header">
+              <h2>Calculate Your LTV Ratio</h2>
+              <p>Enter your loan and property details</p>
+            </div>
+            <div class="calc-body">
+              <form id="ltv-form" onsubmit="return false;">
+                <div class="form-group">
+                  <label class="form-label" for="loan-amount">Loan Amount</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="loan-amount" class="form-input" placeholder="240000" min="0" step="1000" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="property-value">Property Value</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="property-value" class="form-input" placeholder="300000" min="0" step="1000" required>
+                  </div>
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calculateLTV()">Calculate LTV</button>
+                  <button type="button" class="btn btn-reset" onclick="resetLTV()">Reset</button>
+                </div>
+              </form>
+
+              <div id="ltv-results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">Loan-to-Value Ratio</div>
+                  <div class="result-value" id="result-ltv"></div>
+                </div>
+                <div class="result-grid">
+                  <div class="result-item">
+                    <div class="result-label">PMI Required?</div>
+                    <div class="result-value" id="result-pmi"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Home Equity</div>
+                    <div class="result-value" id="result-equity"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Equity Percentage</div>
+                    <div class="result-value" id="result-equity-pct"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <section class="content-section">
+            <h2>LTV Formula</h2>
+            <p>The loan-to-value ratio is a straightforward calculation:</p>
+            <div class="formula-box">
+              <div class="formula-label">Loan-to-Value Ratio</div>
+              LTV = (Loan Amount / Property Value) x 100
+            </div>
+            <p>An LTV above 80% typically triggers a PMI requirement. Equity equals the property value minus the loan balance.</p>
+          </section>
+
+          <section class="content-section">
+            <h2>How to Use This Calculator</h2>
+            <ol>
+              <li><strong>Enter the loan amount</strong> - the total mortgage balance or amount you plan to borrow.</li>
+              <li><strong>Enter the property value</strong> - the appraised or purchase price of the property.</li>
+              <li><strong>Click "Calculate LTV"</strong> to see your ratio, PMI status, and equity.</li>
+            </ol>
+          </section>
+
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>If you have a $240,000 loan on a $300,000 property, your LTV is 80.0%. You are right at the threshold where PMI may or may not be required. Your equity is $60,000, or 20% of the property value.</p>
+          </section>
+
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">What is a loan-to-value ratio?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>LTV is the ratio of your mortgage loan amount to the appraised value of the property, expressed as a percentage. An LTV of 80% means you borrowed 80% of the home's value.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">What LTV requires PMI?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>Private mortgage insurance is typically required when the LTV exceeds 80%, meaning you put less than 20% down. PMI can be removed once your LTV drops to 78-80%.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">How does LTV affect my interest rate?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>A lower LTV generally qualifies you for better interest rates because the lender has less risk. Borrowers with LTV below 80% typically get the best rates.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">Can my LTV change over time?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-answer"><p>Yes. Your LTV decreases as you pay down principal and as your home appreciates in value. You can request a new appraisal to reflect increased home value and potentially remove PMI.</p></div>
+            </div>
+          </section>
+
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/advanced-real-estate-calculators/mortgage-preapproval-calculator/" class="card card-link"><h3>Mortgage Preapproval Calculator</h3><p>Estimate how much home you can afford.</p></a>
+              <a href="/advanced-real-estate-calculators/equity-growth-calculator/" class="card card-link"><h3>Equity Growth Calculator</h3><p>Project how your home equity grows over time.</p></a>
+              <a href="/advanced-real-estate-calculators/property-appreciation-calculator/" class="card card-link"><h3>Property Appreciation Calculator</h3><p>Estimate future property value based on appreciation.</p></a>
+            </div>
+          </section>
+
+          <div class="disclaimer"><strong>Disclaimer:</strong> This calculator provides estimates for informational purposes only. Actual LTV requirements and PMI policies vary by lender. This is not financial advice. Consult a mortgage professional for guidance.</div>
+          <div class="ad-slot ad-slot-leaderboard"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>CalcWise</a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col"><h4>Real Estate</h4><a href="/real-estate-calculators/">All Real Estate Calculators</a><a href="/advanced-real-estate-calculators/">Advanced Real Estate</a></div>
+        <div class="footer-col"><h4>Finance</h4><a href="/finance-calculators/">All Finance Calculators</a></div>
+        <div class="footer-col"><h4>Company</h4><a href="/about.html">About</a></div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2026 CalcWise. All rights reserved.</p><div class="footer-links"><a href="/about.html">About</a></div></div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateLTV() {
+      const loan = parseFloat(document.getElementById('loan-amount').value);
+      const value = parseFloat(document.getElementById('property-value').value);
+      if (!loan || !value) { alert('Please fill in all fields.'); return; }
+
+      const ltv = (loan / value) * 100;
+      const equity = value - loan;
+      const equityPct = ((value - loan) / value) * 100;
+      const pmiRequired = ltv > 80;
+
+      document.getElementById('result-ltv').textContent = ltv.toFixed(1) + '%';
+      document.getElementById('result-pmi').textContent = pmiRequired ? 'Yes' : 'No';
+      document.getElementById('result-equity').textContent = '$' + equity.toLocaleString('en-US', { maximumFractionDigits: 0 });
+      document.getElementById('result-equity-pct').textContent = equityPct.toFixed(1) + '%';
+      document.getElementById('ltv-results').classList.remove('hidden');
+    }
+
+    function resetLTV() {
+      document.getElementById('ltv-form').reset();
+      document.getElementById('ltv-results').classList.add('hidden');
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculators by Topic | CalcWise</title>
+  <meta name="description" content="Find the right financial calculator for your goal. Browse CalcWise calculators organized by topic: save money, grow wealth, buy a home, start a business, plan retirement, manage debt, and more.">
+  <meta name="keywords" content="financial calculators by topic, goal-based calculators, save money calculators, grow wealth calculators, retirement planning calculators">
+  <link rel="canonical" href="https://calcwise.io/calculators-by-topic/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Calculators by Topic | CalcWise">
+  <meta property="og:description" content="Find the right financial calculator for your goal. Browse calculators organized by topic.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcwise.io/calculators-by-topic/">
+  <meta property="og:site_name" content="CalcWise">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Calculators by Topic | CalcWise">
+  <meta name="twitter:description" content="Find the right financial calculator for your goal. Browse calculators organized by topic.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <style>
+    .topic-intro {
+      max-width: 760px;
+      margin: 0 auto var(--space-12);
+    }
+    .topic-intro p {
+      font-size: 1.125rem;
+      color: var(--color-text-secondary);
+      line-height: 1.7;
+    }
+    .topic-section {
+      margin-bottom: var(--space-16);
+    }
+    .topic-section h2 {
+      font-size: 1.375rem;
+      font-weight: 700;
+      margin-bottom: var(--space-2);
+      display: flex;
+      align-items: center;
+      gap: var(--space-3);
+    }
+    .topic-section .topic-count {
+      font-size: 0.8125rem;
+      font-weight: 500;
+      background: var(--color-surface-alt, #f0f4f0);
+      color: var(--color-text-secondary);
+      border-radius: 99px;
+      padding: 2px 10px;
+    }
+    .topic-description {
+      color: var(--color-text-secondary);
+      font-size: 0.9375rem;
+      margin-bottom: var(--space-4);
+      line-height: 1.6;
+    }
+    .calc-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: var(--space-3);
+    }
+    .calc-item {
+      display: flex;
+      align-items: center;
+      gap: var(--space-3);
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      padding: var(--space-4);
+      text-decoration: none;
+      color: var(--color-text);
+      font-size: 0.9375rem;
+      font-weight: 500;
+      transition: border-color 0.15s, box-shadow 0.15s, color 0.15s;
+    }
+    .calc-item:hover {
+      border-color: var(--color-primary);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      color: var(--color-primary);
+    }
+    .calc-item-dot {
+      flex-shrink: 0;
+      width: 8px;
+      height: 8px;
+      background: var(--color-primary);
+      border-radius: 50%;
+      opacity: 0.6;
+    }
+    .divider {
+      border: none;
+      border-top: 1px solid var(--color-border);
+      margin: var(--space-8) 0;
+    }
+    .search-cta {
+      background: var(--color-surface-alt, #f5f7f5);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: var(--space-8);
+      text-align: center;
+      margin-top: var(--space-16);
+    }
+    .search-cta h2 {
+      margin-bottom: var(--space-3);
+    }
+    .search-cta p {
+      color: var(--color-text-secondary);
+      margin-bottom: var(--space-5);
+    }
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-2);
+      background: var(--color-primary);
+      color: white;
+      font-weight: 600;
+      padding: var(--space-3) var(--space-6);
+      border-radius: var(--radius-md);
+      text-decoration: none;
+      transition: opacity 0.15s;
+    }
+    .btn-primary:hover { opacity: 0.88; color: white; }
+    @media (max-width: 640px) {
+      .calc-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="32" height="32" rx="8" fill="currentColor"/>
+          <path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+        </svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/business-calculators/">Business</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/business-calculators/">Business Calculators</a>
+      <a href="/about.html">About</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><span aria-current="page">Calculators by Topic</span></li>
+        </ol>
+      </nav>
+
+      <section class="hub-header topic-intro">
+        <h1>Calculators by Topic</h1>
+        <p>Not sure which calculator you need? Start with your goal. Whether you want to save money, grow wealth, buy a home, or plan retirement, we have grouped our best tools by the outcome you are working toward. Pick a topic below and find exactly what you need.</p>
+      </section>
+
+      <!-- ===================== SAVE MONEY ===================== -->
+      <section class="topic-section" id="save-money" aria-labelledby="topic-save-money">
+        <h2 id="topic-save-money">Save Money <span class="topic-count">7</span></h2>
+        <p class="topic-description">Cut expenses, cancel unused subscriptions, and find savings you did not know you had.</p>
+        <div class="calc-grid">
+          <a href="/finance-calculators/budget-calculator/" class="calc-item"><span class="calc-item-dot" aria-hidden="true"></span>Budget Calculator</a>
+          <a href="/minimalism-and-budget-calculators/subscription-reduction-calculator/" class="calc-item"><span class="calc-item-dot" aria-hidden="true"></span>Subscription Reduction Calculator</a>
+          <a href="/minimalism-and-budget-calculators/expense-reduction-calculator/" class="calc-item"><span class="calc-item-dot" aria-hidden="true"></span>Expense Reduction Calculator</a>
+          <a href="/minimalism-and-budget-calculators/minimalist-lifestyle-savings-calculator/" class="calc-item"><span class="calc-item-dot" aria-hidden="true"></span>Minimalist Lifestyle Savings Calculator</a>
+          <a href="/household-efficiency-calculators/meal-prep-savings-calculator/" class="calc-item"><span class="calc-item-dot" aria-hidden="true"></span>Meal Prep Savings Calculator</a>
+          <a href="/minimalism-and-budget-calculators/budget-optimization-calculator/" class="calc-item"><span class="calc-item-dot" aria-hidden="true"></span>Budget Optimization Calculator</a>
+          <a href="/finance-calculators/emergency-fund-calculator/" class="calc-item"><span class="calc-item-dot" aria-hidden="true"></span>Emergency Fund Calculator</a>
+        </div>
+      </section>
+
+      <hr class="divider">
+
+      <!-- ===================== GROW WEALTH ===================== -->
+      <section class="topic-section" id="grow-wealth" aria-labelledby="topic-grow-wealth">
+        <h2 id="topic-grow-wealth">Grow Wealth <span class="topic-count">7</span></h2>
+        <p class="topic-description">Build long-term wealth through compound growth, consistent investing, and smart asset allocation.</p>
+        <div class="calc-grid">
+          <a href="/wealth-building-calculators/compound-growth-calculator/" class="calc-item"><span class="calc-item-dot" aria-hidden="true"></span>Compound Growth Calculator</a>
+          <a href="/finance-calculators/net-worth-calculator/" class="calc-item"><span class="calc-item-dot" aria-hidden="true"></span>Net Worth Calculator</a>
+          <a href="/wealth-building-calculators/millionaire-timeline-calculator/" class="calc-item"><span class="calc-item-dot" aria-hidden="true"></span>Millionaire Timeline Calculator</a>
+          <a href="/wealth-building-calculators/wealth-accumulation-calculator/" class="calc-item"><span class="calc-item-dot" aria-hidden="true"></span>Wealth Accumulation Calculator</a>
+          <a href="/wealth-building-calculators/investment-consistency-calculator/" class="calc-item"><span class="calc-item-dot" aria-hidden="true"></span>Investment Consistency Calculator</a>
+          <a href="/finance-calculators/investment-return-calculator/" class="calc-item"><span class="calc-item-dot" aria-hidden="true"></span>Investment Return Calculator</a>
+          <a href="/wealth-building-calculators/passive-income-growth-calculator/" class="calc-item"><span class="calc-item-dot" aria-hidden="true"></span>Passive Income Growth Calculator</a>
+        </div>
+      </section>
+
+      <hr class="divider">
+
+      <!-- ===================== START A BUSINESS ===================== -->
+      <section class="topic-section" id="start-business" aria-labelledby="topic-start-business">
+        <h2 id="topic-start-business">Start a Business <span class="topic-count">7</span></h2>
+        <p class="topic-description">Figure out pricing, profit margins, and break-even points before you launch.</p>
+        <div class="calc-grid">
+          <a href="/business-calculators/break-even-calculator/" class="calc-item"><span class="calc-item-dot" aria-hidden="true"></span>Break Even Calculator</a>
+          <a href="/business-calculators/profit-margin-calculator/" class="calc-item"><span class="calc-item-dot" aria-hidden="true"></span>Profit Margin Calculator</a>
+          <a href="/side-hustle-calculators/side-hustle-profit-calculator/" class="calc-item"><span class="calc-item-dot" aria-hidden="true"></span>Side Hustle Profit Calculator</a>
+          <a href="/business-calculators/freelance-rate-calculator/" class="calc-item"><span class="calc-item-dot" aria-hidden="true"></span>Freelance Rate Calculator</a>
+          <a href="/side-hustle-calculators/consulting-side-income-calculator/" class="calc-item"><span class="calc-item-dot" aria-hidden="true"></span>Consulting Side Income Calculator</a>
+          <a href="/business-calculators/pricing-calculator/" class="calc-item"><span class="calc-item-dot" aria-hidden="true"></span>Pricing Calculator</a>
+          <a href="/business-calculators/burn-rate-calculator/" class="calc-item"><span class="calc-item-dot" aria-hidden="true"></span>Startup Burn Rate Calculator</a>
+        </div>
+      </section>
+
+      <hr class="divider">
+
+      <!-- ===================== BUY A HOME ===================== -->
+      <section class="topic-section" id="buy-home" aria-labelledby="topic-buy-home">
+        <h2 id="topic-buy-home">Buy a Home <span class="topic-count">7</span></h2>
+        <p class="topic-description">Estimate mortgage payments, down payments, closing costs, and whether renting might be smarter.</p>
+        <div class="calc-grid">
+          <a href="/real-estate-calculators/mortgage-calculator/" class="calc-item"><span class="calc-item-dot" aria-hidden="true"></span>Mortgage Calculator</a>
+          <a href="/real-estate-calculators/down-payment-calculator/" class="calc-item"><span class="calc-item-dot" aria-hidden="true"></span>Down Payment Calculator</a>
+          <a href="/real-estate-calculators/closing-cost-calculator/" class="calc-item"><span class="calc-item-dot" aria-hidden="true"></span>Closing Cost Calculator</a>
+          <a href="/real-estate-calculators/property-tax-calculator/" class="calc-item"><span class="calc-item-dot" aria-hidden="true"></span>Property Tax Calculator</a>
+          <a href="/real-estate-calculators/rent-vs-buy-calculator/" class="calc-item"><span class="calc-item-dot" aria-hidden="true"></span>Rent vs Buy Calculator</a>
+          <a href="/real-estate-calculators/affordability-calculator/" class="calc-item"><span class="calc-item-dot" aria-hidden="true"></span>Affordability Calculator</a>
+          <a href="/real-estate-calculators/amortization-calculator/" class="calc-item"><span class="calc-item-dot" aria-hidden="true"></span>Amortization Calculator</a>
+        </div>
+      </section>
+
+      <hr class="divider">
+
+      <!-- ===================== PLAN RETIREMENT ===================== -->
+      <section class="topic-section" id="plan-retirement" aria-labelledby="topic-plan-retirement">
+        <h2 id="topic-plan-retirement">Plan Retirement <span class="topic-count">7</span></h2>
+        <p class="topic-description">Map your path to financial independence, estimate withdrawal rates, and check if you are saving enough.</p>
+        <div class="calc-grid">
+          <a href="/financial-independence-calculators/fire-timeline-calculator/" class="calc-item"><span class="calc-item-dot" aria-hidden="true"></span>FIRE Timeline Calculator</a>
+          <a href="/financial-independence-calculators/safe-withdrawal-rate-calculator/" class="calc-item"><span class="calc-item-dot" aria-hidden="true"></span>Safe Withdrawal Rate Calculator</a>
+          <a href="/financial-independence-calculators/coast-fire-calculator/" class="calc-item"><span class="calc-item-dot" aria-hidden="true"></span>Coast FIRE Calculator</a>
+          <a href="/finance-calculators/retirement-savings-calculator/" class="calc-item"><span class="calc-item-dot" aria-hidden="true"></span>Retirement Savings Calculator</a>
+          <a href="/retirement-calculators/401k-match-calculator/" class="calc-item"><span class="calc-item-dot" aria-hidden="true"></span>401(k) Match Calculator</a>
+          <a href="/retirement-calculators/retirement-savings-gap-calculator/" class="calc-item"><span class="calc-item-dot" aria-hidden="true"></span>Retirement Savings Gap Calculator</a>
+          <a href="/retirement-calculators/retirement-withdrawal-rate-calculator/" class="calc-item"><span class="calc-item-dot" aria-hidden="true"></span>Retirement Withdrawal Rate Calculator</a>
+        </div>
+      </section>
+
+      <hr class="divider">
+
+      <!-- ===================== MANAGE DEBT ===================== -->
+      <section class="topic-section" id="manage-debt" aria-labelledby="topic-manage-debt">
+        <h2 id="topic-manage-debt">Manage Debt <span class="topic-count">7</span></h2>
+        <p class="topic-description">Create a payoff plan, compare strategies, and understand your debt-to-income ratio.</p>
+        <div class="calc-grid">
+          <a href="/finance-calculators/debt-payoff-calculator/" class="calc-item"><span class="calc-item-dot" aria-hidden="true"></span>Debt Payoff Calculator</a>
+          <a href="/education-calculators/student-loan-interest-savings-calculator/" class="calc-item"><span class="calc-item-dot" aria-hidden="true"></span>Student Loan Interest Savings Calculator</a>
+          <a href="/finance-calculators/credit-card-payoff-calculator/" class="calc-item"><span class="calc-item-dot" aria-hidden="true"></span>Credit Card Payoff Calculator</a>
+          <a href="/credit-calculators/debt-to-income-ratio-calculator/" class="calc-item"><span class="calc-item-dot" aria-hidden="true"></span>Debt-to-Income Ratio Calculator</a>
+          <a href="/personal-finance-calculators/debt-snowball-calculator/" class="calc-item"><span class="calc-item-dot" aria-hidden="true"></span>Debt Snowball Calculator</a>
+          <a href="/personal-finance-calculators/debt-avalanche-calculator/" class="calc-item"><span class="calc-item-dot" aria-hidden="true"></span>Debt Avalanche Calculator</a>
+          <a href="/credit-calculators/debt-consolidation-calculator/" class="calc-item"><span class="calc-item-dot" aria-hidden="true"></span>Debt Consolidation Calculator</a>
+        </div>
+      </section>
+
+      <hr class="divider">
+
+      <!-- ===================== UNDERSTAND TAXES ===================== -->
+      <section class="topic-section" id="understand-taxes" aria-labelledby="topic-understand-taxes">
+        <h2 id="topic-understand-taxes">Understand Taxes <span class="topic-count">7</span></h2>
+        <p class="topic-description">Estimate federal income tax, self-employment tax, capital gains, and find your tax bracket.</p>
+        <div class="calc-grid">
+          <a href="/tax-calculators/federal-income-tax-calculator/" class="calc-item"><span class="calc-item-dot" aria-hidden="true"></span>Federal Income Tax Calculator</a>
+          <a href="/tax-calculators/self-employment-tax-calculator/" class="calc-item"><span class="calc-item-dot" aria-hidden="true"></span>Self-Employment Tax Calculator</a>
+          <a href="/tax-calculators/capital-gains-tax-calculator/" class="calc-item"><span class="calc-item-dot" aria-hidden="true"></span>Capital Gains Tax Calculator</a>
+          <a href="/tax-calculators/tax-bracket-calculator/" class="calc-item"><span class="calc-item-dot" aria-hidden="true"></span>Tax Bracket Calculator</a>
+          <a href="/tax-calculators/tax-refund-estimator/" class="calc-item"><span class="calc-item-dot" aria-hidden="true"></span>Tax Refund Estimator</a>
+          <a href="/tax-calculators/standard-vs-itemized-deduction-calculator/" class="calc-item"><span class="calc-item-dot" aria-hidden="true"></span>Standard vs Itemized Deduction Calculator</a>
+          <a href="/tax-calculators/quarterly-estimated-tax-calculator/" class="calc-item"><span class="calc-item-dot" aria-hidden="true"></span>Quarterly Estimated Tax Calculator</a>
+        </div>
+      </section>
+
+      <hr class="divider">
+
+      <!-- ===================== EARN ONLINE ===================== -->
+      <section class="topic-section" id="earn-online" aria-labelledby="topic-earn-online">
+        <h2 id="topic-earn-online">Earn Online <span class="topic-count">7</span></h2>
+        <p class="topic-description">Project revenue from affiliate marketing, online courses, ebooks, podcasts, and SaaS products.</p>
+        <div class="calc-grid">
+          <a href="/digital-income-calculators/affiliate-income-calculator/" class="calc-item"><span class="calc-item-dot" aria-hidden="true"></span>Affiliate Income Calculator</a>
+          <a href="/digital-income-calculators/online-course-revenue-calculator/" class="calc-item"><span class="calc-item-dot" aria-hidden="true"></span>Online Course Revenue Calculator</a>
+          <a href="/digital-income-calculators/ebook-sales-calculator/" class="calc-item"><span class="calc-item-dot" aria-hidden="true"></span>Ebook Sales Calculator</a>
+          <a href="/digital-income-calculators/podcast-monetization-calculator/" class="calc-item"><span class="calc-item-dot" aria-hidden="true"></span>Podcast Monetization Calculator</a>
+          <a href="/digital-income-calculators/saas-revenue-calculator/" class="calc-item"><span class="calc-item-dot" aria-hidden="true"></span>SaaS Revenue Calculator</a>
+          <a href="/digital-income-calculators/newsletter-revenue-calculator/" class="calc-item"><span class="calc-item-dot" aria-hidden="true"></span>Newsletter Revenue Calculator</a>
+          <a href="/digital-income-calculators/creator-revenue-calculator/" class="calc-item"><span class="calc-item-dot" aria-hidden="true"></span>Creator Revenue Calculator</a>
+        </div>
+      </section>
+
+      <!-- Search CTA -->
+      <div class="search-cta">
+        <h2>Can't find what you're looking for?</h2>
+        <p>Browse all 140+ calculators organized by category, or search by name on our homepage.</p>
+        <a href="/all-calculators/" class="btn-primary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          View All Calculators
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect width="32" height="32" rx="8" fill="currentColor"/>
+              <path d="M8 10h16M8 16h16M8 22h10" stroke="#1B4D3E" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed. Make smarter money decisions with tools you can trust.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Real Estate</h4>
+          <a href="/real-estate-calculators/mortgage-calculator/">Mortgage Calculator</a>
+          <a href="/real-estate-calculators/affordability-calculator/">Affordability Calculator</a>
+          <a href="/real-estate-calculators/rent-vs-buy-calculator/">Rent vs Buy</a>
+          <a href="/real-estate-calculators/">View All</a>
+        </div>
+        <div class="footer-col">
+          <h4>Finance</h4>
+          <a href="/finance-calculators/compound-interest-calculator/">Compound Interest</a>
+          <a href="/finance-calculators/loan-calculator/">Loan Calculator</a>
+          <a href="/finance-calculators/retirement-savings-calculator/">Retirement Savings</a>
+          <a href="/finance-calculators/">View All</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about.html">About</a>
+          <a href="/contact.html">Contact</a>
+          <a href="/privacy.html">Privacy Policy</a>
+          <a href="/terms.html">Terms of Use</a>
+          <a href="/disclaimer.html">Disclaimer</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/privacy.html">Privacy</a>
+          <a href="/terms.html">Terms</a>
+          <a href="/disclaimer.html">Disclaimer</a>
+          <a href="/sitemap.xml">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    // Mobile menu toggle
+    document.querySelector('.mobile-menu-toggle').addEventListener('click', function() {
+      const nav = document.querySelector('.mobile-nav');
+      const isOpen = nav.classList.toggle('is-open');
+      this.setAttribute('aria-expanded', isOpen);
+      this.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+    });
+  </script>
+
+  <!-- Schema: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://calcwise.io/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Calculators by Topic",
+        "item": "https://calcwise.io/calculators-by-topic/"
+      }
+    ]
+  }
+  </script>
+
+  <!-- Schema: WebPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Calculators by Topic",
+    "description": "Find the right financial calculator for your goal. Browse CalcWise calculators organized by topic: save money, grow wealth, buy a home, start a business, plan retirement, manage debt, and more.",
+    "url": "https://calcwise.io/calculators-by-topic/",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "CalcWise",
+      "url": "https://calcwise.io/"
+    }
+  }
+  </script>
+</body>
+</html>

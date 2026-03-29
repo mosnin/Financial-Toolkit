@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EV Range Calculator - Electric Vehicle Range & Charging Needed | CalcWise</title>
+    <meta name="description" content="Calculate your electric vehicle's current range, whether you can reach your destination, range remaining after the trip, and how much charging you need.">
+    <link rel="canonical" href="https://calcwise.io/energy-utility-calculators/ev-range-calculator/">
+    <meta property="og:title" content="EV Range Calculator | CalcWise">
+    <meta property="og:description" content="Find out if your EV can make your trip and how much charge you'll have left. Enter battery size, efficiency, current charge, and destination distance.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://calcwise.io/energy-utility-calculators/ev-range-calculator/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="EV Range Calculator | CalcWise">
+    <meta name="twitter:description" content="Calculate EV range and determine if you need to charge before your trip.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/design-system.css">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/"},
+            {"@type": "ListItem", "position": 2, "name": "Energy & Utility Calculators", "item": "https://calcwise.io/energy-utility-calculators/"},
+            {"@type": "ListItem", "position": 3, "name": "EV Range Calculator"}
+        ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {"@type": "Question", "name": "What is EV efficiency in miles per kWh?", "acceptedAnswer": {"@type": "Answer", "text": "EV efficiency, measured in miles per kWh (mi/kWh), indicates how far a vehicle travels on one kilowatt-hour of battery energy. Most modern EVs achieve 3-4 mi/kWh. Efficiency varies with speed, temperature, terrain, and driving style. The EPA rates each EV model's efficiency; check your owner's manual or the fueleconomy.gov database."}},
+            {"@type": "Question", "name": "Why is my actual EV range less than the rated range?", "acceptedAnswer": {"@type": "Answer", "text": "EPA-rated range is measured under controlled conditions. Real-world range is reduced by highway speeds (above 65 mph significantly increases drag), cold weather (battery chemistry slows in the cold), using heat or A/C, aggressive acceleration, and hilly terrain. Expect 10-30% less range in cold weather or at highway speeds."}},
+            {"@type": "Question", "name": "Should I always charge my EV to 100%?", "acceptedAnswer": {"@type": "Answer", "text": "For daily driving, most EV manufacturers recommend charging to 80% to preserve long-term battery health. Reserve 100% charging for road trips when you need maximum range. Lithium-ion batteries experience less degradation when kept between 20% and 80% state of charge."}},
+            {"@type": "Question", "name": "How long does it take to charge an EV?", "acceptedAnswer": {"@type": "Answer", "text": "Charging time depends on the charger level and battery size. Level 1 (120V household outlet): 3-5 miles of range per hour. Level 2 (240V home charger): 15-30 miles per hour. DC Fast Charging: 100-300+ miles per hour. A Tesla Supercharger can add 200 miles in about 15-20 minutes."}}
+        ]
+    }
+    </script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="/" class="logo">
+                <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+                CalcWise
+            </a>
+            <nav class="main-nav">
+                <a href="/real-estate-calculators/">Real Estate</a>
+                <a href="/advanced-real-estate-calculators/">Advanced RE</a>
+                <a href="/energy-utility-calculators/">Energy</a>
+                <a href="/finance-calculators/">Finance</a>
+            </nav>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+            </button>
+        </div>
+        <nav class="mobile-nav">
+            <a href="/real-estate-calculators/">Real Estate Calculators</a>
+            <a href="/advanced-real-estate-calculators/">Advanced Real Estate</a>
+            <a href="/energy-utility-calculators/">Energy &amp; Utility</a>
+            <a href="/finance-calculators/">Finance Calculators</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <nav class="breadcrumbs" aria-label="Breadcrumb">
+                <ol>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/energy-utility-calculators/">Energy &amp; Utility Calculators</a></li>
+                    <li><span aria-current="page">EV Range Calculator</span></li>
+                </ol>
+            </nav>
+
+            <div class="page-content">
+                <div class="calc-page-layout">
+                    <div class="calc-page-main">
+                        <h1>EV Range Calculator</h1>
+                        <p class="subtitle" style="color: var(--color-gray-600); font-size: var(--text-lg); line-height: var(--leading-relaxed); margin-bottom: var(--space-8);">
+                            Plan your trip with confidence. Enter your EV's battery size, efficiency, current charge level, and destination distance to see if you can make it -- and how much charge you'll have to spare.
+                        </p>
+
+                        <div class="calc-container">
+                            <div class="calc-header">
+                                <h2>EV Range &amp; Trip Planner</h2>
+                                <p>See if your charge will get you to your destination</p>
+                            </div>
+                            <div class="calc-body">
+                                <form id="ev-form">
+                                    <div class="form-group">
+                                        <label class="form-label" for="battery-size">Battery Size (kWh)</label>
+                                        <input type="number" id="battery-size" name="batterySize" class="form-input" placeholder="75" min="10" max="200" step="0.5" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label" for="efficiency">Efficiency (miles per kWh)</label>
+                                        <input type="number" id="efficiency" name="efficiency" class="form-input" placeholder="3.5" min="1" max="10" step="0.1" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label" for="current-charge">Current Charge %</label>
+                                        <div class="input-prefix">
+                                            <input type="number" id="current-charge" name="currentCharge" class="form-input" placeholder="80" min="1" max="100" step="1" required>
+                                            <span class="prefix" style="right:0;left:auto;border-right:none;border-left:1px solid var(--color-gray-200);">%</span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label" for="destination-distance">Destination Distance (miles)</label>
+                                        <input type="number" id="destination-distance" name="destinationDistance" class="form-input" placeholder="150" min="1" step="1" required>
+                                    </div>
+                                    <div class="calc-actions">
+                                        <button type="button" class="btn btn-calculate btn-full" onclick="calculateEVRange()">Calculate EV Range</button>
+                                        <button type="reset" class="btn btn-reset">Reset</button>
+                                    </div>
+                                </form>
+
+                                <div id="results" class="calc-results hidden">
+                                    <div class="result-primary">
+                                        <div class="result-label">Current Range</div>
+                                        <div class="result-value" id="result-current-range">0 mi</div>
+                                    </div>
+                                    <div class="result-grid result-grid-3">
+                                        <div class="result-item">
+                                            <div class="result-label">Range Needed</div>
+                                            <div class="result-value" id="result-range-needed">0 mi</div>
+                                        </div>
+                                        <div class="result-item">
+                                            <div class="result-label">Range After Trip</div>
+                                            <div class="result-value" id="result-range-after">0 mi</div>
+                                        </div>
+                                        <div class="result-item">
+                                            <div class="result-label">Can You Make It?</div>
+                                            <div class="result-value" id="result-can-make-it">--</div>
+                                        </div>
+                                        <div class="result-item">
+                                            <div class="result-label">Charging Needed</div>
+                                            <div class="result-value" id="result-charging-needed">0 kWh</div>
+                                        </div>
+                                        <div class="result-item">
+                                            <div class="result-label">Full Battery Range</div>
+                                            <div class="result-value" id="result-full-range">0 mi</div>
+                                        </div>
+                                        <div class="result-item">
+                                            <div class="result-label">Available Battery (kWh)</div>
+                                            <div class="result-value" id="result-available-kwh">0 kWh</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="ad-slot ad-slot-leaderboard"></div>
+
+                        <section class="content-section">
+                            <h2>EV Range Formula</h2>
+                            <div class="formula-box">
+                                <div class="formula-label">Range Calculations</div>
+                                Full Battery Range = Battery Size (kWh) &times; Efficiency (mi/kWh)
+Available Energy = Battery Size &times; (Current Charge % / 100)
+Current Range = Available Energy &times; Efficiency (mi/kWh)
+Range After Trip = Current Range &minus; Destination Distance
+Charging Needed = MAX(0, (Destination Distance / Efficiency) &minus; Available Energy)
+                            </div>
+                            <p>This calculator assumes consistent efficiency throughout the trip. Real-world performance varies with driving conditions, weather, and speed.</p>
+                            <p>As a safety buffer, most EV experts recommend maintaining at least 10-15% charge (not reaching 0%) to preserve battery health and avoid getting stranded.</p>
+                        </section>
+
+                        <section class="content-section">
+                            <h2>How to Use This Calculator</h2>
+                            <ol>
+                                <li><strong>Enter battery size in kWh</strong> -- find this in your EV's specifications or owner's manual.</li>
+                                <li><strong>Enter efficiency (miles per kWh)</strong> -- the EPA-rated efficiency or your recent real-world average.</li>
+                                <li><strong>Enter current charge %</strong> -- check your dashboard or EV app.</li>
+                                <li><strong>Enter destination distance</strong> -- the one-way distance to your destination in miles.</li>
+                                <li><strong>Click "Calculate EV Range"</strong> to see if you can make the trip and how much charging you need.</li>
+                            </ol>
+                        </section>
+
+                        <section class="content-section">
+                            <h2>Example Scenario</h2>
+                            <h3>Tesla Model 3 Long Range Road Trip</h3>
+                            <p>Battery: 82 kWh | Efficiency: 3.5 mi/kWh | Current Charge: 80% | Destination: 200 miles</p>
+                            <p>Available Energy = 82 &times; 80% = <strong>65.6 kWh</strong></p>
+                            <p>Current Range = 65.6 &times; 3.5 = <strong>229.6 miles</strong></p>
+                            <p>Range After Trip = 229.6 &minus; 200 = <strong>29.6 miles remaining</strong></p>
+                            <p>Result: You can make the trip with approximately 29.6 miles of range to spare -- but may want to top up to 90% before departing for extra safety margin.</p>
+                        </section>
+
+                        <section class="faq-section">
+                            <h2>Frequently Asked Questions</h2>
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">
+                                    What is EV efficiency in miles per kWh?
+                                    <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>EV efficiency, measured in miles per kWh (mi/kWh), indicates how far a vehicle travels on one kilowatt-hour of battery energy. Most modern EVs achieve 3-4 mi/kWh. Efficiency varies with speed, temperature, terrain, and driving style.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">
+                                    Why is my actual EV range less than the rated range?
+                                    <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>EPA-rated range is measured under controlled conditions. Real-world range is reduced by highway speeds, cold weather, using heat or A/C, aggressive acceleration, and hilly terrain. Expect 10-30% less range in cold weather or at highway speeds.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">
+                                    Should I always charge my EV to 100%?
+                                    <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>For daily driving, most EV manufacturers recommend charging to 80% to preserve long-term battery health. Reserve 100% charging for road trips when you need maximum range. Lithium-ion batteries experience less degradation when kept between 20% and 80% state of charge.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">
+                                    How long does it take to charge an EV?
+                                    <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 011-1z"/></svg>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>Charging time depends on the charger level and battery size. Level 1 (120V outlet): 3-5 miles of range per hour. Level 2 (240V home charger): 15-30 miles per hour. DC Fast Charging: 100-300+ miles per hour. A DC fast charger can add 200 miles in about 15-20 minutes.</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="related-calculators">
+                            <h2>Related Calculators</h2>
+                            <div class="grid grid-3">
+                                <a href="/energy-utility-calculators/electricity-cost-calculator/" class="card card-link">
+                                    <div class="card-icon">E</div>
+                                    <h3>Electricity Cost Calculator</h3>
+                                    <p>Calculate the cost of charging your EV at home.</p>
+                                </a>
+                                <a href="/energy-utility-calculators/carbon-footprint-calculator/" class="card card-link">
+                                    <div class="card-icon">C</div>
+                                    <h3>Carbon Footprint Calculator</h3>
+                                    <p>Compare your EV's carbon footprint to a gas vehicle.</p>
+                                </a>
+                                <a href="/energy-utility-calculators/utility-bill-comparison-calculator/" class="card card-link">
+                                    <div class="card-icon">U</div>
+                                    <h3>Utility Bill Comparison</h3>
+                                    <p>Compare energy providers and rates.</p>
+                                </a>
+                            </div>
+                        </section>
+
+                        <div class="disclaimer">
+                            <strong>Disclaimer:</strong> This calculator provides estimates based on idealized conditions. Actual EV range varies with temperature, speed, driving style, terrain, and battery age. Always maintain a safety buffer and plan charging stops on long trips.
+                        </div>
+
+                        <div class="ad-slot ad-slot-leaderboard"></div>
+                    </div>
+
+                    <aside class="calc-page-sidebar">
+                        <div class="sidebar-card">
+                            <h3>Energy &amp; Utility Tools</h3>
+                            <a href="/energy-utility-calculators/carbon-footprint-calculator/">Carbon Footprint</a>
+                            <a href="/energy-utility-calculators/electricity-cost-calculator/">Electricity Cost</a>
+                            <a href="/energy-utility-calculators/solar-savings-calculator/">Solar Savings</a>
+                            <a href="/energy-utility-calculators/ev-range-calculator/">EV Range</a>
+                            <a href="/energy-utility-calculators/gas-bill-calculator/">Gas Bill</a>
+                            <a href="/energy-utility-calculators/home-energy-efficiency-calculator/">Home Energy Efficiency</a>
+                            <a href="/energy-utility-calculators/utility-bill-comparison-calculator/">Utility Bill Comparison</a>
+                            <a href="/energy-utility-calculators/water-usage-cost-calculator/">Water Usage Cost</a>
+                        </div>
+                        <div class="ad-slot ad-slot-rectangle"></div>
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="/" class="logo">
+                        <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+                        CalcWise
+                    </a>
+                    <p>Free, accurate financial calculators for everyone. Make smarter money decisions with CalcWise.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Energy &amp; Utility</h4>
+                    <a href="/energy-utility-calculators/carbon-footprint-calculator/">Carbon Footprint</a>
+                    <a href="/energy-utility-calculators/electricity-cost-calculator/">Electricity Cost</a>
+                    <a href="/energy-utility-calculators/solar-savings-calculator/">Solar Savings</a>
+                    <a href="/energy-utility-calculators/ev-range-calculator/">EV Range</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Advanced Real Estate</h4>
+                    <a href="/advanced-real-estate-calculators/property-appreciation-calculator/">Property Appreciation</a>
+                    <a href="/advanced-real-estate-calculators/real-estate-leverage-calculator/">Leverage Calculator</a>
+                    <a href="/advanced-real-estate-calculators/real-estate-yield-calculator/">Yield Calculator</a>
+                    <a href="/advanced-real-estate-calculators/rental-expense-ratio-calculator/">Expense Ratio</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <a href="/about/">About</a>
+                    <a href="/contact/">Contact</a>
+                    <a href="/privacy/">Privacy Policy</a>
+                    <a href="/terms/">Terms of Use</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; 2026 CalcWise. All rights reserved.</span>
+                <div class="footer-links">
+                    <a href="/privacy/">Privacy</a>
+                    <a href="/terms/">Terms</a>
+                    <a href="/sitemap.xml">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/calculator-engine.js"></script>
+    <script src="/js/search-index.js"></script>
+    <script>
+    function calculateEVRange() {
+        if (!CalcWise.validateForm('ev-form')) return;
+
+        const values = CalcWise.getFormValues('ev-form');
+        const batterySize = values.batterySize;
+        const efficiency = values.efficiency;
+        const currentCharge = values.currentCharge / 100;
+        const destinationDistance = values.destinationDistance;
+
+        const fullRange = batterySize * efficiency;
+        const availableKwh = batterySize * currentCharge;
+        const currentRange = availableKwh * efficiency;
+        const rangeAfterTrip = currentRange - destinationDistance;
+        const energyNeeded = destinationDistance / efficiency;
+        const chargingNeeded = Math.max(0, energyNeeded - availableKwh);
+        const canMakeIt = rangeAfterTrip >= 0;
+
+        CalcWise.setText('result-current-range', currentRange.toFixed(0) + ' mi');
+        CalcWise.setText('result-range-needed', destinationDistance.toFixed(0) + ' mi');
+        CalcWise.setText('result-range-after', rangeAfterTrip.toFixed(0) + ' mi');
+        CalcWise.setText('result-can-make-it', canMakeIt ? 'Yes' : 'No - Charge Needed');
+        CalcWise.setText('result-charging-needed', chargingNeeded.toFixed(1) + ' kWh');
+        CalcWise.setText('result-full-range', fullRange.toFixed(0) + ' mi');
+        CalcWise.setText('result-available-kwh', availableKwh.toFixed(1) + ' kWh');
+
+        CalcWise.showResults('results');
+    }
+
+    document.getElementById('ev-form').addEventListener('reset', function() {
+        setTimeout(() => CalcWise.hideResults('results'), 0);
+    });
+    </script>
+</body>
+</html>

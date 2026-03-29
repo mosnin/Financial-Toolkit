@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Depreciation Tax Calculator | CalcWise</title>
+  <meta name="description" content="Calculate business asset depreciation using straight-line, MACRS, or Section 179 methods. See annual depreciation schedule and tax savings per year.">
+  <link rel="canonical" href="https://calcwise.io/tax-calculators/depreciation-tax-calculator/">
+  <meta property="og:title" content="Depreciation Tax Calculator | CalcWise">
+  <meta property="og:description" content="Calculate depreciation schedules and tax savings for business assets using straight-line, MACRS, or Section 179.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcwise.io/tax-calculators/depreciation-tax-calculator/">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/"},
+      {"@type": "ListItem", "position": 2, "name": "Tax Calculators", "item": "https://calcwise.io/tax-calculators/"},
+      {"@type": "ListItem", "position": 3, "name": "Depreciation Tax Calculator"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is Section 179 expensing?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Section 179 allows businesses to deduct the full cost of qualifying equipment or software in the year it is placed in service, up to $1,160,000 (2023 limit, indexed annually), rather than depreciating over multiple years."}
+      },
+      {
+        "@type": "Question",
+        "name": "What is MACRS depreciation?",
+        "acceptedAnswer": {"@type": "Answer", "text": "MACRS (Modified Accelerated Cost Recovery System) is the depreciation method required by the IRS for most business assets. It uses accelerated depreciation schedules (3, 5, 7, 10, 15, 20, 27.5, or 39 years depending on asset type)."}
+      },
+      {
+        "@type": "Question",
+        "name": "What is straight-line depreciation?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Straight-line depreciation spreads the asset cost evenly over its useful life: Annual Depreciation = (Cost − Salvage Value) / Useful Life. It produces equal deductions each year."}
+      },
+      {
+        "@type": "Question",
+        "name": "How does depreciation save taxes?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Depreciation is a non-cash deduction that reduces taxable income. The tax savings each year equal the depreciation amount multiplied by your marginal tax rate."}
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="logo">
+        <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav">
+        <a href="/">Home</a>
+        <a href="/pages/business-calculators/">Business</a>
+        <a href="/pages/financial-calculators/">Financial</a>
+        <a href="/pages/tax-calculators/" aria-current="page">Tax</a>
+        <a href="/pages/investment-calculators/">Investment</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav">
+      <a href="/">Home</a>
+      <a href="/pages/business-calculators/">Business Calculators</a>
+      <a href="/pages/financial-calculators/">Financial Calculators</a>
+      <a href="/pages/tax-calculators/">Tax Calculators</a>
+      <a href="/pages/investment-calculators/">Investment Calculators</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/pages/tax-calculators/">Tax Calculators</a></li>
+          <li><span aria-current="page">Depreciation Tax Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="calc-page-layout">
+          <div class="calc-page-main">
+            <h1>Depreciation Tax Calculator</h1>
+            <p class="subtitle" style="font-size:var(--text-lg);color:var(--color-gray-600);margin-bottom:var(--space-8);line-height:var(--leading-relaxed);">Calculate depreciation schedules and annual tax savings for business assets using straight-line, MACRS, or Section 179 expensing. See how much each depreciation method saves you in taxes each year.</p>
+
+            <div class="calc-container">
+              <div class="calc-header">
+                <h2>Depreciation Tax Calculator</h2>
+                <p>Calculate depreciation schedule and annual tax savings</p>
+              </div>
+              <div class="calc-body">
+                <form id="calc-form" onsubmit="return false;">
+                  <div class="form-group">
+                    <label class="form-label" for="asset-cost">Asset Cost</label>
+                    <div class="input-prefix">
+                      <span class="prefix">$</span>
+                      <input type="number" id="asset-cost" class="form-input" placeholder="50000" min="0" step="100">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="salvage-value">Salvage Value (at end of useful life)</label>
+                    <div class="input-prefix">
+                      <span class="prefix">$</span>
+                      <input type="number" id="salvage-value" class="form-input" placeholder="5000" min="0" step="100">
+                    </div>
+                    <p class="form-hint">MACRS and Section 179 assume $0 salvage value by default.</p>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="useful-life">Useful Life (years)</label>
+                    <input type="number" id="useful-life" class="form-input" placeholder="5" min="1" max="40" step="1">
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="dep-method">Depreciation Method</label>
+                    <select id="dep-method" class="form-select">
+                      <option value="sl">Straight-Line</option>
+                      <option value="macrs">MACRS (200% Declining Balance)</option>
+                      <option value="s179">Section 179 (Full Expensing Year 1)</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="tax-rate">Your Marginal Tax Rate (%)</label>
+                    <div class="input-suffix">
+                      <input type="number" id="tax-rate" class="form-input" placeholder="24" min="0" max="50" step="1">
+                      <span class="suffix">%</span>
+                    </div>
+                  </div>
+                  <div class="calc-actions">
+                    <button type="button" class="btn btn-calculate btn-full" onclick="calculateDepreciation()">Calculate Depreciation</button>
+                    <button type="button" class="btn btn-reset" onclick="resetForm()">Reset</button>
+                  </div>
+                </form>
+
+                <div id="results" class="calc-results hidden">
+                  <div class="result-primary">
+                    <div class="result-label">Year 1 Tax Savings</div>
+                    <div class="result-value" id="result-yr1-savings">$0</div>
+                  </div>
+                  <div class="result-grid">
+                    <div class="result-item">
+                      <div class="result-label">Year 1 Depreciation</div>
+                      <div class="result-value" id="result-yr1-dep">$0</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Total Tax Savings</div>
+                      <div class="result-value" id="result-total-savings">$0</div>
+                    </div>
+                  </div>
+                  <div id="dep-schedule" style="margin-top:var(--space-6);"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="ad-slot ad-slot-leaderboard"></div>
+
+            <section class="content-section">
+              <h2>Depreciation Methods Explained</h2>
+              <div class="formula-box">
+                <div class="formula-label">Straight-Line</div>
+                Annual Depreciation = (Cost − Salvage Value) / Useful Life<br>
+                Equal deduction every year for the asset's useful life.
+              </div>
+              <div class="formula-box">
+                <div class="formula-label">MACRS (200% Declining Balance)</div>
+                Year 1 Rate = 2 / Useful Life (with half-year convention)<br>
+                Subsequent years: (2 / Useful Life) × Remaining Book Value<br>
+                Switches to straight-line when SL gives larger deduction.
+              </div>
+              <div class="formula-box">
+                <div class="formula-label">Section 179</div>
+                Full asset cost deducted in Year 1 (up to annual limit ~$1.16M).<br>
+                Best for maximizing immediate tax savings.
+              </div>
+              <div class="formula-box">
+                <div class="formula-label">Annual Tax Savings</div>
+                Tax Savings = Annual Depreciation × Marginal Tax Rate
+              </div>
+            </section>
+
+            <section class="content-section">
+              <h2>How to Use This Calculator</h2>
+              <ol>
+                <li>Enter the <strong>asset cost</strong> (purchase price including installation).</li>
+                <li>Enter the <strong>salvage value</strong> (estimated residual value at end of life; often $0 for MACRS).</li>
+                <li>Enter the <strong>useful life</strong> in years (IRS MACRS classes: 3, 5, 7, 10, 15, 20 years).</li>
+                <li>Select the <strong>depreciation method</strong>.</li>
+                <li>Enter your <strong>marginal tax rate</strong> to calculate annual tax savings.</li>
+              </ol>
+            </section>
+
+            <section class="content-section">
+              <h2>Example Scenario</h2>
+              <p>A business purchases a $50,000 computer system with a $5,000 salvage value and 5-year useful life. Marginal tax rate: 24%.</p>
+              <ul>
+                <li><strong>Straight-Line:</strong> ($50,000 − $5,000) / 5 = $9,000/yr → Tax savings: $9,000 × 24% = $2,160/yr</li>
+                <li><strong>MACRS 5-year:</strong> Year 1: 20% × $50,000 = $10,000 → Tax savings: $2,400 in year 1</li>
+                <li><strong>Section 179:</strong> Deduct full $50,000 in Year 1 → Tax savings: $12,000 immediately</li>
+              </ul>
+            </section>
+
+            <section class="faq-section">
+              <h2>Frequently Asked Questions</h2>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">What is Section 179 expensing?<svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg></button>
+                <div class="faq-answer"><p>Section 179 allows businesses to deduct the full cost of qualifying equipment or software in the year it is placed in service, up to $1,160,000 (indexed annually), rather than depreciating over multiple years.</p></div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">What is MACRS depreciation?<svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg></button>
+                <div class="faq-answer"><p>MACRS (Modified Accelerated Cost Recovery System) is the depreciation method required by the IRS for most business assets. It uses accelerated depreciation schedules (3, 5, 7, 10, 15, 20 years depending on asset type).</p></div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">What is straight-line depreciation?<svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg></button>
+                <div class="faq-answer"><p>Straight-line depreciation spreads the asset cost evenly over its useful life: Annual Depreciation = (Cost − Salvage Value) / Useful Life. It produces equal deductions each year.</p></div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">How does depreciation save taxes?<svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg></button>
+                <div class="faq-answer"><p>Depreciation is a non-cash deduction that reduces taxable income. The tax savings each year equal the depreciation amount multiplied by your marginal tax rate.</p></div>
+              </div>
+            </section>
+
+            <section class="related-calculators">
+              <h2>Related Calculators</h2>
+              <div class="grid grid-3">
+                <a href="/pages/tax-calculators/business-tax-liability-calculator/" class="card card-link">
+                  <h3>Business Tax Liability</h3>
+                  <p>Estimate total business tax by entity structure.</p>
+                </a>
+                <a href="/pages/tax-calculators/self-employment-tax-calculator/" class="card card-link">
+                  <h3>Self-Employment Tax Calculator</h3>
+                  <p>Calculate SE tax for freelancers and sole proprietors.</p>
+                </a>
+                <a href="/pages/tax-calculators/quarterly-estimated-tax-calculator/" class="card card-link">
+                  <h3>Quarterly Estimated Tax</h3>
+                  <p>Plan your quarterly tax payments throughout the year.</p>
+                </a>
+                <a href="/pages/business-calculators/" class="card card-link">
+                  <h3>Business Calculators</h3>
+                  <p>More tools for business owners and entrepreneurs.</p>
+                </a>
+              </div>
+            </section>
+
+            <div class="disclaimer">
+              <strong>Tax Disclaimer:</strong> This calculator provides estimates for educational purposes only and does not constitute tax advice. Depreciation rules are complex and vary by asset type, business use percentage, and tax elections made. Bonus depreciation rules change frequently. Consult a CPA for accurate depreciation planning specific to your assets and business structure.
+            </div>
+          </div>
+
+          <aside class="calc-page-sidebar">
+            <div class="ad-slot ad-slot-rectangle"></div>
+            <div class="sidebar-card">
+              <h3>Tax Calculators</h3>
+              <a href="/pages/tax-calculators/business-tax-liability-calculator/">Business Tax Liability</a>
+              <a href="/pages/tax-calculators/self-employment-tax-calculator/">Self-Employment Tax</a>
+              <a href="/pages/tax-calculators/quarterly-estimated-tax-calculator/">Quarterly Estimated Tax</a>
+              <a href="/pages/tax-calculators/tax-bracket-calculator/">Tax Bracket Calculator</a>
+              <a href="/pages/tax-calculators/after-tax-income-calculator/">After-Tax Income</a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free online calculators for business, finance, tax, and investment decisions.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Calculators</h4>
+          <a href="/pages/business-calculators/">Business</a>
+          <a href="/pages/financial-calculators/">Financial</a>
+          <a href="/pages/tax-calculators/">Tax</a>
+          <a href="/pages/investment-calculators/">Investment</a>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <a href="/about/">About</a>
+          <a href="/blog/">Blog</a>
+          <a href="/contact/">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="/privacy/">Privacy Policy</a>
+          <a href="/terms/">Terms of Service</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/privacy/">Privacy</a>
+          <a href="/terms/">Terms</a>
+          <a href="/contact/">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calculateDepreciation() {
+      const cost = CalcWise.parseNumber(document.getElementById('asset-cost').value);
+      const salvage = CalcWise.parseNumber(document.getElementById('salvage-value').value);
+      const life = parseInt(document.getElementById('useful-life').value) || 5;
+      const method = document.getElementById('dep-method').value;
+      const taxRate = CalcWise.parseNumber(document.getElementById('tax-rate').value) / 100;
+
+      if (cost <= 0) { alert('Please enter asset cost.'); return; }
+
+      let schedule = [];
+
+      if (method === 'sl') {
+        const annualDep = (cost - salvage) / life;
+        let accumulated = 0;
+        for (let y = 1; y <= life; y++) {
+          accumulated += annualDep;
+          schedule.push({ year: y, dep: annualDep, accumulated, savings: annualDep * taxRate });
+        }
+      } else if (method === 'macrs') {
+        // Simplified MACRS with half-year convention using 200DB
+        let bookValue = cost;
+        let accumulated = 0;
+        const rate = 2 / life;
+        for (let y = 1; y <= life + 1; y++) {
+          let dep;
+          const slRate = 1 / (life - y + 1.5);
+          const dbRate = y === 1 ? rate / 2 : rate;
+          if (slRate > dbRate || bookValue <= 0) {
+            dep = bookValue / (life - y + 1.5);
+          } else {
+            dep = bookValue * (y === 1 ? rate / 2 : rate);
+          }
+          dep = Math.max(0, Math.min(dep, bookValue));
+          if (dep <= 0) break;
+          accumulated += dep;
+          schedule.push({ year: y, dep, accumulated, savings: dep * taxRate });
+          bookValue -= dep;
+          if (bookValue < 0.01) break;
+        }
+      } else if (method === 's179') {
+        schedule.push({ year: 1, dep: cost, accumulated: cost, savings: cost * taxRate });
+      }
+
+      const yr1 = schedule[0] || { dep: 0, savings: 0 };
+      const totalSavings = schedule.reduce((s, r) => s + r.savings, 0);
+
+      CalcWise.setText('result-yr1-dep', CalcWise.formatCurrency(yr1.dep));
+      CalcWise.setText('result-yr1-savings', CalcWise.formatCurrency(yr1.savings));
+      CalcWise.setText('result-total-savings', CalcWise.formatCurrency(totalSavings));
+
+      // Render schedule table
+      let tableHTML = '<h3 style="font-size:var(--text-base);font-weight:var(--font-semibold);margin-bottom:var(--space-3);">Depreciation Schedule</h3>';
+      tableHTML += '<div style="overflow-x:auto;"><table style="width:100%;border-collapse:collapse;font-size:var(--text-sm);">';
+      tableHTML += '<thead><tr style="background:var(--color-primary-50);"><th style="padding:var(--space-2) var(--space-3);text-align:left;">Year</th><th style="padding:var(--space-2) var(--space-3);text-align:right;">Depreciation</th><th style="padding:var(--space-2) var(--space-3);text-align:right;">Accumulated</th><th style="padding:var(--space-2) var(--space-3);text-align:right;">Tax Savings</th></tr></thead><tbody>';
+      schedule.forEach((row, i) => {
+        tableHTML += `<tr style="background:${i % 2 === 0 ? 'var(--color-white)' : 'var(--color-gray-50)'}">
+          <td style="padding:var(--space-2) var(--space-3);">Year ${row.year}</td>
+          <td style="padding:var(--space-2) var(--space-3);text-align:right;">${CalcWise.formatCurrency(row.dep)}</td>
+          <td style="padding:var(--space-2) var(--space-3);text-align:right;">${CalcWise.formatCurrency(row.accumulated)}</td>
+          <td style="padding:var(--space-2) var(--space-3);text-align:right;">${CalcWise.formatCurrency(row.savings)}</td>
+        </tr>`;
+      });
+      tableHTML += '</tbody></table></div>';
+      document.getElementById('dep-schedule').innerHTML = tableHTML;
+
+      CalcWise.showResults('results');
+    }
+
+    function resetForm() {
+      document.getElementById('calc-form').reset();
+      document.getElementById('dep-schedule').innerHTML = '';
+      CalcWise.hideResults('results');
+    }
+
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', !expanded);
+        btn.nextElementSibling.style.display = expanded ? 'none' : 'block';
+      });
+    });
+    document.querySelectorAll('.faq-answer').forEach(a => a.style.display = 'none');
+
+    const toggle = document.querySelector('.mobile-menu-toggle');
+    const mobileNav = document.querySelector('.mobile-nav');
+    if (toggle && mobileNav) {
+      toggle.addEventListener('click', () => {
+        const open = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', !open);
+        mobileNav.style.display = open ? 'none' : 'block';
+      });
+    }
+  </script>
+</body>
+</html>

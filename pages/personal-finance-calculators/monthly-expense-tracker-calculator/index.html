@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Monthly Expense Tracker Calculator - CalcWise</title>
+  <meta name="description" content="Track all monthly expenses across 10 categories, see total spending, category breakdowns, percentage of income, and your savings rate. Free online expense tracker.">
+  <link rel="canonical" href="https://calcwise.io/personal-finance-calculators/monthly-expense-tracker-calculator/">
+  <meta property="og:title" content="Monthly Expense Tracker Calculator - CalcWise">
+  <meta property="og:description" content="Track monthly expenses across housing, food, transport, and more. See your full category breakdown and savings rate.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcwise.io/personal-finance-calculators/monthly-expense-tracker-calculator/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Monthly Expense Tracker Calculator - CalcWise">
+  <meta name="twitter:description" content="Track all monthly expenses and see your category breakdown, % of income, and savings rate.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/"},
+      {"@type": "ListItem", "position": 2, "name": "Personal Finance Calculators", "item": "https://calcwise.io/personal-finance-calculators/"},
+      {"@type": "ListItem", "position": 3, "name": "Monthly Expense Tracker Calculator"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the average monthly expense for an American household?",
+        "acceptedAnswer": {"@type": "Answer", "text": "According to the Bureau of Labor Statistics, the average American household spends approximately $5,000-$6,000 per month on total living expenses, with housing being the largest category at roughly 33% of spending, followed by transportation at 16% and food at 12%."}
+      },
+      {
+        "@type": "Question",
+        "name": "How do I calculate my savings rate?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Your savings rate is calculated as: (Monthly Savings / Gross Monthly Income) x 100. For example, if you earn $5,000/month and save $750, your savings rate is 15%. Financial experts generally recommend a savings rate of at least 15-20% including retirement contributions."}
+      },
+      {
+        "@type": "Question",
+        "name": "What expenses should I track monthly?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Track all regular spending categories: housing (rent/mortgage, utilities), transportation (car payment, fuel, insurance), food (groceries and dining out), healthcare (insurance premiums, medications), insurance, subscriptions, entertainment, personal care, and any savings or debt payments."}
+      },
+      {
+        "@type": "Question",
+        "name": "How can I reduce my monthly expenses?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Start by identifying your highest-percentage categories and finding small, sustainable reductions. Common wins include meal prepping to cut food costs, auditing and canceling unused subscriptions, refinancing debt for lower payments, switching insurance providers, and reducing utility usage. Even a 10% reduction in one large category makes a significant annual impact."}
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="logo">
+        <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav">
+        <a href="/">Home</a>
+        <a href="/pages/finance-calculators/">Finance</a>
+        <a href="/pages/personal-finance-calculators/" aria-current="page">Personal Finance</a>
+        <a href="/pages/investment-calculators/">Investment</a>
+        <a href="/pages/tax-calculators/">Tax</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav">
+      <a href="/">Home</a>
+      <a href="/pages/finance-calculators/">Finance Calculators</a>
+      <a href="/pages/personal-finance-calculators/">Personal Finance Calculators</a>
+      <a href="/pages/investment-calculators/">Investment Calculators</a>
+      <a href="/pages/tax-calculators/">Tax Calculators</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li><a href="/pages/personal-finance-calculators/">Personal Finance Calculators</a></li>
+        <li><span aria-current="page">Monthly Expense Tracker Calculator</span></li>
+      </ol>
+    </nav>
+
+    <div class="page-content">
+      <div class="article-content">
+        <h1>Monthly Expense Tracker Calculator</h1>
+        <p>Understanding where your money goes is the first step toward financial control. This expense tracker breaks your monthly spending into 10 common categories, calculates your total expenses, shows each category as a percentage of income, and computes your savings rate — giving you a clear picture of your financial health every month.</p>
+
+        <div class="ad-slot ad-slot-leaderboard"></div>
+
+        <div class="calc-container">
+          <div class="calc-header">
+            <h2>Track Your Monthly Expenses</h2>
+            <p>Enter amounts for each spending category</p>
+          </div>
+          <div class="calc-body">
+            <form id="expense-form">
+              <div class="form-group">
+                <label class="form-label" for="grossIncome">Monthly Gross Income <span style="font-weight:400;color:var(--color-text-secondary);">(optional, for % calculations)</span></label>
+                <div class="input-prefix"><span class="prefix">$</span>
+                  <input type="number" id="grossIncome" name="grossIncome" class="form-input" placeholder="5000" min="0" step="100">
+                </div>
+              </div>
+
+              <h3 style="font-size:var(--text-base);margin:var(--space-5) 0 var(--space-3);">Monthly Spending by Category</h3>
+              <div class="result-grid result-grid-2" style="gap:var(--space-4);">
+                <div class="form-group">
+                  <label class="form-label" for="housing">Housing (rent, mortgage, HOA)</label>
+                  <div class="input-prefix"><span class="prefix">$</span>
+                    <input type="number" id="housing" name="housing" class="form-input" placeholder="1400" min="0" step="25">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="utilities">Utilities (electric, gas, water, internet)</label>
+                  <div class="input-prefix"><span class="prefix">$</span>
+                    <input type="number" id="utilities" name="utilities" class="form-input" placeholder="200" min="0" step="10">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="food">Food (groceries + dining out)</label>
+                  <div class="input-prefix"><span class="prefix">$</span>
+                    <input type="number" id="food" name="food" class="form-input" placeholder="600" min="0" step="25">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="transportation">Transportation (car, gas, transit)</label>
+                  <div class="input-prefix"><span class="prefix">$</span>
+                    <input type="number" id="transportation" name="transportation" class="form-input" placeholder="450" min="0" step="25">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="insurance">Insurance (health, auto, life)</label>
+                  <div class="input-prefix"><span class="prefix">$</span>
+                    <input type="number" id="insurance" name="insurance" class="form-input" placeholder="300" min="0" step="10">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="subscriptions">Subscriptions (streaming, software)</label>
+                  <div class="input-prefix"><span class="prefix">$</span>
+                    <input type="number" id="subscriptions" name="subscriptions" class="form-input" placeholder="75" min="0" step="5">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="entertainment">Entertainment (events, hobbies)</label>
+                  <div class="input-prefix"><span class="prefix">$</span>
+                    <input type="number" id="entertainment" name="entertainment" class="form-input" placeholder="200" min="0" step="25">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="personal">Personal (clothing, haircuts, gifts)</label>
+                  <div class="input-prefix"><span class="prefix">$</span>
+                    <input type="number" id="personal" name="personal" class="form-input" placeholder="150" min="0" step="25">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="savings">Savings / Investments</label>
+                  <div class="input-prefix"><span class="prefix">$</span>
+                    <input type="number" id="savings" name="savings" class="form-input" placeholder="500" min="0" step="25">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="other">Other / Miscellaneous</label>
+                  <div class="input-prefix"><span class="prefix">$</span>
+                    <input type="number" id="other" name="other" class="form-input" placeholder="100" min="0" step="25">
+                  </div>
+                </div>
+              </div>
+
+              <div class="calc-actions">
+                <button type="button" class="btn btn-calculate" onclick="calcExpenses()">Analyze Expenses</button>
+                <button type="button" class="btn btn-reset" onclick="resetExpenses()">Reset</button>
+              </div>
+            </form>
+
+            <div id="results" class="calc-results hidden">
+              <div class="result-primary">
+                <div class="result-label">Total Monthly Expenses</div>
+                <div class="result-value" id="totalExpenses">$0</div>
+              </div>
+              <div class="result-grid result-grid-3" style="margin-top:var(--space-4);">
+                <div class="result-item">
+                  <div class="result-label">Annual Expenses</div>
+                  <div class="result-value" id="annualExpenses">$0</div>
+                </div>
+                <div class="result-item">
+                  <div class="result-label">% of Income Spent</div>
+                  <div class="result-value" id="pctIncome">N/A</div>
+                </div>
+                <div class="result-item">
+                  <div class="result-label">Savings Rate</div>
+                  <div class="result-value" id="savingsRate" style="color: var(--color-success);">N/A</div>
+                </div>
+              </div>
+              <div style="margin-top:var(--space-6);">
+                <h3 style="font-size:var(--text-base);margin-bottom:var(--space-3);">Category Breakdown</h3>
+                <div id="breakdownTable"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <section class="content-section">
+          <h2>How Expense Percentages Are Calculated</h2>
+          <div class="formula-box">
+            <div class="formula-label">Formula</div>
+            Total Monthly Expenses = Sum of all category amounts<br>
+            Category % = (Category Amount / Gross Income) &times; 100<br>
+            Savings Rate = (Savings / Gross Income) &times; 100<br>
+            Annual Expenses = Total Monthly Expenses &times; 12
+          </div>
+          <p>Tracking expenses by category reveals spending patterns that are invisible when you only look at your bank balance. Most people are surprised by how much small recurring costs (subscriptions, daily coffees, dining) accumulate over a month — category breakdowns make these visible and actionable.</p>
+        </section>
+
+        <section class="content-section">
+          <h2>How to Use This Calculator</h2>
+          <ol>
+            <li><strong>Enter monthly gross income:</strong> Optional, but enables percentage calculations and savings rate.</li>
+            <li><strong>Fill in each expense category:</strong> Use monthly averages. For irregular expenses, divide annual total by 12.</li>
+            <li><strong>Click "Analyze Expenses":</strong> See your total spending, category breakdown, and savings rate.</li>
+            <li><strong>Identify top categories:</strong> Look for categories above expected benchmarks — those are reduction opportunities.</li>
+            <li><strong>Set targets:</strong> Use this as a baseline and track monthly to measure improvement over time.</li>
+          </ol>
+        </section>
+
+        <section class="content-section">
+          <h2>Example Scenario</h2>
+          <p>Casey earns $5,500/month gross and tracks these expenses: Housing $1,350, Utilities $175, Food $580, Transportation $420, Insurance $280, Subscriptions $95, Entertainment $250, Personal $180, Savings $600, Other $120. Total: $4,050. That is 73.6% of income spent, with a savings rate of 10.9%. Housing is 24.5% of income (healthy), but food at 10.5% is above the typical 8-10% benchmark — a potential area to reduce.</p>
+        </section>
+
+        <section class="faq-section">
+          <h2>Frequently Asked Questions</h2>
+          <div class="faq-item">
+            <button class="faq-question">What is the average monthly expense for an American household?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>The BLS reports average American household spending of approximately $5,000–$6,000/month, with housing at roughly 33%, transportation at 16%, and food at 12% of total spending.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">How do I calculate my savings rate?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>Savings Rate = (Monthly Savings / Gross Monthly Income) x 100. A rate of 15–20% including retirement contributions is generally recommended. The FIRE community often targets 30–50%+ to accelerate financial independence.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">What expenses should I track monthly?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>Track all regular categories: housing, utilities, food, transportation, healthcare, insurance, subscriptions, entertainment, personal care, savings, and miscellaneous. For irregular expenses, divide annual totals by 12 to get a monthly average.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">How can I reduce my monthly expenses?
+              <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+            </button>
+            <div class="faq-answer"><p>Start with your highest categories. Meal prep to cut food costs, audit subscriptions, refinance debt, switch insurance providers, and reduce utility usage. Even 10% reduction in one large category creates significant annual savings.</p></div>
+          </div>
+        </section>
+
+        <section class="related-calculators">
+          <h2>Related Calculators</h2>
+          <div class="grid grid-3">
+            <a href="/pages/personal-finance-calculators/budget-percentage-calculator/" class="card card-link">
+              <h3>Budget Percentage Calculator</h3>
+              <p>Compare your spending percentages to the 50/30/20 rule.</p>
+            </a>
+            <a href="/pages/personal-finance-calculators/monthly-bill-planner-calculator/" class="card card-link">
+              <h3>Monthly Bill Planner</h3>
+              <p>Organize recurring bills by due date and amount.</p>
+            </a>
+            <a href="/pages/personal-finance-calculators/savings-rate-calculator/" class="card card-link">
+              <h3>Savings Rate Calculator</h3>
+              <p>Calculate your savings rate across all account types.</p>
+            </a>
+            <a href="/pages/personal-finance-calculators/net-income-calculator/" class="card card-link">
+              <h3>Net Income Calculator</h3>
+              <p>Know your take-home pay before tracking expenses.</p>
+            </a>
+            <a href="/pages/finance-calculators/budget-calculator/" class="card card-link">
+              <h3>50/30/20 Budget Calculator</h3>
+              <p>Set spending targets based on your income.</p>
+            </a>
+          </div>
+        </section>
+
+        <div class="disclaimer">
+          <strong>Disclaimer:</strong> This calculator is for informational and educational purposes only. Results are based on figures you enter. Benchmark comparisons are general guidelines and may not apply to all situations. This is not financial advice. Consult a qualified financial advisor for personalized guidance.
+        </div>
+
+        <div class="ad-slot ad-slot-rectangle"></div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free online financial calculators to help you make smarter money decisions.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Personal Finance</h4>
+          <a href="/pages/personal-finance-calculators/monthly-expense-tracker-calculator/">Expense Tracker</a>
+          <a href="/pages/personal-finance-calculators/monthly-bill-planner-calculator/">Bill Planner</a>
+          <a href="/pages/personal-finance-calculators/budget-percentage-calculator/">Budget Percentages</a>
+          <a href="/pages/personal-finance-calculators/savings-rate-calculator/">Savings Rate</a>
+        </div>
+        <div class="footer-col">
+          <h4>Tools</h4>
+          <a href="/pages/finance-calculators/budget-calculator/">50/30/20 Budget</a>
+          <a href="/pages/investment-calculators/">Investment Calculators</a>
+          <a href="/pages/tax-calculators/">Tax Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about/">About</a>
+          <a href="/contact/">Contact</a>
+          <a href="/privacy/">Privacy Policy</a>
+          <a href="/terms/">Terms of Service</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 CalcWise. All rights reserved.</span>
+        <div class="footer-links">
+          <a href="/privacy/">Privacy</a>
+          <a href="/terms/">Terms</a>
+          <a href="/contact/">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    const EXPENSE_CATS = [
+      { key: 'housing',        label: 'Housing' },
+      { key: 'utilities',      label: 'Utilities' },
+      { key: 'food',           label: 'Food' },
+      { key: 'transportation', label: 'Transportation' },
+      { key: 'insurance',      label: 'Insurance' },
+      { key: 'subscriptions',  label: 'Subscriptions' },
+      { key: 'entertainment',  label: 'Entertainment' },
+      { key: 'personal',       label: 'Personal' },
+      { key: 'savings',        label: 'Savings' },
+      { key: 'other',          label: 'Other' }
+    ];
+
+    function calcExpenses() {
+      const v = CalcWise.getFormValues('expense-form');
+      const income = v.grossIncome || 0;
+
+      const rows = EXPENSE_CATS.map(cat => {
+        const amt = v[cat.key] || 0;
+        return { ...cat, amt };
+      });
+
+      const total = rows.reduce((s, r) => s + r.amt, 0);
+      if (total === 0) {
+        alert('Please enter at least one expense amount.');
+        return;
+      }
+
+      const savingsAmt = v.savings || 0;
+
+      CalcWise.setText('totalExpenses', CalcWise.formatCurrency(total, 0));
+      CalcWise.setText('annualExpenses', CalcWise.formatCurrency(total * 12, 0));
+
+      if (income > 0) {
+        const pctSpent = (total / income) * 100;
+        const savingsRate = (savingsAmt / income) * 100;
+        CalcWise.setText('pctIncome', CalcWise.formatPercent(pctSpent, 1));
+        const srEl = document.getElementById('savingsRate');
+        srEl.textContent = CalcWise.formatPercent(savingsRate, 1);
+        srEl.style.color = savingsRate >= 20 ? 'var(--color-success)' : savingsRate >= 10 ? 'var(--color-info)' : 'var(--color-danger)';
+      } else {
+        CalcWise.setText('pctIncome', 'Enter income above');
+        CalcWise.setText('savingsRate', 'Enter income above');
+      }
+
+      let tableHtml = '<div class="table-container"><table class="data-table"><thead><tr><th>Category</th><th>Monthly</th><th>Annual</th>' + (income > 0 ? '<th>% of Income</th>' : '') + '</tr></thead><tbody>';
+      rows.sort((a, b) => b.amt - a.amt).forEach(r => {
+        if (r.amt === 0) return;
+        const pct = income > 0 ? (r.amt / income) * 100 : null;
+        tableHtml += `<tr><td>${r.label}</td><td>${CalcWise.formatCurrency(r.amt, 0)}</td><td>${CalcWise.formatCurrency(r.amt * 12, 0)}</td>` + (income > 0 ? `<td>${CalcWise.formatPercent(pct, 1)}</td>` : '') + '</tr>';
+      });
+      tableHtml += `<tr style="font-weight:600;"><td>Total</td><td>${CalcWise.formatCurrency(total, 0)}</td><td>${CalcWise.formatCurrency(total * 12, 0)}</td>` + (income > 0 ? `<td>${CalcWise.formatPercent((total / income) * 100, 1)}</td>` : '') + '</tr>';
+      tableHtml += '</tbody></table></div>';
+      CalcWise.setHtml('breakdownTable', tableHtml);
+
+      CalcWise.showResults('results');
+    }
+
+    function resetExpenses() {
+      document.getElementById('expense-form').reset();
+      CalcWise.hideResults('results');
+    }
+  </script>
+</body>
+</html>

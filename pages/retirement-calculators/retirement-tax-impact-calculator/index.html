@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Retirement Tax Impact Calculator - Traditional vs Roth Comparison | CalcWise</title>
+  <meta name="description" content="Free retirement tax impact calculator. Compare pre-tax Traditional vs after-tax Roth contributions. See after-tax values, tax savings, and which option wins for your situation.">
+  <meta name="keywords" content="traditional vs roth calculator, retirement tax impact calculator, roth vs traditional IRA calculator, pre-tax vs roth 401k, retirement tax comparison">
+  <link rel="canonical" href="https://calcwise.io/retirement-calculators/retirement-tax-impact-calculator/">
+
+  <meta property="og:title" content="Retirement Tax Impact Calculator - Traditional vs Roth">
+  <meta property="og:description" content="Compare pre-tax Traditional vs after-tax Roth contributions to see which gives you more money in retirement after taxes.">
+  <meta property="og:url" content="https://calcwise.io/retirement-calculators/retirement-tax-impact-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Retirement Tax Impact Calculator - Traditional vs Roth">
+  <meta name="twitter:description" content="Compare Traditional vs Roth contributions to see which gives you more after-tax retirement income.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Retirement Calculators", "item": "https://calcwise.io/retirement-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "Retirement Tax Impact Calculator", "item": "https://calcwise.io/retirement-calculators/retirement-tax-impact-calculator/" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "When is a Roth account better than Traditional?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Roth accounts win when your tax rate in retirement is higher than or equal to your current tax rate. This is common for young workers early in their careers (lower current tax bracket who expect to earn more), people who expect tax rates to rise, or those with substantial retirement savings who will be in higher brackets from RMDs." }
+      },
+      {
+        "@type": "Question",
+        "name": "When is a Traditional pre-tax account better than Roth?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Traditional accounts win when your current tax rate is significantly higher than your expected retirement tax rate. This is common for peak-earning years when you are in the 32-37% bracket but expect to be in the 22-24% bracket in retirement. The upfront tax deduction is worth more than the tax-free growth." }
+      },
+      {
+        "@type": "Question",
+        "name": "What if I don't know my retirement tax rate?",
+        "acceptedAnswer": { "@type": "Answer", "text": "A common approach is to diversify: contribute to both pre-tax and Roth accounts. This gives you tax flexibility in retirement — you can draw from whichever account is more advantageous depending on your income and tax situation each year. Most advisors recommend having both types if eligible." }
+      },
+      {
+        "@type": "Question",
+        "name": "Do Roth accounts have required minimum distributions?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Roth IRAs do not have required minimum distributions (RMDs) during the owner's lifetime, which is a significant advantage for estate planning and tax flexibility. Roth 401(k)s had RMDs before SECURE 2.0 (2024), but now they are also RMD-exempt. Traditional accounts require RMDs starting at age 73." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/retirement-calculators/" aria-current="page">Retirement</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/retirement-calculators/">Retirement Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/retirement-calculators/">Retirement Calculators</a></li>
+          <li><span aria-current="page">Retirement Tax Impact Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="article-content">
+          <h1>Retirement Tax Impact Calculator</h1>
+          <p>One of the biggest retirement decisions is choosing between pre-tax (Traditional) and after-tax (Roth) contributions. This calculator compares the two side by side using your current and projected retirement tax rates, showing you after-tax values, tax savings, and which approach gives you more money in retirement.</p>
+
+          <div class="calc-container mt-8">
+            <div class="calc-header">
+              <h2>Compare Traditional vs Roth Contributions</h2>
+              <p>Enter your contribution details and tax rates</p>
+            </div>
+            <div class="calc-body">
+              <form id="tax-form" onsubmit="return false;">
+                <div class="form-group">
+                  <label class="form-label" for="annual-contribution">Annual Contribution Amount</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="annual-contribution" class="form-input" placeholder="10000" min="500" step="500" required>
+                  </div>
+                  <small class="form-hint">The same dollar amount contributed to each account type for comparison</small>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="current-balance">Current Account Balance</label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="current-balance" class="form-input" placeholder="100000" min="0" step="1000" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="years-growth">Years Until Retirement</label>
+                  <input type="number" id="years-growth" class="form-input" placeholder="20" min="1" max="50" step="1" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="growth-rate">Expected Annual Return</label>
+                  <div class="input-suffix">
+                    <input type="number" id="growth-rate" class="form-input" placeholder="7" min="1" max="15" step="0.5" required>
+                    <span class="suffix">%</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="current-tax-rate">Current Marginal Tax Rate</label>
+                  <div class="input-suffix">
+                    <input type="number" id="current-tax-rate" class="form-input" placeholder="24" min="0" max="50" step="1" required>
+                    <span class="suffix">%</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="retirement-tax-rate">Estimated Retirement Tax Rate</label>
+                  <div class="input-suffix">
+                    <input type="number" id="retirement-tax-rate" class="form-input" placeholder="20" min="0" max="50" step="1" required>
+                    <span class="suffix">%</span>
+                  </div>
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calcTaxImpact()">Compare Traditional vs Roth</button>
+                  <button type="button" class="btn btn-reset" onclick="resetCalc()">Reset</button>
+                </div>
+              </form>
+
+              <div id="calc-results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">Better Option for You</div>
+                  <div class="result-value" id="result-winner"></div>
+                </div>
+                <div class="result-grid">
+                  <div class="result-item">
+                    <div class="result-label">Traditional After-Tax Value</div>
+                    <div class="result-value" id="result-trad-aftertax"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Roth After-Tax Value</div>
+                    <div class="result-value" id="result-roth-aftertax"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Difference (Roth - Traditional)</div>
+                    <div class="result-value" id="result-difference"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Traditional Pre-Tax Balance</div>
+                    <div class="result-value" id="result-trad-pretax"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <section class="content-section">
+            <h2>Tax Comparison Formula</h2>
+            <p>The calculator grows both account types at the same return, then applies taxes at withdrawal to determine after-tax wealth:</p>
+            <div class="formula-box">
+              <div class="formula-label">Traditional Account (Pre-Tax)</div>
+              Future Balance = (Current Balance + Annual Contributions) grows at return% for N years
+              After-Tax Value = Future Balance x (1 - Retirement Tax Rate)
+              Tax paid is deferred — you get a deduction now but pay taxes on all withdrawals
+            </div>
+            <div class="formula-box">
+              <div class="formula-label">Roth Account (After-Tax)</div>
+              After-Tax Contribution = Annual Contribution x (1 - Current Tax Rate)
+              Future Balance = after-tax contributions + balance grows at return% for N years
+              After-Tax Value = Full future balance (withdrawals are tax-free)
+            </div>
+            <div class="formula-box">
+              <div class="formula-label">Key Insight</div>
+              If retirement tax rate = current tax rate, outcomes are mathematically identical.
+              Roth wins if retirement rate > current rate. Traditional wins if retirement rate &lt; current rate.
+            </div>
+          </section>
+
+          <section class="content-section">
+            <h2>How to Use This Tax Impact Calculator</h2>
+            <ol>
+              <li><strong>Enter your annual contribution amount</strong> - the same amount will be modeled in both Traditional and Roth for a fair comparison.</li>
+              <li><strong>Enter your current account balance</strong> - used to project the starting point for both scenarios.</li>
+              <li><strong>Enter years until retirement</strong> and your <strong>expected annual return</strong>.</li>
+              <li><strong>Enter your current marginal tax rate</strong> - this is the rate on your last dollar of income (check your tax bracket).</li>
+              <li><strong>Enter your estimated retirement tax rate</strong> - consider your expected income sources in retirement.</li>
+              <li><strong>Click "Compare"</strong> to see which strategy gives you more after-tax wealth and by how much.</li>
+            </ol>
+          </section>
+
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>An investor contributes $10,000/year on a $100,000 balance with 20 years to retirement at 7% return. At a current 24% tax rate and expected 20% retirement tax rate, the Traditional account grows to approximately $788,000 pre-tax, or $630,000 after taxes at withdrawal. The Roth account, funded with after-tax dollars ($7,600/year effective), grows to roughly $600,000 — tax-free. In this case, the Traditional wins by about $30,000, because the current tax rate is higher than the retirement rate.</p>
+          </section>
+
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                When is a Roth account better than Traditional?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Roth accounts win when your tax rate in retirement is higher than or equal to your current tax rate. This is common for young workers early in their careers, people who expect tax rates to rise, or those with substantial savings who will be in higher brackets from RMDs.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                When is a Traditional pre-tax account better than Roth?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Traditional accounts win when your current tax rate is significantly higher than your expected retirement tax rate. This is common for peak-earning years in the 32-37% bracket expecting to drop to 22-24% in retirement. The upfront deduction is worth more than the tax-free growth.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What if I don't know my retirement tax rate?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>A common approach is to diversify: contribute to both pre-tax and Roth accounts. This gives you tax flexibility in retirement. Most advisors recommend having both types available if eligible, allowing you to optimize withdrawals each year based on your actual income.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Do Roth accounts have required minimum distributions?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Roth IRAs do not have required minimum distributions (RMDs) during the owner's lifetime. Roth 401(k)s are also now RMD-exempt under SECURE 2.0. Traditional accounts require RMDs starting at age 73, which can push you into higher tax brackets unexpectedly.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/retirement-calculators/retirement-contribution-limit-calculator/" class="card card-link">
+                <h3>Contribution Limit Calculator</h3>
+                <p>Check 2026 IRS limits for Traditional, Roth, and other accounts.</p>
+              </a>
+              <a href="/retirement-calculators/401k-match-calculator/" class="card card-link">
+                <h3>401(k) Match Calculator</h3>
+                <p>Maximize employer match before deciding between Traditional and Roth.</p>
+              </a>
+              <a href="/retirement-calculators/retirement-withdrawal-rate-calculator/" class="card card-link">
+                <h3>Withdrawal Rate Calculator</h3>
+                <p>Plan your withdrawal strategy across taxable and tax-free accounts.</p>
+              </a>
+              <a href="/retirement-calculators/retirement-nest-egg-calculator/" class="card card-link">
+                <h3>Nest Egg Calculator</h3>
+                <p>Calculate the portfolio size needed to fund your retirement income.</p>
+              </a>
+            </div>
+          </section>
+
+          <div class="disclaimer">
+            <strong>Disclaimer:</strong> This calculator provides a simplified side-by-side comparison. Actual tax outcomes depend on federal and state tax law, income phase-outs, RMD rules, and many other factors. Tax law is subject to change. This is not tax or financial advice — consult a CPA or qualified financial advisor for personalized tax planning.
+          </div>
+
+          <div class="ad-slot ad-slot-leaderboard"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Real Estate</h4>
+          <a href="/real-estate-calculators/">All Real Estate Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Retirement</h4>
+          <a href="/retirement-calculators/">All Retirement Calculators</a>
+          <a href="/retirement-calculators/retirement-age-calculator/">Retirement Age</a>
+          <a href="/retirement-calculators/401k-match-calculator/">401(k) Match</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function calcTaxImpact() {
+      const annualContrib = parseFloat(document.getElementById('annual-contribution').value);
+      const currentBalance = parseFloat(document.getElementById('current-balance').value) || 0;
+      const years = parseInt(document.getElementById('years-growth').value);
+      const growthRate = parseFloat(document.getElementById('growth-rate').value) / 100;
+      const currentTax = parseFloat(document.getElementById('current-tax-rate').value) / 100;
+      const retirementTax = parseFloat(document.getElementById('retirement-tax-rate').value) / 100;
+
+      if (!annualContrib || !years || !growthRate || isNaN(currentTax) || isNaN(retirementTax)) return;
+
+      // Traditional: full pre-tax contributions, taxed at withdrawal
+      let tradBalance = currentBalance;
+      for (let yr = 0; yr < years; yr++) {
+        tradBalance = (tradBalance + annualContrib) * (1 + growthRate);
+      }
+      const tradAfterTax = tradBalance * (1 - retirementTax);
+
+      // Roth: after-tax contributions (pay taxes now), grows tax-free
+      // To compare apples-to-apples, we model the same nominal contribution in Roth
+      // (meaning the after-tax cost to the person is annualContrib*(1-currentTax))
+      // but the contribution amount to Roth account is that after-tax amount
+      const rothContribAfterTax = annualContrib * (1 - currentTax);
+      const rothBalanceStart = currentBalance * (1 - currentTax); // after-tax equivalent starting balance
+      let rothBalance = rothBalanceStart;
+      for (let yr = 0; yr < years; yr++) {
+        rothBalance = (rothBalance + rothContribAfterTax) * (1 + growthRate);
+      }
+      const rothAfterTax = rothBalance; // Roth withdrawals are tax-free
+
+      const difference = rothAfterTax - tradAfterTax;
+      const rothWins = difference > 0;
+
+      const fmt = (v) => CalcWise.formatCurrency(v, 0);
+
+      const winnerEl = document.getElementById('result-winner');
+      winnerEl.textContent = rothWins ? 'Roth' : 'Traditional';
+      winnerEl.style.color = '#059669';
+
+      CalcWise.setText('result-trad-pretax', fmt(tradBalance));
+      CalcWise.setText('result-trad-aftertax', fmt(tradAfterTax));
+      CalcWise.setText('result-roth-aftertax', fmt(rothAfterTax));
+
+      const diffEl = document.getElementById('result-difference');
+      diffEl.textContent = (difference >= 0 ? '+' : '') + fmt(difference);
+      diffEl.style.color = difference >= 0 ? '#059669' : '#DC2626';
+
+      CalcWise.showResults('calc-results');
+    }
+
+    function resetCalc() {
+      document.getElementById('tax-form').reset();
+      CalcWise.hideResults('calc-results');
+    }
+  </script>
+</body>
+</html>

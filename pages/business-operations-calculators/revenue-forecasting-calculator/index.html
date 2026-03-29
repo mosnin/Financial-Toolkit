@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Revenue Forecasting Calculator - CalcWise</title>
+  <meta name="description" content="Build a 12-month revenue forecast from current MRR, monthly growth rate, one-time revenue boosts, and churn rate. Get ARR projection and net new MRR.">
+  <link rel="canonical" href="https://calcwise.io/business-operations-calculators/revenue-forecasting-calculator/">
+
+  <meta property="og:title" content="Revenue Forecasting Calculator - CalcWise">
+  <meta property="og:description" content="Build a 12-month revenue forecast from MRR, monthly growth rate, one-time boosts, and churn rate. Get ARR projection and net new MRR.">
+  <meta property="og:url" content="https://calcwise.io/business-operations-calculators/revenue-forecasting-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Revenue Forecasting Calculator - CalcWise">
+  <meta name="twitter:description" content="Build a 12-month revenue forecast from MRR, monthly growth rate, one-time boosts, and churn rate.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Business Operations Calculators", "item": "https://calcwise.io/business-operations-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "Revenue Forecasting Calculator", "item": "https://calcwise.io/business-operations-calculators/revenue-forecasting-calculator/" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is MRR?",
+        "acceptedAnswer": { "@type": "Answer", "text": "MRR (Monthly Recurring Revenue) is the predictable monthly revenue a subscription business earns from its active customers. It excludes one-time fees and is the core metric for SaaS and subscription business health." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is ARR?",
+        "acceptedAnswer": { "@type": "Answer", "text": "ARR (Annual Recurring Revenue) is the annualized version of MRR, calculated as MRR x 12. It gives a yearly revenue baseline and is widely used for benchmarking subscription business scale." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is net new MRR?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Net new MRR is the change in MRR during a period, accounting for new revenue added minus MRR lost to churn. Positive net new MRR means the business is growing its recurring revenue base." }
+      },
+      {
+        "@type": "Question",
+        "name": "How does churn affect revenue forecasting?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Churn reduces the existing revenue base each month. Even with positive new customer growth, high churn can offset gains and suppress net new MRR. Accurate revenue forecasting requires accounting for churn alongside new growth." }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    .forecast-table { width: 100%; border-collapse: collapse; margin-top: var(--space-4); font-size: var(--text-sm); }
+    .forecast-table th { background: var(--color-primary); color: white; padding: var(--space-2) var(--space-3); text-align: right; font-weight: var(--font-semibold); }
+    .forecast-table th:first-child { text-align: left; }
+    .forecast-table td { padding: var(--space-2) var(--space-3); border-bottom: 1px solid var(--color-gray-200); text-align: right; }
+    .forecast-table td:first-child { text-align: left; font-weight: var(--font-medium); }
+    .forecast-table tr:nth-child(even) { background: var(--color-gray-50); }
+    .forecast-table tr:last-child td { font-weight: var(--font-bold); background: var(--color-primary-50); }
+    .table-wrapper { overflow-x: auto; }
+  </style>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/business-operations-calculators/" aria-current="page">Business</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/business-operations-calculators/" aria-current="page">Business Operations Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container page-content">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/business-operations-calculators/">Business Operations Calculators</a></li>
+          <li><span aria-current="page">Revenue Forecasting Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="calc-page-layout">
+        <div class="calc-page-main">
+          <h1>Revenue Forecasting Calculator</h1>
+          <p class="mt-4 mb-8" style="font-size:var(--text-lg); color:var(--color-gray-600); max-width:700px; line-height:var(--leading-relaxed);">Project your subscription or recurring revenue 12 months out using your current MRR, expected growth rate, churn, and any one-time revenue events. Get a detailed monthly forecast along with ARR projection and net new MRR calculations.</p>
+
+          <div class="calc-container">
+            <div class="calc-header">
+              <h2>Generate 12-Month Revenue Forecast</h2>
+              <p>Enter your current revenue metrics and assumptions</p>
+            </div>
+            <div class="calc-body">
+              <form id="revForecastForm" novalidate>
+                <div class="form-group">
+                  <label class="form-label" for="currentMRR">Current MRR <span class="form-hint">Monthly recurring revenue today</span></label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="currentMRR" name="currentMRR" class="form-input" placeholder="80000" min="0.01" step="0.01" required>
+                  </div>
+                  <span class="form-error">Please enter a valid MRR amount greater than zero.</span>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="monthlyGrowth">Monthly Growth Rate % <span class="form-hint">New MRR growth (before churn)</span></label>
+                  <div class="input-suffix">
+                    <input type="number" id="monthlyGrowth" name="monthlyGrowth" class="form-input" placeholder="7" min="0" max="100" step="0.1" required>
+                    <span class="suffix">%</span>
+                  </div>
+                  <span class="form-error">Please enter a valid monthly growth rate.</span>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="churnRate">Monthly Churn Rate % <span class="form-hint">% of MRR lost to cancellations per month</span></label>
+                  <div class="input-suffix">
+                    <input type="number" id="churnRate" name="churnRate" class="form-input" placeholder="2" min="0" max="100" step="0.1" required>
+                    <span class="suffix">%</span>
+                  </div>
+                  <span class="form-error">Please enter a valid churn rate (0-100).</span>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="oneTimeBoost">One-Time Revenue Boost (Month 6) <span class="form-hint">Optional: e.g. a big deal or launch</span></label>
+                  <div class="input-prefix">
+                    <span class="prefix">$</span>
+                    <input type="number" id="oneTimeBoost" name="oneTimeBoost" class="form-input" placeholder="0" min="0" step="0.01">
+                  </div>
+                </div>
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="generateRevenueForecast()">Generate Revenue Forecast</button>
+                  <button type="button" class="btn btn-reset" onclick="resetRevForecastForm()">Reset</button>
+                </div>
+              </form>
+
+              <div id="results" class="calc-results hidden">
+                <div class="result-grid result-grid-3 mb-4">
+                  <div class="result-item">
+                    <div class="result-label">Month 12 MRR</div>
+                    <div class="result-value" id="resultMonth12MRR">$0</div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">ARR Projection</div>
+                    <div class="result-value" id="resultARR">$0</div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Net New MRR</div>
+                    <div class="result-value" id="resultNetNewMRR">$0</div>
+                  </div>
+                </div>
+                <div class="table-wrapper">
+                  <table class="forecast-table" id="revForecastTable">
+                    <thead>
+                      <tr>
+                        <th>Month</th>
+                        <th>MRR</th>
+                        <th>New MRR</th>
+                        <th>Churned MRR</th>
+                        <th>One-Time</th>
+                        <th>Total Revenue</th>
+                      </tr>
+                    </thead>
+                    <tbody id="revForecastBody"></tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="disclaimer">
+            <strong>Disclaimer:</strong> Revenue forecasts are projections based on assumptions provided and may not reflect actual future results. Business conditions, market dynamics, and competitive factors can cause significant deviations. Use this tool for planning purposes only and consult a financial advisor for investor-facing projections.
+          </div>
+
+          <div class="ad-slot ad-slot-leaderboard"></div>
+
+          <section class="content-section">
+            <h2>Revenue Forecasting Formulas</h2>
+            <p>Each month's MRR is derived by applying gross new growth and subtracting churn from the prior month's base.</p>
+            <div class="formula-box">
+              <div class="formula-label">New MRR Added</div>
+              New MRR = Previous MRR x Monthly Growth Rate
+            </div>
+            <div class="formula-box">
+              <div class="formula-label">Churned MRR</div>
+              Churned MRR = Previous MRR x Monthly Churn Rate
+            </div>
+            <div class="formula-box">
+              <div class="formula-label">Ending MRR</div>
+              Ending MRR = Previous MRR + New MRR - Churned MRR
+            </div>
+            <div class="formula-box">
+              <div class="formula-label">ARR</div>
+              ARR = Month 12 MRR x 12
+            </div>
+            <div class="formula-box">
+              <div class="formula-label">Net New MRR (Total)</div>
+              Net New MRR = Month 12 MRR - Starting MRR
+            </div>
+          </section>
+
+          <section class="content-section">
+            <h2>How to Use This Calculator</h2>
+            <ol>
+              <li><strong>Enter your current MRR</strong> -- your total monthly recurring revenue right now.</li>
+              <li><strong>Enter monthly growth rate</strong> -- the percentage of new MRR you expect to add each month from new customers and expansions.</li>
+              <li><strong>Enter monthly churn rate</strong> -- the percentage of existing MRR lost each month to cancellations.</li>
+              <li><strong>Optionally enter a one-time revenue boost</strong> -- a projected lump-sum revenue event that will be reflected in Month 6 of the forecast.</li>
+              <li><strong>Click "Generate Revenue Forecast"</strong> to see the full 12-month table.</li>
+            </ol>
+          </section>
+
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>A SaaS company has <strong>$80,000 MRR</strong>, a <strong>7% monthly growth rate</strong>, and <strong>2% monthly churn</strong>. No one-time boost.</p>
+            <ul>
+              <li><strong>Month 1 New MRR:</strong> $80,000 x 7% = $5,600</li>
+              <li><strong>Month 1 Churn:</strong> $80,000 x 2% = $1,600</li>
+              <li><strong>Month 1 Ending MRR:</strong> $80,000 + $5,600 - $1,600 = $84,000</li>
+              <li><strong>Month 12 MRR (estimated):</strong> ~$163,000</li>
+              <li><strong>ARR Projection:</strong> ~$1.96M</li>
+            </ul>
+            <p>Net growth of 5% per month (7% new minus 2% churn) roughly doubles MRR in 12 months and sets the business on track toward $2M ARR.</p>
+          </section>
+
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What is MRR?
+                <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>MRR (Monthly Recurring Revenue) is the predictable monthly revenue a subscription business earns from its active customers. It excludes one-time fees and is the core metric for SaaS and subscription business health.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What is ARR?
+                <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 011-1z"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>ARR (Annual Recurring Revenue) is the annualized version of MRR, calculated as MRR x 12. It gives a yearly revenue baseline and is widely used for benchmarking subscription business scale.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What is net new MRR?
+                <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 011-1z"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Net new MRR is the change in MRR during a period, accounting for new revenue added minus MRR lost to churn. Positive net new MRR means the business is growing its recurring revenue base.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                How does churn affect revenue forecasting?
+                <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 011-1z"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Churn reduces the existing revenue base each month. Even with positive new customer growth, high churn can offset gains and suppress net new MRR. Accurate revenue forecasting requires accounting for churn alongside new growth.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/business-operations-calculators/profit-forecast-calculator/" class="card card-link">
+                <h3>Profit Forecast Calculator</h3>
+                <p>Project month-by-month revenue and profit with cost assumptions.</p>
+              </a>
+              <a href="/business-operations-calculators/customer-churn-rate-calculator/" class="card card-link">
+                <h3>Customer Churn Rate Calculator</h3>
+                <p>Calculate churn rate and its MRR and LTV impact.</p>
+              </a>
+              <a href="/business-operations-calculators/business-growth-rate-calculator/" class="card card-link">
+                <h3>Business Growth Rate Calculator</h3>
+                <p>Calculate and project revenue growth rate over time.</p>
+              </a>
+              <a href="/business-operations-calculators/net-profit-calculator/" class="card card-link">
+                <h3>Net Profit Calculator</h3>
+                <p>Calculate net profit and net margin after all expenses and taxes.</p>
+              </a>
+              <a href="/business-operations-calculators/operating-margin-calculator/" class="card card-link">
+                <h3>Operating Margin Calculator</h3>
+                <p>Measure operational profitability with operating margin percentage.</p>
+              </a>
+            </div>
+          </section>
+        </div>
+
+        <aside class="calc-page-sidebar">
+          <div class="sidebar-card">
+            <h3>Business Operations</h3>
+            <a href="/business-operations-calculators/business-growth-rate-calculator/">Growth Rate</a>
+            <a href="/business-operations-calculators/cash-conversion-cycle-calculator/">Cash Conversion Cycle</a>
+            <a href="/business-operations-calculators/customer-churn-rate-calculator/">Customer Churn Rate</a>
+            <a href="/business-operations-calculators/gross-profit-calculator/">Gross Profit</a>
+            <a href="/business-operations-calculators/net-profit-calculator/">Net Profit</a>
+            <a href="/business-operations-calculators/operating-margin-calculator/">Operating Margin</a>
+            <a href="/business-operations-calculators/profit-forecast-calculator/">Profit Forecast</a>
+            <a href="/business-operations-calculators/revenue-forecasting-calculator/">Revenue Forecasting</a>
+            <a href="/business-operations-calculators/vendor-payment-schedule-calculator/">Vendor Payment Schedule</a>
+            <a href="/business-operations-calculators/working-capital-calculator/">Working Capital</a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Real Estate</h4>
+          <a href="/real-estate-calculators/">All Real Estate</a>
+        </div>
+        <div class="footer-col">
+          <h4>Finance</h4>
+          <a href="/finance-calculators/">All Finance</a>
+        </div>
+        <div class="footer-col">
+          <h4>Business</h4>
+          <a href="/business-operations-calculators/">All Business Operations</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/about.html">About</a>
+          <a href="/contact.html">Contact</a>
+          <a href="/privacy.html">Privacy</a>
+          <a href="/terms.html">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function generateRevenueForecast() {
+      const startMRR = CalcWise.parseNumber(document.getElementById('currentMRR').value);
+      const growthRate = CalcWise.parseNumber(document.getElementById('monthlyGrowth').value) / 100;
+      const churnRate = CalcWise.parseNumber(document.getElementById('churnRate').value) / 100;
+      const oneTimeBoost = CalcWise.parseNumber(document.getElementById('oneTimeBoost').value) || 0;
+
+      if (startMRR <= 0) { alert('Current MRR must be greater than zero.'); return; }
+      if (churnRate < 0 || churnRate > 1) { alert('Churn rate must be between 0 and 100%.'); return; }
+
+      const monthNames = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+      const today = new Date();
+      const tbody = document.getElementById('revForecastBody');
+      tbody.innerHTML = '';
+
+      let mrr = startMRR;
+      let totalRevenue = 0;
+      let totalNewMRR = 0;
+      let totalChurnedMRR = 0;
+      let finalMRR = 0;
+
+      for (let i = 1; i <= 12; i++) {
+        const newMRR = mrr * growthRate;
+        const churnedMRR = mrr * churnRate;
+        const endingMRR = mrr + newMRR - churnedMRR;
+        const oneTime = i === 6 ? oneTimeBoost : 0;
+        const monthTotal = endingMRR + oneTime;
+
+        totalRevenue += monthTotal;
+        totalNewMRR += newMRR;
+        totalChurnedMRR += churnedMRR;
+
+        const monthDate = new Date(today.getFullYear(), today.getMonth() + i, 1);
+        const monthLabel = monthNames[monthDate.getMonth()] + ' ' + monthDate.getFullYear();
+
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+          <td>${monthLabel}</td>
+          <td>${CalcWise.formatCurrency(endingMRR)}</td>
+          <td style="color:var(--color-success)">+${CalcWise.formatCurrency(newMRR)}</td>
+          <td style="color:var(--color-error)">-${CalcWise.formatCurrency(churnedMRR)}</td>
+          <td>${oneTime > 0 ? CalcWise.formatCurrency(oneTime) : '--'}</td>
+          <td>${CalcWise.formatCurrency(monthTotal)}</td>
+        `;
+        tbody.appendChild(tr);
+
+        if (i === 12) finalMRR = endingMRR;
+        mrr = endingMRR;
+      }
+
+      const totalRow = document.createElement('tr');
+      totalRow.innerHTML = `
+        <td>12-Month Total</td>
+        <td>${CalcWise.formatCurrency(finalMRR)}</td>
+        <td>+${CalcWise.formatCurrency(totalNewMRR)}</td>
+        <td>-${CalcWise.formatCurrency(totalChurnedMRR)}</td>
+        <td>${oneTimeBoost > 0 ? CalcWise.formatCurrency(oneTimeBoost) : '--'}</td>
+        <td>${CalcWise.formatCurrency(totalRevenue)}</td>
+      `;
+      tbody.appendChild(totalRow);
+
+      const arr = finalMRR * 12;
+      const netNewMRR = finalMRR - startMRR;
+
+      CalcWise.setText('resultMonth12MRR', CalcWise.formatCurrency(finalMRR));
+      CalcWise.setText('resultARR', CalcWise.formatCurrency(arr));
+      CalcWise.setText('resultNetNewMRR', CalcWise.formatCurrency(netNewMRR));
+
+      CalcWise.showResults('results');
+    }
+
+    function resetRevForecastForm() {
+      document.getElementById('revForecastForm').reset();
+      document.getElementById('revForecastBody').innerHTML = '';
+      CalcWise.hideResults('results');
+    }
+  </script>
+</body>
+</html>

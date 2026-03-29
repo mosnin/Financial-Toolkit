@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Software Licensing Cost Calculator | CalcWise</title>
+  <meta name="description" content="Calculate software licensing costs per user, annual total, 3-year TCO, and cost per user per day. Compare perpetual vs subscription licensing with support tiers.">
+  <link rel="canonical" href="https://calcwise.io/technology-cost-calculators/software-licensing-cost-calculator/">
+  <meta property="og:title" content="Software Licensing Cost Calculator | CalcWise">
+  <meta property="og:description" content="Compare perpetual vs subscription software licensing costs and calculate your 3-year total cost of ownership.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calcwise.io/technology-cost-calculators/software-licensing-cost-calculator/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Software Licensing Cost Calculator | CalcWise">
+  <meta name="twitter:description" content="Compare perpetual vs subscription software licensing costs and calculate your 3-year total cost of ownership.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/"},
+      {"@type": "ListItem", "position": 2, "name": "Technology Cost Calculators", "item": "https://calcwise.io/technology-cost-calculators/"},
+      {"@type": "ListItem", "position": 3, "name": "Software Licensing Cost Calculator"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the difference between perpetual and subscription licensing?",
+        "acceptedAnswer": {"@type": "Answer", "text": "A perpetual license is a one-time purchase that grants permanent use of a specific software version. A subscription license is paid annually or monthly and includes access to the latest version plus updates. Perpetual licenses typically require separate annual maintenance contracts (15-25% of license cost) to receive updates and support. Subscription models tend to be cheaper in the first 3-4 years but more expensive long-term."}
+      },
+      {
+        "@type": "Question",
+        "name": "What is Total Cost of Ownership (TCO) for software?",
+        "acceptedAnswer": {"@type": "Answer", "text": "TCO includes all costs over a defined period: license fees, implementation, training, support and maintenance, integration, and staff time. For a 3-year TCO comparison between perpetual and subscription: perpetual typically costs more upfront but less over time, while subscription is lower upfront but higher cumulatively after 3-5 years."}
+      },
+      {
+        "@type": "Question",
+        "name": "What are typical software support tier costs?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Basic support (email-only, business hours) is typically included or costs 10-15% of license value annually. Standard support (phone + email, business hours) runs 18-22% of license value. Premium or enterprise support (24/7, dedicated engineer) costs 25-30% of license value annually. Always factor support costs into your total cost comparison."}
+      },
+      {
+        "@type": "Question",
+        "name": "How do I calculate cost per user per day?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Divide the annual per-user cost by 365 days. For example, if a subscription costs $200/user/year, the daily cost is $0.55/user/day. This metric helps justify software purchases to stakeholders by framing the cost in relatable terms — often less than a cup of coffee per day."}
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="logo">
+        <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav">
+        <a href="/">Home</a>
+        <a href="/pages/real-estate-calculators/">Real Estate</a>
+        <a href="/pages/financial-calculators/">Finance</a>
+        <a href="/pages/business-calculators/">Business</a>
+        <a href="/about/">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav">
+      <a href="/">Home</a>
+      <a href="/pages/real-estate-calculators/">Real Estate</a>
+      <a href="/pages/financial-calculators/">Finance</a>
+      <a href="/pages/business-calculators/">Business</a>
+      <a href="/about/">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/pages/technology-cost-calculators/">Technology Cost Calculators</a></li>
+          <li><span aria-current="page">Software Licensing Cost Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="calc-page-layout">
+          <div class="calc-page-main">
+            <h1>Software Licensing Cost Calculator</h1>
+            <p class="subtitle" style="font-size:var(--text-lg);color:var(--color-gray-600);margin-bottom:var(--space-8);line-height:var(--leading-relaxed);">Calculate software licensing costs for your organization including per-user cost, annual total, 3-year total cost of ownership, and daily cost per user. Compare perpetual versus subscription licensing models with optional support tier add-ons.</p>
+
+            <div class="calc-container">
+              <div class="calc-header">
+                <h2>Software Licensing Cost Calculator</h2>
+                <p>Calculate TCO and per-user costs across license types</p>
+              </div>
+              <div class="calc-body">
+                <form id="license-form" onsubmit="return false;">
+                  <div class="form-group">
+                    <label class="form-label" for="software-type">Software Type</label>
+                    <select id="software-type" class="form-input">
+                      <option value="productivity">Productivity Suite (Office, Google Workspace)</option>
+                      <option value="crm">CRM (Salesforce, HubSpot)</option>
+                      <option value="erp">ERP (SAP, Oracle, NetSuite)</option>
+                      <option value="dev">Developer Tools (IDEs, version control)</option>
+                      <option value="design">Design Tools (Adobe CC, Figma)</option>
+                      <option value="security">Security Software (antivirus, endpoint)</option>
+                      <option value="hr">HR / Payroll Software</option>
+                      <option value="accounting">Accounting Software (QuickBooks, Xero)</option>
+                      <option value="custom">Custom / Enter Manually</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="seats">Number of Seats / Users</label>
+                    <input type="number" id="seats" class="form-input" placeholder="25" min="1" step="1" required>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="license-type">License Type</label>
+                    <select id="license-type" class="form-input" onchange="toggleLicenseFields()">
+                      <option value="subscription">Subscription (annual or monthly)</option>
+                      <option value="perpetual">Perpetual (one-time purchase)</option>
+                    </select>
+                  </div>
+
+                  <div id="subscription-fields">
+                    <div class="form-group">
+                      <label class="form-label" for="sub-cost-per-user">Subscription Cost per User per Month</label>
+                      <div class="input-prefix">
+                        <span class="prefix">$</span>
+                        <input type="number" id="sub-cost-per-user" class="form-input" placeholder="15.00" min="0" step="0.01">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label" for="sub-billing">Billing Cycle</label>
+                      <select id="sub-billing" class="form-input">
+                        <option value="monthly">Monthly</option>
+                        <option value="annual">Annual (paid upfront)</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label" for="annual-discount">Annual Billing Discount <span class="form-hint">(%)</span></label>
+                      <div class="input-suffix">
+                        <input type="number" id="annual-discount" class="form-input" placeholder="20" min="0" max="60" step="1" value="20">
+                        <span class="suffix">%</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div id="perpetual-fields" style="display:none;">
+                    <div class="form-group">
+                      <label class="form-label" for="perp-cost-per-user">Perpetual License Cost per User (one-time)</label>
+                      <div class="input-prefix">
+                        <span class="prefix">$</span>
+                        <input type="number" id="perp-cost-per-user" class="form-input" placeholder="500.00" min="0" step="0.01">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="support-tier">Support Tier</label>
+                    <select id="support-tier" class="form-input">
+                      <option value="none">None / Community</option>
+                      <option value="basic">Basic (email, business hours) — +12% of license/yr</option>
+                      <option value="standard">Standard (phone + email, biz hours) — +20% of license/yr</option>
+                      <option value="premium">Premium (24/7 dedicated) — +28% of license/yr</option>
+                    </select>
+                  </div>
+
+                  <div class="calc-actions">
+                    <button type="button" class="btn btn-calculate btn-full" onclick="calculateLicensing()">Calculate Licensing Cost</button>
+                    <button type="button" class="btn btn-reset" onclick="resetLicensing()">Reset</button>
+                  </div>
+                </form>
+
+                <div id="results" class="calc-results hidden">
+                  <div class="result-primary">
+                    <div class="result-label">Annual Total Cost</div>
+                    <div class="result-value" id="result-annual">$0.00</div>
+                  </div>
+                  <div class="result-grid result-grid-3">
+                    <div class="result-item">
+                      <div class="result-label">Per-User Cost / Month</div>
+                      <div class="result-value" id="result-per-user-month">$0.00</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">3-Year TCO</div>
+                      <div class="result-value" id="result-tco">$0.00</div>
+                    </div>
+                    <div class="result-item">
+                      <div class="result-label">Cost per User per Day</div>
+                      <div class="result-value" id="result-per-day">$0.00</div>
+                    </div>
+                  </div>
+                  <div style="margin-top:var(--space-4);padding:var(--space-4);background:var(--color-gray-50,#f9fafb);border-radius:var(--radius-md);">
+                    <h3 style="font-size:var(--text-sm);font-weight:var(--font-semibold);margin-bottom:var(--space-3);">Cost Breakdown</h3>
+                    <div id="cost-breakdown-rows"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="ad-slot ad-slot-leaderboard"></div>
+
+            <section class="content-section">
+              <h2>Calculation Methodology</h2>
+              <div class="formula-box">
+                <div class="formula-label">Annual Subscription Cost</div>
+                Annual = Cost per User/mo × 12 × Seats × (1 − Annual Discount if applicable) + Support Cost
+              </div>
+              <div class="formula-box">
+                <div class="formula-label">Perpetual License Annual Cost (Year 1)</div>
+                Year 1 = Cost per User × Seats + Support Cost
+              </div>
+              <div class="formula-box">
+                <div class="formula-label">3-Year TCO (Subscription)</div>
+                3-Year TCO = Annual Cost × 3
+              </div>
+              <div class="formula-box">
+                <div class="formula-label">3-Year TCO (Perpetual)</div>
+                3-Year TCO = License Cost + (Support Cost × 3)
+              </div>
+              <div class="formula-box">
+                <div class="formula-label">Cost per User per Day</div>
+                Daily Cost = (Annual Cost / Seats) / 365
+              </div>
+            </section>
+
+            <section class="content-section">
+              <h2>How to Use This Calculator</h2>
+              <ol>
+                <li>Select your <strong>software type</strong> and enter the number of <strong>seats or users</strong>.</li>
+                <li>Choose <strong>subscription</strong> or <strong>perpetual</strong> licensing and enter the appropriate cost.</li>
+                <li>For subscription, select billing cycle and the annual discount offered by the vendor.</li>
+                <li>Choose a <strong>support tier</strong> to add ongoing maintenance costs.</li>
+                <li>Click <strong>Calculate Licensing Cost</strong> to see annual total, 3-year TCO, and per-user daily cost.</li>
+              </ol>
+            </section>
+
+            <section class="content-section">
+              <h2>Example Scenario</h2>
+              <p>A company evaluating Microsoft 365 Business Standard for 50 employees:</p>
+              <ul>
+                <li><strong>License type:</strong> Subscription, $12.50/user/month</li>
+                <li><strong>Seats:</strong> 50</li>
+                <li><strong>Annual billing (20% discount):</strong> $12.50 × 50 × 12 × 0.80 = <strong>$6,000/year</strong></li>
+                <li><strong>Standard support (20%):</strong> $6,000 × 0.20 = $1,200/year</li>
+                <li><strong>Total annual cost:</strong> $7,200</li>
+                <li><strong>3-Year TCO:</strong> $21,600</li>
+                <li><strong>Cost per user per day:</strong> $7,200 / 50 / 365 = <strong>$0.39/user/day</strong></li>
+              </ul>
+            </section>
+
+            <section class="faq-section">
+              <h2>Frequently Asked Questions</h2>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  What is the difference between perpetual and subscription licensing?
+                  <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                </button>
+                <div class="faq-answer">
+                  <p>A perpetual license is a one-time purchase granting permanent use of a specific version. Subscription licensing is paid annually or monthly and includes ongoing updates. Perpetual licenses require separate maintenance contracts (15-25% of license cost) to receive updates. Subscriptions are typically cheaper initially but more expensive long-term.</p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  What is Total Cost of Ownership (TCO) for software?
+                  <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                </button>
+                <div class="faq-answer">
+                  <p>TCO includes all costs over a defined period: license fees, implementation, training, support and maintenance, integration, and staff time. A 3-year TCO comparison between perpetual and subscription models often shows perpetual is cheaper long-term despite a higher upfront cost.</p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  What are typical software support tier costs?
+                  <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                </button>
+                <div class="faq-answer">
+                  <p>Basic support (email-only) typically costs 10-15% of license value annually. Standard support (phone + email) runs 18-22%. Premium enterprise support (24/7, dedicated account) costs 25-30% of license value per year. Always include support in your TCO calculation.</p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  How do I calculate cost per user per day?
+                  <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+                </button>
+                <div class="faq-answer">
+                  <p>Divide the annual per-user cost by 365. For example, $200/user/year equals $0.55/user/day. This metric helps frame software costs in approachable terms for stakeholder buy-in — often less than a cup of coffee per day per employee.</p>
+                </div>
+              </div>
+            </section>
+
+            <section class="related-calculators">
+              <h2>Related Calculators</h2>
+              <div class="grid grid-3">
+                <a href="/pages/technology-cost-calculators/saas-subscription-cost-calculator/" class="card card-link">
+                  <h3>SaaS Subscription Cost Calculator</h3>
+                  <p>Track all your SaaS tools and total your monthly spend.</p>
+                </a>
+                <a href="/pages/technology-cost-calculators/cloud-storage-cost-calculator/" class="card card-link">
+                  <h3>Cloud Storage Cost Calculator</h3>
+                  <p>Compare cloud storage pricing across AWS, GCS, and Azure.</p>
+                </a>
+                <a href="/pages/technology-cost-calculators/web-hosting-cost-calculator/" class="card card-link">
+                  <h3>Web Hosting Cost Calculator</h3>
+                  <p>Estimate hosting costs by traffic and storage requirements.</p>
+                </a>
+                <a href="/pages/business-calculators/cash-runway-calculator/" class="card card-link">
+                  <h3>Cash Runway Calculator</h3>
+                  <p>Find out how long your cash lasts at current burn rates.</p>
+                </a>
+                <a href="/pages/business-calculators/pricing-calculator/" class="card card-link">
+                  <h3>Pricing Calculator</h3>
+                  <p>Calculate optimal product pricing from cost and margin.</p>
+                </a>
+              </div>
+            </section>
+
+            <div class="disclaimer">
+              <strong>Disclaimer:</strong> Licensing cost estimates are based on inputs you provide and industry-average support tier percentages. Actual vendor pricing varies significantly by volume, negotiation, region, and edition. Always obtain formal quotes from vendors before making purchasing decisions. This calculator is for planning and comparison purposes only.
+            </div>
+          </div>
+
+          <aside class="calc-page-sidebar">
+            <div class="ad-slot ad-slot-rectangle"></div>
+            <div class="sidebar-card">
+              <h3>Technology Cost Calculators</h3>
+              <a href="/pages/technology-cost-calculators/cloud-storage-cost-calculator/">Cloud Storage Cost</a>
+              <a href="/pages/technology-cost-calculators/data-usage-calculator/">Data Usage</a>
+              <a href="/pages/technology-cost-calculators/internet-speed-requirement-calculator/">Internet Speed Requirement</a>
+              <a href="/pages/technology-cost-calculators/saas-subscription-cost-calculator/">SaaS Subscription Cost</a>
+              <a href="/pages/technology-cost-calculators/streaming-service-cost-calculator/">Streaming Service Cost</a>
+              <a href="/pages/technology-cost-calculators/web-hosting-cost-calculator/">Web Hosting Cost</a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free online calculators for business, finance, tax, and investment decisions.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Calculators</h4>
+          <a href="/pages/business-calculators/">Business</a>
+          <a href="/pages/financial-calculators/">Financial</a>
+          <a href="/pages/tax-calculators/">Tax</a>
+          <a href="/pages/investment-calculators/">Investment</a>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <a href="/about/">About</a>
+          <a href="/blog/">Blog</a>
+          <a href="/contact/">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="/privacy/">Privacy Policy</a>
+          <a href="/terms/">Terms of Service</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/privacy/">Privacy</a>
+          <a href="/terms/">Terms</a>
+          <a href="/contact/">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    const SUPPORT_RATES = { none: 0, basic: 0.12, standard: 0.20, premium: 0.28 };
+
+    function toggleLicenseFields() {
+      const type = document.getElementById('license-type').value;
+      document.getElementById('subscription-fields').style.display = type === 'subscription' ? '' : 'none';
+      document.getElementById('perpetual-fields').style.display = type === 'perpetual' ? '' : 'none';
+    }
+
+    function calculateLicensing() {
+      const seats       = CalcWise.parseNumber(document.getElementById('seats').value);
+      const licType     = document.getElementById('license-type').value;
+      const supportTier = document.getElementById('support-tier').value;
+      const supportRate = SUPPORT_RATES[supportTier];
+
+      if (seats <= 0) { alert('Please enter a valid number of seats.'); return; }
+
+      let baseLicenseAnnual = 0;
+      let licenseNote = '';
+
+      if (licType === 'subscription') {
+        const costPerUserMonth = CalcWise.parseNumber(document.getElementById('sub-cost-per-user').value);
+        const billing = document.getElementById('sub-billing').value;
+        const annualDiscount = CalcWise.parseNumber(document.getElementById('annual-discount').value) / 100;
+        if (costPerUserMonth <= 0) { alert('Please enter a cost per user per month.'); return; }
+        const rawAnnual = costPerUserMonth * 12 * seats;
+        baseLicenseAnnual = billing === 'annual' ? rawAnnual * (1 - annualDiscount) : rawAnnual;
+        licenseNote = billing === 'annual' ? `Annual billing with ${(annualDiscount*100).toFixed(0)}% discount` : 'Monthly billing';
+      } else {
+        const costPerUser = CalcWise.parseNumber(document.getElementById('perp-cost-per-user').value);
+        if (costPerUser <= 0) { alert('Please enter a perpetual license cost per user.'); return; }
+        baseLicenseAnnual = costPerUser * seats; // Year 1 = full license
+        licenseNote = 'Perpetual license (one-time) + annual support';
+      }
+
+      const supportCostAnnual = baseLicenseAnnual * supportRate;
+      const totalAnnual = baseLicenseAnnual + supportCostAnnual;
+      const perUserMonth = totalAnnual / seats / 12;
+      const perUserDay = totalAnnual / seats / 365;
+
+      let tco3yr;
+      if (licType === 'subscription') {
+        tco3yr = totalAnnual * 3;
+      } else {
+        // Perpetual: Year 1 = license + support, Years 2-3 = support only
+        tco3yr = baseLicenseAnnual + supportCostAnnual * 3;
+      }
+
+      CalcWise.setText('result-annual', CalcWise.formatCurrency(totalAnnual));
+      CalcWise.setText('result-per-user-month', CalcWise.formatCurrency(perUserMonth));
+      CalcWise.setText('result-tco', CalcWise.formatCurrency(tco3yr));
+      CalcWise.setText('result-per-day', CalcWise.formatCurrency(perUserDay));
+
+      const rows = [
+        ['Base License Cost (annual)', CalcWise.formatCurrency(baseLicenseAnnual)],
+        ['Support Cost (' + (supportRate*100).toFixed(0) + '%/yr)', CalcWise.formatCurrency(supportCostAnnual)],
+        ['Total Annual Cost', CalcWise.formatCurrency(totalAnnual)],
+        ['Per User / Month', CalcWise.formatCurrency(perUserMonth)],
+        ['Per User / Year', CalcWise.formatCurrency(totalAnnual / seats)],
+        ['3-Year TCO (' + (licType === 'perpetual' ? 'license + 3yr support' : 'subscription × 3') + ')', CalcWise.formatCurrency(tco3yr)],
+        ['Cost per User per Day', '$' + perUserDay.toFixed(4)]
+      ];
+
+      document.getElementById('cost-breakdown-rows').innerHTML = rows.map(([label, val]) =>
+        `<div style="display:flex;justify-content:space-between;font-size:var(--text-sm);padding:var(--space-1) 0;border-bottom:1px solid var(--color-gray-100);">
+          <span>${label}</span><span style="font-weight:var(--font-semibold);">${val}</span>
+        </div>`
+      ).join('');
+
+      CalcWise.showResults('results');
+    }
+
+    function resetLicensing() {
+      document.getElementById('license-form').reset();
+      document.getElementById('subscription-fields').style.display = '';
+      document.getElementById('perpetual-fields').style.display = 'none';
+      CalcWise.hideResults('results');
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Volatility Calculator | CalcWise</title>
+  <meta name="description" content="Estimate the volatility of your investment portfolio. Enter up to 5 assets with their period returns and portfolio weights to calculate weighted average volatility, standard deviation estimate, and risk level.">
+  <meta name="keywords" content="portfolio volatility calculator, portfolio risk calculator, standard deviation calculator, weighted volatility, investment risk analysis">
+  <link rel="canonical" href="https://calcwise.io/investment-calculators/portfolio-volatility-calculator/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Portfolio Volatility Calculator | CalcWise">
+  <meta property="og:description" content="Estimate portfolio volatility, standard deviation, and risk level across up to 5 assets with custom weights.">
+  <meta property="og:url" content="https://calcwise.io/investment-calculators/portfolio-volatility-calculator/">
+  <meta property="og:site_name" content="CalcWise">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Portfolio Volatility Calculator | CalcWise">
+  <meta name="twitter:description" content="Estimate portfolio volatility, standard deviation, and risk level across up to 5 assets with custom weights.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css">
+
+  <!-- BreadcrumbList Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcwise.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Investment Calculators", "item": "https://calcwise.io/investment-calculators/" },
+      { "@type": "ListItem", "position": 3, "name": "Portfolio Volatility Calculator", "item": "https://calcwise.io/investment-calculators/portfolio-volatility-calculator/" }
+    ]
+  }
+  </script>
+
+  <!-- FAQPage Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is portfolio volatility?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Portfolio volatility measures how much the value of a portfolio fluctuates over time. It is typically expressed as the standard deviation of returns. Higher volatility means larger swings in value — both upward and downward." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is a good level of portfolio volatility?",
+        "acceptedAnswer": { "@type": "Answer", "text": "It depends on your risk tolerance and time horizon. The S&P 500 has historically had annualized volatility of around 15–20%. Conservative portfolios might target 5–10% volatility through diversification and bond allocation. Aggressive growth portfolios may accept 20–30% or higher." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is standard deviation in investing?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Standard deviation in investing measures how much an asset's returns vary from its average return. A higher standard deviation means more unpredictable returns. For example, an asset with a 10% average return and a 20% standard deviation might realistically return anywhere from -10% to +30% in a given year." }
+      },
+      {
+        "@type": "Question",
+        "name": "How can I reduce portfolio volatility?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Diversification is the primary way to reduce volatility. Holding assets that are not highly correlated — such as stocks, bonds, real estate, and cash — means their returns partially offset each other, smoothing the overall portfolio's performance." }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    .asset-row {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 0.75rem;
+      align-items: end;
+      margin-bottom: 1rem;
+    }
+    .asset-row-header {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 0.75rem;
+      margin-bottom: 0.25rem;
+    }
+    .asset-row-header span {
+      font-size: 0.8125rem;
+      font-weight: 600;
+      color: var(--text-secondary, #6b7280);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    @media (max-width: 600px) {
+      .asset-row, .asset-row-header { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="CalcWise Home">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        CalcWise
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/real-estate-calculators/">Real Estate</a>
+        <a href="/finance-calculators/">Finance</a>
+        <a href="/investment-calculators/" aria-current="page">Investments</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/real-estate-calculators/">Real Estate Calculators</a>
+      <a href="/finance-calculators/">Finance Calculators</a>
+      <a href="/investment-calculators/">Investment Calculators</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/investment-calculators/">Investment Calculators</a></li>
+          <li><span aria-current="page">Portfolio Volatility Calculator</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-content">
+        <div class="article-content">
+          <h1>Portfolio Volatility Calculator</h1>
+          <p>Estimate the volatility risk of your investment portfolio. Enter up to 5 assets, providing the individual returns across multiple periods and your portfolio weight for each. The calculator computes a standard deviation estimate for each asset, then combines them into a weighted average portfolio volatility and assigns a risk level label.</p>
+
+          <div class="calc-container mt-8">
+            <div class="calc-header">
+              <h2>Calculate Portfolio Volatility</h2>
+              <p>Enter up to 5 assets with period returns (comma-separated) and weights</p>
+            </div>
+            <div class="calc-body">
+              <form id="volatility-form" onsubmit="return false;">
+                <p style="font-size:0.875rem;color:var(--text-secondary,#6b7280);margin-bottom:1rem;">Enter periodic returns as comma-separated percentages (e.g. <code>10, -5, 8, 12, -3</code>). Leave unused asset rows blank.</p>
+                <div class="asset-row-header">
+                  <span>Asset Returns (%, comma-separated)</span>
+                  <span>Weight %</span>
+                  <span>Std Dev</span>
+                </div>
+
+                <div class="asset-row">
+                  <div class="form-group" style="margin-bottom:0;">
+                    <input type="text" id="returns-1" class="form-input" placeholder="10, -5, 8, 12, -3" required>
+                  </div>
+                  <div class="form-group" style="margin-bottom:0;">
+                    <input type="number" id="weight-1" class="form-input" placeholder="40" min="0" max="100" step="0.1" required>
+                  </div>
+                  <div class="form-group" style="margin-bottom:0;">
+                    <input type="text" id="stddev-1" class="form-input" placeholder="—" readonly style="background:var(--surface-2,#f9fafb);">
+                  </div>
+                </div>
+
+                <div class="asset-row">
+                  <div class="form-group" style="margin-bottom:0;">
+                    <input type="text" id="returns-2" class="form-input" placeholder="5, 2, 6, 4, 3">
+                  </div>
+                  <div class="form-group" style="margin-bottom:0;">
+                    <input type="number" id="weight-2" class="form-input" placeholder="30" min="0" max="100" step="0.1">
+                  </div>
+                  <div class="form-group" style="margin-bottom:0;">
+                    <input type="text" id="stddev-2" class="form-input" placeholder="—" readonly style="background:var(--surface-2,#f9fafb);">
+                  </div>
+                </div>
+
+                <div class="asset-row">
+                  <div class="form-group" style="margin-bottom:0;">
+                    <input type="text" id="returns-3" class="form-input" placeholder="15, -10, 20, -5, 10">
+                  </div>
+                  <div class="form-group" style="margin-bottom:0;">
+                    <input type="number" id="weight-3" class="form-input" placeholder="20" min="0" max="100" step="0.1">
+                  </div>
+                  <div class="form-group" style="margin-bottom:0;">
+                    <input type="text" id="stddev-3" class="form-input" placeholder="—" readonly style="background:var(--surface-2,#f9fafb);">
+                  </div>
+                </div>
+
+                <div class="asset-row">
+                  <div class="form-group" style="margin-bottom:0;">
+                    <input type="text" id="returns-4" class="form-input" placeholder="Optional asset 4 returns">
+                  </div>
+                  <div class="form-group" style="margin-bottom:0;">
+                    <input type="number" id="weight-4" class="form-input" placeholder="0" min="0" max="100" step="0.1">
+                  </div>
+                  <div class="form-group" style="margin-bottom:0;">
+                    <input type="text" id="stddev-4" class="form-input" placeholder="—" readonly style="background:var(--surface-2,#f9fafb);">
+                  </div>
+                </div>
+
+                <div class="asset-row">
+                  <div class="form-group" style="margin-bottom:0;">
+                    <input type="text" id="returns-5" class="form-input" placeholder="Optional asset 5 returns">
+                  </div>
+                  <div class="form-group" style="margin-bottom:0;">
+                    <input type="number" id="weight-5" class="form-input" placeholder="0" min="0" max="100" step="0.1">
+                  </div>
+                  <div class="form-group" style="margin-bottom:0;">
+                    <input type="text" id="stddev-5" class="form-input" placeholder="—" readonly style="background:var(--surface-2,#f9fafb);">
+                  </div>
+                </div>
+
+                <div class="calc-actions">
+                  <button type="button" class="btn btn-calculate btn-full" onclick="calculateVolatility()">Calculate Volatility</button>
+                  <button type="button" class="btn btn-reset" onclick="resetVolatility()">Reset</button>
+                </div>
+              </form>
+
+              <div id="volatility-results" class="calc-results hidden">
+                <div class="result-primary">
+                  <div class="result-label">Weighted Average Volatility</div>
+                  <div class="result-value" id="result-vol-weighted"></div>
+                </div>
+                <div class="result-grid">
+                  <div class="result-item">
+                    <div class="result-label">Standard Deviation Estimate</div>
+                    <div class="result-value" id="result-vol-stddev"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Risk Level</div>
+                    <div class="result-value" id="result-vol-risk-level"></div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Total Weight Entered</div>
+                    <div class="result-value" id="result-vol-total-weight"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Formula Section -->
+          <section class="content-section">
+            <h2>Portfolio Volatility Formulas</h2>
+            <p>For each asset, the standard deviation of the entered period returns is calculated using the population standard deviation formula:</p>
+            <div class="formula-box">
+              <div class="formula-label">Standard Deviation (per asset)</div>
+              σ = √[ Σ(rᵢ − r̄)² / n ]
+            </div>
+            <p>Where <strong>rᵢ</strong> are the individual period returns and <strong>r̄</strong> is their mean. The weighted average portfolio volatility is then:</p>
+            <div class="formula-box">
+              <div class="formula-label">Weighted Portfolio Volatility</div>
+              Portfolio Volatility = Σ (Weight_i × σ_i) / Total Weight
+            </div>
+            <p>Note: This is a simplified linear weighted model. A full covariance-matrix approach would require pairwise correlation data but is beyond the scope of this calculator.</p>
+          </section>
+
+          <!-- How to Use -->
+          <section class="content-section">
+            <h2>How to Use This Volatility Calculator</h2>
+            <ol>
+              <li><strong>Enter asset returns</strong> — type the periodic returns for each asset as comma-separated percentages (e.g. annual or quarterly returns over several periods).</li>
+              <li><strong>Enter weights</strong> — the percentage of your portfolio each asset represents. Weights do not need to sum to exactly 100% but the total is shown for reference.</li>
+              <li><strong>Leave unused rows blank</strong> — you can use as few as 1 or as many as 5 assets.</li>
+              <li><strong>Click "Calculate Volatility"</strong> to see each asset's standard deviation, the weighted portfolio volatility, and a risk level label.</li>
+            </ol>
+          </section>
+
+          <!-- Example Scenario -->
+          <section class="content-section">
+            <h2>Example Scenario</h2>
+            <p>Suppose your portfolio holds three assets: a stock fund with annual returns of 10%, -5%, 8%, 12%, -3% (40% weight); a bond fund with returns of 5%, 2%, 6%, 4%, 3% (30% weight); and a growth stock with returns of 15%, -10%, 20%, -5%, 10% (30% weight). The stock fund's standard deviation is about 7.3%, the bond fund's about 1.4%, and the growth stock's about 10.8%. The weighted portfolio volatility would be approximately 6.2%, falling into the "Moderate" risk category.</p>
+          </section>
+
+          <!-- FAQ Section -->
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What is portfolio volatility?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Portfolio volatility measures how much the value of a portfolio fluctuates over time. It is typically expressed as the standard deviation of returns. Higher volatility means larger swings in value — both upward and downward.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What is a good level of portfolio volatility?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>It depends on your risk tolerance and time horizon. The S&P 500 has historically had annualized volatility of around 15–20%. Conservative portfolios might target 5–10% volatility through diversification and bond allocation. Aggressive growth portfolios may accept 20–30% or higher.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What is standard deviation in investing?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Standard deviation in investing measures how much an asset's returns vary from its average return. A higher standard deviation means more unpredictable returns. For example, an asset with a 10% average return and a 20% standard deviation might realistically return anywhere from -10% to +30% in a given year.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                How can I reduce portfolio volatility?
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Diversification is the primary way to reduce volatility. Holding assets that are not highly correlated — such as stocks, bonds, real estate, and cash — means their returns partially offset each other, smoothing the overall portfolio's performance.</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Related Calculators -->
+          <section class="related-calculators">
+            <h2>Related Calculators</h2>
+            <div class="grid grid-3">
+              <a href="/investment-calculators/asset-allocation-rebalancing-calculator/" class="card card-link">
+                <h3>Asset Allocation Rebalancing Calculator</h3>
+                <p>Get buy/sell recommendations to restore your target allocation.</p>
+              </a>
+              <a href="/investment-calculators/investment-diversification-calculator/" class="card card-link">
+                <h3>Investment Diversification Calculator</h3>
+                <p>Score your portfolio's diversification and identify concentration risk.</p>
+              </a>
+              <a href="/investment-calculators/annualized-return-calculator/" class="card card-link">
+                <h3>Annualized Return Calculator</h3>
+                <p>Calculate the annualized return on any investment.</p>
+              </a>
+              <a href="/investment-calculators/cagr-calculator/" class="card card-link">
+                <h3>CAGR Calculator</h3>
+                <p>Compute compound annual growth rate for any investment.</p>
+              </a>
+            </div>
+          </section>
+
+          <!-- Disclaimer -->
+          <div class="disclaimer">
+            <strong>Disclaimer:</strong> This calculator uses a simplified weighted volatility model and does not account for cross-asset correlations. Results are estimates for informational purposes only. This is not financial advice. Consult a qualified financial professional before making investment decisions.
+          </div>
+
+          <!-- Ad Slot -->
+          <div class="ad-slot ad-slot-leaderboard"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="CalcWise Home">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 10h16M8 16h16M8 22h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            CalcWise
+          </a>
+          <p>Free financial calculators built for clarity, accuracy, and speed.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Real Estate</h4>
+          <a href="/real-estate-calculators/">All Real Estate Calculators</a>
+        </div>
+        <div class="footer-col">
+          <h4>Investments</h4>
+          <a href="/investment-calculators/">All Investment Calculators</a>
+          <a href="/investment-calculators/cagr-calculator/">CAGR Calculator</a>
+          <a href="/investment-calculators/dividend-yield-calculator/">Dividend Yield</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CalcWise. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator-engine.js"></script>
+  <script src="/js/search-index.js"></script>
+  <script>
+    function parseReturns(str) {
+      if (!str || !str.trim()) return null;
+      const vals = str.split(',').map(s => parseFloat(s.trim())).filter(v => !isNaN(v));
+      return vals.length >= 2 ? vals : null;
+    }
+
+    function stdDev(returns) {
+      const n = returns.length;
+      const mean = returns.reduce((a, b) => a + b, 0) / n;
+      const variance = returns.reduce((sum, r) => sum + Math.pow(r - mean, 2), 0) / n;
+      return Math.sqrt(variance);
+    }
+
+    function calculateVolatility() {
+      const assets = [];
+      let totalWeight = 0;
+
+      for (let i = 1; i <= 5; i++) {
+        const returnsStr = document.getElementById('returns-' + i).value;
+        const weightStr = document.getElementById('weight-' + i).value;
+        const stddevEl = document.getElementById('stddev-' + i);
+
+        if (!returnsStr || !returnsStr.trim()) {
+          stddevEl.value = '—';
+          continue;
+        }
+
+        const returns = parseReturns(returnsStr);
+        if (!returns) {
+          stddevEl.value = 'Need ≥2';
+          continue;
+        }
+
+        const weight = parseFloat(weightStr) || 0;
+        const sd = stdDev(returns);
+        stddevEl.value = sd.toFixed(2) + '%';
+        assets.push({ sd, weight });
+        totalWeight += weight;
+      }
+
+      if (assets.length === 0) {
+        alert('Please enter returns for at least one asset.');
+        return;
+      }
+
+      if (totalWeight <= 0) {
+        alert('Please enter at least one non-zero weight.');
+        return;
+      }
+
+      const weightedVol = assets.reduce((sum, a) => sum + (a.weight * a.sd), 0) / totalWeight;
+
+      // Risk level classification
+      let riskLevel;
+      if (weightedVol < 5) riskLevel = 'Low Risk';
+      else if (weightedVol < 10) riskLevel = 'Moderate Risk';
+      else if (weightedVol < 18) riskLevel = 'Medium-High Risk';
+      else if (weightedVol < 25) riskLevel = 'High Risk';
+      else riskLevel = 'Very High Risk';
+
+      document.getElementById('result-vol-weighted').textContent = CalcWise.formatPercent(weightedVol);
+      document.getElementById('result-vol-stddev').textContent = '±' + CalcWise.formatPercent(weightedVol) + ' per period';
+      document.getElementById('result-vol-risk-level').textContent = riskLevel;
+      document.getElementById('result-vol-total-weight').textContent = CalcWise.formatPercent(totalWeight);
+      document.getElementById('volatility-results').classList.remove('hidden');
+    }
+
+    function resetVolatility() {
+      document.getElementById('volatility-form').reset();
+      for (let i = 1; i <= 5; i++) {
+        document.getElementById('stddev-' + i).value = '';
+      }
+      document.getElementById('volatility-results').classList.add('hidden');
+    }
+  </script>
+</body>
+</html>
